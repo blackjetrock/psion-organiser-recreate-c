@@ -425,6 +425,8 @@ void display_clear(void)
 	  printxy(x, y, ' ');
 	}
     }
+  
+  print_home();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -442,6 +444,16 @@ void print_home(void)
   cury = 0;
 }
 
+void print_nl(void)
+{
+  curx = 0;
+  cury++;
+  
+  if( cury >= DISPLAY_NUM_LINES )
+    {
+      cury = 0;
+    }
+}
 
 void print_str(char *s)
 {
@@ -451,12 +463,6 @@ void print_str(char *s)
 
   if( curx >= DISPLAY_NUM_CHARS )
     {
-      curx = 0;
-      cury++;
-
-      if( curx >= DISPLAY_NUM_LINES )
-	{
-	  cury = 0;
-	}
+      print_nl();
     }
 }

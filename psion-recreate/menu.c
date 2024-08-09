@@ -140,10 +140,10 @@ void scan_keys(void)
 	  if( (kb_sense & 0x1F) != 0 )
 	    {
 	      // Build keycode
-	      i_printxy_hex(5, 2, keycode);
-	      i_printxy_hex(1, 2, kb_sense);
+	      //i_printxy_hex(5, 2, keycode);
+	      //i_printxy_hex(1, 2, kb_sense);
 
-	      printf("\nKdr:%04X Ksense:%04X", keycode, kb_sense);
+	      //printf("\nKdr:%04X Ksense:%04X", keycode, kb_sense);
 
 	      keycode |= (kb_sense << 8);
 	      

@@ -407,7 +407,7 @@ void printxy_hex(int x, int y, int value)
   char hs[10];
 
   sprintf(hs, "%02X", value);
-  printxy_str(x, y, hs);
+  i_printxy_str(x, y, hs);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -422,7 +422,7 @@ void display_clear(void)
     {
       for(int y=0; y<DISPLAY_NUM_LINES; y++)
 	{
-	  printxy(x, y, ' ');
+	  i_printxy(x, y, ' ');
 	}
     }
   
@@ -457,7 +457,7 @@ void print_nl(void)
 
 void print_str(char *s)
 {
-  printxy_str(curx,cury, s);
+  i_printxy_str(curx,cury, s);
 
   curx += strlen(s);
 

@@ -609,7 +609,7 @@ int main() {
       {
 	t++;
 
-	scan_keys();
+	menu_loop();
 	
 	if( t & 1 )
 	  {
@@ -620,8 +620,8 @@ int main() {
 	    toggle = " ";
 	  }
 	
-	i_printxy_str(DISPLAY_NUM_CHARS-1, 0, toggle);
-
+	//printxy_str(DISPLAY_NUM_CHARS-1, 0, toggle);
+#if 0
 	if( gotkey )
 	  {
 	    char keystr[2];
@@ -631,6 +631,9 @@ int main() {
 	    // Handle keypress
 	    i_printxy_str(DISPLAY_NUM_CHARS-1, 2, keystr);
 	  }
+#endif
+
+	
       }
 }
 
