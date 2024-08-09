@@ -1,0 +1,14 @@
+#./embed_rom_in_picocode.tcl 33-la.rom
+#./embed_rom_in_picocode.tcl 31-xp.rom
+#./embed_rom_in_picocode.tcl 37-lam.rom
+./embed_rom_in_picocode.tcl 42-lz.rom
+#./embed_rom_in_picocode.tcl 43-lz64.rom
+#./embed_rom_in_picocode.tcl 38-p350.rom
+#./embed_rom_in_picocode.tcl images/36-laf.rom
+#./embed_rom_in_picocode.tcl images/44-lz.rom
+#./embed_rom_in_picocode.tcl images/24-cm.rom
+#./embed_rom_in_picocode.tcl images/36-la.rom
+#./embed_rom_in_picocode.tcl images/26-xp.rom
+#./embed_rom_in_picocode.tcl psion1.rom
+
+

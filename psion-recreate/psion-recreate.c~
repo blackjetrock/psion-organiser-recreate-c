@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include "hardware/gpio.h"
+#include "pico/binary_info.h"
+
+const uint LED_PIN = 25;
+#define PICO_DEFAULT_I2C_SDA_PIN  16
+#define PICO_DEFAULT_I2C_SCL_PIN  17
+
+int main() {
+  bi_decl(bi_program_description("This is a test binary."));
+  bi_decl(bi_1pin_with_name(LED_PIN, "On-board LED"));
+  stdio_init_all();
+#if 0  
+  gpio_init(LED_PIN);
+  
+  gpio_set_dir(LED_PIN, GPIO_OUT);
+  while (1) {
+    gpio_put(LED_PIN, 0);
+    sleep_ms(250);
+    gpio_put(LED_PIN, 1);
+    puts("Hello World\n");
+    sleep_ms(1000);
+  }
+#endif
+
+  #if !defined(i2c_default) || !defined(PICO_DEFAULT_I2C_SDA_PIN) || !defined(PICO_DEFAULT_I2C_SCL_PIN)
+    #warning i2c/lcd_1602_i2c example requires a board with I2C pins
+#else
+    // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
+    i2c_init(i2c_default, 100 * 1000);
+    gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
+    gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
+    gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
+    gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
+}
+

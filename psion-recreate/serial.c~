@@ -1,0 +1,29 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Serial CLI Handling
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int pcount = 0;
+int periodic_read = 0;
+
+void serial_loop()
+{
+  int  key;
+  
+  if( ((key = getchar_timeout_us(1000)) != PICO_ERROR_TIMEOUT))
+    {
+      for(int i=0; i<sizeof(serial_cmds)/sizeof(SERIAL_COMMAND);i++)
+	{
+	  if( serial_cmds[i].key == key )
+	    {
+
+	      keypress = key;
+	      (*serial_cmds[i].fn)();
+	      prompt();
+	      break;
+	    }
+	}
+    }
+}
+

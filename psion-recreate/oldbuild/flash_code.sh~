@@ -1,0 +1,2 @@
+sudo kill `pgrep openocd`
+sudo openocd -f interface/picoprobe.cfg -f target/rp2040.cfg -c "program /tree/projects/github/zx-spectrum-pico-memory/zx-memory-16-32/zx-memory-16-32/firmware/build/zx_pico_fw.elf verify reset exit"

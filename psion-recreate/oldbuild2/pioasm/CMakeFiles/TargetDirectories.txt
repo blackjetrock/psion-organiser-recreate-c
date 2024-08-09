@@ -1,0 +1,3 @@
+/tree/projects/github/psion-org2-recreate/psion-recreate/build/pioasm/CMakeFiles/rebuild_cache.dir
+/tree/projects/github/psion-org2-recreate/psion-recreate/build/pioasm/CMakeFiles/edit_cache.dir
+/tree/projects/github/psion-org2-recreate/psion-recreate/build/pioasm/CMakeFiles/pioasm.dir
