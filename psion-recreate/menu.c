@@ -409,6 +409,32 @@ void menu_eeprom_extract_mems(void)
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+// Oled
+
+void menu_oled_test(void)
+{
+  oledmain();
+  
+  while(1)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+      
+      if( gotkey )
+	{
+	  gotkey = 0;
+	  
+	  // Exit on ON key, exiting demonstrates it is working...
+	  if( keychar == 'o' )
+	    {
+	      break;
+	    }
+	}
+     }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
 // RTC
 //
 //
@@ -566,6 +592,7 @@ MENU menu_top =
     {'O', "Off",        menu_instant_off},
     {'E', "Eeprom",     menu_goto_eeprom},
     {'R', "RTC",        menu_goto_rtc},
+    {'D', "DispTest",   menu_oled_test},
     {'&', "",           menu_null},
    }
   };

@@ -963,24 +963,25 @@ void Display_Chess(unsigned char value)
 
       Set_Column_Address(0x00);
 
-      Start();
+      i2c_start();
       
-      SentByte(Write_Address);
-      SentByte(0x40);
+      i2c_send_byte(Write_Address);
+      i2c_send_byte(0x40);
 
       for(j=0; j<16; j++)
 	{
 	  for(k=0; k<4; k++)
 	    {
-	    SentByte(value++);
+	    i2c_send_byte(value++);
 	    }
 	  
 	  for(k=0; k<4; k++)
 	    {
-	    SentByte(value++);
+	    i2c_send_byte(value++);
 	    }
 	}
-      Stop();
+      
+      i2c_stop();
     }
 }
 
@@ -1095,7 +1096,10 @@ void clear_oled(void)
 
 void oledmain(void)
 {
-  
+  Display_Chess(0x0f);
+}
+
+#if 0
   //IE=0x81;
   //IP=0x01;
   //TCON=0x01;
@@ -1246,5 +1250,5 @@ void oledmain(void)
 #endif
     }
 }
-
+#endif
 

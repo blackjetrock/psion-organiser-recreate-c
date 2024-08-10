@@ -1,4 +1,4 @@
-# Install script for directory: /tree/downloaded_tools/pico/pico-sdk/src/common/pico_usb_reset_interface
+# Install script for directory: /home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_usb_reset_interface
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
