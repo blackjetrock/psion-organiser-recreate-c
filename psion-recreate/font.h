@@ -12,3 +12,4 @@ void write_display_extra(int i, int ch);
 void print_str(char *s);
 void print_home(void);
 void print_nl(void);
+void print_nl_if_necessary(char *str);

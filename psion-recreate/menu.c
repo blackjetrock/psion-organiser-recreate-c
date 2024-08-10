@@ -201,12 +201,15 @@ void menu_process(void)
   if( do_menu_init() )
     {
       display_clear();
+      
       //      i_printxy_str(0, 0, active_menu->name);
       //print_nl();
       
       int e = 0;
       while( active_menu->item[e].key != '&' )
 	{
+	  print_nl_if_necessary(active_menu->item[e].item_text);
+	  
 	  print_str(active_menu->item[e].item_text);
 	  print_str(" ");
 	  e++;
@@ -318,6 +321,7 @@ void menu_scan_test(void)
 	{
 	  i_printxy(2, 1, '=');
 	  i_printxy(3, 1, keychar);
+
 	  gotkey = 0;
 	  
 	  // Exit on ON key, exiting demonstrates it is working...

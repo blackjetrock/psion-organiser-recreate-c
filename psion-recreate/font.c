@@ -467,3 +467,11 @@ void print_str(char *s)
       print_nl();
     }
 }
+
+void print_nl_if_necessary(char *str)
+{
+  if( (strlen(str) + curx) >= DISPLAY_NUM_CHARS )
+    {
+      print_nl();
+    }
+}
