@@ -29,6 +29,7 @@ volatile int core1_in_menu = 0;
 
 void initialise_oled(void);
 void clear_oled(void);
+void serial_loop(void);
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -186,9 +187,6 @@ uint8_t read_165(const uint latchpin)
 
     }
 
-#if 1  
-  i_printxy_hex(0,3, value);
-#endif
   return(value);
 }
 
@@ -339,7 +337,7 @@ void menu_tasks(void)
 void menu_loop_tasks(void)
 {
   scan_keys();
-  dump_lcd();
+  //dump_lcd();
   rtc_tasks();
   eeprom_tasks();
   wireless_taskloop();
@@ -599,28 +597,21 @@ int main() {
     char *toggle;
     int t = 0;
 
-    sleep_ms(2000);
+    //sleep_ms(2000);
+
+    menu_enter();
     
     printf("\nC Based Recreation\n");
-    i_printxy_str(0,1, "Setting up...");
-    i_printxy_str(0, 0, "FIND SAVE");
+    //i_printxy_str(0,1, "Setting up...");
+    //i_printxy_str(0, 0, "FIND SAVE");
     
     while(1)
       {
 	t++;
 
 	menu_loop();
+	serial_loop();
 	
-	if( t & 1 )
-	  {
-	    toggle = "+";
-	  }
-	else
-	  {
-	    toggle = " ";
-	  }
-	
-	//printxy_str(DISPLAY_NUM_CHARS-1, 0, toggle);
 #if 0
 	if( gotkey )
 	  {
@@ -632,7 +623,6 @@ int main() {
 	    i_printxy_str(DISPLAY_NUM_CHARS-1, 2, keystr);
 	  }
 #endif
-
 	
       }
 }

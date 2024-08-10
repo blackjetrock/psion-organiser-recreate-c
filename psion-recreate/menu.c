@@ -153,7 +153,7 @@ void scan_keys(void)
 		  if( menukeys[i].code == keycode )
 		    {
 		      keychar = menukeys[i].ch;
-		      write_display_extra(2, 'k');
+		      //write_display_extra(2, 'k');
 		      gotkey = 1;
 		      break;
 		    }
@@ -201,8 +201,8 @@ void menu_process(void)
   if( do_menu_init() )
     {
       display_clear();
-      printxy_str(0, 0, active_menu->name);
-      print_nl();
+      //      i_printxy_str(0, 0, active_menu->name);
+      //print_nl();
       
       int e = 0;
       while( active_menu->item[e].key != '&' )
@@ -238,26 +238,21 @@ void menu_process(void)
 
 void init_menu_top(void)
 {
-  //display_clear();
   //  printxy_str(0, 0, "Meta");
 }
 
 void init_menu_eeprom(void)
 {
-  //display_clear();
   //printxy_str(0, 0, "EEPROM");
 }
 
 void init_menu_rtc(void)
 {
-  //display_clear();
   //printxy_str(0, 0, "EEPROM");
 }
 
 void init_menu_mems(void)
 {
-  //display_clear();
-  //print_home();
   //print_str("Memories");
 }
 
@@ -321,8 +316,8 @@ void menu_scan_test(void)
       
       if( gotkey )
 	{
-	  printxy(2, 1, '=');
-	  printxy(3, 1, keychar);
+	  i_printxy(2, 1, '=');
+	  i_printxy(3, 1, keychar);
 	  gotkey = 0;
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
@@ -343,12 +338,14 @@ void menu_scan_test(void)
 
 void menu_instant_off(void)
 {
+#if 0
   if( do_menu_init() )
     {
       display_clear();
       printxy_str(0, 0, "Instant Off");
     }
-
+#endif
+  
   handle_power_off();
 }
 
@@ -562,7 +559,7 @@ MENU menu_top =
    {
     {'o', "",           menu_exit},
     {'K', "Keytest",    menu_scan_test},
-    {'I', "Instantoff", menu_instant_off},
+    {'O', "Off",        menu_instant_off},
     {'E', "Eeprom",     menu_goto_eeprom},
     {'R', "RTC",        menu_goto_rtc},
     {'&', "",           menu_null},

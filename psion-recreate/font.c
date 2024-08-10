@@ -381,7 +381,8 @@ void i_printxy_hex(int x, int y, int value)
 
 void printxy(int x, int y, int ch)
 {
-  put_display_char(x, y, ch);
+  i_printxy(x, y, ch);
+  //  put_display_char(x, y, ch);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -457,7 +458,7 @@ void print_nl(void)
 
 void print_str(char *s)
 {
-  i_printxy_str(curx,cury, s);
+  i_printxy_str(curx, cury, s);
 
   curx += strlen(s);
 

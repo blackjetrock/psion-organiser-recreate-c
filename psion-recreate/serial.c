@@ -342,7 +342,7 @@ void serial_loop()
 {
   int  key;
 
-  if( ((key = getchar_timeout_us(1000)) != PICO_ERROR_TIMEOUT))
+  if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
     {
       for(int i=0; i<sizeof(serial_cmds)/sizeof(SERIAL_COMMAND);i++)
 	{

@@ -5,6 +5,7 @@ void printxy_hex(int x, int y, int value);
 
 void i_printxy(int x, int y, int ch);
 void i_printxy_str(int x, int y, char *str);
+void i_printxy_hex(int x, int y, int value);
 
 void write_display_extra(int i, int ch);
 

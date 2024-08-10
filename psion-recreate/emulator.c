@@ -285,6 +285,10 @@ u_int8_t ramdata[RAM_SIZE];
 
 void handle_power_off(void)
 {
+  printf("\nPower off...");
+  
+  gpio_put(PIN_VBAT_SW_ON, 0);
+  
 #if ALLOW_POWER_OFF
 
   // Store time in RC
