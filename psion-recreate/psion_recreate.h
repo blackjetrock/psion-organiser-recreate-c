@@ -47,7 +47,7 @@ extern int model;
 #define BUZZER_TEST          0
 #define UART_INTERRUPTS      1     // Interrupt for UART data collection
 #define I2C_DELAY            15    // Default, can be over-ridden
-#define I2C_DELAY_OLED       5     // OLED I2C delay value
+#define I2C_DELAY_OLED       1     // OLED I2C delay value
 #define I2C_DELAY_EEPROM     15    // EEPROM I2C delay
 
 #define ALLOW_POWER_OFF      1     // Do we allow the power to be turned off?
@@ -73,7 +73,7 @@ extern int model;
                                   // We can use one image over and over
 #define MENU_ENABLED         1    // Meta menu enabled
 
-#define OVERCLOCK            0    // Overclock the RP2040
+#define OVERCLOCK            1    // Overclock the RP2040
 #define OVERCLOCK_RESTORE    0    // Overclock for eeprom restore
 
 #define META_MENU_SCAN_COUNT    10

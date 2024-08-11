@@ -156,7 +156,7 @@ void latch2_clear_mask(int value)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#define D165 100
+#define D165 1
 
 uint8_t read_165(const uint latchpin)
 {
@@ -196,7 +196,7 @@ uint8_t read_165(const uint latchpin)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#define D595 100
+#define D595 1
 
 void write_595(const uint latchpin, int value, int n)
 {

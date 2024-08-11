@@ -23,6 +23,7 @@ rtc.c
 i2c.c
 match.c
 eeprom.c
+paged_eeprom.c
 menu.c
 serial.c
 )

@@ -304,7 +304,7 @@ return(r);
 //
 // Prints a character at (X,Y)
 //
-// ** internal functions that omly dump_lcd should use
+// ** internal functions that only dump_lcd should use
 //
 ////////////////////////////////////////////////////////////////////////////////
 

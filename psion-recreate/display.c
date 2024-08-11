@@ -16,6 +16,7 @@
 #include "pico/binary_info.h"
 
 #include "psion_recreate.h"
+#include "display.h"
 
 #define IGNORE_ACK       1
 #define DEMO_DELAY       100
@@ -1252,3 +1253,81 @@ void oledmain(void)
 }
 #endif
 
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Display functions that use a display buffer
+//
+// The buffer allows pixel-level graphics to be used
+//
+////////////////////////////////////////////////////////////////////////////////
+
+uint8_t display_pixels[PIXEL_BUFFER_SIZE_BYTES*2];
+
+#define BLANK_VAL 0
+
+void pixels_clear(void)
+{
+  for(int i=0; i<PIXEL_BUFFER_SIZE_BYTES*2; i++)
+    {
+      display_pixels[i] = BLANK_VAL;
+
+      Set_Page_Address(i/128);
+      Set_Column_Address(i%128);
+      i2c_start();
+  
+      // Send slave address with read bit
+      i2c_send_byte(Write_Address);
+      i2c_send_byte(0x40);
+      
+      // Set a pixel
+      //  i2c_send_byte(0x1 << (y % 8));
+      
+      i2c_send_byte(BLANK_VAL);
+      
+      //      i2c_send_byte(0);
+      i2c_stop();
+
+    }
+}
+
+void plot_point(int x, int y, int mode)
+{
+  int cx, cy;
+
+  printf("\nX:%d Y:%d", x, y);
+  
+  cx = 127-x;
+  cy = 3-y/8;
+
+  printf("  cx:%d cy:%d", cx, cy);
+  
+  Set_Page_Address(cy);
+  Set_Column_Address(cx+4);
+
+  i2c_start();
+  
+  // Send slave address with read bit
+  i2c_send_byte(Write_Address);
+  i2c_send_byte(0x40);
+
+  // Set a pixel
+  //  i2c_send_byte(0x1 << (y % 8));
+
+  uint8_t byte = display_pixels[cy*128+cx];
+
+  printf("  IDX:%d", cy*128+cx);
+  printf("  byte:%02X", byte);
+
+  byte |= (0x1 << (y % 8));
+  printf("  byte:%02X", byte);
+  
+  i2c_send_byte(invert_byte(byte));
+
+  display_pixels[cy*128+cx] = byte;
+  printf("  byte:%02X", byte);
+  
+  //  i2c_send_byte(0);
+  i2c_stop();
+
+}

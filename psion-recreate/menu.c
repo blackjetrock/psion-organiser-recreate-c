@@ -28,6 +28,8 @@
 #include "emulator.h"
 #include "eeprom.h"
 #include "rtc.h"
+#include "display.h"
+
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -413,7 +415,38 @@ void menu_eeprom_extract_mems(void)
 
 void menu_oled_test(void)
 {
+
+#if 0
   oledmain();
+#endif
+
+#if 1
+  pixels_clear();
+  //return;
+  
+  for(int y=0; y<31; y++)
+    {
+      plot_point(0,   y, 1);
+      plot_point(127, y, 1);
+    }
+  
+  for(int x=0; x<127; x++)
+    {
+      plot_point(x, 0, 1);
+      plot_point(x, 31, 1);
+    }
+
+  for(int x=30; x<40; x++)
+    {
+      plot_point(x, 10, 1);
+    }
+
+  for(int y=10; y<20; y++)
+    {
+      plot_point(39,   y, 1);
+    }
+
+#endif
   
   while(1)
     {
