@@ -232,6 +232,8 @@ void menu_process(void)
 	    {
 	      // Call the function
 	      (*active_menu->item[e].do_fn)();
+
+	      menu_init = 1;
 	      break;
 	    }
 	  e++;
@@ -516,6 +518,7 @@ void menu_leave(void)
   // Restore latch data
   write_595(PIN_LATCHOUT1, saved_latchout1_shadow, 8);
   latchout1_shadow = saved_latchout1_shadow;
+  
 }
 
 //------------------------------------------------------------------------------
@@ -614,7 +617,7 @@ MENU menu_top =
    "Meta",
    init_menu_top,   
    {
-    {'o', "",           menu_exit},
+    //{'o', "",           menu_exit},
     {'K', "Keytest",    menu_scan_test},
     {'O', "Off",        menu_instant_off},
     {'E', "Eeprom",     menu_goto_eeprom},
