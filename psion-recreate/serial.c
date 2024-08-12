@@ -73,6 +73,58 @@ void cli_dump_language_stack(void)
 }
 
 #define BYTE_WIDTH  8
+  
+void cli_dump_eeprom(void)
+{
+  char ascii[BYTE_WIDTH*3+5];
+  char ascii_byte[5];
+
+  uint8_t data[1024*4];
+
+  read_eeprom(EEPROM_1_ADDR_RD, 0, 1024, (uint8_t *)&data);
+  
+  // Display memory from address
+  printf("\n");
+
+  ascii[0] = '\0';
+  
+  for(int z = 0; z<1024; z++)
+    {
+      int byte = 0;
+      
+      if( (z % BYTE_WIDTH) == 0)
+	{
+	  printf("  %s", ascii);
+	  ascii[0] = '\0';
+	  printf("\n%03X: ", z);
+	}
+
+      if( z >= ROM_START )
+	{
+	  byte =  data[z];
+	  printf("%02X ", byte);
+	}
+      else
+	{
+	  byte =  data[z];
+	  printf("%02X ", byte);
+	}
+
+      if( isprint(byte) )
+	{
+	  sprintf(ascii_byte, "%c", byte);
+	}
+      else
+	{
+	  sprintf(ascii_byte, ".");
+	}
+      
+      strcat(ascii, ascii_byte);
+    }
+  
+  printf("\n");
+}
+
 
 void cli_dump_memory(void)
 {
@@ -332,6 +384,11 @@ SERIAL_COMMAND serial_cmds[] =
     'L',
     "Dump Language Stack",
     cli_dump_language_stack,
+   },
+   {
+    '_',
+    "Dump EEPROM",
+    cli_dump_eeprom,
    },
   };
 

@@ -24,6 +24,8 @@ int read_eeprom(int slave_addr, int start, int len, BYTE *dest)
 {
   BYTE a[2];
 
+  printf("\nStart:%04X Len:%04X", start,len);
+    
   i2c_set_delay_value(I2C_DELAY_EEPROM);
   
   a[0] = start >> 8;
@@ -41,6 +43,8 @@ int write_eeprom(int slave_addr, int start, int len, BYTE *src)
   BYTE a[2];
   int i;
 
+  printf("\nStart:%04X Len:%04X", start,len);
+  
   i2c_set_delay_value(I2C_DELAY_EEPROM);
   
   // Force slave address to have correct RDWR bit

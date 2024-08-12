@@ -49,7 +49,7 @@ MENU menu_mems;
 // Scan the keyboard for keys
 
 int scan_drive = 0x01;
-int scan_state = 0;
+int scan_state = SCAN_STATE_DRIVE;
 int kb_sense = 0;
 int saved_latchout1_shadow = 0;
 int keycode = 0;
@@ -102,10 +102,26 @@ struct _KEYDEF
 
 #define NUM_KEYCODES ((sizeof(menukeys))/(sizeof(struct _KEYDEF)))
 
+#define SCAN_SKIP  3
+
+int scan_skip = SCAN_SKIP;
+int key_count = 0;
+int current_key = 0;
+#define DEBOUNCE_MAX  10
+
 void scan_keys(void)
 {
+  scan_skip--;
+
+  if( scan_skip == 0 )
+    {
+      scan_skip = SCAN_SKIP;
+      return;
+    }
+  
   switch(scan_state)
     {
+      
     case SCAN_STATE_DRIVE:
       
       // Drive scan lines
@@ -124,10 +140,10 @@ void scan_keys(void)
 	}
 
       //write_display_extra(2, 'a'+scan_drive);
-
       scan_state = SCAN_STATE_READ;
       break;
 
+      
     case SCAN_STATE_READ:
       // Read port5
       //write_display_extra(2, '5');
@@ -156,10 +172,39 @@ void scan_keys(void)
 		{
 		  if( menukeys[i].code == keycode )
 		    {
-		      keychar = menukeys[i].ch;
-		      //write_display_extra(2, 'k');
-		      gotkey = 1;
-		      break;
+		      if( keycode == current_key )
+			{
+			  // Same key pressed
+			  if( key_count == DEBOUNCE_MAX )
+			    {
+			      // Key registered and still pressed
+			      // we won't get here, we will be waiting for release
+			    }
+			  else
+			    {
+			      key_count++;
+			      if( key_count == DEBOUNCE_MAX )
+				{
+				  // New key press
+				  keychar = menukeys[i].ch;
+				  gotkey = 1;
+
+				  // Move to release state
+				  scan_state = SCAN_STATE_RELEASE_READ;
+				  return;
+				}
+			      else
+				{
+				  // Waiting for key to be fully pressed
+				}
+			    }
+			}
+		      else
+			{
+			  // Different key, start debouncing
+			  key_count = 0;
+			  current_key = keycode;
+			}
 		    }
 		}
 	    }
@@ -172,6 +217,34 @@ void scan_keys(void)
       break;
 
     case SCAN_STATE_RELEASE_READ:
+      // Read port5
+      //write_display_extra(2, '5');
+      kb_sense = (read_165(PIN_LATCHIN) & 0xFC)>>2;
+      
+      if( (kb_sense & 0x3F) != 0 )
+	{
+	  // Key still pressed
+	}
+      else
+	{
+	  // Count down to zero
+	  if ( key_count == 0 )
+	    {
+	      // Already released
+	    }
+	  else
+	    {
+	      key_count--;
+
+	      if ( key_count == 0 )
+		{
+		  // Key finally released
+		  scan_state = SCAN_STATE_DRIVE;
+		  gotkey = 0;
+		  keycode = 0;
+		}
+	    }
+	}
       break;
       
     default:
@@ -328,15 +401,36 @@ void menu_scan_test(void)
     {
       // Keep the display updated
       menu_loop_tasks();
-
+      
       // We are on core 1 so a loop will cause 
       //      dump_lcd();
       
-      if( gotkey )
+      if( gotkey,1 )
 	{
 	  i_printxy(2, 1, '=');
 	  i_printxy(3, 1, keychar);
+	  switch(scan_state)
+	    {
+	    case SCAN_STATE_DRIVE:
+	      i_printxy(5, 1, 'D');
+	      i_printxy(6, 1, ' ');
+	      i_printxy(7, 1, ' ');
+	      break;
 
+	    case SCAN_STATE_READ:
+	      i_printxy(5, 1, ' ');
+	      i_printxy(6, 1, 'R');
+	      i_printxy(7, 1, ' ');
+	      break;
+
+	    case SCAN_STATE_RELEASE_READ:
+	      i_printxy(5, 1, ' ');
+	      i_printxy(6, 1, ' ');
+	      i_printxy(7, 1, 'r');
+	      break;
+	    }
+
+	  
 	  gotkey = 0;
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
@@ -391,6 +485,107 @@ void menu_eeprom_invalidate(void)
   menu_init = 1;
 }
 
+//
+//------------------------------------------------------------------------------
+//
+
+#define RECORD_LENGTH 64
+#define NUM_RECORDS 100
+
+typedef struct _RECORD
+{
+  uint8_t flag;
+  char key[16];
+  char data[RECORD_LENGTH-1-16];
+} RECORD;
+
+// Save and find records
+
+void get_record(int n, RECORD *record_data)
+{
+  read_eeprom(EEPROM_1_ADDR_RD, RECORD_LENGTH*n, RECORD_LENGTH, (uint8_t *)&record_data);
+}
+
+void put_record(int n, RECORD *record_data)
+{
+  write_eeprom(EEPROM_1_ADDR_WR, RECORD_LENGTH*n, RECORD_LENGTH, (uint8_t *)&record_data);
+}
+
+int display_record(RECORD *r)
+{
+  display_clear();
+  printxy_hex(0, 0, r->flag);
+  printxy_str(5, 0, &(r->key[0]));
+  printxy_str(0, 1, &(r->data[0]));
+
+  printf("\nRecord");
+  printf("\nFlag:%c",   r->flag);
+  printf("\nKey:'%s'",  &(r->key[0]));
+  printf("\nData:'%s'", &(r->data[0]));
+  
+  while(1)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+      
+      // We are on core 1 so a loop will cause 
+      //      dump_lcd();
+      
+      if( gotkey )
+	{
+	  gotkey = 0;
+	  
+	  return(keychar);
+	}
+      
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void menu_format(void)
+{
+  RECORD r;
+  char line[32];
+  
+  display_clear();
+  
+  for(int i=0; i<NUM_RECORDS; i++)
+    {
+      sprintf(line, "REC %02X", i);
+      printxy_str(0, 0, line);
+      
+      r.flag = '*';
+      sprintf(&(r.key[0]), "r%03X", i);
+      sprintf(&(r.data[0]), "Data for rec %02X", i);
+      put_record(i, &r);
+      display_record(&r);
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+
+// Run through all records
+
+void menu_all(void)
+{
+  RECORD r;
+  int key = 0;
+  
+  for(int i=0; i<NUM_RECORDS; i++)
+    {
+      get_record(i, &r);
+      key = display_record(&r);
+
+      if( key == 'o' )
+	{
+	  return;
+	}
+    }
+}
+
 //------------------------------------------------------------------------------
 //
 // Memories
@@ -429,13 +624,12 @@ void menu_eeprom_extract_mems(void)
 void menu_find(void)
 {
   char find_str[MAX_INPUT_STR];
-  
-  display_clear();
-  printxy_str(0,0, "Find:");
-  print_str(find_str);
-	      
+
   find_str[0] ='\0';
-  
+  display_clear();
+  printxy_str(0, 0, "Find:");
+  print_str(find_str);
+
   while(1)
     {
       // Keep the display updated
@@ -457,8 +651,8 @@ void menu_find(void)
 		  find_str[0] ='\0';
 		  
 		  display_clear();
-		  printxy_str(0,0, "Find:");
-		  print_str(find_str);
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, find_str);
 		  continue;
 		}
 	    }
@@ -470,8 +664,8 @@ void menu_find(void)
 	      strcat(find_str, keystr);
 	      
 	      display_clear();
-	      printxy_str(0,0, "Find:");
-	      print_str(find_str);
+	      printxy_str(0, 0, "Find:");
+	      printxy_str(5, 0, find_str);
 	    }
 	  
 	  gotkey = 0;
@@ -699,6 +893,8 @@ MENU menu_top =
     {'D', "DispTest",   menu_oled_test},
     {'F', "Find",       menu_find},
     {'D', "Save",       menu_save},
+    {'A', "All",        menu_all},
+    {'M', "Format",     menu_format},
     {'&', "",           menu_null},
    }
   };
