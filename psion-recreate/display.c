@@ -1295,12 +1295,12 @@ void plot_point(int x, int y, int mode)
 {
   int cx, cy;
 
-  printf("\nX:%d Y:%d", x, y);
+  //printf("\nX:%d Y:%d", x, y);
   
   cx = 127-x;
   cy = 3-y/8;
 
-  printf("  cx:%d cy:%d", cx, cy);
+  //printf("  cx:%d cy:%d", cx, cy);
   
   Set_Page_Address(cy);
   Set_Column_Address(cx+4);
@@ -1316,16 +1316,16 @@ void plot_point(int x, int y, int mode)
 
   uint8_t byte = display_pixels[cy*128+cx];
 
-  printf("  IDX:%d", cy*128+cx);
-  printf("  byte:%02X", byte);
+  //printf("  IDX:%d", cy*128+cx);
+  //printf("  byte:%02X", byte);
 
   byte |= (0x1 << (y % 8));
-  printf("  byte:%02X", byte);
+  //printf("  byte:%02X", byte);
   
   i2c_send_byte(invert_byte(byte));
 
   display_pixels[cy*128+cx] = byte;
-  printf("  byte:%02X", byte);
+  //printf("  byte:%02X", byte);
   
   //  i2c_send_byte(0);
   i2c_stop();
