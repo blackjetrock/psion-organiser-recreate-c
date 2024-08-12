@@ -313,7 +313,7 @@ void menu_scan_test(void)
 {
   init_scan_test();
 
-  while(1)
+   while(1)
     {
       // Keep the display updated
       menu_loop_tasks();
@@ -413,8 +413,60 @@ void menu_eeprom_extract_mems(void)
 
 ////////////////////////////////////////////////////////////////////////////////
 
+#define MAX_INPUT_STR   32
+
 void menu_find(void)
 {
+  char find_str[MAX_INPUT_STR];
+  
+  display_clear();
+  printxy_str(0,0, "Find:");
+  print_str(find_str);
+	      
+  find_str[0] ='\0';
+  
+  while(1)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+      
+      if( gotkey )
+	{
+	  // Exit on ON key, exiting demonstrates it is working...
+	  if( keychar == 'o' )
+	    {
+	      if( strlen(find_str) == 0)
+		{
+		  // Refresh menu on exit
+		  menu_init = 1;
+		  return;
+		}
+	      else
+		{
+		  find_str[0] ='\0';
+		  
+		  display_clear();
+		  printxy_str(0,0, "Find:");
+		  print_str(find_str);
+		  continue;
+		}
+	    }
+	  
+	  if ( strlen(find_str) < (MAX_INPUT_STR-2) )
+	    {
+	      char keystr[2] = " ";
+	      keystr[0] = keychar;
+	      strcat(find_str, keystr);
+	      
+	      display_clear();
+	      printxy_str(0,0, "Find:");
+	      print_str(find_str);
+	    }
+	  
+	  gotkey = 0;
+	  
+	}
+    }
 }
 
 void menu_save(void)
@@ -634,7 +686,7 @@ MENU menu_top =
     {'E', "Eeprom",     menu_goto_eeprom},
     {'R', "RTC",        menu_goto_rtc},
     {'D', "DispTest",   menu_oled_test},
-    {'D', "Find",       menu_find},
+    {'F', "Find",       menu_find},
     {'D', "Save",       menu_save},
     {'&', "",           menu_null},
    }

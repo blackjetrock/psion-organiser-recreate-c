@@ -1671,9 +1671,9 @@ Discarded input sections
                 0x0000000000000000        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .bss.lockout_victim_initialized
                 0x0000000000000000        0x2 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .text          0x0000000000000000        0x0 /tmp/ccdXWf9o.o
- .data          0x0000000000000000        0x0 /tmp/ccdXWf9o.o
- .bss           0x0000000000000000        0x0 /tmp/ccdXWf9o.o
+ .text          0x0000000000000000        0x0 /tmp/ccAeTnBe.o
+ .data          0x0000000000000000        0x0 /tmp/ccAeTnBe.o
+ .bss           0x0000000000000000        0x0 /tmp/ccAeTnBe.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -2235,11 +2235,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccdXWf9o.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccAeTnBe.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100    0x11fb8
+.text           0x0000000010000100    0x12070
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -2580,904 +2580,904 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  .text.menu_eeprom_extract_mems
                 0x00000000100043e4       0x28 CMakeFiles/psion_recreate.dir/menu.c.obj
                 0x00000000100043e4                menu_eeprom_extract_mems
- .text.menu_oled_test
-                0x000000001000440c       0x5c CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x000000001000440c                menu_oled_test
- .text.menu_save
-                0x0000000010004468        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004468                menu_save
- .text.init_menu_eeprom
-                0x000000001000446c        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x000000001000446c                init_menu_eeprom
- .text.init_menu_rtc
-                0x0000000010004470        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004470                init_menu_rtc
- .text.init_menu_mems
-                0x0000000010004474        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004474                init_menu_mems
- .text.menu_null
-                0x0000000010004478        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004478                menu_null
  .text.menu_find
-                0x000000001000447c        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x000000001000447c                menu_find
+                0x000000001000440c       0xbc CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x000000001000440c                menu_find
+ .text.menu_oled_test
+                0x00000000100044c8       0x5c CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x00000000100044c8                menu_oled_test
+ .text.menu_save
+                0x0000000010004524        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010004524                menu_save
+ .text.init_menu_eeprom
+                0x0000000010004528        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010004528                init_menu_eeprom
+ .text.init_menu_rtc
+                0x000000001000452c        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x000000001000452c                init_menu_rtc
+ .text.init_menu_mems
+                0x0000000010004530        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010004530                init_menu_mems
+ .text.menu_null
+                0x0000000010004534        0x4 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010004534                menu_null
  .text.scan_keys
-                0x0000000010004480       0xdc CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004480                scan_keys
+                0x0000000010004538       0xdc CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010004538                scan_keys
  .text.menu_process
-                0x000000001000455c       0xc4 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x000000001000455c                menu_process
+                0x0000000010004614       0xc4 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010004614                menu_process
  .text.menu_enter
-                0x0000000010004620       0x40 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004620                menu_enter
+                0x00000000100046d8       0x40 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x00000000100046d8                menu_enter
  .text.menu_loop
-                0x0000000010004660       0xe0 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004660                menu_loop
+                0x0000000010004718       0xe0 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010004718                menu_loop
  .text.check_menu_launch
-                0x0000000010004740       0x84 CMakeFiles/psion_recreate.dir/menu.c.obj
-                0x0000000010004740                check_menu_launch
+                0x00000000100047f8       0x84 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x00000000100047f8                check_menu_launch
  .text.cli_zero_parameter
-                0x00000000100047c4        0xc CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x00000000100047c4                cli_zero_parameter
+                0x000000001000487c        0xc CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x000000001000487c                cli_zero_parameter
  .text.cli_info
-                0x00000000100047d0       0x60 CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x00000000100047d0                cli_info
+                0x0000000010004888       0x60 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010004888                cli_info
  .text.cli_digit
-                0x0000000010004830       0x48 CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x0000000010004830                cli_digit
+                0x00000000100048e8       0x48 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x00000000100048e8                cli_digit
  .text.cli_dump_language_stack
-                0x0000000010004878       0x78 CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x0000000010004878                cli_dump_language_stack
+                0x0000000010004930       0x78 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010004930                cli_dump_language_stack
  .text.serial_help
-                0x00000000100048f0       0x44 CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x00000000100048f0                serial_help
+                0x00000000100049a8       0x44 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x00000000100049a8                serial_help
  .text.cli_dump_memory
-                0x0000000010004934      0x108 CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x0000000010004934                cli_dump_memory
+                0x00000000100049ec      0x108 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x00000000100049ec                cli_dump_memory
  .text.cli_trace_dump_from
-                0x0000000010004a3c       0xac CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x0000000010004a3c                cli_trace_dump_from
+                0x0000000010004af4       0xac CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010004af4                cli_trace_dump_from
  .text.cli_trace_dump_to
-                0x0000000010004ae8       0xb8 CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x0000000010004ae8                cli_trace_dump_to
+                0x0000000010004ba0       0xb8 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010004ba0                cli_trace_dump_to
  .text.cli_boot_mass
-                0x0000000010004ba0       0x14 CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x0000000010004ba0                cli_boot_mass
+                0x0000000010004c58       0x14 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010004c58                cli_boot_mass
  .text.serial_loop
-                0x0000000010004bb4       0x5c CMakeFiles/psion_recreate.dir/serial.c.obj
-                0x0000000010004bb4                serial_loop
+                0x0000000010004c6c       0x5c CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010004c6c                serial_loop
  .text.set_sys_clock_pll
-                0x0000000010004c10       0x78 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x0000000010004c10                set_sys_clock_pll
+                0x0000000010004cc8       0x78 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x0000000010004cc8                set_sys_clock_pll
  .text.check_sys_clock_khz
-                0x0000000010004c88      0x154 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-                0x0000000010004c88                check_sys_clock_khz
+                0x0000000010004d40      0x154 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+                0x0000000010004d40                check_sys_clock_khz
  .text.gpio_set_function
-                0x0000000010004ddc       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010004ddc                gpio_set_function
+                0x0000000010004e94       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010004e94                gpio_set_function
  .text.gpio_set_pulls
-                0x0000000010004e0c       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010004e0c                gpio_set_pulls
+                0x0000000010004ec4       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010004ec4                gpio_set_pulls
  .text.gpio_init
-                0x0000000010004e3c       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010004e3c                gpio_init
+                0x0000000010004ef4       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010004ef4                gpio_init
  .text.running_on_fpga
-                0x0000000010004e78       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x0000000010004e78                running_on_fpga
+                0x0000000010004f30       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x0000000010004f30                running_on_fpga
  .text.hw_claim_or_assert
-                0x0000000010004e88       0x44 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010004e88                hw_claim_or_assert
+                0x0000000010004f40       0x44 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010004f40                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x0000000010004ecc       0x9c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010004ecc                hw_claim_unused_from_range
+                0x0000000010004f84       0x9c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010004f84                hw_claim_unused_from_range
  .text.spin_locks_reset
-                0x0000000010004f68       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010004f68                spin_locks_reset
+                0x0000000010005020       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010005020                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x0000000010004f84       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010004f84                next_striped_spin_lock_num
+                0x000000001000503c       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x000000001000503c                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x0000000010004f9c       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010004f9c                spin_lock_claim_unused
+                0x0000000010005054       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010005054                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x0000000010004fbc       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010004fbc                irq_set_enabled
+                0x0000000010005074       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005074                irq_set_enabled
  .text.irq_set_pending
-                0x0000000010004fe0       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010004fe0                irq_set_pending
+                0x0000000010005098       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005098                irq_set_pending
  .text.irq_has_shared_handler
-                0x0000000010004ff0       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010004ff0                irq_has_shared_handler
+                0x00000000100050a8       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100050a8                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x000000001000501c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000501c                irq_get_vtable_handler
+                0x00000000100050d4       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100050d4                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x000000001000502c       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x000000001000502c                irq_set_exclusive_handler
+                0x00000000100050e4       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100050e4                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x0000000010005080      0x1c8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010005080                irq_add_shared_handler
+                0x0000000010005138      0x1c8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005138                irq_add_shared_handler
  .text.irq_remove_handler
-                0x0000000010005248      0x1b0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010005248                irq_remove_handler
+                0x0000000010005300      0x1b0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005300                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x00000000100053f8       0xb4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100053f8                irq_add_tail_to_free_list
+                0x00000000100054b0       0xb4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100054b0                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x00000000100054ac       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100054ac                irq_init_priorities
+                0x0000000010005564       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005564                irq_init_priorities
  .text.user_irq_claim_unused
-                0x00000000100054d0       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100054d0                user_irq_claim_unused
+                0x0000000010005588       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010005588                user_irq_claim_unused
  .text.lock_init
-                0x00000000100054f8       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x00000000100054f8                lock_init
+                0x00000000100055b0       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x00000000100055b0                lock_init
  .text.mutex_init
-                0x0000000010005508       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010005508                mutex_init
+                0x00000000100055c0       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100055c0                mutex_init
  .text.recursive_mutex_init
-                0x0000000010005524       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010005524                recursive_mutex_init
+                0x00000000100055dc       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100055dc                recursive_mutex_init
  .text.critical_section_init
-                0x0000000010005540       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x0000000010005540                critical_section_init
+                0x00000000100055f8       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x00000000100055f8                critical_section_init
  .text.critical_section_init_with_lock_num
-                0x0000000010005560       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x0000000010005560                critical_section_init_with_lock_num
+                0x0000000010005618       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x0000000010005618                critical_section_init_with_lock_num
  .text.ph_merge_nodes
-                0x0000000010005574       0x5c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000562c       0x5c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x00000000100055d0       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100055d0                timer_pool_entry_comparator
+                0x0000000010005688       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005688                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x0000000010005604       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100056bc       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock
-                0x0000000010005634       0xbc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100056ec       0xbc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x00000000100056f0      0x1c0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100057a8      0x1c0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x00000000100058b0       0x6c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100058b0                alarm_pool_init_default
+                0x0000000010005968       0x6c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005968                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x000000001000591c        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x000000001000591c                alarm_pool_get_default
+                0x00000000100059d4        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100059d4                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x0000000010005924      0x144 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005924                alarm_pool_add_alarm_at
+                0x00000000100059dc      0x144 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100059dc                alarm_pool_add_alarm_at
  .text.alarm_pool_core_num
-                0x0000000010005a68        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005a68                alarm_pool_core_num
+                0x0000000010005b20        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005b20                alarm_pool_core_num
  .text.sleep_until
-                0x0000000010005a6c       0xc4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005a6c                sleep_until
+                0x0000000010005b24       0xc4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005b24                sleep_until
  .text.sleep_us
-                0x0000000010005b30       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005b30                sleep_us
+                0x0000000010005be8       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005be8                sleep_us
  .text.sleep_ms
-                0x0000000010005b54       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005b54                sleep_ms
+                0x0000000010005c0c       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005c0c                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x0000000010005b88       0xd0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010005b88                best_effort_wfe_or_timeout
+                0x0000000010005c40       0xd0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010005c40                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x0000000010005c58       0xb4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005d10       0xb4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x0000000010005d0c       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010005d0c                hardware_alarm_claim
+                0x0000000010005dc4       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005dc4                hardware_alarm_claim
  .text.time_us_64
-                0x0000000010005d24       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010005d24                time_us_64
+                0x0000000010005ddc       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005ddc                time_us_64
  .text.busy_wait_us
-                0x0000000010005d3c       0x60 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010005d3c                busy_wait_us
+                0x0000000010005df4       0x60 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005df4                busy_wait_us
  .text.busy_wait_until
-                0x0000000010005d9c       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010005d9c                busy_wait_until
+                0x0000000010005e54       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005e54                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x0000000010005dbc       0x8c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010005dbc                hardware_alarm_set_callback
+                0x0000000010005e74       0x8c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005e74                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x0000000010005e48       0xd8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010005e48                hardware_alarm_set_target
+                0x0000000010005f00       0xd8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005f00                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x0000000010005f20       0x40 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010005f20                hardware_alarm_cancel
+                0x0000000010005fd8       0x40 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010005fd8                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x0000000010005f60       0x5c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010006018       0x5c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x0000000010005fbc      0x1b8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010005fbc                ph_post_alloc_init
+                0x0000000010006074      0x1b8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010006074                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x0000000010006174       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006174                ph_merge_two_pass
+                0x000000001000622c       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x000000001000622c                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x00000000100061c0      0x1c0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010006278      0x1c0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x0000000010006380      0x1c4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006380                ph_remove_head
+                0x0000000010006438      0x1c4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010006438                ph_remove_head
  .text.ph_remove_and_free_node
-                0x0000000010006544       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010006544                ph_remove_and_free_node
+                0x00000000100065fc       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x00000000100065fc                ph_remove_and_free_node
  .text.uart_init
-                0x00000000100065c0      0x188 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x00000000100065c0                uart_init
+                0x0000000010006678      0x188 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000000010006678                uart_init
  .text.uart_set_fifo_enabled
-                0x0000000010006748       0x68 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x0000000010006748                uart_set_fifo_enabled
+                0x0000000010006800       0x68 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000000010006800                uart_set_fifo_enabled
  .text.clock_configure
-                0x00000000100067b0      0x14c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x00000000100067b0                clock_configure
+                0x0000000010006868      0x14c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010006868                clock_configure
  .text.clocks_init
-                0x00000000100068fc      0x2d4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x00000000100068fc                clocks_init
+                0x00000000100069b4      0x2d4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x00000000100069b4                clocks_init
  .text.clock_get_hz
-                0x0000000010006bd0        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x0000000010006bd0                clock_get_hz
+                0x0000000010006c88        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000010006c88                clock_get_hz
  .text.pll_init
-                0x0000000010006bdc       0xa0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x0000000010006bdc                pll_init
+                0x0000000010006c94       0xa0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010006c94                pll_init
  .text.watchdog_start_tick
-                0x0000000010006c7c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010006c7c                watchdog_start_tick
+                0x0000000010006d34       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010006d34                watchdog_start_tick
  .text.watchdog_reboot
-                0x0000000010006c8c       0x98 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010006c8c                watchdog_reboot
+                0x0000000010006d44       0x98 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000010006d44                watchdog_reboot
  .text.xosc_init
-                0x0000000010006d24       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x0000000010006d24                xosc_init
+                0x0000000010006ddc       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010006ddc                xosc_init
  .text.runtime_init
-                0x0000000010006d4c       0xf4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006d4c                runtime_init
- .text._exit    0x0000000010006e40        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006e40                _exit
- .text._sbrk    0x0000000010006e44       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006e44                _sbrk
- .text.exit     0x0000000010006e78        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006e78                exit
+                0x0000000010006e04       0xf4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006e04                runtime_init
+ .text._exit    0x0000000010006ef8        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006ef8                _exit
+ .text._sbrk    0x0000000010006efc       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006efc                _sbrk
+ .text.exit     0x0000000010006f30        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006f30                exit
  .text.__assert_func
-                0x0000000010006e80       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006e80                __assert_func
- .text.panic    0x0000000010006eb4       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006eb4                panic
+                0x0000000010006f38       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006f38                __assert_func
+ .text.panic    0x0000000010006f6c       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006f6c                panic
  .text.hard_assertion_failure
-                0x0000000010006ee4        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010006ee4                hard_assertion_failure
+                0x0000000010006f9c        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010006f9c                hard_assertion_failure
  .text._out_buffer
-                0x0000000010006ef0        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006fa8        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_null
-                0x0000000010006ef8        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006fb0        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x0000000010006efc       0x9c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010006fb4       0x9c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x0000000010006f98      0x1c8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007050      0x1c8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x0000000010007160       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007218       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x0000000010007170       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x0000000010007180      0x45c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x00000000100075dc      0x4c0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007228       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x0000000010007238      0x45c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x0000000010007694      0x4c0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x0000000010007a9c      0xad0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010007b54      0xad0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_sprintf
-                0x000000001000856c       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x000000001000856c                __wrap_sprintf
+                0x0000000010008624       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010008624                __wrap_sprintf
  .text.vfctprintf
-                0x0000000010008594       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x0000000010008594                vfctprintf
+                0x000000001000864c       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000864c                vfctprintf
  .text.weak_raw_printf
-                0x00000000100085b4       0x40 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x00000000100085b4                weak_raw_printf
+                0x000000001000866c       0x40 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x000000001000866c                weak_raw_printf
  .text.weak_raw_vprintf
-                0x00000000100085f4       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x00000000100085f4                weak_raw_vprintf
- .text          0x0000000010008624       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x00000000100086ac       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100086ac                weak_raw_vprintf
+ .text          0x00000000100086dc       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x0000000010008634       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010008634                rom_func_lookup
+                0x00000000100086ec       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x00000000100086ec                rom_func_lookup
  .text.rom_data_lookup
-                0x0000000010008644       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010008644                rom_data_lookup
+                0x00000000100086fc       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x00000000100086fc                rom_data_lookup
  .text.rom_funcs_lookup
-                0x0000000010008654       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010008654                rom_funcs_lookup
+                0x000000001000870c       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x000000001000870c                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x0000000010008690       0x50 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010008690                __wrap___aeabi_idivmod
-                0x0000000010008690                divmod_s32s32
-                0x0000000010008690                div_s32s32
-                0x0000000010008690                __wrap___aeabi_idiv
-                0x0000000010008698                divmod_s32s32_unsafe
-                0x00000000100086c4                divmod_s32s32_savestate
+                0x0000000010008748       0x50 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010008748                __wrap___aeabi_idivmod
+                0x0000000010008748                divmod_s32s32
+                0x0000000010008748                div_s32s32
+                0x0000000010008748                __wrap___aeabi_idiv
+                0x0000000010008750                divmod_s32s32_unsafe
+                0x000000001000877c                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x00000000100086e0       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x00000000100086e0                __wrap___aeabi_uidiv
-                0x00000000100086e0                __wrap___aeabi_uidivmod
-                0x00000000100086e0                div_u32u32
-                0x00000000100086e0                divmod_u32u32
-                0x00000000100086e8                divmod_u32u32_unsafe
-                0x0000000010008710                divmod_u32u32_savestate
+                0x0000000010008798       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010008798                __wrap___aeabi_uidiv
+                0x0000000010008798                __wrap___aeabi_uidivmod
+                0x0000000010008798                div_u32u32
+                0x0000000010008798                divmod_u32u32
+                0x00000000100087a0                divmod_u32u32_unsafe
+                0x00000000100087c8                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x000000001000872c      0x424 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x000000001000872c                div_s64s64
-                0x000000001000872c                divmod_s64s64
-                0x000000001000872c                __wrap___aeabi_ldivmod
-                0x000000001000875c                div_u64u64
-                0x000000001000875c                divmod_u64u64
-                0x000000001000875c                __wrap___aeabi_uldivmod
-                0x000000001000876c                divmod_u64u64_savestate
-                0x000000001000878c                divmod_s64s64_unsafe
-                0x0000000010008814                divmod_u64u64_unsafe
+                0x00000000100087e4      0x424 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x00000000100087e4                div_s64s64
+                0x00000000100087e4                divmod_s64s64
+                0x00000000100087e4                __wrap___aeabi_ldivmod
+                0x0000000010008814                div_u64u64
+                0x0000000010008814                divmod_u64u64
+                0x0000000010008814                __wrap___aeabi_uldivmod
+                0x0000000010008824                divmod_u64u64_savestate
+                0x0000000010008844                divmod_s64s64_unsafe
+                0x00000000100088cc                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x0000000010008b50       0x80 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008b50                __wrap___aeabi_drsub
-                0x0000000010008b56                __wrap___aeabi_dsub
-                0x0000000010008b68                __wrap___aeabi_dadd
-                0x0000000010008b7a                __wrap___aeabi_ddiv
-                0x0000000010008bb6                __wrap___aeabi_dmul
+                0x0000000010008c08       0x80 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008c08                __wrap___aeabi_drsub
+                0x0000000010008c0e                __wrap___aeabi_dsub
+                0x0000000010008c20                __wrap___aeabi_dadd
+                0x0000000010008c32                __wrap___aeabi_ddiv
+                0x0000000010008c6e                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x0000000010008bd0       0x6c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008bd0                __wrap___aeabi_cdrcmple
-                0x0000000010008be0                __wrap___aeabi_cdcmple
-                0x0000000010008be0                __wrap___aeabi_cdcmpeq
+                0x0000000010008c88       0x6c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008c88                __wrap___aeabi_cdrcmple
+                0x0000000010008c98                __wrap___aeabi_cdcmple
+                0x0000000010008c98                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmpeq
-                0x0000000010008c3c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008c3c                __wrap___aeabi_dcmpeq
+                0x0000000010008cf4       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008cf4                __wrap___aeabi_dcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x0000000010008c4c        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008c4c                __wrap___aeabi_dcmplt
+                0x0000000010008d04        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008d04                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x0000000010008c58       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008c58                __wrap___aeabi_dcmple
+                0x0000000010008d10       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008d10                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x0000000010008c68       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008c68                __wrap___aeabi_dcmpge
+                0x0000000010008d20       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008d20                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x0000000010008c78        0xa CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008c78                __wrap___aeabi_dcmpgt
+                0x0000000010008d30        0xa CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008d30                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x0000000010008c82       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008c82                __wrap___aeabi_dcmpun
- *fill*         0x0000000010008c9e        0x2 
+                0x0000000010008d3a       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008d3a                __wrap___aeabi_dcmpun
+ *fill*         0x0000000010008d56        0x2 
  .text.__wrap___aeabi_i2d
-                0x0000000010008ca0       0x38 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008ca0                __wrap___aeabi_ui2d
-                0x0000000010008ca8                __wrap___aeabi_i2d
+                0x0000000010008d58       0x38 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008d58                __wrap___aeabi_ui2d
+                0x0000000010008d60                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x0000000010008cd8       0x48 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008cd8                __wrap___aeabi_d2iz
-                0x0000000010008cd8                double2int_z
+                0x0000000010008d90       0x48 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008d90                __wrap___aeabi_d2iz
+                0x0000000010008d90                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x0000000010008d20       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008d20                double2uint
-                0x0000000010008d20                __wrap___aeabi_d2uiz
+                0x0000000010008dd8       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008dd8                double2uint
+                0x0000000010008dd8                __wrap___aeabi_d2uiz
  .text.__wrap___aeabi_l2d
-                0x0000000010008d38       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008d38                __wrap___aeabi_l2d
+                0x0000000010008df0       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008df0                __wrap___aeabi_l2d
  .text.__wrap___aeabi_d2lz
-                0x0000000010008d50       0x26 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008d50                __wrap___aeabi_d2lz
-                0x0000000010008d50                double2int64_z
- *fill*         0x0000000010008d76        0x2 
+                0x0000000010008e08       0x26 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008e08                __wrap___aeabi_d2lz
+                0x0000000010008e08                double2int64_z
+ *fill*         0x0000000010008e2e        0x2 
  .text.double2int64
-                0x0000000010008d78       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008d78                double2int64
+                0x0000000010008e30       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008e30                double2int64
  .text.double2ufix64
-                0x0000000010008d90       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008d90                double2ufix64
+                0x0000000010008e48       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008e48                double2ufix64
  .text.__wrap___aeabi_d2f
-                0x0000000010008da8       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010008da8                __wrap___aeabi_d2f
+                0x0000000010008e60       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010008e60                __wrap___aeabi_d2f
  .text.__aeabi_double_init
-                0x0000000010008dc0       0xbc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000010008dc0                __aeabi_double_init
+                0x0000000010008e78       0xbc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000010008e78                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x0000000010008e7c       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010008e7c                double_table_shim_on_use_helper
+                0x0000000010008f34       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010008f34                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x0000000010008ea8       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010008ea8                drsub_shim
-                0x0000000010008eae                dsub_shim
+                0x0000000010008f60       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010008f60                drsub_shim
+                0x0000000010008f66                dsub_shim
  .text.dadd_shim
-                0x0000000010008eb8      0x15c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010008eb8                dadd_shim
+                0x0000000010008f70      0x15c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010008f70                dadd_shim
  .text.dmul_shim
-                0x0000000010009014      0x15c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010009014                dmul_shim
+                0x00000000100090cc      0x15c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100090cc                dmul_shim
  .text.ddiv_shim
-                0x0000000010009170      0x1b0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010009170                ddiv_shim
+                0x0000000010009228      0x1b0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010009228                ddiv_shim
  .text.double2uint_shim
-                0x0000000010009320        0xe CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010009320                double2uint_shim
-                0x0000000010009322                double2ufix_shim
+                0x00000000100093d8        0xe CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100093d8                double2uint_shim
+                0x00000000100093da                double2ufix_shim
  .text.double2int64_shim
-                0x000000001000932e       0x1a CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x000000001000932e                double2int64_shim
-                0x0000000010009330                double2fix64_shim
+                0x00000000100093e6       0x1a CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100093e6                double2int64_shim
+                0x00000000100093e8                double2fix64_shim
  .text.double2uint64_shim
-                0x0000000010009348       0x70 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010009348                double2uint64_shim
-                0x000000001000934a                double2ufix64_shim
-                0x000000001000936a                d2fix_a
+                0x0000000010009400       0x70 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010009400                double2uint64_shim
+                0x0000000010009402                double2ufix64_shim
+                0x0000000010009422                d2fix_a
  .text.double2float_shim
-                0x00000000100093b8       0x5c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100093b8                double2float_shim
+                0x0000000010009470       0x5c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010009470                double2float_shim
  .text.x2double_shims
-                0x0000000010009414       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010009414                uint2double_shim
-                0x0000000010009416                ufix2double_shim
-                0x000000001000941c                int2double_shim
-                0x000000001000941e                fix2double_shim
-                0x0000000010009424                uint642double_shim
-                0x0000000010009426                ufix642double_shim
-                0x000000001000942c                int642double_shim
-                0x000000001000942e                fix642double_shim
+                0x00000000100094cc       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100094cc                uint2double_shim
+                0x00000000100094ce                ufix2double_shim
+                0x00000000100094d4                int2double_shim
+                0x00000000100094d6                fix2double_shim
+                0x00000000100094dc                uint642double_shim
+                0x00000000100094de                ufix642double_shim
+                0x00000000100094e4                int642double_shim
+                0x00000000100094e6                fix642double_shim
  .text.dunpacks
-                0x00000000100094a4       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100094a4                dunpacks
+                0x000000001000955c       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x000000001000955c                dunpacks
  .text.__aeabi_lmul
-                0x00000000100094e0       0x32 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x00000000100094e0                __wrap___aeabi_lmul
- *fill*         0x0000000010009512        0x2 
+                0x0000000010009598       0x32 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x0000000010009598                __wrap___aeabi_lmul
+ *fill*         0x00000000100095ca        0x2 
  .text.__wrap___aeabi_cfcmple
-                0x0000000010009514       0x50 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010009514                __wrap___aeabi_cfrcmple
-                0x0000000010009520                __wrap___aeabi_cfcmpeq
-                0x0000000010009520                __wrap___aeabi_cfcmple
+                0x00000000100095cc       0x50 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000000100095cc                __wrap___aeabi_cfrcmple
+                0x00000000100095d8                __wrap___aeabi_cfcmpeq
+                0x00000000100095d8                __wrap___aeabi_cfcmple
  .text.__wrap___aeabi_fcmple
-                0x0000000010009564       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010009564                __wrap___aeabi_fcmple
+                0x000000001000961c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x000000001000961c                __wrap___aeabi_fcmple
  .text.__wrap___aeabi_fcmpun
-                0x0000000010009574       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x0000000010009574                __wrap___aeabi_fcmpun
+                0x000000001000962c       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x000000001000962c                __wrap___aeabi_fcmpun
  .text.__aeabi_float_init
-                0x000000001000958c       0x68 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x000000001000958c                __aeabi_float_init
+                0x0000000010009644       0x68 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000010009644                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x00000000100095f4       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x00000000100095f4                float_table_shim_on_use_helper
- .text          0x0000000010009620       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010009620                __aeabi_mem_init
- .text.memset   0x0000000010009630        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010009630                __wrap_memset
- .text.memcpy   0x000000001000963c        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x000000001000963c                __wrap___aeabi_memcpy
-                0x000000001000963c                __wrap_memcpy
+                0x00000000100096ac       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000000100096ac                float_table_shim_on_use_helper
+ .text          0x00000000100096d8       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000000100096d8                __aeabi_mem_init
+ .text.memset   0x00000000100096e8        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000000100096e8                __wrap_memset
+ .text.memcpy   0x00000000100096f4        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000000100096f4                __wrap___aeabi_memcpy
+                0x00000000100096f4                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x0000000010009648       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009700       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x0000000010009658       0xac CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009710       0xac CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush.part.1
-                0x0000000010009704       0xe8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100097bc       0xe8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x00000000100097ec       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100098a4       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string
-                0x000000001000980c      0x104 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100098c4      0x104 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x0000000010009910       0x98 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009910                __wrap_putchar
+                0x00000000100099c8       0x98 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100099c8                __wrap_putchar
  .text.__wrap_puts
-                0x00000000100099a8       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100099a8                __wrap_puts
- .text._read    0x00000000100099e4       0x94 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100099e4                _read
- .text._write   0x0000000010009a78       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009a78                _write
- .text._close   0x0000000010009a9c        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009a9c                _close
- .text._lseek   0x0000000010009aa4        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009aa4                _lseek
+                0x0000000010009a60       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009a60                __wrap_puts
+ .text._read    0x0000000010009a9c       0x94 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009a9c                _read
+ .text._write   0x0000000010009b30       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009b30                _write
+ .text._close   0x0000000010009b54        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009b54                _close
+ .text._lseek   0x0000000010009b5c        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009b5c                _lseek
  .text.stdio_set_driver_enabled
-                0x0000000010009aac       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009aac                stdio_set_driver_enabled
+                0x0000000010009b64       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009b64                stdio_set_driver_enabled
  .text.stdio_flush
-                0x0000000010009adc       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009adc                stdio_flush
+                0x0000000010009b94       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009b94                stdio_flush
  .text.__wrap_vprintf
-                0x0000000010009b04       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009b04                __wrap_vprintf
+                0x0000000010009bbc       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009bbc                __wrap_vprintf
  .text.__wrap_printf
-                0x0000000010009b94       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009b94                __wrap_printf
+                0x0000000010009c4c       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009c4c                __wrap_printf
  .text.stdio_init_all
-                0x0000000010009bac       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009bac                stdio_init_all
+                0x0000000010009c64       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009c64                stdio_init_all
  .text.getchar_timeout_us
-                0x0000000010009bbc       0x9c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010009bbc                getchar_timeout_us
+                0x0000000010009c74       0x9c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010009c74                getchar_timeout_us
  .text.stdio_uart_out_chars
-                0x0000000010009c58       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010009d10       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x0000000010009ca4       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010009ca4                stdio_uart_in_chars
+                0x0000000010009d5c       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010009d5c                stdio_uart_in_chars
  .text.on_uart_rx
-                0x0000000010009d20       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010009dd8       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_set_chars_available_callback
-                0x0000000010009d48       0x84 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010009e00       0x84 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_init
-                0x0000000010009dcc       0x48 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x0000000010009dcc                stdio_uart_init
+                0x0000000010009e84       0x48 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010009e84                stdio_uart_init
  .text.resetd_init
-                0x0000000010009e14        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010009ecc        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x0000000010009e18        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010009ed0        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x0000000010009e24       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010009edc       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x0000000010009e4c        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010009f04        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x0000000010009e50       0x64 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010009f08       0x64 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x0000000010009eb4        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010009eb4                usbd_app_driver_get_cb
+                0x0000000010009f6c        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010009f6c                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x0000000010009ec0       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010009ec0                tud_cdc_line_coding_cb
+                0x0000000010009f78       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010009f78                tud_cdc_line_coding_cb
  .text.stdio_usb_set_chars_available_callback
-                0x0000000010009ef4       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010009ef4                stdio_usb_set_chars_available_callback
+                0x0000000010009fac       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010009fac                stdio_usb_set_chars_available_callback
  .text.timer_task
-                0x0000000010009f08       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .text.usb_irq  0x0000000010009f5c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010009fc0       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .text.usb_irq  0x000000001000a014       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_in_chars
-                0x0000000010009f6c       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x0000000010009f6c                stdio_usb_in_chars
+                0x000000001000a024       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000a024                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x0000000010009ffc      0x110 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000a0b4      0x110 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x000000001000a10c       0xa8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000a1c4       0xa8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.tud_cdc_rx_cb
-                0x000000001000a1b4       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x000000001000a1b4                tud_cdc_rx_cb
+                0x000000001000a26c       0x20 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000a26c                tud_cdc_rx_cb
  .text.stdio_usb_init
-                0x000000001000a1d4       0xdc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x000000001000a1d4                stdio_usb_init
+                0x000000001000a28c       0xdc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000a28c                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x000000001000a2b0        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x000000001000a2b0                tud_descriptor_device_cb
+                0x000000001000a368        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x000000001000a368                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x000000001000a2b8        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x000000001000a2b8                tud_descriptor_configuration_cb
+                0x000000001000a370        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x000000001000a370                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x000000001000a2c0       0x70 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x000000001000a2c0                tud_descriptor_string_cb
+                0x000000001000a378       0x70 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x000000001000a378                tud_descriptor_string_cb
  .text.startup._retrieve_unique_id_on_boot
-                0x000000001000a330       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x000000001000a3e8       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x000000001000a340      0x1cc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x000000001000a340                pico_get_unique_board_id_string
+                0x000000001000a3f8      0x1cc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x000000001000a3f8                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x000000001000a50c       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x000000001000a50c                flash_get_unique_id
+                0x000000001000a5c4       0x3c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x000000001000a5c4                flash_get_unique_id
  .text.dcd_int_enable
-                0x000000001000a548        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a548                dcd_int_enable
+                0x000000001000a600        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a600                dcd_int_enable
  .text.dcd_set_address
-                0x000000001000a554       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a554                dcd_set_address
+                0x000000001000a60c       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a60c                dcd_set_address
  .text.dcd_connect
-                0x000000001000a568       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a568                dcd_connect
+                0x000000001000a620       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a620                dcd_connect
  .text.dcd_init
-                0x000000001000a578       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a578                dcd_init
+                0x000000001000a630       0x90 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a630                dcd_init
  .text.dcd_edpt0_status_complete
-                0x000000001000a608       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a608                dcd_edpt0_status_complete
+                0x000000001000a6c0       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a6c0                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x000000001000a624      0x10c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a624                dcd_edpt_open
+                0x000000001000a6dc      0x10c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a6dc                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x000000001000a730        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a730                dcd_edpt_close_all
+                0x000000001000a7e8        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a7e8                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x000000001000a738       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a738                dcd_edpt_xfer
+                0x000000001000a7f0       0x24 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a7f0                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x000000001000a75c       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a75c                dcd_edpt_stall
+                0x000000001000a814       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a814                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x000000001000a790       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x000000001000a790                dcd_edpt_clear_stall
+                0x000000001000a848       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x000000001000a848                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x000000001000a7bc       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x000000001000a7bc                rp2040_usb_init
+                0x000000001000a874       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x000000001000a874                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x000000001000a808       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x000000001000a808                hw_endpoint_xfer_start
+                0x000000001000a8c0       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x000000001000a8c0                hw_endpoint_xfer_start
  .text.tud_mounted
-                0x000000001000a85c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000a85c                tud_mounted
+                0x000000001000a914       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000a914                tud_mounted
  .text.tud_suspended
-                0x000000001000a86c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000a86c                tud_suspended
+                0x000000001000a924       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000a924                tud_suspended
  .text.tud_inited
-                0x000000001000a87c       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000a87c                tud_inited
+                0x000000001000a934       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000a934                tud_inited
  .text.tud_init
-                0x000000001000a890       0xe4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000a890                tud_init
+                0x000000001000a948       0xe4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000a948                tud_init
  .text.tud_task_ext
-                0x000000001000a974      0x88c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000a974                tud_task_ext
+                0x000000001000aa2c      0x88c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000aa2c                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x000000001000b200       0xbc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000b200                usbd_open_edpt_pair
+                0x000000001000b2b8       0xbc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000b2b8                usbd_open_edpt_pair
  .text.usbd_defer_func
-                0x000000001000b2bc       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000b2bc                usbd_defer_func
+                0x000000001000b374       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000b374                usbd_defer_func
  .text.usbd_edpt_open
-                0x000000001000b308       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000b308                usbd_edpt_open
+                0x000000001000b3c0       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000b3c0                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x000000001000b33c       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000b33c                usbd_edpt_claim
+                0x000000001000b3f4       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000b3f4                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x000000001000b364       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000b364                usbd_edpt_release
+                0x000000001000b41c       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000b41c                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x000000001000b38c       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x000000001000b38c                usbd_edpt_xfer
+                0x000000001000b444       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000b444                usbd_edpt_xfer
  .text.tud_control_status
-                0x000000001000b3d8       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x000000001000b3d8                tud_control_status
+                0x000000001000b490       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000001000b490                tud_control_status
  .text.tud_control_xfer
-                0x000000001000b408       0xb4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x000000001000b408                tud_control_xfer
+                0x000000001000b4c0       0xb4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000001000b4c0                tud_control_xfer
  .text.usbd_control_reset
-                0x000000001000b4bc       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x000000001000b4bc                usbd_control_reset
+                0x000000001000b574       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000001000b574                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x000000001000b4d0        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x000000001000b4d0                usbd_control_set_complete_callback
+                0x000000001000b588        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000001000b588                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x000000001000b4dc       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x000000001000b4dc                usbd_control_set_request
+                0x000000001000b594       0x1c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000001000b594                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x000000001000b4f8       0xfc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x000000001000b4f8                usbd_control_xfer_cb
+                0x000000001000b5b0       0xfc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x000000001000b5b0                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x000000001000b5f4       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b5f4                tud_cdc_n_connected
+                0x000000001000b6ac       0x30 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b6ac                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x000000001000b624       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b624                tud_cdc_n_available
+                0x000000001000b6dc       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b6dc                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x000000001000b63c       0x70 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b63c                tud_cdc_n_read
+                0x000000001000b6f4       0x70 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b6f4                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x000000001000b6ac       0x78 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b6ac                tud_cdc_n_write_flush
+                0x000000001000b764       0x78 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b764                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x000000001000b724       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b724                tud_cdc_n_write
+                0x000000001000b7dc       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b7dc                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x000000001000b758       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b758                tud_cdc_n_write_available
+                0x000000001000b810       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b810                tud_cdc_n_write_available
  .text.cdcd_init
-                0x000000001000b770       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b770                cdcd_init
+                0x000000001000b828       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b828                cdcd_init
  .text.cdcd_reset
-                0x000000001000b7ec       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b7ec                cdcd_reset
+                0x000000001000b8a4       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b8a4                cdcd_reset
  .text.cdcd_open
-                0x000000001000b818       0xe8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b818                cdcd_open
+                0x000000001000b8d0       0xe8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b8d0                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x000000001000b900       0xdc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b900                cdcd_control_xfer_cb
+                0x000000001000b9b8       0xdc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000b9b8                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x000000001000b9dc      0x19c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x000000001000b9dc                cdcd_xfer_cb
+                0x000000001000ba94      0x19c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x000000001000ba94                cdcd_xfer_cb
  .text.tusb_init
-                0x000000001000bb78        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000bb78                tusb_init
+                0x000000001000bc30        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000bc30                tusb_init
  .text.tusb_inited
-                0x000000001000bb84        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000bb84                tusb_inited
+                0x000000001000bc3c        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000bc3c                tusb_inited
  .text.tu_edpt_claim
-                0x000000001000bb8c       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000bb8c                tu_edpt_claim
+                0x000000001000bc44       0x4c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000bc44                tu_edpt_claim
  .text.tu_edpt_release
-                0x000000001000bbd8       0x38 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000bbd8                tu_edpt_release
+                0x000000001000bc90       0x38 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000bc90                tu_edpt_release
  .text.tu_edpt_validate
-                0x000000001000bc10       0x74 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000bc10                tu_edpt_validate
+                0x000000001000bcc8       0x74 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000bcc8                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x000000001000bc84       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000bc84                tu_edpt_bind_driver
+                0x000000001000bd3c       0x34 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x000000001000bd3c                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x000000001000bcb8       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000bcb8                tu_fifo_config
+                0x000000001000bd70       0x7c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000bd70                tu_fifo_config
  .text.tu_fifo_count
-                0x000000001000bd34       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000bd34                tu_fifo_count
+                0x000000001000bdec       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000bdec                tu_fifo_count
  .text.tu_fifo_empty
-                0x000000001000bd5c       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000bd5c                tu_fifo_empty
+                0x000000001000be14       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000be14                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x000000001000bd6c       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000bd6c                tu_fifo_remaining
+                0x000000001000be24       0x28 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000be24                tu_fifo_remaining
  .text.tu_fifo_read
-                0x000000001000bd94       0xa4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000bd94                tu_fifo_read
+                0x000000001000be4c       0xa4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000be4c                tu_fifo_read
  .text.tu_fifo_read_n
-                0x000000001000be38       0xf0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000be38                tu_fifo_read_n
+                0x000000001000bef0       0xf0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000bef0                tu_fifo_read_n
  .text.tu_fifo_write
-                0x000000001000bf28       0x8c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000bf28                tu_fifo_write
+                0x000000001000bfe0       0x8c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000bfe0                tu_fifo_write
  .text.tu_fifo_write_n
-                0x000000001000bfb4      0x160 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000bfb4                tu_fifo_write_n
+                0x000000001000c06c      0x160 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000c06c                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x000000001000c114       0x40 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000c114                tu_fifo_clear
+                0x000000001000c1cc       0x40 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000c1cc                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x000000001000c154       0x48 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000c154                tu_fifo_set_overwritable
- .text          0x000000001000c19c       0x18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atoi.o)
-                0x000000001000c19c                atoi
-                0x000000001000c1a8                _atoi_r
- .text          0x000000001000c1b4       0x5c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-callocr.o)
-                0x000000001000c1b4                _calloc_r
- .text          0x000000001000c210       0xac /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-fclose.o)
-                0x000000001000c210                _fclose_r
-                0x000000001000c2a8                fclose
- .text          0x000000001000c2bc      0x1b4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-fflush.o)
-                0x000000001000c2bc                __sflush_r
-                0x000000001000c41c                _fflush_r
-                0x000000001000c448                fflush
- .text          0x000000001000c470      0x220 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-findfp.o)
-                0x000000001000c474                _cleanup_r
-                0x000000001000c570                __sfmoreglue
-                0x000000001000c5a0                __sfp
-                0x000000001000c628                _cleanup
-                0x000000001000c640                __sinit
-                0x000000001000c650                __sfp_lock_acquire
-                0x000000001000c654                __sfp_lock_release
-                0x000000001000c658                __sinit_lock_acquire
-                0x000000001000c65c                __sinit_lock_release
-                0x000000001000c660                __fp_lock_all
-                0x000000001000c678                __fp_unlock_all
- .text          0x000000001000c690      0x27c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
-                0x000000001000c690                _malloc_trim_r
-                0x000000001000c730                _free_r
- .text          0x000000001000c90c       0x90 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-fwalk.o)
-                0x000000001000c90c                _fwalk
-                0x000000001000c950                _fwalk_reent
- .text          0x000000001000c99c      0x58c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
-                0x000000001000c99c                _malloc_r
- .text          0x000000001000cf28        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
-                0x000000001000cf28                __malloc_lock
-                0x000000001000cf2c                __malloc_unlock
- .text          0x000000001000cf30      0x35c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-reallocr.o)
-                0x000000001000cf30                _realloc_r
- .text          0x000000001000d28c       0x24 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
-                0x000000001000d28c                _sbrk_r
- .text          0x000000001000d2b0       0x9c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sscanf.o)
-                0x000000001000d2b0                sscanf
-                0x000000001000d300                _sscanf_r
- .text          0x000000001000d34c       0xa4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-stdio.o)
-                0x000000001000d34c                __sread
-                0x000000001000d374                __seofread
-                0x000000001000d378                __swrite
-                0x000000001000d3b8                __sseek
-                0x000000001000d3e4                __sclose
- .text          0x000000001000d3f0       0x48 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-stpcpy.o)
-                0x000000001000d3f0                stpcpy
- .text          0x000000001000d438       0x50 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strcat.o)
-                0x000000001000d438                strcat
- .text          0x000000001000d488       0x88 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strcmp.o)
-                0x000000001000d488                strcmp
- .text          0x000000001000d510       0x10 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strcpy.o)
-                0x000000001000d510                strcpy
- .text          0x000000001000d520       0x68 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x000000001000d520                strlen
- .text          0x000000001000d588       0x94 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strncmp.o)
-                0x000000001000d588                strncmp
- .text          0x000000001000d61c      0x184 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtol.o)
-                0x000000001000d768                _strtol_r
-                0x000000001000d770                strtol_l
-                0x000000001000d788                strtol
- .text          0x000000001000d7a0      0x180 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtoul.o)
-                0x000000001000d8e8                _strtoul_r
-                0x000000001000d8f0                strtoul_l
-                0x000000001000d908                strtoul
- .text          0x000000001000d920      0xf7c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfscanf.o)
-                0x000000001000d920                __ssvfscanf_r
- .text          0x000000001000e89c       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-writer.o)
-                0x000000001000e89c                _write_r
- .text          0x000000001000e8c4       0x24 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-closer.o)
-                0x000000001000e8c4                _close_r
- .text          0x000000001000e8e8        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-errno.o)
-                0x000000001000e8e8                __errno
- .text          0x000000001000e8f4        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-iswspace.o)
-                0x000000001000e8f4                iswspace
- .text          0x000000001000e900       0x18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-iswspace_l.o)
-                0x000000001000e900                iswspace_l
- .text          0x000000001000e918       0x6c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-locale.o)
-                0x000000001000e918                _setlocale_r
-                0x000000001000e95c                __locale_mb_cur_max
-                0x000000001000e96c                setlocale
- .text          0x000000001000e984       0x14 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-localeconv.o)
-                0x000000001000e984                __localeconv_l
-                0x000000001000e988                _localeconv_r
-                0x000000001000e990                localeconv
- .text          0x000000001000e998       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-lseekr.o)
-                0x000000001000e998                _lseek_r
- .text          0x000000001000e9c0       0x94 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mbrtowc.o)
-                0x000000001000e9c0                _mbrtowc_r
-                0x000000001000ea08                mbrtowc
- .text          0x000000001000ea54       0x44 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mbtowc_r.o)
-                0x000000001000ea54                _mbtowc_r
-                0x000000001000ea6c                __ascii_mbtowc
- .text          0x000000001000ea98      0xa38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mprec.o)
-                0x000000001000ea98                _Balloc
-                0x000000001000eae8                _Bfree
-                0x000000001000eafc                __multadd
-                0x000000001000ebac                __s2b
-                0x000000001000ec58                __hi0bits
-                0x000000001000ec90                __lo0bits
-                0x000000001000ecec                __i2b
-                0x000000001000ed18                __multiply
-                0x000000001000eea4                __pow5mult
-                0x000000001000ef58                __lshift
-                0x000000001000f03c                __mcmp
-                0x000000001000f070                __mdiff
-                0x000000001000f1b8                __ulp
-                0x000000001000f200                __b2d
-                0x000000001000f2b8                __d2b
-                0x000000001000f390                __ratio
-                0x000000001000f404                _mprec_log10
-                0x000000001000f438                __copybits
-                0x000000001000f478                __any_on
- .text          0x000000001000f4d0       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-readr.o)
-                0x000000001000f4d0                _read_r
- .text          0x000000001000f4f8       0x6c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sccl.o)
-                0x000000001000f4f8                __sccl
- .text          0x000000001000f564        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sf_nan.o)
-                0x000000001000f564                nanf
- .text          0x000000001000f56c     0x10b8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtod.o)
-                0x000000001000f59c                _strtod_l
-                0x000000001001047c                _strtod_r
-                0x000000001001048c                strtod_l
-                0x00000000100104a4                strtod
-                0x00000000100104c0                strtof_l
-                0x0000000010010570                strtof
- .text          0x0000000010010624      0x1d8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtoll.o)
-                0x00000000100107c4                _strtoll_r
-                0x00000000100107cc                strtoll_l
-                0x00000000100107e4                strtoll
- .text          0x00000000100107fc      0x1f4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtoull.o)
-                0x00000000100109b8                _strtoull_r
-                0x00000000100109c0                strtoull_l
-                0x00000000100109d8                strtoull
- .text          0x00000000100109f0      0xc18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfiscanf.o)
-                0x00000000100109f0                _sungetc_r
-                0x0000000010010a70                __ssrefill_r
-                0x0000000010010ab0                _sfread_r
-                0x0000000010010b40                __ssvfiscanf_r
- .text          0x0000000010011608      0x184 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-ungetc.o)
-                0x0000000010011608                __submore
-                0x000000001001168c                _ungetc_r
-                0x0000000010011774                ungetc
- .text          0x000000001001178c       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-wctomb_r.o)
-                0x000000001001178c                _wctomb_r
-                0x000000001001179c                __ascii_wctomb
- .text          0x00000000100117b8      0x634 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-gethex.o)
-                0x000000001001185c                __gethex
- .text          0x0000000010011dec      0x1d8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-hexnan.o)
-                0x0000000010011dec                __match
-                0x0000000010011e18                __hexnan
- .text          0x0000000010011fc4        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-s_nan.o)
-                0x0000000010011fc4                nan
+                0x000000001000c20c       0x48 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x000000001000c20c                tu_fifo_set_overwritable
+ .text          0x000000001000c254       0x18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atoi.o)
+                0x000000001000c254                atoi
+                0x000000001000c260                _atoi_r
+ .text          0x000000001000c26c       0x5c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-callocr.o)
+                0x000000001000c26c                _calloc_r
+ .text          0x000000001000c2c8       0xac /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-fclose.o)
+                0x000000001000c2c8                _fclose_r
+                0x000000001000c360                fclose
+ .text          0x000000001000c374      0x1b4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-fflush.o)
+                0x000000001000c374                __sflush_r
+                0x000000001000c4d4                _fflush_r
+                0x000000001000c500                fflush
+ .text          0x000000001000c528      0x220 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-findfp.o)
+                0x000000001000c52c                _cleanup_r
+                0x000000001000c628                __sfmoreglue
+                0x000000001000c658                __sfp
+                0x000000001000c6e0                _cleanup
+                0x000000001000c6f8                __sinit
+                0x000000001000c708                __sfp_lock_acquire
+                0x000000001000c70c                __sfp_lock_release
+                0x000000001000c710                __sinit_lock_acquire
+                0x000000001000c714                __sinit_lock_release
+                0x000000001000c718                __fp_lock_all
+                0x000000001000c730                __fp_unlock_all
+ .text          0x000000001000c748      0x27c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-freer.o)
+                0x000000001000c748                _malloc_trim_r
+                0x000000001000c7e8                _free_r
+ .text          0x000000001000c9c4       0x90 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-fwalk.o)
+                0x000000001000c9c4                _fwalk
+                0x000000001000ca08                _fwalk_reent
+ .text          0x000000001000ca54      0x58c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mallocr.o)
+                0x000000001000ca54                _malloc_r
+ .text          0x000000001000cfe0        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mlock.o)
+                0x000000001000cfe0                __malloc_lock
+                0x000000001000cfe4                __malloc_unlock
+ .text          0x000000001000cfe8      0x35c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-reallocr.o)
+                0x000000001000cfe8                _realloc_r
+ .text          0x000000001000d344       0x24 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sbrkr.o)
+                0x000000001000d344                _sbrk_r
+ .text          0x000000001000d368       0x9c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sscanf.o)
+                0x000000001000d368                sscanf
+                0x000000001000d3b8                _sscanf_r
+ .text          0x000000001000d404       0xa4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-stdio.o)
+                0x000000001000d404                __sread
+                0x000000001000d42c                __seofread
+                0x000000001000d430                __swrite
+                0x000000001000d470                __sseek
+                0x000000001000d49c                __sclose
+ .text          0x000000001000d4a8       0x48 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-stpcpy.o)
+                0x000000001000d4a8                stpcpy
+ .text          0x000000001000d4f0       0x50 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strcat.o)
+                0x000000001000d4f0                strcat
+ .text          0x000000001000d540       0x88 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strcmp.o)
+                0x000000001000d540                strcmp
+ .text          0x000000001000d5c8       0x10 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strcpy.o)
+                0x000000001000d5c8                strcpy
+ .text          0x000000001000d5d8       0x68 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x000000001000d5d8                strlen
+ .text          0x000000001000d640       0x94 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strncmp.o)
+                0x000000001000d640                strncmp
+ .text          0x000000001000d6d4      0x184 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtol.o)
+                0x000000001000d820                _strtol_r
+                0x000000001000d828                strtol_l
+                0x000000001000d840                strtol
+ .text          0x000000001000d858      0x180 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtoul.o)
+                0x000000001000d9a0                _strtoul_r
+                0x000000001000d9a8                strtoul_l
+                0x000000001000d9c0                strtoul
+ .text          0x000000001000d9d8      0xf7c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfscanf.o)
+                0x000000001000d9d8                __ssvfscanf_r
+ .text          0x000000001000e954       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-writer.o)
+                0x000000001000e954                _write_r
+ .text          0x000000001000e97c       0x24 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-closer.o)
+                0x000000001000e97c                _close_r
+ .text          0x000000001000e9a0        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-errno.o)
+                0x000000001000e9a0                __errno
+ .text          0x000000001000e9ac        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-iswspace.o)
+                0x000000001000e9ac                iswspace
+ .text          0x000000001000e9b8       0x18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-iswspace_l.o)
+                0x000000001000e9b8                iswspace_l
+ .text          0x000000001000e9d0       0x6c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-locale.o)
+                0x000000001000e9d0                _setlocale_r
+                0x000000001000ea14                __locale_mb_cur_max
+                0x000000001000ea24                setlocale
+ .text          0x000000001000ea3c       0x14 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-localeconv.o)
+                0x000000001000ea3c                __localeconv_l
+                0x000000001000ea40                _localeconv_r
+                0x000000001000ea48                localeconv
+ .text          0x000000001000ea50       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-lseekr.o)
+                0x000000001000ea50                _lseek_r
+ .text          0x000000001000ea78       0x94 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mbrtowc.o)
+                0x000000001000ea78                _mbrtowc_r
+                0x000000001000eac0                mbrtowc
+ .text          0x000000001000eb0c       0x44 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mbtowc_r.o)
+                0x000000001000eb0c                _mbtowc_r
+                0x000000001000eb24                __ascii_mbtowc
+ .text          0x000000001000eb50      0xa38 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mprec.o)
+                0x000000001000eb50                _Balloc
+                0x000000001000eba0                _Bfree
+                0x000000001000ebb4                __multadd
+                0x000000001000ec64                __s2b
+                0x000000001000ed10                __hi0bits
+                0x000000001000ed48                __lo0bits
+                0x000000001000eda4                __i2b
+                0x000000001000edd0                __multiply
+                0x000000001000ef5c                __pow5mult
+                0x000000001000f010                __lshift
+                0x000000001000f0f4                __mcmp
+                0x000000001000f128                __mdiff
+                0x000000001000f270                __ulp
+                0x000000001000f2b8                __b2d
+                0x000000001000f370                __d2b
+                0x000000001000f448                __ratio
+                0x000000001000f4bc                _mprec_log10
+                0x000000001000f4f0                __copybits
+                0x000000001000f530                __any_on
+ .text          0x000000001000f588       0x28 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-readr.o)
+                0x000000001000f588                _read_r
+ .text          0x000000001000f5b0       0x6c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sccl.o)
+                0x000000001000f5b0                __sccl
+ .text          0x000000001000f61c        0x8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-sf_nan.o)
+                0x000000001000f61c                nanf
+ .text          0x000000001000f624     0x10b8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtod.o)
+                0x000000001000f654                _strtod_l
+                0x0000000010010534                _strtod_r
+                0x0000000010010544                strtod_l
+                0x000000001001055c                strtod
+                0x0000000010010578                strtof_l
+                0x0000000010010628                strtof
+ .text          0x00000000100106dc      0x1d8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtoll.o)
+                0x000000001001087c                _strtoll_r
+                0x0000000010010884                strtoll_l
+                0x000000001001089c                strtoll
+ .text          0x00000000100108b4      0x1f4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtoull.o)
+                0x0000000010010a70                _strtoull_r
+                0x0000000010010a78                strtoull_l
+                0x0000000010010a90                strtoull
+ .text          0x0000000010010aa8      0xc18 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfiscanf.o)
+                0x0000000010010aa8                _sungetc_r
+                0x0000000010010b28                __ssrefill_r
+                0x0000000010010b68                _sfread_r
+                0x0000000010010bf8                __ssvfiscanf_r
+ .text          0x00000000100116c0      0x184 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-ungetc.o)
+                0x00000000100116c0                __submore
+                0x0000000010011744                _ungetc_r
+                0x000000001001182c                ungetc
+ .text          0x0000000010011844       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-wctomb_r.o)
+                0x0000000010011844                _wctomb_r
+                0x0000000010011854                __ascii_wctomb
+ .text          0x0000000010011870      0x634 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-gethex.o)
+                0x0000000010011914                __gethex
+ .text          0x0000000010011ea4      0x1d8 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-hexnan.o)
+                0x0000000010011ea4                __match
+                0x0000000010011ed0                __hexnan
+ .text          0x000000001001207c        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-s_nan.o)
+                0x000000001001207c                nan
  *(.fini)
- .fini          0x0000000010011fd0        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
-                0x0000000010011fd0                _fini
- *fill*         0x0000000010011fd4        0x4 
- .fini.__stub   0x0000000010011fd8       0xe0 linker stubs
+ .fini          0x0000000010012088        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000010012088                _fini
+ *fill*         0x000000001001208c        0x4 
+ .fini.__stub   0x0000000010012090       0xe0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -3489,322 +3489,325 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x00000000100120b8        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000100120b8                . = ALIGN (0x4)
+ .eh_frame      0x0000000010012170        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010012170                . = ALIGN (0x4)
 
-.glue_7         0x00000000100120b8        0x0
- .glue_7        0x00000000100120b8        0x0 linker stubs
+.glue_7         0x0000000010012170        0x0
+ .glue_7        0x0000000010012170        0x0 linker stubs
 
-.glue_7t        0x00000000100120b8        0x0
- .glue_7t       0x00000000100120b8        0x0 linker stubs
+.glue_7t        0x0000000010012170        0x0
+ .glue_7t       0x0000000010012170        0x0 linker stubs
 
-.vfp11_veneer   0x00000000100120b8        0x0
- .vfp11_veneer  0x00000000100120b8        0x0 linker stubs
+.vfp11_veneer   0x0000000010012170        0x0
+ .vfp11_veneer  0x0000000010012170        0x0 linker stubs
 
-.v4_bx          0x00000000100120b8        0x0
- .v4_bx         0x00000000100120b8        0x0 linker stubs
+.v4_bx          0x0000000010012170        0x0
+ .v4_bx         0x0000000010012170        0x0 linker stubs
 
-.iplt           0x00000000100120b8        0x0
- .iplt          0x00000000100120b8        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010012170        0x0
+ .iplt          0x0000000010012170        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x00000000100120b8     0x22c4
+.rodata         0x0000000010012170     0x22cc
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.PIN_I2C_SCL
-                0x00000000100120b8        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
-                0x00000000100120b8                PIN_I2C_SCL
+                0x0000000010012170        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
+                0x0000000010012170                PIN_I2C_SCL
  .rodata.PIN_I2C_SDA
-                0x00000000100120bc        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
-                0x00000000100120bc                PIN_I2C_SDA
+                0x0000000010012174        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
+                0x0000000010012174                PIN_I2C_SDA
  .rodata.PIN_LATCHIN
-                0x00000000100120c0        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
-                0x00000000100120c0                PIN_LATCHIN
+                0x0000000010012178        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
+                0x0000000010012178                PIN_LATCHIN
  .rodata.PIN_LATCHOUT1
-                0x00000000100120c4        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
-                0x00000000100120c4                PIN_LATCHOUT1
+                0x000000001001217c        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
+                0x000000001001217c                PIN_LATCHOUT1
  .rodata.PIN_VBAT_SW_ON
-                0x00000000100120c8        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
-                0x00000000100120c8                PIN_VBAT_SW_ON
+                0x0000000010012180        0x4 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
+                0x0000000010012180                PIN_VBAT_SW_ON
  .rodata.main.str1.4
-                0x00000000100120cc       0x14 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
+                0x0000000010012184       0x14 CMakeFiles/psion_recreate.dir/psion_recreate.c.obj
  .rodata.handle_power_off.str1.4
-                0x00000000100120e0        0xe CMakeFiles/psion_recreate.dir/emulator.c.obj
- *fill*         0x00000000100120ee        0x2 
+                0x0000000010012198        0xe CMakeFiles/psion_recreate.dir/emulator.c.obj
+ *fill*         0x00000000100121a6        0x2 
  .rodata.str1.4
-                0x00000000100120f0      0x21f CMakeFiles/psion_recreate.dir/emulator.c.obj
- *fill*         0x000000001001230f        0x1 
+                0x00000000100121a8      0x21f CMakeFiles/psion_recreate.dir/emulator.c.obj
+ *fill*         0x00000000100123c7        0x1 
  .rodata.wireless_taskloop
-                0x0000000010012310       0x1c CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x00000000100123c8       0x1c CMakeFiles/psion_recreate.dir/wireless.c.obj
  .rodata.btfn_display.str1.4
-                0x000000001001232c       0x1a CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012346        0x2 
+                0x00000000100123e4       0x1a CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x00000000100123fe        0x2 
  .rodata.btfn_eeprom_rd.str1.4
-                0x0000000010012348        0xc CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x0000000010012400        0xc CMakeFiles/psion_recreate.dir/wireless.c.obj
                                           0xf (size before relaxing)
  .rodata.btfn_hello.str1.4
-                0x0000000010012354       0x30 CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x000000001001240c       0x30 CMakeFiles/psion_recreate.dir/wireless.c.obj
  .rodata.btfn_mem_wr.str1.4
-                0x0000000010012384       0x13 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012397        0x1 
+                0x000000001001243c       0x13 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x000000001001244f        0x1 
  .rodata.btfn_processor_status.str1.4
-                0x0000000010012398       0x77 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x000000001001240f        0x1 
+                0x0000000010012450       0x77 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x00000000100124c7        0x1 
  .rodata.ifm_ipd.str1.4
-                0x0000000010012410        0xd CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x000000001001241d        0x3 
+                0x00000000100124c8        0xd CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x00000000100124d5        0x3 
  .rodata.ifm_recv.str1.4
-                0x0000000010012420       0x17 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012437        0x1 
+                0x00000000100124d8       0x17 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x00000000100124ef        0x1 
  .rodata.ifn_btdata.str1.4
-                0x0000000010012438        0xd CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012445        0x3 
+                0x00000000100124f0        0xd CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x00000000100124fd        0x3 
  .rodata.ifn_busy.str1.4
-                0x0000000010012448        0xb CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012453        0x1 
+                0x0000000010012500        0xb CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x000000001001250b        0x1 
  .rodata.ifn_cipsend.str1.4
-                0x0000000010012454        0x5 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012459        0x3 
+                0x000000001001250c        0x5 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012511        0x3 
  .rodata.ifn_closed.str1.4
-                0x000000001001245c        0xd CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012469        0x3 
+                0x0000000010012514        0xd CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012521        0x3 
  .rodata.ifn_ready.str1.4
-                0x000000001001246c        0x5 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012471        0x3 
+                0x0000000010012524        0x5 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012529        0x3 
  .rodata.ifn_recv.str1.4
-                0x0000000010012474        0x6 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x000000001001247a        0x2 
+                0x000000001001252c        0x6 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012532        0x2 
  .rodata.ifn_startdisc.str1.4
-                0x000000001001247c       0x72 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x00000000100124ee        0x2 
+                0x0000000010012534       0x72 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x00000000100125a6        0x2 
  .rodata.input_list
-                0x00000000100124f0      0x260 CMakeFiles/psion_recreate.dir/wireless.c.obj
-                0x00000000100124f0                input_list
+                0x00000000100125a8      0x260 CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x00000000100125a8                input_list
  .rodata.str1.4
-                0x0000000010012750      0x725 CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x0000000010012808      0x725 CMakeFiles/psion_recreate.dir/wireless.c.obj
                                         0x72d (size before relaxing)
- *fill*         0x0000000010012e75        0x3 
+ *fill*         0x0000000010012f2d        0x3 
  .rodata.stringify_float.str1.4
-                0x0000000010012e78       0x1e CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x0000000010012f30       0x1e CMakeFiles/psion_recreate.dir/wireless.c.obj
                                          0x22 (size before relaxing)
- *fill*         0x0000000010012e96        0x2 
+ *fill*         0x0000000010012f4e        0x2 
  .rodata.ufn_eeprom_read.str1.4
-                0x0000000010012e98       0x16 CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x0000000010012f50       0x16 CMakeFiles/psion_recreate.dir/wireless.c.obj
                                          0x1f (size before relaxing)
- *fill*         0x0000000010012eae        0x2 
+ *fill*         0x0000000010012f66        0x2 
  .rodata.ufn_eeprom_write.str1.4
-                0x0000000010012eb0        0x7 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012eb7        0x1 
+                0x0000000010012f68        0x7 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012f6f        0x1 
  .rodata.ufn_index.str1.4
-                0x0000000010012eb8       0x1f CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012ed7        0x1 
+                0x0000000010012f70       0x1f CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012f8f        0x1 
  .rodata.ufn_memory_0.str1.4
-                0x0000000010012ed8        0x5 CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012edd        0x3 
+                0x0000000010012f90        0x5 CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012f95        0x3 
  .rodata.ufn_memory_addr.str1.4
-                0x0000000010012ee0        0xc CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x0000000010012f98        0xc CMakeFiles/psion_recreate.dir/wireless.c.obj
  .rodata.ufn_memory_write.str1.4
-                0x0000000010012eec       0x1a CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012f06        0x2 
+                0x0000000010012fa4       0x1a CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012fbe        0x2 
  .rodata.wireless_init.str1.4
-                0x0000000010012f08       0x1a CMakeFiles/psion_recreate.dir/wireless.c.obj
- *fill*         0x0000000010012f22        0x2 
+                0x0000000010012fc0       0x1a CMakeFiles/psion_recreate.dir/wireless.c.obj
+ *fill*         0x0000000010012fda        0x2 
  .rodata.wireless_taskloop.str1.4
-                0x0000000010012f24       0x3c CMakeFiles/psion_recreate.dir/wireless.c.obj
+                0x0000000010012fdc       0x3c CMakeFiles/psion_recreate.dir/wireless.c.obj
  .rodata.add_int_arg.str1.4
-                0x0000000010012f60        0xc CMakeFiles/psion_recreate.dir/match.c.obj
+                0x0000000010013018        0xc CMakeFiles/psion_recreate.dir/match.c.obj
  .rodata.match.str1.4
-                0x0000000010012f6c        0x8 CMakeFiles/psion_recreate.dir/match.c.obj
+                0x0000000010013024        0x8 CMakeFiles/psion_recreate.dir/match.c.obj
  .rodata.str1.4
-                0x0000000010012f74       0x11 CMakeFiles/psion_recreate.dir/match.c.obj
- *fill*         0x0000000010012f85        0x3 
+                0x000000001001302c       0x11 CMakeFiles/psion_recreate.dir/match.c.obj
+ *fill*         0x000000001001303d        0x3 
  .rodata.eeprom_tasks.str1.4
-                0x0000000010012f88       0x35 CMakeFiles/psion_recreate.dir/eeprom.c.obj
- *fill*         0x0000000010012fbd        0x3 
+                0x0000000010013040       0x35 CMakeFiles/psion_recreate.dir/eeprom.c.obj
+ *fill*         0x0000000010013075        0x3 
  .rodata.menu_eeprom_invalidate.str1.4
-                0x0000000010012fc0        0xc CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x0000000010013078        0xc CMakeFiles/psion_recreate.dir/menu.c.obj
+ .rodata.menu_find.str1.4
+                0x0000000010013084        0x6 CMakeFiles/psion_recreate.dir/menu.c.obj
  .rodata.menu_process.str1.4
-                0x0000000010012fcc        0x2 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x000000001001308a        0x2 CMakeFiles/psion_recreate.dir/menu.c.obj
+ *fill*         0x000000001001308a        0x2 
  .rodata.menu_scan_test.str1.4
-                0x0000000010012fcc        0xd CMakeFiles/psion_recreate.dir/menu.c.obj
- *fill*         0x0000000010012fd9        0x3 
+                0x000000001001308c        0xd CMakeFiles/psion_recreate.dir/menu.c.obj
+ *fill*         0x0000000010013099        0x3 
  .rodata.str1.4
-                0x0000000010012fdc       0x78 CMakeFiles/psion_recreate.dir/menu.c.obj
+                0x000000001001309c       0x78 CMakeFiles/psion_recreate.dir/menu.c.obj
                                          0x84 (size before relaxing)
  .rodata.cli_digit.str1.4
-                0x0000000010013054       0x10 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010013114       0x10 CMakeFiles/psion_recreate.dir/serial.c.obj
  .rodata.cli_dump_language_stack.str1.4
-                0x0000000010013064       0x40 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010013124       0x40 CMakeFiles/psion_recreate.dir/serial.c.obj
  .rodata.cli_dump_memory.str1.4
-                0x00000000100130a4       0x13 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010013164       0x13 CMakeFiles/psion_recreate.dir/serial.c.obj
                                          0x1b (size before relaxing)
- *fill*         0x00000000100130b7        0x1 
+ *fill*         0x0000000010013177        0x1 
  .rodata.cli_info.str1.4
-                0x00000000100130b8       0x84 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010013178       0x84 CMakeFiles/psion_recreate.dir/serial.c.obj
  .rodata.cli_trace_dump_from.str1.4
-                0x000000001001313c       0x3d CMakeFiles/psion_recreate.dir/serial.c.obj
- *fill*         0x0000000010013179        0x3 
+                0x00000000100131fc       0x3d CMakeFiles/psion_recreate.dir/serial.c.obj
+ *fill*         0x0000000010013239        0x3 
  .rodata.serial_help.str1.4
-                0x000000001001317c       0x2d CMakeFiles/psion_recreate.dir/serial.c.obj
- *fill*         0x00000000100131a9        0x3 
+                0x000000001001323c       0x2d CMakeFiles/psion_recreate.dir/serial.c.obj
+ *fill*         0x0000000010013269        0x3 
  .rodata.serial_loop.str1.4
-                0x00000000100131ac        0xa CMakeFiles/psion_recreate.dir/serial.c.obj
- *fill*         0x00000000100131b6        0x2 
+                0x000000001001326c        0xa CMakeFiles/psion_recreate.dir/serial.c.obj
+ *fill*         0x0000000010013276        0x2 
  .rodata.str1.4
-                0x00000000100131b8       0x90 CMakeFiles/psion_recreate.dir/serial.c.obj
+                0x0000000010013278       0x90 CMakeFiles/psion_recreate.dir/serial.c.obj
  .rodata.spin_lock_claim_unused.str1.4
-                0x0000000010013248       0x1b CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x0000000010013263        0x1 
+                0x0000000010013308       0x1b CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x0000000010013323        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x0000000010013264       0x1b CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x000000001001327f        0x1 
+                0x0000000010013324       0x1b CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x000000001001333f        0x1 
  .rodata.at_the_end_of_time
-                0x0000000010013280        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010013280                at_the_end_of_time
+                0x0000000010013340        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010013340                at_the_end_of_time
  .rodata.hardware_alarm_claim.str1.4
-                0x0000000010013288       0x22 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x00000000100132aa        0x2 
+                0x0000000010013348       0x22 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x000000001001336a        0x2 
  .rodata.__assert_func.str1.4
-                0x00000000100132ac       0x3f CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001001336c       0x3f CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                          0x43 (size before relaxing)
- *fill*         0x00000000100132eb        0x1 
+ *fill*         0x00000000100133ab        0x1 
  .rodata.hard_assertion_failure.str1.4
-                0x00000000100132ec        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100133ac        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.panic.str1.4
-                0x00000000100132f8       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000000100133b8       0x10 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                          0x12 (size before relaxing)
  .rodata._vsnprintf
-                0x0000000010013308      0x1e0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100133c8      0x1e0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata._ftoa.str1.4
-                0x00000000100134e8       0x15 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x00000000100134fd        0x3 
+                0x00000000100135a8       0x15 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x00000000100135bd        0x3 
  .rodata.pow10.5494
-                0x0000000010013500       0x50 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x00000000100135c0       0x50 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__bi_44
-                0x0000000010013550        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010013610        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x000000001001355c        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001001361c        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x0000000010013568        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010013628        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.str1.4
-                0x0000000010013574       0x44 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010013634       0x44 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.6286
-                0x00000000100135b8        0x2 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x00000000100135ba        0x2 
+                0x0000000010013678        0x2 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x000000001001367a        0x2 
  .rodata.__bi_33.4926
-                0x00000000100135bc        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001001367c        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_34.4930
-                0x00000000100135c8        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010013688        0x8 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.str1.4
-                0x00000000100135d0       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010013690       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata._resetd_driver
-                0x00000000100135fc       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100136bc       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.__bi_182.7708
-                0x0000000010013614        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x00000000100136d4        0xc CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x0000000010013620       0x13 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x0000000010013633        0x1 
+                0x00000000100136e0       0x13 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x00000000100136f3        0x1 
  .rodata.str1.4
-                0x0000000010013634       0x2a CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x000000001001365e        0x2 
+                0x00000000100136f4       0x2a CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x000000001001371e        0x2 
  .rodata.usbd_desc_cfg
-                0x0000000010013660       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010013720       0x54 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x00000000100136b4       0x12 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x00000000100136c6        0x2 
+                0x0000000010013774       0x12 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000010013786        0x2 
  .rodata.usbd_desc_str
-                0x00000000100136c8       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010013788       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x00000000100136e0       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100137a0       0x14 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x00000000100136f4       0x49 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x00000000100137b4       0x49 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
                                          0x53 (size before relaxing)
- *fill*         0x000000001001373d        0x3 
+ *fill*         0x00000000100137fd        0x3 
  .rodata.tud_task_ext
-                0x0000000010013740       0x8c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010013800       0x8c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x00000000100137cc       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .rodata        0x00000000100137e4      0x101 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-ctype_.o)
-                0x00000000100137e4                _ctype_
- *fill*         0x00000000100138e5        0x3 
- .rodata        0x00000000100138e8        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-impure.o)
-                0x00000000100138e8                _global_impure_ptr
- .rodata        0x00000000100138ec      0x3e6 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfscanf.o)
- *fill*         0x0000000010013cd2        0x2 
+                0x000000001001388c       0x18 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .rodata        0x00000000100138a4      0x101 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-ctype_.o)
+                0x00000000100138a4                _ctype_
+ *fill*         0x00000000100139a5        0x3 
+ .rodata        0x00000000100139a8        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-impure.o)
+                0x00000000100139a8                _global_impure_ptr
+ .rodata        0x00000000100139ac      0x3e6 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfscanf.o)
+ *fill*         0x0000000010013d92        0x2 
  .rodata.str1.4
-                0x0000000010013cd4        0x5 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfscanf.o)
+                0x0000000010013d94        0x5 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfscanf.o)
                                           0x9 (size before relaxing)
- *fill*         0x0000000010013cd9        0x3 
+ *fill*         0x0000000010013d99        0x3 
  .rodata.str1.4
-                0x0000000010013cdc        0x6 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-locale.o)
+                0x0000000010013d9c        0x6 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-locale.o)
                                          0x12 (size before relaxing)
  .rodata.str1.4
-                0x0000000010013ce2        0x1 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mbrtowc.o)
- *fill*         0x0000000010013ce2        0x6 
- .rodata        0x0000000010013ce8      0x128 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mprec.o)
-                0x0000000010013cf8                __mprec_tinytens
-                0x0000000010013d20                __mprec_bigtens
-                0x0000000010013d48                __mprec_tens
+                0x0000000010013da2        0x1 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mbrtowc.o)
+ *fill*         0x0000000010013da2        0x6 
+ .rodata        0x0000000010013da8      0x128 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mprec.o)
+                0x0000000010013db8                __mprec_tinytens
+                0x0000000010013de0                __mprec_bigtens
+                0x0000000010013e08                __mprec_tens
  .rodata.str1.4
-                0x0000000010013e10       0x47 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mprec.o)
- *fill*         0x0000000010013e57        0x1 
- .rodata        0x0000000010013e58      0x120 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtod.o)
+                0x0000000010013ed0       0x47 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-mprec.o)
+ *fill*         0x0000000010013f17        0x1 
+ .rodata        0x0000000010013f18      0x120 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtod.o)
  .rodata.str1.4
-                0x0000000010013f78        0xf /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtod.o)
+                0x0000000010014038        0xf /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strtod.o)
                                          0x11 (size before relaxing)
- *fill*         0x0000000010013f87        0x1 
- .rodata        0x0000000010013f88      0x2aa /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfiscanf.o)
- *fill*         0x0000000010014232        0x2 
- .rodata        0x0000000010014234      0x100 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-gethex.o)
-                0x0000000010014234                __hexdig
+ *fill*         0x0000000010014047        0x1 
+ .rodata        0x0000000010014048      0x2aa /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-svfiscanf.o)
+ *fill*         0x00000000100142f2        0x2 
+ .rodata        0x00000000100142f4      0x100 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-gethex.o)
+                0x00000000100142f4                __hexdig
  .rodata.str1.4
-                0x0000000010014334       0x3a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-gethex.o)
+                0x00000000100143f4       0x3a /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-gdtoa-gethex.o)
                                          0x4e (size before relaxing)
- *fill*         0x000000001001436e        0x2 
- .rodata        0x0000000010014370        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-lnumeric.o)
-                0x0000000010014370                _C_numeric_locale
+ *fill*         0x000000001001442e        0x2 
+ .rodata        0x0000000010014430        0xc /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-lnumeric.o)
+                0x0000000010014430                _C_numeric_locale
  .rodata.str1.4
-                0x000000001001437c        0x5 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-lnumeric.o)
-                0x0000000010014384                . = ALIGN (0x4)
+                0x000000001001443c        0x5 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-lnumeric.o)
+                0x0000000010014444                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x0000000010014384                . = ALIGN (0x4)
+                0x0000000010014444                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000001001437c                __exidx_start = .
+                0x000000001001443c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000001001437c                __exidx_end = .
-                0x0000000010014384                . = ALIGN (0x4)
-                0x000000001001437c                __binary_info_start = .
+                0x000000001001443c                __exidx_end = .
+                0x0000000010014444                . = ALIGN (0x4)
+                0x000000001001443c                __binary_info_start = .
 
-.binary_info    0x000000001001437c       0x28
+.binary_info    0x000000001001443c       0x28
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x000000001001437c        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001001443c        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x0000000010014380        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010014440        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x0000000010014384        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010014444        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x0000000010014388        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010014448        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x000000001001438c        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001001444c        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x0000000010014390        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010014450        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x0000000010014394        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010014454        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr33
-                0x0000000010014398        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x0000000010014458        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr34
-                0x000000001001439c        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x000000001001445c        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr182
-                0x00000000100143a0        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100143a4                __binary_info_end = .
+                0x0000000010014460        0x4 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010014464                __binary_info_end = .
 
-.rel.dyn        0x00000000100143a4        0x0
- .rel.iplt      0x00000000100143a4        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000100143a4                . = ALIGN (0x4)
+.rel.dyn        0x0000000010014464        0x0
+ .rel.iplt      0x0000000010014464        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010014464                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -3813,7 +3816,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x0000000020000000       0xc0 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0    0x128a0 load address 0x00000000100143a4
+.data           0x00000000200000c0    0x128a0 load address 0x0000000010014464
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -4059,36 +4062,36 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(.jcr)
                 0x0000000020012960                . = ALIGN (0x4)
                 0x0000000020012960                __data_end__ = .
-                0x00000000100143a4                __etext = LOADADDR (.data)
+                0x0000000010014464                __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x0000000020012960        0x0 load address 0x0000000010026c44
+                0x0000000020012960        0x0 load address 0x0000000010026d04
  .tm_clone_table
                 0x0000000020012960        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x0000000020012960        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020012960        0x0 load address 0x0000000010026c44
+.igot.plt       0x0000000020012960        0x0 load address 0x0000000010026d04
  .igot.plt      0x0000000020012960        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020012960        0x0 load address 0x0000000010026c44
+                0x0000000020012960        0x0 load address 0x0000000010026d04
                 0x0000000020012960                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010026c44
+.scratch_x      0x0000000020040000        0x0 load address 0x0000000010026d04
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010026c44                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x0000000010026d04                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010026c44
+.scratch_y      0x0000000020041000        0x0 load address 0x0000000010026d04
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010026c44                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x0000000010026d04                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x0000000020012960    0x18268
                 0x0000000020012960                . = ALIGN (0x4)
@@ -4515,8 +4518,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x0000000010026c44        0x0
-                0x0000000010026c44                PROVIDE (__flash_binary_end = .)
+.flash_end      0x0000000010026d04        0x0
+                0x0000000010026d04                PROVIDE (__flash_binary_end = .)
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -4607,7 +4610,7 @@ LOAD CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-
 LOAD CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 LOAD CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 LOAD CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-LOAD /tmp/ccdXWf9o.o
+LOAD /tmp/ccAeTnBe.o
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -4751,7 +4754,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000a10       0x2c CMakeFiles/psion_recreate.dir/home/menadue/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .ARM.attributes
-                0x0000000000000a3c       0x22 /tmp/ccdXWf9o.o
+                0x0000000000000a3c       0x22 /tmp/ccAeTnBe.o
  .ARM.attributes
                 0x0000000000000a5e       0x1e /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
