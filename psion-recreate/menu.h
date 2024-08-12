@@ -11,6 +11,8 @@
 #define NUM_SCAN_STATES  2
 #define SCAN_STATE_DRIVE 0
 #define SCAN_STATE_READ  (NUM_SCAN_STATES/2)
+#define SCAN_STATE_RELEASE_DRIVE  10
+#define SCAN_STATE_RELEASE_READ   11
 
 typedef void (*MENU_FN)(void);
 

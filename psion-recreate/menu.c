@@ -168,6 +168,12 @@ void scan_keys(void)
       scan_state = SCAN_STATE_DRIVE;
       break;
 
+    case SCAN_STATE_RELEASE_DRIVE:
+      break;
+
+    case SCAN_STATE_RELEASE_READ:
+      break;
+      
     default:
       break;
     }
