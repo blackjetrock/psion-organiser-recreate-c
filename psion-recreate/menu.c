@@ -412,6 +412,17 @@ void menu_eeprom_extract_mems(void)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+
+void menu_find(void)
+{
+}
+
+void menu_save(void)
+{
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
 //
 // Oled
 
@@ -623,6 +634,8 @@ MENU menu_top =
     {'E', "Eeprom",     menu_goto_eeprom},
     {'R', "RTC",        menu_goto_rtc},
     {'D', "DispTest",   menu_oled_test},
+    {'D', "Find",       menu_find},
+    {'D', "Save",       menu_save},
     {'&', "",           menu_null},
    }
   };
