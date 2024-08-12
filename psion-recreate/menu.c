@@ -124,6 +124,8 @@ void scan_keys(void)
 	}
 
       //write_display_extra(2, 'a'+scan_drive);
+
+      scan_state = SCAN_STATE_READ;
       break;
 
     case SCAN_STATE_READ:
@@ -162,13 +164,16 @@ void scan_keys(void)
 		}
 	    }
 	}
+      
+      scan_state = SCAN_STATE_DRIVE;
       break;
 
     default:
       break;
     }
+
   
-  scan_state = (scan_state + 1) % NUM_SCAN_STATES;
+  //scan_state = (scan_state + 1) % NUM_SCAN_STATES;
 }
 
 
