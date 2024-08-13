@@ -7,7 +7,7 @@ This is an alternative for the code that runs on the Psion Organiser 2 recreatio
 
 This code is very much work in progress, I'm hacking the original emulatior based code and gradually removing what isn't needed.
 
-Thi sis the simple menu I've started with, there's a framework taken from the emulator code that runs a set of menus that are very similar to the original organiser code menus.
+This is the simple menu I've started with, there's a framework taken from the emulator code that runs a set of menus that are very similar to the original organiser code menus.
 
 ![IMG_20240810_140745952 (1)](https://github.com/user-attachments/assets/aa69ab7a-5603-4dbf-93de-effacbcaf2b0)
 
