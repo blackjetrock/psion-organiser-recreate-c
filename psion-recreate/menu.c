@@ -503,12 +503,12 @@ typedef struct _RECORD
 
 void get_record(int n, RECORD *record_data)
 {
-  read_eeprom(EEPROM_1_ADDR_RD, RECORD_LENGTH*n, RECORD_LENGTH, (uint8_t *)&record_data);
+  read_eeprom(EEPROM_1_ADDR_RD, RECORD_LENGTH*n, RECORD_LENGTH, (uint8_t *)record_data);
 }
 
 void put_record(int n, RECORD *record_data)
 {
-  write_eeprom(EEPROM_1_ADDR_WR, RECORD_LENGTH*n, RECORD_LENGTH, (uint8_t *)&record_data);
+  write_eeprom(EEPROM_1_ADDR_WR, RECORD_LENGTH*n, RECORD_LENGTH, (uint8_t *)record_data);
 }
 
 int display_record(RECORD *r)
@@ -892,9 +892,9 @@ MENU menu_top =
     {'R', "RTC",        menu_goto_rtc},
     {'D', "DispTest",   menu_oled_test},
     {'F', "Find",       menu_find},
-    {'D', "Save",       menu_save},
+    {'S', "Save",       menu_save},
     {'A', "All",        menu_all},
-    {'M', "Format",     menu_format},
+    {'M', "forMat",     menu_format},
     {'&', "",           menu_null},
    }
   };

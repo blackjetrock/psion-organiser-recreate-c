@@ -126,6 +126,17 @@ void cli_dump_eeprom(void)
 }
 
 
+  
+void cli_write_eeprom(void)
+{
+  char wstr[] = "abcdefghij";
+ 
+  // write
+  write_eeprom(EEPROM_1_ADDR_RD, parameter, strlen(wstr), wstr);
+}
+
+  
+
 void cli_dump_memory(void)
 {
   char ascii[BYTE_WIDTH*3+5];
@@ -389,6 +400,11 @@ SERIAL_COMMAND serial_cmds[] =
     '_',
     "Dump EEPROM",
     cli_dump_eeprom,
+   },
+   {
+    '.',
+    "Write to EEPROM",
+    cli_write_eeprom,
    },
   };
 
