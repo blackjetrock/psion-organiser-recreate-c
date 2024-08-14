@@ -711,9 +711,42 @@ void menu_oled_test(void)
     }
   
 #endif
+
+  int x = 10;
+  int y = 10;
+  int dx = 1;
+  int dy = 1;
   
   while(1)
     {
+#if 1
+      
+      plot_point(x, y, 1);
+
+      x=x+dx;
+      y=y+dy;
+
+      if( x > 123 )
+	{
+	  dx= -dx;
+	}
+
+      if( y > 30 )
+	{
+	  dy = -dy;
+	}
+
+      if( x < 5 )
+	{
+	  dx= -dx;
+	}
+
+      if( y <3 )
+	{
+	  dy = -dy;
+	}
+      
+#endif
       // Keep the display updated
       menu_loop_tasks();
       
@@ -726,6 +759,17 @@ void menu_oled_test(void)
 	    {
 	      break;
 	    }
+	  
+	  if ( keychar == 'r' )
+	    {
+	      x++;
+	    }
+
+	  if ( keychar == 'l' )
+	    {
+	      x--;
+	    }
+	  
 	}
      }
 }
