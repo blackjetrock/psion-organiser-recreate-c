@@ -1319,7 +1319,16 @@ void plot_point(int x, int y, int mode)
   //printf("  IDX:%d", cy*128+cx);
   //printf("  byte:%02X", byte);
 
-  byte |= (0x1 << (y % 8));
+  switch(mode)
+    {
+    case 1:
+      byte |= (0x1 << (y % 8));
+      break;
+
+    case 0:
+      byte &= ~(1 << (y % 8));
+      break;
+    }
   //printf("  byte:%02X", byte);
   
   i2c_send_byte(invert_byte(byte));

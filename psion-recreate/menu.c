@@ -491,6 +491,7 @@ void menu_eeprom_invalidate(void)
 
 #define RECORD_LENGTH 64
 #define NUM_RECORDS 100
+#define NO_RECORD -1
 
 typedef struct _RECORD
 {
@@ -509,6 +510,35 @@ void get_record(int n, RECORD *record_data)
 void put_record(int n, RECORD *record_data)
 {
   write_eeprom(EEPROM_1_ADDR_WR, RECORD_LENGTH*n, RECORD_LENGTH, (uint8_t *)record_data);
+}
+
+//------------------------------------------------------------------------------
+//
+// Find records matching the key
+// return index of record found or NO_RECORD if none found.
+// Optionally start at 'start'
+
+int find_record(char *key, RECORD *recout, int start)
+{
+  RECORD r;
+  
+  if( start == NO_RECORD )
+    {
+      start = 0;
+    }
+
+  for(int i=start; i<NUM_RECORDS; i++)
+    {
+      get_record(i,&r);
+
+      if( strcmp(key, r.key)==0 )
+	{
+	  *recout = r;
+	  return(i);
+	}
+    }
+
+  return(NO_RECORD);
 }
 
 int display_record(RECORD *r)
@@ -552,16 +582,15 @@ void menu_format(void)
   
   for(int i=0; i<NUM_RECORDS; i++)
     {
-      sprintf(line, "REC %02X", i);
+      sprintf(line, "REC %c", i);
       printxy_str(0, 0, line);
       
       r.flag = '*';
-      sprintf(&(r.key[0]), "r%03X", i);
+      sprintf(&(r.key[0]), "K%c", 'A'+(i%10));
       sprintf(&(r.data[0]), "Data for rec %02X", i);
       put_record(i, &r);
       display_record(&r);
     }
-
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -624,7 +653,9 @@ void menu_eeprom_extract_mems(void)
 void menu_find(void)
 {
   char find_str[MAX_INPUT_STR];
-
+  int searching = 0;
+  int cur_rec = 0;
+  
   find_str[0] ='\0';
   display_clear();
   printxy_str(0, 0, "Find:");
@@ -635,8 +666,10 @@ void menu_find(void)
       // Keep the display updated
       menu_loop_tasks();
       
-      if( gotkey )
+      if( gotkey || searching )
 	{
+	  gotkey = 0;
+	  
 	  // Exit on ON key, exiting demonstrates it is working...
 	  if( keychar == 'o' )
 	    {
@@ -648,6 +681,82 @@ void menu_find(void)
 		}
 	      else
 		{
+		  find_str[0] ='\0';
+		  
+		  display_clear();
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, find_str);
+		  continue;
+		}
+	    }
+
+	  if ( (keychar == 'x') || searching )
+	    {
+	      int recnum;
+	      RECORD r;
+
+	      printf("\nStart search");
+	      
+	      if( !searching )
+		{
+		  printf("\nNot already in search");
+		  cur_rec = 0;
+		  searching = 1;
+		  
+		}
+	      
+	      // Find the record
+	      recnum = find_record(find_str, &r, cur_rec);
+	      cur_rec = recnum+1;
+	      
+	      if( recnum != -1 )
+		{
+		  printf("\nFound");
+		  
+		  display_clear();
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, &(r.key[0]));
+		  printxy_str(0, 1, &(r.data[0]));
+
+		  int done = 0;
+		  
+		  while(!done)
+		    {
+		      // Keep the display updated
+		      menu_loop_tasks();
+		      
+		      if( gotkey )
+			{
+			  gotkey = 0;
+			  
+			  switch(keychar)
+			    {
+			    case 'x':
+			      done = 1;
+			      break;
+
+			    case 'o':
+			      done = 1;
+			      find_str[0] ='\0';
+			      
+			      display_clear();
+			      printxy_str(0, 0, "Find:");
+			      printxy_str(5, 0, find_str);
+			      continue;
+			      
+			      break;
+			    }
+			}
+		    }
+		  continue;
+		}
+	      else
+		{
+		  printf("\nNo more records");
+		  
+		  // No more records
+		  searching = 0;
+
 		  find_str[0] ='\0';
 		  
 		  display_clear();
@@ -709,41 +818,72 @@ void menu_oled_test(void)
 	  plot_point(x, y, 1);
 	}
     }
+
+  sleep_ms(2000);
   
 #endif
 
-  int x = 10;
-  int y = 10;
-  int dx = 1;
-  int dy = 1;
+  int bx = 5000;
+  int by = 5000;
+
+  int x = 0;
+  int y = 0;
+  int dxa = 314;
+  int dya = 577;
+  int dxb = 357;
+  int dyb = 591;
+
+  pixels_clear();
   
   while(1)
     {
 #if 1
       
-      plot_point(x, y, 1);
+      plot_point(x+0, y+0, 0);
+      plot_point(x+1, y-1, 0);
+      plot_point(x+1, y+1, 0);
+      plot_point(x-1, y-1, 0);
+      plot_point(x-1, y+1, 0);
 
-      x=x+dx;
-      y=y+dy;
+      bx=bx+dxa;
+      by=by+dya;
+      printf("\n%d %d", x, y);
+      
+      x = bx / 100;
+      y = by / 100;
+      
+      plot_point(x+0, y+0, 1);
+      plot_point(x+1, y-1, 1);
+      plot_point(x+1, y+1, 1);
+      plot_point(x-1, y-1, 1);
+      plot_point(x-1, y+1, 1);
 
-      if( x > 123 )
+      if( bx > 12500 )
 	{
-	  dx= -dx;
+	  dxa= -dxa;
+	  dxa = (dxa * 9989)/10000;
+	  bx = 12500;
 	}
 
-      if( y > 30 )
+      if( by > 3200 )
 	{
-	  dy = -dy;
+	  dya = -dya;
+	  dya = (dya * 9998)/10000;
+	  by = 3200;
 	}
 
-      if( x < 5 )
+      if( bx < 300 )
 	{
-	  dx= -dx;
+	  dxa= -dxa;
+	  dxa = (dxa * 9990)/10000;
+	  bx = 300;
 	}
 
-      if( y <3 )
+      if( by <300 )
 	{
-	  dy = -dy;
+	  dya = -dya;
+	  dya = (dya * 9998)/10000;
+	  by = 300;
 	}
       
 #endif
@@ -762,12 +902,23 @@ void menu_oled_test(void)
 	  
 	  if ( keychar == 'r' )
 	    {
-	      x++;
+	      dxa+=100;
 	    }
 
 	  if ( keychar == 'l' )
 	    {
-	      x--;
+	      dxa-=100;
+	    }
+
+	  if ( keychar == 'u' )
+	    {
+	      dya += 100;
+	    }
+
+
+	  if ( keychar == 'd' )
+	    {
+	      dxb -= 100;
 	    }
 	  
 	}
