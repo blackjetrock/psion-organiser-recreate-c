@@ -29,13 +29,16 @@
 #include "eeprom.h"
 #include "rtc.h"
 #include "display.h"
-
+#include "record.h"
+#include "svc_kb.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Meta menu
 //
 //
+
+int scan_keys_off = 0;
 
 MENU  *active_menu = &menu_top;
 
@@ -118,7 +121,12 @@ void scan_keys(void)
       scan_skip = SCAN_SKIP;
       return;
     }
-  
+
+  if( scan_keys_off )
+    {
+      return;
+    }
+    
   switch(scan_state)
     {
       
@@ -404,6 +412,9 @@ void menu_scan_test(void)
       
       // We are on core 1 so a loop will cause 
       //      dump_lcd();
+      char codestr[20];
+      sprintf(codestr, "KC=%04X    ", keycode);
+      i_printxy_str(1, 2, codestr);
       
       if( gotkey,1 )
 	{
@@ -489,16 +500,6 @@ void menu_eeprom_invalidate(void)
 //------------------------------------------------------------------------------
 //
 
-#define RECORD_LENGTH 64
-#define NUM_RECORDS 100
-#define NO_RECORD -1
-
-typedef struct _RECORD
-{
-  uint8_t flag;
-  char key[16];
-  char data[RECORD_LENGTH-1-16];
-} RECORD;
 
 // Save and find records
 
@@ -540,6 +541,39 @@ int find_record(char *key, RECORD *recout, int start)
 
   return(NO_RECORD);
 }
+
+int is_empty(uint8_t flag)
+{
+  return(flag != '*');
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Find the first free slot, using the flag field
+// '*' full
+// Anything else empty
+
+int find_free_record(void)
+{
+  RECORD r;
+  
+  for(int i=0; i<NUM_RECORDS; i++)
+    {
+      get_record(i, &r);
+
+      if( is_empty(r.flag))
+	{
+	  printf("\nFound empty slot at %d", i);
+	  return(i);
+	}
+    }
+
+  printf("\nNo empty slot");
+  return(NO_RECORD);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 int display_record(RECORD *r)
 {
@@ -585,7 +619,7 @@ void menu_format(void)
       sprintf(line, "REC %c", i);
       printxy_str(0, 0, line);
       
-      r.flag = '*';
+      r.flag = '-';
       sprintf(&(r.key[0]), "K%c", 'A'+(i%10));
       sprintf(&(r.data[0]), "Data for rec %02X", i);
       put_record(i, &r);
@@ -655,6 +689,7 @@ void menu_find(void)
   char find_str[MAX_INPUT_STR];
   int searching = 0;
   int cur_rec = 0;
+  int ed$pos = 2;
   
   find_str[0] ='\0';
   display_clear();
@@ -783,8 +818,102 @@ void menu_find(void)
     }
 }
 
+
+#define SS_SAVE_INIT   1
+#define SS_SAVE_ENTER  2
+#define SS_SAVE_EXIT   3
+
 void menu_save(void)
 {
+  char save_str[MAX_INPUT_STR];
+  int searching = 0;
+  int cur_rec = 0;
+  int substate = SS_SAVE_INIT;
+  int recnum;
+  RECORD r;
+    
+  save_str[0] ='\0';
+  display_clear();
+  printxy_str(0, 0, "Save:");
+  print_str(save_str);
+
+  int done = 0;
+  
+  while(!done)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+      
+      if( gotkey )
+	{
+	  gotkey = 0;
+
+	  switch(substate)
+	    {
+	    case SS_SAVE_INIT:
+	      switch(keychar)
+		{
+		case 'o':
+		  // Exit on ON key, exiting demonstrates it is working...
+		  if( strlen(save_str) == 0)
+		    {
+		      // Refresh menu on exit
+		      menu_init = 1;
+		      return;
+		    }
+		  else
+		    {
+		      save_str[0] ='\0';
+		      
+		      display_clear();
+		      printxy_str(0, 0, "Save:");
+		      printxy_str(5, 0, save_str);
+		      continue;
+		    }
+				  
+		  break;
+
+		case 'x':
+		  printf("\nFind empty search");
+		  
+		  // Find the record slot to save in to
+		  recnum = find_free_record();
+		  
+		  if( recnum != -1 )
+		    {
+		      // Store data
+		      r.flag = '*';
+		      
+		      strcpy(&(r.key[0]), save_str);
+		      put_record(recnum, &r);
+		      done = 1;
+		    }
+		  else
+		    {
+		      // No room
+		      done = 1;
+		    }
+		  break;
+
+		default:
+		  if ( strlen(save_str) < (MAX_INPUT_STR-2) )
+		    {
+		      char keystr[2] = " ";
+		      keystr[0] = keychar;
+		      strcat(save_str, keystr);
+		      
+		      display_clear();
+		      printxy_str(0, 0, "Save:");
+		      printxy_str(5, 0, save_str);
+		    }
+		  break;
+		  
+		}
+	    }
+	  
+	  gotkey = 0;
+	}
+    }
 }
 
 
@@ -923,6 +1052,25 @@ void menu_oled_test(void)
 	  
 	}
      }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+
+void menu_matrix_scan(void)
+{
+  int done = 0;
+
+  scan_keys_off = 1;
+  
+  while(!done)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+
+      matrix_scan();
+      
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1090,6 +1238,7 @@ MENU menu_top =
     {'S', "Save",       menu_save},
     {'A', "All",        menu_all},
     {'M', "forMat",     menu_format},
+    {'X', "matriX",     menu_matrix_scan},
     {'&', "",           menu_null},
    }
   };

@@ -1,5 +1,5 @@
-CMakeFiles/psion_recreate.dir/menu.c.obj: \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/menu.c \
+CMakeFiles/psion_recreate.dir/svc_kb.c.obj: \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.c \
  /usr/include/newlib/ctype.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
@@ -68,5 +68,4 @@ CMakeFiles/psion_recreate.dir/menu.c.obj: \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/eeprom.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/display.h \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h

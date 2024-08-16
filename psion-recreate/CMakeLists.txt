@@ -26,6 +26,8 @@ eeprom.c
 paged_eeprom.c
 menu.c
 serial.c
+svc_ed.c
+svc_kb.c
 )
 
 pico_enable_stdio_usb(psion_recreate 1)

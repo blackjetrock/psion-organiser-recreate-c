@@ -484,6 +484,54 @@ serial.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/serial.c.s
 .PHONY : serial.c.s
 
+svc_ed.obj: svc_ed.c.obj
+.PHONY : svc_ed.obj
+
+# target to build an object file
+svc_ed.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_ed.c.obj
+.PHONY : svc_ed.c.obj
+
+svc_ed.i: svc_ed.c.i
+.PHONY : svc_ed.i
+
+# target to preprocess a source file
+svc_ed.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_ed.c.i
+.PHONY : svc_ed.c.i
+
+svc_ed.s: svc_ed.c.s
+.PHONY : svc_ed.s
+
+# target to generate assembly for a file
+svc_ed.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_ed.c.s
+.PHONY : svc_ed.c.s
+
+svc_kb.obj: svc_kb.c.obj
+.PHONY : svc_kb.obj
+
+# target to build an object file
+svc_kb.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_kb.c.obj
+.PHONY : svc_kb.c.obj
+
+svc_kb.i: svc_kb.c.i
+.PHONY : svc_kb.i
+
+# target to preprocess a source file
+svc_kb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_kb.c.i
+.PHONY : svc_kb.c.i
+
+svc_kb.s: svc_kb.c.s
+.PHONY : svc_kb.s
+
+# target to generate assembly for a file
+svc_kb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_kb.c.s
+.PHONY : svc_kb.c.s
+
 tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -2061,6 +2109,12 @@ help:
 	@echo "... serial.obj"
 	@echo "... serial.i"
 	@echo "... serial.s"
+	@echo "... svc_ed.obj"
+	@echo "... svc_ed.i"
+	@echo "... svc_ed.s"
+	@echo "... svc_kb.obj"
+	@echo "... svc_kb.i"
+	@echo "... svc_kb.s"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
