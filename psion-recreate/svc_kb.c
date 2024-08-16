@@ -30,6 +30,8 @@
 #include "rtc.h"
 #include "display.h"
 #include "record.h"
+#include "svc.h"
+#include "svc_kb.h"
 
 #define MAT_SCAN_STATE_DRIVE  0
 #define MAT_SCAN_STATE_READ  10
@@ -60,9 +62,50 @@ volatile MATRIX_MAP mat_scan_matrix = 0;
 // all, which we can do on a bit by bit basis, all at once as integers.
 //
 // We remove short presses, 
+#define MAX_INPUT_QUEUE  4
+#define MAX_PRESS_QUEUE  2
+
+MATRIX_MAP  input_queue[MAX_INPUT_QUEUE];
+MATRIX_MAP  pressed_queue[MAX_PRESS_QUEUE];
+MATRIX_MAP  released_queue[MAX_PRESS_QUEUE];
+MATRIX_MAP  pressed_edges;
+MATRIX_MAP  released_edges;
+
 void matrix_debounce(MATRIX_MAP matrix)
 {
+  // Move queue along and insert new value
+  for(int i=1; i<MAX_INPUT_QUEUE;i++)
+    {
+      input_queue[i] = input_queue[i-1];
+    }
+
+  input_queue[0] = matrix;
+
+  // shift the pressed and unpressed queues so a new entry
+  // can be added
+  for(int i=1; i<MAX_PRESS_QUEUE;i++)
+    {
+      pressed_queue[i]  = pressed_queue[i-1];
+      released_queue[i] = released_queue[i-1];
+    }
   
+  pressed_queue[0] = ~0;
+  released_queue[0] = ~0;
+  
+  // AND the input and also the negation of the input
+  // This gives us a stream of pressed and released edges.
+  for(int i=0; i<MAX_INPUT_QUEUE;i++)
+    {
+      // All keys held for max_queue samples
+      pressed_queue[0] &= input_queue[i];
+      released_queue[0] &= ~(input_queue[i]);
+    }
+
+  // Now find pressed edge events and released edge events
+  pressed_edges  =  pressed_queue[0] & ~pressed_queue[1];
+  released_edges = ~pressed_queue[0] &  pressed_queue[1];
+
+  printf("\nPed:%08X Red:%08X", pressed_edges, released_edges);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
