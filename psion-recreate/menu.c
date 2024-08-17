@@ -1215,9 +1215,9 @@ void menu_bubble(void)
 	    ax = (int)a;
 	    by = (int)b;
 	    
-	    plot_point(ax, by, 1);
+	    plot_point(ax, by, (i*j)>20?1:0);
 	    
-	    printf("\nu,v:%g,%g %g", u, v, t);
+	    //printf("\nu,v:%g,%g %g", u, v, t);
 	    
 	  }
       }

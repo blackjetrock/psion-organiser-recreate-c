@@ -1295,6 +1295,15 @@ void plot_point(int x, int y, int mode)
 {
   int cx, cy;
 
+  if( (cx < 0) || (cx>127)  )
+    {
+      return;
+    }
+
+  if( (cy < 0) || (cy>31)  )
+    {
+      return;
+    }
   //printf("\nX:%d Y:%d", x, y);
   
   cx = 127-x;
