@@ -8529,7 +8529,7 @@ Disassembly of section .text:
 10004a60:	b2da      	uxtb	r2, r3
 10004a62:	2b01      	cmp	r3, #1
 10004a64:	d032      	beq.n	10004acc <menu_save+0xa8>
-10004a66:	2a78      	cmp	r2, #120	; 0x78
+10004a66:	2a0d      	cmp	r2, #13
 10004a68:	d006      	beq.n	10004a78 <menu_save+0x54>
 10004a6a:	4668      	mov	r0, sp
 10004a6c:	f00a f962 	bl	1000ed34 <strlen>
@@ -8671,7 +8671,7 @@ Disassembly of section .text:
 10004baa:	2b01      	cmp	r3, #1
 10004bac:	d051      	beq.n	10004c52 <menu_find+0xfe>
 10004bae:	783b      	ldrb	r3, [r7, #0]
-10004bb0:	2b78      	cmp	r3, #120	; 0x78
+10004bb0:	2b0d      	cmp	r3, #13
 10004bb2:	d100      	bne.n	10004bb6 <menu_find+0x62>
 10004bb4:	e0a3      	b.n	10004cfe <menu_find+0x1aa>
 10004bb6:	2e00      	cmp	r6, #0
@@ -8731,7 +8731,7 @@ Disassembly of section .text:
 10004c36:	2b01      	cmp	r3, #1
 10004c38:	d100      	bne.n	10004c3c <menu_find+0xe8>
 10004c3a:	e081      	b.n	10004d40 <menu_find+0x1ec>
-10004c3c:	2a78      	cmp	r2, #120	; 0x78
+10004c3c:	2a0d      	cmp	r2, #13
 10004c3e:	d1f1      	bne.n	10004c24 <menu_find+0xd0>
 10004c40:	2601      	movs	r6, #1
 10004c42:	f7fb fcc7 	bl	100005d4 <menu_loop_tasks>
@@ -8781,7 +8781,7 @@ Disassembly of section .text:
 10004ca6:	2b01      	cmp	r3, #1
 10004ca8:	d014      	beq.n	10004cd4 <menu_find+0x180>
 10004caa:	783b      	ldrb	r3, [r7, #0]
-10004cac:	2b78      	cmp	r3, #120	; 0x78
+10004cac:	2b0d      	cmp	r3, #13
 10004cae:	d05b      	beq.n	10004d68 <menu_find+0x214>
 10004cb0:	4668      	mov	r0, sp
 10004cb2:	f00a f83f 	bl	1000ed34 <strlen>

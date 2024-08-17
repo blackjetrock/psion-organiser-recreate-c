@@ -19,5 +19,6 @@ typedef enum _KEYCODE
    KEY_DOWN = 4,
    KEY_LEFT = 5,
    KEY_RIGHT = 6,
+   KEY_EXE = 13,
    NOS_KEY_NONE = -1,
   } KEYCODE;

@@ -701,7 +701,7 @@ void menu_find(void)
 		}
 	    }
 
-	  if ( (keychar == 'x') || searching )
+	  if ( (keychar == KEY_EXE) || searching )
 	    {
 	      int recnum;
 	      RECORD r;
@@ -742,7 +742,7 @@ void menu_find(void)
 			  
 			  switch(keychar)
 			    {
-			    case 'x':
+			    case KEY_EXE:
 			      done = 1;
 			      break;
 
@@ -849,7 +849,7 @@ void menu_save(void)
 				  
 		  break;
 
-		case 'x':
+		case KEY_EXE:
 		  printf("\nFind empty search");
 		  
 		  // Find the record slot to save in to
