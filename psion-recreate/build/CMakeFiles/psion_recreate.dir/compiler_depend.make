@@ -702,7 +702,8 @@ CMakeFiles/psion_recreate.dir/psion_recreate.c.obj: ../psion_recreate.c \
   ../wireless.h \
   ../eeprom.h \
   ../menu.h \
-  ../rtc.h
+  ../rtc.h \
+  ../svc_kb.h
 
 CMakeFiles/psion_recreate.dir/rtc.c.obj: ../rtc.c \
   /usr/include/newlib/ctype.h \

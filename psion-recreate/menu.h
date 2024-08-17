@@ -45,8 +45,8 @@ typedef struct _MENU
 extern int shift_edge_counter;
 extern int last_shift[NUM_LAST];
 extern int shift;
-extern char keychar;      // What the key code is
-extern int gotkey;        // We have a key
+extern volatile char keychar;      // What the key code is
+extern volatile int gotkey;        // We have a key
 
 extern MENU menu_top;
 extern MENU menu_eeprom;

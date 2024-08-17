@@ -112,8 +112,8 @@ extern const uint PIN_LATCHOUT1;
 extern const uint PIN_SCLKOUT;
 extern const uint PIN_VBAT_SW_ON;
 
-extern uint16_t latchout1_shadow;
-extern uint16_t latch2_shadow;
+extern volatile uint16_t latchout1_shadow;
+extern volatile uint16_t latch2_shadow;
 
 void latch2_set_mask(int value);
 void latch2_clear_mask(int value);

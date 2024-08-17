@@ -49,6 +49,8 @@ int mat_scan_state = MAT_SCAN_STATE_DRIVE;
 int mat_sense = 0;
 
 // Bit positions within matrix of each key
+volatile char keychar = 0;      // What the key code is
+volatile int gotkey = 0;       // We have a key
 
 
 #define MATRIX_BIT_CAP    1
@@ -272,6 +274,48 @@ int caps_mode     = 0;
 int num_mode      = 0;
 int shift_pressed = 0;
 
+//------------------------------------------------------------------------------
+// The key buffer 
+
+volatile char nos_key_buffer[NOS_KEY_BUFFER_LEN];
+
+// Keys in and out pointers
+volatile int nos_key_in  = 0;
+volatile int nos_key_out = 0;
+
+#define NEXT_KEY_IDX(IDX) ((IDX+1)%NOS_KEY_BUFFER_LEN)
+
+void nos_put_key(char key)
+{
+  // Is buffer full?
+  if( NEXT_KEY_IDX(nos_key_in) == nos_key_out )
+    {
+      // Full, drop the key
+      // Original beeps here
+      return;
+    }
+
+  nos_key_buffer[nos_key_in] = key;
+  nos_key_in = NEXT_KEY_IDX(nos_key_in);
+}
+
+char nos_get_key(void)
+{
+  char k = NOS_KEY_NONE;
+  
+  if( nos_key_in == nos_key_out )
+    {
+      return(k);
+    }
+
+  k = nos_key_buffer[nos_key_out];
+
+  nos_key_out = NEXT_KEY_IDX(nos_key_out);
+  return(k);
+}
+
+//------------------------------------------------------------------------------
+
 #define KEY_PRESSED(MAP,BITNO) ((MAP) & ((uint64_t)1 << BITNO))
 
 void matrix_debounce(MATRIX_MAP matrix)
@@ -310,14 +354,14 @@ void matrix_debounce(MATRIX_MAP matrix)
 
   if ( pressed_edges | released_edges)
     {
-      printf("\nPed:%016llX Red:%016llX", pressed_edges, released_edges);
+      //printf("\nPed:%016llX Red:%016llX", pressed_edges, released_edges);
 
-      printf("\n");
+      //printf("\n");
       for(int i=0; i<64; i++)
 	{
 	  if( ((uint64_t)1<<i) & pressed_edges )
 	    {
-	      printf(" %d", i);
+	      //printf(" %d", i);
 	    }
 	}
     }
@@ -394,6 +438,9 @@ void matrix_debounce(MATRIX_MAP matrix)
 	{
 	  // Key pressed
 	  printf("\nC:%c", key_map[i].c);
+
+	  // Put key pressed event into key buffer
+	  nos_put_key(key_map[i].c);
 	  return;
 	}
       i++;
@@ -407,7 +454,6 @@ void matrix_debounce(MATRIX_MAP matrix)
 
 void matrix_scan(void)
 {
-  sleep_ms(1);
   
   // Use a simple state machine for the scanning
   switch(mat_scan_state)
@@ -417,6 +463,7 @@ void matrix_scan(void)
       // Drive scan lines
       latchout1_shadow &= 0x80;
       latchout1_shadow |= mat_scan_drive;
+      latchout1_shadow |= 0x80;
       write_595(PIN_LATCHOUT1, latchout1_shadow, 8);
 
       mat_scan_state = MAT_SCAN_STATE_READ;
@@ -483,3 +530,26 @@ void matrix_scan(void)
     }
 }
 
+void check_keys(void)
+{
+  // If key in buffer then signal it's available
+  if( nos_key_in == nos_key_out )
+    {
+      // Buffer empty
+    }
+  else
+    {
+      // Key available, see if we need to get it out of buffer
+      if( gotkey )
+	{
+	  // Not processed last key yet
+	  
+	}
+      else
+	{
+	  // Another key here
+	  gotkey = 1;
+	  keychar = nos_get_key();
+	}
+    }
+}

@@ -77,4 +77,5 @@ CMakeFiles/psion_recreate.dir/psion_recreate.c.obj: \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/wireless.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/eeprom.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/menu.h \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h

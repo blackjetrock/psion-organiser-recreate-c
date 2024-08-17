@@ -47,6 +47,8 @@ volatile int menu_init = 0;
 
 MENU menu_mems;
 
+#if 0
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Scan the keyboard for keys
@@ -56,8 +58,6 @@ int scan_state = SCAN_STATE_DRIVE;
 int kb_sense = 0;
 int saved_latchout1_shadow = 0;
 int keycode = 0;
-char keychar = 0;      // What the key code is
-int gotkey = 0;       // We have a key
 
 
 struct _KEYDEF
@@ -114,6 +114,7 @@ int current_key = 0;
 
 void scan_keys(void)
 {
+  return;
   scan_skip--;
 
   if( scan_skip == 0 )
@@ -263,7 +264,7 @@ void scan_keys(void)
   //scan_state = (scan_state + 1) % NUM_SCAN_STATES;
 }
 
-
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -311,11 +312,12 @@ void menu_process(void)
 
       (*active_menu->init_fn)();
     }
+
   
   if( gotkey )
     {
       int e = 0;
-
+      printf("\nMenu got key");
       gotkey = 0;
       
       while( active_menu->item[e].key != '&' )
@@ -410,42 +412,15 @@ void menu_scan_test(void)
       // Keep the display updated
       menu_loop_tasks();
       
-      // We are on core 1 so a loop will cause 
-      //      dump_lcd();
-      char codestr[20];
-      sprintf(codestr, "KC=%04X    ", keycode);
-      i_printxy_str(1, 2, codestr);
-      
       if( gotkey,1 )
 	{
 	  i_printxy(2, 1, '=');
 	  i_printxy(3, 1, keychar);
-	  switch(scan_state)
-	    {
-	    case SCAN_STATE_DRIVE:
-	      i_printxy(5, 1, 'D');
-	      i_printxy(6, 1, ' ');
-	      i_printxy(7, 1, ' ');
-	      break;
-
-	    case SCAN_STATE_READ:
-	      i_printxy(5, 1, ' ');
-	      i_printxy(6, 1, 'R');
-	      i_printxy(7, 1, ' ');
-	      break;
-
-	    case SCAN_STATE_RELEASE_READ:
-	      i_printxy(5, 1, ' ');
-	      i_printxy(6, 1, ' ');
-	      i_printxy(7, 1, 'r');
-	      break;
-	    }
-
 	  
 	  gotkey = 0;
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
-	  if( keychar == 'o' )
+	  if( keychar == KEY_ON )
 	    {
 	      break;
 	    }
@@ -642,7 +617,7 @@ void menu_all(void)
       get_record(i, &r);
       key = display_record(&r);
 
-      if( key == 'o' )
+      if( key == KEY_ON )
 	{
 	  return;
 	}
@@ -706,7 +681,7 @@ void menu_find(void)
 	  gotkey = 0;
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
-	  if( keychar == 'o' )
+	  if( keychar == KEY_ON )
 	    {
 	      if( strlen(find_str) == 0)
 		{
@@ -770,7 +745,7 @@ void menu_find(void)
 			      done = 1;
 			      break;
 
-			    case 'o':
+			    case KEY_ON:
 			      done = 1;
 			      find_str[0] ='\0';
 			      
@@ -853,7 +828,7 @@ void menu_save(void)
 	    case SS_SAVE_INIT:
 	      switch(keychar)
 		{
-		case 'o':
+		case KEY_ON:
 		  // Exit on ON key, exiting demonstrates it is working...
 		  if( strlen(save_str) == 0)
 		    {
@@ -1024,7 +999,7 @@ void menu_oled_test(void)
 	  gotkey = 0;
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
-	  if( keychar == 'o' )
+	  if( keychar == KEY_ON )
 	    {
 	      break;
 	    }
@@ -1056,25 +1031,6 @@ void menu_oled_test(void)
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-
-void menu_matrix_scan(void)
-{
-  int done = 0;
-
-  scan_keys_off = 1;
-  
-  while(!done)
-    {
-      // Keep the display updated
-      menu_loop_tasks();
-
-      matrix_scan();
-      
-    }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-//
 // RTC
 //
 //
@@ -1100,13 +1056,13 @@ void menu_enter(void)
 {
   // Save the bit pattern the serial latch is generating so keyboard
   // scan doesn't affect the organiser code
-  saved_latchout1_shadow = latchout1_shadow;
+  //  saved_latchout1_shadow = latchout1_shadow;
   
   // Save the display for the menu exit
-  display_save();
+  //display_save();
 
   // Clear the display
-  display_clear();
+  //display_clear();
 
   // Draw the menu
   //  printxy_str(0,0, "Menu");
@@ -1118,7 +1074,7 @@ void menu_enter(void)
 
 void menu_loop(void)
 {
-  scan_keys();
+  check_keys();
   menu_process();
 }
 
@@ -1127,8 +1083,8 @@ void menu_leave(void)
   display_restore();
   
   // Restore latch data
-  write_595(PIN_LATCHOUT1, saved_latchout1_shadow, 8);
-  latchout1_shadow = saved_latchout1_shadow;
+  //write_595(PIN_LATCHOUT1, saved_latchout1_shadow, 8);
+  //latchout1_shadow = saved_latchout1_shadow;
   
 }
 
@@ -1228,7 +1184,6 @@ MENU menu_top =
    "Meta",
    init_menu_top,   
    {
-    //{'o', "",           menu_exit},
     {'K', "Keytest",    menu_scan_test},
     {'O', "Off",        menu_instant_off},
     {'E', "Eeprom",     menu_goto_eeprom},
@@ -1238,7 +1193,6 @@ MENU menu_top =
     {'S', "Save",       menu_save},
     {'A', "All",        menu_all},
     {'M', "forMat",     menu_format},
-    {'X', "matriX",     menu_matrix_scan},
     {'&', "",           menu_null},
    }
   };
@@ -1249,7 +1203,7 @@ MENU menu_eeprom =
    "EEPROM",
    init_menu_eeprom,   
    {
-    {'o', "",           menu_back},
+    {KEY_ON, "",           menu_back},
     {'I', "Invalidate", menu_eeprom_invalidate},
     {'M', "Mem",        menu_goto_mems},
     {'&', "",           menu_null},
@@ -1262,7 +1216,7 @@ MENU menu_rtc =
    "RTC",
    init_menu_rtc,   
    {
-    {'o', "",           menu_back},
+    {KEY_ON, "",           menu_back},
     {'V', "VarSet",     menu_rtc_varset},
     {'R', "RegSet",     menu_rtc_regset},
     {'&', "",           menu_null},
@@ -1275,7 +1229,7 @@ MENU menu_mems =
    "Memories",
    init_menu_mems,   
    {
-    {'o', "",           menu_back},
+    {KEY_ON, "",           menu_back},
     {'S', "Save",       menu_eeprom_save_mems},
     {'L', "Load",       menu_eeprom_load_mems},
     {'E', "Extract",    menu_eeprom_extract_mems},

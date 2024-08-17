@@ -20,6 +20,7 @@
 #include "eeprom.h"
 #include "menu.h"
 #include "rtc.h"
+#include "svc_kb.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -65,8 +66,8 @@ const uint PIN_LATCHOUT1  = 22;
 const uint PIN_SCLKOUT    = 26;
 const uint PIN_VBAT_SW_ON = 27;
 
-uint16_t latch2_shadow    = 0;
-uint16_t latchout1_shadow = 0;
+volatile uint16_t latch2_shadow    = 0;
+volatile uint16_t latchout1_shadow = 0;
 
 uint16_t csum_calc_on_restore = 0;
 uint16_t csum_in_eeprom       = 0;
@@ -336,7 +337,12 @@ void menu_tasks(void)
 
 void menu_loop_tasks(void)
 {
-  scan_keys();
+
+  //matrix_scan();
+
+  check_keys();
+
+  //scan_keys();
   //dump_lcd();
   rtc_tasks();
   eeprom_tasks();
@@ -344,19 +350,31 @@ void menu_loop_tasks(void)
   serial_loop();
 }
 
-
+////////////////////////////////////////////////////////////////////////////////
+//
 // This is the main function for the second core. It handles
 // everything apart from emulationm
+//
+////////////////////////////////////////////////////////////////////////////////
+
 void core1_main(void)
 {
+  printf("\nCore1 started");
+  
   while(1)
     {
+      sleep_ms(1);
+      
+      matrix_scan();
+#if 0      
       dump_lcd();
       rtc_tasks();
       eeprom_tasks();
 
       menu_tasks();
       serial_loop();
+#endif
+      
 #if !WIFI_TEST      
       wireless_taskloop();
 #endif
@@ -366,7 +384,7 @@ void core1_main(void)
 ////////////////////////////////////////////////////////////////////////////////
 //
 //
-
+////////////////////////////////////////////////////////////////////////////////
 
 int main() {
 
@@ -489,7 +507,7 @@ int main() {
   
 #if MULTI_CORE
   // If multi core then we run the LCD update on the other core
-  //multicore_launch_core1(core1_main);
+  multicore_launch_core1(core1_main);
 
 #endif
 
@@ -602,9 +620,7 @@ int main() {
     menu_enter();
     
     printf("\nC Based Recreation\n");
-    //i_printxy_str(0,1, "Setting up...");
-    //i_printxy_str(0, 0, "FIND SAVE");
-    
+
     while(1)
       {
 	t++;
