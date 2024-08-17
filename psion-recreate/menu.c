@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
@@ -1004,29 +1005,28 @@ void menu_oled_test(void)
 	      break;
 	    }
 	  
-	  if ( keychar == 'r' )
+	  if ( keychar == KEY_RIGHT )
 	    {
 	      dxa+=100;
 	    }
 
-	  if ( keychar == 'l' )
+	  if ( keychar == KEY_LEFT )
 	    {
 	      dxa-=100;
 	    }
 
-	  if ( keychar == 'u' )
+	  if ( keychar == KEY_UP )
 	    {
 	      dya += 100;
 	    }
 
 
-	  if ( keychar == 'd' )
+	  if ( keychar == KEY_DOWN )
 	    {
 	      dxb -= 100;
 	    }
-	  
 	}
-     }
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1034,6 +1034,7 @@ void menu_oled_test(void)
 // RTC
 //
 //
+////////////////////////////////////////////////////////////////////////////////
 
 void menu_rtc_varset(void)
 {
@@ -1177,6 +1178,94 @@ void check_menu_launch(void)
 ////////////////////////////////////////////////////////////////////////////////
 //
 
+void menu_bubble(void)
+{
+  double tau = 3.1415*2;
+  double r   = tau/235.0;
+  int    n   = 25;
+  int    sz  = 200;
+  double sw  = 128.0/2.0;
+  double sh  = 32.0/2.0;
+  double t   = 0;
+  double u, v, x = 0;
+  double a, b;
+  int ax, by;
+  int c = 0;
+  
+  pixels_clear();
+  
+  while(1)
+    {
+      if( c )
+	{
+	  pixels_clear();
+	}
+      
+      menu_loop_tasks();
+      
+    for(int i=0; i<5;i++)
+      {
+	for(int j=0;j<20; j++)
+	  {
+	    u=sin(i+v)+sin(r*i+x);
+	    v=cos(i+v)+cos(r*i+x);
+	    x=u+t;
+	    a = u/2.0*sw+sw;
+	    b = v/2.0*16.0+16.0;
+	    ax = (int)a;
+	    by = (int)b;
+	    
+	    plot_point(ax, by, 1);
+	    
+	    printf("\nu,v:%g,%g %g", u, v, t);
+	    
+	  }
+      }
+    
+    t += 0.025;
+    
+    if( gotkey )
+      {
+	gotkey = 0;
+	
+	// Exit on ON key, exiting demonstrates it is working...
+	if( keychar == KEY_ON )
+	  {
+	    break;
+	  }
+	  
+	if ( keychar == KEY_RIGHT )
+	  {
+	    sw *= 2.0;
+	  }
+
+	if ( keychar == KEY_LEFT )
+	  {
+	    sw /= 2.0;
+	  }
+
+	if ( keychar == KEY_UP )
+	  {
+	    v += 3.1;
+	  }
+
+	if ( keychar == ' ' )
+	  {
+	    c = !c;;
+	  }
+
+
+	if ( keychar == KEY_DOWN )
+	  {
+	    v -= 3.2;
+	  }
+      }
+
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+	   
 
 MENU menu_top =
   {
@@ -1193,6 +1282,7 @@ MENU menu_top =
     {'S', "Save",       menu_save},
     {'A', "All",        menu_all},
     {'M', "forMat",     menu_format},
+    {'B', "Bubble",     menu_bubble},
     {'&', "",           menu_null},
    }
   };

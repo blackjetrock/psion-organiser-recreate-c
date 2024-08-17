@@ -474,6 +474,7 @@ CMakeFiles/psion_recreate.dir/menu.c.obj: ../menu.c \
   /usr/include/newlib/string.h \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
+  /usr/include/newlib/math.h \
   /tree/downloaded_tools/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico.h \
   /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
@@ -4278,6 +4279,10 @@ generated/pico_base/pico/config_autogen.h:
 
 ../i2c.c:
 
+generated/pico_base/pico/version.h:
+
+/usr/include/newlib/math.h:
+
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c:
 
 ../record.h:
@@ -4293,10 +4298,6 @@ generated/pico_base/pico/config_autogen.h:
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/psm.h:
 
 ../psion_recreate.c:
-
-generated/pico_base/pico/version.h:
-
-/usr/include/newlib/math.h:
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/float.h:
 

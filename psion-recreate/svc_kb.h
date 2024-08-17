@@ -12,5 +12,9 @@ void nos_put_key(char key);
 char nos_get_key(void);
 void check_keys(void);
 
-#define KEY_ON  1
+#define KEY_ON     1
+#define KEY_UP     3
+#define KEY_DOWN   4
+#define KEY_LEFT   5
+#define KEY_RIGHT  6
 

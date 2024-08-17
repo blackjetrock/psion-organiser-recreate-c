@@ -20,6 +20,7 @@ CMakeFiles/psion_recreate.dir/menu.c.obj: \
  /usr/include/newlib/stdlib.h /usr/include/newlib/machine/stdlib.h \
  /usr/include/newlib/alloca.h /usr/include/newlib/string.h \
  /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h \
+ /usr/include/newlib/math.h \
  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
