@@ -50,9 +50,205 @@ int mat_sense = 0;
 
 // Bit positions within matrix of each key
 
-#define MATRIX_BIT_ON 31
+
+#define MATRIX_BIT_CAP    1
+#define MATRIX_BIT_NUM    2
+#define MATRIX_BIT_UP     1
+#define MATRIX_BIT_DOWN   2
+#define MATRIX_BIT_LEFT   3
+#define MATRIX_BIT_RIGHT  4
+#define MATRIX_BIT_A      9
+#define MATRIX_BIT_B     14
+#define MATRIX_BIT_C     19
+#define MATRIX_BIT_D     34
+#define MATRIX_BIT_E     24
+#define MATRIX_BIT_F     29
+#define MATRIX_BIT_G      8
+#define MATRIX_BIT_H     13
+#define MATRIX_BIT_I     18
+#define MATRIX_BIT_J     33
+#define MATRIX_BIT_K     23
+#define MATRIX_BIT_L     28
+#define MATRIX_BIT_M      7
+#define MATRIX_BIT_N     12
+#define MATRIX_BIT_O     17
+#define MATRIX_BIT_P     32
+#define MATRIX_BIT_Q     22
+#define MATRIX_BIT_R     27
+#define MATRIX_BIT_S      6
+#define MATRIX_BIT_T     11
+#define MATRIX_BIT_U     16
+#define MATRIX_BIT_V     31
+#define MATRIX_BIT_W     21
+#define MATRIX_BIT_X     26
+#define MATRIX_BIT_Y     15
+#define MATRIX_BIT_Z     30
+#define MATRIX_BIT_EXE   25
+#define MATRIX_BIT_SPACE 20
+#define MATRIX_BIT_MODE   0
+#define MATRIX_BIT_DEL   10
+
+#define MATRIX_BIT_SHIFT  5
+#define MATRIX_BIT_ON    63
+
 
 volatile MATRIX_MAP mat_scan_matrix = 0;
+
+typedef struct _KEYMAP
+{
+  uint64_t mask;
+  char c;
+} KEYMAP;
+
+KEYMAP base_map[] =
+  {
+   { (uint64_t)1 << MATRIX_BIT_ON,     1 },
+   { (uint64_t)1 << MATRIX_BIT_UP,     3 },
+   { (uint64_t)1 << MATRIX_BIT_DOWN,   4 },
+   { (uint64_t)1 << MATRIX_BIT_LEFT,   5 },
+   { (uint64_t)1 << MATRIX_BIT_RIGHT,  6 },
+   { (uint64_t)1 << MATRIX_BIT_A,     'A' },
+   { (uint64_t)1 << MATRIX_BIT_B,     'B' },
+   { (uint64_t)1 << MATRIX_BIT_C,     'C' },
+   { (uint64_t)1 << MATRIX_BIT_D,     'D' },
+   { (uint64_t)1 << MATRIX_BIT_E,     'E' },
+   { (uint64_t)1 << MATRIX_BIT_F,     'F' },
+   { (uint64_t)1 << MATRIX_BIT_G,     'G' },
+   { (uint64_t)1 << MATRIX_BIT_H,     'H' },
+   { (uint64_t)1 << MATRIX_BIT_I,     'I' },
+   { (uint64_t)1 << MATRIX_BIT_J,     'J' },
+   { (uint64_t)1 << MATRIX_BIT_K,     'K' },
+   { (uint64_t)1 << MATRIX_BIT_L,     'L' },
+   { (uint64_t)1 << MATRIX_BIT_M,     'M' },
+   { (uint64_t)1 << MATRIX_BIT_N,     'N' },
+   { (uint64_t)1 << MATRIX_BIT_O,     'O' },
+   { (uint64_t)1 << MATRIX_BIT_P,     'P' },
+   { (uint64_t)1 << MATRIX_BIT_Q,     'Q' },
+   { (uint64_t)1 << MATRIX_BIT_R,     'R' },
+   { (uint64_t)1 << MATRIX_BIT_S,     'S' },
+   { (uint64_t)1 << MATRIX_BIT_T,     'T' },
+   { (uint64_t)1 << MATRIX_BIT_U,     'U' },
+   { (uint64_t)1 << MATRIX_BIT_V,     'V' },
+   { (uint64_t)1 << MATRIX_BIT_W,     'W' },
+   { (uint64_t)1 << MATRIX_BIT_X,     'X' },
+   { (uint64_t)1 << MATRIX_BIT_Y,     'Y' },
+   { (uint64_t)1 << MATRIX_BIT_Z,     'Z' },
+   { (uint64_t)1 << MATRIX_BIT_EXE,   13 },
+   { (uint64_t)1 << MATRIX_BIT_SPACE, ' ' },
+   { (uint64_t)1 << MATRIX_BIT_MODE,   2 },
+   { (uint64_t)1 << MATRIX_BIT_DEL,    8 },
+   { 0,                '-' }
+  };
+
+KEYMAP caps_map[] =
+  {
+   { (uint64_t)1 << MATRIX_BIT_ON,     1 },
+   { (uint64_t)1 << MATRIX_BIT_UP,     3 },
+   { (uint64_t)1 << MATRIX_BIT_DOWN,   4 },
+   { (uint64_t)1 << MATRIX_BIT_LEFT,   5 },
+   { (uint64_t)1 << MATRIX_BIT_RIGHT,  6 },
+   { (uint64_t)1 << MATRIX_BIT_A,     'a' },
+   { (uint64_t)1 << MATRIX_BIT_B,     'b' },
+   { (uint64_t)1 << MATRIX_BIT_C,     'c' },
+   { (uint64_t)1 << MATRIX_BIT_D,     'd' },
+   { (uint64_t)1 << MATRIX_BIT_E,     'e' },
+   { (uint64_t)1 << MATRIX_BIT_F,     'f' },
+   { (uint64_t)1 << MATRIX_BIT_G,     'g' },
+   { (uint64_t)1 << MATRIX_BIT_H,     'h' },
+   { (uint64_t)1 << MATRIX_BIT_I,     'i' },
+   { (uint64_t)1 << MATRIX_BIT_J,     'j' },
+   { (uint64_t)1 << MATRIX_BIT_K,     'k' },
+   { (uint64_t)1 << MATRIX_BIT_L,     'l' },
+   { (uint64_t)1 << MATRIX_BIT_M,     'm' },
+   { (uint64_t)1 << MATRIX_BIT_N,     'n' },
+   { (uint64_t)1 << MATRIX_BIT_O,     'o' },
+   { (uint64_t)1 << MATRIX_BIT_P,     'p' },
+   { (uint64_t)1 << MATRIX_BIT_Q,     'q' },
+   { (uint64_t)1 << MATRIX_BIT_R,     'r' },
+   { (uint64_t)1 << MATRIX_BIT_S,     's' },
+   { (uint64_t)1 << MATRIX_BIT_T,     't' },
+   { (uint64_t)1 << MATRIX_BIT_U,     'u' },
+   { (uint64_t)1 << MATRIX_BIT_V,     'v' },
+   { (uint64_t)1 << MATRIX_BIT_W,     'w' },
+   { (uint64_t)1 << MATRIX_BIT_X,     'x' },
+   { (uint64_t)1 << MATRIX_BIT_Y,     'y' },
+   { (uint64_t)1 << MATRIX_BIT_Z,     'z' },
+   { (uint64_t)1 << MATRIX_BIT_EXE,    13 },
+   { (uint64_t)1 << MATRIX_BIT_SPACE,  ' ' },
+   { (uint64_t)1 << MATRIX_BIT_MODE,   2 },
+   { (uint64_t)1 << MATRIX_BIT_DEL,    7 },
+   { 0,                '-' }
+  };
+
+KEYMAP shifted_map[] =
+  {
+   { (uint64_t)1 << MATRIX_BIT_ON,     1 },
+   { (uint64_t)1 << MATRIX_BIT_UP,     3 },
+   { (uint64_t)1 << MATRIX_BIT_DOWN,   4 },
+   { (uint64_t)1 << MATRIX_BIT_LEFT,   5 },
+   { (uint64_t)1 << MATRIX_BIT_RIGHT,  6 },
+   { (uint64_t)1 << MATRIX_BIT_A,     '<' },
+   { (uint64_t)1 << MATRIX_BIT_B,     '>' },
+   { (uint64_t)1 << MATRIX_BIT_C,     '(' },
+   { (uint64_t)1 << MATRIX_BIT_D,     ')' },
+   { (uint64_t)1 << MATRIX_BIT_E,     '%' },
+   { (uint64_t)1 << MATRIX_BIT_F,     '/' },
+   { (uint64_t)1 << MATRIX_BIT_G,     '=' },
+   { (uint64_t)1 << MATRIX_BIT_H,     '"' },
+   { (uint64_t)1 << MATRIX_BIT_I,     '7' },
+   { (uint64_t)1 << MATRIX_BIT_J,     '8' },
+   { (uint64_t)1 << MATRIX_BIT_K,     '9' },
+   { (uint64_t)1 << MATRIX_BIT_L,     '*' },
+   { (uint64_t)1 << MATRIX_BIT_M,     ',' },
+   { (uint64_t)1 << MATRIX_BIT_N,     '$' },
+   { (uint64_t)1 << MATRIX_BIT_O,     '4' },
+   { (uint64_t)1 << MATRIX_BIT_P,     '5' },
+   { (uint64_t)1 << MATRIX_BIT_Q,     '6' },
+   { (uint64_t)1 << MATRIX_BIT_R,     '-' },
+   { (uint64_t)1 << MATRIX_BIT_S,     ';' },
+   { (uint64_t)1 << MATRIX_BIT_T,     ':' },
+   { (uint64_t)1 << MATRIX_BIT_U,     '1' },
+   { (uint64_t)1 << MATRIX_BIT_V,     '2' },
+   { (uint64_t)1 << MATRIX_BIT_W,     '3' },
+   { (uint64_t)1 << MATRIX_BIT_X,     '+' },
+   { (uint64_t)1 << MATRIX_BIT_Y,     '0' },
+   { (uint64_t)1 << MATRIX_BIT_Z,     '.' },
+   { (uint64_t)1 << MATRIX_BIT_EXE,    13 },
+   { (uint64_t)1 << MATRIX_BIT_SPACE,  ' ' },
+   { (uint64_t)1 << MATRIX_BIT_MODE,   2 },
+   { (uint64_t)1 << MATRIX_BIT_DEL,    7 },
+   { 0,                '-' }
+  };
+
+// This table picksa key map from the current values
+// of shift_pressed, caps_on and num_on
+#define CAPS_ON    1
+#define NUM_ON     2
+#define SHIFT_ON   4
+#define CAPS_OFF   0
+#define NUM_OFF    0
+#define SHIFT_OFF  0
+
+typedef struct _KEY_MAP_MAP
+{
+  int modes;
+  KEYMAP *map;  
+} KEY_MAP_MAP;
+
+KEY_MAP_MAP key_map_map[8] =
+  {
+   {SHIFT_OFF | CAPS_OFF| NUM_OFF,  base_map},
+   {SHIFT_OFF | CAPS_OFF| NUM_ON,   shifted_map},
+   {SHIFT_OFF | CAPS_ON | NUM_OFF,  caps_map},
+   {SHIFT_OFF | CAPS_ON | NUM_ON,   shifted_map},
+   {SHIFT_ON  | CAPS_OFF| NUM_OFF,  shifted_map},
+   {SHIFT_ON  | CAPS_OFF| NUM_ON,   base_map},
+   {SHIFT_ON  | CAPS_ON | NUM_OFF,  shifted_map},
+   {SHIFT_ON  | CAPS_ON | NUM_ON,   base_map},
+  };
+
+#define NUM_MODES ((sizeof(key_map_map))/(sizeof(KEY_MAP_MAP)))
+KEYMAP *key_map;
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -70,6 +266,13 @@ MATRIX_MAP  pressed_queue[MAX_PRESS_QUEUE];
 MATRIX_MAP  released_queue[MAX_PRESS_QUEUE];
 MATRIX_MAP  pressed_edges;
 MATRIX_MAP  released_edges;
+MATRIX_MAP  key_states = 0LL;
+
+int caps_mode     = 0;
+int num_mode      = 0;
+int shift_pressed = 0;
+
+#define KEY_PRESSED(MAP,BITNO) ((MAP) & ((uint64_t)1 << BITNO))
 
 void matrix_debounce(MATRIX_MAP matrix)
 {
@@ -89,8 +292,8 @@ void matrix_debounce(MATRIX_MAP matrix)
       released_queue[i] = released_queue[i-1];
     }
   
-  pressed_queue[0] = ~0;
-  released_queue[0] = ~0;
+  pressed_queue[0]  = ~((uint64_t)0);
+  released_queue[0] = ~((uint64_t)0);
   
   // AND the input and also the negation of the input
   // This gives us a stream of pressed and released edges.
@@ -105,7 +308,96 @@ void matrix_debounce(MATRIX_MAP matrix)
   pressed_edges  =  pressed_queue[0] & ~pressed_queue[1];
   released_edges = ~pressed_queue[0] &  pressed_queue[1];
 
-  printf("\nPed:%08X Red:%08X", pressed_edges, released_edges);
+  if ( pressed_edges | released_edges)
+    {
+      printf("\nPed:%016llX Red:%016llX", pressed_edges, released_edges);
+
+      printf("\n");
+      for(int i=0; i<64; i++)
+	{
+	  if( ((uint64_t)1<<i) & pressed_edges )
+	    {
+	      printf(" %d", i);
+	    }
+	}
+    }
+
+  // Now set and clear bits in the state matrix which will give the current
+  // states of each key
+
+  // Pressed keys
+  key_states |= pressed_edges;
+
+  // released keys
+  key_states &= ~(released_edges);
+
+  //printf("\n%016llX", key_states);
+
+  // We now have the current states of the keys. 
+  // We have pressed and released edges, so we can generate pressed and released
+  // events, and also work out which key map to use from the states of the
+  // SHIFT, NUM and CAPS keys.
+
+  // The key queue is made up of pressed events only
+
+  shift_pressed = key_states & ((uint64_t)1<< MATRIX_BIT_SHIFT);
+  
+  // We need to handle the shift key for upper/lower case
+  // and also the CAPS and NUM states
+  
+  if( KEY_PRESSED(pressed_edges,MATRIX_BIT_CAP) && shift_pressed)
+    {
+      caps_mode = !caps_mode;
+      printf("\nCAPS lock:%d", caps_mode);
+    }
+  
+  if( KEY_PRESSED(pressed_edges,MATRIX_BIT_NUM) && shift_pressed)
+    {
+      num_mode = !num_mode;
+      printf("\nNUM lock:%d", num_mode);
+    }
+
+  // Find the key map to use
+  int cur_modes = 0;
+  if( shift_pressed )
+    {
+      cur_modes |= SHIFT_ON;
+    }
+
+  if( caps_mode )
+    {
+      cur_modes |= CAPS_ON;
+    }
+
+  if( num_mode )
+    {
+      cur_modes |= NUM_ON;
+    }
+
+  key_map = base_map;
+  
+  for(int k=0; k<NUM_MODES; k++)
+    {
+      if( cur_modes == key_map_map[k].modes )
+	{
+	  key_map = key_map_map[k].map;
+	  break;
+	}
+    }
+  
+  // Now generate pressed events and put them into a queue
+  int i = 0;
+  
+  while( key_map[i].mask != 0 )
+    {
+      if( (key_map[i].mask) & pressed_edges )
+	{
+	  // Key pressed
+	  printf("\nC:%c", key_map[i].c);
+	  return;
+	}
+      i++;
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -140,7 +432,7 @@ void matrix_scan(void)
       
       if( mat_sense & 0x20 )
 	{
-	  mat_scan_matrix |= (1<<MATRIX_BIT_ON);
+	  mat_scan_matrix |= ((uint64_t)1<<MATRIX_BIT_ON);
 	  
 	}
       else
@@ -151,11 +443,11 @@ void matrix_scan(void)
 	      for(int m=0; m<5; m++)
 		{
 		  
-		  if( mat_sense & (1 << m) )
+		  if( mat_sense & ((uint64_t)1 << m) )
 		    {
 		      // We have a press, add it to the matrix
 		      
-		      mat_scan_matrix |= (1 << (mat_scan_n*5 + m));
+		      mat_scan_matrix |= ((uint64_t)1 << (mat_scan_n*5 + m));
 		      
 		    }
 		}

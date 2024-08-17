@@ -1,3 +1,3 @@
-typedef uint32_t MATRIX_MAP;
+typedef uint64_t MATRIX_MAP;
 
 void matrix_scan(void);
