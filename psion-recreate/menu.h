@@ -51,6 +51,8 @@ extern volatile int gotkey;        // We have a key
 extern MENU menu_top;
 extern MENU menu_eeprom;
 extern MENU menu_rtc;
+extern MENU menu_test_os;
+extern MENU menu_buzzer;
 
 void check_menu_launch(void);
 void scan_keys(void);

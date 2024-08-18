@@ -32,6 +32,7 @@
 #include "display.h"
 #include "record.h"
 #include "svc_kb.h"
+#include "svc_dp.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -47,225 +48,6 @@ volatile int menu_done = 0;
 volatile int menu_init = 0;
 
 MENU menu_mems;
-
-#if 0
-
-////////////////////////////////////////////////////////////////////////////////
-//
-// Scan the keyboard for keys
-
-int scan_drive = 0x01;
-int scan_state = SCAN_STATE_DRIVE;
-int kb_sense = 0;
-int saved_latchout1_shadow = 0;
-int keycode = 0;
-
-
-struct _KEYDEF
-{
-  int  code;
-  char ch;
-} menukeys[] =
-    {
-     {0x1002, 'A'},
-     {0x1004, 'B'},
-     {0x1008, 'C'},
-     {0x1040, 'D'},
-     {0x1010, 'E'},
-     {0x1020, 'F'},
-     {0x0802, 'G'},
-     {0x0804, 'H'},
-     {0x0808, 'I'},
-     {0x0840, 'J'},
-     {0x0810, 'K'},
-     {0x0820, 'L'},
-     {0x0402, 'M'},
-     {0x0404, 'N'},
-     {0x0408, 'O'},
-     {0x0440, 'P'},
-     {0x0410, 'Q'},
-     {0x0420, 'R'},
-     {0x0202, 'S'},
-     {0x0204, 'T'},
-     {0x0208, 'U'},
-     {0x0240, 'V'},
-     {0x0210, 'W'},
-     {0x0220, 'X'},
-     {0x0108, 'Y'},
-     {0x0140, 'Z'},
-     {0x0101, 'm'},
-     {0x0120, 'x'},
-     {0x0102, 's'},
-     {0x0104, '-'},
-     {0x0801, 'l'},
-     {0x1001, 'r'},
-     {0x0201, 'u'},
-     {0x0401, 'd'},
-     {0x0110, ' '},
-    };
-
-#define NUM_KEYCODES ((sizeof(menukeys))/(sizeof(struct _KEYDEF)))
-
-#define SCAN_SKIP  3
-
-int scan_skip = SCAN_SKIP;
-int key_count = 0;
-int current_key = 0;
-#define DEBOUNCE_MAX  10
-
-void scan_keys(void)
-{
-  return;
-  scan_skip--;
-
-  if( scan_skip == 0 )
-    {
-      scan_skip = SCAN_SKIP;
-      return;
-    }
-
-  if( scan_keys_off )
-    {
-      return;
-    }
-    
-  switch(scan_state)
-    {
-      
-    case SCAN_STATE_DRIVE:
-      
-      // Drive scan lines
-      latchout1_shadow &= 0x80;
-      latchout1_shadow |= scan_drive;
-      write_595(PIN_LATCHOUT1, latchout1_shadow, 8);
-
-      // Store the scan drive for the building of the keycode before
-      // scan drive is updated
-      keycode = scan_drive;
-      
-      scan_drive <<= 1;
-      if( scan_drive == 0x80 )
-	{
-	  scan_drive = 0x1;
-	}
-
-      //write_display_extra(2, 'a'+scan_drive);
-      scan_state = SCAN_STATE_READ;
-      break;
-
-      
-    case SCAN_STATE_READ:
-      // Read port5
-      //write_display_extra(2, '5');
-      kb_sense = (read_165(PIN_LATCHIN) & 0xFC)>>2;
-
-      if( kb_sense & 0x20 )
-	{
-	  //write_display_extra(2, 'o');
-	  keychar = 'o';
-	  gotkey = 1;
-	}
-      else
-	{
-	  if( (kb_sense & 0x1F) != 0 )
-	    {
-	      // Build keycode
-	      //i_printxy_hex(5, 2, keycode);
-	      //i_printxy_hex(1, 2, kb_sense);
-
-	      //printf("\nKdr:%04X Ksense:%04X", keycode, kb_sense);
-
-	      keycode |= (kb_sense << 8);
-	      
-	      // Find key from code
-	      for(int i=0; i<NUM_KEYCODES; i++)
-		{
-		  if( menukeys[i].code == keycode )
-		    {
-		      if( keycode == current_key )
-			{
-			  // Same key pressed
-			  if( key_count == DEBOUNCE_MAX )
-			    {
-			      // Key registered and still pressed
-			      // we won't get here, we will be waiting for release
-			    }
-			  else
-			    {
-			      key_count++;
-			      if( key_count == DEBOUNCE_MAX )
-				{
-				  // New key press
-				  keychar = menukeys[i].ch;
-				  gotkey = 1;
-
-				  // Move to release state
-				  scan_state = SCAN_STATE_RELEASE_READ;
-				  return;
-				}
-			      else
-				{
-				  // Waiting for key to be fully pressed
-				}
-			    }
-			}
-		      else
-			{
-			  // Different key, start debouncing
-			  key_count = 0;
-			  current_key = keycode;
-			}
-		    }
-		}
-	    }
-	}
-      
-      scan_state = SCAN_STATE_DRIVE;
-      break;
-
-    case SCAN_STATE_RELEASE_DRIVE:
-      break;
-
-    case SCAN_STATE_RELEASE_READ:
-      // Read port5
-      //write_display_extra(2, '5');
-      kb_sense = (read_165(PIN_LATCHIN) & 0xFC)>>2;
-      
-      if( (kb_sense & 0x3F) != 0 )
-	{
-	  // Key still pressed
-	}
-      else
-	{
-	  // Count down to zero
-	  if ( key_count == 0 )
-	    {
-	      // Already released
-	    }
-	  else
-	    {
-	      key_count--;
-
-	      if ( key_count == 0 )
-		{
-		  // Key finally released
-		  scan_state = SCAN_STATE_DRIVE;
-		  gotkey = 0;
-		  keycode = 0;
-		}
-	    }
-	}
-      break;
-      
-    default:
-      break;
-    }
-
-  
-  //scan_state = (scan_state + 1) % NUM_SCAN_STATES;
-}
-
-#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -315,15 +97,15 @@ void menu_process(void)
     }
 
   
-  if( gotkey )
+  if( kb_test() != KEY_NONE )
     {
-      int e = 0;
-      printf("\nMenu got key");
-      gotkey = 0;
+      KEYCODE k= kb_getk();
       
+      int e = 0;
+     
       while( active_menu->item[e].key != '&' )
 	{
-	  if( keychar == active_menu->item[e].key )
+	  if( k == active_menu->item[e].key )
 	    {
 	      // Call the function
 	      (*active_menu->item[e].do_fn)();
@@ -346,6 +128,14 @@ void init_menu_top(void)
 void init_menu_eeprom(void)
 {
   //printxy_str(0, 0, "EEPROM");
+}
+
+void init_menu_test_os(void)
+{
+}
+
+void init_menu_buzzer(void)
+{
 }
 
 void init_menu_rtc(void)
@@ -384,6 +174,16 @@ void menu_goto_eeprom(void)
   goto_menu(&menu_eeprom);
 }
 
+void menu_goto_test_os(void)
+{
+  goto_menu(&menu_test_os);
+}
+
+void menu_goto_buzzer(void)
+{
+  goto_menu(&menu_buzzer);
+}
+
 void menu_goto_mems(void)
 {
   goto_menu(&menu_mems);
@@ -412,16 +212,15 @@ void menu_scan_test(void)
     {
       // Keep the display updated
       menu_loop_tasks();
-      
-      if( gotkey,1 )
+
+      if( kb_test() != KEY_NONE )
 	{
-	  i_printxy(2, 1, '=');
-	  i_printxy(3, 1, keychar);
+	  KEYCODE k = kb_getk();
 	  
-	  gotkey = 0;
+	  i_printxy(3, 1, k);
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
-	  if( keychar == KEY_ON )
+	  if( k == KEY_ON )
 	    {
 	      break;
 	    }
@@ -568,16 +367,12 @@ int display_record(RECORD *r)
       // Keep the display updated
       menu_loop_tasks();
       
-      // We are on core 1 so a loop will cause 
-      //      dump_lcd();
-      
-      if( gotkey )
+      if( kb_test() != KEY_NONE )
 	{
-	  gotkey = 0;
+	  KEYCODE k = kb_getk();
 	  
-	  return(keychar);
+	  return(k);
 	}
-      
     }
 }
 
@@ -677,12 +472,12 @@ void menu_find(void)
       // Keep the display updated
       menu_loop_tasks();
       
-      if( gotkey || searching )
+      if( (kb_test() != KEY_NONE) || searching )
 	{
-	  gotkey = 0;
+	  KEYCODE k = kb_getk();
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
-	  if( keychar == KEY_ON )
+	  if( k == KEY_ON )
 	    {
 	      if( strlen(find_str) == 0)
 		{
@@ -701,7 +496,7 @@ void menu_find(void)
 		}
 	    }
 
-	  if ( (keychar == KEY_EXE) || searching )
+	  if ( (k == KEY_EXE) || searching )
 	    {
 	      int recnum;
 	      RECORD r;
@@ -736,11 +531,11 @@ void menu_find(void)
 		      // Keep the display updated
 		      menu_loop_tasks();
 		      
-		      if( gotkey )
+		      if( kb_test() != KEY_NONE )
 			{
-			  gotkey = 0;
+			  KEYCODE k = kb_getk();
 			  
-			  switch(keychar)
+			  switch(k)
 			    {
 			    case KEY_EXE:
 			      done = 1;
@@ -780,16 +575,13 @@ void menu_find(void)
 	  if ( strlen(find_str) < (MAX_INPUT_STR-2) )
 	    {
 	      char keystr[2] = " ";
-	      keystr[0] = keychar;
+	      keystr[0] = k;
 	      strcat(find_str, keystr);
 	      
 	      display_clear();
 	      printxy_str(0, 0, "Find:");
 	      printxy_str(5, 0, find_str);
 	    }
-	  
-	  gotkey = 0;
-	  
 	}
     }
 }
@@ -820,14 +612,14 @@ void menu_save(void)
       // Keep the display updated
       menu_loop_tasks();
       
-      if( gotkey )
+      if( kb_test() != KEY_NONE )
 	{
-	  gotkey = 0;
+	  KEYCODE k = kb_getk();
 
 	  switch(substate)
 	    {
 	    case SS_SAVE_INIT:
-	      switch(keychar)
+	      switch(k)
 		{
 		case KEY_ON:
 		  // Exit on ON key, exiting demonstrates it is working...
@@ -875,7 +667,7 @@ void menu_save(void)
 		  if ( strlen(save_str) < (MAX_INPUT_STR-2) )
 		    {
 		      char keystr[2] = " ";
-		      keystr[0] = keychar;
+		      keystr[0] = k;
 		      strcat(save_str, keystr);
 		      
 		      display_clear();
@@ -886,8 +678,6 @@ void menu_save(void)
 		  
 		}
 	    }
-	  
-	  gotkey = 0;
 	}
     }
 }
@@ -952,7 +742,7 @@ void menu_oled_test(void)
 
       bx=bx+dxa;
       by=by+dya;
-      printf("\n%d %d", x, y);
+      //printf("\n%d %d", x, y);
       
       x = bx / 100;
       y = by / 100;
@@ -994,34 +784,33 @@ void menu_oled_test(void)
 #endif
       // Keep the display updated
       menu_loop_tasks();
-      
-      if( gotkey )
+      if( kb_test() != KEY_NONE )
 	{
-	  gotkey = 0;
+	  KEYCODE k = kb_getk();
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
-	  if( keychar == KEY_ON )
+	  if( k == KEY_ON )
 	    {
 	      break;
 	    }
 	  
-	  if ( keychar == KEY_RIGHT )
+	  if ( k == KEY_RIGHT )
 	    {
 	      dxa+=100;
 	    }
 
-	  if ( keychar == KEY_LEFT )
+	  if ( k == KEY_LEFT )
 	    {
 	      dxa-=100;
 	    }
 
-	  if ( keychar == KEY_UP )
+	  if ( k == KEY_UP )
 	    {
 	      dya += 100;
 	    }
 
 
-	  if ( keychar == KEY_DOWN )
+	  if ( k == KEY_DOWN )
 	    {
 	      dxb -= 100;
 	    }
@@ -1075,7 +864,6 @@ void menu_enter(void)
 
 void menu_loop(void)
 {
-  check_keys();
   menu_process();
 }
 
@@ -1176,6 +964,27 @@ void check_menu_launch(void)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+
+void menu_dp_view(void)
+{
+  dp_view("Test string one for dp view", 2);
+}
+
+void menu_buz1(void)
+{
+  printf("\nBuz1");
+  for(int i=0; i<50; i++)
+    {
+      TURN_BUZZER_ON;
+      sleep_ms(1);
+
+      TURN_BUZZER_OFF;
+      sleep_ms(1);
+    }
+  printf("\nBuz1 done");
+}
+
+////////////////////////////////////////////////////////////////////////////////
 //
 
 void menu_bubble(void)
@@ -1203,64 +1012,63 @@ void menu_bubble(void)
       
       menu_loop_tasks();
       
-    for(int i=0; i<5;i++)
-      {
-	for(int j=0;j<20; j++)
-	  {
-	    u=sin(i+v)+sin(r*i+x);
-	    v=cos(i+v)+cos(r*i+x);
-	    x=u+t;
-	    a = u/2.0*sw+sw;
-	    b = v/2.0*16.0+16.0;
-	    ax = (int)a;
-	    by = (int)b;
+      for(int i=0; i<5;i++)
+	{
+	  for(int j=0;j<20; j++)
+	    {
+	      u=sin(i+v)+sin(r*i+x);
+	      v=cos(i+v)+cos(r*i+x);
+	      x=u+t;
+	      a = u/2.0*sw+sw;
+	      b = v/2.0*16.0+16.0;
+	      ax = (int)a;
+	      by = (int)b;
 	    
-	    plot_point(ax, by, (i*j)>20?1:0);
+	      plot_point(ax, by, (i*j)>20?1:0);
 	    
-	    //printf("\nu,v:%g,%g %g", u, v, t);
+	      //printf("\nu,v:%g,%g %g", u, v, t);
 	    
-	  }
-      }
+	    }
+	}
     
-    t += 0.025;
+      t += 0.025;
     
-    if( gotkey )
-      {
-	gotkey = 0;
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
 	
-	// Exit on ON key, exiting demonstrates it is working...
-	if( keychar == KEY_ON )
-	  {
-	    break;
-	  }
+	  // Exit on ON key, exiting demonstrates it is working...
+	  if( k == KEY_ON )
+	    {
+	      break;
+	    }
 	  
-	if ( keychar == KEY_RIGHT )
-	  {
-	    sw *= 2.0;
-	  }
+	  if ( k == KEY_RIGHT )
+	    {
+	      sw *= 2.0;
+	    }
 
-	if ( keychar == KEY_LEFT )
-	  {
-	    sw /= 2.0;
-	  }
+	  if ( k == KEY_LEFT )
+	    {
+	      sw /= 2.0;
+	    }
 
-	if ( keychar == KEY_UP )
-	  {
-	    v += 3.1;
-	  }
+	  if ( k == KEY_UP )
+	    {
+	      v += 3.1;
+	    }
 
-	if ( keychar == ' ' )
-	  {
-	    c = !c;;
-	  }
+	  if ( k == ' ' )
+	    {
+	      c = !c;;
+	    }
 
-
-	if ( keychar == KEY_DOWN )
-	  {
-	    v -= 3.2;
-	  }
-      }
-
+	
+	  if ( k == KEY_DOWN )
+	    {
+	      v -= 3.2;
+	    }
+	}
     }
 }
 
@@ -1277,12 +1085,12 @@ MENU menu_top =
     {'O', "Off",        menu_instant_off},
     {'E', "Eeprom",     menu_goto_eeprom},
     {'R', "RTC",        menu_goto_rtc},
-    {'D', "DispTest",   menu_oled_test},
     {'F', "Find",       menu_find},
     {'S', "Save",       menu_save},
     {'A', "All",        menu_all},
     {'M', "forMat",     menu_format},
     {'B', "Bubble",     menu_bubble},
+    {'T', "Test",       menu_goto_test_os},
     {'&', "",           menu_null},
    }
   };
@@ -1296,6 +1104,32 @@ MENU menu_eeprom =
     {KEY_ON, "",           menu_back},
     {'I', "Invalidate", menu_eeprom_invalidate},
     {'M', "Mem",        menu_goto_mems},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_test_os =
+  {
+   &menu_top,
+   "Test OS",
+   init_menu_test_os,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'D', "DispTest",   menu_oled_test},
+    {'V', "dpView",     menu_dp_view},
+    {'B', "Buzz",       menu_goto_buzzer},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_buzzer =
+  {
+   &menu_top,
+   "Buzz",
+   init_menu_buzzer,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'B', "Buzz1",      menu_buz1},
     {'&', "",           menu_null},
    }
   };

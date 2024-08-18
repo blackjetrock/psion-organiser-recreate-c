@@ -337,13 +337,6 @@ void menu_tasks(void)
 
 void menu_loop_tasks(void)
 {
-
-  //matrix_scan();
-
-  check_keys();
-
-  //scan_keys();
-  //dump_lcd();
   rtc_tasks();
   eeprom_tasks();
   wireless_taskloop();
@@ -627,19 +620,6 @@ int main() {
 
 	menu_loop();
 	serial_loop();
-	
-#if 0
-	if( gotkey )
-	  {
-	    char keystr[2];
-	    keystr[0] = keychar;
-	    keystr[1] = '\0';
-	    
-	    // Handle keypress
-	    i_printxy_str(DISPLAY_NUM_CHARS-1, 2, keystr);
-	  }
-#endif
-	
       }
 }
 

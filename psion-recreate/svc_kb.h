@@ -21,4 +21,8 @@ typedef enum _KEYCODE
    KEY_RIGHT = 6,
    KEY_EXE = 13,
    NOS_KEY_NONE = -1,
+   KEY_NONE = -1,
   } KEYCODE;
+
+KEYCODE kb_getk(void);
+KEYCODE kb_test(void);

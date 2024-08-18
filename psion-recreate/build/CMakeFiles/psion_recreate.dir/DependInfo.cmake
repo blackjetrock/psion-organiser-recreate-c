@@ -134,6 +134,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c" "CMakeFiles/psion_recreate.dir/psion_recreate.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/psion_recreate.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.c" "CMakeFiles/psion_recreate.dir/rtc.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/rtc.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.c" "CMakeFiles/psion_recreate.dir/serial.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/serial.c.obj.d"
+  "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.c" "CMakeFiles/psion_recreate.dir/svc_dp.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_dp.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.c" "CMakeFiles/psion_recreate.dir/svc_ed.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_ed.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.c" "CMakeFiles/psion_recreate.dir/svc_kb.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_kb.c.obj.d"
   "/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d"

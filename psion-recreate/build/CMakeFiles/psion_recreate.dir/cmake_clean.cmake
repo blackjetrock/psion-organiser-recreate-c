@@ -21,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/psion_recreate.dir/rtc.c.obj.d"
   "CMakeFiles/psion_recreate.dir/serial.c.obj"
   "CMakeFiles/psion_recreate.dir/serial.c.obj.d"
+  "CMakeFiles/psion_recreate.dir/svc_dp.c.obj"
+  "CMakeFiles/psion_recreate.dir/svc_dp.c.obj.d"
   "CMakeFiles/psion_recreate.dir/svc_ed.c.obj"
   "CMakeFiles/psion_recreate.dir/svc_ed.c.obj.d"
   "CMakeFiles/psion_recreate.dir/svc_kb.c.obj"

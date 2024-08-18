@@ -49,9 +49,6 @@ int mat_scan_state = MAT_SCAN_STATE_DRIVE;
 int mat_sense = 0;
 
 // Bit positions within matrix of each key
-volatile char keychar = 0;      // What the key code is
-volatile int gotkey = 0;       // We have a key
-
 
 #define MATRIX_BIT_CAP    1
 #define MATRIX_BIT_NUM    2
@@ -437,7 +434,7 @@ void matrix_debounce(MATRIX_MAP matrix)
       if( (key_map[i].mask) & pressed_edges )
 	{
 	  // Key pressed
-	  printf("\nC:%c", key_map[i].c);
+	  //printf("\nC:%c", key_map[i].c);
 
 	  // Put key pressed event into key buffer
 	  nos_put_key(key_map[i].c);
@@ -530,26 +527,68 @@ void matrix_scan(void)
     }
 }
 
-void check_keys(void)
+////////////////////////////////////////////////////////////////////////////////
+
+KEYCODE kb_getk(void)
 {
-  // If key in buffer then signal it's available
+  KEYCODE k;
+
+#if DB_KB_GETK
+  printf("\n%s::", __FUNCTION__);
+#endif
+  
+  while(1)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+      
+      if( kb_test() != KEY_NONE )
+	{
+	  k = nos_get_key();
+
+#if DB_KB_GETK
+	  printf("\n%s::exit:%d", __FUNCTION__, k);
+#endif
+	  return(k);
+	}
+    }
+
+#if DB_KB_GETK  
+  printf("\nExit:KEY_NONE");
+#endif
+  
+  return(KEY_NONE);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Returns keycode if there is a key in the buffer
+// otherwise KEY_NONE.
+// Does not take key from buffer
+//
+
+KEYCODE kb_test(void)
+{
+
+  menu_loop_tasks();
+
+#if DB_KB_TEST
+  printf("\n%s:: I:%d O:%d", __FUNCTION__, nos_key_in, nos_key_out);
+#endif
+  
   if( nos_key_in == nos_key_out )
     {
       // Buffer empty
+#if DB_KB_TEST
+      printf("\nExit:KEY_NONE");
+#endif
+      return(KEY_NONE);
     }
-  else
-    {
-      // Key available, see if we need to get it out of buffer
-      if( gotkey )
-	{
-	  // Not processed last key yet
-	  
-	}
-      else
-	{
-	  // Another key here
-	  gotkey = 1;
-	  keychar = nos_get_key();
-	}
-    }
+
+#if DB_KB_TEST
+  printf("\nExit:%d", nos_key_buffer[nos_key_out]);
+#endif
+  
+  // Return key code but don't remove key from buffer
+  return(nos_key_buffer[nos_key_out]);
 }

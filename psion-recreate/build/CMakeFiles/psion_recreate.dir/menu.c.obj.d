@@ -70,4 +70,5 @@ CMakeFiles/psion_recreate.dir/menu.c.obj: \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/display.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.h

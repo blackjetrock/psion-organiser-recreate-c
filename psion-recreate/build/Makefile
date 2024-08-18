@@ -484,6 +484,30 @@ serial.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/serial.c.s
 .PHONY : serial.c.s
 
+svc_dp.obj: svc_dp.c.obj
+.PHONY : svc_dp.obj
+
+# target to build an object file
+svc_dp.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_dp.c.obj
+.PHONY : svc_dp.c.obj
+
+svc_dp.i: svc_dp.c.i
+.PHONY : svc_dp.i
+
+# target to preprocess a source file
+svc_dp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_dp.c.i
+.PHONY : svc_dp.c.i
+
+svc_dp.s: svc_dp.c.s
+.PHONY : svc_dp.s
+
+# target to generate assembly for a file
+svc_dp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_dp.c.s
+.PHONY : svc_dp.c.s
+
 svc_ed.obj: svc_ed.c.obj
 .PHONY : svc_ed.obj
 
@@ -2109,6 +2133,9 @@ help:
 	@echo "... serial.obj"
 	@echo "... serial.i"
 	@echo "... serial.s"
+	@echo "... svc_dp.obj"
+	@echo "... svc_dp.i"
+	@echo "... svc_dp.s"
 	@echo "... svc_ed.obj"
 	@echo "... svc_ed.i"
 	@echo "... svc_ed.s"
