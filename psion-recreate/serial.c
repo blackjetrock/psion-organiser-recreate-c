@@ -294,6 +294,7 @@ void cli_terminal(void)
   printf("\nESC o   for ON");
   printf("\nESC m   for MODE");
   printf("\nArrow keys should work");
+  printf("\n(Uses VT-102 codes)");
   printf("\n");
   printf("\n========================================");
   printf("\n");
