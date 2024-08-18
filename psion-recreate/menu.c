@@ -33,6 +33,7 @@
 #include "record.h"
 #include "svc_kb.h"
 #include "svc_dp.h"
+#include "svc_ed.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -967,38 +968,15 @@ void check_menu_launch(void)
 
 #define DPVIEW_N 3
 
-char *dpview_data[DPVIEW_N] =
-  {
-   "Long test string for dpview that requires scrolling",
-   "Short string",
-   "Str",
-  };
+char *dpview_data =
+  
+   "Long test string for dpview that requires scrolling\t"
+   "Short string\t"
+   "Str";
 
 void menu_dp_view(void)
 {
-  int done = 0;
-  unsigned int line = 1;
-  KEYCODE k = KEY_NONE;
-  
-  while(!done)
-    {
-      k = dp_view(dpview_data[line], line);
-
-      switch(k)
-	{
-	case KEY_ON:
-	  done = 1;
-	  break;
-
- 	case KEY_DOWN:
-	  line = (line + 1) % DPVIEW_N;
-	  break;
-
- 	case KEY_UP:
-	  line = (line - 1) % DPVIEW_N;
-	  break;
-	}
-    }
+  ed_view(dpview_data);
 }
 
 void menu_buz1(void)

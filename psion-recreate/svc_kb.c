@@ -37,6 +37,13 @@
 #define MAT_SCAN_STATE_READ  10
 #define MAT_SCAN_STATE_NEXT  11
 
+// This allows other code to insert keys into the key queue. Note: Core1
+// has to be the code that does this, and i tmust run on core1. So, put a key in this
+// location and wait for it to tuirn to KEY_NONE before putting another one there.
+// If multiple code needs ot do this, then add more variables and add insertion in the KB code.
+
+KEYCODE kb_external_key = KEY_NONE;
+
 // Called regularly, can be on core1.
 
 // Handles multiple key presses
@@ -441,6 +448,13 @@ void matrix_debounce(MATRIX_MAP matrix)
 	  return;
 	}
       i++;
+    }
+
+  // We may have keys from other sources, accept those as well
+  if( kb_external_key != KEY_NONE )
+    {
+      nos_put_key(kb_external_key);
+      kb_external_key = KEY_NONE;
     }
 }
 

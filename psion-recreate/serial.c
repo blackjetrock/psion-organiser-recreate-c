@@ -18,6 +18,9 @@
 #include "emulator.h"
 #include "wireless.h"
 
+#include "svc.h"
+#include "svc_kb.h"
+
 int keypress = 0;
 int parameter = 0;
 unsigned int address = 0;
@@ -262,6 +265,25 @@ void cli_trace_dump_to(void)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Allows the code to be driven from USB
+//
+
+int serial_terminal_mode = 0;
+
+void cli_terminal(void)
+{
+
+  serial_terminal_mode = !serial_terminal_mode;
+
+  printf("\nterminal mode is %s", serial_terminal_mode?"on.":"off.");
+
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 // Serial loop command structure
 
@@ -406,26 +428,159 @@ SERIAL_COMMAND serial_cmds[] =
     "Write to EEPROM",
     cli_write_eeprom,
    },
+   {
+    't',
+    "Terminal",
+    cli_terminal,
+   },
   };
 
 int pcount = 0;
 int periodic_read = 0;
 
+#define SL_STATE_INIT 0
+#define SL_STATE_ESC1 1
+#define SL_STATE_ESC2 2
+#define SL_STATE_ESC3 3
+
+void queue_key(int key)
+{
+  // Add key to queue
+  kb_external_key = key;
+  
+  printf("\nKey");
+  
+  // Wait for it to be processed
+  while( kb_external_key != KEY_NONE )
+    {
+      menu_loop_tasks();
+    }
+  
+  printf("\nprocessed");
+}
+
+int sl_state = SL_STATE_INIT;
+
 void serial_loop()
 {
-  int  key;
+  int key = KEY_NONE;
 
-  if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
+  
+  int key_queue[3];
+  
+  if( serial_terminal_mode )
     {
-      for(int i=0; i<sizeof(serial_cmds)/sizeof(SERIAL_COMMAND);i++)
+      // Display
+  
+      if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
 	{
-	  if( serial_cmds[i].key == key )
-	    {
+	  printf("\nKey code:%d", key);
 
-	      keypress = key;
-	      (*serial_cmds[i].fn)();
-	      prompt();
+	  switch(sl_state)
+	    {
+	    case SL_STATE_INIT:
+	      if( key == 27 )
+		{
+		  sl_state = SL_STATE_ESC1;
+		  key_queue[0] = key;
+		}
+	      else
+		{
+		  queue_key(key);		  
+		}
 	      break;
+
+	      
+	    case SL_STATE_ESC1:
+	      printf("\nESC1\n");
+	      
+	      // We have an ESC, see if we may have a control key
+	      switch(key)
+		{
+		case 27:
+		  // Exit terminal mode
+		  serial_terminal_mode = 0;
+		  sl_state = SL_STATE_INIT;
+		  printf("\nterminal mode off");
+		  break;
+	      
+		case 91:
+		  // Could be a longer sequence
+		  key_queue[1] = key;
+		  sl_state = SL_STATE_ESC2;
+		  break;
+
+		default:
+		  // not a sequene, send the previous and this key
+		  queue_key(key_queue[0]);
+		  queue_key(key);
+		  sl_state = SL_STATE_INIT;
+		  break;
+		}
+	      
+	      break;
+
+	    case SL_STATE_ESC2:
+	      printf("\nESC2\n");
+	      
+	      // We have an ESC, see if we may have a control key
+	      switch(key)
+		{
+		case 65:
+		  // We have control code, convert
+		  queue_key(KEY_UP);
+		  sl_state = SL_STATE_INIT;
+		  break;
+
+		case 66:
+		  // We have control code, convert
+		  queue_key(KEY_DOWN);
+		  sl_state = SL_STATE_INIT;
+		  break;
+		  
+		case 67:
+		  // We have control code, convert
+		  queue_key(KEY_RIGHT);
+		  sl_state = SL_STATE_INIT;
+		  break;
+		  
+		case 68:
+		  // We have control code, convert
+		  queue_key(KEY_LEFT);
+		  sl_state = SL_STATE_INIT;
+		  break;
+
+		default:
+		  // not a sequene, send the previous and this key
+		  queue_key(key_queue[0]);
+		  queue_key(key_queue[1]);
+		  queue_key(key);
+		  sl_state = SL_STATE_INIT;
+		  break;
+		}
+	      
+	      break;
+	    }
+	  
+	  printf("\nSL_STATE:%d", sl_state);	  
+	}
+
+
+    }
+  else
+    {
+      if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
+	{
+	  for(int i=0; i<sizeof(serial_cmds)/sizeof(SERIAL_COMMAND);i++)
+	    {
+	      if( serial_cmds[i].key == key )
+		{
+		  
+		  keypress = key;
+		  (*serial_cmds[i].fn)();
+		  prompt();
+		  break;
+		}
 	    }
 	}
     }
