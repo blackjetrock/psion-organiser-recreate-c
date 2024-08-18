@@ -309,6 +309,7 @@ CMakeFiles/psion_recreate.dir/font.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/match.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.h
 
 CMakeFiles/psion_recreate.dir/i2c.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/i2c.c

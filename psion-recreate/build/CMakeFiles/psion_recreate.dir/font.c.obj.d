@@ -22,4 +22,5 @@ CMakeFiles/psion_recreate.dir/font.c.obj: \
  /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/match.h \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.h

@@ -5,6 +5,8 @@
 
 #include "psion_recreate.h"
 
+#include "serial.h"
+
 void Set_Column_Address(unsigned char add);
 void Stop(void);
 void Start(void);
@@ -312,6 +314,8 @@ void i_printxy(int x, int y, int ch)
 {
   int cx, cy;
 
+  serial_display_xy(x, y, ch);
+  
   ch -= 0;
   
   cx = 127-(x * 6);

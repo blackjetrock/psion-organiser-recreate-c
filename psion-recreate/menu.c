@@ -207,6 +207,8 @@ void init_scan_test(void)
 
 void menu_scan_test(void)
 {
+  char line[20];
+  
   init_scan_test();
 
    while(1)
@@ -217,8 +219,10 @@ void menu_scan_test(void)
       if( kb_test() != KEY_NONE )
 	{
 	  KEYCODE k = kb_getk();
+
+	  sprintf(line, "'%c' %02X %03d  ", k, k, k);
 	  
-	  i_printxy(3, 1, k);
+	  i_printxy_str(0, 1, line);
 	  
 	  // Exit on ON key, exiting demonstrates it is working...
 	  if( k == KEY_ON )

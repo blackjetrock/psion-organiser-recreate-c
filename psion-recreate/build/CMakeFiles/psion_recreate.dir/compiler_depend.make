@@ -304,7 +304,8 @@ CMakeFiles/psion_recreate.dir/font.c.obj: ../font.c \
   /usr/include/newlib/sys/string.h \
   ../psion_recreate.h \
   ../match.h \
-  ../font.h
+  ../font.h \
+  ../serial.h
 
 CMakeFiles/psion_recreate.dir/i2c.c.obj: ../i2c.c \
   /usr/include/newlib/stdio.h \
@@ -4168,6 +4169,8 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h:
 
+/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h:
+
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/queue.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h:
@@ -4464,6 +4467,8 @@ generated/pico_base/pico/config_autogen.h:
 
 ../font.c:
 
+../serial.h:
+
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
 
 ../psion_recreate.h:
@@ -4527,5 +4532,3 @@ generated/pico_base/pico/version.h:
 ../emulator.c:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h:
-
-/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h:

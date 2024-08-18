@@ -273,11 +273,33 @@ int serial_terminal_mode = 0;
 
 void cli_terminal(void)
 {
+  // Clear screen
+  printf("%c[2J", 27);
 
+  printf("\n\n\n\n\n\n\n\n\n\n");
+
+    // Set top and bottom margins
+  // DECSTBM	ESC [ Pt ; Pb r
+
+  printf("%c[6;0r", 27);
+
+  
   serial_terminal_mode = !serial_terminal_mode;
 
+  printf("\n========================================");
+  printf("\n");
   printf("\nterminal mode is %s", serial_terminal_mode?"on.":"off.");
+  printf("\n");
+  printf("\nESC ESC to exit");
+  printf("\nESC o   for ON");
+  printf("\nESC m   for MODE");
+  printf("\nArrow keys should work");
+  printf("\n");
+  printf("\n========================================");
+  printf("\n");
 
+
+  
 }
 
 
@@ -448,15 +470,11 @@ void queue_key(int key)
   // Add key to queue
   kb_external_key = key;
   
-  printf("\nKey");
-  
   // Wait for it to be processed
   while( kb_external_key != KEY_NONE )
     {
       menu_loop_tasks();
     }
-  
-  printf("\nprocessed");
 }
 
 int sl_state = SL_STATE_INIT;
@@ -474,8 +492,6 @@ void serial_loop()
   
       if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
 	{
-	  printf("\nKey code:%d", key);
-
 	  switch(sl_state)
 	    {
 	    case SL_STATE_INIT:
@@ -492,7 +508,6 @@ void serial_loop()
 
 	      
 	    case SL_STATE_ESC1:
-	      printf("\nESC1\n");
 	      
 	      // We have an ESC, see if we may have a control key
 	      switch(key)
@@ -501,7 +516,24 @@ void serial_loop()
 		  // Exit terminal mode
 		  serial_terminal_mode = 0;
 		  sl_state = SL_STATE_INIT;
+		  printf("%c[0;0r", 27);
 		  printf("\nterminal mode off");
+		  break;
+
+		  // ON key
+		case 'o':
+		  // Exit terminal mode
+
+		  queue_key(KEY_ON);		  
+		  sl_state = SL_STATE_INIT;
+		  break;
+
+		  // MODE key
+		case 'm':
+		  // Exit terminal mode
+
+		  queue_key(KEY_MODE);		  
+		  sl_state = SL_STATE_INIT;
 		  break;
 	      
 		case 91:
@@ -521,7 +553,6 @@ void serial_loop()
 	      break;
 
 	    case SL_STATE_ESC2:
-	      printf("\nESC2\n");
 	      
 	      // We have an ESC, see if we may have a control key
 	      switch(key)
@@ -561,11 +592,7 @@ void serial_loop()
 	      
 	      break;
 	    }
-	  
-	  printf("\nSL_STATE:%d", sl_state);	  
 	}
-
-
     }
   else
     {
@@ -606,4 +633,19 @@ void serial_help(void)
 void prompt(void)
 {
   printf("\nP:%08X >", parameter);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Display a character at a cursor position
+// CUP	ESC [ Pl ; Pc H
+
+void serial_display_xy(int x, int y, char ch)
+{
+  if( serial_terminal_mode )
+    {
+      printf("%c7", 27);
+      printf("%c[%d;%dH%c", 27, y+2, x+2, ch);
+      printf("%c8", 27);
+    }
 }
