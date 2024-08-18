@@ -35,24 +35,31 @@ KEYCODE dp_view(char *str, int line)
   
   i_printxy_str(0, line, w_str);
 
-  int slen = strlen(w_str);
-
+  int swlen = strlen(w_str);
+  int slen = strlen(str);
+  
   sleep_ms(500);
   
   while(!done)
     {
       offset2 = 0;
+
+      // Don't scroll strings that fit on a line
+      if( slen <= DP_NUM_CHARS )
+	{
+	  scroll_dir = 0;
+	}
       
       // Display DP_LEN_CHARS characters from the string
       for(int i=0; i<DP_NUM_CHARS; i++)
 	{
 	  //printf("\ni:%d off:%d scrldir:%d", i, offset, scroll_dir);
 	  
-	  if( (i+offset) >= strlen(w_str) )
+	  if( (i+offset) >= swlen )
 	    {
-	      if( strlen(w_str) > DP_NUM_CHARS )
+	      if( swlen > DP_NUM_CHARS )
 		{
-		  ch = w_str[(offset2++) % slen];
+		  ch = w_str[(offset2++) % swlen];
 		}
 	      else
 		{
@@ -61,7 +68,7 @@ KEYCODE dp_view(char *str, int line)
 	    }
 	  else
 	    {
-	      ch = w_str[(i+offset) %slen];
+	      ch = w_str[(i+offset) % swlen];
 	    }
 	  
 	  i_printxy(i, line, ch);
@@ -110,6 +117,9 @@ KEYCODE dp_view(char *str, int line)
 	      break;
 	      
 	    default:
+
+	      // Re-display string in starting position
+	      i_printxy_str(0, line, w_str);
 	      return(k);
 	      break;
 	    }
@@ -121,10 +131,10 @@ KEYCODE dp_view(char *str, int line)
 
       if( offset < 0 )
 	{
-	  offset = strlen(w_str)-1;
+	  offset = swlen-1;
 	}
       
-      if( offset >= strlen(w_str) )
+      if( offset >= swlen )
 	{
 	  offset = 0;
 	}
