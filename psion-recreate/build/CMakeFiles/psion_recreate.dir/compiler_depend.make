@@ -1355,6 +1355,8 @@ CMakeFiles/psion_recreate.dir/svc_kb.c.obj: ../svc_kb.c \
   ../svc_dp.h \
   ../svc_pk.h
 
+CMakeFiles/psion_recreate.dir/svc_pk.c.obj: ../svc_pk.c
+
 CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c \
   /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
@@ -4226,8 +4228,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c:
 
-/usr/include/newlib/machine/_default_types.h:
-
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c:
 
 ../rtc.c:
@@ -4400,6 +4400,8 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /usr/include/newlib/sys/_locale.h:
 
+/usr/include/newlib/machine/_default_types.h:
+
 /usr/include/newlib/sys/types.h:
 
 /usr/include/newlib/machine/ieeefp.h:
@@ -4511,6 +4513,8 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 /usr/include/newlib/machine/endian.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/boards/include/boards/pico.h:
+
+../svc_pk.c:
 
 generated/pico_base/pico/config_autogen.h:
 
@@ -4726,9 +4730,9 @@ generated/pico_base/pico/version.h:
 
 /usr/include/newlib/c++/9.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h:
 
-/tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h:
-
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h:
+
+/tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h:
 
 /usr/include/newlib/c++/9.2.1/cstdlib:
 
