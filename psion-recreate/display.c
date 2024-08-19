@@ -1304,6 +1304,7 @@ void plot_point(int x, int y, int mode)
     {
       return;
     }
+  
   //printf("\nX:%d Y:%d", x, y);
   
   cx = 127-x;

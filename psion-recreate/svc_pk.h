@@ -1,0 +1,9 @@
+void pk_setp(void);
+void pk_save(void);
+void pk_read(void);
+void pk_rbyt(void);
+void pk_rwrd(void);
+void pk_skip(void);
+void pk_qadd(void);
+void pk_sadd(void);
+void pk_pkof(void);
