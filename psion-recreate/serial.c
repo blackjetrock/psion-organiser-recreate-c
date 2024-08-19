@@ -269,6 +269,7 @@ void cli_trace_dump_to(void)
 //
 
 int serial_terminal_mode = 0;
+int serial_graphics_mode = 0;
 
 void cli_terminal(void)
 {
@@ -297,8 +298,37 @@ void cli_terminal(void)
   printf("\n");
   printf("\n========================================");
   printf("\n");
+  
+}
 
+void cli_graphics_terminal(void)
+{
+  // Clear screen
+  printf("%c[2J", 27);
 
+  printf("\n\n\n\n\n\n\n\n\n\n");
+
+    // Set top and bottom margins
+  // DECSTBM	ESC [ Pt ; Pb r
+
+  printf("%c[40;0r", 27);
+
+  
+  serial_terminal_mode = !serial_terminal_mode;
+  serial_graphics_mode = !serial_graphics_mode;
+  
+  printf("\n========================================");
+  printf("\n");
+  printf("\nterminal mode is %s", serial_terminal_mode?"on.":"off.");
+  printf("\n");
+  printf("\nESC ESC to exit");
+  printf("\nESC o   for ON");
+  printf("\nESC m   for MODE");
+  printf("\nArrow keys should work");
+  printf("\n(Uses VT-102 codes)");
+  printf("\n");
+  printf("\n========================================");
+  printf("\n");
   
 }
 
@@ -454,6 +484,11 @@ SERIAL_COMMAND serial_cmds[] =
     't',
     "Terminal",
     cli_terminal,
+   },
+   {
+    'g',
+    "Graphics Terminal",
+    cli_graphics_terminal,
    },
   };
 
@@ -648,4 +683,16 @@ void serial_display_xy(int x, int y, char ch)
       printf("%c[%d;%dH%c", 27, y+2, x+2, ch);
       printf("%c8", 27);
     }
+}
+
+void serial_plot_point_byte(int x, int y, uint8_t byte)
+{
+  if( serial_terminal_mode )
+    {
+      printf("%c7", 27);
+
+      printf("%c[%d;%dH%c", 27, y+2+5, x+0, byte?'@':' ');
+      printf("%c8", 27);
+    }
+  
 }

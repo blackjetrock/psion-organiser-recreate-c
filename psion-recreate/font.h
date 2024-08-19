@@ -1,3 +1,4 @@
+int invert_byte(int b);
 void display_clear(void);
 void printxy(int x, int y, int ch);
 void printxy_str(int x, int y, char *str);

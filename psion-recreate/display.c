@@ -1295,12 +1295,14 @@ void plot_point(int x, int y, int mode)
 {
   int cx, cy;
 
-  if( (cx < 0) || (cx>127)  )
+
+  
+  if( (x < 0) || (x>127)  )
     {
       return;
     }
 
-  if( (cy < 0) || (cy>31)  )
+  if( (y < 0) || (y>31)  )
     {
       return;
     }
@@ -1326,6 +1328,7 @@ void plot_point(int x, int y, int mode)
 
   uint8_t byte = display_pixels[cy*128+cx];
 
+
   //printf("  IDX:%d", cy*128+cx);
   //printf("  byte:%02X", byte);
 
@@ -1340,6 +1343,8 @@ void plot_point(int x, int y, int mode)
       break;
     }
   //printf("  byte:%02X", byte);
+
+  serial_plot_point_byte(x, y, mode);
   
   i2c_send_byte(invert_byte(byte));
 
