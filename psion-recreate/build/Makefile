@@ -604,6 +604,54 @@ svc_kb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_kb.c.s
 .PHONY : svc_kb.c.s
 
+svc_pak_pico_flash.obj: svc_pak_pico_flash.c.obj
+.PHONY : svc_pak_pico_flash.obj
+
+# target to build an object file
+svc_pak_pico_flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.obj
+.PHONY : svc_pak_pico_flash.c.obj
+
+svc_pak_pico_flash.i: svc_pak_pico_flash.c.i
+.PHONY : svc_pak_pico_flash.i
+
+# target to preprocess a source file
+svc_pak_pico_flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.i
+.PHONY : svc_pak_pico_flash.c.i
+
+svc_pak_pico_flash.s: svc_pak_pico_flash.c.s
+.PHONY : svc_pak_pico_flash.s
+
+# target to generate assembly for a file
+svc_pak_pico_flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.s
+.PHONY : svc_pak_pico_flash.c.s
+
+svc_pak_serial_eeprom.obj: svc_pak_serial_eeprom.c.obj
+.PHONY : svc_pak_serial_eeprom.obj
+
+# target to build an object file
+svc_pak_serial_eeprom.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj
+.PHONY : svc_pak_serial_eeprom.c.obj
+
+svc_pak_serial_eeprom.i: svc_pak_serial_eeprom.c.i
+.PHONY : svc_pak_serial_eeprom.i
+
+# target to preprocess a source file
+svc_pak_serial_eeprom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.i
+.PHONY : svc_pak_serial_eeprom.c.i
+
+svc_pak_serial_eeprom.s: svc_pak_serial_eeprom.c.s
+.PHONY : svc_pak_serial_eeprom.s
+
+# target to generate assembly for a file
+svc_pak_serial_eeprom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.s
+.PHONY : svc_pak_serial_eeprom.c.s
+
 svc_pk.obj: svc_pk.c.obj
 .PHONY : svc_pk.obj
 
@@ -2220,6 +2268,12 @@ help:
 	@echo "... svc_kb.obj"
 	@echo "... svc_kb.i"
 	@echo "... svc_kb.s"
+	@echo "... svc_pak_pico_flash.obj"
+	@echo "... svc_pak_pico_flash.i"
+	@echo "... svc_pak_pico_flash.s"
+	@echo "... svc_pak_serial_eeprom.obj"
+	@echo "... svc_pak_serial_eeprom.i"
+	@echo "... svc_pak_serial_eeprom.s"
 	@echo "... svc_pk.obj"
 	@echo "... svc_pk.i"
 	@echo "... svc_pk.s"

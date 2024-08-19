@@ -38514,7 +38514,7 @@ Disassembly of section .data:
 20000166:	2300      	movs	r3, #0
 20000168:	2100      	movs	r1, #0
 2000016a:	0092      	lsls	r2, r2, #2
-2000016c:	f000 f960 	bl	20000430 <____wrap___aeabi_lmul_veneer>
+2000016c:	f000 f958 	bl	20000420 <____wrap___aeabi_lmul_veneer>
 20000170:	1980      	adds	r0, r0, r6
 20000172:	4179      	adcs	r1, r7
 20000174:	0004      	movs	r4, r0
@@ -38534,7 +38534,7 @@ Disassembly of section .data:
 20000192:	f383 8810 	msr	PRIMASK, r3
 20000196:	0020      	movs	r0, r4
 20000198:	0029      	movs	r1, r5
-2000019a:	f000 f941 	bl	20000420 <__best_effort_wfe_or_timeout_veneer>
+2000019a:	f000 f949 	bl	20000430 <__best_effort_wfe_or_timeout_veneer>
 2000019e:	2800      	cmp	r0, #0
 200001a0:	d120      	bne.n	200001e4 <mutex_enter_timeout_ms+0x94>
 200001a2:	4643      	mov	r3, r8
@@ -38851,23 +38851,23 @@ Disassembly of section .data:
 2000041a:	bf00      	nop
 2000041c:	100071ad 	.word	0x100071ad
 
-20000420 <__best_effort_wfe_or_timeout_veneer>:
+20000420 <____wrap___aeabi_lmul_veneer>:
 20000420:	b401      	push	{r0}
-20000422:	4802      	ldr	r0, [pc, #8]	; (2000042c <__best_effort_wfe_or_timeout_veneer+0xc>)
+20000422:	4802      	ldr	r0, [pc, #8]	; (2000042c <____wrap___aeabi_lmul_veneer+0xc>)
 20000424:	4684      	mov	ip, r0
 20000426:	bc01      	pop	{r0}
 20000428:	4760      	bx	ip
 2000042a:	bf00      	nop
-2000042c:	10007009 	.word	0x10007009
+2000042c:	1000acf1 	.word	0x1000acf1
 
-20000430 <____wrap___aeabi_lmul_veneer>:
+20000430 <__best_effort_wfe_or_timeout_veneer>:
 20000430:	b401      	push	{r0}
-20000432:	4802      	ldr	r0, [pc, #8]	; (2000043c <____wrap___aeabi_lmul_veneer+0xc>)
+20000432:	4802      	ldr	r0, [pc, #8]	; (2000043c <__best_effort_wfe_or_timeout_veneer+0xc>)
 20000434:	4684      	mov	ip, r0
 20000436:	bc01      	pop	{r0}
 20000438:	4760      	bx	ip
 2000043a:	bf00      	nop
-2000043c:	1000acf1 	.word	0x1000acf1
+2000043c:	10007009 	.word	0x10007009
 
 20000440 <Contrast_level>:
 20000440:	0000007f                                ....
