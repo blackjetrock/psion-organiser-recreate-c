@@ -647,6 +647,36 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_dp.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_dp.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_dp.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_er.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_er.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_er.c.obj
+ .text.er_lkup  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_er.c.obj
+ .text.er_mess  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_er.c.obj
+ .comment       0x0000000000000000       0x5a CMakeFiles/psion_recreate.dir/svc_er.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2c CMakeFiles/psion_recreate.dir/svc_er.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+ .text.fl_cret  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+ .comment       0x0000000000000000       0x5a CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2c CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_SETP  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_SAVE  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_READ  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_RBYT  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_RWRD  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_SKIP  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_QADD  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_SADD  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .text.PK_PKOF  0x0000000000000000        0x4 CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .comment       0x0000000000000000       0x5a CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2c CMakeFiles/psion_recreate.dir/svc_pk.c.obj
  .text          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1628,9 +1658,9 @@ Discarded input sections
                 0x0000000000000000        0x1 CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .bss.lockout_mutex
                 0x0000000000000000        0x8 CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .text          0x0000000000000000        0x0 /tmp/ccuUL33t.o
- .data          0x0000000000000000        0x0 /tmp/ccuUL33t.o
- .bss           0x0000000000000000        0x0 /tmp/ccuUL33t.o
+ .text          0x0000000000000000        0x0 /tmp/cc4LGlK2.o
+ .data          0x0000000000000000        0x0 /tmp/cc4LGlK2.o
+ .bss           0x0000000000000000        0x0 /tmp/cc4LGlK2.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -2244,7 +2274,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/ccuUL33t.o
+ .boot2         0x0000000010000000      0x100 /tmp/cc4LGlK2.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -4720,6 +4750,9 @@ LOAD CMakeFiles/psion_recreate.dir/serial.c.obj
 LOAD CMakeFiles/psion_recreate.dir/svc_ed.c.obj
 LOAD CMakeFiles/psion_recreate.dir/svc_kb.c.obj
 LOAD CMakeFiles/psion_recreate.dir/svc_dp.c.obj
+LOAD CMakeFiles/psion_recreate.dir/svc_er.c.obj
+LOAD CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+LOAD CMakeFiles/psion_recreate.dir/svc_pk.c.obj
 LOAD CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 LOAD CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 LOAD CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -4790,7 +4823,7 @@ LOAD CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_c
 LOAD CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 LOAD CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 LOAD CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-LOAD /tmp/ccuUL33t.o
+LOAD /tmp/cc4LGlK2.o
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -4942,7 +4975,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000ac0       0x2c CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .ARM.attributes
-                0x0000000000000aec       0x22 /tmp/ccuUL33t.o
+                0x0000000000000aec       0x22 /tmp/cc4LGlK2.o
  .ARM.attributes
                 0x0000000000000b0e       0x1e /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

@@ -72,4 +72,5 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk.h

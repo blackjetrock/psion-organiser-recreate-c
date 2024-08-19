@@ -532,6 +532,54 @@ svc_ed.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_ed.c.s
 .PHONY : svc_ed.c.s
 
+svc_er.obj: svc_er.c.obj
+.PHONY : svc_er.obj
+
+# target to build an object file
+svc_er.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_er.c.obj
+.PHONY : svc_er.c.obj
+
+svc_er.i: svc_er.c.i
+.PHONY : svc_er.i
+
+# target to preprocess a source file
+svc_er.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_er.c.i
+.PHONY : svc_er.c.i
+
+svc_er.s: svc_er.c.s
+.PHONY : svc_er.s
+
+# target to generate assembly for a file
+svc_er.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_er.c.s
+.PHONY : svc_er.c.s
+
+svc_fl.obj: svc_fl.c.obj
+.PHONY : svc_fl.obj
+
+# target to build an object file
+svc_fl.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_fl.c.obj
+.PHONY : svc_fl.c.obj
+
+svc_fl.i: svc_fl.c.i
+.PHONY : svc_fl.i
+
+# target to preprocess a source file
+svc_fl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_fl.c.i
+.PHONY : svc_fl.c.i
+
+svc_fl.s: svc_fl.c.s
+.PHONY : svc_fl.s
+
+# target to generate assembly for a file
+svc_fl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_fl.c.s
+.PHONY : svc_fl.c.s
+
 svc_kb.obj: svc_kb.c.obj
 .PHONY : svc_kb.obj
 
@@ -555,6 +603,30 @@ svc_kb.s: svc_kb.c.s
 svc_kb.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_kb.c.s
 .PHONY : svc_kb.c.s
+
+svc_pk.obj: svc_pk.c.obj
+.PHONY : svc_pk.obj
+
+# target to build an object file
+svc_pk.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pk.c.obj
+.PHONY : svc_pk.c.obj
+
+svc_pk.i: svc_pk.c.i
+.PHONY : svc_pk.i
+
+# target to preprocess a source file
+svc_pk.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pk.c.i
+.PHONY : svc_pk.c.i
+
+svc_pk.s: svc_pk.c.s
+.PHONY : svc_pk.s
+
+# target to generate assembly for a file
+svc_pk.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pk.c.s
+.PHONY : svc_pk.c.s
 
 tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -2139,9 +2211,18 @@ help:
 	@echo "... svc_ed.obj"
 	@echo "... svc_ed.i"
 	@echo "... svc_ed.s"
+	@echo "... svc_er.obj"
+	@echo "... svc_er.i"
+	@echo "... svc_er.s"
+	@echo "... svc_fl.obj"
+	@echo "... svc_fl.i"
+	@echo "... svc_fl.s"
 	@echo "... svc_kb.obj"
 	@echo "... svc_kb.i"
 	@echo "... svc_kb.s"
+	@echo "... svc_pk.obj"
+	@echo "... svc_pk.i"
+	@echo "... svc_pk.s"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"

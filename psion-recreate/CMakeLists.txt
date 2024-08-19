@@ -29,8 +29,9 @@ serial.c
 svc_ed.c
 svc_kb.c
 svc_dp.c
-#svc_er.c
-#svc_fl.c
+svc_er.c
+svc_fl.c
+svc_pk.c
 )
 
 pico_enable_stdio_usb(psion_recreate 1)
