@@ -40,6 +40,37 @@ PK_DRIVER_SET pk_drivers[] =
    {pk_rbyt_serial_eeprom,  pk_save_serial_eeprom,   pk_format_serial_eeprom},
   };
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Build a pak ID string
+//
+
+void pk_build_id_string(PAK_ID result,
+			int size,
+			int year,
+			int month,
+			int day,
+			int hour,
+			int unique1,
+			int unique2)
+{
+  PAK_ID id;
+
+  id[0] = 0x78;
+  id[1] = size;
+  id[2] = year;
+  id[3] = month;
+  id[4] = day;
+  id[5] = hour;
+  id[6] = unique1;
+  id[7] = unique2;
+
+  result = id;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 void pk_setp(PAK pak)
 {
@@ -67,27 +98,26 @@ void pk_read(PAK_ADDR pak_addr, int len, uint8_t *dest)
 {
   for(int i=0; i<len; i++)
     {
-      pk_rbyt(pak_addr+i);
+      *(dest++) = pk_rbyt();
     }
 
 
   
 }
 
-uint8_t pk_rbyt(PAK_ADDR pak_addr)
+uint8_t pk_rbyt(void)
 {
   // Branch to the pak drivers
-  pkw_cpad++;
-  return( (*pk_drivers[pkb_curp].rbyt)(pak_addr));
+  return( (*pk_drivers[pkb_curp].rbyt)(pkw_cpad++));
 }
 
 
-uint16_t pk_rwrd(PAK_ADDR pak_addr)
+uint16_t pk_rwrd(void)
 {
   uint16_t word = 0;
 
-  word  = pk_rbyt(pak_addr) << 8;
-  word |= pk_rbyt(pak_addr+1);
+  word  = pk_rbyt() << 8;
+  word |= pk_rbyt();
   
 }
 
@@ -112,4 +142,8 @@ void pk_pkof(void)
   // Do nothing for now
 }
 
-
+void      pk_fmat(void)
+{
+  // Branch to the pak drivers
+  return( (*pk_drivers[pkb_curp].format)());
+}

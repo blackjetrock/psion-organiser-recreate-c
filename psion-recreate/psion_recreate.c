@@ -353,6 +353,7 @@ void menu_loop_tasks(void)
 void core1_main(void)
 {
   printf("\nCore1 started");
+  multicore_lockout_victim_init();
   
   while(1)
     {

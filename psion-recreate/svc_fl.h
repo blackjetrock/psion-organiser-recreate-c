@@ -9,7 +9,8 @@ void fl_bcat(void);
 void fl_bdel(void);
 void fl_bopn(void);
 void fl_bsav(void);
-void fl_catl(void);
+int fl_catl(int first, int device, char *filename, uint8_t *rectype);
+  
 void fl_copy(void);
 FL_REC_TYPE fl_cret(char *filename);
 void fl_deln(void);

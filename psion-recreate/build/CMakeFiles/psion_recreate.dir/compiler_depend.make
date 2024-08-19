@@ -1449,6 +1449,13 @@ CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.obj: ../svc_pak_pico_flash.c 
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_multicore/include/pico/multicore.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
   ../psion_recreate.h \
   ../match.h \
   ../font.h \

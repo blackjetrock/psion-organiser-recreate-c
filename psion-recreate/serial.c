@@ -74,13 +74,14 @@ void cli_dump_language_stack(void)
   print_frame(rta_fp);
 }
 
-#define BYTE_WIDTH  8
+#define BYTE_WIDTH  16
   
 void cli_dump_eeprom(void)
 {
   char ascii[BYTE_WIDTH*3+5];
   char ascii_byte[5];
-
+  uint8_t *flash = (uint8_t *)(XIP_BASE + ((uint32_t)((1024+512) * 1024)));
+  
   uint8_t data[1024*4];
 
   read_eeprom(EEPROM_1_ADDR_RD, 0, 1024, (uint8_t *)&data);
@@ -101,6 +102,7 @@ void cli_dump_eeprom(void)
 	  printf("\n%03X: ", z);
 	}
 
+#if 0      
       if( z >= ROM_START )
 	{
 	  byte =  data[z];
@@ -111,7 +113,9 @@ void cli_dump_eeprom(void)
 	  byte =  data[z];
 	  printf("%02X ", byte);
 	}
+#endif
 
+      byte = *(flash++);
       if( isprint(byte) )
 	{
 	  sprintf(ascii_byte, "%c", byte);
@@ -149,7 +153,7 @@ void cli_dump_memory(void)
 
   ascii[0] = '\0';
   
-  for(int z = parameter; z<parameter+256; z++)
+  for(unsigned int z = parameter; z<parameter+512; z++)
     {
       int byte = 0;
       
@@ -157,9 +161,10 @@ void cli_dump_memory(void)
 	{
 	  printf("  %s", ascii);
 	  ascii[0] = '\0';
-	  printf("\n%03X: ", z);
+	  printf("\n%08X: ", z);
 	}
 
+#if 0
       if( z >= ROM_START )
 	{
 	  byte =  ROMDATA(z-ROM_START);
@@ -170,7 +175,12 @@ void cli_dump_memory(void)
 	  byte =  RAMDATA(z);
 	  printf("%02X ", byte);
 	}
+#endif
 
+      byte = *((uint8_t *)z);
+
+      printf(" %02X", byte);
+      
       if( isprint(byte) )
 	{
 	  sprintf(ascii_byte, "%c", byte);
@@ -261,6 +271,40 @@ void cli_trace_dump_to(void)
     }
   
   printf("\n");
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void cli_format(void)
+{
+  printf("\nFormatting A:");
+  pk_setp(0);
+  pk_fmat();
+  printf("\nDone...");
+  
+}
+
+void cli_catalog(void)
+{
+  int rc = 0;
+  uint8_t rectype;
+  
+  char filename[32];
+  printf("\nCatalog of A:");
+  pk_setp(0);
+
+  
+  rc = fl_catl(1, 0, filename, &rectype);
+
+  while(rc == 1)
+    {
+      printf("\n%s ($%02X)", filename, rectype);
+      rc = fl_catl(0, 0, filename, &rectype);
+    }
+  
+  
+  printf("\nDone...");
+  
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -490,6 +534,17 @@ SERIAL_COMMAND serial_cmds[] =
     "Graphics Terminal",
     cli_graphics_terminal,
    },
+   {
+    '*',
+    "Format",
+    cli_format,
+   },
+   {
+    '.',
+    "Catalog",
+    cli_catalog,
+   },
+   
   };
 
 int pcount = 0;
