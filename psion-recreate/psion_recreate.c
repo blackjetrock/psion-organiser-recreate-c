@@ -379,7 +379,8 @@ void core1_main(void)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-int main() {
+int main()
+{
 
   // Set up the GPIOs
   gpio_init(PIN_VBAT_SW_ON);

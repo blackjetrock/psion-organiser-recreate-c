@@ -15,8 +15,6 @@
 #include "display.h"
 #include "record.h"
 #include "svc.h"
-#include "svc_kb.h"
-#include "svc_dp.h"
 
 // Display string on line and scroll so it is all viewable.
 // return when key is pressed

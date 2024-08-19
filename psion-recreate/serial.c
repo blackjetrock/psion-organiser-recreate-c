@@ -19,7 +19,6 @@
 #include "wireless.h"
 
 #include "svc.h"
-#include "svc_kb.h"
 
 int keypress = 0;
 int parameter = 0;

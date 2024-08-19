@@ -880,6 +880,9 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: ../serial.c \
   ../emulator.h \
   ../wireless.h \
   ../svc.h \
+  ../svc_er.h \
+  ../svc_fl.h \
+  ../svc_dp.h \
   ../svc_kb.h
 
 CMakeFiles/psion_recreate.dir/svc_dp.c.obj: ../svc_dp.c \
@@ -970,8 +973,7 @@ CMakeFiles/psion_recreate.dir/svc_dp.c.obj: ../svc_dp.c \
   ../display.h \
   ../record.h \
   ../svc.h \
-  ../svc_kb.h \
-  ../svc_dp.h
+  ../svc_kb.h
 
 CMakeFiles/psion_recreate.dir/svc_ed.c.obj: ../svc_ed.c \
   /usr/include/newlib/ctype.h \
@@ -4099,10 +4101,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c:
 
-/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/include/pico/timeout_helper.h:
-
-/usr/include/newlib/sys/_intsup.h:
-
 /usr/include/newlib/inttypes.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/include/pico/util/datetime.h:
@@ -4163,13 +4161,13 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/osal/osal.h:
 
-/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_timeout.h:
-
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_math.c:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h:
+
+/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/queue.c:
 
@@ -4231,6 +4229,10 @@ generated/pico_base/pico/config_autogen.h:
 
 /usr/include/newlib/assert.h:
 
+/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_timeout.h:
+
+../svc_fl.h:
+
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/assert.h:
 
 /usr/include/newlib/sys/timespec.h:
@@ -4272,6 +4274,12 @@ generated/pico_base/pico/config_autogen.h:
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/timeout_helper.c:
 
 /usr/include/newlib/stdio.h:
+
+/tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/include/pico/timeout_helper.h:
+
+/usr/include/newlib/sys/_intsup.h:
+
+../svc_er.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c:
 
@@ -4401,6 +4409,12 @@ generated/pico_base/pico/config_autogen.h:
 
 /usr/include/newlib/string.h:
 
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/include/pico/double.h:
+
+/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h:
+
+../emulator.c:
+
 /usr/include/newlib/machine/stdlib.h:
 
 ../serial.c:
@@ -4469,8 +4483,6 @@ generated/pico_base/pico/config_autogen.h:
 
 ../serial.h:
 
-/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
-
 ../psion_recreate.h:
 
 /usr/include/newlib/sys/cdefs.h:
@@ -4526,9 +4538,3 @@ generated/pico_base/pico/version.h:
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb_option.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/include/pico/double.h:
-
-../emulator.c:
-
-/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h:

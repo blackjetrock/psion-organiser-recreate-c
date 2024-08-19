@@ -31,7 +31,6 @@
 #include "display.h"
 #include "record.h"
 #include "svc.h"
-#include "svc_kb.h"
 
 #define MAT_SCAN_STATE_DRIVE  0
 #define MAT_SCAN_STATE_READ  10

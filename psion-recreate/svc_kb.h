@@ -1,7 +1,5 @@
 typedef uint64_t MATRIX_MAP;
 
-
-
 void matrix_scan(void);
 
 #define NOS_KEY_BUFFER_LEN 16
