@@ -34,6 +34,7 @@ svc_fl.c
 svc_pk.c
 svc_pak_pico_flash.c
 svc_pak_serial_eeprom.c
+sysvar.c
 )
 
 pico_enable_stdio_usb(psion_recreate 1)

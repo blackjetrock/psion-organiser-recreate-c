@@ -37,6 +37,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj.d"
   "CMakeFiles/psion_recreate.dir/svc_pk.c.obj"
   "CMakeFiles/psion_recreate.dir/svc_pk.c.obj.d"
+  "CMakeFiles/psion_recreate.dir/sysvar.c.obj"
+  "CMakeFiles/psion_recreate.dir/sysvar.c.obj.d"
   "CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
   "CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d"
   "CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"

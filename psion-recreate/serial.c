@@ -670,6 +670,18 @@ void ic_format(char *str)
   pk_fmat();
 }
 
+void ic_write(char *str)
+{
+  char s[254];
+  int rt;
+
+  sscanf(str, "write %d %[^@]", &rt, s);
+  
+  printf("\nWriting '%s' to rec type %d", s, rt);
+  fl_rect(rt);
+  fl_writ(s, strlen(s));
+}
+
 
 void ic_device(char *str)
 {
@@ -699,6 +711,7 @@ struct _IC_CMD
    {"createfile", ic_createfile},
    {"format",     ic_format},
    {"test",       ic_test},
+   {"write",      ic_write},
    {"exit",       ic_exit},
   };
 

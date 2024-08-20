@@ -676,6 +676,30 @@ svc_pk.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/svc_pk.c.s
 .PHONY : svc_pk.c.s
 
+sysvar.obj: sysvar.c.obj
+.PHONY : sysvar.obj
+
+# target to build an object file
+sysvar.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/sysvar.c.obj
+.PHONY : sysvar.c.obj
+
+sysvar.i: sysvar.c.i
+.PHONY : sysvar.i
+
+# target to preprocess a source file
+sysvar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/sysvar.c.i
+.PHONY : sysvar.c.i
+
+sysvar.s: sysvar.c.s
+.PHONY : sysvar.s
+
+# target to generate assembly for a file
+sysvar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/sysvar.c.s
+.PHONY : sysvar.c.s
+
 tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -2277,6 +2301,9 @@ help:
 	@echo "... svc_pk.obj"
 	@echo "... svc_pk.i"
 	@echo "... svc_pk.s"
+	@echo "... sysvar.obj"
+	@echo "... sysvar.i"
+	@echo "... sysvar.s"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"

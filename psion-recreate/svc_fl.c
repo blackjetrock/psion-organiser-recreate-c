@@ -112,13 +112,22 @@ int fl_scan_pack(int first, int device, uint8_t *dest)
 void fl_pos_at_end(void)
 {
   int rc = 0;
+
+#if DB_FL_WRIT
+  printf("\n%s", __FUNCTION__);
+#endif
   
-  rc = fl_catl(1, 0, NULL, NULL);
+  rc = fl_catl(1, pkb_curp, NULL, NULL);
 
   while(rc == 1)
     {
-      rc = fl_catl(0, 0, NULL, NULL);
+      rc = fl_catl(0, pkb_curp, NULL, NULL);
     }
+
+#if DB_FL_WRIT
+  printf("\n%s:exit", __FUNCTION__);
+#endif
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -152,7 +161,7 @@ void fl_bsav(void)
 
 int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 {
-  int rc = 0;
+  int rc = 1;
   uint8_t record_data[256];
   
   // Access device on first call
@@ -161,13 +170,13 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
       pk_setp(device);
     }
   
-  rc = fl_scan_pack(first, device, record_data);
-    
   // Check record to see if it is a file
   // record type is 0x81
 
-  if( rc )
+  while( rc )
     {
+      rc = fl_scan_pack(first, device, record_data);
+      
       if( record_data[0] == 0x09 )
 	{
 	  if( record_data[1] == 0x81 )
@@ -186,7 +195,14 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 		    }
 		  *filename = '\0';
 		}
+
+	      // Exit with file data
+	      break;
 	    }
+	}
+      else
+	{
+	  // Do another loop, as this wasn't a file
 	}
     }
 

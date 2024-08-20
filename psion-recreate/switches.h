@@ -6,3 +6,4 @@
 
 #define DB_PK_SAVE       0
 #define DB_PK_SETP       0
+#define DB_FL_WRIT       1

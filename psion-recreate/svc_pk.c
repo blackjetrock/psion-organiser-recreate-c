@@ -20,10 +20,6 @@
 
 #include "psion_recreate_all.h"
 
-// Current pak
-PAK      pkb_curp = PAKNONE;
-PAK_ADDR pkw_cpad = 0;
-
 PAK_ID pkt_id = {0,0,0,0,0,0,0,0,0,0};
 
 PK_DRIVER_SET pk_drivers[] =
