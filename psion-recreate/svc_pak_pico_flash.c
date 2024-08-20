@@ -54,7 +54,7 @@ uint8_t pk_rbyt_pico_flash(PAK_ADDR pak_addr)
 // and then write it back. 
 // Note writes use an offset into the flash, not an address (as reads do).
 
-#define DB_PK_SAVE 0
+
 
 void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
 {

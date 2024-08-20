@@ -1270,6 +1270,7 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj
  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate_all.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/match.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h
@@ -1288,6 +1289,7 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_pico_flash.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_serial_eeprom.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/switches.h
 
 CMakeFiles/psion_recreate.dir/svc_kb.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.c

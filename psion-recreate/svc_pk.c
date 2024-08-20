@@ -69,6 +69,7 @@ void pk_build_id_string(PAK_ID result,
 }
 
 
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -81,7 +82,9 @@ void pk_setp(PAK pak)
   // We now switch the drivers to point to the appropriate hardware
   
   // Check the header and see if it is valid
-  
+#if DB_PK_SETP
+  printf("\n%s:", __FUNCTION__);
+#endif
   
 }
 

@@ -8,18 +8,8 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-#include "psion_recreate.h"
+#include "psion_recreate_all.h"
 
-#include "menu.h"
-#include "emulator.h"
-#include "eeprom.h"
-#include "rtc.h"
-#include "display.h"
-#include "record.h"
-
-#include "svc.h"
-
-#include "svc_fl.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -28,7 +18,7 @@
 // return value is 1 if record found, 0 if not
 //
 
-#define DB_FL_SCAN_PACK 1
+
 
 int fl_scan_pack(int first, int device, uint8_t *dest)
 {
@@ -47,6 +37,7 @@ int fl_scan_pack(int first, int device, uint8_t *dest)
 
 #if DB_FL_SCAN_PACK
   printf("\n%s:first:%d len_byte:%02X rectype:%02X", __FUNCTION__, first, length_byte, record_type);
+  printf("\nCPAD:%04X", pkw_cpad);
 #endif
   
   if( length_byte == 0 )
@@ -81,6 +72,9 @@ int fl_scan_pack(int first, int device, uint8_t *dest)
 	    {
 	      *(dest++) = pk_rbyt();	      
 	    }
+#if DB_FL_SCAN_PACK
+  printf("\nExit(1):CPAD:%04X", pkw_cpad);
+#endif
 	  
 	  return(1);
 	}
@@ -92,11 +86,20 @@ int fl_scan_pack(int first, int device, uint8_t *dest)
       // We need to move back one byte
       pk_sadd(pkw_cpad-2);
 
+#if DB_FL_SCAN_PACK
+  printf("\nExit(0):CPAD:%04X", pkw_cpad);
+#endif
+
       return(0);
     }
   else
     {
       printf("\n%s:exit ?", __FUNCTION__);
+
+#if DB_FL_SCAN_PACK
+  printf("\nExit(?):CPAD:%04X", pkw_cpad);
+#endif
+  
       return(0);
     }
 }
@@ -128,16 +131,19 @@ void fl_bsav(void)
 // Returns filenames in filename,
 // return code is 1 if file found, 0 if not
 
-#define DB_FL_CATL 1
+
 
 int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 {
   int rc = 0;
   uint8_t record_data[256];
   
-  // Access device
-  pk_setp(device);
-
+  // Access device on first call
+  if( first )
+    {
+      pk_setp(device);
+    }
+  
   rc = fl_scan_pack(first, device, record_data);
     
   // Check record to see if it is a file

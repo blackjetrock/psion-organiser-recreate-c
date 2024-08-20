@@ -1255,6 +1255,7 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj: ../svc_fl.c \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../psion_recreate_all.h \
   ../psion_recreate.h \
   ../match.h \
   ../font.h \
@@ -1272,7 +1273,8 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj: ../svc_fl.c \
   ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../switches.h
 
 CMakeFiles/psion_recreate.dir/svc_kb.c.obj: ../svc_kb.c \
   /usr/include/newlib/ctype.h \
@@ -4569,6 +4571,10 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c:
 
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
+
+/usr/include/newlib/math.h:
+
 ../i2c.c:
 
 ../svc_pak_serial_eeprom.h:
@@ -4661,8 +4667,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c:
 
-/usr/include/newlib/stdlib.h:
-
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h:
@@ -4672,6 +4676,10 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 ../svc_dp.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h:
+
+/usr/include/newlib/stdlib.h:
+
+../switches.h:
 
 ../menu.h:
 
@@ -4879,6 +4887,12 @@ generated/pico_base/pico/version.h:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
 
+../psion_recreate_all.h:
+
+/usr/include/newlib/sys/_intsup.h:
+
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/include/pico/float.h:
+
 generated/pico_base/pico/config_autogen.h:
 
 ../svc_pk.c:
@@ -5009,10 +5023,6 @@ generated/pico_base/pico/config_autogen.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c:
 
-/usr/include/newlib/math.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
-
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_vreg/include/hardware/vreg.h:
@@ -5034,10 +5044,6 @@ generated/pico_base/pico/config_autogen.h:
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c:
-
-/usr/include/newlib/sys/_intsup.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/include/pico/float.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_malloc/include/pico/malloc.h:
 

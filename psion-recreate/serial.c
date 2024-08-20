@@ -325,6 +325,15 @@ void cli_create(void)
   
 }
 
+void cli_query(void)
+{
+  printf("\n");
+  printf("\nCurrent Pak:%d Address:%04X", pkb_curp, pk_qadd());
+  printf("\n");
+
+  
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Allows the code to be driven from USB
@@ -566,6 +575,11 @@ SERIAL_COMMAND serial_cmds[] =
     'C',
     "Create File",
     cli_create,
+   },
+   {
+    'q',
+    "Query",
+    cli_query,
    },
    
   };
