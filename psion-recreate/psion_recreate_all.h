@@ -11,3 +11,5 @@
 
 #include "switches.h"
 
+#include "sysvar.h"
+

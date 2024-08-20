@@ -18,15 +18,7 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-#include "psion_recreate.h"
-
-#include "menu.h"
-#include "emulator.h"
-#include "eeprom.h"
-#include "rtc.h"
-#include "display.h"
-#include "record.h"
-#include "svc.h"
+#include "psion_recreate_all.h"
 
 // Current pak
 PAK      pkb_curp = PAKNONE;
@@ -92,6 +84,9 @@ void pk_save(int len, uint8_t *src)
 {
   printf("\n%s:%08X %d", __FUNCTION__, pkw_cpad, len);
   (*pk_drivers[pkb_curp].save)(pkw_cpad, len, src);
+
+  // Update the current address
+  pkw_cpad += len;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

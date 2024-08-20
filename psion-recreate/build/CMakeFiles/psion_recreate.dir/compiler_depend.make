@@ -1274,7 +1274,8 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj: ../svc_fl.c \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
-  ../switches.h
+  ../switches.h \
+  ../sysvar.h
 
 CMakeFiles/psion_recreate.dir/svc_kb.c.obj: ../svc_kb.c \
   /usr/include/newlib/ctype.h \
@@ -1653,6 +1654,7 @@ CMakeFiles/psion_recreate.dir/svc_pk.c.obj: ../svc_pk.c \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../psion_recreate_all.h \
   ../psion_recreate.h \
   ../match.h \
   ../font.h \
@@ -1670,7 +1672,9 @@ CMakeFiles/psion_recreate.dir/svc_pk.c.obj: ../svc_pk.c \
   ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../switches.h \
+  ../sysvar.h
 
 CMakeFiles/psion_recreate.dir/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c \
   /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
@@ -4551,6 +4555,8 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb/reset_interface.h:
 
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:
+
 ../svc_dp.c:
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
@@ -4658,8 +4664,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/usb.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/include/pico/util/queue.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:
 
 /usr/include/newlib/alloca.h:
 
@@ -4838,6 +4842,8 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/config.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h:
+
+../sysvar.h:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/tusb.h:
 

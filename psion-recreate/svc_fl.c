@@ -105,6 +105,23 @@ int fl_scan_pack(int first, int device, uint8_t *dest)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Position pak address at first unused byte
+//
+
+void fl_pos_at_end(void)
+{
+  int rc = 0;
+  
+  rc = fl_catl(1, 0, NULL, NULL);
+
+  while(rc == 1)
+    {
+      rc = fl_catl(0, 0, NULL, NULL);
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 void fl_back(void)
 {
@@ -156,12 +173,19 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 	  if( record_data[1] == 0x81 )
 	    {
 	      // It is a file.
-	      *rectype = record_data[10];
-	      for(int i=2; i<10; i++)
+	      if( rectype != NULL )
 		{
-		  *(filename++) = record_data[i];
+		  *rectype = record_data[10];
 		}
-	      *filename = '\0';
+
+	      if( filename != NULL )
+		{
+		  for(int i=2; i<10; i++)
+		    {
+		      *(filename++) = record_data[i];
+		    }
+		  *filename = '\0';
+		}
 	    }
 	}
     }
@@ -204,13 +228,13 @@ FL_REC_TYPE fl_cret(char *filename)
 
   pk_setp(pkb_curp);
 
-  rc = fl_catl(1, 0, fn, &rectype);
+  rc = fl_catl(1, pkb_curp, fn, &rectype);
 
   while(rc == 1)
     {
       printf("\n%s ($%02X) found", fn, rectype);
       used_rectypes[rectype - 0x90] = 1;
-      rc = fl_catl(0, 0, fn, &rectype);
+      rc = fl_catl(0, pkb_curp, fn, &rectype);
     }
   
   for(int i=0x90; i<=0xfe; i++)
@@ -296,8 +320,10 @@ void fl_read(void)
 {
 }
 
-void fl_rect(void)
+// Set default record type
+void fl_rect(FL_REC_TYPE rect)
 {
+  flb_rect = rect;
 }
 
 void fl_renm(void)
@@ -308,16 +334,42 @@ void fl_rset(void)
 {
 }
 
-void fl_setp(void)
+void fl_setp(int device)
 {
+  pk_setp(device);
 }
 
 void fl_size(void)
 {
 }
 
-void fl_writ(void)
+////////////////////////////////////////////////////////////////////////////////
+//
+// Write data to current file (rec type)
+// Append to the file
+//
+
+void fl_writ(uint8_t *src, int len)
 {
+  uint8_t lentype[2];
+
+  if( len > 254 )
+    {
+      len = 254;
+    }
+
+  lentype[0] = (len % 256);
+  lentype[1] = flb_rect;
+  
+  // Find the end of the file (and pack) as the data will be appended
+  fl_pos_at_end();
+
+  // Write the length and type
+  pk_save(sizeof(lentype), lentype);
+
+  // Write the data
+  pk_save(len, src);
+  
 }
 
 void tl_cpyx(void)

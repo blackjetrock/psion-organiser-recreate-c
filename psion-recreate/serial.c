@@ -27,7 +27,13 @@ unsigned int address = 0;
 
 void serial_help(void);
 void prompt(void);
+void cli_interactive(void);
 
+int interactive_done = 0;
+
+////////////////////////////////////////////////////////////////////////////////
+//
+  
 void cli_boot_mass(void)
 {
   reset_usb_boot(0,0);
@@ -198,20 +204,6 @@ void cli_dump_memory(void)
 
 }
 
-void cli_info(void)
-{
-  printf("\nBank RAM Offset:%08X", ram_bank_off);
-  printf("\nBank ROM Offset:%08X", rom_bank_off);
-
-  printf("\nProcessor State");
-  printf("\n===============");
-
-  printf("\nPC:%04X", REG_PC);
-  printf("\n%04X      A:%02X B:%02X X:%04X", REG_A, REG_B, REG_X);
-
-}
-
-
 // Another digit pressed, update the parameter variable
 void cli_digit(void)
 {
@@ -279,7 +271,6 @@ void cli_trace_dump_to(void)
 void cli_format(void)
 {
   printf("\nFormatting A:");
-  pk_setp(0);
   pk_fmat();
   printf("\nDone...");
   
@@ -292,15 +283,13 @@ void cli_catalog(void)
   
   char filename[32];
   printf("\nCatalog of A:\n");
-  pk_setp(0);
-
   
-  rc = fl_catl(1, 0, filename, &rectype);
+  rc = fl_catl(1, pkb_curp, filename, &rectype);
 
   while(rc == 1)
     {
       printf("\n%s ($%02X)", filename, rectype);
-      rc = fl_catl(0, 0, filename, &rectype);
+      rc = fl_catl(0, pkb_curp, filename, &rectype);
     }
 
   printf("\nDone...");
@@ -316,8 +305,6 @@ void cli_create(void)
   printf("\nCreate file on A:\n");
   printf("\nEnter filename:");
   filename = serial_get_string();
-  
-  pk_setp(0);
   
   fl_cret(filename);
   
@@ -522,11 +509,6 @@ SERIAL_COMMAND serial_cmds[] =
     cli_zero_parameter,
    },
    {
-    'i',
-    "Information",
-    cli_info,
-   },
-   {
     'T',
     "Trace To Dump",
     cli_trace_dump_to,
@@ -581,6 +563,11 @@ SERIAL_COMMAND serial_cmds[] =
     "Query",
     cli_query,
    },
+   {
+    'i',
+    "Interactive Mode",
+    cli_interactive,
+   },
    
   };
 
@@ -623,6 +610,7 @@ char *serial_get_string(void)
 
       if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
 	{
+	  
 	  switch(key)
 	    {
 	    case 13:
@@ -643,6 +631,114 @@ char *serial_get_string(void)
     }
   
   return(serial_get_string_buffer);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Command based interactive interface
+//
+
+void ic_test(char *str)
+{
+  printf("\nTest command, '%s'",str);
+}
+
+void ic_exit(char *str)
+{
+  interactive_done = 1;
+}
+
+void ic_catalog(char *str)
+{
+  cli_catalog();
+}
+
+void ic_createfile(char *str)
+{
+  char filename[20];
+  sscanf(str, "createfile %s", filename);
+  
+  printf("\nCreating file '%s'", filename);
+
+  fl_cret(filename);
+
+}
+
+void ic_format(char *str)
+{
+  printf("\nFormatting %d", pkb_curp);
+  pk_fmat();
+}
+
+
+void ic_device(char *str)
+{
+  int device;
+
+  sscanf(str, "dev %d", &device);
+
+  pk_setp(device);
+  
+  printf("\nDevice now %d", pkb_curp);
+
+}
+
+void ic_help(char *str);
+
+typedef void (*CMD_FN)(char *str);
+  
+struct _IC_CMD
+{
+  char *cmd;
+  CMD_FN fn;  
+} ic_cmds[] =
+  {
+   {"help",       ic_help},
+   {"dev",        ic_device},
+   {"catalog",    ic_catalog},
+   {"createfile", ic_createfile},
+   {"format",     ic_format},
+   {"test",       ic_test},
+   {"exit",       ic_exit},
+  };
+
+#define NUM_IC_CMD (sizeof(ic_cmds)/sizeof(struct _IC_CMD))
+
+void ic_help(char *str)
+{
+  printf("\n");
+  
+  for(int i=0; i<NUM_IC_CMD; i++)
+    {
+      printf("\n%s", ic_cmds[i].cmd);
+    }
+  
+  printf("\n");
+}
+
+void cli_interactive(void)
+{
+  char *cmd;
+
+  interactive_done = 0;
+  
+  while(!interactive_done)
+    {
+      printf("\n%d >", pkb_curp);
+      
+      cmd = serial_get_string();
+      
+      for(int i=0; i<NUM_IC_CMD; i++)
+	{
+	  printf("\ntest '%s' '%s'",cmd , ic_cmds[i].cmd);
+	  if( strncmp(ic_cmds[i].cmd, cmd, strlen(ic_cmds[i].cmd)) == 0 )
+	    {
+	      printf("\nmatch");
+	      (*ic_cmds[i].fn)(cmd);
+	      break;
+	    }
+	}
+    }
 }
 
 //------------------------------------------------------------------------------
