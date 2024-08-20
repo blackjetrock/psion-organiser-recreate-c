@@ -85,24 +85,22 @@ void pk_setp(PAK pak)
   
 }
 
-void pk_save(int pak_addr, int len, uint8_t *src)
+void pk_save(int len, uint8_t *src)
 {
-  (*pk_drivers[pkb_curp].save)(pak_addr, len, src);
+  printf("\n%s:%08X %d", __FUNCTION__, pkw_cpad, len);
+  (*pk_drivers[pkb_curp].save)(pkw_cpad, len, src);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Read bytes from pak
 
-void pk_read(PAK_ADDR pak_addr, int len, uint8_t *dest)
+void pk_read(int len, uint8_t *dest)
 {
   for(int i=0; i<len; i++)
     {
       *(dest++) = pk_rbyt();
     }
-
-
-  
 }
 
 uint8_t pk_rbyt(void)

@@ -17,6 +17,7 @@
 #include "psion_recreate.h"
 #include "emulator.h"
 #include "wireless.h"
+#include "serial.h"
 
 #include "svc.h"
 
@@ -290,7 +291,7 @@ void cli_catalog(void)
   uint8_t rectype;
   
   char filename[32];
-  printf("\nCatalog of A:");
+  printf("\nCatalog of A:\n");
   pk_setp(0);
 
   
@@ -301,7 +302,24 @@ void cli_catalog(void)
       printf("\n%s ($%02X)", filename, rectype);
       rc = fl_catl(0, 0, filename, &rectype);
     }
+
+  printf("\nDone...");
   
+}
+
+void cli_create(void)
+{
+  int rc = 0;
+  uint8_t rectype;
+  char *filename;
+  
+  printf("\nCreate file on A:\n");
+  printf("\nEnter filename:");
+  filename = serial_get_string();
+  
+  pk_setp(0);
+  
+  fl_cret(filename);
   
   printf("\nDone...");
   
@@ -540,9 +558,14 @@ SERIAL_COMMAND serial_cmds[] =
     cli_format,
    },
    {
-    '.',
+    '+',
     "Catalog",
     cli_catalog,
+   },
+   {
+    'C',
+    "Create File",
+    cli_create,
    },
    
   };
@@ -567,6 +590,48 @@ void queue_key(int key)
     }
 }
 
+//------------------------------------------------------------------------------
+
+#define MAX_GET_STRING 64
+
+char serial_get_string_buffer[MAX_GET_STRING+1];
+
+char *serial_get_string(void)
+{
+  int done = 0;
+  char key_str[2] = " ";
+  int key;
+  
+  serial_get_string_buffer[0] = '\0';
+  
+  while(!done)
+    {
+
+      if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
+	{
+	  switch(key)
+	    {
+	    case 13:
+	    case 27:
+	      done = 1;
+	      break;
+
+	    default:
+	      printf("%c", key);
+	      if( strlen(serial_get_string_buffer) < MAX_GET_STRING )
+		{
+		  key_str[0] = key;
+		  strcat(serial_get_string_buffer, key_str);
+		}
+	      break;
+	    }
+	}
+    }
+  
+  return(serial_get_string_buffer);
+}
+
+//------------------------------------------------------------------------------
 int sl_state = SL_STATE_INIT;
 
 void serial_loop()

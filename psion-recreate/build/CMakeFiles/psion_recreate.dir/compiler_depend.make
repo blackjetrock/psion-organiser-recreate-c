@@ -879,6 +879,7 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: ../serial.c \
   ../font.h \
   ../emulator.h \
   ../wireless.h \
+  ../serial.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_fl.h \

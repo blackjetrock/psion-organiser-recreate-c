@@ -68,6 +68,7 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/emulator.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/wireless.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h \
