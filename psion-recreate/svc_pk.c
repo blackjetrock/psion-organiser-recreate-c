@@ -33,27 +33,36 @@ PK_DRIVER_SET pk_drivers[] =
 // Build a pak ID string
 //
 
-void pk_build_id_string(PAK_ID result,
-			int size,
+void pk_build_id_string(uint8_t *id,
+			int size_in_bytes,
 			int year,
 			int month,
 			int day,
 			int hour,
-			int unique1,
-			int unique2)
+			int32_t unique)
 {
-  PAK_ID id;
-
+  uint16_t csum = 0;
+  
   id[0] = 0x78;
-  id[1] = size;
+  id[1] = (size_in_bytes / 8192) & 0xFF;
   id[2] = year;
   id[3] = month;
   id[4] = day;
   id[5] = hour;
-  id[6] = unique1;
-  id[7] = unique2;
+  id[6] = (unique & 0x00FF) >> 0;
+  id[7] = (unique & 0xFF00) >> 8;
 
-  result = id;
+  csum += id[0] << 8;
+  csum += id[1];
+  csum += id[2] << 8;
+  csum += id[3];
+  csum += id[4] << 8;
+  csum += id[5];
+  csum += id[6] << 8;
+  csum += id[7];
+  
+  id[8] = (csum & 0x00FF) >> 0;
+  id[9] = (csum & 0xFF00) >> 8;
 }
 
 int pk_valid_pak(PAK pak)

@@ -9,14 +9,13 @@ typedef uint8_t (*PK_RBYT_FNPTR)(PAK_ADDR pak_addr);
 typedef void    (*PK_SAVE_FNPTR)(PAK_ADDR pak_addr, int len, uint8_t *src);
 typedef void    (*PK_FMAT_FNPTR)(void); 
 
-void pk_build_id_string(PAK_ID result,
-			int size,
+void pk_build_id_string(uint8_t *id,
+			int size_in_bytes,
 			int year,
 			int month,
 			int day,
 			int hour,
-			int unique1,
-			int unique2);
+			int32_t unique);
 
 void      pk_setp(PAK pak);
 void      pk_read(int len, uint8_t *dest);

@@ -412,6 +412,10 @@ void fl_pars(void)
 // Reads a record
 //
 // Current record is set before call
+// Cuurent record type is set before call
+//
+// Only reads the data, not the record header
+//
 
 int fl_read(uint8_t *dest)
 {
@@ -427,7 +431,8 @@ int fl_read(uint8_t *dest)
   if( found )
     {
       // Copy data
-      pk_sadd(pak_addr);
+      // Skip the two byte header so we read just the data
+      pk_sadd(pak_addr+2);
       pk_read(reclen, dest);
 
 #if DB_FL_READ
@@ -478,6 +483,7 @@ void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free)
   PAK_ADDR recstart;
   int rec_cnt = 0;
   PAK_ADDR addr_save;
+  uint8_t id[10];
   
 #if DB_FL_SIZE
   printf("\n%s:", __FUNCTION__);
@@ -503,7 +509,11 @@ void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free)
 	}
     }
 
-  *bytes_free = 0;
+  // Read pak ID for the size of the pack
+  pk_sadd(0);
+  pk_read(10, id);
+  
+  *bytes_free = (id[1] * 8192) - pkw_cpad;
   *first_free = pkw_cpad;
   *num_recs = rec_cnt;
 

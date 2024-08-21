@@ -703,8 +703,6 @@ void ic_read(char *str)
   
   printf("\nReading record %d from rec type %d", flw_crec, flb_rect);
 
-  //fl_rect(rect);
-  //fl_rset(recno);
   fl_read(s);
 }
 

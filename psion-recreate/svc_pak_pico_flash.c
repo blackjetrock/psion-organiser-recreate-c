@@ -149,10 +149,14 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
 //
 // Format the flash pak
 //
+// Write a pak header and also sets the rest of the poack to FF
+//
 
 void pk_format_pico_flash(void)
 {
-  printf("\n%s:Erasing %016X\n", __FUNCTION__, flash_pak_base_write);
+  PAK_ID pak_id;
+  
+  printf("\n%s:Erasing %016X for %d bytes\n", __FUNCTION__, flash_pak_base_write, FLASH_PAK_SIZE);
   sleep_ms(100);
 
   uint32_t ints = save_and_disable_interrupts();
@@ -161,6 +165,13 @@ void pk_format_pico_flash(void)
   restore_interrupts (ints);
   
   multicore_lockout_end_blocking();
+
+
+  // Now write a pak header
+  pk_build_id_string(pak_id, FLASH_PAK_SIZE, 24, 8, 21, 8,  time_us_32());
+  
+  pk_save_pico_flash(0, 10, pak_id);
+    
   printf("\nDone");
 }
 
