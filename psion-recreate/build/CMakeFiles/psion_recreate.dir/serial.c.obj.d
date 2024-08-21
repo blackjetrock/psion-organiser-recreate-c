@@ -84,5 +84,6 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_pico_flash.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_serial_eeprom.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_db.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/switches.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/sysvar.h

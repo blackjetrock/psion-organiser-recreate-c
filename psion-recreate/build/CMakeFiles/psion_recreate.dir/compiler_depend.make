@@ -895,6 +895,110 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: ../serial.c \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
+  ../svc_db.h \
+  ../switches.h \
+  ../sysvar.h
+
+CMakeFiles/psion_recreate.dir/svc_db.c.obj: ../svc_db.c \
+  /usr/include/newlib/ctype.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h \
+  /usr/include/newlib/sys/_locale.h \
+  /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/sys/types.h \
+  /usr/include/newlib/sys/_stdint.h \
+  /usr/include/newlib/machine/endian.h \
+  /usr/include/newlib/machine/_endian.h \
+  /usr/include/newlib/sys/select.h \
+  /usr/include/newlib/sys/_sigset.h \
+  /usr/include/newlib/sys/_timeval.h \
+  /usr/include/newlib/sys/timespec.h \
+  /usr/include/newlib/sys/_timespec.h \
+  /usr/include/newlib/sys/_pthreadtypes.h \
+  /usr/include/newlib/sys/sched.h \
+  /usr/include/newlib/machine/types.h \
+  /usr/include/newlib/sys/stdio.h \
+  /usr/include/newlib/stdlib.h \
+  /usr/include/newlib/machine/stdlib.h \
+  /usr/include/newlib/alloca.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
+  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdbool.h \
+  /usr/include/newlib/assert.h \
+  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
+  generated/pico_base/pico/version.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../psion_recreate_all.h \
+  ../psion_recreate.h \
+  ../match.h \
+  ../font.h \
+  ../menu.h \
+  ../emulator.h \
+  ../wireless.h \
+  ../serial.h \
+  ../eeprom.h \
+  ../rtc.h \
+  ../display.h \
+  ../record.h \
+  ../svc.h \
+  ../svc_er.h \
+  ../svc_pk_base.h \
+  ../svc_fl.h \
+  ../svc_kb.h \
+  ../svc_dp.h \
+  ../svc_pak_pico_flash.h \
+  ../svc_pak_serial_eeprom.h \
+  ../svc_pk.h \
+  ../svc_db.h \
   ../switches.h \
   ../sysvar.h
 
@@ -993,7 +1097,8 @@ CMakeFiles/psion_recreate.dir/svc_dp.c.obj: ../svc_dp.c \
   ../svc_dp.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../svc_db.h
 
 CMakeFiles/psion_recreate.dir/svc_ed.c.obj: ../svc_ed.c \
   /usr/include/newlib/ctype.h \
@@ -1183,7 +1288,8 @@ CMakeFiles/psion_recreate.dir/svc_er.c.obj: ../svc_er.c \
   ../svc_dp.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../svc_db.h
 
 CMakeFiles/psion_recreate.dir/svc_fl.c.obj: ../svc_fl.c \
   /usr/include/newlib/ctype.h \
@@ -1284,6 +1390,7 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj: ../svc_fl.c \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
+  ../svc_db.h \
   ../switches.h \
   ../sysvar.h
 
@@ -1382,7 +1489,8 @@ CMakeFiles/psion_recreate.dir/svc_kb.c.obj: ../svc_kb.c \
   ../svc_dp.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../svc_db.h
 
 CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.obj: ../svc_pak_pico_flash.c \
   /usr/include/newlib/ctype.h \
@@ -1487,7 +1595,8 @@ CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.obj: ../svc_pak_pico_flash.c 
   ../svc_dp.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../svc_db.h
 
 CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj: ../svc_pak_serial_eeprom.c \
   /usr/include/newlib/ctype.h \
@@ -1584,7 +1693,8 @@ CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj: ../svc_pak_serial_eep
   ../svc_dp.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../svc_db.h
 
 CMakeFiles/psion_recreate.dir/svc_pk.c.obj: ../svc_pk.c \
   /usr/include/newlib/ctype.h \
@@ -1685,6 +1795,7 @@ CMakeFiles/psion_recreate.dir/svc_pk.c.obj: ../svc_pk.c \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
+  ../svc_db.h \
   ../switches.h \
   ../sysvar.h
 
@@ -1787,6 +1898,7 @@ CMakeFiles/psion_recreate.dir/sysvar.c.obj: ../sysvar.c \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
+  ../svc_db.h \
   ../switches.h \
   ../sysvar.h
 
@@ -4673,7 +4785,11 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /usr/include/newlib/c++/9.2.1/bits/std_abs.h:
 
-../svc_dp.c:
+/usr/include/newlib/c++/9.2.1/pstl/pstl_config.h:
+
+../record.h:
+
+/usr/include/newlib/sys/_sigset.h:
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
 
@@ -4777,6 +4893,8 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 ../eeprom.c:
 
+../svc_db.h:
+
 ../match.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/usb.h:
@@ -4833,8 +4951,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /usr/include/newlib/sys/_stdint.h:
 
-/usr/include/newlib/sys/_sigset.h:
-
 /usr/include/newlib/machine/_endian.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h:
@@ -4870,6 +4986,10 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h:
+
+../svc_db.c:
+
+/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c:
 
 ../svc_pk.h:
 
@@ -4991,8 +5111,6 @@ generated/pico_base/pico/version.h:
 
 /usr/include/newlib/sys/sched.h:
 
-../svc_ed.c:
-
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
@@ -5000,6 +5118,10 @@ generated/pico_base/pico/version.h:
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/queue.c:
+
+../svc_dp.c:
+
+../svc_ed.c:
 
 ../nos.h:
 
@@ -5022,8 +5144,6 @@ generated/pico_base/pico/config_autogen.h:
 ../sysvar.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h:
-
-/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c:
 
 ../display.h:
 
@@ -5085,6 +5205,12 @@ generated/pico_base/pico/config_autogen.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h:
 
+/usr/include/newlib/c++/9.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h:
+
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_math.c:
+
+/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c:
+
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/lock_core.c:
 
 ../svc_pak_pico_flash.c:
@@ -5094,10 +5220,6 @@ generated/pico_base/pico/config_autogen.h:
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/types.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/mutex.c:
-
-../record.h:
-
-/usr/include/newlib/c++/9.2.1/pstl/pstl_config.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_sync/sem.c:
 
@@ -5182,12 +5304,6 @@ generated/pico_base/pico/config_autogen.h:
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/boot_stage2/include/boot_stage2/config.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/float_math.c:
-
-/tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c:
-
-/usr/include/newlib/c++/9.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h:
 

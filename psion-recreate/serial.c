@@ -204,8 +204,10 @@ void cli_digit(void)
 {
   unsigned int  n = 0;
 
+#if DB_DIGIT
   printf("\nK:%02X", keypress);
   printf("\nn:%02X", n);
+#endif
   if( keypress > '9' )
     {
       n = keypress - 'a' + 10;
@@ -215,7 +217,10 @@ void cli_digit(void)
       n = keypress - '0';
     }
 
+#if DB_DIGIT
   printf("\nn:%02X", n);
+#endif
+  
   parameter <<= 4;
   parameter |= n;
 }
@@ -682,6 +687,21 @@ void ic_write(char *str)
   fl_writ(s, strlen(s));
 }
 
+void ic_read(char *str)
+{
+  char s[254];
+  int recno;
+  int rect;
+  
+  sscanf(str, "read %d %d", &recno, &rect);
+  
+  printf("\nReading record %d from rec type %d", recno, rect);
+
+  fl_rect(rect);
+  fl_rset(recno);
+  fl_read(s);
+}
+
 
 void ic_device(char *str)
 {
@@ -692,6 +712,18 @@ void ic_device(char *str)
   pk_setp(device);
   
   printf("\nDevice now %d", pkb_curp);
+
+}
+
+void ic_recno(char *str)
+{
+  int recno;
+
+  sscanf(str, "recno %d", &recno);
+
+  fl_rset(recno);
+  
+  printf("\nRecord number now %d", flw_crec);
 
 }
 
@@ -755,6 +787,8 @@ struct _IC_CMD
    {"format",     ic_format},
    {"test",       ic_test},
    {"write",      ic_write},
+   {"read",       ic_read},
+   {"recno",      ic_recno},
    {"flfrec",     ic_flfrec},
    {"exit",       ic_exit},
    {"!",          ic_boot_mass},

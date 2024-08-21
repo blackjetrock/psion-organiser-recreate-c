@@ -12,5 +12,6 @@
 #include "svc_pak_pico_flash.h"
 #include "svc_pak_serial_eeprom.h"
 #include "svc_pk.h"
+#include "svc_db.h"
 
 

@@ -134,6 +134,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c" "CMakeFiles/psion_recreate.dir/psion_recreate.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/psion_recreate.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.c" "CMakeFiles/psion_recreate.dir/rtc.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/rtc.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.c" "CMakeFiles/psion_recreate.dir/serial.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/serial.c.obj.d"
+  "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_db.c" "CMakeFiles/psion_recreate.dir/svc_db.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_db.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.c" "CMakeFiles/psion_recreate.dir/svc_dp.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_dp.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.c" "CMakeFiles/psion_recreate.dir/svc_ed.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_ed.c.obj.d"
   "/tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.c" "CMakeFiles/psion_recreate.dir/svc_er.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_er.c.obj.d"

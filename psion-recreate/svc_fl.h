@@ -21,11 +21,11 @@ PAK_ADDR fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen);
 void fl_next(void);
 void fl_open(void);
 void fl_pars(void);
-void fl_read(void);
+int fl_read(uint8_t *dest);
 void fl_rect(FL_REC_TYPE rect);
 
 void fl_renm(void);
-void fl_rset(void);
+void fl_rset(int recno);
 void fl_setp(int device);
 
 void fl_size(void);

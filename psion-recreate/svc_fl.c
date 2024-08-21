@@ -17,21 +17,27 @@
 // first is 1 for first call, 0 thereafter
 // return value is 1 if record found, 0 if not
 //
+// Returns record data
+//         pak address of start of record
 
 
 
-int fl_scan_pack(int first, int device, uint8_t *dest)
+int fl_scan_pack(int first, int device, uint8_t *dest, PAK_ADDR *recstart)
 {
   uint8_t  length_byte;
   uint8_t  record_type;
   uint16_t block_length;
-
+  PAK_ADDR rec_start = 0;
+  
   // Start at the start of the pack
   if(first)
     {
       pk_sadd(0x0a);
     }
 
+  // Store start address of this record
+  rec_start = pkw_cpad;
+  
   length_byte = pk_rbyt();
   record_type = pk_rbyt();
 
@@ -64,6 +70,9 @@ int fl_scan_pack(int first, int device, uint8_t *dest)
 	  printf("\nShort record:len:%04X", length_byte);
 #endif
 
+	  // Copy record start
+	  *recstart = rec_start;
+	  
 	  // Copy short record
 	  *(dest++) = length_byte;
 	  *(dest++) = record_type;
@@ -163,7 +172,8 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 {
   int rc = 1;
   uint8_t record_data[256];
-
+  PAK_ADDR recstart;
+  
 #if DB_FL_CATL
   printf("\n%s:\n", __FUNCTION__);
 #endif
@@ -180,7 +190,7 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
   while( rc )
     {
 
-      rc = fl_scan_pack(first, device, record_data);
+      rc = fl_scan_pack(first, device, record_data, &recstart);
       
       if( record_data[0] == 0x09 )
 	{
@@ -337,6 +347,7 @@ PAK_ADDR fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
   int rec_n = 0;
   int first = 1;
   uint8_t record_data[256];
+  PAK_ADDR recstart;
   
   // Check record to see if it is a file
   // record type is 0x81
@@ -344,7 +355,7 @@ PAK_ADDR fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
   
   while( rc )
     {
-      rc = fl_scan_pack(first, pkb_curp, record_data);
+      rc = fl_scan_pack(first, pkb_curp, record_data, &recstart);
 
 #if DB_FL_FREC
       printf("\n%s:recdat[1]:%d", __FUNCTION__, record_data[1]);
@@ -366,7 +377,7 @@ PAK_ADDR fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
 
 #endif
 
-	      *pak_addr = pkw_cpad;
+	      *pak_addr = recstart;
 	      *rectype  = record_data[1];
 	      *reclen   = record_data[0];
 	      return(1);    
@@ -398,8 +409,39 @@ void fl_pars(void)
 {
 }
 
-void fl_read(void)
+////////////////////////////////////////////////////////////////////////////////
+//
+// Reads a record
+//
+// Current record is set before call
+
+int fl_read(uint8_t *dest)
 {
+  PAK_ADDR pak_addr;
+  FL_REC_TYPE rectype;
+  int reclen;
+  int found = 0;
+  
+  // Find the record
+  found = fl_frec(flw_crec, &pak_addr, &rectype, &reclen);
+
+  // Read record if found
+  if( found )
+    {
+      // Copy data
+      pk_sadd(pak_addr);
+      pk_read(reclen, dest);
+
+#if DB_FL_READ
+      printf("\nRead data:\n");
+      db_dump(dest, reclen);
+      printf("\n");
+#endif
+      
+      return(1);
+    }
+  
+  return(0);
 }
 
 // Set default record type
@@ -412,8 +454,14 @@ void fl_renm(void)
 {
 }
 
-void fl_rset(void)
+void fl_rset(int recno)
 {
+  if( recno == 0 )
+    {
+      er_error("Bad recno (0)");
+    }
+  
+  flw_crec = recno;
 }
 
 void fl_setp(int device)

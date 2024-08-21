@@ -32,6 +32,7 @@ svc_dp.c
 svc_er.c
 svc_fl.c
 svc_pk.c
+svc_db.c
 svc_pak_pico_flash.c
 svc_pak_serial_eeprom.c
 sysvar.c
