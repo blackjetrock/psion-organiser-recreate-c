@@ -20,8 +20,6 @@
 // Returns record data
 //         pak address of start of record
 
-
-
 int fl_scan_pack(int first, int device, uint8_t *dest, PAK_ADDR *recstart)
 {
   uint8_t  length_byte;
@@ -469,8 +467,47 @@ void fl_setp(int device)
   pk_setp(device);
 }
 
-void fl_size(void)
+////////////////////////////////////////////////////////////////////////////////
+
+void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free)
 {
+  // Count the number of records of current record type
+  uint8_t recdat[256];
+  int rc = 1;
+  int first = 1;
+  PAK_ADDR recstart;
+  int rec_cnt = 0;
+  PAK_ADDR addr_save;
+  
+#if DB_FL_SIZE
+  printf("\n%s:", __FUNCTION__);
+#endif
+
+  addr_save = pk_qadd();
+  
+  while(rc)
+    {
+      rc = fl_scan_pack(first, pkb_curp, recdat, &recstart);
+      first = 0;
+      
+#if DB_FL_SIZE
+      printf("\n%s:rc:%d rcnt:%d", __FUNCTION__, rc, rec_cnt);
+#endif
+  
+      if( rc )
+	{
+	  if( recdat[1] == flb_rect )
+	    {
+	      rec_cnt++;
+	    }
+	}
+    }
+
+  *bytes_free = 0;
+  *first_free = pkw_cpad;
+  *num_recs = rec_cnt;
+
+  pk_sadd(addr_save);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

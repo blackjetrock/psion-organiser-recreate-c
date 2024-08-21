@@ -280,20 +280,26 @@ void cli_catalog(void)
 {
   int rc = 0;
   uint8_t rectype;
+  int bytes_free;
+  int num_recs;
+  PAK_ADDR first_free;
   
   char filename[32];
-  printf("\nCatalog of A:\n");
-  
+  printf("\nCatalog of %c:\n", 'A'+pkb_curp);
+
+  fl_size(&bytes_free, &num_recs, &first_free);
+
+  printf("\n%d bytes free, first free byte at %08X", bytes_free, first_free);
   rc = fl_catl(1, pkb_curp, filename, &rectype);
 
-  while(rc == 1)
+  while(rc)
     {
-      printf("\n%s ($%02X)", filename, rectype);
+      fl_rect(rectype);
+      fl_size(&bytes_free, &num_recs, &first_free);
+      
+      printf("\n%-8s    $%02X  Records:%d", filename, rectype, num_recs);
       rc = fl_catl(0, pkb_curp, filename, &rectype);
     }
-
-  printf("\nDone...");
-  
 }
 
 void cli_create(void)
@@ -693,12 +699,12 @@ void ic_read(char *str)
   int recno;
   int rect;
   
-  sscanf(str, "read %d %d", &recno, &rect);
+  sscanf(str, "read", &recno, &rect);
   
-  printf("\nReading record %d from rec type %d", recno, rect);
+  printf("\nReading record %d from rec type %d", flw_crec, flb_rect);
 
-  fl_rect(rect);
-  fl_rset(recno);
+  //fl_rect(rect);
+  //fl_rset(recno);
   fl_read(s);
 }
 
@@ -724,6 +730,20 @@ void ic_recno(char *str)
   fl_rset(recno);
   
   printf("\nRecord number now %d", flw_crec);
+
+}
+
+void ic_rect(char *str)
+{
+  int rect;
+  FL_REC_TYPE rt;
+  
+  sscanf(str, "rect %d", &rect);
+
+  rt = rect;
+  fl_rect(rt);
+  
+  printf("\nRecord type now %d", flb_rect);
 
 }
 
@@ -789,6 +809,7 @@ struct _IC_CMD
    {"write",      ic_write},
    {"read",       ic_read},
    {"recno",      ic_recno},
+   {"rect",       ic_rect},
    {"flfrec",     ic_flfrec},
    {"exit",       ic_exit},
    {"!",          ic_boot_mass},
@@ -811,12 +832,13 @@ void ic_help(char *str)
 void cli_interactive(void)
 {
   char *cmd;
-
+  int rect;
+  
   interactive_done = 0;
   
   while(!interactive_done)
     {
-      printf("\n%d >", pkb_curp);
+      printf("\n%c: RECT:%d RECNO:%d ADD:%08X>", 'A'+pkb_curp, flb_rect, flw_crec, pkw_cpad);
       
       cmd = serial_get_string();
       

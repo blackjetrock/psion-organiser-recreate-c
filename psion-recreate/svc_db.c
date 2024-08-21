@@ -50,7 +50,8 @@ void db_dump(uint8_t *mem, int len)
       
       strcat(ascii, ascii_byte);
     }
-  
+
+  printf("  %s", ascii);
   printf("\n");
 
 }

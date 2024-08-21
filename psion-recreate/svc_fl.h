@@ -27,8 +27,7 @@ void fl_rect(FL_REC_TYPE rect);
 void fl_renm(void);
 void fl_rset(int recno);
 void fl_setp(int device);
-
-void fl_size(void);
+void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free);
 void fl_writ(uint8_t *src, int len);
 
 void tl_cpyx(void);
