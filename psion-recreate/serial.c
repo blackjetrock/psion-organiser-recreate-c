@@ -706,6 +706,26 @@ void ic_read(char *str)
   fl_read(s);
 }
 
+void ic_find(char *str)
+{
+  char s[254];
+  char srch[64];
+  int len;
+  
+  sscanf(str, "find %s", &srch);
+  
+  if( fl_find(srch, s, &len) )
+    {
+      printf("\nFound %s", s);
+    }
+  else
+    {
+      printf("\nNot found");
+    }
+
+  
+}
+
 
 void ic_device(char *str)
 {
@@ -809,6 +829,7 @@ struct _IC_CMD
    {"recno",      ic_recno},
    {"rect",       ic_rect},
    {"flfrec",     ic_flfrec},
+   {"find",       ic_find},
    {"exit",       ic_exit},
    {"!",          ic_boot_mass},
   };

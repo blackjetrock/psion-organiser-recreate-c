@@ -330,8 +330,66 @@ void fl_ffnd(void)
 {
 }
 
-void fl_find(void)
+////////////////////////////////////////////////////////////////////////////////
+//
+// Find the next record that contains the search string
+//
+
+int fl_find(char *srch, char *dest, int *len)
 {
+  int recno;
+  PAK_ADDR pak_addr;
+  FL_REC_TYPE rectype;
+  int reclen;
+  int done = 0;
+  uint8_t recdata[256];
+  
+  // get the current position and move to the next record
+  recno = flw_crec;
+  recno++;
+
+  // Now load records and search them
+  while(!done)
+    {
+      if( fl_frec(recno, &pak_addr, &rectype, &reclen) )
+	{
+	  // Got a record, load the data and see if it contains the search
+	  // string.
+	  pk_read(reclen, recdata);
+	  int found = 0;
+	  
+	  for(int i=0; i<reclen-strlen(srch); i++)
+	    {
+	      if( strncmp(&(recdata[i]), srch, strlen(srch)) == 0 )
+		{
+		  // Yes, found it
+		  found = 1;
+		  break;
+		}
+	    }
+
+	  if( found )
+	    {
+	      // Copy the data over
+	      memcpy(dest, recdata, reclen);
+	      *len = reclen;
+
+	      // Leave record number pointing at this record.
+	      fl_rset(recno);
+	      return(1);	      
+	    }
+	  else
+	    {
+	      // No match, keep looking
+	      recno++;
+	    }
+	}
+      else
+	{
+	  // No record, we are done
+	  return(0);
+	}
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -339,7 +397,7 @@ void fl_find(void)
 // Find the Nth record of the current record type and return
 // information about it
 
-PAK_ADDR fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
+int fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
 {
   int rc = 1;
   int rec_n = 0;
