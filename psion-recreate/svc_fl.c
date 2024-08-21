@@ -113,7 +113,7 @@ void fl_pos_at_end(void)
 {
   int rc = 0;
 
-#if DB_FL_WRIT
+#if DB_FL_POS_AT_END
   printf("\n%s", __FUNCTION__);
 #endif
   
@@ -124,7 +124,7 @@ void fl_pos_at_end(void)
       rc = fl_catl(0, pkb_curp, NULL, NULL);
     }
 
-#if DB_FL_WRIT
+#if DB_FL_POS_AT_END
   printf("\n%s:exit", __FUNCTION__);
 #endif
 
@@ -163,6 +163,10 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 {
   int rc = 1;
   uint8_t record_data[256];
+
+#if DB_FL_CATL
+  printf("\n%s:\n", __FUNCTION__);
+#endif
   
   // Access device on first call
   if( first )
@@ -175,6 +179,7 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 
   while( rc )
     {
+
       rc = fl_scan_pack(first, device, record_data);
       
       if( record_data[0] == 0x09 )
@@ -199,11 +204,16 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 	      // Exit with file data
 	      break;
 	    }
+
 	}
       else
 	{
 	  // Do another loop, as this wasn't a file
 	}
+#if DB_FL_CATL
+      printf("\n%s:rc:%d recdat[0]:%d", __FUNCTION__, rc, record_data[0]);
+#endif
+
     }
 
 return(rc);
@@ -316,8 +326,64 @@ void fl_find(void)
 {
 }
 
-void fl_frec(void)
+////////////////////////////////////////////////////////////////////////////////
+//
+// Find the Nth record of the current record type and return
+// information about it
+
+PAK_ADDR fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
 {
+  int rc = 1;
+  int rec_n = 0;
+  int first = 1;
+  uint8_t record_data[256];
+  
+  // Check record to see if it is a file
+  // record type is 0x81
+  printf("\npkfrec\n");
+  
+  while( rc )
+    {
+      rc = fl_scan_pack(first, pkb_curp, record_data);
+
+#if DB_FL_FREC
+      printf("\n%s:recdat[1]:%d", __FUNCTION__, record_data[1]);
+#endif
+      
+      first = 0;
+      
+      if( record_data[1] == flb_rect )
+	{
+	  // This is a record for our file
+	  rec_n++;
+
+	  if( rec_n == n )
+	    {
+	      // This is the record we are looking for
+	      // Return data
+#if DB_FL_FREC
+	      printf("\nFound record");
+
+#endif
+
+	      *pak_addr = pkw_cpad;
+	      *rectype  = record_data[1];
+	      *reclen   = record_data[0];
+	      return(1);    
+	    }
+	}
+      else
+	{
+	  // Do another loop, as this wasn't a file
+	}
+
+#if DB_FL_FREC
+      printf("\nrc:%d rec_n:%d n:%d", rc, rec_n, n);
+#endif
+    }
+
+  // Not found, return error
+  return(0);
 }
 
 void fl_next(void)

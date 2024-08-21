@@ -2,6 +2,9 @@
 
 #include "menu.h"
 #include "emulator.h"
+#include "wireless.h"
+#include "serial.h"
+
 #include "eeprom.h"
 #include "rtc.h"
 #include "display.h"

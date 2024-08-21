@@ -14,12 +14,7 @@
 #include "hardware/flash.h"
 #include "pico/bootrom.h"
 
-#include "psion_recreate.h"
-#include "emulator.h"
-#include "wireless.h"
-#include "serial.h"
-
-#include "svc.h"
+#include "psion_recreate_all.h"
 
 int keypress = 0;
 int parameter = 0;
@@ -593,7 +588,7 @@ void queue_key(int key)
 
 //------------------------------------------------------------------------------
 
-#define MAX_GET_STRING 64
+#define MAX_GET_STRING 128
 
 char serial_get_string_buffer[MAX_GET_STRING+1];
 
@@ -664,6 +659,11 @@ void ic_createfile(char *str)
 
 }
 
+void ic_boot_mass(char *str)
+{
+  reset_usb_boot(0,0);
+}
+
 void ic_format(char *str)
 {
   printf("\nFormatting %d", pkb_curp);
@@ -695,6 +695,49 @@ void ic_device(char *str)
 
 }
 
+
+void ic_flfrec(char *str)
+{
+  PAK_ADDR pak_addr;
+  int len;
+  int device = 0;
+  int n = 1;
+  int  rectype = 20;
+  FL_REC_TYPE rt;
+  int rc = 0;
+  
+#if DB_FL_FREC
+  printf("\n%s:\n", __FUNCTION__);
+#endif
+    
+  sscanf(str, "flfrec %d %d %d", &device, &rectype, &n);
+  rt = rectype;
+
+  fl_rect(rt);
+  
+#if DB_FL_FREC
+  printf("\nDev:%d rectype:%d n:%d\n", device, rectype, n);
+#endif
+  
+  pk_setp(device);
+
+  rc = fl_frec(n, &pak_addr, &rt, &len);
+
+  if( rc )
+    {
+      printf("\nrectype: %d", rectype);
+      printf("\npak_addr:%04X", pak_addr);
+      printf("\nlen:     %d", len);
+      
+      printf("\nDevice now %d", pkb_curp);
+    }
+  else
+    {
+      printf("\nRecord not found");
+    }
+
+}
+
 void ic_help(char *str);
 
 typedef void (*CMD_FN)(char *str);
@@ -712,7 +755,9 @@ struct _IC_CMD
    {"format",     ic_format},
    {"test",       ic_test},
    {"write",      ic_write},
+   {"flfrec",     ic_flfrec},
    {"exit",       ic_exit},
+   {"!",          ic_boot_mass},
   };
 
 #define NUM_IC_CMD (sizeof(ic_cmds)/sizeof(struct _IC_CMD))

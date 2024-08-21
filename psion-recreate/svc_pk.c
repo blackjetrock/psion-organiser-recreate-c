@@ -56,6 +56,15 @@ void pk_build_id_string(PAK_ID result,
   result = id;
 }
 
+int pk_valid_pak(PAK pak)
+{
+  if( (pak>=0) && (pak <=1) )
+    {
+      return(1);
+    }
+
+  return(0);
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -63,6 +72,12 @@ void pk_build_id_string(PAK_ID result,
 
 void pk_setp(PAK pak)
 {
+  if ( !pk_valid_pak(pak) )
+    {
+      er_error("Bad pak");
+      return;
+    }
+  
   // Set up current pak
   pkb_curp = pak;
   pkw_cpad = 0;
@@ -71,7 +86,7 @@ void pk_setp(PAK pak)
   
   // Check the header and see if it is valid
 #if DB_PK_SETP
-  printf("\n%s:", __FUNCTION__);
+  printf("\n%s:\n", __FUNCTION__);
 #endif
   
 }

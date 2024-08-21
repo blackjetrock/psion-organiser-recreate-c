@@ -16,7 +16,13 @@
 #include "record.h"
 #include "svc.h"
 
-// 
+// error
+
+void er_error(char *errstr)
+{
+  printf("\n**** %s *****\n", errstr);
+}
+
 char *er_lkup(ER_ERRORCODE e)
 {
 }

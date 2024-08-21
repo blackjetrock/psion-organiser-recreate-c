@@ -17,7 +17,7 @@ void fl_deln(void);
 void fl_eras(void);
 void fl_ffnd(void);
 void fl_find(void);
-void fl_frec(void);
+PAK_ADDR fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen);
 void fl_next(void);
 void fl_open(void);
 void fl_pars(void);

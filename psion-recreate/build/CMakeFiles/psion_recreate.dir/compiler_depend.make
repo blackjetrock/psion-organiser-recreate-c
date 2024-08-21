@@ -874,21 +874,29 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: ../serial.c \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h \
+  ../psion_recreate_all.h \
   ../psion_recreate.h \
   ../match.h \
   ../font.h \
+  ../menu.h \
   ../emulator.h \
   ../wireless.h \
   ../serial.h \
+  ../eeprom.h \
+  ../rtc.h \
+  ../display.h \
+  ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h
+  ../svc_pk.h \
+  ../switches.h \
+  ../sysvar.h
 
 CMakeFiles/psion_recreate.dir/svc_dp.c.obj: ../svc_dp.c \
   /usr/include/newlib/ctype.h \
@@ -979,10 +987,10 @@ CMakeFiles/psion_recreate.dir/svc_dp.c.obj: ../svc_dp.c \
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h
@@ -1169,10 +1177,10 @@ CMakeFiles/psion_recreate.dir/svc_er.c.obj: ../svc_er.c \
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h
@@ -1261,16 +1269,18 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj: ../svc_fl.c \
   ../font.h \
   ../menu.h \
   ../emulator.h \
+  ../wireless.h \
+  ../serial.h \
   ../eeprom.h \
   ../rtc.h \
   ../display.h \
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
@@ -1366,10 +1376,10 @@ CMakeFiles/psion_recreate.dir/svc_kb.c.obj: ../svc_kb.c \
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h
@@ -1471,10 +1481,10 @@ CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.obj: ../svc_pak_pico_flash.c 
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h
@@ -1568,10 +1578,10 @@ CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj: ../svc_pak_serial_eep
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h
@@ -1660,16 +1670,18 @@ CMakeFiles/psion_recreate.dir/svc_pk.c.obj: ../svc_pk.c \
   ../font.h \
   ../menu.h \
   ../emulator.h \
+  ../wireless.h \
+  ../serial.h \
   ../eeprom.h \
   ../rtc.h \
   ../display.h \
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
@@ -1760,16 +1772,18 @@ CMakeFiles/psion_recreate.dir/sysvar.c.obj: ../sysvar.c \
   ../font.h \
   ../menu.h \
   ../emulator.h \
+  ../wireless.h \
+  ../serial.h \
   ../eeprom.h \
   ../rtc.h \
   ../display.h \
   ../record.h \
   ../svc.h \
   ../svc_er.h \
+  ../svc_pk_base.h \
   ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_pk_base.h \
   ../svc_pak_pico_flash.h \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
@@ -4663,6 +4677,8 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
 
+../psion_recreate_all.h:
+
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h:
 
 ../psion_recreate.c:
@@ -4737,9 +4753,9 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c:
 
-../eeprom.h:
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h:
 
-../svc_fl.c:
+../eeprom.h:
 
 /usr/include/newlib/sys/string.h:
 
@@ -4773,6 +4789,10 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c:
 
+../switches.h:
+
+/usr/include/newlib/stdlib.h:
+
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h:
@@ -4780,12 +4800,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 ../match.h:
 
 ../svc_dp.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h:
-
-/usr/include/newlib/stdlib.h:
-
-../switches.h:
 
 ../menu.h:
 
@@ -4869,6 +4883,10 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 ../svc_er.h:
 
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/include/pico/float.h:
+
+/usr/include/newlib/sys/_intsup.h:
+
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/include/pico/timeout_helper.h:
 
 /usr/include/newlib/stdio.h:
@@ -4927,10 +4945,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/usb.h:
 
-../nos.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c:
-
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_base/include/pico/config.h:
@@ -4948,10 +4962,6 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 /tree/downloaded_tools/pico/pico-sdk/src/boards/include/boards/pico.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_claim/include/hardware/claim.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h:
-
-/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/queue.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/include/pico/time.h:
 
@@ -4987,11 +4997,15 @@ generated/pico_base/pico/version.h:
 
 /tree/downloaded_tools/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
 
-../psion_recreate_all.h:
+/tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h:
 
-/usr/include/newlib/sys/_intsup.h:
+/tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/queue.c:
 
-/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_float/include/pico/float.h:
+../nos.h:
+
+/tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c:
+
+../svc_fl.c:
 
 generated/pico_base/pico/config_autogen.h:
 
