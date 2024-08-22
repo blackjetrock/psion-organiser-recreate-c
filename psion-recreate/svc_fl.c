@@ -10,6 +10,51 @@
 
 #include "psion_recreate_all.h"
 
+////////////////////////////////////////////////////////////////////////////////
+
+int fl_check_op(int op)
+{
+
+}
+ 
+#define fl_check_op(XXX) {			\
+  static int opened;				\
+  switch(op)					\
+    {						\
+    case FL_OP_OPEN:				\
+      opened=1;					\
+      break;					\
+						\
+    case FL_OP_FIRST:				\
+      if( !opened )				\
+	{					\
+	  printf("\n****NOT OPENED*****");	\
+	  while(1)				\
+	    {					\
+	    }					\
+	}					\
+      break;					\
+    }						\
+  }
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+
+void fl_print_len_string(char *str, int len)
+{
+  for(int i=0; i<len; i++)
+    {
+      if( isprint(*str) )
+	{
+	  printf("%c", *(str++));
+	}
+      else
+	{
+	  printf("(%02X)", *(str++));
+	}
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -17,35 +62,64 @@
 // first is 1 for first call, 0 thereafter
 // return value is 1 if record found, 0 if not
 //
+// Uses a caller-supplied context that allows nested calls to the service
+//
+// Doies not alter pak address
+//
 // Returns record data
 //         pak address of start of record
 
-int fl_scan_pack(int first, int device, uint8_t *dest, PAK_ADDR *recstart)
+int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *dest, PAK_ADDR *recstart)
 {
   uint8_t  length_byte;
   uint8_t  record_type;
   uint16_t block_length;
   PAK_ADDR rec_start = 0;
+
+#if DB_FL_SCAN_PAK
+  printf("\n%s:op:%d len_byte:%02X rectype:%02X", __FUNCTION__, op, length_byte, record_type);
+  printf("\nCPAD:%04X", pk_qadd());
+#endif
+
+  fl_check_op();
   
   // Start at the start of the pack
-  if(first)
+  switch(op)
     {
-      pk_sadd(0x0a);
+    case FL_OP_OPEN:
+      // Save the pak address, and restore it when needed
+      context->save_pak_addr = pk_qadd();
+      return(1);
+      break;
+
+    case FL_OP_CLOSE:
+      // Done, so restore
+      pk_sadd(context->save_pak_addr);
+      return(1);
+      break;
+
+    case FL_OP_FIRST:
+      pk_sadd(0xa);
+      break;
+
+    case FL_OP_NEXT:
+      //pk_sadd(context->save_pak_addr);
+      break;
     }
 
-  // Store start address of this record
-  rec_start = pkw_cpad;
+  // Start of record is here
+  rec_start = pk_qadd();
   
   length_byte = pk_rbyt();
   record_type = pk_rbyt();
 
-#if DB_FL_SCAN_PACK
-  printf("\n%s:first:%d len_byte:%02X rectype:%02X", __FUNCTION__, first, length_byte, record_type);
-  printf("\nCPAD:%04X", pkw_cpad);
+#if DB_FL_SCAN_PAK
+  printf("\nCPAD:%04X", pk_qadd());
 #endif
   
   if( length_byte == 0 )
     {
+      pk_sadd(context->save_pak_addr);
       return(ER_FL_NP);
     }
 
@@ -55,8 +129,8 @@ int fl_scan_pack(int first, int device, uint8_t *dest, PAK_ADDR *recstart)
       block_length = pk_rwrd();
       pk_skip(block_length);
 
-#if DB_FL_SCAN_PACK
-  printf("\nLong record:blk_len:%04X", block_length);
+#if DB_FL_SCAN_PAK
+      printf("\nLong record:blk_len:%04X", block_length);
 #endif
 
     }
@@ -64,7 +138,7 @@ int fl_scan_pack(int first, int device, uint8_t *dest, PAK_ADDR *recstart)
     {
       if( record_type != 0xFF )
 	{
-#if DB_FL_SCAN_PACK
+#if DB_FL_SCAN_PAK
 	  printf("\nShort record:len:%04X", length_byte);
 #endif
 
@@ -79,8 +153,9 @@ int fl_scan_pack(int first, int device, uint8_t *dest, PAK_ADDR *recstart)
 	    {
 	      *(dest++) = pk_rbyt();	      
 	    }
-#if DB_FL_SCAN_PACK
-  printf("\nExit(1):CPAD:%04X", pkw_cpad);
+
+#if DB_FL_SCAN_PAK
+	  printf("\n%s:Exit(1):CPAD:%04X", __FUNCTION__, pkw_cpad);
 #endif
 	  
 	  return(1);
@@ -93,18 +168,17 @@ int fl_scan_pack(int first, int device, uint8_t *dest, PAK_ADDR *recstart)
       // We need to move back one byte
       pk_sadd(pkw_cpad-2);
 
-#if DB_FL_SCAN_PACK
-  printf("\nExit(0):CPAD:%04X", pkw_cpad);
+#if DB_FL_SCAN_PAK
+      printf("\nExit(0):CPAD:%04X", pkw_cpad);
 #endif
 
       return(0);
     }
   else
     {
-      printf("\n%s:exit ?", __FUNCTION__);
-
-#if DB_FL_SCAN_PACK
-  printf("\nExit(?):CPAD:%04X", pkw_cpad);
+      
+#if DB_FL_SCAN_PAK
+      printf("\nExit(?):CPAD:%04X", pkw_cpad);
 #endif
   
       return(0);
@@ -166,29 +240,38 @@ void fl_bsav(void)
 
 
 
-int fl_catl(int first, int device, char *filename, uint8_t *rectype)
+int fl_catl(FL_OP op, int device, char *filename, uint8_t *rectype)
 {
   int rc = 1;
   uint8_t record_data[256];
   PAK_ADDR recstart;
+  FL_SCAN_PAK_CONTEXT context;
   
 #if DB_FL_CATL
   printf("\n%s:\n", __FUNCTION__);
 #endif
   
   // Access device on first call
-  if( first )
+  switch(op)
     {
-      pk_setp(device);
+    case FL_OP_OPEN:
+    case FL_OP_CLOSE:
+      fl_scan_pak(&context, op, device, record_data, &recstart);
+      return(1);
+      break;
+
+    case FL_OP_FIRST:
+    case FL_OP_NEXT:
+      break;
     }
-  
+
   // Check record to see if it is a file
   // record type is 0x81
 
   while( rc )
     {
 
-      rc = fl_scan_pack(first, device, record_data, &recstart);
+      rc = fl_scan_pak(&context, op, device, record_data, &recstart);
       
       if( record_data[0] == 0x09 )
 	{
@@ -224,7 +307,7 @@ int fl_catl(int first, int device, char *filename, uint8_t *rectype)
 
     }
 
-return(rc);
+  return(rc);
   
 }
 
@@ -247,7 +330,6 @@ FL_REC_TYPE fl_cret(char *filename)
 
   for(int i=0x90; i<=0xfe; i++)
     {
-      used_rectypes[i-0x90] = 0;
     }
   
   printf("\n%s:", __FUNCTION__);
@@ -314,7 +396,7 @@ FL_REC_TYPE fl_cret(char *filename)
 
   record[10] = new_rectype;
 
-   pk_save(11, record);
+  pk_save(11, record);
 
 }
 
@@ -334,34 +416,67 @@ void fl_ffnd(void)
 //
 // Find the next record that contains the search string
 //
+// Searches the current record and onwards.
+// Leaves the record number at the found record, the caller has tomove it on for
+// subsequent searches.
+//
 
 int fl_find(char *srch, char *dest, int *len)
 {
   int recno;
   PAK_ADDR pak_addr;
+  PAK_ADDR save_pak_addr;
   FL_REC_TYPE rectype;
   int reclen;
   int done = 0;
   uint8_t recdata[256];
-  
-  // get the current position and move to the next record
+
+#if DB_FL_FIND
+  printf("\n%s:Entry", __FUNCTION__);
+#endif
+      
+  // Get the current position and move to the next record
   recno = flw_crec;
-  recno++;
 
   // Now load records and search them
   while(!done)
     {
+#if DB_FL_FIND
+      printf("\n%s:Recno:%d rect:%d", __FUNCTION__, recno, rectype);
+#endif
+      
       if( fl_frec(recno, &pak_addr, &rectype, &reclen) )
 	{
 	  // Got a record, load the data and see if it contains the search
 	  // string.
-	  pk_read(reclen, recdata);
+	  save_pak_addr = pk_qadd();
+	  pk_sadd(pak_addr);
+#if DB_FL_FIND
+	  printf("\n%s:Reading %d bytes", __FUNCTION__, reclen+2);
+#endif
+	  pk_read(reclen+2, recdata);
+	  
+#if DB_FL_FIND
+	  printf("\n%s:Recdata:", __FUNCTION__);
+	  fl_print_len_string(recdata+2, reclen);
+#endif
+	  pk_sadd(save_pak_addr);
+
+#if DB_FL_FIND
+	  printf("\n%s:TESTING %s against Recdata (%d bytes)", __FUNCTION__, srch, reclen);
+	  fl_print_len_string(recdata+2, reclen);
+#endif
+
 	  int found = 0;
 	  
 	  for(int i=0; i<reclen-strlen(srch); i++)
 	    {
-	      if( strncmp(&(recdata[i]), srch, strlen(srch)) == 0 )
+	      if( (strncmp(&(recdata[i]), srch, strlen(srch)) == 0) || (strlen(srch) == 0) )
 		{
+#if DB_FL_FIND
+		  printf("\n%s:**FOUND**", __FUNCTION__);
+#endif
+	  
 		  // Yes, found it
 		  found = 1;
 		  break;
@@ -371,11 +486,16 @@ int fl_find(char *srch, char *dest, int *len)
 	  if( found )
 	    {
 	      // Copy the data over
-	      memcpy(dest, recdata, reclen);
+	      memcpy(dest, recdata+2, reclen);
+	      //sprintf(dest, "dummy");
+	      // Terminate string
+	      *(dest+reclen) = '\0';
+	      
 	      *len = reclen;
 
 	      // Leave record number pointing at this record.
 	      fl_rset(recno);
+
 	      return(1);	      
 	    }
 	  else
@@ -387,6 +507,9 @@ int fl_find(char *srch, char *dest, int *len)
       else
 	{
 	  // No record, we are done
+#if DB_FL_FIND
+	  printf("\n%s:exit(0)", __FUNCTION__);
+#endif
 	  return(0);
 	}
     }
@@ -401,23 +524,30 @@ int fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
 {
   int rc = 1;
   int rec_n = 0;
-  int first = 1;
+  int op = FL_OP_FIRST;
   uint8_t record_data[256];
   PAK_ADDR recstart;
+  FL_SCAN_PAK_CONTEXT context;
   
   // Check record to see if it is a file
   // record type is 0x81
-  printf("\npkfrec\n");
+
+  fl_scan_pak(&context, FL_OP_OPEN, pkb_curp, record_data, &recstart);
   
   while( rc )
     {
-      rc = fl_scan_pack(first, pkb_curp, record_data, &recstart);
+      rc = fl_scan_pak(&context, op, pkb_curp, record_data, &recstart);
 
+      if( !rc )
+	{
+	  continue;
+	}
+      
 #if DB_FL_FREC
-      printf("\n%s:recdat[1]:%d", __FUNCTION__, record_data[1]);
+      printf("\n%s:n:%d recno:%d rect:%d recstart:%04X", __FUNCTION__, n, rec_n, record_data[1], recstart);
 #endif
       
-      first = 0;
+      op = FL_OP_NEXT;
       
       if( record_data[1] == flb_rect )
 	{
@@ -429,13 +559,15 @@ int fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
 	      // This is the record we are looking for
 	      // Return data
 #if DB_FL_FREC
-	      printf("\nFound record");
-
+	      printf("\n%s:Found record (recdata ", __FUNCTION__);
+	      fl_print_len_string(record_data, record_data[0]);
+	      printf(" )");
 #endif
-
 	      *pak_addr = recstart;
 	      *rectype  = record_data[1];
 	      *reclen   = record_data[0];
+	      
+	      fl_scan_pak(&context, FL_OP_CLOSE, pkb_curp, record_data, &recstart);
 	      return(1);    
 	    }
 	}
@@ -445,17 +577,72 @@ int fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
 	}
 
 #if DB_FL_FREC
-      printf("\nrc:%d rec_n:%d n:%d", rc, rec_n, n);
+      printf("\n%s:rc:%d rec_n:%d n:%d", __FUNCTION__, rc, rec_n, n);
 #endif
     }
 
+  fl_scan_pak(&context, FL_OP_CLOSE, pkb_curp, record_data, &recstart);
+    
   // Not found, return error
+#if DB_FL_FREC
+  printf("\n%s:NOT FOUND rc=0", __FUNCTION__);
+#endif
+
   return(0);
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Move to next record of current record type
+//
+
 void fl_next(void)
 {
+  int recno;
+  PAK_ADDR pak_addr;
+  FL_REC_TYPE rectype;
+  int reclen;
+  int done = 0;
+  uint8_t recdata[256];
+  
+  // Get the current position and move to the next record
+  recno = fl_rpos();
+
+  // Now load records and search them
+  while(!done)
+    {
+      recno++;
+      
+#if DB_FL_FIND
+      printf("\n%s:Recno:%d rect:%d", __FUNCTION__, recno, rectype);
+#endif
+      
+      if( fl_frec(recno, &pak_addr, &rectype, &reclen) )
+	{
+	  if( rectype == flb_rect )
+	    {
+	      // Got next one
+	      fl_rset(recno);
+	      return;
+	    }
+	}
+      else
+	{
+	  // If off endof file, leaves pointer there so other code
+	  // can see that
+	  
+	  fl_rset(recno);
+	  // No more records
+	  done = 1;
+	}
+    }
 }
+
+int fl_rpos(void)
+{
+  return(flw_crec);
+}
+  
 
 void fl_open(void)
 {
@@ -537,22 +724,24 @@ void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free)
   // Count the number of records of current record type
   uint8_t recdat[256];
   int rc = 1;
-  int first = 1;
+  int op = FL_OP_FIRST;
   PAK_ADDR recstart;
   int rec_cnt = 0;
   PAK_ADDR addr_save;
   uint8_t id[10];
+  FL_SCAN_PAK_CONTEXT context;
+  PAK_ADDR save_addr;
   
 #if DB_FL_SIZE
   printf("\n%s:", __FUNCTION__);
 #endif
 
-  addr_save = pk_qadd();
+  fl_scan_pak(&context, FL_OP_OPEN, pkb_curp, recdat, &recstart);
   
   while(rc)
     {
-      rc = fl_scan_pack(first, pkb_curp, recdat, &recstart);
-      first = 0;
+      rc = fl_scan_pak(&context, op, pkb_curp, recdat, &recstart);
+      op = FL_OP_NEXT;
       
 #if DB_FL_SIZE
       printf("\n%s:rc:%d rcnt:%d", __FUNCTION__, rc, rec_cnt);
@@ -568,14 +757,16 @@ void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free)
     }
 
   // Read pak ID for the size of the pack
+  save_addr = pk_qadd();
   pk_sadd(0);
   pk_read(10, id);
+  pk_sadd(save_addr);
   
   *bytes_free = (id[1] * 8192) - pkw_cpad;
   *first_free = pkw_cpad;
   *num_recs = rec_cnt;
 
-  pk_sadd(addr_save);
+  fl_scan_pak(&context, FL_OP_CLOSE, pkb_curp, recdat, &recstart);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

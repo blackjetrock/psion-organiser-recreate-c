@@ -290,7 +290,9 @@ void cli_catalog(void)
   fl_size(&bytes_free, &num_recs, &first_free);
 
   printf("\n%d bytes free, first free byte at %08X", bytes_free, first_free);
-  rc = fl_catl(1, pkb_curp, filename, &rectype);
+
+       fl_catl(FL_OP_OPEN, pkb_curp, filename, &rectype);
+  rc = fl_catl(FL_OP_FIRST, pkb_curp, filename, &rectype);
 
   while(rc)
     {
@@ -298,8 +300,10 @@ void cli_catalog(void)
       fl_size(&bytes_free, &num_recs, &first_free);
       
       printf("\n%-8s    $%02X  Records:%d", filename, rectype, num_recs);
-      rc = fl_catl(0, pkb_curp, filename, &rectype);
+      rc = fl_catl(FL_OP_NEXT, pkb_curp, filename, &rectype);
     }
+
+  fl_catl(FL_OP_CLOSE, pkb_curp, filename, &rectype);
 }
 
 void cli_create(void)
@@ -644,44 +648,42 @@ char *serial_get_string(void)
 // Command based interactive interface
 //
 
-void ic_test(char *str)
+void ic_test(char *str, char *fmt)
 {
   printf("\nTest command, '%s'",str);
 }
 
-void ic_exit(char *str)
+void ic_exit(char *str, char *fmt)
 {
   interactive_done = 1;
 }
 
-void ic_catalog(char *str)
+void ic_catalog(char *str, char *fmt)
 {
   cli_catalog();
 }
 
-void ic_createfile(char *str)
+void ic_createfile(char *str, char *fmt)
 {
   char filename[20];
-  sscanf(str, "createfile %s", filename);
-  
-  printf("\nCreating file '%s'", filename);
+  sscanf(str, fmt, filename);
 
   fl_cret(filename);
 
 }
 
-void ic_boot_mass(char *str)
+void ic_boot_mass(char *str, char *fmt)
 {
   reset_usb_boot(0,0);
 }
 
-void ic_format(char *str)
+void ic_format(char *str, char *fmt)
 {
   printf("\nFormatting %d", pkb_curp);
   pk_fmat();
 }
 
-void ic_write(char *str)
+void ic_write(char *str, char *fmt)
 {
   char s[254];
   int rt;
@@ -693,7 +695,7 @@ void ic_write(char *str)
   fl_writ(s, strlen(s));
 }
 
-void ic_read(char *str)
+void ic_read(char *str, char *fmt)
 {
   char s[254];
   int recno;
@@ -706,32 +708,27 @@ void ic_read(char *str)
   fl_read(s);
 }
 
-void ic_find(char *str)
+void ic_find(char *str, char *fmt)
 {
   char s[254];
   char srch[64];
   int len;
   
-  sscanf(str, "find %s", &srch);
+  sscanf(str, fmt, &srch);
   
-  if( fl_find(srch, s, &len) )
+  while( fl_find(srch, s, &len) )
     {
-      printf("\nFound %s", s);
+      printf("\n%s:Found '%s'", __FUNCTION__, s);
+      fl_next();
     }
-  else
-    {
-      printf("\nNot found");
-    }
-
-  
 }
 
 
-void ic_device(char *str)
+void ic_device(char *str, char *fmt)
 {
   int device;
 
-  sscanf(str, "dev %d", &device);
+  sscanf(str, fmt, &device);
 
   pk_setp(device);
   
@@ -739,11 +736,11 @@ void ic_device(char *str)
 
 }
 
-void ic_recno(char *str)
+void ic_recno(char *str, char *fmt)
 {
   int recno;
 
-  sscanf(str, "recno %d", &recno);
+  sscanf(str,  fmt, &recno);
 
   fl_rset(recno);
   
@@ -751,7 +748,7 @@ void ic_recno(char *str)
 
 }
 
-void ic_rect(char *str)
+void ic_rect(char *str, char *fmt)
 {
   int rect;
   FL_REC_TYPE rt;
@@ -766,7 +763,7 @@ void ic_rect(char *str)
 }
 
 
-void ic_flfrec(char *str)
+void ic_flfrec(char *str, char *fmt)
 {
   PAK_ADDR pak_addr;
   int len;
@@ -780,7 +777,7 @@ void ic_flfrec(char *str)
   printf("\n%s:\n", __FUNCTION__);
 #endif
     
-  sscanf(str, "flfrec %d %d %d", &device, &rectype, &n);
+  sscanf(str, fmt,  &device, &rectype, &n);
   rt = rectype;
 
   fl_rect(rt);
@@ -808,41 +805,42 @@ void ic_flfrec(char *str)
 
 }
 
-void ic_help(char *str);
+void ic_help(char *str, char *fmt);
 
-typedef void (*CMD_FN)(char *str);
+typedef void (*CMD_FN)(char *str, char *fmt);
   
 struct _IC_CMD
 {
   char *cmd;
+  char *fmt;
   CMD_FN fn;  
 } ic_cmds[] =
   {
-   {"help",       ic_help},
-   {"dev",        ic_device},
-   {"catalog",    ic_catalog},
-   {"createfile", ic_createfile},
-   {"format",     ic_format},
-   {"test",       ic_test},
-   {"write",      ic_write},
-   {"read",       ic_read},
-   {"recno",      ic_recno},
-   {"rect",       ic_rect},
-   {"flfrec",     ic_flfrec},
-   {"find",       ic_find},
-   {"exit",       ic_exit},
-   {"!",          ic_boot_mass},
+   {"help",       "",                ic_help},
+   {"dev",        "dev %d",          ic_device},
+   {"catalog",    "",                ic_catalog},
+   {"createfile", "createfile %s",   ic_createfile},
+   {"format",     "",                ic_format},
+   {"test",       "",                ic_test},
+   {"write",      "write %d %[^@]",  ic_write},
+   {"read",       "",                ic_read},
+   {"recno",      "recno %d",        ic_recno},
+   {"rect",       "rect %d",         ic_rect},
+   {"flfrec",     "flfrec %d %d %d", ic_flfrec},
+   {"find",       "find %s",         ic_find},
+   {"exit",       "",                ic_exit},
+   {"!",          "",                ic_boot_mass},
   };
 
 #define NUM_IC_CMD (sizeof(ic_cmds)/sizeof(struct _IC_CMD))
 
-void ic_help(char *str)
+void ic_help(char *str, char *fmt)
 {
   printf("\n");
   
   for(int i=0; i<NUM_IC_CMD; i++)
     {
-      printf("\n%s", ic_cmds[i].cmd);
+      printf("\n%-10s %s", ic_cmds[i].cmd, ic_cmds[i].fmt);
     }
   
   printf("\n");
@@ -863,11 +861,10 @@ void cli_interactive(void)
       
       for(int i=0; i<NUM_IC_CMD; i++)
 	{
-	  printf("\ntest '%s' '%s'",cmd , ic_cmds[i].cmd);
+	  //	  printf("\ntest '%s' '%s'",cmd , ic_cmds[i].cmd);
 	  if( strncmp(ic_cmds[i].cmd, cmd, strlen(ic_cmds[i].cmd)) == 0 )
 	    {
-	      printf("\nmatch");
-	      (*ic_cmds[i].fn)(cmd);
+	      (*ic_cmds[i].fn)(cmd, ic_cmds[i].fmt);
 	      break;
 	    }
 	}
