@@ -762,6 +762,11 @@ void menu_fl_find(void)
 			      done = 1;
 			      break;
 
+			    case KEY_DEL:
+			      fl_back();
+			      fl_eras();
+			      break;
+			      
 			      
 			    case KEY_ON:
 			      done = 1;
