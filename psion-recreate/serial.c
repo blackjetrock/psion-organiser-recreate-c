@@ -688,6 +688,19 @@ void ic_format(char *str, char *fmt)
   pk_fmat();
 }
 
+void ic_erase(char *str, char *fmt)
+{
+  printf("\nErasing %d", flw_crec);
+  fl_eras();
+}
+
+void ic_dump(char *str, char *fmt)
+{
+  parameter = 0x10180000;
+  cli_dump_memory();
+}
+
+
 void ic_write(char *str, char *fmt)
 {
   char s[254];
@@ -835,6 +848,8 @@ struct _IC_CMD
    {"flfrec",     "flfrec %d %d %d", ic_flfrec},
    {"format",     "",                ic_format},
    {"test",       "",                ic_test},
+   {"dump",       "",                ic_dump},
+   {"erase",       "",               ic_erase},
    {"write",      "write %d %[^@]",  ic_write},
    {"read",       "",                ic_read},
    {"recno",      "recno %d",        ic_recno},

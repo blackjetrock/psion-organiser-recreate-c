@@ -762,6 +762,7 @@ void menu_fl_find(void)
 			      done = 1;
 			      break;
 
+			      
 			    case KEY_ON:
 			      done = 1;
 			      find_str[0] ='\0';
@@ -792,16 +793,26 @@ void menu_fl_find(void)
 		  continue;
 		}
 	    }
-	  
-	  if ( strlen(find_str) < (MAX_INPUT_STR-2) )
+
+	  if( k == KEY_DEL )
 	    {
-	      char keystr[2] = " ";
-	      keystr[0] = k;
-	      strcat(find_str, keystr);
-	      
-	      display_clear();
-	      printxy_str(0, 0, "Find:");
+	      find_str[strlen(find_str)-1] = '\0';
 	      printxy_str(5, 0, find_str);
+	      printxy_str(5+strlen(find_str), 0, "                 ");
+
+	    }
+	  else
+	    {
+	      if ( strlen(find_str) < (MAX_INPUT_STR-2) )
+		{
+		  char keystr[2] = " ";
+		  keystr[0] = k;
+		  strcat(find_str, keystr);
+		  
+		  display_clear();
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, find_str);
+		}
 	    }
 	}
     }
@@ -862,6 +873,11 @@ void menu_fl_save(void)
 		  // Save data in file 0x90 (MAIN)
 		  fl_rect(0x90);
 		  fl_writ(save_str, strlen(save_str));
+		  break;
+
+		case KEY_DEL:
+		  save_str[strlen(save_str)-1] = '\0';
+		  printxy_str(5+strlen(save_str), 0, "                 ");
 		  break;
 		  
 		default:

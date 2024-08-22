@@ -480,8 +480,82 @@ void fl_deln(void)
 {
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Erase the current record
+//
+
 void fl_eras(void)
 {
+  PAK_ADDR pak_addr;
+  uint8_t id0;
+  FL_REC_TYPE rectype;
+  int reclen;
+  int found = 0;
+  uint8_t dest[2];
+  
+  pak_addr = pk_qadd();
+  
+  // Is this an eprom pack? i.e. do we just clear the top bit of the record type?
+  // If a RAM pack then we can move the data around and recover the space.
+
+  pk_read(1, &id0);
+
+#if DB_FL_ERAS
+  printf("\n%s:id0=%02X", __FUNCTION__, id0);
+#endif
+  
+  if( id0 & 0x02,1 )
+    {
+      // EPROM pack
+#if DB_FL_ERAS
+  printf("\n%s:EPROM pak", __FUNCTION__);
+#endif
+
+      // Clear top bi tof record type of current record
+      
+      // Find the record
+      found = fl_frec(flw_crec, &pak_addr, &rectype, &reclen);
+      
+      // Read record if found
+      if( found )
+	{
+	  // Copy data
+	  // Skip the two byte header so we read just the data
+#if DB_FL_ERAS
+	  printf("\n%s:Addr;%04X", __FUNCTION__, pak_addr);
+#endif
+
+	  pk_sadd(pak_addr);
+	  pk_read(2, dest);
+	  
+#if DB_FL_ERAS
+	  printf("\nRead data:\n");
+	  db_dump(dest, 2);
+	  printf("\n");
+#endif
+
+	  // Clear the bit
+	  dest[1] &= 0x7f;
+
+	  // Write back
+	  pk_sadd(pak_addr);
+	  pk_save(2, dest);
+
+#if DB_FL_ERAS
+	  printf("\nWrite data:\n");
+	  db_dump(dest, 2);
+	  printf("\n");
+#endif
+
+	}
+    }
+  else
+    {
+    }
+  
+  // restore pak address
+  pk_sadd(pak_addr);
 }
 
 void fl_ffnd(void)
