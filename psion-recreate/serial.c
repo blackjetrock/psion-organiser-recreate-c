@@ -713,12 +713,14 @@ void ic_find(char *str, char *fmt)
   char s[254];
   char srch[64];
   int len;
+
+  srch[0] = '\0';
   
   sscanf(str, fmt, &srch);
   
   while( fl_find(srch, s, &len) )
     {
-      printf("\n%s:Found '%s'", __FUNCTION__, s);
+      printf("\n%d (%04X): '%s'", flw_crec, pk_qadd(), s);
       fl_next();
     }
 }
@@ -743,9 +745,16 @@ void ic_recno(char *str, char *fmt)
   sscanf(str,  fmt, &recno);
 
   fl_rset(recno);
-  
-  printf("\nRecord number now %d", flw_crec);
+}
 
+void ic_next(char *str, char *fmt)
+{
+  fl_next();
+}
+
+void ic_back(char *str, char *fmt)
+{
+  fl_back();
 }
 
 void ic_rect(char *str, char *fmt)
@@ -753,13 +762,10 @@ void ic_rect(char *str, char *fmt)
   int rect;
   FL_REC_TYPE rt;
   
-  sscanf(str, "rect %d", &rect);
+  sscanf(str, fmt, &rect);
 
   rt = rect;
   fl_rect(rt);
-  
-  printf("\nRecord type now %d", flb_rect);
-
 }
 
 
@@ -820,16 +826,21 @@ struct _IC_CMD
    {"dev",        "dev %d",          ic_device},
    {"catalog",    "",                ic_catalog},
    {"createfile", "createfile %s",   ic_createfile},
+   {"flfrec",     "flfrec %d %d %d", ic_flfrec},
    {"format",     "",                ic_format},
    {"test",       "",                ic_test},
    {"write",      "write %d %[^@]",  ic_write},
    {"read",       "",                ic_read},
    {"recno",      "recno %d",        ic_recno},
    {"rect",       "rect %d",         ic_rect},
-   {"flfrec",     "flfrec %d %d %d", ic_flfrec},
    {"find",       "find %s",         ic_find},
+   {"find",       "",                ic_find},
+
+   {"next",       "",                ic_next},
+   {"back",       "",                ic_back},
    {"exit",       "",                ic_exit},
    {"!",          "",                ic_boot_mass},
+   {"r",          "r %d",            ic_recno},
   };
 
 #define NUM_IC_CMD (sizeof(ic_cmds)/sizeof(struct _IC_CMD))

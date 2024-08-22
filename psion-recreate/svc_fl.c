@@ -215,6 +215,44 @@ void fl_pos_at_end(void)
 
 void fl_back(void)
 {
+  int recno;
+  PAK_ADDR pak_addr;
+  FL_REC_TYPE rectype;
+  int reclen;
+  int done = 0;
+  uint8_t recdata[256];
+  
+  // Get the current position and move to the next record
+  recno = fl_rpos();
+
+  // Now load records and search them
+  while(!done)
+    {
+      recno--;
+      
+#if DB_FL_FIND
+      printf("\n%s:Recno:%d rect:%d", __FUNCTION__, recno, rectype);
+#endif
+      
+      if( fl_frec(recno, &pak_addr, &rectype, &reclen) )
+	{
+	  if( rectype == flb_rect )
+	    {
+	      // Got next one
+	      fl_rset(recno);
+	      return;
+	    }
+	}
+      else
+	{
+	  // If off endof file, leaves pointer there so other code
+	  // can see that
+	  
+	  fl_rset(recno);
+	  // No more records
+	  done = 1;
+	}
+    }
 }
 
 void fl_bcat(void)
@@ -469,7 +507,7 @@ int fl_find(char *srch, char *dest, int *len)
 
 	  int found = 0;
 	  
-	  for(int i=0; i<reclen-strlen(srch); i++)
+	  for(int i=0; i<reclen; i++)
 	    {
 	      if( (strncmp(&(recdata[i]), srch, strlen(srch)) == 0) || (strlen(srch) == 0) )
 		{
@@ -528,6 +566,12 @@ int fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen)
   uint8_t record_data[256];
   PAK_ADDR recstart;
   FL_SCAN_PAK_CONTEXT context;
+
+  // Validate record number
+  if( n <= 0 )
+  {
+    return(0);
+  }
   
   // Check record to see if it is a file
   // record type is 0x81
