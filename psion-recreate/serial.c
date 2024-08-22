@@ -316,7 +316,7 @@ void cli_create(void)
   printf("\nEnter filename:");
   filename = serial_get_string();
   
-  fl_cret(filename);
+  fl_cret(filename, 0);
   
   printf("\nDone...");
   
@@ -668,8 +668,13 @@ void ic_createfile(char *str, char *fmt)
   char filename[20];
   sscanf(str, fmt, filename);
 
-  fl_cret(filename);
+  fl_cret(filename, 0);
 
+}
+
+void ic_createmain(char *str, char *fmt)
+{
+  fl_cret("MAIN", 0x90);
 }
 
 void ic_boot_mass(char *str, char *fmt)
@@ -826,6 +831,7 @@ struct _IC_CMD
    {"dev",        "dev %d",          ic_device},
    {"catalog",    "",                ic_catalog},
    {"createfile", "createfile %s",   ic_createfile},
+   {"createmain", "createmain %s",   ic_createmain},
    {"flfrec",     "flfrec %d %d %d", ic_flfrec},
    {"format",     "",                ic_format},
    {"test",       "",                ic_test},

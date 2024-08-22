@@ -61,15 +61,27 @@ CMakeFiles/psion_recreate.dir/menu.c.obj: \
  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate_all.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/match.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/menu.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/emulator.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/wireless.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/eeprom.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/display.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h \
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.h \
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_pico_flash.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_serial_eeprom.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_db.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/switches.h \
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/sysvar.h

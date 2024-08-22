@@ -23,17 +23,7 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-#include "psion_recreate.h"
-
-#include "menu.h"
-#include "emulator.h"
-#include "eeprom.h"
-#include "rtc.h"
-#include "display.h"
-#include "record.h"
-#include "svc_kb.h"
-#include "svc_dp.h"
-#include "svc_ed.h"
+#include "psion_recreate_all.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -687,6 +677,212 @@ void menu_save(void)
     }
 }
 
+void menu_fl_find(void)
+{
+  char find_str[MAX_INPUT_STR];
+  int searching = 0;
+  int cur_rec = 0;
+  int ed$pos = 2;
+  
+  find_str[0] ='\0';
+  display_clear();
+  printxy_str(0, 0, "Find:");
+  print_str(find_str);
+
+  while(1)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+      
+      if( (kb_test() != KEY_NONE) || searching )
+	{
+	  KEYCODE k = kb_getk();
+	  
+	  // Exit on ON key, exiting demonstrates it is working...
+	  if( k == KEY_ON )
+	    {
+	      if( strlen(find_str) == 0)
+		{
+		  // Refresh menu on exit
+		  menu_init = 1;
+		  return;
+		}
+	      else
+		{
+		  find_str[0] ='\0';
+		  
+		  display_clear();
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, find_str);
+		  continue;
+		}
+	    }
+
+	  if ( (k == KEY_EXE) || searching )
+	    {
+	      int reclen;
+	      char r[256];
+
+	      printf("\nStart search");
+	      
+	      if( !searching )
+		{
+		  printf("\nNot already in search");
+		  flw_crec = 1;
+		  searching = 1;
+		  
+		}
+	      
+	      // Find the record
+	      fl_rect(0x90);
+	      if( fl_find(find_str, r, &reclen) )
+		{
+		  fl_next();
+		  
+		  printf("\nFound");
+		  
+		  display_clear();
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, r);
+
+		  int done = 0;
+		  
+		  while(!done)
+		    {
+		      // Keep the display updated
+		      menu_loop_tasks();
+		      
+		      if( kb_test() != KEY_NONE )
+			{
+			  KEYCODE k = kb_getk();
+			  
+			  switch(k)
+			    {
+			    case KEY_EXE:
+			      done = 1;
+			      break;
+
+			    case KEY_ON:
+			      done = 1;
+			      find_str[0] ='\0';
+			      
+			      display_clear();
+			      printxy_str(0, 0, "Find:");
+			      printxy_str(5, 0, find_str);
+			      continue;
+			      
+			      break;
+			    }
+			}
+		    }
+		  continue;
+		}
+	      else
+		{
+		  printf("\nNo more records");
+		  
+		  // No more records
+		  searching = 0;
+
+		  find_str[0] ='\0';
+		  
+		  display_clear();
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, find_str);
+		  continue;
+		}
+	    }
+	  
+	  if ( strlen(find_str) < (MAX_INPUT_STR-2) )
+	    {
+	      char keystr[2] = " ";
+	      keystr[0] = k;
+	      strcat(find_str, keystr);
+	      
+	      display_clear();
+	      printxy_str(0, 0, "Find:");
+	      printxy_str(5, 0, find_str);
+	    }
+	}
+    }
+}
+
+void menu_fl_save(void)
+{
+  char save_str[MAX_INPUT_STR];
+  int searching = 0;
+  int cur_rec = 0;
+  int substate = SS_SAVE_INIT;
+  int recnum;
+  RECORD r;
+    
+  save_str[0] ='\0';
+  display_clear();
+  printxy_str(0, 0, "Save:");
+  print_str(save_str);
+
+  int done = 0;
+  
+  while(!done)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+      
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+
+	  switch(substate)
+	    {
+	    case SS_SAVE_INIT:
+	      switch(k)
+		{
+		case KEY_ON:
+		  // Exit on ON key, exiting demonstrates it is working...
+		  if( strlen(save_str) == 0)
+		    {
+		      // Refresh menu on exit
+		      menu_init = 1;
+		      return;
+		    }
+		  else
+		    {
+		      save_str[0] ='\0';
+		      
+		      display_clear();
+		      printxy_str(0, 0, "Save:");
+		      printxy_str(5, 0, save_str);
+		      continue;
+		    }
+				  
+		  break;
+
+		case KEY_EXE:
+
+		  // Save data in file 0x90 (MAIN)
+		  fl_rect(0x90);
+		  fl_writ(save_str, strlen(save_str));
+		  break;
+		  
+		default:
+		  if ( strlen(save_str) < (MAX_INPUT_STR-2) )
+		    {
+		      char keystr[2] = " ";
+		      keystr[0] = k;
+		      strcat(save_str, keystr);
+		      
+		      display_clear();
+		      printxy_str(0, 0, "Save:");
+		      printxy_str(5, 0, save_str);
+		    }
+		  break;
+		  
+		}
+	    }
+	}
+    }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -1189,12 +1385,14 @@ MENU menu_top =
     {'O', "Off",        menu_instant_off},
     {'E', "Eeprom",     menu_goto_eeprom},
     {'R', "RTC",        menu_goto_rtc},
-    {'F', "Find",       menu_find},
-    {'S', "Save",       menu_save},
     {'A', "All",        menu_all},
     {'M', "forMat",     menu_format},
     {'B', "Bubble",     menu_bubble},
     {'T', "Test",       menu_goto_test_os},
+
+    {'F', "Find",       menu_fl_find},
+    {'S', "Save",       menu_fl_save},
+
     {'&', "",           menu_null},
    }
   };
@@ -1208,6 +1406,8 @@ MENU menu_eeprom =
     {KEY_ON, "",           menu_back},
     {'I', "Invalidate", menu_eeprom_invalidate},
     {'M', "Mem",        menu_goto_mems},
+    {'F', "Find",       menu_find},
+    {'S', "Save",       menu_save},
     {'&', "",           menu_null},
    }
   };

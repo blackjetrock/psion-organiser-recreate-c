@@ -516,18 +516,30 @@ CMakeFiles/psion_recreate.dir/menu.c.obj: ../menu.c \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
   /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  ../psion_recreate_all.h \
   ../psion_recreate.h \
   ../match.h \
   ../font.h \
   ../menu.h \
   ../emulator.h \
+  ../wireless.h \
+  ../serial.h \
   ../eeprom.h \
   ../rtc.h \
   ../display.h \
   ../record.h \
+  ../svc.h \
+  ../svc_er.h \
+  ../svc_pk_base.h \
+  ../svc_fl.h \
   ../svc_kb.h \
   ../svc_dp.h \
-  ../svc_ed.h
+  ../svc_pak_pico_flash.h \
+  ../svc_pak_serial_eeprom.h \
+  ../svc_pk.h \
+  ../svc_db.h \
+  ../switches.h \
+  ../sysvar.h
 
 CMakeFiles/psion_recreate.dir/paged_eeprom.c.obj: ../paged_eeprom.c \
   /usr/include/newlib/ctype.h \
@@ -4785,15 +4797,7 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /usr/include/newlib/c++/9.2.1/bits/std_abs.h:
 
-/usr/include/newlib/c++/9.2.1/pstl/pstl_config.h:
-
-../record.h:
-
-/usr/include/newlib/sys/_sigset.h:
-
-/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
-
-../psion_recreate_all.h:
+../svc_dp.c:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h:
 
@@ -4803,13 +4807,19 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/psm.h:
 
-../svc_ed.h:
+/usr/include/newlib/c++/9.2.1/pstl/pstl_config.h:
 
-/usr/include/newlib/ctype.h:
+../record.h:
+
+/usr/include/newlib/sys/_sigset.h:
+
+/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h:
 
 ../svc_kb.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_time/time.c:
+
+../psion_recreate_all.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
 
@@ -4918,6 +4928,10 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 ../match.h:
 
 ../svc_dp.h:
+
+/usr/include/newlib/ctype.h:
+
+../svc_ed.h:
 
 ../menu.h:
 
@@ -5118,8 +5132,6 @@ generated/pico_base/pico/version.h:
 /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h:
 
 /tree/downloaded_tools/pico/pico-sdk/src/common/pico_util/queue.c:
-
-../svc_dp.c:
 
 ../svc_ed.c:
 

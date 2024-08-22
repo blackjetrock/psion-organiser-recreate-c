@@ -14,4 +14,4 @@
 #define DB_FL_FREC       0
 #define DB_FL_READ       0
 #define DB_FL_SIZE       0
-#define DB_FL_FIND       0
+#define DB_FL_FIND       1

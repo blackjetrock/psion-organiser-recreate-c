@@ -189,7 +189,7 @@ int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *des
 //
 // Position pak address at first unused byte
 //
-
+#if 0
 void fl_pos_at_end(void)
 {
   int rc = 0;
@@ -206,11 +206,26 @@ void fl_pos_at_end(void)
     }
 
 #if DB_FL_POS_AT_END
-  printf("\n%s:exit", __FUNCTION__);
+  printf("\n%s:exit Addr now:%04X", __FUNCTION__, pkw_cpad);
 #endif
 
 }
 
+#else
+
+void fl_pos_at_end(void)
+{
+  int rc = 0;
+  PAK_ADDR first_free;
+  int num_recs;
+  int bytes_free;
+
+  fl_size(&bytes_free, &num_recs, &first_free);
+  pk_sadd(first_free);
+  }
+
+#endif
+  
 ////////////////////////////////////////////////////////////////////////////////
 
 void fl_back(void)
@@ -354,9 +369,12 @@ void fl_copy(void)
 }
 
 //------------------------------------------------------------------------------
-// Create a file
+//
+// Create a file.
+// If type is 0 then find next available
 
-FL_REC_TYPE fl_cret(char *filename)
+
+FL_REC_TYPE fl_cret(char *filename, FL_REC_TYPE type)
 {
   int rc = 0;
   uint8_t record[11];
@@ -368,12 +386,15 @@ FL_REC_TYPE fl_cret(char *filename)
 
   for(int i=0x90; i<=0xfe; i++)
     {
+      used_rectypes[i-0x90] = 0;
     }
   
   printf("\n%s:", __FUNCTION__);
   
   // Scan the pak and work out the record types that are used
-
+  // We have to do this to find the end of the pack data
+  // even if we don't use the type.
+  
   uint8_t rectype;
   
   char fn[256];
@@ -418,11 +439,16 @@ FL_REC_TYPE fl_cret(char *filename)
       printf("\nNew rectype of %02X available", new_rectype);
     }
 
+  if( type != 0 )
+    {
+      new_rectype = type;
+    }
+
+  printf("\nFile record type:%02X", new_rectype);
   printf("\n");
 
-  
   // Create a file record entry at the end of the file
-
+  
   // Write the record
   // e.g.  09 81 4D 41 49 4E 20 20 20 20 90  filename "MAIN"
   record[0] = 0x09;
@@ -431,10 +457,22 @@ FL_REC_TYPE fl_cret(char *filename)
     {
       record[2+i] = *(filename++);
     }
-
+  
   record[10] = new_rectype;
 
+  PAK_ADDR pak_addr;
+  int reclen;
+  int bytes_free;
+  int num_recs;
+
+  // Append record
+  fl_size(&bytes_free, &num_recs, &pak_addr);
+  pk_sadd(pak_addr);
+  
   pk_save(11, record);
+  printf("\nFile record type:%02X", new_rectype);
+  printf("\n");
+  
 
 }
 
@@ -475,7 +513,8 @@ int fl_find(char *srch, char *dest, int *len)
       
   // Get the current position and move to the next record
   recno = flw_crec;
-
+  rectype= flb_rect;
+  
   // Now load records and search them
   while(!done)
     {

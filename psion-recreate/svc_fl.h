@@ -29,7 +29,7 @@ void fl_bsav(void);
 int fl_catl(FL_OP, int device, char *filename, uint8_t *rectype);
   
 void fl_copy(void);
-FL_REC_TYPE fl_cret(char *filename);
+FL_REC_TYPE fl_cret(char *filename, FL_REC_TYPE type);
 void fl_deln(void);
 void fl_eras(void);
 void fl_ffnd(void);
