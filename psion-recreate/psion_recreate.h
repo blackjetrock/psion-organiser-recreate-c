@@ -7,6 +7,20 @@ typedef uint8_t BYTE;
 
 #define DEBUG_STOP {volatile int x = 1; while (x) {} }
 
+typedef enum _KEYCODE
+  {
+   KEY_ON       = 1,
+   KEY_MODE     = 2,
+   KEY_UP       = 3,
+   KEY_DOWN     = 4,
+   KEY_LEFT     = 5,
+   KEY_RIGHT    = 6,
+   KEY_DEL      = 8,
+   KEY_EXE      = 13,
+   NOS_KEY_NONE = -1,
+   KEY_NONE     = -1,
+  } KEYCODE;
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // The model we are emulating chnages the display layout
@@ -166,14 +180,34 @@ extern unsigned char font_5x7_letters[];
 extern char lcd_display_buffer[MAX_DDRAM+2];
 extern char lcd_display[MAX_DDRAM+2];;
 extern char display_line[DISPLAY_NUM_LINES][DISPLAY_NUM_CHARS+1];
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+extern int cursor_on;
+extern uint64_t cursor_upd_time;
+extern uint64_t cursor_last_time;
+extern int cursor_phase;
+extern int cursor_char;
+extern int under_cursor_char[DISPLAY_NUM_CHARS][DISPLAY_NUM_LINES];
+extern int cursor_x;
+extern int cursor_y;
+extern int cursor_blink;
+extern int saved_char;
+
+void handle_cursor_key(KEYCODE k);
+
+////////////////////////////////////////////////////////////////////////////////
+
+
 void _nop_(void);
 
 void put_display_char(int x,int y, int ch);
 
 void write_port2(u_int8_t value);
 u_int8_t read_port2(void);
-
-
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -202,7 +236,7 @@ void Start(void);
 void Send_ACK(void);
 unsigned char ReceiveByte(void);
 void clear_oled(void);
-
+void print_cursor(int x, int y, int ch);
 void oledmain(void);
 
 

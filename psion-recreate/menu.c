@@ -226,6 +226,37 @@ void menu_scan_test(void)
   menu_init = 1;
 }
 
+void menu_cursor_test(void)
+{
+  char line[20];
+  int done = 0;
+  
+   while(!done)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+	  
+	  switch(k)
+	    {
+	    case KEY_ON:
+	      done = 1;
+	      break;
+	      
+	    default:
+	      handle_cursor_key(k);
+	      break;
+	    }
+	}
+    }
+   
+   // Refresh menu on exit
+   menu_init = 1;
+}
+
 //------------------------------------------------------------------------------
 
 // Turn off immediately, with no dump
@@ -904,6 +935,10 @@ void menu_fl_save(void)
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+//
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -1443,6 +1478,7 @@ MENU menu_test_os =
     {'D', "DispTest",   menu_oled_test},
     {'V', "dpView",     menu_dp_view},
     {'B', "Buzz",       menu_goto_buzzer},
+    {'C', "Cursor",     menu_cursor_test},
     {'&', "",           menu_null},
    }
   };

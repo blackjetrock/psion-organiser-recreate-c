@@ -9,6 +9,7 @@
 #include "rtc.h"
 #include "display.h"
 #include "record.h"
+#include "font.h"
 
 #include "svc.h"
 
