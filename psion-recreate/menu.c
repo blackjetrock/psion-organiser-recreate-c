@@ -230,6 +230,10 @@ void menu_cursor_test(void)
 {
   char line[20];
   int done = 0;
+
+  display_clear();
+  i_printxy_str(0, 0, "Cursor keys to move");
+  i_printxy_str(0, 1, "B:Toggle blink");
   
    while(!done)
     {
