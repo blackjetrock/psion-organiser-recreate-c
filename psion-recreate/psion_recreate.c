@@ -336,7 +336,7 @@ void menu_tasks(void)
 #define CURSOR_CHAR 0x100
 #define CURSOR_UNDERLINE 0x101
 
-int cursor_on = 1;
+int cursor_on = 0;
 uint64_t cursor_upd_time = 1000000L;
 uint64_t cursor_last_time = 0;
 int cursor_phase = 0;

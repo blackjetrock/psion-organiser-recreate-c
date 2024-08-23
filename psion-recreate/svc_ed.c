@@ -27,11 +27,87 @@ KEYCODE ed_edit(char *str)
 {
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Standard line editor
+//
+// str: string to edit
+// len: Max length of str
+// single_nmulti_line:  1 single line, 0:multi line
+//
+//
+// Returns terminating key code
 
-KEYCODE ed_epos(char *str)
+typedef enum
+  {
+   ED_STATE_INIT = 1,
+   ED_STATE_EDIT,
+  } ED_STATE;
+
+ED_STATE ed_state = ED_STATE_INIT;
+;
+
+int epos_px = 0;
+int epos_py = 0;
+char epos_prompt[DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES];
+
+KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 {
-}
+  int done = 0;
+  
+  // printpos defines any prompt before the string
+  epos_px = printpos_x;
+  epos_py = printpos_y;
+  
+  // Copy prompt
+  for(int i=0; i<DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES; i++)
+    {
+      epos_prompt[i] = under_cursor_char[i%DISPLAY_NUM_CHARS][i/DISPLAY_NUM_CHARS];
+    }
+  epos_prompt[epos_py*DISPLAY_NUM_CHARS+epos_px] = '\0';
+  
+  display_clear();
+  i_printxy_str(0, 0, epos_prompt);
+  flowprint(str);
 
+  cursor_on = 1;
+  cursor_blink = 1;
+  cursor_x = printpos_x;
+  cursor_y = printpos_y;
+  
+  ed_state = ED_STATE_EDIT;
+  
+  while(!done)
+    {
+      // Keep the display updated
+      menu_loop_tasks();
+
+      // Handle keypresses
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+	  
+	  switch(ed_state)
+	    {
+	      // Clear display and put string on display
+	    case ED_STATE_INIT:
+	      
+	      break;
+	      
+	    case ED_STATE_EDIT:
+	      switch(k)
+		{
+		case KEY_ON:
+		  cursor_on = 0;
+		  done = 1;
+		  break;
+		}
+	      break;
+	      
+	    }
+	}
+    }
+}
 ////////////////////////////////////////////////////////////////////////////////
 //
 // ed$view service

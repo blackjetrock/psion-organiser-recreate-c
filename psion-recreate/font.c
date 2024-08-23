@@ -310,6 +310,30 @@ return(r);
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+// Where the last character was printed, plus one character, i.e.
+// where a 'flowed' character will be displayed next
+
+int printpos_x = 0;
+int printpos_y = 0;
+int printpos_at_end = 0;
+
+// Move to next position for printing
+void next_printpos(void)
+{
+  printpos_x++;
+
+  if( printpos_x >= DISPLAY_NUM_CHARS )
+    {
+      printpos_x = 0;
+      printpos_y++;
+      
+      if( printpos_x >= DISPLAY_NUM_LINES )
+	{
+	  printpos_y--;
+	}
+    }
+}
+
 void i_printxy(int x, int y, int ch)
 {
   int cx, cy;
@@ -319,7 +343,12 @@ void i_printxy(int x, int y, int ch)
     {
       under_cursor_char[x][y] = ch;
     }
-  
+
+  // Update the current print posiution
+  printpos_x = x;
+  printpos_y = y;
+  next_printpos();
+
   serial_display_xy(x, y, ch);
   
   ch -= 0;
@@ -341,6 +370,15 @@ void i_printxy(int x, int y, int ch)
     }
   i2c_send_byte(0);
   i2c_stop();
+}
+
+void flowprint(char *s)
+{
+  while(*s != '\0')
+    {
+      i_printxy(printpos_x, printpos_y, *s);
+      s++;
+    }
 }
 
 void print_cursor(int x, int y, int ch)

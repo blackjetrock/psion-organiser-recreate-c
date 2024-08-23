@@ -186,6 +186,19 @@ void menu_goto_rtc(void)
 }
 
 
+void menu_epos_test(void)
+{
+  char line[20];
+
+  i_printxy_str(0, 0, "");
+  flowprint("default");
+	    
+  ed_epos("default", 30, 0, 0);
+  
+  // Refresh menu on exit
+  menu_init = 1;
+}
+
 //------------------------------------------------------------------------------
 
 
@@ -234,6 +247,8 @@ void menu_cursor_test(void)
   display_clear();
   i_printxy_str(0, 0, "Cursor keys to move");
   i_printxy_str(0, 1, "B:Toggle blink");
+
+  cursor_on = 1;
   
    while(!done)
     {
@@ -247,6 +262,7 @@ void menu_cursor_test(void)
 	  switch(k)
 	    {
 	    case KEY_ON:
+	      cursor_on = 0;
 	      done = 1;
 	      break;
 	      
@@ -1483,6 +1499,7 @@ MENU menu_test_os =
     {'V', "dpView",     menu_dp_view},
     {'B', "Buzz",       menu_goto_buzzer},
     {'C', "Cursor",     menu_cursor_test},
+    {'E', "Epos",       menu_epos_test},
     {'&', "",           menu_null},
    }
   };
