@@ -291,7 +291,7 @@ unsigned char font_5x7_letters[] =
 
 int invert_byte(int b)
 {
-int r = 0;
+  int r = 0;
 
   for(int i=0; i<8; i++)
     {
@@ -299,7 +299,7 @@ int r = 0;
       r |=(b & 1);
       b >>= 1;
     }
-return(r);
+  return(r);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -332,6 +332,12 @@ void next_printpos(void)
 	  printpos_y--;
 	}
     }
+
+  if( (printpos_x == (DISPLAY_NUM_CHARS-2)) && (printpos_y == (DISPLAY_NUM_LINES-1) ))
+    {
+      printpos_at_end = 1;
+    }
+  
 }
 
 void i_printxy(int x, int y, int ch)
@@ -363,7 +369,7 @@ void i_printxy(int x, int y, int ch)
   // Send slave address with read bit
   i2c_send_byte(Write_Address);
   i2c_send_byte(0x40);
-
+  
   for(int j=0; j<5; j++)
     {
       i2c_send_byte(invert_byte(font_5x7_letters[ch*5+(4-j)]));
@@ -371,7 +377,7 @@ void i_printxy(int x, int y, int ch)
   i2c_send_byte(0);
   i2c_stop();
 }
-
+  
 void flowprint(char *s)
 {
   while(*s != '\0')
@@ -379,6 +385,21 @@ void flowprint(char *s)
       i_printxy(printpos_x, printpos_y, *s);
       s++;
     }
+}
+
+void clear_end_screen(void)
+{
+  int save_pp_x = printpos_x;
+  int save_pp_y = printpos_y;
+  
+  while( !printpos_at_end )
+    {
+      i_printxy(printpos_x, printpos_y, ' ');
+    }
+
+  printpos_x = save_pp_x;
+  printpos_y = save_pp_y;
+  
 }
 
 void print_cursor(int x, int y, int ch)

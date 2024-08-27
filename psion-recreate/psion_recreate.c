@@ -618,6 +618,8 @@ int main()
   sleep_ms(10);
   initialise_oled();
   
+  printxy_str(0, 0, "***");
+
   // Clear screen
   clear_oled();
   stdio_init_all();

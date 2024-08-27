@@ -54,6 +54,7 @@ char epos_prompt[DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES];
 KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 {
   int done = 0;
+  char charstr[2] = "";
   
   // printpos defines any prompt before the string
   epos_px = printpos_x;
@@ -67,6 +68,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
   epos_prompt[epos_py*DISPLAY_NUM_CHARS+epos_px] = '\0';
   
   display_clear();
+  
   i_printxy_str(0, 0, epos_prompt);
   flowprint(str);
 
@@ -101,10 +103,30 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 		  cursor_on = 0;
 		  done = 1;
 		  break;
+
+		case KEY_DEL:
+		  if( strlen(str) > 0 )
+		    {
+		      str[strlen(str)-1] = '\0';
+		    }
+		  break;
+		  
+		default:
+		  charstr[0] = k;
+		  strcat(str, charstr);
+		  break;
 		}
 	      break;
 	      
 	    }
+
+	  // Update the display
+	  i_printxy_str(0, 0, epos_prompt);
+	  flowprint(str);
+	  cursor_x = printpos_x;
+	  cursor_y = printpos_y;
+	  clear_end_screen();
+	  
 	}
     }
 }

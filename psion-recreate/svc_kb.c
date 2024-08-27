@@ -54,6 +54,16 @@ int mat_scan_last_n = 0;
 int mat_scan_state = MAT_SCAN_STATE_DRIVE;
 int mat_sense = 0;
 
+// Last time a key was presed (or we reset). used to turn off after some time delay
+uint64_t last_key_press_time = 0;
+int init_last_key = 1;
+
+// How long we wait before turning off if no keys pressed
+uint64_t kb_inactivity_timeout = 20*60*1000*1000;
+uint64_t last_tick_time = 0;
+uint64_t tick_interval = 5*1000*1000;
+int tick = 0;
+
 // Bit positions within matrix of each key
 
 #define MATRIX_BIT_CAP    1
@@ -442,6 +452,9 @@ void matrix_debounce(MATRIX_MAP matrix)
 	  // Key pressed
 	  //printf("\nC:%c", key_map[i].c);
 
+	  // Update inactivity timeout
+	  last_key_press_time = time_us_64();
+	  
 	  // Put key pressed event into key buffer
 	  nos_put_key(key_map[i].c);
 	  return;
@@ -452,8 +465,48 @@ void matrix_debounce(MATRIX_MAP matrix)
   // We may have keys from other sources, accept those as well
   if( kb_external_key != KEY_NONE )
     {
+      // Update inactivity timeout
+      last_key_press_time = time_us_64();
+
       nos_put_key(kb_external_key);
       kb_external_key = KEY_NONE;
+    }
+
+  // Inactivity processing
+
+  // Initialise the last key time as global initialisation has to be constant
+  if( init_last_key )
+    {
+      init_last_key = 0;
+      last_key_press_time = time_us_64();
+      last_tick_time =  last_key_press_time;
+    }
+
+  uint64_t now = time_us_64();
+  uint64_t inactivity_time = (now - last_key_press_time);
+
+  if( (now - last_tick_time) > tick_interval )
+    {
+      last_tick_time = now;
+      tick = 1;
+    }
+  
+ 
+  if( inactivity_time > kb_inactivity_timeout )
+    {
+      // Inactive for too long, turn off;
+      handle_power_off();
+    }
+  else
+    {
+      if( inactivity_time > (kb_inactivity_timeout / 10 * 7) )
+	{
+	  if( tick )
+	    {
+	      tick = 0;
+	      printf("\nInactive:turning off in %lld seconds", (kb_inactivity_timeout - inactivity_time)/1000000);
+	    }
+	}
     }
 }
 

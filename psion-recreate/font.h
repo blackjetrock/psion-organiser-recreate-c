@@ -11,6 +11,7 @@ void i_printxy_hex(int x, int y, int value);
 extern int printpos_x;
 extern int printpos_y;
 void flowprint(char *s);
+void clear_end_screen(void);
 
 void write_display_extra(int i, int ch);
 
