@@ -209,6 +209,7 @@ void display_save(void);
 void handle_power_off(void);
 void loop_emulator(void);
 void WR_ADDR(u_int16_t addr, u_int8_t value);
+void create_underline_char(int ch, int dest_code);
 
 #if PROT
 #define RAMDATA_FIX(AAA)  ramdata[(AAA>=0x8000)?badram():AAA]

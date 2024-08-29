@@ -9,8 +9,9 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-#include "psion_recreate.h"
+#include "psion_recreate_all.h"
 
+#if 0
 #include "menu.h"
 #include "emulator.h"
 #include "eeprom.h"
@@ -20,8 +21,54 @@
 #include "svc_kb.h"
 #include "svc_dp.h"
 #include "svc_ed.h"
+#endif
 
 #include "nos.h"
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Utility functions
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Update the display for th epos service.
+
+void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_line, int display_start_index)
+{
+#if DB_ED_EPOS
+  printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
+  printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
+  printf("\n");
+#endif
+
+  i_printxy_str(0, 0, epos_prompt);
+
+#if DB_ED_EPOS
+  printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
+  printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
+  printf("\n");
+#endif
+
+  flowprint(str+display_start_index);
+#if DB_ED_EPOS
+  printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
+  printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
+  printf("\n");
+#endif
+  
+  cursor_x = printpos_x;
+  cursor_y = printpos_y;
+  clear_end_screen();
+
+#if DB_ED_EPOS
+  printf("\n%s: Exit", __FUNCTION__);
+#endif
+  
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
 
 KEYCODE ed_edit(char *str)
 {
@@ -45,7 +92,7 @@ typedef enum
   } ED_STATE;
 
 ED_STATE ed_state = ED_STATE_INIT;
-;
+
 
 int epos_px = 0;
 int epos_py = 0;
@@ -55,8 +102,18 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 {
   int done = 0;
   char charstr[2] = "";
+  int insert_point        = 0;  // Index where next character should be inserted
+  int cursor_line         = 0;  // Which line the cursor is on (0-based)
+  int display_start_index = 0;  // The index of the first character in the string that is currently
+                                // displayed
   
   // printpos defines any prompt before the string
+#if DB_ED_EPOS
+  printf("\n%s: ", __FUNCTION__);
+  printf("\n");
+  sleep_ms(100);
+#endif
+
   epos_px = printpos_x;
   epos_py = printpos_y;
   
@@ -66,11 +123,6 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
       epos_prompt[i] = under_cursor_char[i%DISPLAY_NUM_CHARS][i/DISPLAY_NUM_CHARS];
     }
   epos_prompt[epos_py*DISPLAY_NUM_CHARS+epos_px] = '\0';
-  
-  display_clear();
-  
-  i_printxy_str(0, 0, epos_prompt);
-  flowprint(str);
 
   cursor_on = 1;
   cursor_blink = 1;
@@ -78,9 +130,29 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
   cursor_y = printpos_y;
   
   ed_state = ED_STATE_EDIT;
+
+  cursor_line = 0;
+  insert_point = 0;
+  display_start_index = 0;
+
+  // Display initial string
+#if DB_ED_EPOS
+  printf("\n%s: Init", __FUNCTION__);
+  printf("\n");
+  sleep_ms(100);
+#endif
+
+  display_clear();
+  display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
   
   while(!done)
     {
+#if DB_ED_EPOS
+  printf("\n%s: Loop", __FUNCTION__);
+  printf("\n");
+  sleep_ms(100);
+#endif
+
       // Keep the display updated
       menu_loop_tasks();
 
@@ -123,11 +195,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 	    }
 
 	  // Update the display
-	  i_printxy_str(0, 0, epos_prompt);
-	  flowprint(str);
-	  cursor_x = printpos_x;
-	  cursor_y = printpos_y;
-	  clear_end_screen();
+	  display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
 	  
 	}
     }

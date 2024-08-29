@@ -76,6 +76,7 @@ CMakeFiles/psion_recreate.dir/display.c.obj
  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h
  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h
  /tree/downloaded_tools/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate_all.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/match.h
  /usr/include/newlib/ctype.h
@@ -84,7 +85,27 @@ CMakeFiles/psion_recreate.dir/display.c.obj
  /usr/include/newlib/machine/stdlib.h
  /usr/include/newlib/alloca.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/menu.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/emulator.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/wireless.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/eeprom.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/display.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_pico_flash.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_serial_eeprom.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_db.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/switches.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/sysvar.h
 
 CMakeFiles/psion_recreate.dir/eeprom.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/eeprom.c
@@ -306,10 +327,31 @@ CMakeFiles/psion_recreate.dir/font.c.obj
  /usr/include/newlib/string.h
  /usr/include/newlib/strings.h
  /usr/include/newlib/sys/string.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate_all.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/match.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/menu.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/emulator.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/wireless.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/eeprom.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/display.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_pico_flash.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_serial_eeprom.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_db.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/switches.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/sysvar.h
 
 CMakeFiles/psion_recreate.dir/i2c.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/i2c.c
@@ -537,6 +579,7 @@ CMakeFiles/psion_recreate.dir/menu.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -911,6 +954,7 @@ CMakeFiles/psion_recreate.dir/serial.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1015,6 +1059,7 @@ CMakeFiles/psion_recreate.dir/svc_db.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1116,6 +1161,7 @@ CMakeFiles/psion_recreate.dir/svc_dp.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1205,18 +1251,31 @@ CMakeFiles/psion_recreate.dir/svc_ed.c.obj
  /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
  /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate_all.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/match.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/font.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/menu.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/emulator.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/wireless.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/serial.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/eeprom.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/rtc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/display.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_dp.h
- /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_pico_flash.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pak_serial_eeprom.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_db.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/switches.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/sysvar.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/nos.h
 
 CMakeFiles/psion_recreate.dir/svc_er.c.obj
@@ -1309,6 +1368,7 @@ CMakeFiles/psion_recreate.dir/svc_er.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1411,6 +1471,7 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1512,6 +1573,7 @@ CMakeFiles/psion_recreate.dir/svc_kb.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1619,6 +1681,7 @@ CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1718,6 +1781,7 @@ CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1820,6 +1884,7 @@ CMakeFiles/psion_recreate.dir/svc_pk.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h
@@ -1924,6 +1989,7 @@ CMakeFiles/psion_recreate.dir/sysvar.c.obj
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/record.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_er.h
+ /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_ed.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_pk_base.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_fl.h
  /tree/projects/github/psion-organiser-recreate-c/psion-recreate/svc_kb.h

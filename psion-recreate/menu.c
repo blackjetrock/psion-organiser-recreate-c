@@ -190,13 +190,13 @@ void menu_epos_test(void)
 {
   char line[20];
   char e_buffer[64];
-  
+
   i_printxy_str(0, 0, "");
   flowprint("default");
 
   strcpy(e_buffer, "DATA");
   ed_epos(e_buffer, 30, 0, 0);
-  
+
   // Refresh menu on exit
   menu_init = 1;
 }

@@ -9,17 +9,45 @@ typedef uint8_t BYTE;
 
 typedef enum _KEYCODE
   {
-   KEY_ON       = 1,
-   KEY_MODE     = 2,
-   KEY_UP       = 3,
-   KEY_DOWN     = 4,
-   KEY_LEFT     = 5,
-   KEY_RIGHT    = 6,
-   KEY_DEL      = 8,
-   KEY_EXE      = 13,
-   NOS_KEY_NONE = -1,
-   KEY_NONE     = -1,
+   KEY_ON        = 1,
+   KEY_MODE      = 2,
+   KEY_UP        = 3,
+   KEY_DOWN      = 4,
+   KEY_LEFT      = 5,
+   KEY_RIGHT     = 6,
+   KEY_SHIFT_DEL = 7,
+   KEY_DEL       = 8,
+   KEY_TAB       = 9,
+   KEY_EXE       = 13,
+   NOS_KEY_NONE  = -1,
+   KEY_NONE      = -1,
   } KEYCODE;
+
+// Character codes
+
+typedef enum _CHRCODE
+  {
+   CHRCODE_LEFT     = 8,
+   CHRCODE_TAB      = 9,
+   CHRCODE_LF       = 10,
+   CHRCODE_HOME     = 11,
+   CHRCODE_CLS      = 12,
+   CHRCODE_CR       = 13,
+   CHRCODE_CLL1     = 14,
+   CHRCODE_CLL2     = 15,
+   CHRCODE_BEEP     = 16,
+   CHRCODE_RFSH_12  = 17,
+   CHRCODE_RFSH_1   = 18,
+   CHRCODE_RFSH_2   = 19,
+   CHRCODE_RFSH_3   = 20,
+   CHRCODE_RFSH_4   = 21,
+   CHRCODE_CLL3     = 22,
+   CHRCODE_CLL4     = 23,
+   CHRCODE_DASHES   = 24,
+   CHRCODE_CLREOL   = 25,
+   CHRCODE_  = 26,
+
+  } CHRCODE;
 
 
 ////////////////////////////////////////////////////////////////////////////////

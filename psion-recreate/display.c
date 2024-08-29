@@ -15,8 +15,8 @@
 #include "hardware/gpio.h"
 #include "pico/binary_info.h"
 
-#include "psion_recreate.h"
-#include "display.h"
+#include "psion_recreate_all.h"
+//#include "display.h"
 
 #define IGNORE_ACK       1
 #define DEMO_DELAY       100

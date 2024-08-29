@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "psion_recreate.h"
+#include "psion_recreate_all.h"
 
 #include "serial.h"
 
@@ -317,22 +317,21 @@ int printpos_x = 0;
 int printpos_y = 0;
 int printpos_at_end = 0;
 
-// Move to next position for printing
-void next_printpos(void)
+void next_printpos_line(void)
 {
-  printpos_x++;
-
-  if( printpos_x >= DISPLAY_NUM_CHARS )
+#if DB_NEXT_PRINTPOS
+  printf("\n%s:Entry printpos_at_end:%d printpos_x:%d printpos_y:%d", __FUNCTION__, printpos_at_end, printpos_x, printpos_y);
+#endif
+  
+  printpos_x = 0;
+  printpos_y++;
+  
+  if( printpos_y >= DISPLAY_NUM_LINES )
     {
-      printpos_x = 0;
-      printpos_y++;
-      
-      if( printpos_x >= DISPLAY_NUM_LINES )
-	{
-	  printpos_y--;
-	}
+      printpos_y--;
+      printpos_x = (DISPLAY_NUM_CHARS-2);
     }
-
+  
   if( (printpos_x == (DISPLAY_NUM_CHARS-2)) && (printpos_y == (DISPLAY_NUM_LINES-1) ))
     {
       printpos_at_end = 1;
@@ -341,7 +340,27 @@ void next_printpos(void)
     {
       printpos_at_end = 0;
     }
+
+#if DB_NEXT_PRINTPOS
+  printf("\n%s:Exit printpos_at_end:%d printpos_x:%d printpos_y:%d", __FUNCTION__, printpos_at_end, printpos_x, printpos_y);
+#endif
+
+}
+
+// Move to next position for printing
+void next_printpos(void)
+{
+  printpos_x++;
   
+  if( printpos_x >= DISPLAY_NUM_CHARS )
+    {
+      next_printpos_line();
+    }
+}
+
+void new_line(void)
+{
+
 }
 
 void i_printxy(int x, int y, int ch)
@@ -386,6 +405,11 @@ void flowprint(char *s)
 {
   while(*s != '\0')
     {
+      if( (*s) == KEY_TAB )
+	{
+	  next_printpos_line();
+	}
+
       i_printxy(printpos_x, printpos_y, *s);
       s++;
     }
