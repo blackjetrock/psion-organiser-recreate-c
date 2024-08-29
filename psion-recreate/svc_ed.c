@@ -88,6 +88,8 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
       if( kb_test() != KEY_NONE )
 	{
 	  KEYCODE k = kb_getk();
+
+	  cursor_phase = 1;
 	  
 	  switch(ed_state)
 	    {

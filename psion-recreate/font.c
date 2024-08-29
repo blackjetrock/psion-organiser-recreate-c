@@ -337,6 +337,10 @@ void next_printpos(void)
     {
       printpos_at_end = 1;
     }
+  else
+    {
+      printpos_at_end = 0;
+    }
   
 }
 
