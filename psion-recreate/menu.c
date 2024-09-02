@@ -113,12 +113,14 @@ void menu_process(void)
 
 void init_menu_top(void)
 {
-  //  printxy_str(0, 0, "Meta");
+}
+
+void init_menu_format(void)
+{
 }
 
 void init_menu_eeprom(void)
 {
-  //printxy_str(0, 0, "EEPROM");
 }
 
 void init_menu_test_os(void)
@@ -131,12 +133,10 @@ void init_menu_buzzer(void)
 
 void init_menu_rtc(void)
 {
-  //printxy_str(0, 0, "EEPROM");
 }
 
 void init_menu_mems(void)
 {
-  //print_str("Memories");
 }
 
 //------------------------------------------------------------------------------
@@ -163,6 +163,11 @@ void menu_back(void)
 void menu_goto_eeprom(void)
 {
   goto_menu(&menu_eeprom);
+}
+
+void menu_goto_format(void)
+{
+  goto_menu(&menu_format);
 }
 
 void menu_goto_test_os(void)
@@ -445,27 +450,16 @@ int display_record(RECORD *r)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-#if 0
-void menu_format(void)
+void menu_fmat(void)
 {
-  RECORD r;
-  char line[32];
-  
   dp_cls();
+  dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
   
-  for(int i=0; i<NUM_RECORDS; i++)
-    {
-      sprintf(line, "REC %c", i);
-      printxy_str(0, 0, line);
-      
-      r.flag = '-';
-      sprintf(&(r.key[0]), "K%c", 'A'+(i%10));
-      sprintf(&(r.data[0]), "Data for rec %02X", i);
-      put_record(i, &r);
-      display_record(&r);
-    }
+  dp_prnt("Formatting...");
+  
+  pk_fmat();
+  menu_back();
 }
-#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -644,6 +638,7 @@ void menu_fl_find(void)
   KEYCODE   k;
   int       reclen;
   char      r[256];
+
   
   find_str[0] ='\0';
   dp_cls();
@@ -742,12 +737,7 @@ void menu_fl_find(void)
 	      
 	      find_str[0] ='\0';
 
-	      mf_state = MF_STATE_SRCH_START;
-	      
-	      //dp_cls();
-	      //printxy_str(0, 0, "Find:");
-	      //printxy_str(5, 0, find_str);
-	      
+	      mf_state = MF_STATE_INIT;
 	    }
 	  break;
 	  
@@ -909,6 +899,11 @@ void menu_fl_find_xxx(void)
 
 #endif
 
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+
+
 void menu_fl_save(void)
 {
   char save_str[MAX_INPUT_STR];
@@ -917,75 +912,54 @@ void menu_fl_save(void)
   int substate = SS_SAVE_INIT;
   int recnum;
   RECORD r;
-    
+  int done = 0;
+  KEYCODE   k;
+  
   save_str[0] ='\0';
   dp_cls();
   printxy_str(0, 0, "Save:");
   print_str(save_str);
-
-  int done = 0;
   
+
+
   while(!done)
     {
-      // Keep the display updated
-      menu_loop_tasks();
+      k = ed_epos(save_str, 64, 0, 0);
       
-      if( kb_test() != KEY_NONE )
+      switch(k)
 	{
-	  KEYCODE k = kb_getk();
-
-	  switch(substate)
+	case KEY_ON:
+	  // Exit on ON key, exiting demonstrates it is working...
+	  if( strlen(save_str) == 0)
 	    {
-	    case SS_SAVE_INIT:
-	      switch(k)
-		{
-		case KEY_ON:
-		  // Exit on ON key, exiting demonstrates it is working...
-		  if( strlen(save_str) == 0)
-		    {
-		      // Refresh menu on exit
-		      menu_init = 1;
-		      return;
-		    }
-		  else
-		    {
-		      save_str[0] ='\0';
-		      
-		      dp_cls();
-		      printxy_str(0, 0, "Save:");
-		      printxy_str(5, 0, save_str);
-		      continue;
-		    }
-				  
-		  break;
-
-		case KEY_EXE:
-
-		  // Save data in file 0x90 (MAIN)
-		  fl_rect(0x90);
-		  fl_writ(save_str, strlen(save_str));
-		  break;
-
-		case KEY_DEL:
-		  save_str[strlen(save_str)-1] = '\0';
-		  printxy_str(5+strlen(save_str), 0, "                 ");
-		  break;
-		  
-		default:
-		  if ( strlen(save_str) < (MAX_INPUT_STR-2) )
-		    {
-		      char keystr[2] = " ";
-		      keystr[0] = k;
-		      strcat(save_str, keystr);
-		      
-		      dp_cls();
-		      printxy_str(0, 0, "Save:");
-		      printxy_str(5, 0, save_str);
-		    }
-		  break;
-		  
-		}
+	      // Refresh menu on exit
+	      menu_init = 1;
+	      done = 1;
 	    }
+	  else
+	    {
+	      save_str[0] ='\0';
+	      
+	      dp_cls();
+	      printxy_str(0, 0, "Save:");
+	      printxy_str(5, 0, save_str);
+	    }
+	  
+	  break;
+	  
+	case KEY_EXE:
+	  
+	  // Save data in file 0x90 (MAIN)
+	  fl_rect(0x90);
+	  fl_writ(save_str, strlen(save_str));
+
+	  save_str[0] ='\0';
+	  
+	  dp_cls();
+	  printxy_str(0, 0, "Save:");
+	  printxy_str(5, 0, save_str);
+	  
+	  break;
 	}
     }
 }
@@ -1502,6 +1476,7 @@ MENU menu_top =
 
     {'F', "Find",       menu_fl_find},
     {'S', "Save",       menu_fl_save},
+    {'M', "forMat",     menu_goto_format},
 
     {'&', "",           menu_null},
    }
@@ -1516,6 +1491,19 @@ MENU menu_eeprom =
     {KEY_ON, "",           menu_back},
     {'I', "Invalidate", menu_eeprom_invalidate},
     {'M', "Mem",        menu_goto_mems},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_format =
+  {
+   &menu_top,
+   "Format Y/N?",
+   init_menu_format,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'Y', "Yes",        menu_fmat},
+    {'N', "No",         menu_back},
     {'&', "",           menu_null},
    }
   };
