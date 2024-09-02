@@ -356,6 +356,16 @@ void next_printpos(int ch)
     {
       next_printpos_line();
     }
+  
+  if( (printpos_x == (DISPLAY_NUM_CHARS-2)) && (printpos_y == (DISPLAY_NUM_LINES-1) ))
+    {
+      printpos_at_end = 1;
+    }
+  else
+    {
+      printpos_at_end = 0;
+    }
+  
 }
 
 void new_line(void)
@@ -373,7 +383,7 @@ void i_printxy(int x, int y, int ch)
       under_cursor_char[x][y] = ch;
     }
 
-  // Update the current print posiution
+  // Update the current print position
   printpos_x = x;
   printpos_y = y;
   next_printpos(ch);

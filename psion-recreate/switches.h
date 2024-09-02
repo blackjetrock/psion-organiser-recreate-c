@@ -17,5 +17,5 @@
 #define DB_FL_FIND       0
 #define DB_FL_ERAS       1
 
-#define DB_ED_EPOS       0
-#define DB_NEXT_PRINTPOS 0
+#define DB_ED_EPOS       1
+#define DB_NEXT_PRINTPOS 1

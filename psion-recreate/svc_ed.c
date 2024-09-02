@@ -150,7 +150,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
   
   while(!done)
     {
-#if DB_ED_EPOS
+#if 0
   printf("\n%s: Loop", __FUNCTION__);
   printf("\n");
   sleep_ms(100);
