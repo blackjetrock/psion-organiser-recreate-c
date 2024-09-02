@@ -701,12 +701,12 @@ void menu_fl_find(void)
 	      
 	      dp_cls();
 	      printxy_str(0, 0, "Find:");
-	      k = dp_view(r, view_line);
+	      k = ed_view(r, view_line);
 
 	      switch(k)
 		{
 		case KEY_EXE:
-		  //done = 1;
+		  fl_next();
 		  break;
 		  
 		case KEY_DEL:
@@ -743,7 +743,7 @@ void menu_fl_find(void)
 		  break;
 		  
 		default:
-		  fl_next();
+		  //		  fl_next();
 		  break;
 		}
 	    }
@@ -1277,7 +1277,35 @@ char *dpview_data =
 
 void menu_dp_view(void)
 {
-  ed_view(dpview_data);
+  KEYCODE k;
+  int done = 0;
+  int view_line = 1;
+  
+  while(!done)
+    {
+      k = ed_view(dpview_data, view_line);
+
+      switch(k)
+	{
+	case KEY_UP:
+	  if( view_line > 0 )
+	    {
+	      view_line--;
+	    }
+	  break;
+	  
+	case KEY_DOWN:
+	  if( view_line < (DISPLAY_NUM_LINES-1) )
+	    {
+	      view_line++;
+	    }
+	  break;
+
+	case KEY_ON:
+	  done = 1;
+	  break;
+	}
+    }
 }
 
 void menu_buz1(void)

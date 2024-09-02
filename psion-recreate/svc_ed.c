@@ -262,7 +262,7 @@ void ed_import_str(char *str)
       switch(*str)
 	{
 	case '\n':
-	case '\t':
+	case KEY_TAB:
 	  line++;
 
 	  if( line >= ED_NUM_LINES )
@@ -283,10 +283,10 @@ void ed_import_str(char *str)
     }
 }
 
-KEYCODE ed_view(char *str)
+KEYCODE ed_view(char *str, int ln)
 {
   int done = 0;
-  unsigned int line = 1;
+  unsigned int line = ln;
   KEYCODE k = KEY_NONE;
 
   // Import the string into the edit buffer
@@ -305,19 +305,24 @@ KEYCODE ed_view(char *str)
 
       switch(k)
 	{
+	case KEY_EXE:
 	case KEY_ON:
 	  done = 1;
 	  break;
 
  	case KEY_DOWN:
-	  line = (line + 1) % ED_VIEW_N;
+	  done = 1;
+	  //	  line = (line + 1) % ED_VIEW_N;
 	  break;
 
  	case KEY_UP:
-	  line = (line - 1) % ED_VIEW_N;
+	  done = 1;
+	  //line = (line - 1) % ED_VIEW_N;
 	  break;
 	}
     }
+
+  return(k);
 }
 
 

@@ -567,7 +567,7 @@ void fl_ffnd(void)
 // Find the next record that contains the search string
 //
 // Searches the current record and onwards.
-// Leaves the record number at the found record, the caller has tomove it on for
+// Leaves the record number at the found record, the caller has to move it on for
 // subsequent searches.
 //
 
