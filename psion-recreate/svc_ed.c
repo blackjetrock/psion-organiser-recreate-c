@@ -42,8 +42,6 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
 #endif
 
   i_printxy_str(0, 0, epos_prompt);
-
-
     
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
@@ -63,8 +61,6 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
   
   cursor_x = printpos_x;
   cursor_y = printpos_y;
-
-
 
 #if DB_ED_EPOS
   printf("\n%s: Exit", __FUNCTION__);
