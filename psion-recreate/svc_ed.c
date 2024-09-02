@@ -43,6 +43,8 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
 
   i_printxy_str(0, 0, epos_prompt);
 
+
+    
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
   printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
@@ -50,6 +52,9 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
 #endif
 
   dp_prnt(str+display_start_index);
+
+  dp_clr_eos();
+
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
   printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
@@ -59,7 +64,7 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
   cursor_x = printpos_x;
   cursor_y = printpos_y;
 
-  dp_clr_eos();
+
 
 #if DB_ED_EPOS
   printf("\n%s: Exit", __FUNCTION__);
@@ -163,7 +168,8 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 	{
 	  k = kb_getk();
 
-	  cursor_phase = 1;
+	  cursor_phase = 0;
+	  force_cursor_update = 1;
 	  
 	  switch(ed_state)
 	    {

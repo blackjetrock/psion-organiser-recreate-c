@@ -339,7 +339,7 @@ void menu_tasks(void)
 int cursor_on = 0;
 uint64_t cursor_upd_time = 1000000L;
 uint64_t cursor_last_time = 0;
-int cursor_phase = 0;
+volatile int cursor_phase = 0;
 int cursor_char = 0x101;
 int under_cursor_char[DISPLAY_NUM_CHARS][DISPLAY_NUM_LINES];
 int cursor_x = 3;

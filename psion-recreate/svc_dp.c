@@ -168,7 +168,8 @@ void dp_clr_eol(void)
   
   while( save_pp_y == printpos_y )
     {
-      i_printxy(printpos_x, printpos_y, ' ');
+      dp_prnt(" ");
+      //i_printxy(printpos_x++, printpos_y, ' ');
     }
   
   printpos_x = save_pp_x;
@@ -189,7 +190,8 @@ void dp_clr_eos(void)
   
   while( !printpos_at_end )
     {
-      i_printxy(printpos_x, printpos_y, ' ');
+      dp_prnt(" ");
+      //i_printxy(printpos_x, printpos_y, ' ');
     }
   
   printpos_x = save_pp_x;
