@@ -283,7 +283,8 @@ CMakeFiles/psion_recreate.dir/emulator.c.obj: ../emulator.c \
   ../eeprom.h \
   ../menu.h \
   ../i2c.h \
-  ../rtc.h
+  ../rtc.h \
+  ../svc_dp.h
 
 CMakeFiles/psion_recreate.dir/font.c.obj: ../font.c \
   /usr/include/newlib/ctype.h \

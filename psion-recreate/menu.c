@@ -8,7 +8,7 @@
 // **********
 //
 // As it accesses the I2c, it MUST run on the core that is handling the I2C
-// which is core1 at th emoment.
+// which is core1 at the moment.
 //
 // **********
 //
@@ -69,7 +69,7 @@ void menu_process(void)
   // Initialise?  
   if( do_menu_init() )
     {
-      display_clear();
+      dp_cls();
       
       //      i_printxy_str(0, 0, active_menu->name);
       //print_nl();
@@ -185,18 +185,37 @@ void menu_goto_rtc(void)
   goto_menu(&menu_rtc);
 }
 
-
 void menu_epos_test(void)
 {
   char line[20];
   char e_buffer[64];
 
-  i_printxy_str(0, 0, "");
-  flowprint("default");
+  dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
+
+  dp_prnt("Default:");
 
   strcpy(e_buffer, "DATA");
   ed_epos(e_buffer, 30, 0, 0);
 
+  // Refresh menu on exit
+  menu_init = 1;
+}
+
+void menu_flowtext_test(void)
+{
+  char line[20];
+  char e_buffer[64];
+  char test_str[64];
+
+  sprintf(test_str, "Line one%cLine 2%cEnd", CHRCODE_TAB, CHRCODE_TAB);
+
+  dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
+
+  dp_prnt(test_str);
+  dp_clr_eos();
+  
+  kb_getk();
+  
   // Refresh menu on exit
   menu_init = 1;
 }
@@ -206,7 +225,7 @@ void menu_epos_test(void)
 
 void init_scan_test(void)
 {
-  display_clear();
+  dp_cls();
   printxy_str(0,0, "Key test    ");
 }
 
@@ -246,7 +265,7 @@ void menu_cursor_test(void)
   char line[20];
   int done = 0;
 
-  display_clear();
+  dp_cls();
   i_printxy_str(0, 0, "Cursor keys to move");
   i_printxy_str(0, 1, "B:Toggle blink");
 
@@ -288,7 +307,7 @@ void menu_instant_off(void)
 #if 0
   if( do_menu_init() )
     {
-      display_clear();
+      dp_cls();
       printxy_str(0, 0, "Instant Off");
     }
 #endif
@@ -308,7 +327,7 @@ void menu_eeprom_invalidate(void)
   // Write the checksum to the EEPROM copy
   write_eeprom(EEPROM_0_ADDR_WR , EEPROM_CSUM_H, EEPROM_CSUM_LEN, &(ramdata[EEPROM_CSUM_H]));
 
-  display_clear();
+  dp_cls();
   printxy_str(0, 0, "Invalidated");
 
   menu_loop_tasks();
@@ -400,7 +419,7 @@ int find_free_record(void)
 
 int display_record(RECORD *r)
 {
-  display_clear();
+  dp_cls();
   printxy_hex(0, 0, r->flag);
   printxy_str(5, 0, &(r->key[0]));
   printxy_str(0, 1, &(r->data[0]));
@@ -426,12 +445,13 @@ int display_record(RECORD *r)
 
 ////////////////////////////////////////////////////////////////////////////////
 
+#if 0
 void menu_format(void)
 {
   RECORD r;
   char line[32];
   
-  display_clear();
+  dp_cls();
   
   for(int i=0; i<NUM_RECORDS; i++)
     {
@@ -445,6 +465,7 @@ void menu_format(void)
       display_record(&r);
     }
 }
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -503,138 +524,6 @@ void menu_eeprom_extract_mems(void)
 
 #define MAX_INPUT_STR   32
 
-void menu_find(void)
-{
-  char find_str[MAX_INPUT_STR];
-  int searching = 0;
-  int cur_rec = 0;
-  int ed$pos = 2;
-  
-  find_str[0] ='\0';
-  display_clear();
-  printxy_str(0, 0, "Find:");
-  print_str(find_str);
-
-  while(1)
-    {
-      // Keep the display updated
-      menu_loop_tasks();
-      
-      if( (kb_test() != KEY_NONE) || searching )
-	{
-	  KEYCODE k = kb_getk();
-	  
-	  // Exit on ON key, exiting demonstrates it is working...
-	  if( k == KEY_ON )
-	    {
-	      if( strlen(find_str) == 0)
-		{
-		  // Refresh menu on exit
-		  menu_init = 1;
-		  return;
-		}
-	      else
-		{
-		  find_str[0] ='\0';
-		  
-		  display_clear();
-		  printxy_str(0, 0, "Find:");
-		  printxy_str(5, 0, find_str);
-		  continue;
-		}
-	    }
-
-	  if ( (k == KEY_EXE) || searching )
-	    {
-	      int recnum;
-	      RECORD r;
-
-	      printf("\nStart search");
-	      
-	      if( !searching )
-		{
-		  printf("\nNot already in search");
-		  cur_rec = 0;
-		  searching = 1;
-		  
-		}
-	      
-	      // Find the record
-	      recnum = find_record(find_str, &r, cur_rec);
-	      cur_rec = recnum+1;
-	      
-	      if( recnum != -1 )
-		{
-		  printf("\nFound");
-		  
-		  display_clear();
-		  printxy_str(0, 0, "Find:");
-		  printxy_str(5, 0, &(r.key[0]));
-		  printxy_str(0, 1, &(r.data[0]));
-
-		  int done = 0;
-		  
-		  while(!done)
-		    {
-		      // Keep the display updated
-		      menu_loop_tasks();
-		      
-		      if( kb_test() != KEY_NONE )
-			{
-			  KEYCODE k = kb_getk();
-			  
-			  switch(k)
-			    {
-			    case KEY_EXE:
-			      done = 1;
-			      break;
-
-			    case KEY_ON:
-			      done = 1;
-			      find_str[0] ='\0';
-			      
-			      display_clear();
-			      printxy_str(0, 0, "Find:");
-			      printxy_str(5, 0, find_str);
-			      continue;
-			      
-			      break;
-			    }
-			}
-		    }
-		  continue;
-		}
-	      else
-		{
-		  printf("\nNo more records");
-		  
-		  // No more records
-		  searching = 0;
-
-		  find_str[0] ='\0';
-		  
-		  display_clear();
-		  printxy_str(0, 0, "Find:");
-		  printxy_str(5, 0, find_str);
-		  continue;
-		}
-	    }
-	  
-	  if ( strlen(find_str) < (MAX_INPUT_STR-2) )
-	    {
-	      char keystr[2] = " ";
-	      keystr[0] = k;
-	      strcat(find_str, keystr);
-	      
-	      display_clear();
-	      printxy_str(0, 0, "Find:");
-	      printxy_str(5, 0, find_str);
-	    }
-	}
-    }
-}
-
-
 #define SS_SAVE_INIT   1
 #define SS_SAVE_ENTER  2
 #define SS_SAVE_EXIT   3
@@ -649,7 +538,7 @@ void menu_save(void)
   RECORD r;
     
   save_str[0] ='\0';
-  display_clear();
+  dp_cls();
   printxy_str(0, 0, "Save:");
   print_str(save_str);
 
@@ -681,7 +570,7 @@ void menu_save(void)
 		    {
 		      save_str[0] ='\0';
 		      
-		      display_clear();
+		      dp_cls();
 		      printxy_str(0, 0, "Save:");
 		      printxy_str(5, 0, save_str);
 		      continue;
@@ -718,7 +607,7 @@ void menu_save(void)
 		      keystr[0] = k;
 		      strcat(save_str, keystr);
 		      
-		      display_clear();
+		      dp_cls();
 		      printxy_str(0, 0, "Save:");
 		      printxy_str(5, 0, save_str);
 		    }
@@ -730,7 +619,148 @@ void menu_save(void)
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+
+#if 1
+
+typedef enum
+  {
+   MF_STATE_INIT = 1,
+   MF_STATE_SRCH_START,
+   MF_STATE_SRCH_NEXT,
+  } MF_STATE;
+
+MF_STATE mf_state;
+
 void menu_fl_find(void)
+{
+  char      find_str[MAX_INPUT_STR];
+  int       searching = 0;
+  int       cur_rec   = 0;
+  int       ed$pos    = 2;
+  int       done      = 0;
+  KEYCODE   k;
+  int       reclen;
+  char      r[256];
+  
+  find_str[0] ='\0';
+  dp_cls();
+  printxy_str(0, 0, "Find:");
+  print_str(find_str);
+
+  mf_state = MF_STATE_INIT;
+  
+  while(!done)
+    {
+      switch(mf_state)
+	{
+	case MF_STATE_INIT:
+	  
+	  k = ed_epos(find_str, 64, 0, 0);
+	  
+	  switch(k)
+	    {
+	    case KEY_ON:
+	      if( strlen(find_str) == 0)
+		{
+		  // Refresh menu on exit
+		  menu_init = 1;
+		  done = 1;
+		}
+	      else
+		{
+		  find_str[0] ='\0';
+		  
+		  dp_cls();
+		  printxy_str(0, 0, "Find:");
+		  printxy_str(5, 0, find_str);
+		}
+	      break;
+
+	    case KEY_EXE:
+	      mf_state = MF_STATE_SRCH_START;
+	      
+	      break;
+
+
+	    }
+	  break;
+
+	case MF_STATE_SRCH_START:
+	  printf("\nNot already in search");
+	  flw_crec = 1;
+	  searching = 1;
+
+	  mf_state = MF_STATE_SRCH_NEXT;
+	  break;
+
+	case MF_STATE_SRCH_NEXT:
+	  // Find the record
+	  fl_rect(0x90);
+	  if( fl_find(find_str, r, &reclen) )
+	    {
+	      fl_next();
+	      
+	      printf("\nFound");
+	      
+	      dp_cls();
+	      printxy_str(0, 0, "Find:");
+	      k = dp_view(r, 0);
+
+	      switch(k)
+		{
+		case KEY_EXE:
+		  //done = 1;
+		  break;
+		  
+		case KEY_DEL:
+		  fl_back();
+		  fl_eras();
+		  break;
+		  
+		  
+		case KEY_ON:
+		  if( strlen(find_str) != 0 )
+		    {
+		      find_str[0] ='\0';
+		      
+		      mf_state = MF_STATE_SRCH_START;
+		    }
+		    else
+		      {
+			done = 1;
+		      }
+		    
+		  break;
+		}
+	    }
+	  else
+	    {
+	      printf("\nNo more records");
+	      
+	      find_str[0] ='\0';
+
+	      mf_state = MF_STATE_SRCH_START;
+	      
+	      //dp_cls();
+	      //printxy_str(0, 0, "Find:");
+	      //printxy_str(5, 0, find_str);
+	      
+	    }
+	  break;
+	  
+	}
+    }
+  
+    dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
+}
+
+#else
+
+
+void menu_fl_find_xxx(void)
 {
   char find_str[MAX_INPUT_STR];
   int searching = 0;
@@ -738,7 +768,7 @@ void menu_fl_find(void)
   int ed$pos = 2;
   
   find_str[0] ='\0';
-  display_clear();
+  dp_cls();
   printxy_str(0, 0, "Find:");
   print_str(find_str);
 
@@ -764,7 +794,7 @@ void menu_fl_find(void)
 		{
 		  find_str[0] ='\0';
 		  
-		  display_clear();
+		  dp_cls();
 		  printxy_str(0, 0, "Find:");
 		  printxy_str(5, 0, find_str);
 		  continue;
@@ -794,7 +824,7 @@ void menu_fl_find(void)
 		  
 		  printf("\nFound");
 		  
-		  display_clear();
+		  dp_cls();
 		  printxy_str(0, 0, "Find:");
 		  printxy_str(5, 0, r);
 
@@ -825,7 +855,7 @@ void menu_fl_find(void)
 			      done = 1;
 			      find_str[0] ='\0';
 			      
-			      display_clear();
+			      dp_cls();
 			      printxy_str(0, 0, "Find:");
 			      printxy_str(5, 0, find_str);
 			      continue;
@@ -845,7 +875,7 @@ void menu_fl_find(void)
 
 		  find_str[0] ='\0';
 		  
-		  display_clear();
+		  dp_cls();
 		  printxy_str(0, 0, "Find:");
 		  printxy_str(5, 0, find_str);
 		  continue;
@@ -867,7 +897,7 @@ void menu_fl_find(void)
 		  keystr[0] = k;
 		  strcat(find_str, keystr);
 		  
-		  display_clear();
+		  dp_cls();
 		  printxy_str(0, 0, "Find:");
 		  printxy_str(5, 0, find_str);
 		}
@@ -875,6 +905,9 @@ void menu_fl_find(void)
 	}
     }
 }
+
+
+#endif
 
 void menu_fl_save(void)
 {
@@ -886,7 +919,7 @@ void menu_fl_save(void)
   RECORD r;
     
   save_str[0] ='\0';
-  display_clear();
+  dp_cls();
   printxy_str(0, 0, "Save:");
   print_str(save_str);
 
@@ -918,7 +951,7 @@ void menu_fl_save(void)
 		    {
 		      save_str[0] ='\0';
 		      
-		      display_clear();
+		      dp_cls();
 		      printxy_str(0, 0, "Save:");
 		      printxy_str(5, 0, save_str);
 		      continue;
@@ -945,7 +978,7 @@ void menu_fl_save(void)
 		      keystr[0] = k;
 		      strcat(save_str, keystr);
 		      
-		      display_clear();
+		      dp_cls();
 		      printxy_str(0, 0, "Save:");
 		      printxy_str(5, 0, save_str);
 		    }
@@ -1131,7 +1164,7 @@ void menu_enter(void)
   //display_save();
 
   // Clear the display
-  //display_clear();
+  //dp_cls();
 
   // Draw the menu
   //  printxy_str(0,0, "Menu");
@@ -1464,7 +1497,6 @@ MENU menu_top =
     {'E', "Eeprom",     menu_goto_eeprom},
     {'R', "RTC",        menu_goto_rtc},
     {'A', "All",        menu_all},
-    {'M', "forMat",     menu_format},
     {'B', "Bubble",     menu_bubble},
     {'T', "Test",       menu_goto_test_os},
 
@@ -1484,8 +1516,6 @@ MENU menu_eeprom =
     {KEY_ON, "",           menu_back},
     {'I', "Invalidate", menu_eeprom_invalidate},
     {'M', "Mem",        menu_goto_mems},
-    {'F', "Find",       menu_find},
-    {'S', "Save",       menu_save},
     {'&', "",           menu_null},
    }
   };
@@ -1502,6 +1532,7 @@ MENU menu_test_os =
     {'B', "Buzz",       menu_goto_buzzer},
     {'C', "Cursor",     menu_cursor_test},
     {'E', "Epos",       menu_epos_test},
+    {'F', "Flowtext",   menu_flowtext_test},
     {'&', "",           menu_null},
    }
   };

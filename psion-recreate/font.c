@@ -348,11 +348,11 @@ void next_printpos_line(void)
 }
 
 // Move to next position for printing
-void next_printpos(void)
+void next_printpos(int ch)
 {
   printpos_x++;
   
-  if( printpos_x >= DISPLAY_NUM_CHARS )
+  if( (printpos_x >= DISPLAY_NUM_CHARS) || (ch == KEY_TAB)  )
     {
       next_printpos_line();
     }
@@ -376,7 +376,7 @@ void i_printxy(int x, int y, int ch)
   // Update the current print posiution
   printpos_x = x;
   printpos_y = y;
-  next_printpos();
+  next_printpos(ch);
 
   serial_display_xy(x, y, ch);
   
@@ -401,34 +401,6 @@ void i_printxy(int x, int y, int ch)
   i2c_stop();
 }
   
-void flowprint(char *s)
-{
-  while(*s != '\0')
-    {
-      if( (*s) == KEY_TAB )
-	{
-	  next_printpos_line();
-	}
-
-      i_printxy(printpos_x, printpos_y, *s);
-      s++;
-    }
-}
-
-void clear_end_screen(void)
-{
-  int save_pp_x = printpos_x;
-  int save_pp_y = printpos_y;
-  
-  while( !printpos_at_end )
-    {
-      i_printxy(printpos_x, printpos_y, ' ');
-    }
-
-  printpos_x = save_pp_x;
-  printpos_y = save_pp_y;
-  
-}
 
 void print_cursor(int x, int y, int ch)
 {
@@ -520,24 +492,6 @@ void printxy_hex(int x, int y, int value)
   i_printxy_str(x, y, hs);
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//
-// Clears the display
-//
-////////////////////////////////////////////////////////////////////////////////
-
-void display_clear(void)
-{
-  for(int x=0; x<DISPLAY_NUM_CHARS; x++)
-    {
-      for(int y=0; y<DISPLAY_NUM_LINES; y++)
-	{
-	  i_printxy(x, y, ' ');
-	}
-    }
-  
-  print_home();
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 //

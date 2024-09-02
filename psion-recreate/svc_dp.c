@@ -16,6 +16,8 @@
 #include "record.h"
 #include "svc.h"
 
+////////////////////////////////////////////////////////////////////////////////
+//
 // Display string on line and scroll so it is all viewable.
 // return when key is pressed
 
@@ -139,4 +141,107 @@ KEYCODE dp_view(char *str, int line)
     }
   
   return(KEY_NONE);  
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void dp_stat(int x, int y, int curs_on, int cursor_block)
+{
+  printpos_x       = 0;
+  printpos_y       = 0;
+  printpos_at_end  = 0;
+
+  cursor_on = curs_on;
+  cursor_blink = cursor_block;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Clear to end of line
+// Does not affect cursor position
+//
+
+void dp_clr_eol(void)
+{
+  int save_pp_x = printpos_x;
+  int save_pp_y = printpos_y;
+  
+  while( save_pp_y == printpos_y )
+    {
+      i_printxy(printpos_x, printpos_y, ' ');
+    }
+  
+  printpos_x = save_pp_x;
+  printpos_y = save_pp_y;
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Clear to end of screen
+// Does not affect cursor position
+//
+
+void dp_clr_eos(void)
+{
+  int save_pp_x = printpos_x;
+  int save_pp_y = printpos_y;
+  
+  while( !printpos_at_end )
+    {
+      i_printxy(printpos_x, printpos_y, ' ');
+    }
+  
+  printpos_x = save_pp_x;
+  printpos_y = save_pp_y;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Clears the display
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void dp_cls(void)
+{
+  for(int x=0; x<DISPLAY_NUM_CHARS; x++)
+    {
+      for(int y=0; y<DISPLAY_NUM_LINES; y++)
+	{
+	  i_printxy(x, y, ' ');
+	}
+    }
+  
+  print_home();
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void dp_emit(int ch)
+{
+  switch(ch)
+    {
+    case CHRCODE_TAB:
+      dp_clr_eol();
+      next_printpos_line();
+      
+      break;
+      
+    default:
+      i_printxy(printpos_x, printpos_y, ch);
+      break;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+void dp_prnt(char *s)
+{
+  while(*s != '\0')
+    {
+      dp_emit(*s);
+      
+      s++;
+    }
 }

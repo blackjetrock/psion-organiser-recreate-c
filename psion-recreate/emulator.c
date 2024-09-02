@@ -23,6 +23,8 @@
 #include "i2c.h"
 #include "rtc.h"
 
+#include "svc_dp.h"
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // SVPP Information from various sources
@@ -4973,7 +4975,7 @@ void handle_lcd_write(u_int16_t addr, u_int8_t value)
       switch(value)
 	{
 	case 0x01:
-	  display_clear();
+	  dp_cls();
 	  lcd_address = 0;
 	  break;
 	  
@@ -7014,7 +7016,7 @@ void initialise_emulator(void)
     }
 
   // Clear display buffer
-  display_clear();
+  dp_cls();
 
   // Reset the processor
   // Latch MP0,MP1

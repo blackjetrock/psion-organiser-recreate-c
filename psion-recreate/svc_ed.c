@@ -31,7 +31,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-// Update the display for th epos service.
+// Update the display for the epos service.
 
 void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_line, int display_start_index)
 {
@@ -49,7 +49,7 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
   printf("\n");
 #endif
 
-  flowprint(str+display_start_index);
+  dp_prnt(str+display_start_index);
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
   printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
@@ -58,7 +58,8 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
   
   cursor_x = printpos_x;
   cursor_y = printpos_y;
-  clear_end_screen();
+
+  dp_clr_eos();
 
 #if DB_ED_EPOS
   printf("\n%s: Exit", __FUNCTION__);
@@ -106,6 +107,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
   int cursor_line         = 0;  // Which line the cursor is on (0-based)
   int display_start_index = 0;  // The index of the first character in the string that is currently
                                 // displayed
+  KEYCODE k;
   
   // printpos defines any prompt before the string
 #if DB_ED_EPOS
@@ -142,7 +144,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
   sleep_ms(100);
 #endif
 
-  display_clear();
+  dp_cls();
   display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
   
   while(!done)
@@ -159,7 +161,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
       // Handle keypresses
       if( kb_test() != KEY_NONE )
 	{
-	  KEYCODE k = kb_getk();
+	  k = kb_getk();
 
 	  cursor_phase = 1;
 	  
@@ -178,6 +180,16 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 		  done = 1;
 		  break;
 
+		case KEY_EXE:
+		  done = 1;
+		  break;
+		  
+		  // Insert newline character
+		case KEY_DOWN:
+		  charstr[0] = CHRCODE_TAB;;
+		  strcat(str, charstr);
+		  break;
+		  
 		case KEY_DEL:
 		  if( strlen(str) > 0 )
 		    {
@@ -199,7 +211,13 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 	  
 	}
     }
+
+  // return last key pressed if it caused an exit
+  return(k);
+  
 }
+
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // ed$view service
