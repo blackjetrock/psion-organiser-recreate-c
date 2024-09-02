@@ -77,8 +77,8 @@ int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *des
   PAK_ADDR rec_start = 0;
 
 #if DB_FL_SCAN_PAK
-  printf("\n%s:op:%d len_byte:%02X rectype:%02X", __FUNCTION__, op, length_byte, record_type);
-  printf("\nCPAD:%04X", pk_qadd());
+  printf("\n%s:ENTRY:op:%d len_byte:%02X rectype:%02X", __FUNCTION__, op, length_byte, record_type);
+  printf("\n%s:CPAD:%04X", __FUNCTION__, pk_qadd());
 #endif
 
   fl_check_op();
@@ -114,7 +114,7 @@ int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *des
   record_type = pk_rbyt();
 
 #if DB_FL_SCAN_PAK
-  printf("\nCPAD:%04X", pk_qadd());
+  printf("\n%s:CPAD:%04X", __FUNCTION__, pk_qadd());
 #endif
   
   if( length_byte == 0 )
@@ -130,7 +130,7 @@ int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *des
       pk_skip(block_length);
 
 #if DB_FL_SCAN_PAK
-      printf("\nLong record:blk_len:%04X", block_length);
+      printf("\n%s:Long record:blk_len:%04X", __FUNCTION__, block_length);
 #endif
 
     }
@@ -139,7 +139,7 @@ int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *des
       if( record_type != 0xFF )
 	{
 #if DB_FL_SCAN_PAK
-	  printf("\nShort record:len:%04X", length_byte);
+	  printf("\n%s:Short record:len:%04X", __FUNCTION__, length_byte);
 #endif
 
 	  // Copy record start
@@ -169,7 +169,7 @@ int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *des
       pk_sadd(pkw_cpad-2);
 
 #if DB_FL_SCAN_PAK
-      printf("\nExit(0):CPAD:%04X", pkw_cpad);
+      printf("\n%s:Exit(0):CPAD:%04X\n", __FUNCTION__, pkw_cpad);
 #endif
 
       return(0);
@@ -178,7 +178,7 @@ int fl_scan_pak(FL_SCAN_PAK_CONTEXT *context, FL_OP op, int device, uint8_t *des
     {
       
 #if DB_FL_SCAN_PAK
-      printf("\nExit(?):CPAD:%04X", pkw_cpad);
+      printf("\n%s:Exit(?):CPAD:%04X\n", __FUNCTION__, pkw_cpad);
 #endif
   
       return(0);
@@ -512,7 +512,7 @@ void fl_eras(void)
   printf("\n%s:EPROM pak", __FUNCTION__);
 #endif
 
-      // Clear top bi tof record type of current record
+      // Clear top bit of record type of current record
       
       // Find the record
       found = fl_frec(flw_crec, &pak_addr, &rectype, &reclen);

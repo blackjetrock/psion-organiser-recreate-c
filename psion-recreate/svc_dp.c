@@ -124,8 +124,14 @@ KEYCODE dp_view(char *str, int line)
 	      break;
 	    }
 	}
+      else
+	{
+	  // Delay for the scrolling lines
+	  
+	  sleep_ms(200);	  
+	}
 
-      sleep_ms(200);
+
       
       offset += scroll_dir;
 

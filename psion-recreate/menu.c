@@ -638,7 +638,7 @@ void menu_fl_find(void)
   KEYCODE   k;
   int       reclen;
   char      r[256];
-
+  int view_line = 0;
   
   find_str[0] ='\0';
   dp_cls();
@@ -696,13 +696,12 @@ void menu_fl_find(void)
 	  fl_rect(0x90);
 	  if( fl_find(find_str, r, &reclen) )
 	    {
-	      fl_next();
 	      
-	      printf("\nFound");
+	      printf("\n%s:Found flw_crec:%d", __FUNCTION__, flw_crec);
 	      
 	      dp_cls();
 	      printxy_str(0, 0, "Find:");
-	      k = dp_view(r, 0);
+	      k = dp_view(r, view_line);
 
 	      switch(k)
 		{
@@ -715,6 +714,19 @@ void menu_fl_find(void)
 		  fl_eras();
 		  break;
 		  
+		case KEY_UP:
+		  if( view_line > 0 )
+		    {
+		      view_line--;
+		    }
+		  break;
+
+		case KEY_DOWN:
+		  if( view_line < (DISPLAY_NUM_LINES-1) )
+		    {
+		      view_line++;
+		    }
+		  break;
 		  
 		case KEY_ON:
 		  if( strlen(find_str) != 0 )
@@ -728,6 +740,10 @@ void menu_fl_find(void)
 			done = 1;
 		      }
 		    
+		  break;
+		  
+		default:
+		  fl_next();
 		  break;
 		}
 	    }
