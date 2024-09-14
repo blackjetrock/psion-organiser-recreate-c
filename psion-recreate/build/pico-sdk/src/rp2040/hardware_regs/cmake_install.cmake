@@ -1,4 +1,4 @@
-# Install script for directory: /tree/downloaded_tools/pico/pico-sdk/src/rp2040/hardware_regs
+# Install script for directory: /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /tree/downloaded_tools/pico/pico-sdk/docs
+# Install script for directory: /home/menadue/pico/pico-sdk/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

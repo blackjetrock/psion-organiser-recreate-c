@@ -366,8 +366,8 @@ extern int addr_trace_to_i;
 // Checksums
 //
 
-uint16_t csum_calc_on_restore;
-uint16_t csum_in_eeprom;
-uint16_t csum_calc_on_dump;
+extern uint16_t csum_calc_on_restore;
+extern uint16_t csum_in_eeprom;
+extern uint16_t csum_calc_on_dump;
 
 #include "font.h"

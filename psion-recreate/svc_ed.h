@@ -2,7 +2,7 @@
 #define ED_NUM_CHARS  64
 #define ED_VIEW_N     4
 
-char ed_edit_buffer[ED_NUM_LINES][ED_NUM_CHARS];
+extern char ed_edit_buffer[ED_NUM_LINES][ED_NUM_CHARS];
 
 KEYCODE ed_view(char *str, int ln);
 KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode);

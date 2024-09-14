@@ -1,4 +1,4 @@
-# Install script for directory: /tree/downloaded_tools/pico/pico-sdk/src/rp2_common/pico_stdio
+# Install script for directory: /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

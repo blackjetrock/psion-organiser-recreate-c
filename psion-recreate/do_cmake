@@ -1,0 +1,1 @@
+cmake -DPICO_SDK_PATH=/home/menadue/pico/pico-sdk/ ..

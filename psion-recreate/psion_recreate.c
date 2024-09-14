@@ -9,7 +9,11 @@
 
 
 #include <stdio.h>
+//#include <math.h>
+#include "pico/divider.h"
 #include "pico/stdlib.h"
+//#include "hardware/vreg.h"
+
 #include "hardware/gpio.h"
 #include "pico/binary_info.h"
 #include "pico/multicore.h"
@@ -587,7 +591,7 @@ int main()
   gpio_put(PIN_SCLKIN, 1);
 
 #if OVERCLOCK
-    set_sys_clock_khz(260000, false);   // Works
+  //set_sys_clock_khz(260000, false);   // Works
   //  set_sys_clock_khz(300000, false);  
   //set_sys_clock_khz(90000, false);  
 #endif
