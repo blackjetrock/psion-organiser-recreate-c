@@ -538,10 +538,11 @@ void core1_main(void)
 	  //matrix_scan();
 	  start_ms += interval_ms;
 	  matscan_count++;
+
 	}
 
       // Handle USB
-      //hid_task();le(1)
+      //hid_task();
 
 #else
       matscan_count++;

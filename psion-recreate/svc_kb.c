@@ -34,8 +34,8 @@
 #include "switches.h"
 
 #define MAT_SCAN_STATE_DRIVE  0
-#define MAT_SCAN_STATE_READ  10
-#define MAT_SCAN_STATE_NEXT  11
+#define MAT_SCAN_STATE_READ   2
+#define MAT_SCAN_STATE_NEXT   3
 
 // This allows other code to insert keys into the key queue. Note: Core1
 // has to be the code that does this, and i tmust run on core1. So, put a key in this
@@ -270,11 +270,13 @@ KEYMAP *key_map;
 //
 // Debounces the pressed key matrix
 //
-// We have a stream of matrices. A 1 is a poressed key. we need to deboune them
+// We have a stream of matrices. A 1 is a pressed key. we need to deboune them
 // all, which we can do on a bit by bit basis, all at once as integers.
 //
-// We remove short presses, 
-#define MAX_INPUT_QUEUE  4
+// We remove short presses,
+//
+
+#define MAX_INPUT_QUEUE  2
 #define MAX_PRESS_QUEUE  2
 
 MATRIX_MAP  input_queue[MAX_INPUT_QUEUE];

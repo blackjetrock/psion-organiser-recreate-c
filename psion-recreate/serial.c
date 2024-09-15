@@ -941,7 +941,7 @@ void serial_loop()
     {
       // Display
   
-      if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
+      if( ((key = getchar_timeout_us(1)) != PICO_ERROR_TIMEOUT))
 	{
 	  switch(sl_state)
 	    {
@@ -1047,7 +1047,7 @@ void serial_loop()
     }
   else
     {
-      if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
+      if( ((key = getchar_timeout_us(1)) != PICO_ERROR_TIMEOUT))
 	{
 	  for(int i=0; i<sizeof(serial_cmds)/sizeof(SERIAL_COMMAND);i++)
 	    {
