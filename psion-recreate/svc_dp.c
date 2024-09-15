@@ -38,10 +38,12 @@ KEYCODE dp_view(char *str, int line)
   int swlen = strlen(w_str);
   int slen = strlen(str);
   
-  sleep_ms(500);
+  //sleep_ms(500);
   
   while(!done)
     {
+      menu_loop_tasks();
+      
       offset2 = 0;
 
       // Don't scroll strings that fit on a line
@@ -77,7 +79,7 @@ KEYCODE dp_view(char *str, int line)
       if( kb_test() != KEY_NONE )
 	{
 	  KEYCODE k = kb_getk();
-	  //	  printf("\nKC:%d", k);
+	  printf("\n%s:KC:%d", __FUNCTION__, k);
 	  
 	  switch(k)
 	    {
@@ -130,8 +132,6 @@ KEYCODE dp_view(char *str, int line)
 	  
 	  sleep_ms(200);	  
 	}
-
-
       
       offset += scroll_dir;
 

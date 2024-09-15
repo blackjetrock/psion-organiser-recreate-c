@@ -301,6 +301,8 @@ KEYCODE ed_view(char *str, int ln)
   
   while(!done)
     {
+      menu_loop_tasks();
+      
       k = dp_view(ed_edit_buffer[line], line);
 
       switch(k)

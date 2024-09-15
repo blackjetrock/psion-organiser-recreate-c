@@ -170,9 +170,11 @@ uint8_t read_165(const uint latchpin)
   // Latch the data
   gpio_put(latchpin, 0);
   gpio_put(latchpin, 0);
-  sleep_us(D165);
+  core1_safe_delay_ms(D165);
+  //  sleep_us(D165);
   gpio_put(latchpin, 1);
-  sleep_us(D165);
+  //sleep_us(D165);
+  core1_safe_delay_ms(D165);
   
   // Clock the data out of the latch
   for(int i=0; i<8; i++)
@@ -186,10 +188,11 @@ uint8_t read_165(const uint latchpin)
 	}
 
       gpio_put(PIN_SCLKIN, 0);
-      sleep_us(D165);
+      core1_safe_delay_ms(D165);
+      //      sleep_us(D165);
       gpio_put(PIN_SCLKIN, 1);
-      sleep_us(D165);
-
+      //sleep_us(D165);
+      core1_safe_delay_ms(D165);
     }
 
   return(value);
@@ -202,20 +205,38 @@ uint8_t read_165(const uint latchpin)
 ////////////////////////////////////////////////////////////////////////////////
 
 #define D595 1
+volatile int core1_safe_x = 0;
+
+void core1_safe_delay_ms(uint32_t interval_ms)
+{
+#if 0
+  //      const uint32_t interval_ms = 2;
+  uint32_t start_ms = 0;
+  
+  while ( board_millis() - start_ms < interval_ms)
+    {
+      core1_safe_x++;
+    }
+#else
+  sleep_ms(interval_ms);
+#endif
+}
 
 void write_595(const uint latchpin, int value, int n)
 {
   
   // Latch pin low
   gpio_put(latchpin, 0);
-  sleep_us(D595);
+  //sleep_us(D595);
+  core1_safe_delay_ms(D595);
   
   for(int i = 0; i<n; i++)
     {
       // Clock low
       gpio_put(PIN_SCLKOUT, 0);
-      sleep_us(D595);
-	
+      //sleep_us(D595);
+      core1_safe_delay_ms(D595);
+      
       // Set data up
       if( value & (1<< (n-1)) )
 	{
@@ -226,14 +247,16 @@ void write_595(const uint latchpin, int value, int n)
 	  gpio_put(PIN_SDAOUT, 0);
 	}
 
-      sleep_us(D595);
-      
+      //sleep_us(D595);
+      core1_safe_delay_ms(D595);
+	
       // Shift to next data bit
       value <<= 1;
       
       // Clock data in
       gpio_put(PIN_SCLKOUT, 1);
-      sleep_us(D595);
+      //sleep_us(D595);
+      core1_safe_delay_ms(D595);
     }
 
   // Now latch value (update outputs)
@@ -473,11 +496,14 @@ void handle_cursor_key(KEYCODE k)
 
 void menu_loop_tasks(void)
 {
+  tud_task();
+  matrix_scan();
   cursor_task();
-  rtc_tasks();
-  eeprom_tasks();
-  wireless_taskloop();
+  //  rtc_tasks();
+  //  eeprom_tasks();
+  //  wireless_taskloop();
   serial_loop();
+  hid_task();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -487,28 +513,39 @@ void menu_loop_tasks(void)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+volatile int matscan_count = 0;
+volatile int core1_count = 0;
+
 void core1_main(void)
 {
-  printf("\nCore1 started");
+  matscan_count++;
+  
   multicore_lockout_victim_init();
   
   while(1)
     {
-      sleep_ms(1);
+      core1_count++;
+#if 1
+      // Handle USB
+      //tud_task();
+      //busy_wait_ms(10);
+      // Scan keyboard every 1ms
+      const uint32_t interval_ms = 2;
+      static uint32_t start_ms = 0;
       
-      matrix_scan();
-#if 0      
-      dump_lcd();
-      rtc_tasks();
-      eeprom_tasks();
+      if ( board_millis() - start_ms >= interval_ms)
+	{
+	  //matrix_scan();
+	  start_ms += interval_ms;
+	  matscan_count++;
+	}
 
-      menu_tasks();
-      serial_loop();
-#endif
-      
-#if !WIFI_TEST      
-      wireless_taskloop();
-#endif
+      // Handle USB
+      //hid_task();le(1)
+
+#else
+      matscan_count++;
+#endif      
     }
 }
 
@@ -624,6 +661,8 @@ int main()
   
   printxy_str(0, 0, "***");
 
+  init_usb();
+    
   // Clear screen
   clear_oled();
   stdio_init_all();
@@ -639,103 +678,12 @@ int main()
   // EEPROM tests before core 1 starts, so display won't work but tests
   // won't have interference from that core on I2C
   
-#if MULTI_CORE
+  //#if MULTI_CORE
   // If multi core then we run the LCD update on the other core
   multicore_launch_core1(core1_main);
 
-#endif
+    //#endif
 
-  //------------------------------------------------------------------------------
-  //
-  // Drop into optional functions here, or fall through to perform emulation
-  //
-  
-#if 0
-  keyboard_test();
-#endif
-  
-    // Test the slot lines?
-#if SLOT_TEST
-    while(1)
-      {
-	latch2_set_mask(SLOT_TEST_MASK);
-	latch2_set_mask(SLOT_CLEAR_MASK);
-      }
-    
-#endif
-
-#if PACK_TEST
-
-    volatile u_int8_t portbytes[20];
-    
-    while(1)
-      {
-	// Read a byte from a pack
-
-	// Inputs for ports
-	port2_ddr(0x00);    // Port 2 inputs
-	port6_ddr(0x00);    // Port 6 inputs
-
-	write_port6(0x74);   // Set up port 6 for later
-	port6_ddr(0x80);     // Power up 5V supply
-	sleep_ms(50);        // Wait for power to stabilise.
-
-	port6_ddr(0xFF);      // Port 6 outputs
-	write_port6(0x76);    // SMR set
-	write_port6(0x7e);    // SOE set
-
-	port2_ddr(0xFF);      // Port 2 outputs
-	write_port2(0x00);    // Write segmnt register
-
-	write_port6(0x7a);    // PGM clear
-	write_port6(0x5a);    // SS2 clear
-	write_port6(0x7a);    // SS2 set
-
-	write_port6(0x72);    // SOE clear
-	write_port6(0x70);    // SMR clear
-	write_port6(0x74);    // PGM set
-
-	port2_ddr(0x00);      // Port 2 inputs
-	write_port6(0x54);    // SS2 clear
-
-	int j = 0;
-	for(int i = 0; i<20; i++)
-	  {
-	    portbytes[j++] = read_port2();
-	    write_port6(0x55);              // Clock data
-	    portbytes[j++] = read_port2();
-	    write_port6(0x54);
-	  }
-	port6_ddr(0x00);
-      }
-    
-#endif
-
-#if RTC_TEST
-
-    printxy_str(0, 0, "RTC Test");
-    
-    while(1)
-      {
-	int s, m, h;
-
-	// Set the clock running
-	rtc_set_st = 1;
-
-	read_seconds = 1;
-	s = rtc_seconds;
-	printxy_hex(7, 1, s);
-
-	read_minutes = 1;
-	m = rtc_minutes;
-	printxy_hex(4, 1, m);
-
-	read_hours = 1;
-	h = rtc_hours;
-	printxy_hex(1, 1, h);
-      }
-    
-#endif
 
 
     ////////////////////////////////////////////////////////////////////////////////
@@ -757,10 +705,16 @@ int main()
 
     while(1)
       {
-	t++;
+	//core1_main();
 
+	t++;
+	//menu_loop_tasks();
+	
+	tud_task();
+	matrix_scan();
 	menu_loop();
 	serial_loop();
+	hid_task();
       }
 }
 

@@ -264,6 +264,30 @@ font.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/font.c.s
 .PHONY : font.c.s
 
+home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+.PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj
+
+# target to build an object file
+home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+.PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+
+home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i
+
+# target to preprocess a source file
+home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+
+home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s
+
+# target to generate assembly for a file
+home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 
@@ -1119,6 +1143,30 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/menadue/pico/
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj
+
+# target to build an object file
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
+
+# target to preprocess a source file
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
+
+# target to generate assembly for a file
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj
@@ -2080,6 +2128,30 @@ menu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/menu.c.s
 .PHONY : menu.c.s
 
+msc_disk.obj: msc_disk.c.obj
+.PHONY : msc_disk.obj
+
+# target to build an object file
+msc_disk.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/msc_disk.c.obj
+.PHONY : msc_disk.c.obj
+
+msc_disk.i: msc_disk.c.i
+.PHONY : msc_disk.i
+
+# target to preprocess a source file
+msc_disk.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/msc_disk.c.i
+.PHONY : msc_disk.c.i
+
+msc_disk.s: msc_disk.c.s
+.PHONY : msc_disk.s
+
+# target to generate assembly for a file
+msc_disk.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/msc_disk.c.s
+.PHONY : msc_disk.c.s
+
 paged_eeprom.obj: paged_eeprom.c.obj
 .PHONY : paged_eeprom.obj
 
@@ -2128,6 +2200,30 @@ psion_recreate.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/psion_recreate.c.s
 .PHONY : psion_recreate.c.s
 
+rosc.obj: rosc.c.obj
+.PHONY : rosc.obj
+
+# target to build an object file
+rosc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/rosc.c.obj
+.PHONY : rosc.c.obj
+
+rosc.i: rosc.c.i
+.PHONY : rosc.i
+
+# target to preprocess a source file
+rosc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/rosc.c.i
+.PHONY : rosc.c.i
+
+rosc.s: rosc.c.s
+.PHONY : rosc.s
+
+# target to generate assembly for a file
+rosc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/rosc.c.s
+.PHONY : rosc.c.s
+
 rtc.obj: rtc.c.obj
 .PHONY : rtc.obj
 
@@ -2175,6 +2271,30 @@ serial.s: serial.c.s
 serial.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/serial.c.s
 .PHONY : serial.c.s
+
+sleep.obj: sleep.c.obj
+.PHONY : sleep.obj
+
+# target to build an object file
+sleep.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/sleep.c.obj
+.PHONY : sleep.c.obj
+
+sleep.i: sleep.c.i
+.PHONY : sleep.i
+
+# target to preprocess a source file
+sleep.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/sleep.c.i
+.PHONY : sleep.c.i
+
+sleep.s: sleep.c.s
+.PHONY : sleep.s
+
+# target to generate assembly for a file
+sleep.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/sleep.c.s
+.PHONY : sleep.c.s
 
 svc_db.obj: svc_db.c.obj
 .PHONY : svc_db.obj
@@ -2416,6 +2536,54 @@ sysvar.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/sysvar.c.s
 .PHONY : sysvar.c.s
 
+usb_descriptors.obj: usb_descriptors.c.obj
+.PHONY : usb_descriptors.obj
+
+# target to build an object file
+usb_descriptors.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj
+.PHONY : usb_descriptors.c.obj
+
+usb_descriptors.i: usb_descriptors.c.i
+.PHONY : usb_descriptors.i
+
+# target to preprocess a source file
+usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_descriptors.c.i
+.PHONY : usb_descriptors.c.i
+
+usb_descriptors.s: usb_descriptors.c.s
+.PHONY : usb_descriptors.s
+
+# target to generate assembly for a file
+usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_descriptors.c.s
+.PHONY : usb_descriptors.c.s
+
+usb_utility.obj: usb_utility.c.obj
+.PHONY : usb_utility.obj
+
+# target to build an object file
+usb_utility.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_utility.c.obj
+.PHONY : usb_utility.c.obj
+
+usb_utility.i: usb_utility.c.i
+.PHONY : usb_utility.i
+
+# target to preprocess a source file
+usb_utility.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_utility.c.i
+.PHONY : usb_utility.c.i
+
+usb_utility.s: usb_utility.c.s
+.PHONY : usb_utility.s
+
+# target to generate assembly for a file
+usb_utility.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_utility.c.s
+.PHONY : usb_utility.c.s
+
 wireless.obj: wireless.c.obj
 .PHONY : wireless.obj
 
@@ -2464,6 +2632,9 @@ help:
 	@echo "... font.obj"
 	@echo "... font.i"
 	@echo "... font.s"
+	@echo "... home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj"
+	@echo "... home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
+	@echo "... home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
 	@echo "... home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2571,6 +2742,9 @@ help:
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s"
+	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj"
+	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i"
+	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s"
@@ -2691,18 +2865,27 @@ help:
 	@echo "... menu.obj"
 	@echo "... menu.i"
 	@echo "... menu.s"
+	@echo "... msc_disk.obj"
+	@echo "... msc_disk.i"
+	@echo "... msc_disk.s"
 	@echo "... paged_eeprom.obj"
 	@echo "... paged_eeprom.i"
 	@echo "... paged_eeprom.s"
 	@echo "... psion_recreate.obj"
 	@echo "... psion_recreate.i"
 	@echo "... psion_recreate.s"
+	@echo "... rosc.obj"
+	@echo "... rosc.i"
+	@echo "... rosc.s"
 	@echo "... rtc.obj"
 	@echo "... rtc.i"
 	@echo "... rtc.s"
 	@echo "... serial.obj"
 	@echo "... serial.i"
 	@echo "... serial.s"
+	@echo "... sleep.obj"
+	@echo "... sleep.i"
+	@echo "... sleep.s"
 	@echo "... svc_db.obj"
 	@echo "... svc_db.i"
 	@echo "... svc_db.s"
@@ -2733,6 +2916,12 @@ help:
 	@echo "... sysvar.obj"
 	@echo "... sysvar.i"
 	@echo "... sysvar.s"
+	@echo "... usb_descriptors.obj"
+	@echo "... usb_descriptors.i"
+	@echo "... usb_descriptors.s"
+	@echo "... usb_utility.obj"
+	@echo "... usb_utility.i"
+	@echo "... usb_utility.s"
 	@echo "... wireless.obj"
 	@echo "... wireless.i"
 	@echo "... wireless.s"

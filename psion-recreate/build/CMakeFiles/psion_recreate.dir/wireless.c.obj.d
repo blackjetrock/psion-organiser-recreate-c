@@ -73,5 +73,37 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/match.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/font.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+ /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/./tusb_config.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+ /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+ /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+ /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+ /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+ /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+ /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/usb_descriptors.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/emulator.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/wireless.h

@@ -16,3 +16,6 @@ KEYCODE kb_getk(void);
 KEYCODE kb_test(void);
 
 extern KEYCODE kb_external_key;
+void queue_hid_key(int k);
+int unqueue_hid_key(void);
+int translate_to_hid(char ch);

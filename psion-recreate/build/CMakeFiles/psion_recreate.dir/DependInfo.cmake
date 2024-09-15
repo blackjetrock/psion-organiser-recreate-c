@@ -69,6 +69,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_TIME_ADAPTER=1"
   "LIB_PICO_UNIQUE_ID=1"
   "LIB_PICO_UTIL=1"
+  "LIB_TINYUSB_BOARD=1"
+  "LIB_TINYUSB_DEVICE=1"
   "PICO_32BIT=1"
   "PICO_BOARD=\"pico\""
   "PICO_BUILD=1"
@@ -86,8 +88,13 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "../."
+  "/lib/tinyusb/hw"
+  "/lib/tinyusb/src"
   "/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/include"
   "/home/menadue/pico/pico-sdk/lib/tinyusb/src"
+  "/home/menadue/pico/pico-sdk/src/rp2_common/tinyusb/include"
+  "/home/menadue/pico/pico-sdk/lib/tinyusb/hw"
   "/home/menadue/pico/pico-sdk/src/common/pico_stdlib_headers/include"
   "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/menadue/pico/pico-sdk/src/common/pico_base_headers/include"
@@ -142,6 +149,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/menadue/pico/pico-sdk/src/common/boot_picobin_headers/include"
   "/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include"
   "/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/include"
+  "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/include"
   )
 
 # The set of dependency files which are needed:
@@ -150,6 +158,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/eeprom.c" "CMakeFiles/psion_recreate.dir/eeprom.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/eeprom.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/emulator.c" "CMakeFiles/psion_recreate.dir/emulator.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/emulator.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/font.c" "CMakeFiles/psion_recreate.dir/font.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/font.c.obj.d"
+  "/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj.d"
   "/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d"
   "/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj.d"
   "/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj.d"
@@ -185,6 +194,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
   "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
   "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
+  "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj.d"
   "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
   "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj.d"
   "/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj.d"
@@ -221,10 +231,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/i2c.c" "CMakeFiles/psion_recreate.dir/i2c.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/i2c.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/match.c" "CMakeFiles/psion_recreate.dir/match.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/match.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/menu.c" "CMakeFiles/psion_recreate.dir/menu.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/menu.c.obj.d"
+  "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/msc_disk.c" "CMakeFiles/psion_recreate.dir/msc_disk.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/msc_disk.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/paged_eeprom.c" "CMakeFiles/psion_recreate.dir/paged_eeprom.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/paged_eeprom.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c" "CMakeFiles/psion_recreate.dir/psion_recreate.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/psion_recreate.c.obj.d"
+  "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/rosc.c" "CMakeFiles/psion_recreate.dir/rosc.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/rosc.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/rtc.c" "CMakeFiles/psion_recreate.dir/rtc.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/rtc.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/serial.c" "CMakeFiles/psion_recreate.dir/serial.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/serial.c.obj.d"
+  "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/sleep.c" "CMakeFiles/psion_recreate.dir/sleep.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/sleep.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_db.c" "CMakeFiles/psion_recreate.dir/svc_db.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_db.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_dp.c" "CMakeFiles/psion_recreate.dir/svc_dp.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_dp.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_ed.c" "CMakeFiles/psion_recreate.dir/svc_ed.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_ed.c.obj.d"
@@ -235,6 +248,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_pak_serial_eeprom.c" "CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_pk.c" "CMakeFiles/psion_recreate.dir/svc_pk.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_pk.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/sysvar.c" "CMakeFiles/psion_recreate.dir/sysvar.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/sysvar.c.obj.d"
+  "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/usb_descriptors.c" "CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj.d"
+  "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/usb_utility.c" "CMakeFiles/psion_recreate.dir/usb_utility.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/usb_utility.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/wireless.c" "CMakeFiles/psion_recreate.dir/wireless.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/wireless.c.obj.d"
   "/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj.d"
   )

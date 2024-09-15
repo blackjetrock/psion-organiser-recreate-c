@@ -31,6 +31,7 @@
 #include "display.h"
 #include "record.h"
 #include "svc.h"
+#include "switches.h"
 
 #define MAT_SCAN_STATE_DRIVE  0
 #define MAT_SCAN_STATE_READ  10
@@ -367,9 +368,10 @@ void matrix_debounce(MATRIX_MAP matrix)
 
   if ( pressed_edges | released_edges)
     {
-      //printf("\nPed:%016llX Red:%016llX", pressed_edges, released_edges);
-
-      //printf("\n");
+#if DB_KB_DEBOUNCE
+      printf("\nPed:%016llX Red:%016llX", pressed_edges, released_edges);
+      printf("\n");
+#endif
       for(int i=0; i<64; i++)
 	{
 	  if( ((uint64_t)1<<i) & pressed_edges )
@@ -517,6 +519,9 @@ void matrix_debounce(MATRIX_MAP matrix)
 
 void matrix_scan(void)
 {
+#if DB_KB_MATRIX
+  printf("\n%s:State:%d", __FUNCTION__, mat_scan_state);
+#endif
   
   // Use a simple state machine for the scanning
   switch(mat_scan_state)
@@ -657,4 +662,104 @@ KEYCODE kb_test(void)
   
   // Return key code but don't remove key from buffer
   return(nos_key_buffer[nos_key_out]);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Queue so the Psion can send keys to the host
+// as a USB HID keyboard
+//
+// NOTE: these are USB HID keycodes, not ASCII
+//
+////////////////////////////////////////////////////////////////////////////////
+
+//------------------------------------------------------------------------------
+// New key to be sent
+// 0: not sent
+// 1: sent
+
+#define DELIVER_QUEUE_LENGTH  200
+int deliver_q_in  = 0;
+int deliver_q_out = 0;
+
+int deliver_queue[DELIVER_QUEUE_LENGTH];
+
+#define QUEUE_EMPTY (deliver_q_out == deliver_q_in)
+#define QUEUE_FULL (NEXT_Q_PTR(deliver_q_in) == deliver_q_out )
+#define QUEUE_FULL2 (NEXT_Q_PTR(NEXT_Q_PTR(deliver_q_in)) == deliver_q_out )
+#define NEXT_Q_PTR(PTR) ((PTR+1) % DELIVER_QUEUE_LENGTH)
+
+// A new key to send, queue it
+// We can't send two identical keys in consecutive reports as it
+// will look like the key is just held down, so we insert a no key
+// report between them
+#define MATRIX_KEY_NONE 0
+
+int last_key = MATRIX_KEY_NONE;
+
+void queue_hid_key(int k)
+{
+  // We want two slots so we can insert NO_KEY if needed
+  if( QUEUE_FULL2 || QUEUE_FULL )
+    {
+      //printf("\nQueue full");
+      return;
+    }
+
+  // Put a no key report before this key so it separates it from the
+  // previous key if it was the same as this one.
+  //printf("\nLast key:%04X key:%04X", last_key, k);
+  if(last_key == k )
+    {
+      // No key report between pairs of keys
+      deliver_queue[deliver_q_in] = MATRIX_KEY_NONE;
+      deliver_q_in = NEXT_Q_PTR(deliver_q_in);
+      //printf("\nQueued %d %04X ***", MATRIX_KEY_NONE, MATRIX_KEY_NONE);
+
+    }
+
+  deliver_queue[deliver_q_in] = k;
+  deliver_q_in = NEXT_Q_PTR(deliver_q_in);
+
+
+  last_key = k;  
+  
+  //printf("\nQueued %d %04X", k, k);
+  
+}
+
+int unqueue_hid_key(void)
+{
+  int k;
+  
+  if( QUEUE_EMPTY )
+    {
+      //printf("\nQueue empty");
+      return(MATRIX_KEY_NONE);
+    }
+
+  k = deliver_queue[deliver_q_out];
+  deliver_q_out = NEXT_Q_PTR(deliver_q_out);
+  //printf("\nUnqueued %d", k);
+  return(k);
+}
+
+
+uint8_t const conv_table[128][2] =  { HID_ASCII_TO_KEYCODE };
+
+int translate_to_hid(char ch)
+{
+  int ret = 0;
+  uint8_t modifier   = 0;
+  
+  if ( conv_table[ch][0] )
+    {
+    modifier = KEYBOARD_MODIFIER_LEFTSHIFT;
+    }
+  
+  ret  = conv_table[ch][1];
+  ret |= modifier << 8;
+  
+  return(ret);
 }

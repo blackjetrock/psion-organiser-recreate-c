@@ -250,6 +250,9 @@ void menu_scan_test(void)
 	  KEYCODE k = kb_getk();
 
 	  sprintf(line, "'%c' %02X %03d  ", k, k, k);
+
+	  // Send to host as keypress
+	  queue_hid_key(translate_to_hid(k));
 	  
 	  i_printxy_str(0, 1, line);
 	  
@@ -940,6 +943,8 @@ void menu_fl_save(void)
 
   while(!done)
     {
+      menu_loop_tasks();
+      
       k = ed_epos(save_str, 64, 0, 0);
       
       switch(k)

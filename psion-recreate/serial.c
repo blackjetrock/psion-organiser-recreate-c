@@ -13,6 +13,7 @@
 #include "pico/stdlib.h"
 #include "hardware/flash.h"
 #include "pico/bootrom.h"
+#include "pico/multicore.h"
 
 #include "psion_recreate_all.h"
 
@@ -401,7 +402,20 @@ void cli_graphics_terminal(void)
 }
 
 
+void cli_information(void)
+{
 
+  printf("\nMatrix scan count: %d", matscan_count);
+  printf("\nCore1 count      : %d", core1_count);
+  printf("\nCore1 safe count : %d", core1_safe_x);
+  printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
+  printf("\n");
+}
+
+void cli_hid_key(void)
+{
+  queue_hid_key(0x04);
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -514,6 +528,11 @@ SERIAL_COMMAND serial_cmds[] =
     cli_dump_memory,
    },
    {
+    'k',
+    "HID Key",
+    cli_hid_key,
+   },
+   {
     'z',
     "Zero Parameter",
     cli_zero_parameter,
@@ -577,6 +596,11 @@ SERIAL_COMMAND serial_cmds[] =
     'i',
     "Interactive Mode",
     cli_interactive,
+   },
+   {
+    'I',
+    "Information",
+    cli_information,
    },
    
   };

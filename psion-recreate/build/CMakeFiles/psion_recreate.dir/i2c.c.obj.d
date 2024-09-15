@@ -83,4 +83,32 @@ CMakeFiles/psion_recreate.dir/i2c.c.obj: \
  /usr/include/newlib/ctype.h /usr/include/newlib/sys/_locale.h \
  /usr/include/newlib/stdlib.h /usr/include/newlib/machine/stdlib.h \
  /usr/include/newlib/alloca.h \
- /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/font.h
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/font.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+ /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
+ /usr/include/newlib/string.h /usr/include/newlib/strings.h \
+ /usr/include/newlib/sys/string.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/./tusb_config.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+ /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/usb_descriptors.h

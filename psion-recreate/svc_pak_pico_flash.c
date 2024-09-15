@@ -122,17 +122,22 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
 	{
 	  // Start of new block
 	  dest_idx = 0;
-
-	  // Write the block back
-	  multicore_lockout_start_blocking();
-	  uint32_t ints = save_and_disable_interrupts();
-	  
 #if DB_PK_SAVE
 	  printf("\nFLASH WRITE");
 	  printf("\nWr addr:%016X", flash_pak_base_write + rd_blk_start + blk_idx * 256);
 #endif
+
+	  // Write the block back
+	  printf("\nStart blocking");
+	  multicore_lockout_start_blocking();
+	  printf("\nStart blocking done");
+	  uint32_t ints = save_and_disable_interrupts();
+	  
 	  flash_range_program(flash_pak_base_write + rd_blk_start + blk_idx * 256, blk_buffer, 256);
+	  printf("\nEnd blocking");
 	  multicore_lockout_end_blocking();
+	  printf("\nEnd blocking done");
+	  
 	  restore_interrupts (ints);
 	  
 	  blk_idx++;
@@ -157,15 +162,13 @@ void pk_format_pico_flash(void)
   PAK_ID pak_id;
   
   printf("\n%s:Erasing %016X for %d bytes\n", __FUNCTION__, flash_pak_base_write, FLASH_PAK_SIZE);
-  sleep_ms(100);
+  //sleep_ms(100);
 
   uint32_t ints = save_and_disable_interrupts();
   multicore_lockout_start_blocking();
   flash_range_erase(flash_pak_base_write, FLASH_PAK_SIZE);
-  restore_interrupts (ints);
-  
   multicore_lockout_end_blocking();
-
+  restore_interrupts (ints);
 
   // Now write a pak header
   pk_build_id_string(pak_id, FLASH_PAK_SIZE, 24, 8, 21, 8,  time_us_32());

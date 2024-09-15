@@ -2,7 +2,7 @@
 
 typedef uint8_t BYTE;
 
-#define uint unsigned int
+//#define uint unsigned int
 #define uchar unsigned char
 
 #define DEBUG_STOP {volatile int x = 1; while (x) {} }
@@ -371,3 +371,12 @@ extern uint16_t csum_in_eeprom;
 extern uint16_t csum_calc_on_dump;
 
 #include "font.h"
+#include "bsp/board_api.h"
+#include "tusb.h"
+
+#include "usb_descriptors.h"
+void core1_safe_delay_ms(uint32_t interval_ms);
+
+extern volatile int matscan_count;
+extern volatile int core1_count;
+extern volatile int core1_safe_x;
