@@ -437,6 +437,11 @@ void cli_hid_key(void)
   queue_hid_key(0x04);
 }
 
+void cli_itf(void)
+{
+  txbyte(parameter, 'X');
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 // Serial loop command structure
@@ -621,6 +626,11 @@ SERIAL_COMMAND serial_cmds[] =
     'I',
     "Information",
     cli_information,
+   },
+   {
+    '&',
+    "ITF test",
+    cli_itf,
    },
    
   };
@@ -950,7 +960,7 @@ void cli_interactive(void)
 //------------------------------------------------------------------------------
 int sl_state = SL_STATE_INIT;
 
-void serial_loop()
+void serial_loop(void)
 {
   int key = KEY_NONE;
 

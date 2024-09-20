@@ -13,8 +13,9 @@
 #include "cursor.h"
 #include "cdc.h"
 #include "core1.h"
-
+#include "panel.h"
 #include "svc.h"
+#include "opl.h"
 
 #include "switches.h"
 

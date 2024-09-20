@@ -470,7 +470,8 @@ void __not_in_flash_func(matrix_debounce)(MATRIX_MAP matrix)
 	  
 	  // Put key pressed event into key buffer
 	  nos_put_key(key_map[i].c);
-	  txbyte(2, key_map[i].c );
+	  
+	  //txbyte(2, key_map[i].c );
 	  return;
 	}
       i++;

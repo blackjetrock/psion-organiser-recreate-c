@@ -140,6 +140,7 @@ CMakeFiles/psion_recreate_ctusb.dir/cdc.c.obj: ../cdc.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -151,6 +152,14 @@ CMakeFiles/psion_recreate_ctusb.dir/cdc.c.obj: ../cdc.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -375,6 +384,7 @@ CMakeFiles/psion_recreate_ctusb.dir/cursor.c.obj: ../cursor.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -386,6 +396,14 @@ CMakeFiles/psion_recreate_ctusb.dir/cursor.c.obj: ../cursor.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -524,6 +542,7 @@ CMakeFiles/psion_recreate_ctusb.dir/display.c.obj: ../display.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -535,6 +554,14 @@ CMakeFiles/psion_recreate_ctusb.dir/display.c.obj: ../display.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -768,6 +795,7 @@ CMakeFiles/psion_recreate_ctusb.dir/font.c.obj: ../font.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -779,6 +807,14 @@ CMakeFiles/psion_recreate_ctusb.dir/font.c.obj: ../font.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -4301,6 +4337,7 @@ CMakeFiles/psion_recreate_ctusb.dir/main.c.obj: ../main.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -4312,6 +4349,14 @@ CMakeFiles/psion_recreate_ctusb.dir/main.c.obj: ../main.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -4447,6 +4492,7 @@ CMakeFiles/psion_recreate_ctusb.dir/menu.c.obj: ../menu.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -4458,6 +4504,338 @@ CMakeFiles/psion_recreate_ctusb.dir/menu.c.obj: ../menu.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
+  ../switches.h \
+  ../sysvar.h
+
+CMakeFiles/psion_recreate_ctusb.dir/opl.c.obj: ../opl.c \
+  /usr/include/newlib/ctype.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  /usr/include/newlib/sys/_locale.h \
+  /usr/include/newlib/math.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  /usr/include/newlib/sys/types.h \
+  /usr/include/newlib/sys/_stdint.h \
+  /usr/include/newlib/machine/endian.h \
+  /usr/include/newlib/machine/_endian.h \
+  /usr/include/newlib/sys/select.h \
+  /usr/include/newlib/sys/_sigset.h \
+  /usr/include/newlib/sys/_timeval.h \
+  /usr/include/newlib/sys/timespec.h \
+  /usr/include/newlib/sys/_timespec.h \
+  /usr/include/newlib/sys/_pthreadtypes.h \
+  /usr/include/newlib/sys/sched.h \
+  /usr/include/newlib/machine/types.h \
+  /usr/include/newlib/sys/stdio.h \
+  /usr/include/newlib/stdlib.h \
+  /usr/include/newlib/machine/stdlib.h \
+  /usr/include/newlib/alloca.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/include/newlib/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  generated/pico_base/pico/version.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/menadue/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom_constants.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/include/pico/multicore.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+  ../psion_recreate_all.h \
+  ../psion_recreate.h \
+  ../match.h \
+  ../font.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+  /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/sys/_intsup.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../tusb_config.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+  ../usb_descriptors.h \
+  ../menu.h \
+  ../emulator.h \
+  ../wireless.h \
+  ../serial.h \
+  ../eeprom.h \
+  ../rtc.h \
+  ../display.h \
+  ../record.h \
+  ../cursor.h \
+  ../cdc.h \
+  ../core1.h \
+  ../panel.h \
+  ../svc.h \
+  ../svc_er.h \
+  ../svc_ed.h \
+  ../svc_pk_base.h \
+  ../svc_fl.h \
+  ../svc_kb.h \
+  ../svc_dp.h \
+  ../svc_pak_pico_flash.h \
+  ../svc_pak_serial_eeprom.h \
+  ../svc_pk.h \
+  ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
+  ../switches.h \
+  ../sysvar.h
+
+CMakeFiles/psion_recreate_ctusb.dir/panel.c.obj: ../panel.c \
+  /usr/include/newlib/ctype.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/newlib.h \
+  /usr/include/newlib/_newlib_version.h \
+  /usr/include/newlib/sys/config.h \
+  /usr/include/newlib/machine/ieeefp.h \
+  /usr/include/newlib/sys/features.h \
+  /usr/include/newlib/sys/cdefs.h \
+  /usr/include/newlib/machine/_default_types.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
+  /usr/include/newlib/sys/_locale.h \
+  /usr/include/newlib/math.h \
+  /usr/include/newlib/sys/reent.h \
+  /usr/include/newlib/_ansi.h \
+  /usr/include/newlib/sys/_types.h \
+  /usr/include/newlib/machine/_types.h \
+  /usr/include/newlib/sys/lock.h \
+  /usr/include/newlib/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+  /usr/include/newlib/sys/types.h \
+  /usr/include/newlib/sys/_stdint.h \
+  /usr/include/newlib/machine/endian.h \
+  /usr/include/newlib/machine/_endian.h \
+  /usr/include/newlib/sys/select.h \
+  /usr/include/newlib/sys/_sigset.h \
+  /usr/include/newlib/sys/_timeval.h \
+  /usr/include/newlib/sys/timespec.h \
+  /usr/include/newlib/sys/_timespec.h \
+  /usr/include/newlib/sys/_pthreadtypes.h \
+  /usr/include/newlib/sys/sched.h \
+  /usr/include/newlib/machine/types.h \
+  /usr/include/newlib/sys/stdio.h \
+  /usr/include/newlib/stdlib.h \
+  /usr/include/newlib/machine/stdlib.h \
+  /usr/include/newlib/alloca.h \
+  /usr/include/newlib/string.h \
+  /usr/include/newlib/strings.h \
+  /usr/include/newlib/sys/string.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
+  /usr/include/newlib/assert.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+  generated/pico_base/pico/version.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  generated/pico_base/pico/config_autogen.h \
+  /home/menadue/pico/pico-sdk/src/boards/include/boards/pico.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom_constants.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/include/pico/multicore.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+  ../psion_recreate_all.h \
+  ../psion_recreate.h \
+  ../match.h \
+  ../font.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+  /usr/include/newlib/inttypes.h \
+  /usr/include/newlib/sys/_intsup.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  ../tusb_config.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+  ../usb_descriptors.h \
+  ../menu.h \
+  ../emulator.h \
+  ../wireless.h \
+  ../serial.h \
+  ../eeprom.h \
+  ../rtc.h \
+  ../display.h \
+  ../record.h \
+  ../cursor.h \
+  ../cdc.h \
+  ../core1.h \
+  ../panel.h \
+  ../svc.h \
+  ../svc_er.h \
+  ../svc_ed.h \
+  ../svc_pk_base.h \
+  ../svc_fl.h \
+  ../svc_kb.h \
+  ../svc_dp.h \
+  ../svc_pak_pico_flash.h \
+  ../svc_pak_serial_eeprom.h \
+  ../svc_pk.h \
+  ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -4722,6 +5100,7 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.obj: ../serial.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -4733,6 +5112,14 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.obj: ../serial.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -4867,6 +5254,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.obj: ../svc_db.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -4878,6 +5266,14 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.obj: ../svc_db.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -5150,6 +5546,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.obj: ../svc_ed.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -5161,9 +5558,16 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.obj: ../svc_ed.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
-  ../sysvar.h \
-  ../nos.h
+  ../sysvar.h
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.obj: ../svc_er.c \
   /usr/include/newlib/ctype.h \
@@ -5433,6 +5837,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.obj: ../svc_fl.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -5444,6 +5849,14 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.obj: ../svc_fl.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -5994,6 +6407,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.obj: ../svc_pk.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -6005,6 +6419,14 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.obj: ../svc_pk.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -6139,6 +6561,7 @@ CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.obj: ../sysvar.c \
   ../cursor.h \
   ../cdc.h \
   ../core1.h \
+  ../panel.h \
   ../svc.h \
   ../svc_er.h \
   ../svc_ed.h \
@@ -6150,6 +6573,14 @@ CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.obj: ../sysvar.c \
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
+  ../opl.h \
+  ../newopl_all.h \
+  ../nos.h \
+  ../newopl_types.h \
+  ../newopl.h \
+  ../nopl_obj.h \
+  ../newopl_lib.h \
+  ../nopl.h \
   ../switches.h \
   ../sysvar.h
 
@@ -6279,8 +6710,6 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.obj: ../usb_descriptors.c 
 
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c:
 
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c:
-
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c:
@@ -6307,6 +6736,20 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.obj: ../usb_descriptors.c 
 
 /usr/include/newlib/sys/stat.h:
 
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:
+
+/home/menadue/pico/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot_constants.h:
+
+/home/menadue/pico/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot.h:
+
+../svc_er.c:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c:
+
+/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdatomic.h:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/include/stdatomic.h:
+
 ../wireless.h:
 
 ../emulator.h:
@@ -6323,19 +6766,11 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.obj: ../usb_descriptors.c 
 
 /usr/include/newlib/math.h:
 
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h:
-
-/usr/include/newlib/sys/_intsup.h:
-
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c:
 
 /usr/include/newlib/inttypes.h:
 
 ../psion_recreate_all.h:
-
-../nos.h:
-
-/home/menadue/pico/pico-sdk/src/common/boot_picobin_headers/include/boot/picobin.h:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h:
 
@@ -6365,8 +6800,6 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.obj: ../usb_descriptors.c 
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:
 
-/home/menadue/pico/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot.h:
-
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h:
 
 /usr/lib/gcc/arm-none-eabi/10.3.1/include/float.h:
@@ -6380,6 +6813,12 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.obj: ../usb_descriptors.c 
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/include/pico/malloc.h:
 
 /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h:
+
+../nopl.h:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c:
+
+/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c:
 
 /home/menadue/pico/pico-sdk/src/common/pico_util/queue.c:
 
@@ -6432,6 +6871,8 @@ generated/pico_base/pico/config_autogen.h:
 /usr/include/newlib/c++/10.3.1/cstdlib:
 
 /usr/include/newlib/machine/endian.h:
+
+../newopl_types.h:
 
 /usr/include/newlib/sys/types.h:
 
@@ -6563,8 +7004,6 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/include/hardware/boot_lock.h:
 
-/home/menadue/pico/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot_constants.h:
-
 ../svc_er.h:
 
 /home/menadue/pico/pico-sdk/src/common/pico_util/include/pico/util/pheap.h:
@@ -6580,6 +7019,8 @@ generated/pico_base/pico/version.h:
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h:
 
 /usr/include/newlib/sys/cdefs.h:
+
+../panel.c:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h:
 
@@ -6617,11 +7058,11 @@ generated/pico_base/pico/version.h:
 
 ../menu.h:
 
+../newopl.h:
+
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h:
 
 /home/menadue/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h:
-
-/home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h:
 
 /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h:
 
@@ -6693,6 +7134,8 @@ generated/pico_base/pico/version.h:
 
 ../rtc.h:
 
+../panel.h:
+
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h:
 
 ../svc_ed.h:
@@ -6721,11 +7164,33 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c:
 
-../sysvar.h:
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c:
+
+../opl.h:
+
+/home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/ssi.h:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h:
+
+/usr/include/newlib/sys/_intsup.h:
+
+../newopl_all.h:
+
+/home/menadue/pico/pico-sdk/src/common/boot_picobin_headers/include/boot/picobin.h:
+
+../nos.h:
+
+../nopl_obj.h:
+
+/home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h:
+
+../newopl_lib.h:
 
 /usr/include/newlib/machine/stdlib.h:
 
 ../core1.c:
+
+../sysvar.h:
 
 /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h:
 
@@ -6759,6 +7224,12 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c:
 
+/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c:
+
+/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c:
+
+../opl.c:
+
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
@@ -6779,15 +7250,7 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c:
 
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c:
-
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c:
-
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c:
-
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/dcd.h:
 
@@ -6853,8 +7316,6 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c:
 
-/home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/ssi.h:
-
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/ssi.h:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c:
@@ -6866,13 +7327,3 @@ generated/pico_base/pico/version.h:
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/psm.h:
 
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/xosc.h:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/include/stdatomic.h:
-
-/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdatomic.h:
-
-../svc_er.c:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:

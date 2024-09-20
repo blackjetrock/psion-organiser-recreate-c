@@ -2128,6 +2128,54 @@ menu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/menu.c.s
 .PHONY : menu.c.s
 
+opl.obj: opl.c.obj
+.PHONY : opl.obj
+
+# target to build an object file
+opl.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/opl.c.obj
+.PHONY : opl.c.obj
+
+opl.i: opl.c.i
+.PHONY : opl.i
+
+# target to preprocess a source file
+opl.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/opl.c.i
+.PHONY : opl.c.i
+
+opl.s: opl.c.s
+.PHONY : opl.s
+
+# target to generate assembly for a file
+opl.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/opl.c.s
+.PHONY : opl.c.s
+
+panel.obj: panel.c.obj
+.PHONY : panel.obj
+
+# target to build an object file
+panel.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/panel.c.obj
+.PHONY : panel.c.obj
+
+panel.i: panel.c.i
+.PHONY : panel.i
+
+# target to preprocess a source file
+panel.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/panel.c.i
+.PHONY : panel.c.i
+
+panel.s: panel.c.s
+.PHONY : panel.s
+
+# target to generate assembly for a file
+panel.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/panel.c.s
+.PHONY : panel.c.s
+
 rtc.obj: rtc.c.obj
 .PHONY : rtc.obj
 
@@ -2697,6 +2745,12 @@ help:
 	@echo "... menu.obj"
 	@echo "... menu.i"
 	@echo "... menu.s"
+	@echo "... opl.obj"
+	@echo "... opl.i"
+	@echo "... opl.s"
+	@echo "... panel.obj"
+	@echo "... panel.i"
+	@echo "... panel.s"
 	@echo "... rtc.obj"
 	@echo "... rtc.i"
 	@echo "... rtc.s"

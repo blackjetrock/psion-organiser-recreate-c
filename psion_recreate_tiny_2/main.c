@@ -174,24 +174,61 @@ void write_595(const uint latchpin, int value, int n)
 // Periodically displays information
 //
 
-void start_info_task(void)
+int info_tick = 0;
+
+void panel_info_init(void)
 {
-  cdc_printf(ITF_INFO, "\n\rInformation", core1_ticks);
-  cdc_printf(ITF_INFO, "\n\r===========", core1_ticks);
-  cdc_printf(ITF_INFO, "\n\r");
 }
 
-int info_tick = 0;
+PANEL_T panel_info =
+  {
+    panel_info_init,
+    {
+      {1, 2, 15, "Core1 Ticks", PANEL_ITEM_TYPE_INT, (int *)&core1_ticks},
+      {1, 1, 15, "",            PANEL_ITEM_TYPE_INT, NULL},
+    }
+  };
 
 void info_task(void)
 {
   
   if( (info_tick % 700)==0 )
     {
-      cdc_printf_xy(ITF_INFO, 1, 0, "Core1 loops:%d", core1_ticks);
+      do_panel(&panel_info, ITF_INFO, 1);
     }
 
   info_tick++;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// OPL information
+//
+
+int opl_tick = 0;
+
+void panel_opl_init(void)
+{
+}
+
+PANEL_T panel_opl =
+  {
+    panel_opl_init,
+    {
+      {1, 1, 15, "SP",      PANEL_ITEM_TYPE_INT, (int *)&opl_machine.sp},
+      {1, 1, 15, "",        PANEL_ITEM_TYPE_INT, NULL},
+    }
+  };
+
+void opl_task(void)
+{
+  
+  if( (opl_tick % 700)==0 )
+    {
+      do_panel(&panel_opl, ITF_OPL, 1);
+    }
+
+  opl_tick++;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -292,7 +329,9 @@ int main(void) {
 
       tud_task();
 
-      info_task();
+
+      opl_task();
+      info_task();      
       sleep_ms(1);
 
       main_ticks++;
@@ -308,8 +347,6 @@ int main(void) {
 	  printf("\n------------------");
 	  printf("\n");
 	  serial_help();
-	  
-	  //start_info_task();
 	}
     }
 }

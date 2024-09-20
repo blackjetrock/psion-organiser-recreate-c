@@ -28,6 +28,8 @@ add_executable(${PROJECT}
     serial.c
     sysvar.c
     eeprom.c
+    panel.c
+    opl.c
 )
 target_include_directories(${PROJECT} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}

@@ -2,7 +2,7 @@
 
 #define ITF_CLI  1
 #define ITF_INFO 2
-#define ITF_3    3
+#define ITF_OPL  3
 #define ITF_4    4
 #define ITF_5    5
 #define ITF_6    6
