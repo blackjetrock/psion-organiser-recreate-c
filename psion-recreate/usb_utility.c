@@ -18,11 +18,13 @@
 // Invoked when received GET HID REPORT DESCRIPTOR
 // Application return pointer to descriptor
 // Descriptor contents must exist long enough for transfer to complete
+#if 0
 uint8_t const * tud_hid_descriptor_report_cb(uint8_t instance)
 {
   (void) instance;
   return desc_hid_report;
 }
+#endif
 
 void init_usb(void)
 {

@@ -98,12 +98,8 @@ CMakeFiles/psion_recreate.dir/rtc.c.obj: \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
- /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
- /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
- /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
- /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/usb_descriptors.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/emulator.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/rtc.h

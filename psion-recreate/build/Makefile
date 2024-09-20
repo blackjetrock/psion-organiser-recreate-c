@@ -2560,30 +2560,6 @@ usb_descriptors.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_descriptors.c.s
 .PHONY : usb_descriptors.c.s
 
-usb_utility.obj: usb_utility.c.obj
-.PHONY : usb_utility.obj
-
-# target to build an object file
-usb_utility.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_utility.c.obj
-.PHONY : usb_utility.c.obj
-
-usb_utility.i: usb_utility.c.i
-.PHONY : usb_utility.i
-
-# target to preprocess a source file
-usb_utility.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_utility.c.i
-.PHONY : usb_utility.c.i
-
-usb_utility.s: usb_utility.c.s
-.PHONY : usb_utility.s
-
-# target to generate assembly for a file
-usb_utility.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate.dir/build.make CMakeFiles/psion_recreate.dir/usb_utility.c.s
-.PHONY : usb_utility.c.s
-
 wireless.obj: wireless.c.obj
 .PHONY : wireless.obj
 
@@ -2919,9 +2895,6 @@ help:
 	@echo "... usb_descriptors.obj"
 	@echo "... usb_descriptors.i"
 	@echo "... usb_descriptors.s"
-	@echo "... usb_utility.obj"
-	@echo "... usb_utility.i"
-	@echo "... usb_utility.s"
 	@echo "... wireless.obj"
 	@echo "... wireless.i"
 	@echo "... wireless.s"

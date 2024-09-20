@@ -713,7 +713,7 @@ void menu_fl_find(void)
 		  break;
 		  
 		case KEY_DEL:
-		  fl_back();
+		  //fl_back();
 		  fl_eras();
 		  break;
 		  
@@ -855,6 +855,7 @@ void menu_fl_find_xxx(void)
 			      break;
 
 			    case KEY_DEL:
+			      printf("\nErasing");
 			      fl_back();
 			      fl_eras();
 			      break;

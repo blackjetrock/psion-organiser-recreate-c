@@ -123,12 +123,8 @@ CMakeFiles/psion_recreate.dir/display.c.obj: ../display.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -269,12 +265,8 @@ CMakeFiles/psion_recreate.dir/eeprom.c.obj: ../eeprom.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../eeprom.h \
   ../i2c.h
@@ -398,12 +390,8 @@ CMakeFiles/psion_recreate.dir/emulator.c.obj: ../emulator.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../emulator.h \
   ../wireless.h \
@@ -507,12 +495,8 @@ CMakeFiles/psion_recreate.dir/font.c.obj: ../font.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -657,12 +641,8 @@ CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp20
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/board.h
 
 CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c \
@@ -863,87 +843,7 @@ CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/m
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
   ../tusb_config.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/dcd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/include/newlib/inttypes.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/include/newlib/sys/_intsup.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  /usr/include/newlib/sys/_locale.h \
-  /usr/include/newlib/string.h \
-  /usr/include/newlib/sys/reent.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/sys/_types.h \
-  /usr/include/newlib/machine/_types.h \
-  /usr/include/newlib/machine/_default_types.h \
-  /usr/include/newlib/sys/lock.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/strings.h \
-  /usr/include/newlib/sys/string.h \
-  /usr/include/newlib/stdio.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  /usr/include/newlib/sys/types.h \
-  /usr/include/newlib/sys/_stdint.h \
-  /usr/include/newlib/machine/endian.h \
-  /usr/include/newlib/machine/_endian.h \
-  /usr/include/newlib/sys/select.h \
-  /usr/include/newlib/sys/_sigset.h \
-  /usr/include/newlib/sys/_timeval.h \
-  /usr/include/newlib/sys/timespec.h \
-  /usr/include/newlib/sys/_timespec.h \
-  /usr/include/newlib/sys/_pthreadtypes.h \
-  /usr/include/newlib/sys/sched.h \
-  /usr/include/newlib/machine/types.h \
-  /usr/include/newlib/sys/stdio.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/include/newlib/assert.h \
-  generated/pico_base/pico/version.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  /home/menadue/pico/pico-sdk/src/boards/include/boards/pico.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h
 
 CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
@@ -1143,12 +1043,8 @@ CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h
@@ -1239,12 +1135,8 @@ CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h
 
 CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: /home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c \
@@ -1515,14 +1407,11 @@ CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
+  /usr/include/newlib/ctype.h
 
 CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.obj: /home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c \
   /home/menadue/pico/pico-sdk/src/common/hardware_claim/include/hardware/claim.h \
@@ -3790,12 +3679,8 @@ CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_std
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h \
   /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom_constants.h \
   /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h \
@@ -3886,12 +3771,8 @@ CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_std
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
   /home/menadue/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
@@ -4140,12 +4021,8 @@ CMakeFiles/psion_recreate.dir/i2c.c.obj: ../i2c.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h
 
 CMakeFiles/psion_recreate.dir/match.c.obj: ../match.c \
@@ -4307,12 +4184,8 @@ CMakeFiles/psion_recreate.dir/menu.c.obj: ../menu.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -4422,12 +4295,8 @@ CMakeFiles/psion_recreate.dir/msc_disk.c.obj: ../msc_disk.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h
 
 CMakeFiles/psion_recreate.dir/paged_eeprom.c.obj: ../paged_eeprom.c \
   /usr/include/newlib/ctype.h \
@@ -4546,12 +4415,8 @@ CMakeFiles/psion_recreate.dir/paged_eeprom.c.obj: ../paged_eeprom.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../eeprom.h \
   ../i2c.h
@@ -4681,12 +4546,8 @@ CMakeFiles/psion_recreate.dir/psion_recreate.c.obj: ../psion_recreate.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../emulator.h \
   ../wireless.h \
@@ -4850,12 +4711,8 @@ CMakeFiles/psion_recreate.dir/rtc.c.obj: ../rtc.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../emulator.h \
   ../rtc.h
@@ -4986,12 +4843,8 @@ CMakeFiles/psion_recreate.dir/serial.c.obj: ../serial.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -5213,12 +5066,8 @@ CMakeFiles/psion_recreate.dir/svc_db.c.obj: ../svc_db.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -5359,12 +5208,8 @@ CMakeFiles/psion_recreate.dir/svc_dp.c.obj: ../svc_dp.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -5503,12 +5348,8 @@ CMakeFiles/psion_recreate.dir/svc_ed.c.obj: ../svc_ed.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -5650,12 +5491,8 @@ CMakeFiles/psion_recreate.dir/svc_er.c.obj: ../svc_er.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -5793,12 +5630,8 @@ CMakeFiles/psion_recreate.dir/svc_fl.c.obj: ../svc_fl.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -5939,12 +5772,8 @@ CMakeFiles/psion_recreate.dir/svc_kb.c.obj: ../svc_kb.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -6085,12 +5914,8 @@ CMakeFiles/psion_recreate.dir/svc_pak_pico_flash.c.obj: ../svc_pak_pico_flash.c 
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -6227,12 +6052,8 @@ CMakeFiles/psion_recreate.dir/svc_pak_serial_eeprom.c.obj: ../svc_pak_serial_eep
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -6370,12 +6191,8 @@ CMakeFiles/psion_recreate.dir/svc_pk.c.obj: ../svc_pk.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -6517,12 +6334,8 @@ CMakeFiles/psion_recreate.dir/sysvar.c.obj: ../sysvar.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../menu.h \
   ../emulator.h \
@@ -6547,7 +6360,9 @@ CMakeFiles/psion_recreate.dir/sysvar.c.obj: ../sysvar.c \
   ../sysvar.h
 
 CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj: ../usb_descriptors.c \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
   /usr/include/newlib/inttypes.h \
   /usr/include/newlib/newlib.h \
@@ -6559,7 +6374,6 @@ CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj: ../usb_descriptors.c \
   /usr/include/newlib/_ansi.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
   /usr/include/newlib/sys/_locale.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
   /usr/include/newlib/string.h \
   /usr/include/newlib/sys/reent.h \
   /usr/include/newlib/_ansi.h \
@@ -6570,8 +6384,6 @@ CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj: ../usb_descriptors.c \
   /usr/include/newlib/sys/cdefs.h \
   /usr/include/newlib/strings.h \
   /usr/include/newlib/sys/string.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
   /usr/include/newlib/stdio.h \
   /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
   /usr/include/newlib/sys/types.h \
@@ -6632,141 +6444,9 @@ CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj: ../usb_descriptors.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
-  ../usb_descriptors.h
-
-CMakeFiles/psion_recreate.dir/usb_utility.c.obj: ../usb_utility.c \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
-  /usr/include/newlib/inttypes.h \
-  /usr/include/newlib/newlib.h \
-  /usr/include/newlib/_newlib_version.h \
-  /usr/include/newlib/sys/config.h \
-  /usr/include/newlib/machine/ieeefp.h \
-  /usr/include/newlib/sys/features.h \
-  /usr/include/newlib/sys/_intsup.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
-  /usr/include/newlib/sys/_locale.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
-  /usr/include/newlib/string.h \
-  /usr/include/newlib/sys/reent.h \
-  /usr/include/newlib/_ansi.h \
-  /usr/include/newlib/sys/_types.h \
-  /usr/include/newlib/machine/_types.h \
-  /usr/include/newlib/machine/_default_types.h \
-  /usr/include/newlib/sys/lock.h \
-  /usr/include/newlib/sys/cdefs.h \
-  /usr/include/newlib/strings.h \
-  /usr/include/newlib/sys/string.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  /usr/include/newlib/stdio.h \
-  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
-  /usr/include/newlib/sys/types.h \
-  /usr/include/newlib/sys/_stdint.h \
-  /usr/include/newlib/machine/endian.h \
-  /usr/include/newlib/machine/_endian.h \
-  /usr/include/newlib/sys/select.h \
-  /usr/include/newlib/sys/_sigset.h \
-  /usr/include/newlib/sys/_timeval.h \
-  /usr/include/newlib/sys/timespec.h \
-  /usr/include/newlib/sys/_timespec.h \
-  /usr/include/newlib/sys/_pthreadtypes.h \
-  /usr/include/newlib/sys/sched.h \
-  /usr/include/newlib/machine/types.h \
-  /usr/include/newlib/sys/stdio.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  ../tusb_config.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
-  /usr/include/newlib/assert.h \
-  generated/pico_base/pico/version.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
-  generated/pico_base/pico/config_autogen.h \
-  /home/menadue/pico/pico-sdk/src/boards/include/boards/pico.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
-  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
-  ../usb_descriptors.h \
-  ../serial.h \
-  ../i2c.h \
-  ../sleep.h \
-  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc/include/hardware/rtc.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h \
-  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/rtc.h \
-  ../psion_recreate_all.h \
-  ../psion_recreate.h \
-  ../match.h \
-  /usr/include/newlib/ctype.h \
-  /usr/include/newlib/stdlib.h \
-  /usr/include/newlib/machine/stdlib.h \
-  /usr/include/newlib/alloca.h \
-  ../font.h \
-  ../menu.h \
-  ../emulator.h \
-  ../wireless.h \
-  ../eeprom.h \
-  ../rtc.h \
-  ../display.h \
-  ../record.h \
-  ../svc.h \
-  ../svc_er.h \
-  ../svc_ed.h \
-  ../svc_pk_base.h \
-  ../svc_fl.h \
-  ../svc_kb.h \
-  ../svc_dp.h \
-  ../svc_pak_pico_flash.h \
-  ../svc_pak_serial_eeprom.h \
-  ../svc_pk.h \
-  ../svc_db.h \
-  ../switches.h \
-  ../sysvar.h
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h
 
 CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
   /usr/include/newlib/ctype.h \
@@ -6885,20 +6565,14 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
   /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
-  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
   ../usb_descriptors.h \
   ../emulator.h \
   ../wireless.h
 
 
 ../wireless.c:
-
-../usb_utility.c:
 
 ../usb_descriptors.c:
 
@@ -6984,21 +6658,11 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /usr/include/newlib/sys/times.h:
 
-/usr/include/newlib/sys/stat.h:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:
-
 ../wireless.h:
 
 ../emulator.h:
 
 /usr/include/newlib/sys/features.h:
-
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:
-
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h:
 
 ../nos.h:
 
@@ -7026,17 +6690,11 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c:
 
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h:
-
-/home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h:
-
-/home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h:
-
 /usr/include/newlib/inttypes.h:
 
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h:
-
 /usr/include/newlib/sys/reent.h:
+
+/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.h:
 
 /usr/include/newlib/sys/_locale.h:
 
@@ -7083,6 +6741,12 @@ CMakeFiles/psion_recreate.dir/wireless.c.obj: ../wireless.c \
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:
 
 /home/menadue/pico/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot.h:
+
+../record.h:
+
+/usr/include/newlib/sys/sched.h:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h:
 
@@ -7254,6 +6918,10 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h:
 
+/home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h:
+
+/home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/vreg_and_chip_reset.h:
+
 ../i2c.c:
 
 /usr/include/newlib/alloca.h:
@@ -7328,6 +6996,12 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/vreg_and_chip_reset.h:
 
+../rtc.c:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c:
+
+../eeprom.h:
+
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
 
 ../svc.h:
@@ -7348,17 +7022,15 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h:
 
-/usr/include/newlib/sys/sched.h:
-
-../record.h:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c:
-
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h:
 
 ../usb_descriptors.h:
 
 ../svc_pak_serial_eeprom.h:
+
+../rtc.h:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:
 
 ../svc_er.h:
 
@@ -7367,16 +7039,6 @@ generated/pico_base/pico/version.h:
 /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h:
 
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h:
-
-../rtc.c:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c:
-
-../eeprom.h:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:
-
-../rtc.h:
 
 /home/menadue/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h:
 
@@ -7438,7 +7100,9 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c:
 
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/dcd.h:
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:
+
+/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid.h:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c:
 
@@ -7462,6 +7126,8 @@ generated/pico_base/pico/version.h:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c:
 
+/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/dcd.h:
+
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.h:
@@ -7483,6 +7149,8 @@ generated/pico_base/pico/version.h:
 /usr/include/newlib/_newlib_version.h:
 
 /home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c:
+
+/usr/include/newlib/sys/stat.h:
 
 /home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c:
 
@@ -7559,3 +7227,5 @@ generated/pico_base/pico/version.h:
 ../svc_er.c:
 
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:

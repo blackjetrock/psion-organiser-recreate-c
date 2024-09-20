@@ -5,6 +5,9 @@ set(PICO_BOARD pico)
 # (note this can come from environment, CMake cache etc)
 set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
 
+set(PICO_STACK_SIZE, 65536)
+set(PICO_USE_STACK_GUARDS 1)
+
 include(pico_sdk_import.cmake)
 
 project(psion_recreate C CXX ASM)
@@ -41,7 +44,7 @@ sleep.c
 rosc.c
 usb_descriptors.c
 msc_disk.c
-usb_utility.c
+#usb_utility.c
 )
 
 pico_enable_stdio_usb(psion_recreate 1)

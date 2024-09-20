@@ -202,8 +202,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/psion_recreate.dir/sysvar.c.obj.d"
   "CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj"
   "CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj.d"
-  "CMakeFiles/psion_recreate.dir/usb_utility.c.obj"
-  "CMakeFiles/psion_recreate.dir/usb_utility.c.obj.d"
   "CMakeFiles/psion_recreate.dir/wireless.c.obj"
   "CMakeFiles/psion_recreate.dir/wireless.c.obj.d"
   "psion_recreate.elf"

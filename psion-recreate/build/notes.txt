@@ -1,0 +1,114 @@
+[rp2040.core1] clearing lockup after double fault
+
+Thread 1 "rp2040.core0" received signal SIGINT, Interrupt.
+[Switching to Thread 1]
+0x100055e4 in timer_busy_wait_until (timer=timer@entry=0x40054000, t=22873495) at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c:118
+118         while (hi == hi_target && timer->timerawl < (uint32_t) target) {
+(gdb) bt
+#0  0x100055e4 in timer_busy_wait_until (timer=timer@entry=0x40054000, t=22873495)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c:118
+#1  0x1000561c in timer_busy_wait_us (timer=timer@entry=0x40054000, delay_us=<optimised out>)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c:98
+#2  0x10005640 in busy_wait_us (delay_us=<optimised out>)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c:134
+#3  0x100088e8 in stdio_get_until (buf=buf@entry=0x20041fa4 "\001\037\004 ", len=len@entry=1, until=<optimised out>)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:134
+#4  0x10008988 in stdio_getchar_timeout_us (timeout_us=timeout_us@entry=1)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:257
+#5  0x10002ace in getchar_timeout_us (timeout_us=1)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h:98
+#6  serial_loop () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/serial.c:1061
+#7  0x10000772 in menu_loop_tasks ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:530
+#8  0x10003286 in kb_test () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_kb.c:664
+#9  0x10001d32 in menu_process () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/menu.c:91
+#10 0x10001eea in menu_loop () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/menu.c:1174
+#11 0x1000091c in main ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:753
+(gdb) thr 2
+[Switching to thread 2 (Thread 2)]
+#0  0xfffffffe in ?? ()
+(gdb) bt
+#0  0xfffffffe in ?? ()
+#1  0x10003184 in matrix_scan () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_kb.c:556
+#2  0x10000344 in core1_main ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:572
+#3  <signal handler called>
+#4  0x100003ca in gpio_set_mask (mask=1048576)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:912
+#5  gpio_put (value=true, gpio=20)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:1151
+#6  read_165 (latchpin=<optimised out>)
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:193
+#7  0x10003184 in matrix_scan () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_kb.c:556
+#8  0x10000344 in core1_main ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:572
+#9  0x1000c24e in core1_wrapper (entry=0x10000321 <core1_main>, stack_base=<optimised out>)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c:97
+#10 0x00000172 in ?? ()
+(gdb) 
+
+
+
+ote: automatically using hardware breakpoints for read-only addresses.
+(gdb) c
+Continuing.
+
+Thread 1 "rp2040.core0" hit Breakpoint 1, main () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:594
+594     {
+(gdb) c
+Continuing.
+
+Thread 2 "rp2040.core1" received signal SIGTRAP, Trace/breakpoint trap.
+[Switching to Thread 2]
+isr_hardfault () at /home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S:88
+88      decl_isr_bkpt isr_hardfault
+(gdb) bt
+#0  isr_hardfault () at /home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S:88
+#1  <signal handler called>
+#2  0x10000408 in gpio_clr_mask (mask=1048576)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:959
+#3  gpio_put (value=false, gpio=20)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h:1153
+#4  read_165 (latchpin=<optimised out>)
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:190
+#5  0x10003184 in matrix_scan () at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_kb.c:556
+#6  0x10000344 in core1_main ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:572
+#7  0x1000c24e in core1_wrapper (entry=0x10000321 <core1_main>, stack_base=<optimised out>)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c:97
+#8  0x00000172 in ?? ()
+(gdb) thr 1
+[Switching to thread 1 (Thread 1)]
+#0  0x10008aa8 in uart_write_blocking (len=1, src=0x20041eb7 "0\300?", uart=0x40034000)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:461
+461             while (!uart_is_writable(uart))
+(gdb) bt
+#0  0x10008aa8 in uart_write_blocking (len=1, src=0x20041eb7 "0\300?", uart=0x40034000)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:461
+#1  uart_putc_raw (c=<optimised out>, uart=0x40034000)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:496
+#2  uart_putc (c=48 '0', uart=0x40034000)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:513
+#3  stdio_uart_out_chars (buf=0x20041f01 "Time 5: 0000000013249801 delta(5-4):-", '0' <repeats 13 times>, "25", 
+    length=52) at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c:143
+#4  0x10008734 in stdio_out_chars_crlf (driver=driver@entry=0x20003f90 <stdio_uart>, 
+    s=s@entry=0x20041f00 "\nTime 5: 0000000013249801 delta(5-4):-", '0' <repeats 13 times>, "25", len=53)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:82
+#5  0x10008766 in stdio_stack_buffer_flush (buffer=buffer@entry=0x20041efc)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:185
+#6  0x10008a1e in __wrap_vprintf (format=<optimised out>, va=...)
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:329
+#7  0x10008a48 in __wrap_printf (format=0x100131e0 "\nTime %d: %016lld delta(%d-%d):%016lld")
+    at /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c:350
+#8  0x100025cc in cli_information ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/serial.c:420
+#9  0x10002afc in serial_loop ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/serial.c:1069
+#10 0x10000772 in menu_loop_tasks ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:530
+#11 0x1000090e in main ()
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/psion_recreate.c:747
+(gdb) 
+
+

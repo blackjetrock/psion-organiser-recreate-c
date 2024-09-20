@@ -46,9 +46,9 @@ CMAKE_ASM_FLAGS_RELEASE:STRING=-g -O3 -DNDEBUG
 //Flags used by the ASM compiler during RELWITHDEBINFO builds.
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Choose the type of build, options are: 'Debug', 'Release', 'MinSizeRel',
-// 'RelWithDebInfo'.
-CMAKE_BUILD_TYPE:STRING=Release
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -252,18 +252,8 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 //Enables QUIET option for all content population
 FETCHCONTENT_QUIET:BOOL=ON
 
-//When not empty, overrides where to find pre-populated content
-// for picotool
-FETCHCONTENT_SOURCE_DIR_PICOTOOL:PATH=
-
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
-
-//Enables UPDATE_DISCONNECTED behavior just for population of picotool
-FETCHCONTENT_UPDATES_DISCONNECTED_PICOTOOL:BOOL=OFF
-
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
 //PICO target board (e.g. pico, pico2)
 PICO_BOARD:STRING=pico
@@ -335,10 +325,7 @@ pico_sdk_IS_TOP_LEVEL:STATIC=OFF
 pico_sdk_SOURCE_DIR:STATIC=/home/menadue/pico/pico-sdk
 
 //The directory containing a CMake configuration file for picotool.
-picotool_DIR:PATH=picotool_DIR-NOTFOUND
-
-//Directory where picotool has been installed
-picotool_INSTALL_DIR:PATH=/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/build/_deps
+picotool_DIR:PATH=/usr/local/lib/cmake/picotool
 
 //Value Computed by CMake
 psion_recreate_BINARY_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/build
@@ -375,8 +362,6 @@ CMAKE_ASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_FLAGS_RELWITHDEBINFO
 CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//STRINGS property for variable: CMAKE_BUILD_TYPE
-CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release;MinSizeRel;RelWithDebInfo
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/build
 //Major version of cmake used to create the current loaded cache
@@ -521,8 +506,6 @@ DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 FAMILY_MCUS:INTERNAL=RP2040
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 PICO_ARM:INTERNAL=1
 PICO_BOOT_STAGE2_DIR:INTERNAL=/home/menadue/pico/pico-sdk/src/rp2040/boot_stage2
 PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=/home/menadue/pico/pico-sdk/cmake/preload/platforms

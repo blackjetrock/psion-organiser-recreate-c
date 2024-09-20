@@ -334,10 +334,16 @@ char nos_get_key(void)
 
 #define KEY_PRESSED(MAP,BITNO) ((MAP) & ((uint64_t)1 << BITNO))
 
+uint64_t inactivity_now;
+uint64_t inactivity_time;
+int i, k;
+int cur_modes;
+
 void matrix_debounce(MATRIX_MAP matrix)
 {
+  
   // Move queue along and insert new value
-  for(int i=1; i<MAX_INPUT_QUEUE;i++)
+  for( i=1; i<MAX_INPUT_QUEUE;i++)
     {
       input_queue[i] = input_queue[i-1];
     }
@@ -346,7 +352,7 @@ void matrix_debounce(MATRIX_MAP matrix)
 
   // shift the pressed and unpressed queues so a new entry
   // can be added
-  for(int i=1; i<MAX_PRESS_QUEUE;i++)
+  for( i=1; i<MAX_PRESS_QUEUE;i++)
     {
       pressed_queue[i]  = pressed_queue[i-1];
       released_queue[i] = released_queue[i-1];
@@ -357,7 +363,7 @@ void matrix_debounce(MATRIX_MAP matrix)
   
   // AND the input and also the negation of the input
   // This gives us a stream of pressed and released edges.
-  for(int i=0; i<MAX_INPUT_QUEUE;i++)
+  for(i=0; i<MAX_INPUT_QUEUE;i++)
     {
       // All keys held for max_queue samples
       pressed_queue[0] &= input_queue[i];
@@ -374,7 +380,7 @@ void matrix_debounce(MATRIX_MAP matrix)
       printf("\nPed:%016llX Red:%016llX", pressed_edges, released_edges);
       printf("\n");
 #endif
-      for(int i=0; i<64; i++)
+      for(i=0; i<64; i++)
 	{
 	  if( ((uint64_t)1<<i) & pressed_edges )
 	    {
@@ -419,7 +425,7 @@ void matrix_debounce(MATRIX_MAP matrix)
     }
 
   // Find the key map to use
-  int cur_modes = 0;
+  cur_modes = 0;
   if( shift_pressed )
     {
       cur_modes |= SHIFT_ON;
@@ -437,7 +443,7 @@ void matrix_debounce(MATRIX_MAP matrix)
 
   key_map = base_map;
   
-  for(int k=0; k<NUM_MODES; k++)
+  for(k=0; k<NUM_MODES; k++)
     {
       if( cur_modes == key_map_map[k].modes )
 	{
@@ -447,14 +453,14 @@ void matrix_debounce(MATRIX_MAP matrix)
     }
   
   // Now generate pressed events and put them into a queue
-  int i = 0;
+  i = 0;
   
   while( key_map[i].mask != 0 )
     {
       if( (key_map[i].mask) & pressed_edges )
 	{
 	  // Key pressed
-	  //printf("\nC:%c", key_map[i].c);
+	  printf("\nC:%c", key_map[i].c);
 
 	  // Update inactivity timeout
 	  last_key_press_time = time_us_64();
@@ -477,7 +483,7 @@ void matrix_debounce(MATRIX_MAP matrix)
     }
 
   // Inactivity processing
-
+#if 0
   // Initialise the last key time as global initialisation has to be constant
   if( init_last_key )
     {
@@ -486,12 +492,12 @@ void matrix_debounce(MATRIX_MAP matrix)
       last_tick_time =  last_key_press_time;
     }
 
-  uint64_t now = time_us_64();
-  uint64_t inactivity_time = (now - last_key_press_time);
+  inactivity_now = time_us_64();
+  inactivity_time = (inactivity_now - last_key_press_time);
 
-  if( (now - last_tick_time) > tick_interval )
+  if( (inactivity_now - last_tick_time) > tick_interval )
     {
-      last_tick_time = now;
+      last_tick_time = inactivity_now;
       tick = 1;
     }
   
@@ -512,6 +518,8 @@ void matrix_debounce(MATRIX_MAP matrix)
 	    }
 	}
     }
+  #endif
+  
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -519,12 +527,14 @@ void matrix_debounce(MATRIX_MAP matrix)
 // detected keypress and a 0 for no press. There's a small enough
 // number of keys for this to fit in a uint32_t
 
+int m;
+
 void matrix_scan(void)
 {
 #if DB_KB_MATRIX
   printf("\n%s:State:%d", __FUNCTION__, mat_scan_state);
 #endif
-  
+
   // Use a simple state machine for the scanning
   switch(mat_scan_state)
     {
@@ -550,22 +560,21 @@ void matrix_scan(void)
       if( mat_sense & 0x20 )
 	{
 	  mat_scan_matrix |= ((uint64_t)1<<MATRIX_BIT_ON);
-	  
 	}
       else
 	{
+
 	  // See which keys are pressed, if any
 	  if( (mat_sense & 0x1F) != 0 )
 	    {
-	      for(int m=0; m<5; m++)
+
+	      for(m=0; m<5; m++)
 		{
-		  
 		  if( mat_sense & ((uint64_t)1 << m) )
 		    {
 		      // We have a press, add it to the matrix
 		      
 		      mat_scan_matrix |= ((uint64_t)1 << (mat_scan_n*5 + m));
-		      
 		    }
 		}
 	    }
@@ -586,8 +595,9 @@ void matrix_scan(void)
 	  // Before we clear the matrix for another scan, we send the
 	  // matrix to the debouncer
 	  //	  printf("\nMSM: %08X", mat_scan_matrix);
-
-	  //	  printf("\nX:%08X", mat_scan_matrix);
+#if DB_KB_MATRIX
+	  printf("\nX:%08X", mat_scan_matrix);
+#endif
 	  matrix_debounce(mat_scan_matrix);
 	  mat_scan_matrix = 0;
 	}
@@ -747,12 +757,18 @@ int unqueue_hid_key(void)
   return(k);
 }
 
-
+#if 0
 uint8_t const conv_table[128][2] =  { HID_ASCII_TO_KEYCODE };
+#endif
 
 int translate_to_hid(char ch)
 {
   int ret = 0;
+  
+#if 1
+  ret = ch;
+#else
+
   uint8_t modifier   = 0;
   
   if ( conv_table[ch][0] )
@@ -762,6 +778,6 @@ int translate_to_hid(char ch)
   
   ret  = conv_table[ch][1];
   ret |= modifier << 8;
-  
+#endif
   return(ret);
 }

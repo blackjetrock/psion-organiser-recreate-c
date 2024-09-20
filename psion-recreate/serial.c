@@ -409,6 +409,17 @@ void cli_information(void)
   printf("\nCore1 count      : %d", core1_count);
   printf("\nCore1 safe count : %d", core1_safe_x);
   printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
+  for(int i=0; i<NUM_STATS; i++)
+    {
+      if( i == 0 )
+	{
+	  printf("\nTime %d: %016ld", i, now[i]);
+	}
+      else
+	{
+	  printf("\nTime %d: %016lld delta(%d-%d):%016lld", i, now[i], i, i-1, now[i]-now[i-1]);
+	}
+    }
   printf("\n");
 }
 

@@ -1,0 +1,1 @@
+cmake -Dpicotool_DIR=$HOME/pico/picotool/picotool -DPICO_SDK_PATH=$HOME/pico/pico-sdk/ -DCMAKE_BUILD_TYPE=Debug ..

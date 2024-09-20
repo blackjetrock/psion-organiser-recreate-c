@@ -24,7 +24,7 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
-  "CFG_TUSB_DEBUG=0"
+  "CFG_TUSB_DEBUG=1"
   "CFG_TUSB_MCU=OPT_MCU_RP2040"
   "CFG_TUSB_OS=OPT_OS_PICO"
   "LIB_PICO_ATOMIC=1"
@@ -74,7 +74,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "PICO_32BIT=1"
   "PICO_BOARD=\"pico\""
   "PICO_BUILD=1"
-  "PICO_CMAKE_BUILD_TYPE=\"Release\""
+  "PICO_CMAKE_BUILD_TYPE=\"Debug\""
   "PICO_COPY_TO_RAM=0"
   "PICO_CXX_ENABLE_EXCEPTIONS=0"
   "PICO_NO_FLASH=0"
@@ -249,7 +249,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/svc_pk.c" "CMakeFiles/psion_recreate.dir/svc_pk.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/svc_pk.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/sysvar.c" "CMakeFiles/psion_recreate.dir/sysvar.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/sysvar.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/usb_descriptors.c" "CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/usb_descriptors.c.obj.d"
-  "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/usb_utility.c" "CMakeFiles/psion_recreate.dir/usb_utility.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/usb_utility.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion-recreate/wireless.c" "CMakeFiles/psion_recreate.dir/wireless.c.obj" "gcc" "CMakeFiles/psion_recreate.dir/wireless.c.obj.d"
   "/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj" "gcc" "CMakeFiles/psion_recreate.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj.d"
   )
