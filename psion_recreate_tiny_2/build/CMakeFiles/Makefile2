@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/menadue/tree/github/psion-organiser-recreate-c/psion_re
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/usb_own_descriptors_multicore.dir/all
+all: CMakeFiles/psion_recreate_ctusb.dir/all
 all: pico-sdk/all
 .PHONY : all
 
@@ -72,7 +72,7 @@ preinstall: pico-sdk/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/usb_own_descriptors_multicore.dir/clean
+clean: CMakeFiles/psion_recreate_ctusb.dir/clean
 clean: pico-sdk/clean
 .PHONY : clean
 
@@ -1720,30 +1720,30 @@ pico-sdk/tools/clean:
 .PHONY : pico-sdk/tools/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/usb_own_descriptors_multicore.dir
+# Target rules for target CMakeFiles/psion_recreate_ctusb.dir
 
 # All Build rule for target.
-CMakeFiles/usb_own_descriptors_multicore.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target usb_own_descriptors_multicore"
-.PHONY : CMakeFiles/usb_own_descriptors_multicore.dir/all
+CMakeFiles/psion_recreate_ctusb.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target psion_recreate_ctusb"
+.PHONY : CMakeFiles/psion_recreate_ctusb.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/usb_own_descriptors_multicore.dir/rule: cmake_check_build_system
+CMakeFiles/psion_recreate_ctusb.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles 99
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/usb_own_descriptors_multicore.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/psion_recreate_ctusb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles 0
-.PHONY : CMakeFiles/usb_own_descriptors_multicore.dir/rule
+.PHONY : CMakeFiles/psion_recreate_ctusb.dir/rule
 
 # Convenience name for target.
-usb_own_descriptors_multicore: CMakeFiles/usb_own_descriptors_multicore.dir/rule
-.PHONY : usb_own_descriptors_multicore
+psion_recreate_ctusb: CMakeFiles/psion_recreate_ctusb.dir/rule
+.PHONY : psion_recreate_ctusb
 
 # clean rule for target.
-CMakeFiles/usb_own_descriptors_multicore.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/clean
-.PHONY : CMakeFiles/usb_own_descriptors_multicore.dir/clean
+CMakeFiles/psion_recreate_ctusb.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/clean
+.PHONY : CMakeFiles/psion_recreate_ctusb.dir/clean
 
 #=============================================================================
 # Target rules for target pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir

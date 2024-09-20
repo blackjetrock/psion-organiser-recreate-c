@@ -1,4 +1,4 @@
-/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles/usb_own_descriptors_multicore.dir
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles/psion_recreate_ctusb.dir
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles/edit_cache.dir
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles/rebuild_cache.dir
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/CMakeFiles/edit_cache.dir

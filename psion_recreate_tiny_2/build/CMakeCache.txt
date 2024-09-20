@@ -169,7 +169,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=usb_own_descriptors_multicore
+CMAKE_PROJECT_NAME:STATIC=psion_recreate_ctusb
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/arm-none-eabi-ranlib
@@ -331,13 +331,13 @@ pico_sdk_SOURCE_DIR:STATIC=/home/menadue/pico/pico-sdk
 picotool_DIR:PATH=/usr/local/lib/cmake/picotool
 
 //Value Computed by CMake
-usb_own_descriptors_multicore_BINARY_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build
+psion_recreate_ctusb_BINARY_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build
 
 //Value Computed by CMake
-usb_own_descriptors_multicore_IS_TOP_LEVEL:STATIC=ON
+psion_recreate_ctusb_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-usb_own_descriptors_multicore_SOURCE_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2
+psion_recreate_ctusb_SOURCE_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2
 
 
 ########################

@@ -1,4 +1,4 @@
-set(PROJECT usb_own_descriptors_multicore)
+set(PROJECT psion_recreate_ctusb)
 cmake_minimum_required(VERSION 3.12)
 set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)

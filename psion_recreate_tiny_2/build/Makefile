@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named usb_own_descriptors_multicore
+# Target rules for targets named psion_recreate_ctusb
 
 # Build rule for target.
-usb_own_descriptors_multicore: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 usb_own_descriptors_multicore
-.PHONY : usb_own_descriptors_multicore
+psion_recreate_ctusb: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 psion_recreate_ctusb
+.PHONY : psion_recreate_ctusb
 
 # fast build rule for target.
-usb_own_descriptors_multicore/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/build
-.PHONY : usb_own_descriptors_multicore/fast
+psion_recreate_ctusb/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/build
+.PHONY : psion_recreate_ctusb/fast
 
 #=============================================================================
 # Target rules for targets named bs2_default
@@ -173,7 +173,7 @@ cdc.obj: cdc.c.obj
 
 # target to build an object file
 cdc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/cdc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/cdc.c.obj
 .PHONY : cdc.c.obj
 
 cdc.i: cdc.c.i
@@ -181,7 +181,7 @@ cdc.i: cdc.c.i
 
 # target to preprocess a source file
 cdc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/cdc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/cdc.c.i
 .PHONY : cdc.c.i
 
 cdc.s: cdc.c.s
@@ -189,7 +189,7 @@ cdc.s: cdc.c.s
 
 # target to generate assembly for a file
 cdc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/cdc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/cdc.c.s
 .PHONY : cdc.c.s
 
 core1.obj: core1.c.obj
@@ -197,7 +197,7 @@ core1.obj: core1.c.obj
 
 # target to build an object file
 core1.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/core1.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/core1.c.obj
 .PHONY : core1.c.obj
 
 core1.i: core1.c.i
@@ -205,7 +205,7 @@ core1.i: core1.c.i
 
 # target to preprocess a source file
 core1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/core1.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/core1.c.i
 .PHONY : core1.c.i
 
 core1.s: core1.c.s
@@ -213,7 +213,7 @@ core1.s: core1.c.s
 
 # target to generate assembly for a file
 core1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/core1.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/core1.c.s
 .PHONY : core1.c.s
 
 cursor.obj: cursor.c.obj
@@ -221,7 +221,7 @@ cursor.obj: cursor.c.obj
 
 # target to build an object file
 cursor.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/cursor.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/cursor.c.obj
 .PHONY : cursor.c.obj
 
 cursor.i: cursor.c.i
@@ -229,7 +229,7 @@ cursor.i: cursor.c.i
 
 # target to preprocess a source file
 cursor.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/cursor.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/cursor.c.i
 .PHONY : cursor.c.i
 
 cursor.s: cursor.c.s
@@ -237,7 +237,7 @@ cursor.s: cursor.c.s
 
 # target to generate assembly for a file
 cursor.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/cursor.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/cursor.c.s
 .PHONY : cursor.c.s
 
 display.obj: display.c.obj
@@ -245,7 +245,7 @@ display.obj: display.c.obj
 
 # target to build an object file
 display.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/display.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/display.c.obj
 .PHONY : display.c.obj
 
 display.i: display.c.i
@@ -253,7 +253,7 @@ display.i: display.c.i
 
 # target to preprocess a source file
 display.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/display.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/display.c.i
 .PHONY : display.c.i
 
 display.s: display.c.s
@@ -261,7 +261,7 @@ display.s: display.c.s
 
 # target to generate assembly for a file
 display.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/display.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/display.c.s
 .PHONY : display.c.s
 
 eeprom.obj: eeprom.c.obj
@@ -269,7 +269,7 @@ eeprom.obj: eeprom.c.obj
 
 # target to build an object file
 eeprom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/eeprom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.obj
 .PHONY : eeprom.c.obj
 
 eeprom.i: eeprom.c.i
@@ -277,7 +277,7 @@ eeprom.i: eeprom.c.i
 
 # target to preprocess a source file
 eeprom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/eeprom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.i
 .PHONY : eeprom.c.i
 
 eeprom.s: eeprom.c.s
@@ -285,7 +285,7 @@ eeprom.s: eeprom.c.s
 
 # target to generate assembly for a file
 eeprom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/eeprom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.s
 .PHONY : eeprom.c.s
 
 font.obj: font.c.obj
@@ -293,7 +293,7 @@ font.obj: font.c.obj
 
 # target to build an object file
 font.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/font.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/font.c.obj
 .PHONY : font.c.obj
 
 font.i: font.c.i
@@ -301,7 +301,7 @@ font.i: font.c.i
 
 # target to preprocess a source file
 font.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/font.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/font.c.i
 .PHONY : font.c.i
 
 font.s: font.c.s
@@ -309,7 +309,7 @@ font.s: font.c.s
 
 # target to generate assembly for a file
 font.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/font.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/font.c.s
 .PHONY : font.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
@@ -317,7 +317,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.obj: home/menadue/pi
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
@@ -325,7 +325,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/menadue/pico
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
@@ -333,7 +333,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/menadue/pico
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
@@ -341,7 +341,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/me
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -349,7 +349,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/mena
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -357,7 +357,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/mena
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
@@ -365,7 +365,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: home/menadu
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -373,7 +373,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/menadue/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -381,7 +381,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/menadue/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
@@ -389,7 +389,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: home/menadu
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -397,7 +397,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/menadue/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -405,7 +405,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/menadue/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
@@ -413,7 +413,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/men
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -421,7 +421,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/menad
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -429,7 +429,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/menad
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
@@ -437,7 +437,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: home/menadu
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -445,7 +445,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/menadue/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -453,7 +453,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/menadue/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
@@ -461,7 +461,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: home/mena
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -469,7 +469,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/menadu
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -477,7 +477,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/menadu
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
@@ -485,7 +485,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: home/menadu
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -493,7 +493,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/menadue/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -501,7 +501,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/menadue/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
@@ -509,7 +509,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -517,7 +517,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/me
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -525,7 +525,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/me
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
@@ -533,7 +533,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: home/menadu
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -541,7 +541,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/menadue/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -549,7 +549,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/menadue/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
@@ -557,7 +557,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -565,7 +565,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/me
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -573,7 +573,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/me
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
@@ -581,7 +581,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: home/
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -589,7 +589,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/me
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -597,7 +597,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/me
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
@@ -605,7 +605,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: home/me
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
@@ -613,7 +613,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/mena
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
@@ -621,7 +621,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/mena
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
@@ -629,7 +629,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: home/menadue/pi
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -637,7 +637,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/menadue/pico
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -645,7 +645,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/menadue/pico
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
@@ -653,7 +653,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: home/menadue/pico/pi
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
@@ -661,7 +661,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: home/menadue/pico/pico
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
@@ -669,7 +669,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: home/menadue/pico/pico
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
@@ -677,7 +677,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: home/menadue
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
@@ -685,7 +685,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/menadue/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
@@ -693,7 +693,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/menadue/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
@@ -701,7 +701,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -709,7 +709,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -717,7 +717,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
@@ -725,7 +725,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -733,7 +733,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -741,7 +741,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
@@ -749,7 +749,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.obj: home/menadue/pico/pico-sdk/
 
 # target to build an object file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
@@ -757,7 +757,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.i: home/menadue/pico/pico-sdk/li
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 
 home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
@@ -765,7 +765,7 @@ home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.s: home/menadue/pico/pico-sdk/li
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.obj: home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.obj
@@ -773,7 +773,7 @@ home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.obj: home/menadue/pic
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.obj
 
 home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.i: home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.i
@@ -781,7 +781,7 @@ home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.i: home/menadue/pico/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.i
 
 home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.s: home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.s
@@ -789,7 +789,7 @@ home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.s: home/menadue/pico/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
@@ -797,7 +797,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/menad
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -805,7 +805,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.i: home/menadue
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -813,7 +813,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.s: home/menadue
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -821,7 +821,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.obj: home/menadue/pico
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -829,7 +829,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.i: home/menadue/pico/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -837,7 +837,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.s: home/menadue/pico/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -845,7 +845,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.obj: home/menadue/pico/pic
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.i: home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -853,7 +853,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.i: home/menadue/pico/pico-
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.s: home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -861,7 +861,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.s: home/menadue/pico/pico-
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/sem.obj: home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -869,7 +869,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/sem.obj: home/menadue/pico/pico-
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/sem.i: home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -877,7 +877,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/sem.i: home/menadue/pico/pico-sd
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_sync/sem.s: home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -885,7 +885,7 @@ home/menadue/pico/pico-sdk/src/common/pico_sync/sem.s: home/menadue/pico/pico-sd
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_time/time.obj: home/menadue/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -893,7 +893,7 @@ home/menadue/pico/pico-sdk/src/common/pico_time/time.obj: home/menadue/pico/pico
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_time/time.i: home/menadue/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -901,7 +901,7 @@ home/menadue/pico/pico-sdk/src/common/pico_time/time.i: home/menadue/pico/pico-s
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_time/time.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_time/time.s: home/menadue/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -909,7 +909,7 @@ home/menadue/pico/pico-sdk/src/common/pico_time/time.s: home/menadue/pico/pico-s
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_time/time.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -917,7 +917,7 @@ home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: home/menadue
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -925,7 +925,7 @@ home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.i: home/menadue/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -933,7 +933,7 @@ home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.s: home/menadue/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_util/datetime.obj: home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -941,7 +941,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/datetime.obj: home/menadue/pico/
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_util/datetime.i: home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -949,7 +949,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/datetime.i: home/menadue/pico/pi
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_util/datetime.s: home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -957,7 +957,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/datetime.s: home/menadue/pico/pi
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_util/pheap.obj: home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -965,7 +965,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/pheap.obj: home/menadue/pico/pic
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_util/pheap.i: home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -973,7 +973,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/pheap.i: home/menadue/pico/pico-
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_util/pheap.s: home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -981,7 +981,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/pheap.s: home/menadue/pico/pico-
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 home/menadue/pico/pico-sdk/src/common/pico_util/queue.obj: home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -989,7 +989,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/queue.obj: home/menadue/pico/pic
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 home/menadue/pico/pico-sdk/src/common/pico_util/queue.i: home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -997,7 +997,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/queue.i: home/menadue/pico/pico-
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 home/menadue/pico/pico-sdk/src/common/pico_util/queue.s: home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -1005,7 +1005,7 @@ home/menadue/pico/pico-sdk/src/common/pico_util/queue.s: home/menadue/pico/pico-
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.obj: home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
@@ -1013,7 +1013,7 @@ home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.i: home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
@@ -1021,7 +1021,7 @@ home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.i
 
 home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.s: home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
@@ -1029,7 +1029,7 @@ home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
@@ -1037,7 +1037,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.obj: home
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
@@ -1045,7 +1045,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/m
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
@@ -1053,7 +1053,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/m
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -1061,7 +1061,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: home/menad
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -1069,7 +1069,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/menadue
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -1077,7 +1077,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/menadue
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -1085,7 +1085,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: home/men
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
@@ -1093,7 +1093,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: home/menadue
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
@@ -1101,7 +1101,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/menadue/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
@@ -1109,7 +1109,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/menadue/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -1117,7 +1117,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -1125,7 +1125,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -1133,7 +1133,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -1141,7 +1141,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/menadue/pic
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1149,7 +1149,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/menadue/pico/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1157,7 +1157,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/menadue/pico/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1165,7 +1165,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: ho
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -1173,7 +1173,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/menadue/pic
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1181,7 +1181,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/menadue/pico/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1189,7 +1189,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/menadue/pico/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -1197,7 +1197,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1205,7 +1205,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1213,7 +1213,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
@@ -1221,7 +1221,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
@@ -1229,7 +1229,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
@@ -1237,7 +1237,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
@@ -1245,7 +1245,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.obj: home/menadue
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
@@ -1253,7 +1253,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/menadue/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
@@ -1261,7 +1261,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/menadue/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -1269,7 +1269,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: home/menadue
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1277,7 +1277,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/menadue/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1285,7 +1285,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/menadue/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -1293,7 +1293,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1301,7 +1301,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1309,7 +1309,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1317,7 +1317,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1325,7 +1325,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1333,7 +1333,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1341,7 +1341,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: home/m
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1349,7 +1349,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/men
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1357,7 +1357,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/men
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1365,7 +1365,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1373,7 +1373,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1381,7 +1381,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
@@ -1389,7 +1389,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
@@ -1397,7 +1397,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
@@ -1405,7 +1405,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1413,7 +1413,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/m
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1421,7 +1421,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: home/menadue
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1429,7 +1429,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/menadue/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1437,7 +1437,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/menadue/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
@@ -1445,7 +1445,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.obj: home/me
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
@@ -1453,7 +1453,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/mena
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
@@ -1461,7 +1461,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/mena
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
@@ -1469,7 +1469,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
@@ -1477,7 +1477,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
@@ -1485,7 +1485,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
@@ -1493,7 +1493,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.obj: home/menadue/pico/
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
@@ -1501,7 +1501,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.obj: home/
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
@@ -1509,7 +1509,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/me
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
@@ -1517,7 +1517,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/me
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
@@ -1525,7 +1525,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.obj: hom
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
@@ -1533,7 +1533,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.obj: h
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
@@ -1541,7 +1541,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.obj
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
@@ -1549,7 +1549,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.i: 
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
@@ -1557,7 +1557,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.s: 
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -1565,7 +1565,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: home/mena
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1573,7 +1573,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: home/menadu
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1581,7 +1581,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: home/menadu
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
@@ -1589,7 +1589,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
@@ -1597,7 +1597,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1605,7 +1605,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1613,7 +1613,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
@@ -1621,7 +1621,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.obj: hom
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
@@ -1629,7 +1629,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.obj: 
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
@@ -1637,7 +1637,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.i: ho
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
@@ -1645,7 +1645,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.s: ho
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -1653,7 +1653,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: home/menadu
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1661,7 +1661,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: home/menadue/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1669,7 +1669,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: home/menadue/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
@@ -1677,7 +1677,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.ob
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1685,7 +1685,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.ob
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
@@ -1693,7 +1693,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
@@ -1701,7 +1701,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
@@ -1709,7 +1709,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1717,7 +1717,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/m
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
@@ -1725,7 +1725,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj: home/men
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
@@ -1733,7 +1733,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i: home/menad
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
@@ -1741,7 +1741,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s: home/menad
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
@@ -1749,7 +1749,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.obj: home/me
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
@@ -1757,7 +1757,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/mena
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
@@ -1765,7 +1765,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/mena
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -1773,7 +1773,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1781,7 +1781,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1789,7 +1789,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1797,7 +1797,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: home/menadue
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1805,7 +1805,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/menadue/p
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1813,7 +1813,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/menadue/p
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
@@ -1821,7 +1821,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.obj: ho
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
@@ -1829,7 +1829,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
@@ -1837,7 +1837,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
@@ -1845,7 +1845,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
@@ -1853,7 +1853,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
@@ -1861,7 +1861,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
@@ -1869,7 +1869,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_g
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
@@ -1877,7 +1877,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_g
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
@@ -1885,7 +1885,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_g
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
@@ -1893,7 +1893,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_bin
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
@@ -1901,7 +1901,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_bin
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
@@ -1909,7 +1909,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_bin
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1917,7 +1917,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: home/menadue/pic
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1925,7 +1925,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/menadue/pico/
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1933,7 +1933,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/menadue/pico/
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
@@ -1941,7 +1941,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: ho
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
@@ -1949,7 +1949,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
@@ -1957,7 +1957,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
@@ -1965,7 +1965,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/men
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
@@ -1973,7 +1973,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/menad
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
@@ -1981,7 +1981,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/menad
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
@@ -1989,7 +1989,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
@@ -1997,7 +1997,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
@@ -2005,7 +2005,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -2013,7 +2013,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: home/menadue/p
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -2021,7 +2021,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/menadue/pic
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -2029,7 +2029,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/menadue/pic
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
@@ -2037,7 +2037,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: home/men
 
 # target to build an object file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -2045,7 +2045,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/menad
 
 # target to preprocess a source file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
 home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -2053,7 +2053,7 @@ home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/menad
 
 # target to generate assembly for a file
 home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
 i2c.obj: i2c.c.obj
@@ -2061,7 +2061,7 @@ i2c.obj: i2c.c.obj
 
 # target to build an object file
 i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/i2c.c.obj
 .PHONY : i2c.c.obj
 
 i2c.i: i2c.c.i
@@ -2069,7 +2069,7 @@ i2c.i: i2c.c.i
 
 # target to preprocess a source file
 i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/i2c.c.i
 .PHONY : i2c.c.i
 
 i2c.s: i2c.c.s
@@ -2077,7 +2077,7 @@ i2c.s: i2c.c.s
 
 # target to generate assembly for a file
 i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/i2c.c.s
 .PHONY : i2c.c.s
 
 main.obj: main.c.obj
@@ -2085,7 +2085,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -2093,7 +2093,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -2101,7 +2101,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/main.c.s
 .PHONY : main.c.s
 
 menu.obj: menu.c.obj
@@ -2109,7 +2109,7 @@ menu.obj: menu.c.obj
 
 # target to build an object file
 menu.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/menu.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/menu.c.obj
 .PHONY : menu.c.obj
 
 menu.i: menu.c.i
@@ -2117,7 +2117,7 @@ menu.i: menu.c.i
 
 # target to preprocess a source file
 menu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/menu.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/menu.c.i
 .PHONY : menu.c.i
 
 menu.s: menu.c.s
@@ -2125,7 +2125,7 @@ menu.s: menu.c.s
 
 # target to generate assembly for a file
 menu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/menu.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/menu.c.s
 .PHONY : menu.c.s
 
 rtc.obj: rtc.c.obj
@@ -2133,7 +2133,7 @@ rtc.obj: rtc.c.obj
 
 # target to build an object file
 rtc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/rtc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/rtc.c.obj
 .PHONY : rtc.c.obj
 
 rtc.i: rtc.c.i
@@ -2141,7 +2141,7 @@ rtc.i: rtc.c.i
 
 # target to preprocess a source file
 rtc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/rtc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/rtc.c.i
 .PHONY : rtc.c.i
 
 rtc.s: rtc.c.s
@@ -2149,7 +2149,7 @@ rtc.s: rtc.c.s
 
 # target to generate assembly for a file
 rtc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/rtc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/rtc.c.s
 .PHONY : rtc.c.s
 
 serial.obj: serial.c.obj
@@ -2157,7 +2157,7 @@ serial.obj: serial.c.obj
 
 # target to build an object file
 serial.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/serial.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/serial.c.obj
 .PHONY : serial.c.obj
 
 serial.i: serial.c.i
@@ -2165,7 +2165,7 @@ serial.i: serial.c.i
 
 # target to preprocess a source file
 serial.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/serial.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/serial.c.i
 .PHONY : serial.c.i
 
 serial.s: serial.c.s
@@ -2173,7 +2173,7 @@ serial.s: serial.c.s
 
 # target to generate assembly for a file
 serial.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/serial.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/serial.c.s
 .PHONY : serial.c.s
 
 svc_db.obj: svc_db.c.obj
@@ -2181,7 +2181,7 @@ svc_db.obj: svc_db.c.obj
 
 # target to build an object file
 svc_db.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_db.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.obj
 .PHONY : svc_db.c.obj
 
 svc_db.i: svc_db.c.i
@@ -2189,7 +2189,7 @@ svc_db.i: svc_db.c.i
 
 # target to preprocess a source file
 svc_db.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_db.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.i
 .PHONY : svc_db.c.i
 
 svc_db.s: svc_db.c.s
@@ -2197,7 +2197,7 @@ svc_db.s: svc_db.c.s
 
 # target to generate assembly for a file
 svc_db.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_db.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.s
 .PHONY : svc_db.c.s
 
 svc_dp.obj: svc_dp.c.obj
@@ -2205,7 +2205,7 @@ svc_dp.obj: svc_dp.c.obj
 
 # target to build an object file
 svc_dp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_dp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.obj
 .PHONY : svc_dp.c.obj
 
 svc_dp.i: svc_dp.c.i
@@ -2213,7 +2213,7 @@ svc_dp.i: svc_dp.c.i
 
 # target to preprocess a source file
 svc_dp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_dp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.i
 .PHONY : svc_dp.c.i
 
 svc_dp.s: svc_dp.c.s
@@ -2221,7 +2221,7 @@ svc_dp.s: svc_dp.c.s
 
 # target to generate assembly for a file
 svc_dp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_dp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.s
 .PHONY : svc_dp.c.s
 
 svc_ed.obj: svc_ed.c.obj
@@ -2229,7 +2229,7 @@ svc_ed.obj: svc_ed.c.obj
 
 # target to build an object file
 svc_ed.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_ed.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.obj
 .PHONY : svc_ed.c.obj
 
 svc_ed.i: svc_ed.c.i
@@ -2237,7 +2237,7 @@ svc_ed.i: svc_ed.c.i
 
 # target to preprocess a source file
 svc_ed.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_ed.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.i
 .PHONY : svc_ed.c.i
 
 svc_ed.s: svc_ed.c.s
@@ -2245,7 +2245,7 @@ svc_ed.s: svc_ed.c.s
 
 # target to generate assembly for a file
 svc_ed.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_ed.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.s
 .PHONY : svc_ed.c.s
 
 svc_er.obj: svc_er.c.obj
@@ -2253,7 +2253,7 @@ svc_er.obj: svc_er.c.obj
 
 # target to build an object file
 svc_er.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_er.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.obj
 .PHONY : svc_er.c.obj
 
 svc_er.i: svc_er.c.i
@@ -2261,7 +2261,7 @@ svc_er.i: svc_er.c.i
 
 # target to preprocess a source file
 svc_er.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_er.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.i
 .PHONY : svc_er.c.i
 
 svc_er.s: svc_er.c.s
@@ -2269,7 +2269,7 @@ svc_er.s: svc_er.c.s
 
 # target to generate assembly for a file
 svc_er.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_er.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.s
 .PHONY : svc_er.c.s
 
 svc_fl.obj: svc_fl.c.obj
@@ -2277,7 +2277,7 @@ svc_fl.obj: svc_fl.c.obj
 
 # target to build an object file
 svc_fl.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_fl.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.obj
 .PHONY : svc_fl.c.obj
 
 svc_fl.i: svc_fl.c.i
@@ -2285,7 +2285,7 @@ svc_fl.i: svc_fl.c.i
 
 # target to preprocess a source file
 svc_fl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_fl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.i
 .PHONY : svc_fl.c.i
 
 svc_fl.s: svc_fl.c.s
@@ -2293,7 +2293,7 @@ svc_fl.s: svc_fl.c.s
 
 # target to generate assembly for a file
 svc_fl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_fl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.s
 .PHONY : svc_fl.c.s
 
 svc_kb.obj: svc_kb.c.obj
@@ -2301,7 +2301,7 @@ svc_kb.obj: svc_kb.c.obj
 
 # target to build an object file
 svc_kb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_kb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.obj
 .PHONY : svc_kb.c.obj
 
 svc_kb.i: svc_kb.c.i
@@ -2309,7 +2309,7 @@ svc_kb.i: svc_kb.c.i
 
 # target to preprocess a source file
 svc_kb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_kb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.i
 .PHONY : svc_kb.c.i
 
 svc_kb.s: svc_kb.c.s
@@ -2317,7 +2317,7 @@ svc_kb.s: svc_kb.c.s
 
 # target to generate assembly for a file
 svc_kb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_kb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.s
 .PHONY : svc_kb.c.s
 
 svc_pak_pico_flash.obj: svc_pak_pico_flash.c.obj
@@ -2325,7 +2325,7 @@ svc_pak_pico_flash.obj: svc_pak_pico_flash.c.obj
 
 # target to build an object file
 svc_pak_pico_flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pak_pico_flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.obj
 .PHONY : svc_pak_pico_flash.c.obj
 
 svc_pak_pico_flash.i: svc_pak_pico_flash.c.i
@@ -2333,7 +2333,7 @@ svc_pak_pico_flash.i: svc_pak_pico_flash.c.i
 
 # target to preprocess a source file
 svc_pak_pico_flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pak_pico_flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.i
 .PHONY : svc_pak_pico_flash.c.i
 
 svc_pak_pico_flash.s: svc_pak_pico_flash.c.s
@@ -2341,7 +2341,7 @@ svc_pak_pico_flash.s: svc_pak_pico_flash.c.s
 
 # target to generate assembly for a file
 svc_pak_pico_flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pak_pico_flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.s
 .PHONY : svc_pak_pico_flash.c.s
 
 svc_pak_serial_eeprom.obj: svc_pak_serial_eeprom.c.obj
@@ -2349,7 +2349,7 @@ svc_pak_serial_eeprom.obj: svc_pak_serial_eeprom.c.obj
 
 # target to build an object file
 svc_pak_serial_eeprom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pak_serial_eeprom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.obj
 .PHONY : svc_pak_serial_eeprom.c.obj
 
 svc_pak_serial_eeprom.i: svc_pak_serial_eeprom.c.i
@@ -2357,7 +2357,7 @@ svc_pak_serial_eeprom.i: svc_pak_serial_eeprom.c.i
 
 # target to preprocess a source file
 svc_pak_serial_eeprom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pak_serial_eeprom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.i
 .PHONY : svc_pak_serial_eeprom.c.i
 
 svc_pak_serial_eeprom.s: svc_pak_serial_eeprom.c.s
@@ -2365,7 +2365,7 @@ svc_pak_serial_eeprom.s: svc_pak_serial_eeprom.c.s
 
 # target to generate assembly for a file
 svc_pak_serial_eeprom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pak_serial_eeprom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.s
 .PHONY : svc_pak_serial_eeprom.c.s
 
 svc_pk.obj: svc_pk.c.obj
@@ -2373,7 +2373,7 @@ svc_pk.obj: svc_pk.c.obj
 
 # target to build an object file
 svc_pk.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pk.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.obj
 .PHONY : svc_pk.c.obj
 
 svc_pk.i: svc_pk.c.i
@@ -2381,7 +2381,7 @@ svc_pk.i: svc_pk.c.i
 
 # target to preprocess a source file
 svc_pk.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pk.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.i
 .PHONY : svc_pk.c.i
 
 svc_pk.s: svc_pk.c.s
@@ -2389,7 +2389,7 @@ svc_pk.s: svc_pk.c.s
 
 # target to generate assembly for a file
 svc_pk.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/svc_pk.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.s
 .PHONY : svc_pk.c.s
 
 sysvar.obj: sysvar.c.obj
@@ -2397,7 +2397,7 @@ sysvar.obj: sysvar.c.obj
 
 # target to build an object file
 sysvar.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/sysvar.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.obj
 .PHONY : sysvar.c.obj
 
 sysvar.i: sysvar.c.i
@@ -2405,7 +2405,7 @@ sysvar.i: sysvar.c.i
 
 # target to preprocess a source file
 sysvar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/sysvar.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.i
 .PHONY : sysvar.c.i
 
 sysvar.s: sysvar.c.s
@@ -2413,7 +2413,7 @@ sysvar.s: sysvar.c.s
 
 # target to generate assembly for a file
 sysvar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/sysvar.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.s
 .PHONY : sysvar.c.s
 
 usb_descriptors.obj: usb_descriptors.c.obj
@@ -2421,7 +2421,7 @@ usb_descriptors.obj: usb_descriptors.c.obj
 
 # target to build an object file
 usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/usb_descriptors.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.obj
 .PHONY : usb_descriptors.c.obj
 
 usb_descriptors.i: usb_descriptors.c.i
@@ -2429,7 +2429,7 @@ usb_descriptors.i: usb_descriptors.c.i
 
 # target to preprocess a source file
 usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/usb_descriptors.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.i
 .PHONY : usb_descriptors.c.i
 
 usb_descriptors.s: usb_descriptors.c.s
@@ -2437,7 +2437,7 @@ usb_descriptors.s: usb_descriptors.c.s
 
 # target to generate assembly for a file
 usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/usb_own_descriptors_multicore.dir/build.make CMakeFiles/usb_own_descriptors_multicore.dir/usb_descriptors.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.s
 .PHONY : usb_descriptors.c.s
 
 # Help Target
@@ -2451,7 +2451,7 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... bs2_default"
-	@echo "... usb_own_descriptors_multicore"
+	@echo "... psion_recreate_ctusb"
 	@echo "... cdc.obj"
 	@echo "... cdc.i"
 	@echo "... cdc.s"
