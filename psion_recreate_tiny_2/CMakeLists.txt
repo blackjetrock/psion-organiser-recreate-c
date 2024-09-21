@@ -30,6 +30,7 @@ add_executable(${PROJECT}
     eeprom.c
     panel.c
     opl.c
+    msc_disk.c
 )
 target_include_directories(${PROJECT} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}

@@ -34,6 +34,8 @@
 #include "tusb.h"
 #include "pico/unique_id.h"
 
+#define MSC_ENABLED 1
+
 // ****************************************************************************
 // *                                                                          *
 // *    VID and PID Definitions                                               *
@@ -60,6 +62,9 @@ enum {
     USBD_STR_CDC_3_NAME,        // 7
     USBD_STR_CDC_4_NAME,        // 8
     USBD_STR_CDC_5_NAME,        // 9
+#if MSC_ENABLED
+    USBD_STR_MSC,
+#endif
 };
 
 char *const usbd_desc_str[] = {
@@ -70,8 +75,11 @@ char *const usbd_desc_str[] = {
     [USBD_STR_CDC_1_NAME]       = "CDC1",
     [USBD_STR_CDC_2_NAME]       = "CDC2",
     [USBD_STR_CDC_3_NAME]       = "CDC3",
-    [USBD_STR_CDC_4_NAME]       = "CDC4",
-    [USBD_STR_CDC_5_NAME]       = "CDC5",
+    //[USBD_STR_CDC_4_NAME]       = "CDC4",
+    //[USBD_STR_CDC_5_NAME]       = "CDC5",
+#if MSC_ENABLED
+    [USBD_STR_MSC]       = "Psion-MSC",
+#endif
 };
 
 // ****************************************************************************
@@ -128,6 +136,11 @@ static const tusb_desc_device_t usbd_desc_device = {
 #define USBD_CDC_CMD_SIZE       (64)
 #define USBD_CDC_DATA_SIZE      (64)
 
+#if MSC_ENABLED
+#define USBD_MSC_OUT	0x0B
+#define USBD_MSC_IN		0x8E
+#endif
+
 // ****************************************************************************
 // *                                                                          *
 // *    Device Configuration                                                  *
@@ -136,16 +149,21 @@ static const tusb_desc_device_t usbd_desc_device = {
 
 #define USBD_MAX_POWER_MA       (250)
 
-#define USBD_DESC_LEN           ( (TUD_CONFIG_DESC_LEN                    ) + \
+//#define USBD_DESC_LEN           ( (TUD_CONFIG_DESC_LEN                    ) + \
                                   (TUD_CDC_DESC_LEN       * CFG_TUD_CDC   )   )
+
+#define USBD_DESC_LEN (TUD_CONFIG_DESC_LEN  + (TUD_CDC_DESC_LEN * CFG_TUD_CDC)) + (TUD_MSC_DESC_LEN)
 
 enum {
     ITF_NUM_CDC_0,  ITF_NUM_CDC_0_DATA,
     ITF_NUM_CDC_1,  ITF_NUM_CDC_1_DATA,
     ITF_NUM_CDC_2,  ITF_NUM_CDC_2_DATA,
     ITF_NUM_CDC_3,  ITF_NUM_CDC_3_DATA,
-    ITF_NUM_CDC_4,  ITF_NUM_CDC_4_DATA,
-    ITF_NUM_CDC_5,  ITF_NUM_CDC_5_DATA,
+    //ITF_NUM_CDC_4,  ITF_NUM_CDC_4_DATA,
+    //ITF_NUM_CDC_5,  ITF_NUM_CDC_5_DATA,
+#if MSC_ENABLED
+    ITF_NUM_MSC_0,    ITF_NUM_MSC_0_DATA,
+#endif
     ITF_NUM_TOTAL
 };
 
@@ -180,7 +198,7 @@ static const uint8_t usbd_desc_cfg[USBD_DESC_LEN] = {
                          EPNUM_CDC_3_CMD, USBD_CDC_CMD_SIZE,
                          EPNUM_CDC_3_DATA & 0x7F,
                          EPNUM_CDC_3_DATA, USBD_CDC_DATA_SIZE),
-
+#if 0
     TUD_CDC_DESCRIPTOR(ITF_NUM_CDC_4,
                       USBD_STR_CDC_4_NAME,
                          EPNUM_CDC_4_CMD, USBD_CDC_CMD_SIZE,
@@ -192,7 +210,11 @@ static const uint8_t usbd_desc_cfg[USBD_DESC_LEN] = {
                          EPNUM_CDC_5_CMD, USBD_CDC_CMD_SIZE,
                          EPNUM_CDC_5_DATA & 0x7F,
                          EPNUM_CDC_5_DATA, USBD_CDC_DATA_SIZE),
+#endif
 
+#if MSC_ENABLED
+  	TUD_MSC_DESCRIPTOR(ITF_NUM_MSC_0, USBD_STR_MSC, USBD_MSC_OUT, USBD_MSC_IN, 64),  
+#endif
 };
 
 // ****************************************************************************

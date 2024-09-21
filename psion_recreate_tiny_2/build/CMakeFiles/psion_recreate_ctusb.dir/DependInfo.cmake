@@ -226,6 +226,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/i2c.c" "CMakeFiles/psion_recreate_ctusb.dir/i2c.c.obj" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/i2c.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/main.c" "CMakeFiles/psion_recreate_ctusb.dir/main.c.obj" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/main.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/menu.c" "CMakeFiles/psion_recreate_ctusb.dir/menu.c.obj" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/menu.c.obj.d"
+  "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/msc_disk.c" "CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.obj" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/opl.c" "CMakeFiles/psion_recreate_ctusb.dir/opl.c.obj" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/opl.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/panel.c" "CMakeFiles/psion_recreate_ctusb.dir/panel.c.obj" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/panel.c.obj.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/rtc.c" "CMakeFiles/psion_recreate_ctusb.dir/rtc.c.obj" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/rtc.c.obj.d"

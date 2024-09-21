@@ -2128,6 +2128,30 @@ menu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/menu.c.s
 .PHONY : menu.c.s
 
+msc_disk.obj: msc_disk.c.obj
+.PHONY : msc_disk.obj
+
+# target to build an object file
+msc_disk.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.obj
+.PHONY : msc_disk.c.obj
+
+msc_disk.i: msc_disk.c.i
+.PHONY : msc_disk.i
+
+# target to preprocess a source file
+msc_disk.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.i
+.PHONY : msc_disk.c.i
+
+msc_disk.s: msc_disk.c.s
+.PHONY : msc_disk.s
+
+# target to generate assembly for a file
+msc_disk.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.s
+.PHONY : msc_disk.c.s
+
 opl.obj: opl.c.obj
 .PHONY : opl.obj
 
@@ -2745,6 +2769,9 @@ help:
 	@echo "... menu.obj"
 	@echo "... menu.i"
 	@echo "... menu.s"
+	@echo "... msc_disk.obj"
+	@echo "... msc_disk.i"
+	@echo "... msc_disk.s"
 	@echo "... opl.obj"
 	@echo "... opl.i"
 	@echo "... opl.s"

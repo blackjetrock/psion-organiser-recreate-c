@@ -46,7 +46,7 @@
 // |    Supports 6 Virtual UART ports (CDC)                                   |
 // `--------------------------------------------------------------------------'
 
-#define CFG_TUD_CDC             (6)
+#define CFG_TUD_CDC             (4)
 
 #define CFG_TUD_CDC_EP_BUFSIZE  (256)
 #define CFG_TUD_CDC_RX_BUFSIZE  (256)
@@ -68,7 +68,7 @@
 // |    Does not support Mass Storage Device (MSC)                            |
 // `--------------------------------------------------------------------------'
 
-#define CFG_TUD_MSC             (0)
+#define CFG_TUD_MSC             (1)
 
 // .--------------------------------------------------------------------------.
 // |    Does not support HID Device (HID)                                     |
@@ -121,6 +121,16 @@
 // TinyUSB changed the name but we didn't
 
 #define CFG_TUD_ECM_RNDIS       CFG_TUD_NET
+
+// CDC FIFO size of TX and RX
+//#define CFG_TUD_CDC_RX_BUFSIZE   (TUD_OPT_HIGH_SPEED ? 512 : 64)
+//#define CFG_TUD_CDC_TX_BUFSIZE   (TUD_OPT_HIGH_SPEED ? 512 : 64)
+
+// CDC Endpoint transfer buffer size, more is faster
+//#define CFG_TUD_CDC_EP_BUFSIZE   (TUD_OPT_HIGH_SPEED ? 512 : 64)
+
+// MSC Buffer size of Device Mass storage
+#define CFG_TUD_MSC_EP_BUFSIZE   512
 
 #endif
 

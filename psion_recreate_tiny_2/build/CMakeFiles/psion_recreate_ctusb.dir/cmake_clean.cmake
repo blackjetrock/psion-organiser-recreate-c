@@ -166,6 +166,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/psion_recreate_ctusb.dir/main.c.obj.d"
   "CMakeFiles/psion_recreate_ctusb.dir/menu.c.obj"
   "CMakeFiles/psion_recreate_ctusb.dir/menu.c.obj.d"
+  "CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.obj"
+  "CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.obj.d"
   "CMakeFiles/psion_recreate_ctusb.dir/opl.c.obj"
   "CMakeFiles/psion_recreate_ctusb.dir/opl.c.obj.d"
   "CMakeFiles/psion_recreate_ctusb.dir/panel.c.obj"
