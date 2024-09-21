@@ -40,7 +40,7 @@ static bool ejected = false;
 
 enum
 {
-  DISK_BLOCK_NUM  = 16, // 8KB is the smallest size that windows allow to mount
+  DISK_BLOCK_NUM  = 256, // 8KB is the smallest size that windows allow to mount
   DISK_BLOCK_SIZE = 512
 };
 
@@ -218,6 +218,16 @@ int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offset, uint8_t* 
 
 #ifndef CFG_EXAMPLE_MSC_READONLY
   uint8_t* addr = msc_disk[lba] + offset;
+
+  printf("\nDisk buffer at %08X\n", msc_disk);
+  for(int i=0; i<bufsize; i++)
+    {
+      if( isprint(buffer[i]) )
+	{
+	  printf("%c", buffer[i]);
+	}
+    }
+  
   memcpy(addr, buffer, bufsize);
 #else
   (void) lba; (void) offset; (void) buffer;

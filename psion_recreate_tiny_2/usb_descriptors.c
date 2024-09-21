@@ -34,7 +34,7 @@
 #include "tusb.h"
 #include "pico/unique_id.h"
 
-#define MSC_ENABLED 1
+#define MSC_ENABLED 1 // 0 does not work for some reason
 
 // ****************************************************************************
 // *                                                                          *
