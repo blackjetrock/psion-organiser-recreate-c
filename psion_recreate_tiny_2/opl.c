@@ -5,7 +5,7 @@
 // OPL
 //
 // This is the embedding of OPL (in this case NewOPL) into the
-// recreation. There to avoid the newopl files from having any recreation
+// recreation. It's here to avoid the newopl files from having any recreation
 // code dependencies. That should make it easier to build a PC based
 // version from the NewOpl files.
 //

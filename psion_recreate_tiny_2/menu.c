@@ -1323,6 +1323,126 @@ void check_menu_launch(void)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Hex calculator
+//
+void display(int v1, int v2, int hex_ndec)
+{
+  char hexbuf[80];
+
+  dp_cls();
+  
+  if( hex_ndec )
+    {
+      sprintf(hexbuf, "%08Xh", v1);
+      printxy_str(0,0,hexbuf);
+      sprintf(hexbuf, "%08Xh", v2);
+      printxy_str(0,1,hexbuf);
+    }
+  else
+    {
+      sprintf(hexbuf, "%dd", v1);
+      printxy_str(0,0,hexbuf);
+      sprintf(hexbuf, "%dd", v2);
+      printxy_str(0,1,hexbuf);
+    }
+}
+
+void menu_hex(void)
+{
+  int done = 0;
+  int v1=0, v2=0;
+  int hex_ndec = 1;
+
+  display(v1, v2, hex_ndec);
+  
+  while(!done)
+    {
+      
+      menu_loop_tasks();
+
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+	  
+	  switch(k)
+	    {
+	    case KEY_ON:
+	      cursor_on = 0;
+	      done = 1;
+	      break;
+
+	    case ' ':
+	      hex_ndec = !hex_ndec;
+	      break;
+	      
+	    case 'A':
+	    case 'B':
+	    case 'C':
+	    case 'D':
+	    case 'E':
+	    case 'F':
+	      if( hex_ndec )
+		{
+		  v2 <<= 4;
+		  v2 += (k-'A'+0xA);
+		}
+	      break;
+
+	    case '0':
+	    case '1':
+	    case '2':
+	    case '3':
+	    case '4':
+	    case '5':
+	    case '6':
+	    case '7':
+	    case '8':
+	    case '9':
+	      if( hex_ndec )
+		{
+		  v2 <<= 4;
+		  v2 += (k-'0');
+		}
+	      else
+		{
+		  v2 *= 10;
+		  v2 += (k-'0');
+		}
+	      break;
+
+	    case KEY_EXE:
+	      v1 = v2;
+	      v2 = 0;
+	      break;
+	      
+	    case '+':
+	      v2 = v1 + v2;
+	      v1 = 0;
+	      break;
+
+	    case '-':
+	      v2 = v1 - v2;
+	      v1 = 0;
+	      break;
+
+	    case '*':
+	      v2 = v1 * v2;
+	      v1 = 0;
+	      break;
+
+	    case '/':
+	      v2 = v1 / v2;
+	      v1 = 0;
+	      break;
+	    }
+
+	  display(v1, v2, hex_ndec);
+	}
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 #define DPVIEW_N 3
 
@@ -1567,14 +1687,11 @@ MENU menu_top =
    "Meta",
    init_menu_top,   
    {
-    {'K', "Keytest",    menu_scan_test},
+
     {'O', "Off",        menu_instant_off},
-    {'E', "Eeprom",     menu_goto_eeprom},
-    {'R', "RTC",        menu_goto_rtc},
-    {'A', "All",        menu_all},
     {'B', "Bubble",     menu_bubble},
     {'T', "Test",       menu_goto_test_os},
-
+    {'H', "Hex",        menu_hex},
     {'F', "Find",       menu_fl_find},
     {'S', "Save",       menu_fl_save},
     {'M', "forMat",     menu_goto_format},
@@ -1622,6 +1739,7 @@ MENU menu_test_os =
     {'C', "Cursor",     menu_cursor_test},
     {'E', "Epos",       menu_epos_test},
     {'F', "Flowtext",   menu_flowtext_test},
+    {'K', "Keytest",    menu_scan_test},
     {'&', "",           menu_null},
    }
   };
