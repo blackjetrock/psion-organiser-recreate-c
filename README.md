@@ -11,6 +11,7 @@ This is the simple menu I've started with, there's a framework taken from the em
 
 ![IMG_20240810_140745952 (1)](https://github.com/user-attachments/assets/aa69ab7a-5603-4dbf-93de-effacbcaf2b0)
 
+psion_recreate_tiny_2 is the latest code. This uses the TinyUSB library for USB and presents many USB functions. There's a CLI and a mass storage device and some other consoles.
 
 It's easy to do graphics:
 
