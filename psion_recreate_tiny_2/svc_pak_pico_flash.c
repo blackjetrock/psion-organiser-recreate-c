@@ -26,6 +26,7 @@
 #include "record.h"
 #include "svc.h"
 #include "core1.h"
+#include "switches.h"
 
 #define FLASH_BASE ((PAK_ADDR)XIP_BASE)
 
@@ -71,18 +72,21 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
   dat_blk_end = pak_addr + len - 1;
 
   // Start of last block written
-  start_last_blk_written = dat_blk_end / 256;
+  start_last_blk_written = dat_blk_end / 256*256;
 
   // Where the read starts
-  rd_blk_start = pak_addr / 256;
+  rd_blk_start = pak_addr / 256 * 256;
   rd_blk_len   = start_last_blk_written - rd_blk_start + 256;
   rd_blk_num   = rd_blk_len / 256;
+  rd_blk_num   += 1;
+  
   dat_offset   = pak_addr % 256;
 
 #if DB_PK_SAVE  
   printf("\n%s:pak_addr:%016X len:%016X", __FUNCTION__, pak_addr, len);
   printf("\nst last blk wrttn:%016X", start_last_blk_written);
   printf("\nrd_blk_start:%016X rd_blk_len:%016X", rd_blk_start, rd_blk_len);
+  printf("\nrd_blk_num:%d", rd_blk_num);
 #endif
   
   // Now read the data , modify with new data and write it back
@@ -95,17 +99,22 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
   int blk_idx = 0;
 
 #if DB_PK_SAVE
-  printf("\nFLASH READ");
+  //printf("\nFLASH READ");
 #endif
 
   // Read first block (addresses not offsets)
+
   memcpy( blk_buffer, ((uint8_t *)(flash_pak_base_read+rd_blk_start+blk_idx*256)), 256);
-  
-  while(blk_idx < rd_blk_len/256)
+
+#if DB_PK_SAVE
+  printf("\nFlash Read: Addr:%016X Len:256", flash_pak_base_read+rd_blk_start+blk_idx*256);
+#endif
+  //  while(blk_idx < rd_blk_len/256)
+  while(blk_idx < rd_blk_num)
     {
 #if DB_PK_SAVE
-      printf("\nBLK %d", blk_idx);
-      printf("\ndest_idx:%d dat_src:%016X", dest_idx, dat_src);
+      //printf("\nBLK %d", blk_idx);
+      //printf("\ndest_idx:%d dat_src:%016X", dest_idx, dat_src);
 #endif
 
       // Put modified data in block, ensure we don't write any data after src block
@@ -124,18 +133,22 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
 	  // Start of new block
 	  dest_idx = 0;
 #if DB_PK_SAVE
-	  printf("\nFLASH WRITE");
-	  printf("\nWr addr:%016X", flash_pak_base_write + rd_blk_start + blk_idx * 256);
+	  //printf("\nFLASH WRITE");
+	  //printf("\nWr addr:%016X", flash_pak_base_write + rd_blk_start + blk_idx * 256);
 #endif
 
 	  // Write the block back
 	  printf("\nStart blocking");
 	  //	  multicore_lockout_start_blocking();
 	  put_core1_into_ram();
-	  sleep_ms(1000);
+	  sleep_ms(10);
 	  
 	  printf("\nStart blocking done");
 	  uint32_t ints = save_and_disable_interrupts();
+
+#if DB_PK_SAVE
+  printf("\nFlash Write: Addr:%016X Len:256", flash_pak_base_write + rd_blk_start + blk_idx * 256);
+#endif
 	  
 	  flash_range_program(flash_pak_base_write + rd_blk_start + blk_idx * 256, blk_buffer, 256);
 	  printf("\nEnd blocking");
@@ -149,9 +162,7 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
 
 	  // Read next block (addresses not offsets)
 	  memcpy( blk_buffer, ((uint8_t *)(flash_pak_base_read+rd_blk_start+blk_idx*256)), 256);
-	  
 	}
-      
     }
 }
 
@@ -174,7 +185,7 @@ void pk_format_pico_flash(void)
 
   put_core1_into_ram();
 
-  sleep_ms(1000);
+  sleep_ms(10);
   uint32_t ints = save_and_disable_interrupts();
   flash_range_erase(flash_pak_base_write, FLASH_PAK_SIZE);
   restore_interrupts (ints);

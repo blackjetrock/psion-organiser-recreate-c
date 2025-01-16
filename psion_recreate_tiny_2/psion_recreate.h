@@ -384,3 +384,8 @@ extern volatile int core1_safe_x;
 #define NUM_STATS 7
 
 extern u_int64_t now[NUM_STATS];
+
+#define FLASH_BASE ((PAK_ADDR)XIP_BASE)
+
+#define FLASH_PAK_SIZE    ((uint32_t)(FLASH_SECTOR_SIZE * 128))
+#define FLASH_PAK_OFFSET  ((uint32_t)((1024+512) * 1024))

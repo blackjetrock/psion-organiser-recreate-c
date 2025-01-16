@@ -416,6 +416,8 @@ void cli_information(void)
 
   //  printf("\nMatrix scan count: %d", matscan_count);
   //printf("\nCore1 count      : %d", core1_count);
+  printf("\nFlash base address: %08X", FLASH_BASE+FLASH_PAK_OFFSET);
+  
   printf("\nCore1 safe count : %d", core1_safe_x);
   printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
   for(int i=0; i<NUM_STATS; i++)
@@ -441,6 +443,79 @@ void cli_itf(void)
 {
   txbyte(parameter, 'X');
 }
+
+void cli_dump_fl_pack(void)
+{
+  uint8_t *bp;
+  
+  printf("Flash Pack Dump");
+
+  bp = (uint8_t *)flash_pak_base_read;
+  printf("Base:%08X", bp);
+
+  // Skip the 10 byte header
+  bp += 10;
+
+  int done = 0;
+  
+  while(!done)
+    {
+      uint8_t len = *(bp++);
+
+      if( len == 0xFF )
+	{
+	  done = 1;
+	  continue;
+	}
+
+      uint8_t type=*(bp++);
+
+      printf("\nLen:%02X Type:%02X", len, type);
+
+      for(int i=0; i<len; i++)
+	{
+	  printf(" %c", isprint(*bp)?*bp:'.');
+	  bp++;
+	}
+      printf("\n");
+    }
+
+  printf("\n");
+}
+
+#define MAX_INPUT_STR   32
+
+int find_free_record(void);
+int find_record(char *key, RECORD *recout, int start);
+void put_record(int n, RECORD *record_data);
+
+void cli_save_test(void)
+{
+  int recnum;
+  RECORD r;
+  char save_str[MAX_INPUT_STR];
+
+  for(int i = 0; i<30; i++)
+    {
+      // Find the record slot to save in to
+      recnum = find_free_record();
+
+      if( recnum == -1 )
+	{
+	  break;
+	}
+      
+      if( recnum != -1 )
+	{
+	  // Store data
+	  r.flag = '*';
+	  sprintf(save_str, "%d:Test data record", i);
+	  strcpy(&(r.key[0]), save_str);
+	  put_record(recnum, &r);
+	}
+    }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -632,7 +707,16 @@ SERIAL_COMMAND serial_cmds[] =
     "ITF test",
     cli_itf,
    },
-   
+   {
+    'D',
+    "Dump Flash pack",
+    cli_dump_fl_pack,
+   },
+   {
+    '%',
+    "Write test records",
+    cli_save_test,
+   },
   };
 
 int pcount = 0;

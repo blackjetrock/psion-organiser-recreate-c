@@ -6449,6 +6449,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.obj
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/svc_pk.h
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/svc_db.h
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/core1.h
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/switches.h
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.obj
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/svc_pak_serial_eeprom.c

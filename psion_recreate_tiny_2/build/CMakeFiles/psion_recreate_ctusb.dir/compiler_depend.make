@@ -6358,7 +6358,8 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.obj: ../svc_pak_pico_fl
   ../svc_pak_serial_eeprom.h \
   ../svc_pk.h \
   ../svc_db.h \
-  ../core1.h
+  ../core1.h \
+  ../switches.h
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.obj: ../svc_pak_serial_eeprom.c \
   /usr/include/newlib/ctype.h \

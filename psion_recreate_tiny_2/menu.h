@@ -64,3 +64,4 @@ void menu_loop(void);
 void menu_loop_tasks(void);
 
 extern volatile int menu_done;
+
