@@ -447,11 +447,12 @@ void cli_itf(void)
 void cli_dump_fl_pack(void)
 {
   uint8_t *bp;
+  int recno = 0;
   
   printf("Flash Pack Dump");
 
   bp = (uint8_t *)flash_pak_base_read;
-  printf("Base:%08X", bp);
+  printf("\n\nBase:%08X\n", bp);
 
   // Skip the 10 byte header
   bp += 10;
@@ -470,14 +471,14 @@ void cli_dump_fl_pack(void)
 
       uint8_t type=*(bp++);
 
-      printf("\nLen:%02X Type:%02X", len, type);
+      printf("\n%d: Len:%02X Type:%02X ", recno, len, type);
 
       for(int i=0; i<len; i++)
 	{
-	  printf(" %c", isprint(*bp)?*bp:'.');
+	  printf("%c", isprint(*bp)?*bp:'.');
 	  bp++;
 	}
-      printf("\n");
+      recno++;
     }
 
   printf("\n");
