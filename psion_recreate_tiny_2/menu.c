@@ -695,10 +695,7 @@ void menu_fl_find(void)
   int view_line = 0;
   
   find_str[0] ='\0';
-  dp_cls();
-  printxy_str(0, 0, "Find:");
-  print_str(find_str);
-
+ 
   mf_state = MF_STATE_INIT;
   
   while(!done)
@@ -706,6 +703,9 @@ void menu_fl_find(void)
       switch(mf_state)
 	{
 	case MF_STATE_INIT:
+	  dp_cls();
+	  printxy_str(0, 0, "Find:");
+	  //printxy_str(5,0, find_str);
 	  
 	  k = ed_epos(find_str, 64, 0, 0);
 	  
@@ -730,10 +730,7 @@ void menu_fl_find(void)
 
 	    case KEY_EXE:
 	      mf_state = MF_STATE_SRCH_START;
-	      
 	      break;
-
-
 	    }
 	  break;
 
@@ -750,7 +747,6 @@ void menu_fl_find(void)
 	  fl_rect(0x90);
 	  if( fl_find(find_str, r, &reclen) )
 	    {
-	      
 	      printf("\n%s:Found flw_crec:%d", __FUNCTION__, flw_crec);
 	      
 	      dp_cls();
@@ -787,13 +783,13 @@ void menu_fl_find(void)
 		    {
 		      find_str[0] ='\0';
 		      
-		      mf_state = MF_STATE_SRCH_START;
+		      mf_state = MF_STATE_INIT;
 		    }
-		    else
-		      {
-			done = 1;
-		      }
-		    
+		  else
+		    {
+		      done = 1;
+		    }
+		  
 		  break;
 		  
 		default:
@@ -805,9 +801,10 @@ void menu_fl_find(void)
 	    {
 	      printf("\nNo more records");
 	      
-	      find_str[0] ='\0';
+	      //find_str[0] ='\0';
 
 	      mf_state = MF_STATE_INIT;
+	      //	      mf_state = MF_STATE_WAIT_END;
 	    }
 	  break;
 	  
