@@ -1,7 +1,9 @@
 set(PROJECT psion_recreate_ctusb)
 cmake_minimum_required(VERSION 3.12)
-set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
+#set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
+set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+
 project(${PROJECT} C CXX ASM)
 
 pico_sdk_init()
@@ -31,6 +33,8 @@ add_executable(${PROJECT}
     panel.c
     opl.c
     msc_disk.c
+    ssd1309.c
+    oled_er_oledm015_2.c
 )
 target_include_directories(${PROJECT} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}

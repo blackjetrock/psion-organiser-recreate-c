@@ -32,7 +32,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set default install directory permissions.
+# Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/arm-none-eabi-objdump")
 endif()
@@ -249,12 +249,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2_common/hardware_xip_cache/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2_common/hardware_xosc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2_common/pico_bootrom/cmake_install.cmake")
+  include("/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2_common/boot_bootrom_headers/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -275,6 +280,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2_common/pico_aon_timer/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2_common/pico_bootrom/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

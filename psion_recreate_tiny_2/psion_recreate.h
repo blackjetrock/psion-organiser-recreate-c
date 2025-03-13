@@ -1,6 +1,8 @@
 #include "match.h"
 
 typedef uint8_t BYTE;
+typedef unsigned int uint;
+typedef uint16_t u_int16_t;
 
 //#define uint unsigned int
 #define uchar unsigned char
@@ -120,7 +122,7 @@ extern int model;
 
 #define META_MENU_SCAN_COUNT    10
 
-typedef u_int8_t BYTE;
+typedef uint8_t BYTE;
 
 // Do we use two cores?
 // If yes then the second core handles:
@@ -128,6 +130,7 @@ typedef u_int8_t BYTE;
 
 #define MULTI_CORE        1
 
+#if 0
 #define PIN_SD0 0
 #define PIN_SD1 1
 #define PIN_SD2 2
@@ -141,6 +144,7 @@ typedef u_int8_t BYTE;
 #define PIN_SOE        11
 #define PIN_SMR        12
 #define PIN_P57        13
+#endif
 
 extern const uint PIN_SDAOUT;
 extern const uint PIN_LATCHOUT2;
@@ -235,8 +239,8 @@ void _nop_(void);
 
 void put_display_char(int x,int y, int ch);
 
-void write_port2(u_int8_t value);
-u_int8_t read_port2(void);
+void write_port2(uint8_t value);
+uint8_t read_port2(void);
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -292,7 +296,7 @@ extern int rtc_set_st;
 #define ROM_SIZE (sizeof(romdata))
 #define ROM_START (0x8000)
 
-extern u_int8_t ramdata[RAM_SIZE];
+extern uint8_t ramdata[RAM_SIZE];
 
 // I2C functions
 //void i2c_fn_initialise(void);
@@ -317,7 +321,7 @@ void i2c_send_bytes(BYTE slave_addr, int n, BYTE *data);
 #define EEPROM_1_ADDR_WR   (0xA2)
 #define EEPROM_1_ADDR_RD   (0xA3)
 
-int read_eeprom(int slave_addr, int start, int len, u_int8_t *dest);
+int read_eeprom(int slave_addr, int start, int len, uint8_t *dest);
 int write_eeprom(int slave_addr, int start, int len, BYTE *src);
 void eeprom_test(void);
 void eeprom_ram_restore(void);
@@ -338,25 +342,25 @@ extern int tracing_to;
 #if TRACE_ADDR
 // Trace a number of execution addresses
 extern int tracing;
-extern u_int16_t trigger_addr;
+extern uint16_t trigger_addr;
 extern int addr_trace_i;
 
 // Trace from a trigger address until trace full
-extern volatile u_int16_t addr_trace_from[NUM_ADDR_TRACE];
-extern volatile u_int8_t  addr_trace_from_flags[NUM_ADDR_TRACE];
-extern volatile u_int8_t  addr_trace_from_a[NUM_ADDR_TRACE];
-extern volatile u_int8_t  addr_trace_from_b[NUM_ADDR_TRACE];
-extern volatile u_int16_t addr_trace_from_x[NUM_ADDR_TRACE];
-extern volatile u_int16_t addr_trace_from_sp[NUM_ADDR_TRACE];
+extern volatile uint16_t addr_trace_from[NUM_ADDR_TRACE];
+extern volatile uint8_t  addr_trace_from_flags[NUM_ADDR_TRACE];
+extern volatile uint8_t  addr_trace_from_a[NUM_ADDR_TRACE];
+extern volatile uint8_t  addr_trace_from_b[NUM_ADDR_TRACE];
+extern volatile uint16_t addr_trace_from_x[NUM_ADDR_TRACE];
+extern volatile uint16_t addr_trace_from_sp[NUM_ADDR_TRACE];
 
 // Trace continuously until trigger address seen
-extern u_int16_t trace_stop_addr;
-extern volatile u_int16_t addr_trace_to[NUM_ADDR_TRACE];
-extern volatile u_int8_t  addr_trace_to_flags[NUM_ADDR_TRACE];
-extern volatile u_int8_t  addr_trace_to_a[NUM_ADDR_TRACE];
-extern volatile u_int8_t  addr_trace_to_b[NUM_ADDR_TRACE];
-extern volatile u_int16_t addr_trace_to_x[NUM_ADDR_TRACE];
-extern volatile u_int16_t addr_trace_to_sp[NUM_ADDR_TRACE];
+extern uint16_t trace_stop_addr;
+extern volatile uint16_t addr_trace_to[NUM_ADDR_TRACE];
+extern volatile uint8_t  addr_trace_to_flags[NUM_ADDR_TRACE];
+extern volatile uint8_t  addr_trace_to_a[NUM_ADDR_TRACE];
+extern volatile uint8_t  addr_trace_to_b[NUM_ADDR_TRACE];
+extern volatile uint16_t addr_trace_to_x[NUM_ADDR_TRACE];
+extern volatile uint16_t addr_trace_to_sp[NUM_ADDR_TRACE];
 extern int addr_trace_to_i;
 
 #endif
@@ -383,4 +387,4 @@ extern volatile int core1_safe_x;
 
 #define NUM_STATS 7
 
-extern u_int64_t now[NUM_STATS];
+extern uint64_t now[NUM_STATS];

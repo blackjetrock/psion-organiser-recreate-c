@@ -56,7 +56,7 @@ void serial_loop(void);
 #define PIN_SOE        11
 #define PIN_SMR        12
 #define PIN_P57        13
-
+xxx
 const uint PIN_SDAOUT     = 14;
 const uint PIN_LATCHOUT2  = 15;
 const uint PIN_I2C_SDA    = 16;

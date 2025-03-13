@@ -8,12 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/menadue/pico/pico-sdk/src/rp2040/boot_stage2/compile_time_choice.S" "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.obj"
+  "/home/menadue/pico/pico-sdk/src/rp2040/boot_stage2/compile_time_choice.S" "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
+  "LIB_BOOT_STAGE2_HEADERS=1"
   "PICO_32BIT=1"
   "PICO_BOARD=\"pico\""
   "PICO_BUILD=1"
@@ -41,8 +42,12 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

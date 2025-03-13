@@ -8,7 +8,7 @@
 
 #define REG_A  (pstate.A)
 #define REG_B  (pstate.B)
-#define REG_D  ((((u_int16_t)REG_A) << 8) | REG_B )
+#define REG_D  ((((uint16_t)REG_A) << 8) | REG_B )
 #define WRITE_REG_D(XXX) (REG_A = (XXX >> 8));(REG_B = (XXX & 0xFF))
 
 #define REG_PC (pstate.PC)
@@ -32,7 +32,7 @@
 
 typedef struct _FLAG_DATA
 {
-  u_int8_t mask;
+  uint8_t mask;
   char name;
 } FLAG_DATA;
 
@@ -93,14 +93,14 @@ extern FLAG_DATA  flag_data[];
 
 typedef struct _PROC6303_STATE
 {
-  u_int16_t  PC;
-  u_int16_t  X;
-  u_int16_t  SP;
-  u_int8_t   A;
-  u_int8_t   B;
-  u_int8_t   FLAGS;
+  uint16_t  PC;
+  uint16_t  X;
+  uint16_t  SP;
+  uint8_t   A;
+  uint8_t   B;
+  uint8_t   FLAGS;
   int        memory;        // Memory reference is being used
-  u_int16_t  memory_addr;   // Address of memory being referenced
+  uint16_t  memory_addr;   // Address of memory being referenced
 } PROC6303_STATE;
 
 extern PROC6303_STATE pstate;
@@ -191,24 +191,24 @@ extern PROC6303_STATE pstate;
 ////////////////////////////////////////////////////////////////////////////////
 
 extern char opcode_decode[100];
-extern u_int8_t opcode;
+extern uint8_t opcode;
 extern char *opcode_names[256];
 extern int inst_length;
 extern int pc_before;
-extern u_int16_t sca_counter;
+extern uint16_t sca_counter;
 
-u_int8_t RD_ADDR(u_int16_t addr);
+uint8_t RD_ADDR(uint16_t addr);
 void update_interrupts(void);
-void interrupt_request(u_int16_t vector_msb);
+void interrupt_request(uint16_t vector_msb);
 void serial_set_rdrf(void);
-void handle_serial_register_read(u_int16_t addr);
-void handle_serial_register_write(u_int16_t addr, u_int8_t value);
+void handle_serial_register_read(uint16_t addr);
+void handle_serial_register_write(uint16_t addr, uint8_t value);
 void handle_cursor(void);
 void display_restore(void);
 void display_save(void);
 void handle_power_off(void);
 void loop_emulator(void);
-void WR_ADDR(u_int16_t addr, u_int8_t value);
+void WR_ADDR(uint16_t addr, uint8_t value);
 void create_underline_char(int ch, int dest_code);
 
 #if PROT
@@ -236,8 +236,8 @@ void create_underline_char(int ch, int dest_code);
 
 #define BANK_START       0x4000
 
-extern u_int8_t romdata[];
+extern uint8_t romdata[];
 extern int ram_bank_off;
 extern int rom_bank_off;
 
-extern u_int8_t ramdata[RAM_SIZE];
+extern uint8_t ramdata[RAM_SIZE];

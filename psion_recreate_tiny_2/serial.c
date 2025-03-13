@@ -439,7 +439,7 @@ void cli_hid_key(void)
 
 void cli_itf(void)
 {
-  txbyte(parameter, 'X');
+  //txbyte(parameter, 'X');
 }
 
 ////////////////////////////////////////////////////////////////////////////////

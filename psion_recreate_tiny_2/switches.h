@@ -26,3 +26,9 @@
 
 // Key scanning in core1 main() or core0 loops?
 #define CORE0_SCAN       0
+
+// Different builds
+#define PSION_MINI       1   // Small hardware version
+#define PSION_RECREATE   0   // Hardware replacement for original case
+
+#define SPI              1

@@ -1,4 +1,11 @@
+#include <stdint.h>
+typedef uint8_t u_int8_t;
+typedef uint16_t u_int16_t;
+typedef uint64_t u_int64_t;
+typedef unsigned int uint;
+
 #include "psion_recreate.h"
+
 
 #include "menu.h"
 #include "emulator.h"
@@ -21,3 +28,7 @@
 
 #include "sysvar.h"
 
+void SSD1309_pixel(int x, int y, char color);
+void SSD1309_char(unsigned char x, unsigned char y, char acsii, char size, char mode);
+void SSD1309_display(void);
+void SSD1309_clear(void);

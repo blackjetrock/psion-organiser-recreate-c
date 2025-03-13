@@ -5,6 +5,8 @@
 
 #include "psion_recreate_all.h"
 
+#include "ssd1309.h"
+
 
 extern void core1_init(void);
 extern bool core1_tick(void);
@@ -18,6 +20,8 @@ extern void own_task(void);
 //
 //
 ////////////////////////////////////////////////////////////////////////////////
+
+#if PSION_RECREATE
 
 #define PIN_SD0 0
 #define PIN_SD1 1
@@ -45,6 +49,44 @@ const uint PIN_LATCHOUT1  = 22;
 
 const uint PIN_SCLKOUT    = 26;
 const uint PIN_VBAT_SW_ON = 27;
+
+#endif
+
+#if PSION_MINI
+
+// No datapack interface
+#define PIN_SD0 7
+#define PIN_SD1 7
+#define PIN_SD2 7
+#define PIN_SD3 7
+#define PIN_SD4 7
+#define PIN_SD5 7
+#define PIN_SD6 7
+#define PIN_SD7 7
+
+#define PIN_SCLK       7
+#define PIN_SOE        7
+#define PIN_SMR        7
+#define PIN_P57        7
+
+const uint PIN_SDAOUT     = 27;
+const uint PIN_LATCHOUT2  = 15;
+const uint PIN_I2C_SDA    = 5;
+const uint PIN_I2C_SCL    = 6;
+const uint PIN_OLED_RES   = 4;
+const uint PIN_OLED_DC    = 3;
+const uint PIN_OLED_CS    = 2;
+  
+const uint PIN_LS_DIR     = 7;
+const uint PIN_LATCHIN    = 12;
+const uint PIN_SCLKIN     = 13;
+const uint PIN_SDAIN      = 17;
+const uint PIN_LATCHOUT1  = 14;
+
+const uint PIN_SCLKOUT    = 26;
+const uint PIN_VBAT_SW_ON = 11;
+
+#endif
 
 volatile uint16_t latch2_shadow    = 0;
 volatile uint16_t latchout1_shadow = 0;
@@ -279,12 +321,37 @@ int main(void) {
   gpio_init(PIN_SMR);
 
   // I2C bus
+
   gpio_init(PIN_I2C_SCL);
   gpio_init(PIN_I2C_SDA);
 
+#if PSION_MINI
+  gpio_init(PIN_OLED_RES);
+  gpio_init(PIN_OLED_DC);
+  gpio_init(PIN_OLED_CS);
+
+  gpio_set_dir(PIN_OLED_RES, GPIO_OUT);
+  gpio_set_dir(PIN_OLED_DC,  GPIO_OUT);
+  gpio_set_dir(PIN_OLED_CS,  GPIO_OUT);
+
+  gpio_put(PIN_OLED_CS,  0);
+  gpio_put(PIN_OLED_DC,  0);
+  gpio_put(PIN_OLED_RES, 1);
+  
+  sleep_ms(10);
+  gpio_put(PIN_OLED_RES, 0);
+  sleep_ms(10);
+  gpio_put(PIN_OLED_RES, 1);
+#endif
+  
   // Use pull ups
   gpio_pull_up(PIN_I2C_SDA);
   gpio_pull_up(PIN_I2C_SCL);
+
+  //i2c_stop();
+
+  gpio_set_dir(PIN_I2C_SCL, GPIO_OUT);
+  gpio_set_dir(PIN_I2C_SDA, GPIO_OUT);
   
   gpio_set_dir(PIN_SDAOUT,    GPIO_OUT);
   gpio_set_dir(PIN_P57,       GPIO_IN);
@@ -305,30 +372,44 @@ int main(void) {
   //  gpio_put(PIN_SDAIN,  1);
   gpio_put(PIN_SCLKIN, 1);
 
+#if !PSION_MINI
   sleep_ms(10);
   initialise_oled();
+#endif
   
   board_init();
   tusb_init();
+
+
+#if !PSION_MINI
   core1_init();
   clear_oled();
+#endif
   
   stdio_init_all();
-
+  sleep_ms(2000);
+  
   int tick = 0;
 
   menu_enter();
   
   int main_ticks = 0;
-  
+
+#if PSION_MINI
+  main_er_oledm015_2();
+#endif
+
   while(true)
     {
       menu_loop_tasks();
 
+#if PSION_MINI
       menu_loop();
-
+#else
+      menu_loop();
+#endif
+      
       tud_task();
-
 
       opl_task();
       info_task();      

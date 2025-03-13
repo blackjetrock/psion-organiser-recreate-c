@@ -23,6 +23,8 @@
  *
  */
 
+#include <ctype.h>
+
 #include "bsp/board_api.h"
 #include "tusb.h"
 

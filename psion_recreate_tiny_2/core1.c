@@ -1,4 +1,9 @@
 #include <stdio.h>
+
+#include "psion_recreate_all.h"
+
+#include "svc_kb.h"
+
 #include "pico/stdlib.h"
 #include "pico/multicore.h"
 

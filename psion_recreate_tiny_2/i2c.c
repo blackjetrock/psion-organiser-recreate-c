@@ -45,6 +45,8 @@ void i2c_delay(void)
 {
   volatile int i;
 
+  sleep_us(10);
+  return;
   for(i=0; i<5; i++)
     {
     }
@@ -109,7 +111,7 @@ int i2c_send_byte(BYTE b)
 {
   int i;
   int ack=0;
-  int retries = 100;
+  int retries = 2;
   int rc =1;
 
   for (i = 0; i < 8; i++)
@@ -160,6 +162,7 @@ int i2c_send_byte(BYTE b)
       if ( retries == 0 )
 	{
 	  rc = 0;
+	  //printf("\nTimeout");
 	  break;
 	}
     }
@@ -281,4 +284,7 @@ void i2c_fn_initialise(void)
 {
   gpio_init(PIN_I2C_SDA);
   gpio_init(PIN_I2C_SCL);
+
+  i2c_stop();
 }
+

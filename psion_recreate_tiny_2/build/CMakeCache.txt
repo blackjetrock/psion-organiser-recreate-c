@@ -126,6 +126,9 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
+//Value Computed by CMake.
+CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/CMakeFiles/pkgRedirects
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
@@ -227,6 +230,9 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/arm-none-eabi-strip
 
+//Path to a program.
+CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
+
 //The CMake toolchain file
 CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/menadue/pico/pico-sdk/cmake/preload/toolchains/pico_arm_cortex_m0plus_gcc.cmake
 
@@ -237,10 +243,10 @@ CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/menadue/pico/pico-sdk/cmake/preload/toolchai
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Dot tool for use with Doxygen
-DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
 
-//Doxygen documentation generation tool (http://www.doxygen.org)
-DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+//Doxygen documentation generation tool (https://www.doxygen.nl)
+DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/_deps
@@ -252,8 +258,18 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 //Enables QUIET option for all content population
 FETCHCONTENT_QUIET:BOOL=ON
 
+//When not empty, overrides where to find pre-populated content
+// for picotool
+FETCHCONTENT_SOURCE_DIR_PICOTOOL:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of picotool
+FETCHCONTENT_UPDATES_DISCONNECTED_PICOTOOL:BOOL=OFF
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
 //PICO target board (e.g. pico, pico2)
 PICO_BOARD:STRING=pico
@@ -318,6 +334,9 @@ PICO_STDIO_UART:BOOL=ON
 //Globally enable stdio USB
 PICO_STDIO_USB:BOOL=OFF
 
+//Directory where pioasm has been installed
+PIOASM_INSTALL_DIR:PATH=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pioasm-install
+
 //Value Computed by CMake
 pico_sdk_BINARY_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk
 
@@ -328,7 +347,13 @@ pico_sdk_IS_TOP_LEVEL:STATIC=OFF
 pico_sdk_SOURCE_DIR:STATIC=/home/menadue/pico/pico-sdk
 
 //The directory containing a CMake configuration file for picotool.
-picotool_DIR:PATH=/usr/local/lib/cmake/picotool
+picotool_DIR:PATH=picotool_DIR-NOTFOUND
+
+//Directory where picotool has been installed
+picotool_INSTALL_DIR:PATH=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/_deps
+
+//The directory containing a CMake configuration file for pioasm.
+pioasm_DIR:PATH=pioasm_DIR-NOTFOUND
 
 //Value Computed by CMake
 psion_recreate_ctusb_BINARY_DIR:STATIC=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build
@@ -372,9 +397,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/menadue/tree/github/psion-organiser-recreate-
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=22
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=30
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=7
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -417,6 +442,8 @@ CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
+//Path to cache edit program executable.
+CMAKE_EDIT_COMMAND:INTERNAL=/usr/bin/ccmake
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -461,7 +488,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=93
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=96
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -473,7 +500,7 @@ CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.22
+CMAKE_ROOT:INTERNAL=/usr/share/cmake
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -500,6 +527,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STRIP
 CMAKE_STRIP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_TAPI
+CMAKE_TAPI-ADVANCED:INTERNAL=1
 //uname command
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
@@ -510,7 +539,10 @@ DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
 DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 FAMILY_MCUS:INTERNAL=RP2040
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.12()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.13][cfound components: Interpreter ][v3.13.2()]
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+PICO_32BIT:INTERNAL=1
 PICO_ARM:INTERNAL=1
 PICO_BOOT_STAGE2_DIR:INTERNAL=/home/menadue/pico/pico-sdk/src/rp2040/boot_stage2
 PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=/home/menadue/pico/pico-sdk/cmake/preload/platforms
@@ -519,7 +551,7 @@ PICO_CMSIS_DEVICE:INTERNAL=RP2040
 PICO_COMPILER_ASM:INTERNAL=/usr/bin/arm-none-eabi-gcc
 PICO_DOXYGEN_ENABLED_SECTIONS:INTERNAL=rp2040_specific
 PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL=/home/menadue/pico/pico-sdk/src/rp2040/hardware_regs;/home/menadue/pico/pico-sdk/src/rp2_common/cmsis
-PICO_DOXYGEN_PATHS:INTERNAL=/home/menadue/pico/pico-sdk/src/common/boot_picobin_headers;/home/menadue/pico/pico-sdk/src/common/boot_picoboot_headers;/home/menadue/pico/pico-sdk/src/common/boot_uf2_headers;/home/menadue/pico/pico-sdk/src/common/pico_base_headers;/home/menadue/pico/pico-sdk/src/common/pico_usb_reset_interface_headers;/home/menadue/pico/pico-sdk/src/common/pico_bit_ops_headers;/home/menadue/pico/pico-sdk/src/common/pico_binary_info;/home/menadue/pico/pico-sdk/src/common/pico_divider_headers;/home/menadue/pico/pico-sdk/src/common/pico_sync;/home/menadue/pico/pico-sdk/src/common/pico_time;/home/menadue/pico/pico-sdk/src/common/pico_util;/home/menadue/pico/pico-sdk/src/common/pico_stdlib_headers;/home/menadue/pico/pico-sdk/src/common/hardware_claim;/home/menadue/pico/pico-sdk/src/rp2040/pico_platform;/home/menadue/pico/pico-sdk/src/rp2040/hardware_regs;/home/menadue/pico/pico-sdk/src/rp2040/hardware_structs;/home/menadue/pico/pico-sdk/src/rp2040/boot_stage2;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_base;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_adc;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_exception;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_interp;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pwm;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_resets;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc;/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom;/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler;/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_sections;/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic;/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer;/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset;/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore;/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id;/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic;/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops;/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider;/home/menadue/pico/pico-sdk/src/rp2_common/pico_double;/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops;/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash;/home/menadue/pico/pico-sdk/src/rp2_common/pico_float;/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops;/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc;/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf;/home/menadue/pico/pico-sdk/src/rp2_common/pico_rand;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_semihosting;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_uart;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_rtt;/home/menadue/pico/pico-sdk/src/rp2_common/cmsis;/home/menadue/pico/pico-sdk/src/rp2_common/tinyusb;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb;/home/menadue/pico/pico-sdk/src/rp2_common/pico_i2c_slave;/home/menadue/pico/pico-sdk/src/rp2_common/pico_async_context;/home/menadue/pico/pico-sdk/src/rp2_common/pico_btstack;/home/menadue/pico/pico-sdk/src/rp2_common/pico_cyw43_driver;/home/menadue/pico/pico-sdk/src/rp2_common/pico_lwip/tools;/home/menadue/pico/pico-sdk/src/rp2_common/pico_lwip;/home/menadue/pico/pico-sdk/src/rp2_common/pico_cyw43_arch;/home/menadue/pico/pico-sdk/src/rp2_common/pico_mbedtls;/home/menadue/pico/pico-sdk/src/rp2_common/pico_time_adapter;/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0;/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface;/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options;/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info;/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_link;/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration;/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix;/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init;/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib;/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/extra_doxygen
+PICO_DOXYGEN_PATHS:INTERNAL=/home/menadue/pico/pico-sdk/src/common/boot_picobin_headers;/home/menadue/pico/pico-sdk/src/common/boot_picoboot_headers;/home/menadue/pico/pico-sdk/src/common/boot_uf2_headers;/home/menadue/pico/pico-sdk/src/common/pico_base_headers;/home/menadue/pico/pico-sdk/src/common/pico_usb_reset_interface_headers;/home/menadue/pico/pico-sdk/src/common/pico_bit_ops_headers;/home/menadue/pico/pico-sdk/src/common/pico_binary_info;/home/menadue/pico/pico-sdk/src/common/pico_divider_headers;/home/menadue/pico/pico-sdk/src/common/pico_sync;/home/menadue/pico/pico-sdk/src/common/pico_time;/home/menadue/pico/pico-sdk/src/common/pico_util;/home/menadue/pico/pico-sdk/src/common/pico_stdlib_headers;/home/menadue/pico/pico-sdk/src/common/hardware_claim;/home/menadue/pico/pico-sdk/src/rp2040/pico_platform;/home/menadue/pico/pico-sdk/src/rp2040/hardware_regs;/home/menadue/pico/pico-sdk/src/rp2040/hardware_structs;/home/menadue/pico/pico-sdk/src/rp2040/boot_stage2;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_base;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_adc;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_exception;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_interp;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pwm;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_resets;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_rtc;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache;/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc;/home/menadue/pico/pico-sdk/src/rp2_common/boot_bootrom_headers;/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler;/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_sections;/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic;/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer;/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom;/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset;/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore;/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id;/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic;/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops;/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider;/home/menadue/pico/pico-sdk/src/rp2_common/pico_double;/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops;/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash;/home/menadue/pico/pico-sdk/src/rp2_common/pico_float;/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops;/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc;/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf;/home/menadue/pico/pico-sdk/src/rp2_common/pico_rand;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_semihosting;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_uart;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_rtt;/home/menadue/pico/pico-sdk/src/rp2_common/cmsis;/home/menadue/pico/pico-sdk/src/rp2_common/tinyusb;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb;/home/menadue/pico/pico-sdk/src/rp2_common/pico_i2c_slave;/home/menadue/pico/pico-sdk/src/rp2_common/pico_async_context;/home/menadue/pico/pico-sdk/src/rp2_common/pico_btstack;/home/menadue/pico/pico-sdk/src/rp2_common/pico_cyw43_driver;/home/menadue/pico/pico-sdk/src/rp2_common/pico_lwip/tools;/home/menadue/pico/pico-sdk/src/rp2_common/pico_lwip;/home/menadue/pico/pico-sdk/lib/cyw43-driver/src;/home/menadue/pico/pico-sdk/src/rp2_common/pico_cyw43_arch;/home/menadue/pico/pico-sdk/src/rp2_common/pico_mbedtls;/home/menadue/pico/pico-sdk/src/rp2_common/pico_time_adapter;/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0;/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface;/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options;/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info;/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_link;/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration;/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix;/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init;/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio;/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib;/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/build/pico-sdk/src/extra_doxygen
 PICO_DOXYGEN_PRE_DEFINES:INTERNAL=PICO_RP2040=1;PICO_RP2350=0
 PICO_GCC_TRIPLE:INTERNAL=arm-none-eabi
 PICO_NO_HARDWARE:INTERNAL=0
@@ -534,9 +566,15 @@ PICO_RP2350:INTERNAL=0
 PICO_SDK_TESTS_ENABLED:INTERNAL=
 PICO_TOOLCHAIN_PATH:INTERNAL=
 PICO_TOOLS_DIR:INTERNAL=/home/menadue/pico/pico-sdk/tools
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
-_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.10
+_Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.13
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;32;;;/usr/lib/python3.10;/usr/lib/python3.10;/usr/local/lib/python3.10/dist-packages;/usr/local/lib/python3.10/dist-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=61380851b1f49cd20124cec6c9ca8095
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;2;32;64;;;abi3;/usr/lib64/python3.13;/usr/local/lib64/python3.13;/usr/local/lib/python3.13/site-packages;/usr/local/lib64/python3.13/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=c92b3d9e6f476adbdafd9eb663c4620e
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
 

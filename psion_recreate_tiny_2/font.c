@@ -394,9 +394,14 @@ void i_printxy(int x, int y, int ch)
   
   cx = 127-(x * 6);
   cy = 3-y;
+
+#if SPI
+  SSD1309_char(x*12, y, ch, 12, 1);
+  SSD1309_display();
+#else
   Set_Page_Address(cy);
   Set_Column_Address(cx);
-
+  
   i2c_start();
   
   // Send slave address with read bit
@@ -409,6 +414,8 @@ void i_printxy(int x, int y, int ch)
     }
   i2c_send_byte(0);
   i2c_stop();
+#endif
+  
 }
   
 

@@ -14,11 +14,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
-#include "pico/stdlib.h"
-#include "hardware/gpio.h"
-
-#include "psion_recreate_all.h"
+//#include "svc_pk_base.h"
+#include "psion_recreate.h"
+#include "svc.h"
 
 PAK_ID pkt_id = {0,0,0,0,0,0,0,0,0,0};
 
