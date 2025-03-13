@@ -113,6 +113,8 @@ CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/emulator.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/wireless.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/serial.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/ssd1309.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/display_driver.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/eeprom.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/rtc.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/display.h \

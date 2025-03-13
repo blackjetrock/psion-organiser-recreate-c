@@ -204,6 +204,7 @@ void write_595(const uint latchpin, int value, int n);
 
 #define MAX_DDRAM 0xFF
 #define MAX_CGRAM (5*16)
+
 #define DISPLAY_NUM_LINES   4
 #define DISPLAY_NUM_CHARS  21
 #define DISPLAY_NUM_EXTRA   4

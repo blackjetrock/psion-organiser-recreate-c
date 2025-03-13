@@ -290,6 +290,30 @@ display.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/display.c.s
 .PHONY : display.c.s
 
+display_driver.o: display_driver.c.o
+.PHONY : display_driver.o
+
+# target to build an object file
+display_driver.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o
+.PHONY : display_driver.c.o
+
+display_driver.i: display_driver.c.i
+.PHONY : display_driver.i
+
+# target to preprocess a source file
+display_driver.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.i
+.PHONY : display_driver.c.i
+
+display_driver.s: display_driver.c.s
+.PHONY : display_driver.s
+
+# target to generate assembly for a file
+display_driver.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.s
+.PHONY : display_driver.c.s
+
 eeprom.o: eeprom.c.o
 .PHONY : eeprom.o
 
@@ -2660,6 +2684,9 @@ help:
 	@echo "... display.o"
 	@echo "... display.i"
 	@echo "... display.s"
+	@echo "... display_driver.o"
+	@echo "... display_driver.i"
+	@echo "... display_driver.s"
 	@echo "... eeprom.o"
 	@echo "... eeprom.i"
 	@echo "... eeprom.s"

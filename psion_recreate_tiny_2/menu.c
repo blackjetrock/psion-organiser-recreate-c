@@ -1502,6 +1502,14 @@ void menu_buz1(void)
 ////////////////////////////////////////////////////////////////////////////////
 //
 
+#if PSION_MINI
+#define SW (128/2.0)
+#define SH (64.0/2.0)
+#else
+#define SW (128/2.0)
+#define SH (32.0/2.0)
+#endif
+
 void menu_bubble(void)
 {
   int var_idx = 0;
@@ -1516,8 +1524,8 @@ void menu_bubble(void)
   
   int    n   = 5;
   int    sz  = 200;
-  double sw  = 128.0/2.0;
-  double sh  = 32.0/2.0;
+  double sw  = SW;
+  double sh  = SH;
   double t   = 20.0;
   double t2   = 1.0;
   
@@ -1566,15 +1574,16 @@ void menu_bubble(void)
 	      v = cos(ang1)+cos(ang2);
 
 	      a = u/2.0*sw+sw;
-	      b = v/2.0*16.0+16.0;
+	      b = v/2.0*sh+sh;
 	      ax = (int)a;
 	      by = (int)b;
-	    
-	      plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
-	    	      
+
+	      dd_plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
 	    }
 	}
       
+      dd_update();
+	  
       t += tinc;
       
       if( kb_test() != KEY_NONE )

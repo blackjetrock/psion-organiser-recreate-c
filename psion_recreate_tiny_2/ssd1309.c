@@ -362,9 +362,27 @@ void byte(uint8_t b)
 	}
       
       gpio_put(PIN_I2C_SCL, 0);
-      sleep_us(1);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      gpio_put(PIN_I2C_SCL, 0);
+      //      sleep_us(1);
       gpio_put(PIN_I2C_SCL, 1);
-      sleep_us(1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      gpio_put(PIN_I2C_SCL, 1);
+      //      sleep_us(1);
 
       b<<=1;
       
@@ -508,11 +526,19 @@ void SSD1309_clear(void)
 
 void SSD1309_pixel(int x, int y, char color)
 {
-    if(x > WIDTH || y > HEIGHT)return ;
+    if(x > WIDTH || y > HEIGHT)
+      {
+      return;
+      }
+    
     if(color)
+      {
         buffer[x+(y/8)*WIDTH] |= 1<<(y%8);
+      }
     else
+      {
         buffer[x+(y/8)*WIDTH] &= ~(1<<(y%8));
+      }
 }
 
 void SSD1309_char1616(uint8_t x, uint8_t y, uint8_t chChar)
@@ -556,37 +582,64 @@ void SSD1309_char3216(uint8_t x, uint8_t y, uint8_t chChar)
         }
     }
 }
+
 void SSD1309_char(unsigned char x, unsigned char y, char acsii, char size, char mode)
 {
-    unsigned char i, j, y0=y;
-    char temp;
-    unsigned char ch = acsii - ' ';
-    for(i = 0;i<size;i++) {
-        if(size == 12)
-        {
-            if(mode)temp=Font1206[ch][i];
-            else temp = ~Font1206[ch][i];
-        }
-        else 
-        {            
-            if(mode)temp=Font1608[ch][i];
-            else temp = ~Font1608[ch][i];
-        }
-        for(j =0;j<8;j++)
-        {
-            if(temp & 0x80) SSD1309_pixel(x, y, 1);
-            else SSD1309_pixel(x, y, 0);
-            temp <<=1;
-            y++;
-            if((y-y0)==size)
-            {
-                y = y0;
-                x ++;
-                break;
-            }
-        }
+  unsigned char i, j, y0=y;
+  char temp;
+  unsigned char ch = acsii - ' ';
+
+  printf("\nssd1309:x:%d, y:%d", x, y);
+  
+  for(i = 0; i<size; i++)
+    {
+      if(size == 12)
+	{
+	  if(mode)
+	    {
+	      temp=Font1206[ch][i];
+	    }
+	  else
+	    {
+	      temp = ~Font1206[ch][i];
+	    }
+	}
+      else 
+	{            
+	  if(mode)
+	    {
+	      temp=Font1608[ch][i];
+	    }
+	  else
+	    {
+	      temp = ~Font1608[ch][i];
+	    }
+	}
+      
+      for(j = 0; j<8; j++)
+	{
+	  if(temp & 0x80)
+	    {
+	      SSD1309_pixel(x, y, 1);
+	    }
+	  else
+	    {
+	      SSD1309_pixel(x, y, 0);
+	    }
+	  
+	  temp <<=1;
+	  y++;
+	  
+	  if( (y-y0) == size)
+	    { 
+	      y = y0;
+	      x ++;
+	      break;
+	    }
+	}
     }
 }
+
 void SSD1309_string(uint8_t x, uint8_t y, const char *pString, uint8_t Size, uint8_t Mode)
 {
     while (*pString != '\0') {       

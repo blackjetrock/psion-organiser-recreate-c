@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/display.c.o"
   "CMakeFiles/psion_recreate_ctusb.dir/display.c.o.d"
+  "CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o"
+  "CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o"
   "CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/font.c.o"

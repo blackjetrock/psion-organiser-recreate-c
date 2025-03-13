@@ -956,10 +956,10 @@ void Display_Picture(unsigned char pic[])
   return;
 }
 
-#if SPI
+#if PSION_MINI
 void clear_oled(void)
 {
-  SSD1309_clear();
+  dd_clear_graphics();
 }
 #else
 
@@ -1171,6 +1171,9 @@ uint8_t display_pixels[PIXEL_BUFFER_SIZE_BYTES*2];
 
 void pixels_clear(void)
 {
+#if PSION_MINI
+  dd_clear_graphics();
+#else
   for(int i=0; i<PIXEL_BUFFER_SIZE_BYTES*2; i++)
     {
       display_pixels[i] = BLANK_VAL;
@@ -1190,14 +1193,14 @@ void pixels_clear(void)
       
       //      i2c_send_byte(0);
       i2c_stop();
-
     }
+#endif
 }
 
-#if SPI
+#if MINI_PSION
 void plot_point(int x, int y, int mode)
 {
-  SSD1309_pixel(x, y, mode);
+  dd_plot_point(x, y, mode);
 }
 
 #else
@@ -1205,8 +1208,6 @@ void plot_point(int x, int y, int mode)
 void plot_point(int x, int y, int mode)
 {
   int cx, cy;
-
-
   
   if( (x < 0) || (x>127)  )
     {

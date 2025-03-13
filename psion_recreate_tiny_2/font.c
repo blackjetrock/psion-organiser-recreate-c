@@ -16,6 +16,8 @@ void SentByte(unsigned char Byte);
 #define Write_Address 0x78    /*slave addresses with write*/
 #define Read_Address 0x79     /*slave addresses with read*/
 
+int curx = 0;
+int cury = 0;
 
 // The font that we use for the character display
 // basic 5x7 font
@@ -373,6 +375,8 @@ void new_line(void)
 
 }
 
+//------------------------------------------------------------------------------
+
 void i_printxy(int x, int y, int ch)
 {
   int cx, cy;
@@ -395,8 +399,13 @@ void i_printxy(int x, int y, int ch)
   cx = 127-(x * 6);
   cy = 3-y;
 
+#if DD
+  dd_char_at_xy(x, y, ch);
+  dd_update();
+#else
+  
 #if SPI
-  SSD1309_char(x*12, y, ch, 12, 1);
+  SSD1309_char(x*6, y, ch, 12, 1);
   SSD1309_display();
 #else
   Set_Page_Address(cy);
@@ -415,6 +424,7 @@ void i_printxy(int x, int y, int ch)
   i2c_send_byte(0);
   i2c_stop();
 #endif
+#endif
   
 }
   
@@ -429,6 +439,10 @@ void print_cursor(int x, int y, int ch)
   
   cx = 127-(x * 6);
   cy = 3-y;
+
+  i_printxy(x, y, ch);
+  return;
+  
   Set_Page_Address(cy);
   Set_Column_Address(cx);
 
@@ -453,9 +467,20 @@ void print_cursor(int x, int y, int ch)
 
 void i_printxy_str(int x, int y, char *str)
 {
+  curx = x;
+  cury = y;
+  
+  printf("\ncurx:%d, cury:%d str:'%s'", curx, cury, str);
+  
   while(*str)
     {
-      i_printxy(x++, y, *(str++));
+      i_printxy(curx++, cury, *(str++));
+      //      curx += strlen(s);
+      
+      if( curx >= DISPLAY_NUM_CHARS )
+	{
+	  print_nl();
+	}
     }
 }
 
@@ -490,10 +515,14 @@ void printxy(int x, int y, int ch)
 
 void printxy_str(int x, int y, char *str)
 {
+#if 0
   while(*str)
     {
       printxy(x++, y, *(str++));
     }
+#else
+  i_printxy_str(x, y, str);
+#endif
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -516,8 +545,6 @@ void printxy_hex(int x, int y, int value)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-int curx = 0;
-int cury = 0;
 
 void print_home(void)
 {
@@ -540,12 +567,14 @@ void print_str(char *s)
 {
   i_printxy_str(curx, cury, s);
 
+#if 0
   curx += strlen(s);
 
   if( curx >= DISPLAY_NUM_CHARS )
     {
       print_nl();
     }
+#endif
 }
 
 void print_nl_if_necessary(char *str)

@@ -732,12 +732,13 @@ int main()
 
     while(1)
       {
-	//core1_main();
+	core1_main();
 
 	t++;
 	menu_loop_tasks();
 	
 	tud_task();
+
 #if CORE0_SCAN
 	matrix_scan();
 #endif

@@ -12,6 +12,9 @@ typedef unsigned int uint;
 #include "wireless.h"
 #include "serial.h"
 
+#include "ssd1309.h"
+#include "display_driver.h"
+
 #include "eeprom.h"
 #include "rtc.h"
 #include "display.h"
@@ -28,7 +31,3 @@ typedef unsigned int uint;
 
 #include "sysvar.h"
 
-void SSD1309_pixel(int x, int y, char color);
-void SSD1309_char(unsigned char x, unsigned char y, char acsii, char size, char mode);
-void SSD1309_display(void);
-void SSD1309_clear(void);

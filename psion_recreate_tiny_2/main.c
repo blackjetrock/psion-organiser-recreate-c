@@ -381,7 +381,7 @@ int main(void) {
   tusb_init();
 
 
-#if !PSION_MINI
+#if 1
   core1_init();
   clear_oled();
 #endif
@@ -396,9 +396,11 @@ int main(void) {
   int main_ticks = 0;
 
 #if PSION_MINI
+  dd_init(DD_SPI_SSD1309);
   main_er_oledm015_2();
 #endif
 
+  dd_init(DD_SPI_SSD1309);
   while(true)
     {
       menu_loop_tasks();

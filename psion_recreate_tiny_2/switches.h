@@ -32,3 +32,4 @@
 #define PSION_RECREATE   0   // Hardware replacement for original case
 
 #define SPI              1
+#define DD               1

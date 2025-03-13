@@ -35,7 +35,8 @@ add_executable(${PROJECT}
     msc_disk.c
     ssd1309.c
     oled_er_oledm015_2.c
-)
+    display_driver.c
+  )
 target_include_directories(${PROJECT} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}
 )
