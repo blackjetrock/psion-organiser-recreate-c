@@ -398,9 +398,13 @@ int main(void) {
 #if PSION_MINI
   dd_init(DD_SPI_SSD1309);
   main_er_oledm015_2();
+#else
+  dd_init(DD_SPI_SSD1309);
 #endif
 
-  dd_init(DD_SPI_SSD1309);
+  sleep_ms(3000);
+  dd_clear();
+  
   while(true)
     {
       menu_loop_tasks();
