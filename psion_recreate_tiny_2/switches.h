@@ -7,8 +7,8 @@
 #define DB_KB_MATRIX     0
 #define DB_KB_TEST       0
 #define DB_DIGIT         0
-#define DB_PK_SAVE       0
-#define DB_PK_SETP       0
+#define DB_PK_SAVE       1
+#define DB_PK_SETP       1
 #define DB_CORE1         0
 
 #define DB_FL_POS_AT_END 1
