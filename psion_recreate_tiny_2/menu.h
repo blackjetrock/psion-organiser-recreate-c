@@ -62,5 +62,7 @@ void menu_process(void);
 void menu_leave(void);
 void menu_loop(void);
 void menu_loop_tasks(void);
+int find_free_record(void);
+void put_record(int n, RECORD *record_data);
 
 extern volatile int menu_done;

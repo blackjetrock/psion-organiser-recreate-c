@@ -22,16 +22,7 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-#include "psion_recreate.h"
-
-#include "menu.h"
-#include "emulator.h"
-#include "eeprom.h"
-#include "rtc.h"
-#include "display.h"
-#include "record.h"
-#include "svc.h"
-#include "switches.h"
+#include "psion_recreate_all.h"
 
 #define MAT_SCAN_STATE_DRIVE  0
 #define MAT_SCAN_STATE_READ   5

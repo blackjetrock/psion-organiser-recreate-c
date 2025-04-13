@@ -16,16 +16,7 @@
 #include "hardware/flash.h"
 #include "pico/multicore.h"
 
-#include "psion_recreate.h"
-
-#include "menu.h"
-#include "emulator.h"
-#include "eeprom.h"
-#include "rtc.h"
-#include "display.h"
-#include "record.h"
-#include "svc.h"
-#include "core1.h"
+#include "psion_recreate_all.h"
 
 #define FLASH_BASE ((PAK_ADDR)XIP_BASE)
 

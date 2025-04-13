@@ -110,7 +110,6 @@ CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o: \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/usb_descriptors.h \
- /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/menu.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/emulator.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/wireless.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/serial.h \
@@ -143,5 +142,6 @@ CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/nopl_obj.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/newopl_lib.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/nopl.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/menu.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/switches.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/sysvar.h

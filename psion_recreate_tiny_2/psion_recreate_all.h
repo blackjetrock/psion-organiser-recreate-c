@@ -7,7 +7,7 @@ typedef unsigned int uint;
 #include "psion_recreate.h"
 
 
-#include "menu.h"
+
 #include "emulator.h"
 #include "wireless.h"
 #include "serial.h"
@@ -27,6 +27,7 @@ typedef unsigned int uint;
 #include "svc.h"
 #include "opl.h"
 
+#include "menu.h"
 #include "switches.h"
 
 #include "sysvar.h"

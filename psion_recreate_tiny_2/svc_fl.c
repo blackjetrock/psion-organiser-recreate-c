@@ -994,7 +994,7 @@ void fl_dump_flash_pak(void)
 	  
 	}
 
-      printf(" %s", ascii);
+      printf("         %s", ascii);
       len = *(addr++);
     }
 

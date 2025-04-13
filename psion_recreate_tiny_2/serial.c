@@ -82,79 +82,34 @@ void cli_dump_language_stack(void)
   print_frame(rta_fp);
   #endif
 }
+
+//------------------------------------------------------------------------------
+
 void cli_dump_flash_pak(void)
 {
   fl_dump_flash_pak();
 }
 
-#define BYTE_WIDTH  16
-  
-void cli_dump_eeprom(void)
+//------------------------------------------------------------------------------
+//
+//
+
+void cli_write_test_pak_data(void)
 {
-  char ascii[BYTE_WIDTH*3+5];
-  char ascii_byte[5];
-  uint8_t *flash = (uint8_t *)(XIP_BASE + ((uint32_t)((1024+512) * 1024)));
+  char ascii[255];
+  int recnum;
+  RECORD r;
   
-  uint8_t data[1024*4];
-
-  read_eeprom(EEPROM_1_ADDR_RD, 0, 1024, (uint8_t *)&data);
-  
-  // Display memory from address
-  printf("\n");
-
-  ascii[0] = '\0';
-  
-  for(int z = 0; z<1024; z++)
+  for(int i=0; i<parameter; i++)
     {
-      int byte = 0;
-      
-      if( (z % BYTE_WIDTH) == 0)
-	{
-	  printf("  %s", ascii);
-	  ascii[0] = '\0';
-	  printf("\n%03X: ", z);
-	}
+      sprintf(ascii, "Test%d", i);
 
-#if 0      
-      if( z >= ROM_START )
-	{
-	  byte =  data[z];
-	  printf("%02X ", byte);
-	}
-      else
-	{
-	  byte =  data[z];
-	  printf("%02X ", byte);
-	}
-#endif
-
-      byte = *(flash++);
-      if( isprint(byte) )
-	{
-	  sprintf(ascii_byte, "%c", byte);
-	}
-      else
-	{
-	  sprintf(ascii_byte, ".");
-	}
-      
-      strcat(ascii, ascii_byte);
+      fl_rect(0x90);
+      fl_writ(ascii, strlen(ascii));
     }
-  
-  printf("\n");
 }
 
-
-  
-void cli_write_eeprom(void)
-{
-  char wstr[] = "abcdefghij";
- 
-  // write
-  write_eeprom(EEPROM_1_ADDR_RD, parameter, strlen(wstr), wstr);
-}
-
-  
+#define BYTE_WIDTH 16
 
 void cli_dump_memory(void)
 {
@@ -534,14 +489,9 @@ SERIAL_COMMAND serial_cmds[] =
     cli_dump_language_stack,
    },
    {
-    '_',
-    "Dump EEPROM",
-    cli_dump_eeprom,
-   },
-   {
     '.',
-    "Write to EEPROM",
-    cli_write_eeprom,
+    "Write Test Pak Data",
+    cli_write_test_pak_data,
    },
    {
     't',
