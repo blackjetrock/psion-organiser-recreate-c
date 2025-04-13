@@ -49,3 +49,6 @@ void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free);
 void fl_writ(uint8_t *src, int len);
 
 void tl_cpyx(void);
+void fl_dump_flash_pak(void);
+
+

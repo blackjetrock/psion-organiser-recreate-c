@@ -36,6 +36,7 @@
 PAK_ADDR flash_pak_base_read  = FLASH_BASE + FLASH_PAK_OFFSET;
 PAK_ADDR flash_pak_base_write =              FLASH_PAK_OFFSET;
 
+
 //------------------------------------------------------------------------------
 // Read a byte from the flash pak
 
@@ -181,8 +182,6 @@ void pk_format_pico_flash(void)
   
   //multicore_lockout_end_blocking();
   take_core1_out_of_ram();
-  
-
 
   // Now write a pak header
   pk_build_id_string(pak_id, FLASH_PAK_SIZE, 24, 8, 21, 8,  time_us_32());
@@ -193,3 +192,4 @@ void pk_format_pico_flash(void)
 }
 
 
+ 

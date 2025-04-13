@@ -1521,6 +1521,7 @@ void menu_bubble(void)
   double tau = 3.1415*2;
   double r   = tau/2.350;
   double h = 0.7;
+  int cx, cy;
   
   int    n   = 5;
   int    sz  = 200;
@@ -1578,6 +1579,8 @@ void menu_bubble(void)
 	      ax = (int)a;
 	      by = (int)b;
 
+	      cx = ax;
+	      cy = by;
 	      dd_plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
 	    }
 	}
@@ -1585,6 +1588,11 @@ void menu_bubble(void)
       dd_update();
 	  
       t += tinc;
+
+      if( t > (2.0 * 3.14159265358) )
+	{
+	  t -= (2.0 * 3.14159265358);
+	}
       
       if( kb_test() != KEY_NONE )
 	{
@@ -1676,7 +1684,12 @@ void menu_bubble(void)
 	      c = !c;;
 	    }
 
-	
+	  if( k == 'I' )
+	    {
+	      // Dump information
+	      printf("\ncx,cy=(%d,%d)", cx, cy);
+	    }
+	  
 	  if ( k == KEY_DOWN )
 	    {
 	      v -= 3.2;

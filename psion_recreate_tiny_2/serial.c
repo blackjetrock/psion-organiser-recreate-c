@@ -82,6 +82,10 @@ void cli_dump_language_stack(void)
   print_frame(rta_fp);
   #endif
 }
+void cli_dump_flash_pak(void)
+{
+  fl_dump_flash_pak();
+}
 
 #define BYTE_WIDTH  16
   
@@ -232,50 +236,6 @@ void cli_digit(void)
   parameter |= n;
 }
 
-void cli_trace_dump_from(void)
-{
-#if 0
-  for(int i=0; i<addr_trace_i; i++)
-    {
-      printf("\n%04X:%04X      A:%02X B:%02X X:%04X SP:%04X FLAGS:%02X (%s)",	     
-	     i,
-	     addr_trace_from[i],
-	     addr_trace_from_a[i],
-	     addr_trace_from_b[i],
-	     addr_trace_from_x[i],
-	     addr_trace_from_sp[i],
-	     addr_trace_from_flags[i],
-	     decode_flag_value(addr_trace_from_flags[i])
-	     );
-    }
-
-  #endif
-  printf("\n");
-}
-
-void cli_trace_dump_to(void)
-{
-#if 0
-  int j = addr_trace_to_i;
-  
-  for(int i=0; i<NUM_ADDR_TRACE; i++)
-    {
-      printf("\n%04X:%04X      A:%02X B:%02X X:%04X SP:%04X FLAGS:%02X (%s)",
-	     i,
-	     addr_trace_to[j],
-	     addr_trace_to_a[j],
-	     addr_trace_to_b[j],
-	     addr_trace_to_x[j],
-	     addr_trace_to_sp[j],
-	     addr_trace_to_flags[j],
-	     decode_flag_value(addr_trace_to_flags[j])
-	     );
-      j = ((j + 1) % NUM_ADDR_TRACE);
-    }
-#endif
-  printf("\n");
-}
-
 ////////////////////////////////////////////////////////////////////////////////
 
 void cli_format(void)
@@ -416,6 +376,7 @@ void cli_information(void)
 
   //  printf("\nMatrix scan count: %d", matscan_count);
   //printf("\nCore1 count      : %d", core1_count);
+  printf("\nFlash pak start:%08X", flash_pak_base_read);
   printf("\nCore1 safe count : %d", core1_safe_x);
   printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
   for(int i=0; i<NUM_STATS; i++)
@@ -563,14 +524,9 @@ SERIAL_COMMAND serial_cmds[] =
     cli_zero_parameter,
    },
    {
-    'T',
-    "Trace To Dump",
-    cli_trace_dump_to,
-   },
-   {
     'F',
-    "Trace From Dump",
-    cli_trace_dump_from,
+    "Dump Flash Pak",
+    cli_dump_flash_pak,
    },
    {
     'L',
