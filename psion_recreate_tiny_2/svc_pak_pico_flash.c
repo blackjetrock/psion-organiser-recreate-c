@@ -58,6 +58,7 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
   int write_length;
   int rd_blk_num;
   uint8_t blk_buffer[256];
+  int num_blks_to_write;
   
   // Where the write will end (last byte written)
   dat_blk_end = pak_addr + len - 1;
@@ -68,7 +69,9 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
   // Where the read starts
   rd_blk_start = pak_addr / 256;
   rd_blk_len   = start_last_blk_written - rd_blk_start + 256;
-  rd_blk_num   = rd_blk_len / 256;
+
+  // How many blocks we read or write
+  rd_blk_num   = rd_blk_len / 256 + (((rd_blk_len % 256) == 0)?0:1);
   dat_offset   = pak_addr % 256;
 
 #if DB_PK_SAVE  
@@ -101,7 +104,7 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
   // Read first block (addresses not offsets)
   memcpy( blk_buffer, ((uint8_t *)(flash_pak_base_read+rd_blk_start*256+blk_idx*256)), 256);
   
-  while(blk_idx < rd_blk_len/256)
+  while(blk_idx < rd_blk_num)
     {
 #if DB_PK_SAVE
       printf("\nBLK %d", blk_idx);
