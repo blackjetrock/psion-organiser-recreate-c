@@ -3,6 +3,8 @@
 
 #define PIXEL_BUFFER_SIZE_BYTES (PIXELS_MAX_X/8*PIXELS_MAX_Y)
 
+extern uint8_t display_pixels[PIXEL_BUFFER_SIZE_BYTES*2];
+
 void plot_point(int x, int y, int mode);
 void pixels_clear(void);
 

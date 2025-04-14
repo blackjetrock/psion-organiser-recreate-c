@@ -12,3 +12,5 @@ void dd_update(void);
 void dd_char_at_xy(int x, int y, int ch);
 void dd_plot_point(int x, int y, int mode);
 void dd_clear_graphics(void);
+
+void i2c_ssd_clear_oled(void);

@@ -399,7 +399,7 @@ int main(void) {
   dd_init(DD_SPI_SSD1309);
   main_er_oledm015_2();
 #else
-  dd_init(DD_SPI_SSD1309);
+  dd_init(DD_I2C_SSD);
 #endif
 
   sleep_ms(3000);

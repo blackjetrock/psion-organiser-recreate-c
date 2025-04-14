@@ -375,6 +375,69 @@ void new_line(void)
 
 }
 
+
+void i2c_ssd_plot_point(int x, int y, int mode)
+{
+  int cx, cy;
+  
+  if( (x < 0) || (x>127)  )
+    {
+      return;
+    }
+
+  if( (y < 0) || (y>31)  )
+    {
+      return;
+    }
+  
+  //printf("\nX:%d Y:%d", x, y);
+  
+  cx = 127-x;
+  cy = 3-y/8;
+
+  //printf("  cx:%d cy:%d", cx, cy);
+  
+  Set_Page_Address(cy);
+  Set_Column_Address(cx+4);
+
+  i2c_start();
+  
+  // Send slave address with read bit
+  i2c_send_byte(Write_Address);
+  i2c_send_byte(0x40);
+
+  // Set a pixel
+  //  i2c_send_byte(0x1 << (y % 8));
+
+  uint8_t byte = display_pixels[cy*128+cx];
+
+
+  //printf("  IDX:%d", cy*128+cx);
+  //printf("  byte:%02X", byte);
+
+  switch(mode)
+    {
+    case 1:
+      byte |= (0x1 << (y % 8));
+      break;
+
+    case 0:
+      byte &= ~(1 << (y % 8));
+      break;
+    }
+  //printf("  byte:%02X", byte);
+
+  serial_plot_point_byte(x, y, mode);
+  
+  i2c_send_byte(invert_byte(byte));
+
+  display_pixels[cy*128+cx] = byte;
+  //printf("  byte:%02X", byte);
+  
+  //  i2c_send_byte(0);
+  i2c_stop();
+}
+
 //------------------------------------------------------------------------------
 
 void i_printxy(int x, int y, int ch)
@@ -427,7 +490,59 @@ void i_printxy(int x, int y, int ch)
 #endif
   
 }
+
+void i2c_ssd(int cx, int cy, int ch)
+{
+  Set_Page_Address(cy);
+  Set_Column_Address(cx);
   
+  i2c_start();
+  
+  // Send slave address with read bit
+  i2c_send_byte(Write_Address);
+  i2c_send_byte(0x40);
+  
+  for(int j=0; j<5; j++)
+    {
+      i2c_send_byte(invert_byte(font_5x7_letters[ch*5+(4-j)]));
+    }
+  i2c_send_byte(0);
+  i2c_stop();
+}
+
+void i2c_ssd_clear_oled(void)
+{
+  unsigned char i,j,num = 0;
+  
+  for(i=0; i<0x04; i++)
+    {
+      Set_Page_Address(i);
+      Set_Column_Address(0x00);
+
+#if NEW_I2C
+      i2c_start();
+      i2c_send_byte(Write_Address);
+      i2c_send_byte(0x40);
+
+      for(j=0; j<132; j++)
+	{
+	  i2c_send_byte(0);
+	}
+      
+      i2c_stop();
+#else
+      Start();
+      SentByte(Write_Address);
+      SentByte(0x40);
+      
+      for(j=0; j<132; j++)
+	{
+	  SentByte(0);
+	}
+      Stop();
+#endif
+    }
+}
 
 void print_cursor(int x, int y, int ch)
 {

@@ -24,6 +24,11 @@ void dd_init(DD_TYPE type)
   current_dd = type;
   switch(type)
     {
+     case DD_I2C_SSD:
+       sleep_ms(10);
+       initialise_oled();
+      break;
+      
     case DD_SPI_SSD1309:
       SSD1309_begin();
       break;
@@ -34,6 +39,10 @@ void dd_clear(void)
 {
   switch(current_dd)
     {
+     case DD_I2C_SSD:
+
+      break;
+
     case DD_SPI_SSD1309:
       SSD1309_clear();
       SSD1309_display();
@@ -46,6 +55,10 @@ void dd_char_at_xy(int x, int y, int ch)
   printf("\nCur dd:%d", current_dd);
   switch(current_dd)
     {
+    case DD_I2C_SSD:
+      i2c_ssd(127-(x * 6), 3-y, ch);
+      break;
+
     case DD_SPI_SSD1309:
       SSD1309_char(x*6, y*12, ch, 12, 1);
       break;
@@ -56,6 +69,10 @@ void dd_clear_graphics(void)
 {
   switch(current_dd)
     {
+    case DD_I2C_SSD:
+      i2c_ssd_clear_oled();
+      break;
+
     case DD_SPI_SSD1309:
       SSD1309_clear();
       SSD1309_display();
@@ -69,6 +86,10 @@ void dd_plot_point(int x, int y, int mode)
 
   switch(current_dd)
     {
+    case DD_I2C_SSD:
+      i2c_ssd_plot_point(x, y, mode);
+      break;
+      
     case DD_SPI_SSD1309:
       SSD1309_pixel(x, y, mode);
       break;
@@ -79,6 +100,10 @@ void dd_update(void)
 {
   switch(current_dd)
     {
+    case DD_I2C_SSD:
+      SSD1309_display();
+      break;
+
     case DD_SPI_SSD1309:
       SSD1309_display();
       break;

@@ -433,6 +433,8 @@ void I2C_Write_Byte(uint8_t value, uint8_t Cmd)
 
 void SSD1309_begin()
 {
+#if PSION_MINI
+  
   // I2C already set up
 #if 0  
     if(!bcm2835_init()) {
@@ -513,6 +515,7 @@ void SSD1309_begin()
 
     command(0xaf);//--turn on oled panel
     //i2c_stop();
+#endif
 }
 
 void SSD1309_clear(void)
@@ -670,7 +673,8 @@ void SSD1309_bitmap(unsigned char x, unsigned char y, const unsigned char *pBmp,
 }
 
 void SSD1309_display()
-{ 
+{
+#if PSION_MINI  
   int i;
   uint8_t page;
   char *pBuf = (char *)buffer;
@@ -695,4 +699,5 @@ void SSD1309_display()
         }
     }
   //i2c_stop();
+#endif
 }
