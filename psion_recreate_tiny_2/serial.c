@@ -45,6 +45,11 @@ void cli_zero_parameter(void)
   parameter = 0;
 }
 
+void cli_pak_parameter(void)
+{
+  parameter = 0x10180000;
+}
+
 
 // Dump the language stack
 
@@ -333,6 +338,7 @@ void cli_information(void)
   //printf("\nCore1 count      : %d", core1_count);
   printf("\nFlash pak start:%08X", flash_pak_base_read);
   printf("\nCore1 safe count : %d", core1_safe_x);
+  printf("\nCPAD: %08X", pkw_cpad);
   printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
   for(int i=0; i<NUM_STATS; i++)
     {
@@ -477,6 +483,11 @@ SERIAL_COMMAND serial_cmds[] =
     'z',
     "Zero Parameter",
     cli_zero_parameter,
+   },
+   {
+    'y',
+    "Set Parameter to Flash Pak Start",
+    cli_pak_parameter,
    },
    {
     'F',
