@@ -45,9 +45,9 @@ void i2c_delay(void)
 {
   volatile int i;
 
-  sleep_us(10);
-  return;
-  for(i=0; i<5; i++)
+  //sleep_us(10);
+  //return;
+  for(i=0; i<3; i++)
     {
     }
 }

@@ -40,7 +40,7 @@ void dd_clear(void)
   switch(current_dd)
     {
      case DD_I2C_SSD:
-
+      i2c_ssd_clear_oled();
       break;
 
     case DD_SPI_SSD1309:
@@ -52,7 +52,6 @@ void dd_clear(void)
 
 void dd_char_at_xy(int x, int y, int ch)
 {
-  printf("\nCur dd:%d", current_dd);
   switch(current_dd)
     {
     case DD_I2C_SSD:
@@ -101,7 +100,7 @@ void dd_update(void)
   switch(current_dd)
     {
     case DD_I2C_SSD:
-      SSD1309_display();
+      //SSD1309_display();
       break;
 
     case DD_SPI_SSD1309:
