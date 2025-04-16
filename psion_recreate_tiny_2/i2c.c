@@ -41,12 +41,15 @@ void i2c_release(void)
 }
 
 // Delay to slow down to I2C bus rates
+// sleep_us does not work well here.
+
 void i2c_delay(void)
 {
   volatile int i;
 
-  //sleep_us(10);
-  //return;
+  // This is the smallest delay that works with the recreate I2C OLED
+  // panel.
+  
   for(i=0; i<3; i++)
     {
     }
@@ -247,7 +250,6 @@ int i2c_read_bytes(BYTE slave_addr, int n, BYTE *data)
       i2c_stop();
       return(0);
     }
-
 
   //
   for (i = 0; i < n; i++)

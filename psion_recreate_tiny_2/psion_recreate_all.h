@@ -13,6 +13,7 @@ typedef unsigned int uint;
 #include "serial.h"
 
 #include "ssd1309.h"
+#include "ssd1351b.h"
 #include "display_driver.h"
 
 #include "eeprom.h"

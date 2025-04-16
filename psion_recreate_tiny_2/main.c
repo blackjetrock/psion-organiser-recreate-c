@@ -73,9 +73,6 @@ const uint PIN_SDAOUT     = 27;
 const uint PIN_LATCHOUT2  = 15;
 const uint PIN_I2C_SDA    = 5;
 const uint PIN_I2C_SCL    = 6;
-const uint PIN_OLED_RES   = 4;
-const uint PIN_OLED_DC    = 3;
-const uint PIN_OLED_CS    = 2;
   
 const uint PIN_LS_DIR     = 7;
 const uint PIN_LATCHIN    = 12;
@@ -87,6 +84,10 @@ const uint PIN_SCLKOUT    = 26;
 const uint PIN_VBAT_SW_ON = 11;
 
 #endif
+
+const uint PIN_OLED_RES   = 4;
+const uint PIN_OLED_DC    = 3;
+const uint PIN_OLED_CS    = 2;
 
 volatile uint16_t latch2_shadow    = 0;
 volatile uint16_t latchout1_shadow = 0;
@@ -372,10 +373,6 @@ int main(void) {
   //  gpio_put(PIN_SDAIN,  1);
   gpio_put(PIN_SCLKIN, 1);
 
-#if !PSION_MINI
-  sleep_ms(10);
-  initialise_oled();
-#endif
   
   board_init();
   tusb_init();
@@ -387,22 +384,32 @@ int main(void) {
 #endif
   
   stdio_init_all();
-  sleep_ms(2000);
-  
+  sleep_ms(4000);
+
+#if !PSION_MINI
+  sleep_ms(10);
+  initialise_oled();
+#endif
+
   int tick = 0;
 
   menu_enter();
   
   int main_ticks = 0;
 
+  printf("\nAbout to init...");
+  
 #if PSION_MINI
   dd_init(DD_SPI_SSD1309);
-  main_er_oledm015_2();
+  //dd_init(DD_SPI_SSD1351);
+  //main_er_oledm015_2();
 #else
   dd_init(DD_I2C_SSD);
 #endif
 
-  sleep_ms(3000);
+  printf("\nInit done");
+  
+  //sleep_ms(3000);
   dd_clear();
   
   while(true)

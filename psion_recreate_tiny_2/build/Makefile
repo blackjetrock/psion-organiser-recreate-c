@@ -2394,6 +2394,30 @@ ssd1309.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.s
 .PHONY : ssd1309.c.s
 
+ssd1351.o: ssd1351.c.o
+.PHONY : ssd1351.o
+
+# target to build an object file
+ssd1351.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o
+.PHONY : ssd1351.c.o
+
+ssd1351.i: ssd1351.c.i
+.PHONY : ssd1351.i
+
+# target to preprocess a source file
+ssd1351.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.i
+.PHONY : ssd1351.c.i
+
+ssd1351.s: ssd1351.c.s
+.PHONY : ssd1351.s
+
+# target to generate assembly for a file
+ssd1351.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.s
+.PHONY : ssd1351.c.s
+
 svc_db.o: svc_db.c.o
 .PHONY : svc_db.o
 
@@ -2947,6 +2971,9 @@ help:
 	@echo "... ssd1309.o"
 	@echo "... ssd1309.i"
 	@echo "... ssd1309.s"
+	@echo "... ssd1351.o"
+	@echo "... ssd1351.i"
+	@echo "... ssd1351.s"
 	@echo "... svc_db.o"
 	@echo "... svc_db.i"
 	@echo "... svc_db.s"

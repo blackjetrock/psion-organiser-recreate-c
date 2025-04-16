@@ -28,8 +28,8 @@
 #define CORE0_SCAN       0
 
 // Different builds
-#define PSION_MINI       0   // Small hardware version
-#define PSION_RECREATE   1   // Hardware replacement for original case
+#define PSION_MINI       1   // Small hardware version
+#define PSION_RECREATE   0   // Hardware replacement for original case
 
-#define SPI              0
+#define SPI              1
 #define DD               1   // Display driver scheme

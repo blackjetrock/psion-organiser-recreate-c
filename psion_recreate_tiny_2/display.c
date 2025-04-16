@@ -459,20 +459,6 @@ void _nop_(void)
 }
 #endif
 
-#if 0
-void Start(void)
-{
-  _nop_();
-  SDA1();
-  _nop_();
-  SCL1();
-  _nop_();
-  SDA0();
-  _nop_();
-  SCL0();
-  _nop_();
-} 
-#endif
 
 void Stop(void)
 {
@@ -589,18 +575,6 @@ void Send_ACK(void)
   _nop_();
 }
 
-#if 0
-void Set_Page_Address(unsigned char add)
-{
-  command(0xB0 + page);
-  // set low column address
-  command(0x00); 
-  // set high column address 
-  command(0x10); 
-}
-
-#else
-
 // Set page address 0~4
 void Set_Page_Address(unsigned char add)
 {
@@ -617,7 +591,6 @@ void Set_Page_Address(unsigned char add)
   Stop();
 #endif
 }
-#endif
 
 void Set_Column_Address(unsigned char add)
 {
@@ -1002,160 +975,6 @@ void oledmain(void)
 {
   Display_Chess(0x0f);
 }
-
-#if 0
-  //IE=0x81;
-  //IP=0x01;
-  //TCON=0x01;
-  //int0=1;
-  
-  Delay(100);
-
-  while(1)
-    {
-      initialise_oled();
-      Delay(1000);
-
-#if FULL_DEMO 
-      Display_Picture(pic);
-      sleep_ms(DEMO_DELAY);
- 
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Picture(pic1);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Picture(pic2);
-      sleep_ms(DEMO_DELAY);
-      
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Picture(pic3);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Chess(0x0f);
-      sleep_ms(DEMO_DELAY);
-#endif
-      int i = 0;
-      for(int y=0; y<4;  y++)
-	{
-	  for(int x=0; x<20; x++)
-	    {
-	      printxy(x, y, ' '+(i++));
-	      i = (i % 64);
-	    }
-	}
-	    
-#if FULL_DEMO 
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Chinese(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop(); 
-      Display_Chinese(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Chinese_Column(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop(); 
-      Display_Chinese_Column(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-#endif
-    }
-}
-#endif
-
 
 ////////////////////////////////////////////////////////////////////////////////
 //

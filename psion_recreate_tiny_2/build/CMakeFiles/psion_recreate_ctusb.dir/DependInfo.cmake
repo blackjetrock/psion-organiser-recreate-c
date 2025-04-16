@@ -241,6 +241,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/rtc.c" "CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/serial.c" "CMakeFiles/psion_recreate_ctusb.dir/serial.c.o" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/serial.c.o.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/ssd1309.c" "CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o.d"
+  "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/ssd1351.c" "CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/svc_db.c" "CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/svc_dp.c" "CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o.d"
   "/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/svc_ed.c" "CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o" "gcc" "CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o.d"

@@ -186,6 +186,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/psion_recreate_ctusb.dir/serial.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o"
   "CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o.d"
+  "CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o"
+  "CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o"
   "CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o"

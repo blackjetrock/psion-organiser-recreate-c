@@ -34,6 +34,7 @@ add_executable(${PROJECT}
     opl.c
     msc_disk.c
     ssd1309.c
+    ssd1351.c
     oled_er_oledm015_2.c
     display_driver.c
   )
