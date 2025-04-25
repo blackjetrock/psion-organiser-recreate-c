@@ -384,7 +384,7 @@ int main(void) {
 #endif
   
   stdio_init_all();
-  sleep_ms(4000);
+  //  sleep_ms(400);
 
 #if !PSION_MINI
   sleep_ms(10);

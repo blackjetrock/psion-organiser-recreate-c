@@ -3229,271 +3229,271 @@ LOAD /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/
                 0x10000400       0xc0 CMakeFiles/psion_recreate_ctusb.dir/main.c.o
                 0x10000400                write_595
  .text.startup.main
-                0x100004c0      0x28c CMakeFiles/psion_recreate_ctusb.dir/main.c.o
+                0x100004c0      0x284 CMakeFiles/psion_recreate_ctusb.dir/main.c.o
                 0x100004c0                main
  .text.cdc_printf
-                0x1000074c       0x38 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
-                0x1000074c                cdc_printf
+                0x10000744       0x38 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
+                0x10000744                cdc_printf
  .text.cdc_printf_xy
-                0x10000784       0x5c CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
-                0x10000784                cdc_printf_xy
- .text.cdc_cls  0x100007e0       0x10 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
-                0x100007e0                cdc_cls
+                0x1000077c       0x5c CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
+                0x1000077c                cdc_printf_xy
+ .text.cdc_cls  0x100007d8       0x10 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
+                0x100007d8                cdc_cls
  .text.put_core1_into_ram
-                0x100007f0       0x18 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
-                0x100007f0                put_core1_into_ram
+                0x100007e8       0x18 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
+                0x100007e8                put_core1_into_ram
  .text.take_core1_out_of_ram
-                0x10000808        0xc CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
-                0x10000808                take_core1_out_of_ram
+                0x10000800        0xc CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
+                0x10000800                take_core1_out_of_ram
  .text.core1_init
-                0x10000814       0x10 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
-                0x10000814                core1_init
+                0x1000080c       0x10 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
+                0x1000080c                core1_init
  .text.tud_descriptor_device_cb
-                0x10000824        0x8 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
-                0x10000824                tud_descriptor_device_cb
+                0x1000081c        0x8 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
+                0x1000081c                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x1000082c        0x8 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
-                0x1000082c                tud_descriptor_configuration_cb
+                0x10000824        0x8 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
+                0x10000824                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x10000834       0xf4 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
-                0x10000834                tud_descriptor_string_cb
+                0x1000082c       0xf4 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
+                0x1000082c                tud_descriptor_string_cb
  .text.invert_byte
-                0x10000928       0x44 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000928                invert_byte
+                0x10000920       0x44 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000920                invert_byte
  .text.next_printpos_line
-                0x1000096c       0x34 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x1000096c                next_printpos_line
+                0x10000964       0x34 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000964                next_printpos_line
  .text.i2c_ssd_plot_point
-                0x100009a0       0xdc CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x100009a0                i2c_ssd_plot_point
+                0x10000998       0xdc CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000998                i2c_ssd_plot_point
  .text.i_printxy
-                0x10000a7c       0x74 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000a7c                i_printxy
- .text.i2c_ssd  0x10000af0       0x84 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000af0                i2c_ssd
+                0x10000a74       0x74 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000a74                i_printxy
+ .text.i2c_ssd  0x10000ae8       0x84 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000ae8                i2c_ssd
  .text.i2c_ssd_clear_oled
-                0x10000b74       0x40 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000b74                i2c_ssd_clear_oled
+                0x10000b6c       0x40 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000b6c                i2c_ssd_clear_oled
  .text.print_cursor
-                0x10000bb4       0x7c CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000bb4                print_cursor
+                0x10000bac       0x7c CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000bac                print_cursor
  .text.i_printxy_str
-                0x10000c30      0x104 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000c30                i_printxy_str
+                0x10000c28      0x104 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000c28                i_printxy_str
  .text.printxy_str
-                0x10000d34        0x8 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000d34                printxy_str
+                0x10000d2c        0x8 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000d2c                printxy_str
  .text.print_home
-                0x10000d3c       0x14 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000d3c                print_home
+                0x10000d34       0x14 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000d34                print_home
  .text.print_str
-                0x10000d50       0x1c CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000d50                print_str
+                0x10000d48       0x1c CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000d48                print_str
  .text.print_nl_if_necessary
-                0x10000d6c       0x30 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
-                0x10000d6c                print_nl_if_necessary
- .text.kb_getk  0x10000d9c       0x54 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
-                0x10000d9c                kb_getk
- .text.kb_test  0x10000df0       0x30 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
-                0x10000df0                kb_test
+                0x10000d64       0x30 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+                0x10000d64                print_nl_if_necessary
+ .text.kb_getk  0x10000d94       0x54 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
+                0x10000d94                kb_getk
+ .text.kb_test  0x10000de8       0x30 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
+                0x10000de8                kb_test
  .text.queue_hid_key
-                0x10000e20       0x58 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
-                0x10000e20                queue_hid_key
+                0x10000e18       0x58 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
+                0x10000e18                queue_hid_key
  .text.translate_to_hid
-                0x10000e78        0x4 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
-                0x10000e78                translate_to_hid
- .text.dp_view  0x10000e7c      0x20c CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
-                0x10000e7c                dp_view
- .text.dp_stat  0x10001088       0x2c CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
-                0x10001088                dp_stat
+                0x10000e70        0x4 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
+                0x10000e70                translate_to_hid
+ .text.dp_view  0x10000e74      0x20c CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
+                0x10000e74                dp_view
+ .text.dp_stat  0x10001080       0x2c CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
+                0x10001080                dp_stat
  .text.dp_clr_eos
-                0x100010b4       0x44 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
-                0x100010b4                dp_clr_eos
- .text.dp_cls   0x100010f8       0x24 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
-                0x100010f8                dp_cls
- .text.dp_prnt  0x1000111c       0x68 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
-                0x1000111c                dp_prnt
- .text.ed_epos  0x10001184      0x1a8 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
-                0x10001184                ed_epos
- .text.ed_view  0x1000132c       0xf4 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
-                0x1000132c                ed_view
+                0x100010ac       0x44 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
+                0x100010ac                dp_clr_eos
+ .text.dp_cls   0x100010f0       0x24 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
+                0x100010f0                dp_cls
+ .text.dp_prnt  0x10001114       0x68 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
+                0x10001114                dp_prnt
+ .text.ed_epos  0x1000117c      0x1a8 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
+                0x1000117c                ed_epos
+ .text.ed_view  0x10001324       0xf4 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
+                0x10001324                ed_view
  .text.fl_scan_pak
-                0x10001420       0xac CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001420                fl_scan_pak
- .text.fl_catl  0x100014cc       0xf4 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x100014cc                fl_catl
- .text.fl_find  0x100015c0      0x134 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x100015c0                fl_find
- .text.fl_frec  0x100016f4       0xfc CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x100016f4                fl_frec
- .text.fl_eras  0x100017f0       0x60 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x100017f0                fl_eras
- .text.fl_back  0x10001850       0x48 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001850                fl_back
- .text.fl_next  0x10001898       0x48 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001898                fl_next
- .text.fl_read  0x100018e0       0x38 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x100018e0                fl_read
- .text.fl_rect  0x10001918        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001918                fl_rect
- .text.fl_rset  0x10001924       0x1c CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001924                fl_rset
- .text.fl_size  0x10001940       0xf4 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001940                fl_size
- .text.fl_cret  0x10001a34      0x20c CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001a34                fl_cret
- .text.fl_writ  0x10001c40       0x40 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001c40                fl_writ
+                0x10001418       0xac CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001418                fl_scan_pak
+ .text.fl_catl  0x100014c4       0xf4 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x100014c4                fl_catl
+ .text.fl_find  0x100015b8      0x134 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x100015b8                fl_find
+ .text.fl_frec  0x100016ec       0xfc CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x100016ec                fl_frec
+ .text.fl_eras  0x100017e8       0x60 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x100017e8                fl_eras
+ .text.fl_back  0x10001848       0x48 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001848                fl_back
+ .text.fl_next  0x10001890       0x48 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001890                fl_next
+ .text.fl_read  0x100018d8       0x38 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x100018d8                fl_read
+ .text.fl_rect  0x10001910        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001910                fl_rect
+ .text.fl_rset  0x1000191c       0x1c CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x1000191c                fl_rset
+ .text.fl_size  0x10001938       0xf4 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001938                fl_size
+ .text.fl_cret  0x10001a2c      0x20c CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001a2c                fl_cret
+ .text.fl_writ  0x10001c38       0x40 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001c38                fl_writ
  .text.fl_dump_flash_pak
-                0x10001c80       0xa4 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
-                0x10001c80                fl_dump_flash_pak
+                0x10001c78       0xa4 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+                0x10001c78                fl_dump_flash_pak
  .text.pk_build_id_string
-                0x10001d24       0x58 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001d24                pk_build_id_string
- .text.pk_setp  0x10001d7c       0x28 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001d7c                pk_setp
- .text.pk_save  0x10001da4       0x4c CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001da4                pk_save
- .text.pk_read  0x10001df0       0x48 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001df0                pk_read
- .text.pk_rbyt  0x10001e38       0x2c CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001e38                pk_rbyt
- .text.pk_rwrd  0x10001e64       0x40 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001e64                pk_rwrd
- .text.pk_skip  0x10001ea4       0x10 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001ea4                pk_skip
- .text.pk_qadd  0x10001eb4        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001eb4                pk_qadd
- .text.pk_sadd  0x10001ec0        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001ec0                pk_sadd
- .text.pk_fmat  0x10001ecc       0x20 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
-                0x10001ecc                pk_fmat
+                0x10001d1c       0x58 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001d1c                pk_build_id_string
+ .text.pk_setp  0x10001d74       0x28 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001d74                pk_setp
+ .text.pk_save  0x10001d9c       0x4c CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001d9c                pk_save
+ .text.pk_read  0x10001de8       0x48 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001de8                pk_read
+ .text.pk_rbyt  0x10001e30       0x2c CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001e30                pk_rbyt
+ .text.pk_rwrd  0x10001e5c       0x40 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001e5c                pk_rwrd
+ .text.pk_skip  0x10001e9c       0x10 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001e9c                pk_skip
+ .text.pk_qadd  0x10001eac        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001eac                pk_qadd
+ .text.pk_sadd  0x10001eb8        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001eb8                pk_sadd
+ .text.pk_fmat  0x10001ec4       0x20 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+                0x10001ec4                pk_fmat
  .text.er_error
-                0x10001eec       0x14 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o
-                0x10001eec                er_error
+                0x10001ee4       0x14 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o
+                0x10001ee4                er_error
  .text.pk_rbyt_pico_flash
-                0x10001f00        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
-                0x10001f00                pk_rbyt_pico_flash
+                0x10001ef8        0xc CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
+                0x10001ef8                pk_rbyt_pico_flash
  .text.pk_save_pico_flash
-                0x10001f0c      0x1e4 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
-                0x10001f0c                pk_save_pico_flash
+                0x10001f04      0x1e4 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
+                0x10001f04                pk_save_pico_flash
  .text.pk_format_pico_flash
-                0x100020f0       0x7c CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
-                0x100020f0                pk_format_pico_flash
+                0x100020e8       0x7c CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
+                0x100020e8                pk_format_pico_flash
  .text.pk_rbyt_serial_eeprom
-                0x1000216c       0x1c CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
-                0x1000216c                pk_rbyt_serial_eeprom
+                0x10002164       0x1c CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
+                0x10002164                pk_rbyt_serial_eeprom
  .text.pk_save_serial_eeprom
-                0x10002188       0x18 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
-                0x10002188                pk_save_serial_eeprom
+                0x10002180       0x18 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
+                0x10002180                pk_save_serial_eeprom
  .text.pk_format_serial_eeprom
-                0x100021a0       0x28 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
-                0x100021a0                pk_format_serial_eeprom
+                0x10002198       0x28 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
+                0x10002198                pk_format_serial_eeprom
  .text.Set_Page_Address
-                0x100021c8       0x24 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
-                0x100021c8                Set_Page_Address
+                0x100021c0       0x24 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+                0x100021c0                Set_Page_Address
  .text.Set_Column_Address
-                0x100021ec       0x28 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
-                0x100021ec                Set_Column_Address
+                0x100021e4       0x28 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+                0x100021e4                Set_Column_Address
  .text.initialise_oled
-                0x10002214      0x180 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
-                0x10002214                initialise_oled
+                0x1000220c      0x180 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+                0x1000220c                initialise_oled
  .text.clear_oled
-                0x10002394        0x8 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
-                0x10002394                clear_oled
+                0x1000238c        0x8 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+                0x1000238c                clear_oled
  .text.pixels_clear
-                0x1000239c        0x8 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
-                0x1000239c                pixels_clear
+                0x10002394        0x8 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+                0x10002394                pixels_clear
  .text.plot_point
-                0x100023a4       0xf4 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
-                0x100023a4                plot_point
+                0x1000239c       0xf4 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+                0x1000239c                plot_point
  .text.cursor_task
-                0x10002498      0x214 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
-                0x10002498                cursor_task
+                0x10002490      0x214 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
+                0x10002490                cursor_task
  .text.handle_cursor_key
-                0x100026ac       0x90 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
-                0x100026ac                handle_cursor_key
+                0x100026a4       0x90 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
+                0x100026a4                handle_cursor_key
  .text.i2c_set_delay_value
-                0x1000273c        0xc CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
-                0x1000273c                i2c_set_delay_value
+                0x10002734        0xc CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+                0x10002734                i2c_set_delay_value
  .text.i2c_start
-                0x10002748       0x5c CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
-                0x10002748                i2c_start
+                0x10002740       0x5c CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+                0x10002740                i2c_start
  .text.i2c_stop
-                0x100027a4       0x74 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
-                0x100027a4                i2c_stop
+                0x1000279c       0x74 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+                0x1000279c                i2c_stop
  .text.i2c_send_byte
-                0x10002818       0xd0 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
-                0x10002818                i2c_send_byte
+                0x10002810       0xd0 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+                0x10002810                i2c_send_byte
  .text.i2c_recv_byte
-                0x100028e8       0xe0 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
-                0x100028e8                i2c_recv_byte
+                0x100028e0       0xe0 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+                0x100028e0                i2c_recv_byte
  .text.i2c_read_bytes
-                0x100029c8      0x168 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
-                0x100029c8                i2c_read_bytes
+                0x100029c0      0x168 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+                0x100029c0                i2c_read_bytes
  .text.i2c_send_bytes
-                0x10002b30       0xcc CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
-                0x10002b30                i2c_send_bytes
+                0x10002b28       0xcc CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+                0x10002b28                i2c_send_bytes
  .text.init_menu_top
-                0x10002bfc        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002bfc                init_menu_top
+                0x10002bf4        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002bf4                init_menu_top
  .text.menu_back
-                0x10002c00       0x18 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002c00                menu_back
+                0x10002bf8       0x18 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002bf8                menu_back
  .text.menu_goto_format
-                0x10002c18       0x1c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002c18                menu_goto_format
+                0x10002c10       0x1c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002c10                menu_goto_format
  .text.menu_goto_test_os
-                0x10002c34       0x1c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002c34                menu_goto_test_os
+                0x10002c2c       0x1c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002c2c                menu_goto_test_os
  .text.menu_goto_buzzer
-                0x10002c50       0x1c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002c50                menu_goto_buzzer
+                0x10002c48       0x1c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002c48                menu_goto_buzzer
  .text.menu_epos_test
-                0x10002c6c       0x44 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002c6c                menu_epos_test
+                0x10002c64       0x44 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002c64                menu_epos_test
  .text.menu_flowtext_test
-                0x10002cb0       0x3c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002cb0                menu_flowtext_test
+                0x10002ca8       0x3c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002ca8                menu_flowtext_test
  .text.menu_fmat
-                0x10002cec       0x38 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002cec                menu_fmat
+                0x10002ce4       0x38 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002ce4                menu_fmat
  .text.menu_dp_view
-                0x10002d24       0x48 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002d24                menu_dp_view
+                0x10002d1c       0x48 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002d1c                menu_dp_view
  .text.menu_fl_find
-                0x10002d6c      0x1a0 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002d6c                menu_fl_find
+                0x10002d64      0x1a0 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002d64                menu_fl_find
  .text.menu_buz1
-                0x10002f0c       0x38 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002f0c                menu_buz1
+                0x10002f04       0x38 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002f04                menu_buz1
  .text.init_menu_format
-                0x10002f44        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002f44                init_menu_format
+                0x10002f3c        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002f3c                init_menu_format
  .text.init_menu_test_os
-                0x10002f48        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002f48                init_menu_test_os
+                0x10002f40        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002f40                init_menu_test_os
  .text.init_menu_buzzer
-                0x10002f4c        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002f4c                init_menu_buzzer
+                0x10002f44        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002f44                init_menu_buzzer
  .text.menu_null
-                0x10002f50        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002f50                menu_null
+                0x10002f48        0x4 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002f48                menu_null
  .text.menu_cursor_test
-                0x10002f54       0x64 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002f54                menu_cursor_test
+                0x10002f4c       0x64 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002f4c                menu_cursor_test
  .text.menu_scan_test
-                0x10002fb8       0x70 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10002fb8                menu_scan_test
+                0x10002fb0       0x70 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10002fb0                menu_scan_test
  .text.menu_instant_off
-                0x10003028       0x34 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x10003028                menu_instant_off
+                0x10003020       0x34 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10003020                menu_instant_off
  .text.menu_fl_save
-                0x1000305c       0x90 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x1000305c                menu_fl_save
+                0x10003054       0x90 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x10003054                menu_fl_save
  .text.menu_oled_test
-                0x100030ec      0x26c CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
-                0x100030ec                menu_oled_test
+                0x100030e4      0x274 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+                0x100030e4                menu_oled_test
  .text.menu_bubble
                 0x10003358      0x3d0 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
                 0x10003358                menu_bubble
@@ -6176,137 +6176,137 @@ LOAD linker stubs
  .comment       0x00000046       0x24 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-hexnan.o)
  .comment       0x00000046       0x24 /usr/lib/gcc/arm-none-eabi/14.1.0/thumb/v6-m/nofp/crtend.o
 
-.debug_info     0x00000000    0x7275b
- .debug_info    0x00000000     0x286c CMakeFiles/psion_recreate_ctusb.dir/main.c.o
- .debug_info    0x0000286c      0x4fe CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
- .debug_info    0x00002d6a      0x399 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
- .debug_info    0x00003103      0x7cc CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
- .debug_info    0x000038cf      0xf50 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
- .debug_info    0x0000481f      0x9c7 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
- .debug_info    0x000051e6      0x8d5 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
- .debug_info    0x00005abb      0xc8d CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
- .debug_info    0x00006748     0x2103 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
- .debug_info    0x0000884b      0x688 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
- .debug_info    0x00008ed3      0x165 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o
- .debug_info    0x00009038      0xa35 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
- .debug_info    0x00009a6d      0x251 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
- .debug_info    0x00009cbe     0x3a30 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
- .debug_info    0x0000d6ee      0x610 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
- .debug_info    0x0000dcfe     0x1225 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o
- .debug_info    0x0000ef23     0x26ef CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
- .debug_info    0x00011612     0x362e CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
- .debug_info    0x00014c40     0x26b2 CMakeFiles/psion_recreate_ctusb.dir/serial.c.o
- .debug_info    0x000172f2      0x329 CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o
- .debug_info    0x0001761b     0x15e9 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o
- .debug_info    0x00018c04      0x335 CMakeFiles/psion_recreate_ctusb.dir/panel.c.o
- .debug_info    0x00018f39      0x2da CMakeFiles/psion_recreate_ctusb.dir/opl.c.o
- .debug_info    0x00019213      0x7a1 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o
- .debug_info    0x000199b4     0x38cb CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o
- .debug_info    0x0001d27f     0x1469 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o
- .debug_info    0x0001e6e8      0x5aa CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o
- .debug_info    0x0001ec92     0x242f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_info    0x000210c1      0x129 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_info    0x000211ea      0x1bf CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_info    0x000213a9      0x999 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_info    0x00021d42      0x45c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_info    0x0002219e      0x245 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_info    0x000223e3     0x21aa CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_info    0x0002458d      0x15f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_info    0x000246ec     0x27e7 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_info    0x00026ed3      0x308 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_info    0x000271db     0x500c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_info    0x0002c1e7     0x2b11 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_info    0x0002ecf8     0x296c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_info    0x00031664      0x4e5 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_info    0x00031b49      0x248 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_info    0x00031d91      0x633 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_info    0x000323c4      0x1cc CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_info    0x00032590      0x21a CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_info    0x000327aa      0x795 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_info    0x00032f3f      0x781 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_info    0x000336c0       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_info    0x000336e3       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_info    0x00033706       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_info    0x00033729      0x27e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_info    0x000339a7     0x3e71 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
- .debug_info    0x00037818       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_info    0x0003783b       0x24 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_info    0x0003785f       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_info    0x00037882      0x27e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_info    0x00037b00       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_info    0x00037b23      0x619 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_info    0x0003813c       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_info    0x0003815f      0x2b8 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_info    0x00038417     0x22f2 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_info    0x0003a709       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_info    0x0003a72c      0xb54 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_info    0x0003b280     0x1c52 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_info    0x0003ced2     0x10d3 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_info    0x0003dfa5      0x201 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_info    0x0003e1a6     0x12f4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_info    0x0003f49a     0x277b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_info    0x00041c15     0x1158 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_info    0x00042d6d     0x4828 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_info    0x00047595      0xb15 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_info    0x000480aa     0x2015 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_info    0x0004a0bf     0x3815 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
- .debug_info    0x0004d8d4     0x1be5 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_info    0x0004f4b9     0x283d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_info    0x00051cf6     0x1f2f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
- .debug_info    0x00053c25      0xc03 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
- .debug_info    0x00054828       0x3c /usr/lib/gcc/arm-none-eabi/14.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_info    0x00054864      0x11e /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-atexit.o)
- .debug_info    0x00054982      0x8f4 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-callocr.o)
- .debug_info    0x00055276      0xcd2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mallocr.o)
- .debug_info    0x00055f48      0x789 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mlock.o)
- .debug_info    0x000566d1      0xbb3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reallocr.o)
- .debug_info    0x00057284       0xb9 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ctype_.o)
- .debug_info    0x0005733d      0x912 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sscanf.o)
- .debug_info    0x00057c4f      0xa9a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stdio.o)
- .debug_info    0x000586e9      0x906 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-vsprintf.o)
- .debug_info    0x00058fef      0x148 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memmove.o)
- .debug_info    0x00059137      0x130 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcat.o)
- .debug_info    0x00059267      0x108 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strncmp.o)
- .debug_info    0x0005936f      0x10a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stpcpy.o)
- .debug_info    0x00059479      0x834 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reent.o)
- .debug_info    0x00059cad      0x733 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-impure.o)
- .debug_info    0x0005a3e0      0x7a0 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sbrkr.o)
- .debug_info    0x0005ab80      0x719 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-errno.o)
- .debug_info    0x0005b299       0xf7 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-fini.o)
- .debug_info    0x0005b390      0x218 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-lock.o)
- .debug_info    0x0005b5a8       0xc1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sysconf.o)
- .debug_info    0x0005b669       0xc3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcpy.o)
- .debug_info    0x0005b72c       0xeb /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
- .debug_info    0x0005b817      0x25f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__atexit.o)
- .debug_info    0x0005ba76      0x2dd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__call_atexit.o)
- .debug_info    0x0005bd53      0xb53 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-freer.o)
- .debug_info    0x0005c8a6      0xd3f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoul.o)
- .debug_info    0x0005d5e5     0x1a98 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfiscanf.o)
- .debug_info    0x0005f07d     0x18ca /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfprintf.o)
- .debug_info    0x00060947     0x1780 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfscanf.o)
- .debug_info    0x000620c7      0x84a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssprint_r.o)
- .debug_info    0x00062911     0x1116 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-findfp.o)
- .debug_info    0x00063a27      0x10e /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sccl.o)
- .debug_info    0x00063b35      0x9b2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ungetc.o)
- .debug_info    0x000644e7      0xbdb /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-locale.o)
- .debug_info    0x000650c2      0xa36 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-localeconv.o)
- .debug_info    0x00065af8      0x14a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memchr-stub.o)
- .debug_info    0x00065c42       0xcf /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-sf_nan.o)
- .debug_info    0x00065d11     0x1a04 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-dtoa.o)
- .debug_info    0x00067715      0xadd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbtowc_r.o)
- .debug_info    0x000681f2     0x1e3d /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mprec.o)
- .debug_info    0x0006a02f     0x1e6a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtod.o)
- .debug_info    0x0006be99      0xda7 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtol.o)
- .debug_info    0x0006cc40      0xa97 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-wctomb_r.o)
- .debug_info    0x0006d6d7      0xd43 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoll.o)
- .debug_info    0x0006e41a      0xd4c /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoull.o)
- .debug_info    0x0006f166      0xb7c /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbrtowc.o)
- .debug_info    0x0006fce2       0xf1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace.o)
- .debug_info    0x0006fdd3      0x9b9 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace_l.o)
- .debug_info    0x0007078c      0x8dd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssputs_r.o)
- .debug_info    0x00071069       0xd3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-s_nan.o)
- .debug_info    0x0007113c     0x124d /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-gethex.o)
- .debug_info    0x00072389      0x3d2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-hexnan.o)
+.debug_info     0x00000000    0x72758
+ .debug_info    0x00000000     0x2857 CMakeFiles/psion_recreate_ctusb.dir/main.c.o
+ .debug_info    0x00002857      0x4fe CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
+ .debug_info    0x00002d55      0x399 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
+ .debug_info    0x000030ee      0x7cc CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
+ .debug_info    0x000038ba      0xf50 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+ .debug_info    0x0000480a      0x9c7 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
+ .debug_info    0x000051d1      0x8d5 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
+ .debug_info    0x00005aa6      0xc8d CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
+ .debug_info    0x00006733     0x2103 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+ .debug_info    0x00008836      0x688 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+ .debug_info    0x00008ebe      0x165 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o
+ .debug_info    0x00009023      0xa35 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
+ .debug_info    0x00009a58      0x251 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
+ .debug_info    0x00009ca9     0x3a30 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+ .debug_info    0x0000d6d9      0x610 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
+ .debug_info    0x0000dce9     0x1225 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o
+ .debug_info    0x0000ef0e     0x26ef CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+ .debug_info    0x000115fd     0x3640 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+ .debug_info    0x00014c3d     0x26b2 CMakeFiles/psion_recreate_ctusb.dir/serial.c.o
+ .debug_info    0x000172ef      0x329 CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o
+ .debug_info    0x00017618     0x15e9 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o
+ .debug_info    0x00018c01      0x335 CMakeFiles/psion_recreate_ctusb.dir/panel.c.o
+ .debug_info    0x00018f36      0x2da CMakeFiles/psion_recreate_ctusb.dir/opl.c.o
+ .debug_info    0x00019210      0x7a1 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o
+ .debug_info    0x000199b1     0x38cb CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o
+ .debug_info    0x0001d27c     0x1469 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o
+ .debug_info    0x0001e6e5      0x5aa CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o
+ .debug_info    0x0001ec8f     0x242f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_info    0x000210be      0x129 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_info    0x000211e7      0x1bf CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_info    0x000213a6      0x999 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_info    0x00021d3f      0x45c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_info    0x0002219b      0x245 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_info    0x000223e0     0x21aa CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_info    0x0002458a      0x15f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_info    0x000246e9     0x27e7 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_info    0x00026ed0      0x308 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_info    0x000271d8     0x500c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_info    0x0002c1e4     0x2b11 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_info    0x0002ecf5     0x296c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_info    0x00031661      0x4e5 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_info    0x00031b46      0x248 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_info    0x00031d8e      0x633 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_info    0x000323c1      0x1cc CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_info    0x0003258d      0x21a CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_info    0x000327a7      0x795 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_info    0x00032f3c      0x781 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_info    0x000336bd       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_info    0x000336e0       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_info    0x00033703       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_info    0x00033726      0x27e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_info    0x000339a4     0x3e71 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+ .debug_info    0x00037815       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_info    0x00037838       0x24 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_info    0x0003785c       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_info    0x0003787f      0x27e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_info    0x00037afd       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_info    0x00037b20      0x619 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_info    0x00038139       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_info    0x0003815c      0x2b8 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_info    0x00038414     0x22f2 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_info    0x0003a706       0x23 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_info    0x0003a729      0xb54 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_info    0x0003b27d     0x1c52 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_info    0x0003cecf     0x10d3 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_info    0x0003dfa2      0x201 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_info    0x0003e1a3     0x12f4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_info    0x0003f497     0x277b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_info    0x00041c12     0x1158 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_info    0x00042d6a     0x4828 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_info    0x00047592      0xb15 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_info    0x000480a7     0x2015 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_info    0x0004a0bc     0x3815 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+ .debug_info    0x0004d8d1     0x1be5 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_info    0x0004f4b6     0x283d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_info    0x00051cf3     0x1f2f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+ .debug_info    0x00053c22      0xc03 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+ .debug_info    0x00054825       0x3c /usr/lib/gcc/arm-none-eabi/14.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00054861      0x11e /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-atexit.o)
+ .debug_info    0x0005497f      0x8f4 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-callocr.o)
+ .debug_info    0x00055273      0xcd2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mallocr.o)
+ .debug_info    0x00055f45      0x789 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mlock.o)
+ .debug_info    0x000566ce      0xbb3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reallocr.o)
+ .debug_info    0x00057281       0xb9 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ctype_.o)
+ .debug_info    0x0005733a      0x912 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sscanf.o)
+ .debug_info    0x00057c4c      0xa9a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stdio.o)
+ .debug_info    0x000586e6      0x906 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-vsprintf.o)
+ .debug_info    0x00058fec      0x148 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memmove.o)
+ .debug_info    0x00059134      0x130 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcat.o)
+ .debug_info    0x00059264      0x108 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strncmp.o)
+ .debug_info    0x0005936c      0x10a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stpcpy.o)
+ .debug_info    0x00059476      0x834 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reent.o)
+ .debug_info    0x00059caa      0x733 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-impure.o)
+ .debug_info    0x0005a3dd      0x7a0 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sbrkr.o)
+ .debug_info    0x0005ab7d      0x719 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-errno.o)
+ .debug_info    0x0005b296       0xf7 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-fini.o)
+ .debug_info    0x0005b38d      0x218 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-lock.o)
+ .debug_info    0x0005b5a5       0xc1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sysconf.o)
+ .debug_info    0x0005b666       0xc3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcpy.o)
+ .debug_info    0x0005b729       0xeb /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .debug_info    0x0005b814      0x25f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__atexit.o)
+ .debug_info    0x0005ba73      0x2dd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__call_atexit.o)
+ .debug_info    0x0005bd50      0xb53 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-freer.o)
+ .debug_info    0x0005c8a3      0xd3f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoul.o)
+ .debug_info    0x0005d5e2     0x1a98 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfiscanf.o)
+ .debug_info    0x0005f07a     0x18ca /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfprintf.o)
+ .debug_info    0x00060944     0x1780 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfscanf.o)
+ .debug_info    0x000620c4      0x84a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssprint_r.o)
+ .debug_info    0x0006290e     0x1116 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-findfp.o)
+ .debug_info    0x00063a24      0x10e /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sccl.o)
+ .debug_info    0x00063b32      0x9b2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ungetc.o)
+ .debug_info    0x000644e4      0xbdb /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-locale.o)
+ .debug_info    0x000650bf      0xa36 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-localeconv.o)
+ .debug_info    0x00065af5      0x14a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memchr-stub.o)
+ .debug_info    0x00065c3f       0xcf /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-sf_nan.o)
+ .debug_info    0x00065d0e     0x1a04 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-dtoa.o)
+ .debug_info    0x00067712      0xadd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbtowc_r.o)
+ .debug_info    0x000681ef     0x1e3d /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mprec.o)
+ .debug_info    0x0006a02c     0x1e6a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtod.o)
+ .debug_info    0x0006be96      0xda7 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtol.o)
+ .debug_info    0x0006cc3d      0xa97 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-wctomb_r.o)
+ .debug_info    0x0006d6d4      0xd43 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoll.o)
+ .debug_info    0x0006e417      0xd4c /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoull.o)
+ .debug_info    0x0006f163      0xb7c /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbrtowc.o)
+ .debug_info    0x0006fcdf       0xf1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace.o)
+ .debug_info    0x0006fdd0      0x9b9 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace_l.o)
+ .debug_info    0x00070789      0x8dd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssputs_r.o)
+ .debug_info    0x00071066       0xd3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-s_nan.o)
+ .debug_info    0x00071139     0x124d /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-gethex.o)
+ .debug_info    0x00072386      0x3d2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-hexnan.o)
 
 .debug_abbrev   0x00000000    0x148df
  .debug_abbrev  0x00000000      0x5a0 CMakeFiles/psion_recreate_ctusb.dir/main.c.o
@@ -7178,137 +7178,137 @@ LOAD linker stubs
  .debug_rnglists
                 0x000086fb       0x1a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-hexnan.o)
 
-.debug_line     0x00000000    0x4e1df
- .debug_line    0x00000000     0x137d CMakeFiles/psion_recreate_ctusb.dir/main.c.o
- .debug_line    0x0000137d      0x2d2 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
- .debug_line    0x0000164f      0x312 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
- .debug_line    0x00001961      0x49f CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
- .debug_line    0x00001e00      0xd08 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
- .debug_line    0x00002b08      0xaf6 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
- .debug_line    0x000035fe      0x704 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
- .debug_line    0x00003d02      0x745 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
- .debug_line    0x00004447     0x148d CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
- .debug_line    0x000058d4      0x483 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
- .debug_line    0x00005d57       0xf2 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o
- .debug_line    0x00005e49      0x6a8 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
- .debug_line    0x000064f1      0x190 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
- .debug_line    0x00006681     0x33b9 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
- .debug_line    0x00009a3a      0x604 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
- .debug_line    0x0000a03e      0x8e3 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o
- .debug_line    0x0000a921     0x18b5 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
- .debug_line    0x0000c1d6     0x1cc3 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
- .debug_line    0x0000de99     0x121e CMakeFiles/psion_recreate_ctusb.dir/serial.c.o
- .debug_line    0x0000f0b7      0x16e CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o
- .debug_line    0x0000f225      0xc44 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o
- .debug_line    0x0000fe69      0x1a8 CMakeFiles/psion_recreate_ctusb.dir/panel.c.o
- .debug_line    0x00010011      0x14d CMakeFiles/psion_recreate_ctusb.dir/opl.c.o
- .debug_line    0x0001015e      0x439 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o
- .debug_line    0x00010597     0x4aae CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o
- .debug_line    0x00015045      0x4c9 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o
- .debug_line    0x0001550e      0x342 CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o
- .debug_line    0x00015850     0x1c21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x00017471      0x1f6 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_line    0x00017667      0x1fd CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x00017864      0x875 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_line    0x000180d9      0x45e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x00018537      0x347 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x0001887e     0x166d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x00019eeb      0x272 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_line    0x0001a15d     0x1ad0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_line    0x0001bc2d      0x39f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_line    0x0001bfcc     0x34d4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o
- .debug_line    0x0001f4a0     0x1c89 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x00021129     0x1f9c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x000230c5      0x47f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x00023544      0x2d1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x00023815      0x3f9 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x00023c0e      0x2ea CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x00023ef8      0x2ad CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x000241a5      0x4c1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x00024666      0x4d1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x00024b37      0x107 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_line    0x00024c3e      0x2a9 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_line    0x00024ee7      0x3f8 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_line    0x000252df      0x408 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_line    0x000256e7     0x2cbd CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
- .debug_line    0x000283a4      0x66d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_line    0x00028a11       0x61 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_line    0x00028a72      0x3b4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_line    0x00028e26      0x31d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_line    0x00029143      0x195 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_line    0x000292d8      0x45f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
- .debug_line    0x00029737       0x94 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_line    0x000297cb      0x190 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x0002995b     0x1c63 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x0002b5be       0xa5 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x0002b663      0x7b9 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x0002be1c     0x13d6 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_line    0x0002d1f2      0xaf4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_line    0x0002dce6      0x5d3 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_line    0x0002e2b9      0xb3c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_line    0x0002edf5     0x1f14 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_line    0x00030d09      0xbde CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_line    0x000318e7     0x272a CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_line    0x00034011      0x636 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_line    0x00034647     0x1344 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_line    0x0003598b     0x1a9e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
- .debug_line    0x00037429     0x1009 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_line    0x00038432     0x19cc CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_line    0x00039dfe     0x1482 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
- .debug_line    0x0003b280      0x6a1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
- .debug_line    0x0003b921       0x4a /usr/lib/gcc/arm-none-eabi/14.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_line    0x0003b96b       0xf1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-atexit.o)
- .debug_line    0x0003ba5c      0x254 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-callocr.o)
- .debug_line    0x0003bcb0      0x9a8 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mallocr.o)
- .debug_line    0x0003c658      0x1c6 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mlock.o)
- .debug_line    0x0003c81e      0x6b2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reallocr.o)
- .debug_line    0x0003ced0       0xc2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ctype_.o)
- .debug_line    0x0003cf92      0x2d3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sscanf.o)
- .debug_line    0x0003d265      0x2c5 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stdio.o)
- .debug_line    0x0003d52a      0x290 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-vsprintf.o)
- .debug_line    0x0003d7ba      0x21d /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memmove.o)
- .debug_line    0x0003d9d7      0x13e /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcat.o)
- .debug_line    0x0003db15      0x1ed /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strncmp.o)
- .debug_line    0x0003dd02      0x148 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stpcpy.o)
- .debug_line    0x0003de4a      0x240 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reent.o)
- .debug_line    0x0003e08a      0x112 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-impure.o)
- .debug_line    0x0003e19c      0x1e9 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sbrkr.o)
- .debug_line    0x0003e385      0x141 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-errno.o)
- .debug_line    0x0003e4c6       0xd1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-fini.o)
- .debug_line    0x0003e597      0x187 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-lock.o)
- .debug_line    0x0003e71e      0x113 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sysconf.o)
- .debug_line    0x0003e831       0xe2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcpy.o)
- .debug_line    0x0003e913      0x1d5 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
- .debug_line    0x0003eae8      0x1a4 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__atexit.o)
- .debug_line    0x0003ec8c      0x30f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__call_atexit.o)
- .debug_line    0x0003ef9b      0x5bd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-freer.o)
- .debug_line    0x0003f558      0x459 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoul.o)
- .debug_line    0x0003f9b1     0x1c87 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfiscanf.o)
- .debug_line    0x00041638     0x2780 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfprintf.o)
- .debug_line    0x00043db8     0x1803 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfscanf.o)
- .debug_line    0x000455bb      0x23b /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssprint_r.o)
- .debug_line    0x000457f6      0x789 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-findfp.o)
- .debug_line    0x00045f7f      0x1c4 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sccl.o)
- .debug_line    0x00046143      0x496 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ungetc.o)
- .debug_line    0x000465d9      0x300 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-locale.o)
- .debug_line    0x000468d9      0x202 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-localeconv.o)
- .debug_line    0x00046adb      0x20f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memchr-stub.o)
- .debug_line    0x00046cea       0xdb /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-sf_nan.o)
- .debug_line    0x00046dc5     0x17b2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-dtoa.o)
- .debug_line    0x00048577      0x258 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbtowc_r.o)
- .debug_line    0x000487cf     0x16df /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mprec.o)
- .debug_line    0x00049eae     0x184a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtod.o)
- .debug_line    0x0004b6f8      0x4af /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtol.o)
- .debug_line    0x0004bba7      0x258 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-wctomb_r.o)
- .debug_line    0x0004bdff      0x489 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoll.o)
- .debug_line    0x0004c288      0x485 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoull.o)
- .debug_line    0x0004c70d      0x317 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbrtowc.o)
- .debug_line    0x0004ca24      0x19b /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace.o)
- .debug_line    0x0004cbbf      0x227 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace_l.o)
- .debug_line    0x0004cde6      0x2d5 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssputs_r.o)
- .debug_line    0x0004d0bb       0xdc /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-s_nan.o)
- .debug_line    0x0004d197      0xbf7 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-gethex.o)
- .debug_line    0x0004dd8e      0x451 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-hexnan.o)
+.debug_line     0x00000000    0x4e1e0
+ .debug_line    0x00000000     0x137c CMakeFiles/psion_recreate_ctusb.dir/main.c.o
+ .debug_line    0x0000137c      0x2d2 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
+ .debug_line    0x0000164e      0x312 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
+ .debug_line    0x00001960      0x49f CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
+ .debug_line    0x00001dff      0xd08 CMakeFiles/psion_recreate_ctusb.dir/font.c.o
+ .debug_line    0x00002b07      0xaf6 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o
+ .debug_line    0x000035fd      0x704 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o
+ .debug_line    0x00003d01      0x745 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o
+ .debug_line    0x00004446     0x148d CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o
+ .debug_line    0x000058d3      0x483 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o
+ .debug_line    0x00005d56       0xf2 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o
+ .debug_line    0x00005e48      0x6a8 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o
+ .debug_line    0x000064f0      0x190 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o
+ .debug_line    0x00006680     0x33b9 CMakeFiles/psion_recreate_ctusb.dir/display.c.o
+ .debug_line    0x00009a39      0x604 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o
+ .debug_line    0x0000a03d      0x8e3 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o
+ .debug_line    0x0000a920     0x18b5 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o
+ .debug_line    0x0000c1d5     0x1cc5 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o
+ .debug_line    0x0000de9a     0x121e CMakeFiles/psion_recreate_ctusb.dir/serial.c.o
+ .debug_line    0x0000f0b8      0x16e CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o
+ .debug_line    0x0000f226      0xc44 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o
+ .debug_line    0x0000fe6a      0x1a8 CMakeFiles/psion_recreate_ctusb.dir/panel.c.o
+ .debug_line    0x00010012      0x14d CMakeFiles/psion_recreate_ctusb.dir/opl.c.o
+ .debug_line    0x0001015f      0x439 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o
+ .debug_line    0x00010598     0x4aae CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o
+ .debug_line    0x00015046      0x4c9 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o
+ .debug_line    0x0001550f      0x342 CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o
+ .debug_line    0x00015851     0x1c21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x00017472      0x1f6 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_line    0x00017668      0x1fd CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x00017865      0x875 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_line    0x000180da      0x45e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x00018538      0x347 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x0001887f     0x166d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x00019eec      0x272 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x0001a15e     0x1ad0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_line    0x0001bc2e      0x39f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_line    0x0001bfcd     0x34d4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o
+ .debug_line    0x0001f4a1     0x1c89 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0002112a     0x1f9c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x000230c6      0x47f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x00023545      0x2d1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x00023816      0x3f9 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x00023c0f      0x2ea CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x00023ef9      0x2ad CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x000241a6      0x4c1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x00024667      0x4d1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x00024b38      0x107 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_line    0x00024c3f      0x2a9 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_line    0x00024ee8      0x3f8 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_line    0x000252e0      0x408 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_line    0x000256e8     0x2cbd CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+ .debug_line    0x000283a5      0x66d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_line    0x00028a12       0x61 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_line    0x00028a73      0x3b4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_line    0x00028e27      0x31d CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_line    0x00029144      0x195 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_line    0x000292d9      0x45f CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+ .debug_line    0x00029738       0x94 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_line    0x000297cc      0x190 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x0002995c     0x1c63 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x0002b5bf       0xa5 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x0002b664      0x7b9 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x0002be1d     0x13d6 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x0002d1f3      0xaf4 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_line    0x0002dce7      0x5d3 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_line    0x0002e2ba      0xb3c CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_line    0x0002edf6     0x1f14 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_line    0x00030d0a      0xbde CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_line    0x000318e8     0x272a CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_line    0x00034012      0x636 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_line    0x00034648     0x1344 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_line    0x0003598c     0x1a9e CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+ .debug_line    0x0003742a     0x1009 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_line    0x00038433     0x19cc CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_line    0x00039dff     0x1482 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
+ .debug_line    0x0003b281      0x6a1 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+ .debug_line    0x0003b922       0x4a /usr/lib/gcc/arm-none-eabi/14.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x0003b96c       0xf1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-atexit.o)
+ .debug_line    0x0003ba5d      0x254 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-callocr.o)
+ .debug_line    0x0003bcb1      0x9a8 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mallocr.o)
+ .debug_line    0x0003c659      0x1c6 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mlock.o)
+ .debug_line    0x0003c81f      0x6b2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reallocr.o)
+ .debug_line    0x0003ced1       0xc2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ctype_.o)
+ .debug_line    0x0003cf93      0x2d3 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sscanf.o)
+ .debug_line    0x0003d266      0x2c5 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stdio.o)
+ .debug_line    0x0003d52b      0x290 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-vsprintf.o)
+ .debug_line    0x0003d7bb      0x21d /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memmove.o)
+ .debug_line    0x0003d9d8      0x13e /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcat.o)
+ .debug_line    0x0003db16      0x1ed /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strncmp.o)
+ .debug_line    0x0003dd03      0x148 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-stpcpy.o)
+ .debug_line    0x0003de4b      0x240 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-reent.o)
+ .debug_line    0x0003e08b      0x112 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-impure.o)
+ .debug_line    0x0003e19d      0x1e9 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sbrkr.o)
+ .debug_line    0x0003e386      0x141 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-errno.o)
+ .debug_line    0x0003e4c7       0xd1 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-fini.o)
+ .debug_line    0x0003e598      0x187 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-lock.o)
+ .debug_line    0x0003e71f      0x113 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sysconf.o)
+ .debug_line    0x0003e832       0xe2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strcpy.o)
+ .debug_line    0x0003e914      0x1d5 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .debug_line    0x0003eae9      0x1a4 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__atexit.o)
+ .debug_line    0x0003ec8d      0x30f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-__call_atexit.o)
+ .debug_line    0x0003ef9c      0x5bd /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-freer.o)
+ .debug_line    0x0003f559      0x459 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoul.o)
+ .debug_line    0x0003f9b2     0x1c87 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfiscanf.o)
+ .debug_line    0x00041639     0x2780 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfprintf.o)
+ .debug_line    0x00043db9     0x1803 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-svfscanf.o)
+ .debug_line    0x000455bc      0x23b /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssprint_r.o)
+ .debug_line    0x000457f7      0x789 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-findfp.o)
+ .debug_line    0x00045f80      0x1c4 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-sccl.o)
+ .debug_line    0x00046144      0x496 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ungetc.o)
+ .debug_line    0x000465da      0x300 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-locale.o)
+ .debug_line    0x000468da      0x202 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-localeconv.o)
+ .debug_line    0x00046adc      0x20f /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-memchr-stub.o)
+ .debug_line    0x00046ceb       0xdb /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-sf_nan.o)
+ .debug_line    0x00046dc6     0x17b2 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-dtoa.o)
+ .debug_line    0x00048578      0x258 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbtowc_r.o)
+ .debug_line    0x000487d0     0x16df /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mprec.o)
+ .debug_line    0x00049eaf     0x184a /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtod.o)
+ .debug_line    0x0004b6f9      0x4af /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtol.o)
+ .debug_line    0x0004bba8      0x258 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-wctomb_r.o)
+ .debug_line    0x0004be00      0x489 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoll.o)
+ .debug_line    0x0004c289      0x485 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strtoull.o)
+ .debug_line    0x0004c70e      0x317 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-mbrtowc.o)
+ .debug_line    0x0004ca25      0x19b /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace.o)
+ .debug_line    0x0004cbc0      0x227 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-iswspace_l.o)
+ .debug_line    0x0004cde7      0x2d5 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-ssputs_r.o)
+ .debug_line    0x0004d0bc       0xdc /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libm_a-s_nan.o)
+ .debug_line    0x0004d198      0xbf7 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-gethex.o)
+ .debug_line    0x0004dd8f      0x451 /usr/lib/gcc/arm-none-eabi/14.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-gdtoa-hexnan.o)
 
 .debug_str      0x00000000     0xd9b0
  .debug_str     0x00000000     0xd9b0 CMakeFiles/psion_recreate_ctusb.dir/main.c.o

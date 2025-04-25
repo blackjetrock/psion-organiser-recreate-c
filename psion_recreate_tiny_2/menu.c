@@ -1073,6 +1073,8 @@ void menu_oled_test(void)
 	}
     }
 
+  dd_update();
+  
   sleep_ms(2000);
   
 #endif
@@ -1091,6 +1093,7 @@ void menu_oled_test(void)
   
   while(1)
     {
+      dd_update();
 #if 1
       
       plot_point(x+0, y+0, 0);
