@@ -1330,6 +1330,7 @@ void check_menu_launch(void)
 //
 // Hex calculator
 //
+
 void display(int v1, int v2, int hex_ndec)
 {
   char hexbuf[80];
@@ -1420,24 +1421,28 @@ void menu_hex(void)
 	      v2 = 0;
 	      break;
 	      
+	    case KEY_DEL:
+	      v2 = 0;
+	      break;
+	      
 	    case '+':
 	      v2 = v1 + v2;
-	      v1 = 0;
+	      v1 = v2;
 	      break;
 
 	    case '-':
 	      v2 = v1 - v2;
-	      v1 = 0;
+	      v1 = v2;
 	      break;
 
 	    case '*':
 	      v2 = v1 * v2;
-	      v1 = 0;
+	      v1 = v2;
 	      break;
 
 	    case '/':
 	      v2 = v1 / v2;
-	      v1 = 0;
+	      v1 = v2;
 	      break;
 	    }
 
