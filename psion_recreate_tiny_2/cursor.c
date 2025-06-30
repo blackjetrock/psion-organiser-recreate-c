@@ -12,8 +12,8 @@
 //------------------------------------------------------------------------------
 //
 // Cursor
-#define CURSOR_CHAR 0x100
-#define CURSOR_UNDERLINE 0x101
+#define CURSOR_CHAR        0x100
+#define CURSOR_UNDERLINE   0x101
 
 int cursor_on = 0;
 uint64_t cursor_upd_time = 1000000L;

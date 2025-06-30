@@ -548,6 +548,7 @@ void print_cursor(int x, int y, int ch)
 {
   int cx, cy;
 
+#if 0
   serial_display_xy(x, y, ch);
   
   ch -= 0;
@@ -573,6 +574,10 @@ void print_cursor(int x, int y, int ch)
     }
   i2c_send_byte(0);
   i2c_stop();
+#else
+  dd_char_at_xy(x, y, ch);
+  dd_update();
+#endif
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -46,7 +46,7 @@ void SSD1309_string(uint8_t x, uint8_t y, const char *pString, uint8_t Size, uin
 void SSD1309_char1616(uint8_t x, uint8_t y, uint8_t chChar);
 void SSD1309_char3216(uint8_t x, uint8_t y, uint8_t chChar);
 //void I2C_Write_Byte(uint8_t value, uint8_t Cmd);
-void SSD1309_char(unsigned char x, unsigned char y, char acsii, char size, char mode);
+void SSD1309_char(unsigned char x, unsigned char y, int acsii, char size, char mode);
 
 
 #endif

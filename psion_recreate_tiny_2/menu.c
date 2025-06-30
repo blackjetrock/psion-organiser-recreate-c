@@ -1444,6 +1444,14 @@ void menu_hex(void)
 	      v2 = v1 / v2;
 	      v1 = v2;
 	      break;
+
+	    case '<':
+	      v2 <<= 1;
+	      break;
+
+	    case '>':
+	      v2 >>= 1;
+	      break;
 	    }
 
 	  display(v1, v2, hex_ndec);
