@@ -1116,18 +1116,18 @@ void menu_oled_test(void)
       dd_plot_point(x-1, y-1, 1);
       dd_plot_point(x-1, y+1, 1);
 
-      if( bx > 12500 )
+      if( bx > (dd_get_x_size()-1)*100 )
 	{
 	  dxa= -dxa;
 	  dxa = (dxa * 9989)/10000;
-	  bx = 12500;
+	  bx = (dd_get_x_size()-1)*100;
 	}
 
-      if( by > 6400 )
+      if( by > (dd_get_y_size()-1)*100 )
 	{
 	  dya = -dya;
 	  dya = (dya * 9998)/10000;
-	  by = 3200;
+	  by = (dd_get_y_size()-1)*100;
 	}
 
       if( bx < 300 )
