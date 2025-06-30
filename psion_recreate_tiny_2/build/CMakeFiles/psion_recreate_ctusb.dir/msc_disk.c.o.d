@@ -8,15 +8,15 @@ CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o: \
  /usr/arm-none-eabi/include/sys/features.h \
  /usr/arm-none-eabi/include/sys/cdefs.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stddef.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stddef.h \
  /usr/arm-none-eabi/include/sys/_locale.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \
  /usr/arm-none-eabi/include/inttypes.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdbool.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
  /usr/arm-none-eabi/include/string.h \
  /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h \
@@ -28,7 +28,7 @@ CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o: \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
  /usr/arm-none-eabi/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdarg.h \
  /usr/arm-none-eabi/include/sys/stdio.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \

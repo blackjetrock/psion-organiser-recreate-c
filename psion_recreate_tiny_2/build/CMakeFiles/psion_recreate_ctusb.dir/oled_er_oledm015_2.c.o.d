@@ -8,8 +8,8 @@ CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o: \
  /usr/arm-none-eabi/include/sys/features.h \
  /usr/arm-none-eabi/include/sys/cdefs.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stddef.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stddef.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdarg.h \
  /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/sys/_types.h \
@@ -31,7 +31,7 @@ CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o: \
  /usr/arm-none-eabi/include/machine/types.h \
  /usr/arm-none-eabi/include/sys/_locale.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/psion_recreate_all.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/psion_recreate.h \
@@ -42,7 +42,7 @@ CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/font.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
  /usr/arm-none-eabi/include/inttypes.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdbool.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
  /usr/arm-none-eabi/include/string.h /usr/arm-none-eabi/include/strings.h \
  /usr/arm-none-eabi/include/sys/string.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \

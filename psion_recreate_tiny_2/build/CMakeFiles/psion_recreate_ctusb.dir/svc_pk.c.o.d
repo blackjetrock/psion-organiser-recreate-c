@@ -8,10 +8,10 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o: \
  /usr/arm-none-eabi/include/sys/features.h \
  /usr/arm-none-eabi/include/sys/cdefs.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stddef.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stddef.h \
  /usr/arm-none-eabi/include/sys/_locale.h \
  /usr/arm-none-eabi/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdarg.h \
  /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/sys/_types.h \
@@ -23,7 +23,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o: \
  /usr/arm-none-eabi/include/alloca.h /usr/arm-none-eabi/include/string.h \
  /usr/arm-none-eabi/include/strings.h \
  /usr/arm-none-eabi/include/sys/string.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \
@@ -32,7 +32,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2/font.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
  /usr/arm-none-eabi/include/inttypes.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdbool.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \

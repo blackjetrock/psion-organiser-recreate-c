@@ -1,7 +1,7 @@
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o: \
  /home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdbool.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \
  /usr/arm-none-eabi/include/sys/features.h \
@@ -13,8 +13,8 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
  /usr/arm-none-eabi/include/sys/config.h \
  /usr/arm-none-eabi/include/machine/ieeefp.h \
  /usr/arm-none-eabi/include/sys/cdefs.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stddef.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stddef.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdarg.h \
  /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/sys/_types.h \
@@ -40,4 +40,4 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
  /home/menadue/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
  /home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/include/pico/printf.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/float.h
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/float.h

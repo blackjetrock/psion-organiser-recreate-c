@@ -1057,19 +1057,19 @@ void menu_oled_test(void)
   pixels_clear();
   //return;
   
-  for(int y=0; y<31; y+=10)
+  for(int y=0; y<dd_get_y_size()-1; y+=10)
     {
-      for(int x=0; x<121; x++)
+      for(int x=0; x<dd_get_x_size()-1; x++)
 	{
-	  plot_point(x,   y, 1);
+	  dd_plot_point(x, y, 1);
 	}
     }
   
-  for(int x=0; x<121; x+=10)
+  for(int x=0; x<dd_get_x_size()-1; x+=10)
     {
-      for(int y=0; y<31; y++)
+      for(int y=0; y<dd_get_y_size()-1; y++)
 	{
-	  plot_point(x, y, 1);
+	  dd_plot_point(x, y, 1);
 	}
     }
 
@@ -1093,14 +1093,15 @@ void menu_oled_test(void)
   
   while(1)
     {
+      menu_loop_tasks();
       dd_update();
 #if 1
       
-      plot_point(x+0, y+0, 0);
-      plot_point(x+1, y-1, 0);
-      plot_point(x+1, y+1, 0);
-      plot_point(x-1, y-1, 0);
-      plot_point(x-1, y+1, 0);
+      dd_plot_point(x+0, y+0, 0);
+      dd_plot_point(x+1, y-1, 0);
+      dd_plot_point(x+1, y+1, 0);
+      dd_plot_point(x-1, y-1, 0);
+      dd_plot_point(x-1, y+1, 0);
 
       bx=bx+dxa;
       by=by+dya;
@@ -1109,11 +1110,11 @@ void menu_oled_test(void)
       x = bx / 100;
       y = by / 100;
       
-      plot_point(x+0, y+0, 1);
-      plot_point(x+1, y-1, 1);
-      plot_point(x+1, y+1, 1);
-      plot_point(x-1, y-1, 1);
-      plot_point(x-1, y+1, 1);
+      dd_plot_point(x+0, y+0, 1);
+      dd_plot_point(x+1, y-1, 1);
+      dd_plot_point(x+1, y+1, 1);
+      dd_plot_point(x-1, y-1, 1);
+      dd_plot_point(x-1, y+1, 1);
 
       if( bx > 12500 )
 	{
@@ -1122,7 +1123,7 @@ void menu_oled_test(void)
 	  bx = 12500;
 	}
 
-      if( by > 3200 )
+      if( by > 6400 )
 	{
 	  dya = -dya;
 	  dya = (dya * 9998)/10000;

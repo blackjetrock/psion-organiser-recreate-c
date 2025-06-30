@@ -6,7 +6,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_t
  /usr/arm-none-eabi/include/_newlib_version.h \
  /usr/arm-none-eabi/include/sys/config.h \
  /usr/arm-none-eabi/include/sys/features.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stddef.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stddef.h \
  /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/sys/cdefs.h \
@@ -19,9 +19,9 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_t
  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdbool.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
  /usr/arm-none-eabi/include/assert.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \

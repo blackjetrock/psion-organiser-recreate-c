@@ -8,8 +8,8 @@ CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o: \
  /usr/arm-none-eabi/include/sys/features.h \
  /usr/arm-none-eabi/include/sys/cdefs.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stddef.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stddef.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdarg.h \
  /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/sys/_types.h \
@@ -20,9 +20,9 @@ CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o: \
  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdbool.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
  /usr/arm-none-eabi/include/assert.h \
- /usr/lib/gcc/arm-none-eabi/14.1.0/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \

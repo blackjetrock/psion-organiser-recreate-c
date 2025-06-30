@@ -546,9 +546,9 @@ void core1_main(void)
       static uint32_t start_ms = 0;
       
       //if ( board_millis() - start_ms >= interval_ms)
-      if((core1_count % 1000)== 0)
+      if((core1_count % 2000)== 0)
 	{
-	  printf("\nScan");
+	  printf("\nScan"); 
 	  
 #if !CORE0_SCAN
 	  matrix_scan();

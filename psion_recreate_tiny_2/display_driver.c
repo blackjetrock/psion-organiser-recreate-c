@@ -140,3 +140,39 @@ void dd_update(void)
     }
 }
 
+int dd_get_x_size(void)
+{
+  switch(current_dd)
+    {
+    case DD_I2C_SSD:
+      return(128);
+      break;
+
+    case DD_SPI_SSD1309:
+      return(128);
+      break;
+
+    case DD_SPI_SSD1351:
+      return(128);
+      break;
+    }
+}
+
+int dd_get_y_size(void)
+{
+  switch(current_dd)
+    {
+    case DD_I2C_SSD:
+      return(32);
+      break;
+
+    case DD_SPI_SSD1309:
+      return(64);
+      break;
+
+    case DD_SPI_SSD1351:
+      return(32);
+      break;
+    }
+}
+

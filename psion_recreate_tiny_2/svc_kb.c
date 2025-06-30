@@ -582,7 +582,7 @@ void __not_in_flash_func(matrix_scan)(void)
 	}
       
       //mat_scan_state = MAT_SCAN_STATE_DRIVE;
-	          mat_scan_state = MAT_SCAN_STATE_NEXT;
+      mat_scan_state = MAT_SCAN_STATE_NEXT;
       break;
       
       // Move to next drive line
