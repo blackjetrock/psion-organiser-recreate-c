@@ -7,6 +7,9 @@ include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 project(${PROJECT} C CXX ASM)
 
 pico_sdk_init()
+
+add_subdirectory(../no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
+
 add_executable(${PROJECT}
     main.c
     cdc.c
@@ -37,6 +40,7 @@ add_executable(${PROJECT}
     ssd1351.c
     oled_er_oledm015_2.c
     display_driver.c
+    sdcard.c
   )
 target_include_directories(${PROJECT} PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}
@@ -47,7 +51,11 @@ target_link_libraries(${PROJECT}
     pico_unique_id
     tinyusb_board
     tinyusb_device
-)
+    FatFs_SPI
+  )
+
+
+  #target_link_libraries(_my_app_ FatFs_SPI)
 
 pico_add_extra_outputs(${PROJECT})
 pico_enable_stdio_usb(${PROJECT} 1)

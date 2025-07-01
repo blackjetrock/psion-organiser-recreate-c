@@ -365,6 +365,14 @@ void cli_itf(void)
   //txbyte(parameter, 'X');
 }
 
+void cli_ls(void)
+{
+  printf("/nSD Card Listing:\n");
+  run_mount();
+  ls("/");
+  run_unmount();
+}
+
 void cli_dump_fl_pack(void)
 {
   uint8_t *bp;
@@ -633,6 +641,11 @@ SERIAL_COMMAND serial_cmds[] =
     '%',
     "Write test records",
     cli_save_test,
+   },
+   {
+    'l',
+    "SD dir listing",
+    cli_ls,
    },
   };
 

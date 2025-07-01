@@ -33,3 +33,5 @@ typedef unsigned int uint;
 
 #include "sysvar.h"
 
+#include "sdcard.h"
+

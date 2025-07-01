@@ -377,6 +377,7 @@ int main(void) {
   board_init();
   tusb_init();
 
+  sdcard_init();
 
 #if 1
   core1_init();
