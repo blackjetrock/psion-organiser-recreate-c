@@ -594,7 +594,7 @@ void SSD1309_char(unsigned char x, unsigned char y, int ascii, char size, char m
   char temp;
   unsigned int ch = ascii - ' ';
 
-  printf("\nssd1309:x:%d, y:%d", x, y);
+  //printf("\nssd1309:x:%d, y:%d", x, y);
   
   for(i = 0; i<size; i++)
     {

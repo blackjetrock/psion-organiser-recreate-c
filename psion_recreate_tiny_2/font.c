@@ -590,7 +590,7 @@ void i_printxy_str(int x, int y, char *str)
   curx = x;
   cury = y;
   
-  printf("\ncurx:%d, cury:%d str:'%s'", curx, cury, str);
+  //printf("\ncurx:%d, cury:%d str:'%s'", curx, cury, str);
   
   while(*str)
     {

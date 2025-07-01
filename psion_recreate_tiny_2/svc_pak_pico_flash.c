@@ -64,10 +64,10 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
   dat_blk_end = pak_addr + len - 1;
 
   // Start of last block written
-  start_last_blk_written = dat_blk_end / 256*256;
+  start_last_blk_written = dat_blk_end / 256;
 
   // Where the read starts
-  rd_blk_start = pak_addr / 256 * 256;
+  rd_blk_start = pak_addr / 256;
   rd_blk_len   = start_last_blk_written - rd_blk_start + 256;
 
   // How many blocks we read or write
