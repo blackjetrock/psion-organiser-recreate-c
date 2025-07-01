@@ -2035,8 +2035,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
  .debug_line    0x00000000       0x67 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
@@ -2066,8 +2066,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
  .debug_line    0x00000000       0x63 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
@@ -2078,8 +2078,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
  .debug_line    0x00000000       0x66 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
@@ -2090,8 +2090,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
  .debug_line    0x00000000       0x63 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
@@ -2102,8 +2102,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
  .debug_line    0x00000000       0x65 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
@@ -2121,8 +2121,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
  .debug_line    0x00000000       0x69 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
@@ -2133,8 +2133,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
  .debug_line    0x00000000       0x63 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
@@ -2145,8 +2145,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
  .debug_line    0x00000000       0x69 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
@@ -2157,8 +2157,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
  .debug_line    0x00000000       0x69 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
@@ -2169,8 +2169,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
  .data          0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
  .bss           0x00000000        0x0 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
- .debug_info    0x00000000       0x26 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
- .debug_abbrev  0x00000000       0x1b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+ .debug_info    0x00000000       0x2b CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+ .debug_abbrev  0x00000000       0x21 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
  .debug_aranges
                 0x00000000       0x18 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
  .debug_line    0x00000000       0x67 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
