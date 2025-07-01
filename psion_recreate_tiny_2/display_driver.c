@@ -80,6 +80,25 @@ void dd_char_at_xy(int x, int y, int ch)
     }
 }
 
+// Copy a character dot pattern into the UDG
+void dd_set_udg_as_char(int ch)
+{
+  switch(current_dd)
+    {
+    case DD_I2C_SSD:
+      //i2c_ssd(ch);
+      break;
+
+    case DD_SPI_SSD1309:
+      SSD1309_set_udg_as(ch, 12, 1);
+      break;
+
+    case DD_SPI_SSD1351:
+      //SSD1351_char(x*6, y*12, ch, 12, 1, 0x00FF00);
+      break;
+    }
+}
+
 void dd_clear_graphics(void)
 {
   switch(current_dd)

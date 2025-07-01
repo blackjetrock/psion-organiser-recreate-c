@@ -13,6 +13,8 @@
 
 #define SPI_INTERFACE 1
 
+uint8_t udg[12];
+
 static const uint8_t Font1206[97][12] = {
 {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},/*" ",0*/
 {0x00,0x00,0x00,0x00,0x3F,0x40,0x00,0x00,0x00,0x00,0x00,0x00},/*"!",1*/
@@ -654,6 +656,17 @@ void SSD1309_char(unsigned char x, unsigned char y, int ascii, char size, char m
 	      break;
 	    }
 	}
+    }
+}
+
+void SSD1309_set_udg_as(int ascii, char size, char mode)
+{
+  unsigned char i, j;
+  unsigned int ch = ascii - ' ';
+  
+  for(i = 0; i<size; i++)
+    {
+      udg[i] = Font1206[ch][i];
     }
 }
 

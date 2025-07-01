@@ -1054,7 +1054,7 @@ void menu_oled_test(void)
   pixels_clear();
   //return;
   
-  for(int y=0; y<dd_get_y_size()-1; y+=10)
+  for(int y=0; y<dd_get_y_size()-1; y+=dd_get_y_size()/7)
     {
       for(int x=0; x<dd_get_x_size()-1; x++)
 	{
@@ -1062,7 +1062,7 @@ void menu_oled_test(void)
 	}
     }
   
-  for(int x=0; x<dd_get_x_size()-1; x+=10)
+  for(int x=0; x<dd_get_x_size()-1; x+=dd_get_x_size()/7)
     {
       for(int y=0; y<dd_get_y_size()-1; y++)
 	{
