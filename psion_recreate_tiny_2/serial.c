@@ -336,13 +336,8 @@ void cli_information(void)
 
   //  printf("\nMatrix scan count: %d", matscan_count);
   //printf("\nCore1 count      : %d", core1_count);
-<<<<<<< HEAD
-  printf("\nFlash base address: %08X", FLASH_BASE+FLASH_PAK_OFFSET);
-  
-=======
   printf("\nDisplay driver:%d", current_dd);
   printf("\nFlash pak start:%08X", flash_pak_base_read);
->>>>>>> mini1
   printf("\nCore1 safe count : %d", core1_safe_x);
   printf("\nCPAD: %08X", pkw_cpad);
   printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
