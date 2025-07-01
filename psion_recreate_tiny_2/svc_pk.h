@@ -39,4 +39,4 @@ typedef struct _PK_DRIVER_SET
 
 extern PAK      pkb_curp;
 extern PAK_ADDR pkw_cpad;
-
+extern PAK_ADDR flash_pak_base_read;

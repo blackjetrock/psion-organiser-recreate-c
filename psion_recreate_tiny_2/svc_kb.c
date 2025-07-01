@@ -22,16 +22,7 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-#include "psion_recreate.h"
-
-#include "menu.h"
-#include "emulator.h"
-#include "eeprom.h"
-#include "rtc.h"
-#include "display.h"
-#include "record.h"
-#include "svc.h"
-#include "switches.h"
+#include "psion_recreate_all.h"
 
 #define MAT_SCAN_STATE_DRIVE  0
 #define MAT_SCAN_STATE_READ   5
@@ -591,7 +582,7 @@ void __not_in_flash_func(matrix_scan)(void)
 	}
       
       //mat_scan_state = MAT_SCAN_STATE_DRIVE;
-	          mat_scan_state = MAT_SCAN_STATE_NEXT;
+      mat_scan_state = MAT_SCAN_STATE_NEXT;
       break;
       
       // Move to next drive line

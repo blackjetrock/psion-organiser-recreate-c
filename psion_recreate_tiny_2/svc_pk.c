@@ -14,11 +14,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
-#include "pico/stdlib.h"
-#include "hardware/gpio.h"
-
-#include "psion_recreate_all.h"
+//#include "svc_pk_base.h"
+#include "psion_recreate.h"
+#include "svc.h"
 
 PAK_ID pkt_id = {0,0,0,0,0,0,0,0,0,0};
 
@@ -102,7 +102,7 @@ void pk_setp(PAK pak)
 
 void pk_save(int len, uint8_t *src)
 {
-  printf("\n%s:%08X %d", __FUNCTION__, pkw_cpad, len);
+  printf("\n%s:CPAD:%08X Len:%d", __FUNCTION__, pkw_cpad, len);
 
   (*pk_drivers[pkb_curp].save)(pkw_cpad, len, src);
 
@@ -152,6 +152,11 @@ int pk_qadd(void)
 void pk_sadd(int addr)
 {
   pkw_cpad = addr;
+
+#if DB_PK_SETP
+  printf("\nPKW_CPADD now:%08X\n", pkw_cpad);
+#endif
+ 
 }
 
 void pk_pkof(void)

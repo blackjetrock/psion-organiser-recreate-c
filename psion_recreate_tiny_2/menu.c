@@ -1054,22 +1054,24 @@ void menu_oled_test(void)
   pixels_clear();
   //return;
   
-  for(int y=0; y<31; y+=10)
+  for(int y=0; y<dd_get_y_size()-1; y+=10)
     {
-      for(int x=0; x<121; x++)
+      for(int x=0; x<dd_get_x_size()-1; x++)
 	{
-	  plot_point(x,   y, 1);
+	  dd_plot_point(x, y, 1);
 	}
     }
   
-  for(int x=0; x<121; x+=10)
+  for(int x=0; x<dd_get_x_size()-1; x+=10)
     {
-      for(int y=0; y<31; y++)
+      for(int y=0; y<dd_get_y_size()-1; y++)
 	{
-	  plot_point(x, y, 1);
+	  dd_plot_point(x, y, 1);
 	}
     }
 
+  dd_update();
+  
   sleep_ms(2000);
   
 #endif
@@ -1088,13 +1090,15 @@ void menu_oled_test(void)
   
   while(1)
     {
+      menu_loop_tasks();
+      dd_update();
 #if 1
       
-      plot_point(x+0, y+0, 0);
-      plot_point(x+1, y-1, 0);
-      plot_point(x+1, y+1, 0);
-      plot_point(x-1, y-1, 0);
-      plot_point(x-1, y+1, 0);
+      dd_plot_point(x+0, y+0, 0);
+      dd_plot_point(x+1, y-1, 0);
+      dd_plot_point(x+1, y+1, 0);
+      dd_plot_point(x-1, y-1, 0);
+      dd_plot_point(x-1, y+1, 0);
 
       bx=bx+dxa;
       by=by+dya;
@@ -1103,24 +1107,24 @@ void menu_oled_test(void)
       x = bx / 100;
       y = by / 100;
       
-      plot_point(x+0, y+0, 1);
-      plot_point(x+1, y-1, 1);
-      plot_point(x+1, y+1, 1);
-      plot_point(x-1, y-1, 1);
-      plot_point(x-1, y+1, 1);
+      dd_plot_point(x+0, y+0, 1);
+      dd_plot_point(x+1, y-1, 1);
+      dd_plot_point(x+1, y+1, 1);
+      dd_plot_point(x-1, y-1, 1);
+      dd_plot_point(x-1, y+1, 1);
 
-      if( bx > 12500 )
+      if( bx > (dd_get_x_size()-1)*100 )
 	{
 	  dxa= -dxa;
 	  dxa = (dxa * 9989)/10000;
-	  bx = 12500;
+	  bx = (dd_get_x_size()-1)*100;
 	}
 
-      if( by > 3200 )
+      if( by > (dd_get_y_size()-1)*100 )
 	{
 	  dya = -dya;
 	  dya = (dya * 9998)/10000;
-	  by = 3200;
+	  by = (dd_get_y_size()-1)*100;
 	}
 
       if( bx < 300 )
@@ -1323,6 +1327,7 @@ void check_menu_launch(void)
 //
 // Hex calculator
 //
+
 void display(int v1, int v2, int hex_ndec)
 {
   char hexbuf[80];
@@ -1413,24 +1418,36 @@ void menu_hex(void)
 	      v2 = 0;
 	      break;
 	      
+	    case KEY_DEL:
+	      v2 = 0;
+	      break;
+	      
 	    case '+':
 	      v2 = v1 + v2;
-	      v1 = 0;
+	      v1 = v2;
 	      break;
 
 	    case '-':
 	      v2 = v1 - v2;
-	      v1 = 0;
+	      v1 = v2;
 	      break;
 
 	    case '*':
 	      v2 = v1 * v2;
-	      v1 = 0;
+	      v1 = v2;
 	      break;
 
 	    case '/':
 	      v2 = v1 / v2;
-	      v1 = 0;
+	      v1 = v2;
+	      break;
+
+	    case '<':
+	      v2 <<= 1;
+	      break;
+
+	    case '>':
+	      v2 >>= 1;
 	      break;
 	    }
 
@@ -1499,6 +1516,14 @@ void menu_buz1(void)
 ////////////////////////////////////////////////////////////////////////////////
 //
 
+#if PSION_MINI
+#define SW (128/2.0)
+#define SH (64.0/2.0)
+#else
+#define SW (128/2.0)
+#define SH (32.0/2.0)
+#endif
+
 void menu_bubble(void)
 {
   int var_idx = 0;
@@ -1510,11 +1535,12 @@ void menu_bubble(void)
   double tau = 3.1415*2;
   double r   = tau/2.350;
   double h = 0.7;
+  int cx, cy;
   
   int    n   = 5;
   int    sz  = 200;
-  double sw  = 128.0/2.0;
-  double sh  = 32.0/2.0;
+  double sw  = SW;
+  double sh  = SH;
   double t   = 20.0;
   double t2   = 1.0;
   
@@ -1563,16 +1589,24 @@ void menu_bubble(void)
 	      v = cos(ang1)+cos(ang2);
 
 	      a = u/2.0*sw+sw;
-	      b = v/2.0*16.0+16.0;
+	      b = v/2.0*sh+sh;
 	      ax = (int)a;
 	      by = (int)b;
-	    
-	      plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
-	    	      
+
+	      cx = ax;
+	      cy = by;
+	      dd_plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
 	    }
 	}
       
+      dd_update();
+	  
       t += tinc;
+
+      if( t > (2.0 * 3.14159265358) )
+	{
+	  t -= (2.0 * 3.14159265358);
+	}
       
       if( kb_test() != KEY_NONE )
 	{
@@ -1664,7 +1698,12 @@ void menu_bubble(void)
 	      c = !c;;
 	    }
 
-	
+	  if( k == 'I' )
+	    {
+	      // Dump information
+	      printf("\ncx,cy=(%d,%d)", cx, cy);
+	    }
+	  
 	  if ( k == KEY_DOWN )
 	    {
 	      v -= 3.2;

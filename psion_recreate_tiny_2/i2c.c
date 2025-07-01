@@ -41,11 +41,16 @@ void i2c_release(void)
 }
 
 // Delay to slow down to I2C bus rates
+// sleep_us does not work well here.
+
 void i2c_delay(void)
 {
   volatile int i;
 
-  for(i=0; i<5; i++)
+  // This is the smallest delay that works with the recreate I2C OLED
+  // panel.
+  
+  for(i=0; i<3; i++)
     {
     }
 }
@@ -109,7 +114,7 @@ int i2c_send_byte(BYTE b)
 {
   int i;
   int ack=0;
-  int retries = 100;
+  int retries = 2;
   int rc =1;
 
   for (i = 0; i < 8; i++)
@@ -160,6 +165,7 @@ int i2c_send_byte(BYTE b)
       if ( retries == 0 )
 	{
 	  rc = 0;
+	  //printf("\nTimeout");
 	  break;
 	}
     }
@@ -245,7 +251,6 @@ int i2c_read_bytes(BYTE slave_addr, int n, BYTE *data)
       return(0);
     }
 
-
   //
   for (i = 0; i < n; i++)
     {
@@ -281,4 +286,7 @@ void i2c_fn_initialise(void)
 {
   gpio_init(PIN_I2C_SDA);
   gpio_init(PIN_I2C_SCL);
+
+  i2c_stop();
 }
+

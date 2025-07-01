@@ -64,7 +64,7 @@ void fl_print_len_string(char *str, int len)
 //
 // Uses a caller-supplied context that allows nested calls to the service
 //
-// Doies not alter pak address
+// Does not alter pak address
 //
 // Returns record data
 //         pak address of start of record
@@ -959,3 +959,46 @@ void tl_cpyx(void)
 {
 
 }
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Dump flash pak data
+//
+
+void fl_dump_flash_pak(void)
+{
+  uint8_t *addr = (uint8_t *)flash_pak_base_read;
+  uint8_t len;
+  char ascii[255];
+  char frag[2] = " ";
+  
+
+  
+  // Skip header
+  addr += 10;
+
+  // Now get length of data and data, then continue until length is 0xFF
+  len = *(addr++);
+
+  while(len != 0xFF)
+    {
+      ascii[0] = '\0';
+      
+      printf("\n%02X R:%02X ", len, *(addr++));
+
+      for(int i=0; i<len; i++)
+	{
+	  frag[0] = *addr;
+	  strcat(ascii, frag);
+	  printf(" %02X", *(addr++));
+	  
+	}
+
+      printf("         %s", ascii);
+      len = *(addr++);
+    }
+
+  printf("\nEnd of records");
+  printf("\n");
+}
+

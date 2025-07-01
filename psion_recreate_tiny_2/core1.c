@@ -1,4 +1,9 @@
 #include <stdio.h>
+
+#include "psion_recreate_all.h"
+
+#include "svc_kb.h"
+
 #include "pico/stdlib.h"
 #include "pico/multicore.h"
 
@@ -78,7 +83,10 @@ void __not_in_flash_func(core1_code)(void)
       
     core1_ticks++;
 
-    matrix_scan();
+    if( (core1_ticks % 1000) == 0 )
+      {
+        matrix_scan();
+      }
   }
 }
 

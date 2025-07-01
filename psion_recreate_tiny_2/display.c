@@ -384,23 +384,6 @@ unsigned char pic3[]=
    0x1F,0x0F,0x00,0x1F,0x1F,0x00,0x80,0x9F,0xDF,0xC0,0xC0,0xDF,0xDF,0xC0,0xFF,0xFF,
   };
 
-#if 0
-void Step(void) interrupt 0 using 0
-{
-  Delay1(300);
-  if(int0==0)
-    // { while(IE0);
-    log=!log;
-  // }
-  while(!int0);
-  return;
-
-}
-#endif
-
-
-
-
 void Delay1(uint n)
 {
   //  n /= 100;
@@ -410,114 +393,7 @@ void Delay1(uint n)
     }
 }
 
-#if 0
-void Write_number(uchar *n,uchar k,uchar station_dot)
-{
-  uchar i; 
-  Start();
-  SentByte(Write_Address);
-  SentByte(0x40);
-  for(i=0;i<8;i++)
-    {
-      SentByte(*(n+16*k+i));
-    }
-  Stop();
-    
 
-  Set_Page_Address(Start_page+1) ;
-  Set_Column_Address(Start_column+station_dot*8); 
-  Start();
-  SentByte(Write_Address);
-  SentByte(0x40);
-  for(i=8;i<16;i++)
-    {
-      SentByte(*(n+16*k+i));
-    }
-  Stop();
-
-}
-#endif
-
-#if 0
-void display_Contrast_level(uchar number)
-{ uchar number1,number2,number3;
-  number1=number/100;number2=number%100/10;number3=number%100%10;
-  Set_Column_Address(Start_column+0*8);
-  Set_Page_Address(Start_page);
-  Write_number(num,number1,0);
-  Set_Column_Address(Start_column+1*8);
-  Set_Page_Address(Start_page);
-  Write_number(num,number2,1);
-  Set_Column_Address(Start_column+2*8);
-  Set_Page_Address(Start_page);
-  Write_number(num,number3,2);
-
-}
-#endif
-
-#if 0
-void adj_Contrast(void)
-{ Delay1(300);
-  if((key_add==0)||(key_dec==0))
-    {  
-      if (key_add==0) 
-	{Contrast_level+=1;
-	  Set_Contrast_Control_Register(Contrast_level); 
-	  display_Contrast_level(Contrast_level);
-	  Delay1(18000);
-	  if(key_add==0)
-	    {Delay1(18000);
-	      if(key_add==0)   
-		{Delay1(18000);
-		  if(key_add==0)
-		    {Delay1(18000);
-		      if(key_add==0)
-
-			{while(key_add==0)
-			    {Contrast_level+=1; 
-			      Set_Contrast_Control_Register(Contrast_level); 
-			      display_Contrast_level(Contrast_level);
-			      Delay1(20000); 
-			    }
-			}
-		    }    
-		}      
-	    }            
-	}
-
-
-
-    
- 
-      if (key_dec==0) 
-	{Contrast_level-=1; 
-	  Set_Contrast_Control_Register(Contrast_level); 
-	  display_Contrast_level(Contrast_level);
-	  Delay1(18000);
-	  if(key_dec==0)
-	    {Delay1(18000);
-	      if(key_dec==0)   
-		{Delay1(18000);
-		  if(key_dec==0)
-		    {Delay1(18000);
-		      if(key_dec==0)
-
-			{while(key_dec==0)
-			    {Contrast_level-=1; 
-			      Set_Contrast_Control_Register(Contrast_level); 
-			      display_Contrast_level(Contrast_level);
-			      Delay1(20000); 
-			    }
-			}
-		    }    
-		}      
-	    }            
-	}
-
-    }
-}
-
-#endif
 
 
 void Delay(uint d)
@@ -583,20 +459,6 @@ void _nop_(void)
 }
 #endif
 
-#if 0
-void Start(void)
-{
-  _nop_();
-  SDA1();
-  _nop_();
-  SCL1();
-  _nop_();
-  SDA0();
-  _nop_();
-  SCL0();
-  _nop_();
-} 
-#endif
 
 void Stop(void)
 {
@@ -713,7 +575,6 @@ void Send_ACK(void)
   _nop_();
 }
 
-
 // Set page address 0~4
 void Set_Page_Address(unsigned char add)
 {
@@ -773,95 +634,102 @@ void RST1(void)
   write_595(PIN_LATCHOUT1, latchout1_shadow, 8);
 }
 
+#if PSION_MINI
+#define CMD_I2C 0x00
+#else
+#define CMD_I2C 0x80
+#endif
 
 #pragma disable
 void initialise_oled(void)
 {
   //while(1)
   {
+#if !PSION_MINI
     RST1();
     Delay(2000);
     RST0();
     Delay(2000);
     RST1();
-  
+#endif
+    
     Delay(2000);
 
 #if NEW_I2C
     i2c_start();
     i2c_send_byte(Write_Address);
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xae);//--turn off oled panel
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xd5);//--set display clock divide ratio/oscillator frequency
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xa0);//--set divide ratio
 
-    i2c_send_byte(0x80);  
+    i2c_send_byte(CMD_I2C);  
     i2c_send_byte(0xa8);//--set multiplex ratio(1 to 64)
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x1f);//--1/32 duty
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xd3);//-set display offset
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x00);//-not offset
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xad);//--Set Master Configuration
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x8e);//--
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xd8);//--Set Area Color Mode On/Off & Low Power Display Mode
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x05);//
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xa1);//--set segment re-map 128 to 0
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xC8);//--Set COM Output Scan Direction 64 to 1
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xda);//--Set COM Pins Hardware Configuration
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x12);
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x91);//--Set current drive pulse width of BANK0, Color A, Band C.
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x3f);
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x3f);
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x3f);
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x3f);
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x81);//--set contrast control register
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(Contrast_level);
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xd9);//--set pre-charge period
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xd2);
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xdb);//--set vcomh
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0x34);
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xa6);//--set normal display
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xa4);//Disable Entire Display On 
 
-    i2c_send_byte(0x80);
+    i2c_send_byte(CMD_I2C);
     i2c_send_byte(0xaf);//--turn on oled panel
 
   
@@ -1061,6 +929,13 @@ void Display_Picture(unsigned char pic[])
   return;
 }
 
+#if PSION_MINI
+void clear_oled(void)
+{
+  dd_clear_graphics();
+}
+#else
+
 void clear_oled(void)
 {
   unsigned char i,j,num = 0;
@@ -1094,165 +969,12 @@ void clear_oled(void)
 #endif
     }
 }
+#endif
 
 void oledmain(void)
 {
   Display_Chess(0x0f);
 }
-
-#if 0
-  //IE=0x81;
-  //IP=0x01;
-  //TCON=0x01;
-  //int0=1;
-  
-  Delay(100);
-
-  while(1)
-    {
-      initialise_oled();
-      Delay(1000);
-
-#if FULL_DEMO 
-      Display_Picture(pic);
-      sleep_ms(DEMO_DELAY);
- 
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Picture(pic1);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Picture(pic2);
-      sleep_ms(DEMO_DELAY);
-      
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Picture(pic3);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Chess(0x0f);
-      sleep_ms(DEMO_DELAY);
-#endif
-      int i = 0;
-      for(int y=0; y<4;  y++)
-	{
-	  for(int x=0; x<20; x++)
-	    {
-	      printxy(x, y, ' '+(i++));
-	      i = (i % 64);
-	    }
-	}
-	    
-#if FULL_DEMO 
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      
-      Stop();
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Chinese(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop(); 
-      Display_Chinese(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      Display_Chinese_Column(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa7);//--set Inverse Display 
-      SentByte(0x00);
-      Stop(); 
-      Display_Chinese_Column(font);
-      sleep_ms(DEMO_DELAY);
-
-      Start();
-      SentByte(Write_Address);
-      SentByte(0x80);
-      SentByte(0xa6);//--set normal display
-      SentByte(0x00);
-      Stop();
-      sleep_ms(DEMO_DELAY);
-#endif
-    }
-}
-#endif
-
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -1268,6 +990,9 @@ uint8_t display_pixels[PIXEL_BUFFER_SIZE_BYTES*2];
 
 void pixels_clear(void)
 {
+#if PSION_MINI
+  dd_clear_graphics();
+#else
   for(int i=0; i<PIXEL_BUFFER_SIZE_BYTES*2; i++)
     {
       display_pixels[i] = BLANK_VAL;
@@ -1287,15 +1012,21 @@ void pixels_clear(void)
       
       //      i2c_send_byte(0);
       i2c_stop();
-
     }
+#endif
 }
+
+#if MINI_PSION
+void plot_point(int x, int y, int mode)
+{
+  dd_plot_point(x, y, mode);
+}
+
+#else
 
 void plot_point(int x, int y, int mode)
 {
   int cx, cy;
-
-
   
   if( (x < 0) || (x>127)  )
     {
@@ -1355,3 +1086,4 @@ void plot_point(int x, int y, int mode)
   i2c_stop();
 
 }
+#endif

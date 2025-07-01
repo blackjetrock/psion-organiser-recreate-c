@@ -20,3 +20,5 @@ void print_str(char *s);
 void print_home(void);
 void print_nl(void);
 void print_nl_if_necessary(char *str);
+void i2c_ssd(int cx, int cy, int ch);
+void i2c_ssd_plot_point(int x, int y, int mode);

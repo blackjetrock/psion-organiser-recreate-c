@@ -56,7 +56,7 @@ void serial_loop(void);
 #define PIN_SOE        11
 #define PIN_SMR        12
 #define PIN_P57        13
-
+xxx
 const uint PIN_SDAOUT     = 14;
 const uint PIN_LATCHOUT2  = 15;
 const uint PIN_I2C_SDA    = 16;
@@ -546,9 +546,9 @@ void core1_main(void)
       static uint32_t start_ms = 0;
       
       //if ( board_millis() - start_ms >= interval_ms)
-      if((core1_count % 1000)== 0)
+      if((core1_count % 2000)== 0)
 	{
-	  printf("\nScan");
+	  printf("\nScan"); 
 	  
 #if !CORE0_SCAN
 	  matrix_scan();
@@ -732,12 +732,13 @@ int main()
 
     while(1)
       {
-	//core1_main();
+	core1_main();
 
 	t++;
 	menu_loop_tasks();
 	
 	tud_task();
+
 #if CORE0_SCAN
 	matrix_scan();
 #endif
