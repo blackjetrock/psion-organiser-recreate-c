@@ -1,0 +1,3 @@
+[submodule "newopl"]
+	path = newopl
+	url = https://github.com/blackjetrock/newopl.git
