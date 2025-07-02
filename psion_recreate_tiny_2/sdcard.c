@@ -140,6 +140,7 @@ void run_mount() {
   
   pSD->mounted = true;
 }
+
 void run_unmount() {
     const char *arg1 = strtok(NULL, " ");
     if (!arg1) arg1 = sd_get_by_num(0)->pcName;
@@ -159,53 +160,83 @@ void run_unmount() {
     pSD->m_Status |= STA_NOINIT; // in case medium is removed
 }
 
-void ls(const char *dir) {
-    char cwdbuf[FF_LFN_BUF] = {0};
-    FRESULT fr; /* Return value */
-    char const *p_dir;
-    if (dir[0]) {
-        p_dir = dir;
-    } else {
-        fr = f_getcwd(cwdbuf, sizeof cwdbuf);
-        if (FR_OK != fr) {
-            printf("f_getcwd error: %s (%d)\n", FRESULT_str(fr), fr);
-            return;
-        }
-        p_dir = cwdbuf;
+void ls(const char *dir)
+{
+  char cwdbuf[FF_LFN_BUF] = {0};
+  
+  FRESULT fr; /* Return value */
+  char const *p_dir;
+  
+  if (strlen(dir) > 0)
+    {
+      p_dir = dir;
     }
-    printf("Directory Listing: %s\n", p_dir);
-    DIR dj;      /* Directory object */
-    FILINFO fno; /* File information */
-    memset(&dj, 0, sizeof dj);
-    memset(&fno, 0, sizeof fno);
-    fr = f_findfirst(&dj, &fno, p_dir, "*");
-    if (FR_OK != fr) {
-        printf("f_findfirst error: %s (%d)\n", FRESULT_str(fr), fr);
-        return;
-    }
-    while (fr == FR_OK && fno.fname[0]) { /* Repeat while an item is found */
-        /* Create a string that includes the file name, the file size and the
-         attributes string. */
-        const char *pcWritableFile = "writable file",
-                   *pcReadOnlyFile = "read only file",
-                   *pcDirectory = "directory";
-        const char *pcAttrib;
-        /* Point pcAttrib to a string that describes the file. */
-        if (fno.fattrib & AM_DIR) {
-            pcAttrib = pcDirectory;
-        } else if (fno.fattrib & AM_RDO) {
-            pcAttrib = pcReadOnlyFile;
-        } else {
-            pcAttrib = pcWritableFile;
-        }
-        /* Create a string that includes the file name, the file size and the
-         attributes string. */
-        printf("%s [%s] [size=%llu]\n", fno.fname, pcAttrib, fno.fsize);
+  else
+    {
+      fr = f_getcwd(cwdbuf, sizeof cwdbuf);
 
-        fr = f_findnext(&dj, &fno); /* Search for next item */
+      if (FR_OK != fr)
+        {
+          printf("f_getcwd error: %s (%d)\n", FRESULT_str(fr), fr);
+          return;
+        }
+      p_dir = cwdbuf;
     }
-    f_closedir(&dj);
+  
+  printf("Directory Listing: %s\n", p_dir);
+  
+  DIR dj;      /* Directory object */
+  FILINFO fno; /* File information */
+
+  memset(&dj, 0, sizeof dj);
+  memset(&fno, 0, sizeof fno);
+
+  fr = f_findfirst(&dj, &fno, p_dir, "*");
+
+  if (FR_OK != fr) {
+    printf("f_findfirst error: %s (%d)\n", FRESULT_str(fr), fr);
+    return;
+    }
+  
+  while (fr == FR_OK && fno.fname[0])
+    { /* Repeat while an item is found */
+      /* Create a string that includes the file name, the file size and the
+         attributes string. */
+      const char *pcWritableFile = "writable file",
+        *pcReadOnlyFile = "read only file",
+        *pcDirectory = "directory";
+      const char *pcAttrib;
+
+      /* Point pcAttrib to a string that describes the file. */
+      if (fno.fattrib & AM_DIR)
+        {
+          pcAttrib = pcDirectory;
+        }
+      else if (fno.fattrib & AM_RDO)
+        {
+          pcAttrib = pcReadOnlyFile;
+        }
+      else
+        {
+          pcAttrib = pcWritableFile;
+        }
+      
+      /* Create a string that includes the file name, the file size and the
+         attributes string. */
+      printf("%s [%s] [size=%llu]\n", fno.fname, pcAttrib, fno.fsize);
+      
+      fr = f_findnext(&dj, &fno); /* Search for next item */
+    }
+  f_closedir(&dj);
 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Initialise SD Card
+//
+////////////////////////////////////////////////////////////////////////////////
+
 
 void sdcard_init(void)
 {

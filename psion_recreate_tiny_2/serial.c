@@ -27,6 +27,17 @@ void cli_interactive(void);
 
 int interactive_done = 0;
 
+void tight_loop_tasks(void)
+{
+  tud_task();
+  
+#if CORE0_SCAN
+  matrix_scan();
+#endif
+  
+  cursor_task();
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
   
@@ -680,15 +691,15 @@ char *serial_get_string(void)
   int done = 0;
   char key_str[2] = " ";
   int key;
-  
+
   serial_get_string_buffer[0] = '\0';
-  
+
   while(!done)
     {
-
+      tight_loop_tasks();
+      
       if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
 	{
-	  
 	  switch(key)
 	    {
 	    case 13:
@@ -833,6 +844,25 @@ void ic_recno(char *str, char *fmt)
   fl_rset(recno);
 }
 
+void ic_ls(char *str, char *fmt)
+{
+  char arg[100];;
+
+  sscanf(str,  fmt, &arg);
+
+  ls(arg);
+}
+
+void ic_mount(char *str, char *fmt)
+{
+  run_mount();
+}
+
+void ic_unmount(char *str, char *fmt)
+{
+  run_unmount();
+}
+
 void ic_next(char *str, char *fmt)
 {
   fl_next();
@@ -930,6 +960,9 @@ struct _IC_CMD
    {"exit",       "",                ic_exit},
    {"!",          "",                ic_boot_mass},
    {"r",          "r %d",            ic_recno},
+   {"ls",         "ls %s",           ic_ls},
+   {"mount",      "mount",           ic_mount},
+   {"unmount",    "unmount",         ic_unmount},
   };
 
 #define NUM_IC_CMD (sizeof(ic_cmds)/sizeof(struct _IC_CMD))
@@ -952,9 +985,12 @@ void cli_interactive(void)
   int rect;
   
   interactive_done = 0;
+  printf("\nInteractive mode.\n");
   
   while(!interactive_done)
     {
+      tight_loop_tasks();
+      
       printf("\n%c: RECT:%d RECNO:%d ADD:%08X>", 'A'+pkb_curp, flb_rect, flw_crec, pkw_cpad);
       
       cmd = serial_get_string();
