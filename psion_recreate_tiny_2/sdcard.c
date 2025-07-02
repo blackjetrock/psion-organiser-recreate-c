@@ -18,7 +18,7 @@
 // Note: multiple SD cards can be driven by one SPI if they use different slave
 // selects.
 
-static spi_t spis[] = {  // One for each SPI.
+ spi_t spis[] = {  // One for each SPI.
     {
         .hw_inst = spi0,  // SPI component
         .sck_gpio = 18,  // GPIO number (not Pico pin number)
@@ -36,7 +36,7 @@ static spi_t spis[] = {  // One for each SPI.
 };
 
 // Hardware Configuration of the SD Card "objects"
-static sd_card_t sd_cards[] = {  // One for each SD card
+ sd_card_t sd_cards[] = {  // One for each SD card
     {
         .pcName = "0:",  // Name used to mount device
         .spi = &spis[0],  // Pointer to the SPI driving this card
@@ -87,8 +87,8 @@ FATFS *sd_get_fs_by_name(const char *name) {
 }
 
 // If the card is physically removed, unmount the filesystem:
-static void card_detect_callback(uint gpio, uint32_t events) {
-    static bool busy;
+ void card_detect_callback(uint gpio, uint32_t events) {
+     static bool busy;
     if (busy) return; // Avoid switch bounce
     busy = true;
     for (size_t i = 0; i < sd_get_num(); ++i) {
@@ -228,6 +228,55 @@ void ls(const char *dir)
       fr = f_findnext(&dj, &fno); /* Search for next item */
     }
   f_closedir(&dj);
+}
+
+ void run_getfree() {
+   const char *arg1;
+
+    //if (!arg1)
+      arg1 = sd_get_by_num(0)->pcName;
+
+    DWORD fre_clust, fre_sect, tot_sect;
+    /* Get volume information and free clusters of drive */
+    FATFS *p_fs = sd_get_fs_by_name(arg1);
+    if (!p_fs) {
+        printf("Unknown logical drive number: \"%s\"\n", arg1);
+        return;
+    }
+    FRESULT fr = f_getfree(arg1, &fre_clust, &p_fs);
+    if (FR_OK != fr) {
+        printf("f_getfree error: %s (%d)\n", FRESULT_str(fr), fr);
+        return;
+    }
+    /* Get total sectors and free sectors */
+    tot_sect = (p_fs->n_fatent - 2) * p_fs->csize;
+    fre_sect = fre_clust * p_fs->csize;
+    /* Print the free space (assuming 512 bytes/sector) */
+    printf("%10lu KiB total drive space.\n%10lu KiB available.\n", tot_sect / 2,
+           fre_sect / 2);
+}
+ void run_cd(char *arg1) {
+#if 0
+    char *arg1 = strtok(NULL, " ");
+    if (!arg1) {
+        printf("Missing argument\n");
+        return;
+    }
+#endif
+    FRESULT fr = f_chdir(arg1);
+    if (FR_OK != fr) printf("f_mkfs error: %s (%d)\n", FRESULT_str(fr), fr);
+}
+
+ void run_mkdir(char *arg1) {
+#if 0
+   char *arg1 = strtok(NULL, " ");
+    if (!arg1) {
+        printf("Missing argument\n");
+        return;
+    }
+#endif
+    FRESULT fr = f_mkdir(arg1);
+    if (FR_OK != fr) printf("f_mkfs error: %s (%d)\n", FRESULT_str(fr), fr);
 }
 
 

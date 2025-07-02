@@ -384,6 +384,8 @@ void cli_ls(void)
   run_unmount();
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
 void cli_dump_fl_pack(void)
 {
   uint8_t *bp;
@@ -858,6 +860,27 @@ void ic_mount(char *str, char *fmt)
   run_mount();
 }
 
+void ic_getfree(char *str, char *fmt)
+{
+  run_getfree();
+}
+
+void ic_mkdir(char *str, char *fmt)
+{
+  char arg[1200];
+  
+  sscanf(str, fmt, arg);
+  run_mkdir(arg);
+}
+
+void ic_cd(char *str, char *fmt)
+{
+  char arg[1200];
+  
+  sscanf(str, fmt, arg);
+  run_cd(arg);
+}
+
 void ic_unmount(char *str, char *fmt)
 {
   run_unmount();
@@ -963,6 +986,9 @@ struct _IC_CMD
    {"ls",         "ls %s",           ic_ls},
    {"mount",      "mount",           ic_mount},
    {"unmount",    "unmount",         ic_unmount},
+   {"getfree",    "getfree",         ic_getfree},
+   {"cd",         "cd",              ic_cd},
+   {"mkdir",      "mkdir",           ic_mkdir},
   };
 
 #define NUM_IC_CMD (sizeof(ic_cmds)/sizeof(struct _IC_CMD))
