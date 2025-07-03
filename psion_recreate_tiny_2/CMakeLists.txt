@@ -24,6 +24,7 @@ add_executable(${PROJECT}
     svc_er.c
     svc_db.c
     svc_pak_pico_flash.c
+    svc_pak_linux.c
     svc_pak_serial_eeprom.c
     display.c
     cursor.c
@@ -41,6 +42,23 @@ add_executable(${PROJECT}
     oled_er_oledm015_2.c
     display_driver.c
     sdcard.c
+    newopl_lib.c
+    newopl_types.c 
+    qcode.c 
+    time_nopl.c 
+    calc.c 
+    #clock_pc.c 
+    num_a.c 
+    machine.c 
+    logical_files.c 
+    errors.c 
+    #svc_pak_linux.c 
+    #svc_pk.c 
+    #svc_fl.c 
+    #svc_kb.c 
+    svc_mn.c 
+    sysvar.c 
+
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}

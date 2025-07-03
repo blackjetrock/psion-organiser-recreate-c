@@ -6,7 +6,7 @@
 #include "psion_recreate_all.h"
 
 #include "ssd1309.h"
-
+//#include "nopl.h"
 
 extern void core1_init(void);
 extern bool core1_tick(void);
@@ -258,7 +258,7 @@ PANEL_T panel_opl =
   {
     panel_opl_init,
     {
-      {1, 1, 15, "SP",      PANEL_ITEM_TYPE_INT, (int *)&opl_machine.sp},
+      //      {1, 1, 15, "SP",      PANEL_ITEM_TYPE_INT, (int *)&opl_machine.sp},
       {1, 1, 15, "",        PANEL_ITEM_TYPE_INT, NULL},
     }
   };

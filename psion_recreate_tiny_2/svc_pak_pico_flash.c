@@ -27,6 +27,80 @@
 PAK_ADDR flash_pak_base_read  = FLASH_BASE + FLASH_PAK_OFFSET;
 PAK_ADDR flash_pak_base_write =              FLASH_PAK_OFFSET;
 
+//------------------------------------------------------------------------------
+//
+// Open for reading
+//
+// Currently no files on pico flash
+
+void pk_open_pico_flash(int logfile, char *filename)
+{
+#if 0
+  LINFI.fp = fopen(filename, "rb+");
+
+  if( LINFI.fp == NULL )
+    {
+      trappable_runtime_error(ER_FL_NX, "File does not exist:'%s'", filename);
+    }
+
+#if DEBUG
+  printf("\n%s:fp=%X name:'%s' logfile=%d", __FUNCTION__, LINFI.fp, filename, logfile);
+#endif
+  #endif
+  
+}
+
+//------------------------------------------------------------------------------
+//
+// Open for creating
+//
+
+void pk_create_pico_flash(int logfile, char *filename)
+{
+#if 0
+  LINFI.fp = fopen(filename, "wb+");
+
+  if( LINFI.fp == NULL )
+    {
+      trappable_runtime_error(ER_FL_NX, "File cannot be created:'%s'", filename);
+    }
+
+#if DEBUG
+  printf("\n%s:fp=%X name:'%s' logfile=%d", __FUNCTION__, LINFI.fp, filename, logfile);
+#endif
+#endif
+}
+
+void pk_close_pico_flash(int logfile, char *filename)
+{
+#if 0
+#if DEBUG
+  printf("\n%s:", __FUNCTION__);
+#endif
+  if( LINFI.fp != NULL )
+    {
+      fclose(LINFI.fp);
+    }
+#endif
+}
+
+// Only implicit MAIN in Pico flash so return true.
+
+int pk_exist_pico_flash(char *filename)
+{
+#if 0
+  FILE *fp;
+
+  fp = fopen(filename, "r");
+
+  if( fp == NULL )
+    {
+      return(0);
+    }
+#endif
+  return(1);
+}
+
 
 //------------------------------------------------------------------------------
 // Read a byte from the flash pak
@@ -168,8 +242,9 @@ void pk_save_pico_flash(PAK_ADDR pak_addr, int len, uint8_t *src)
 //
 // Write a pak header and also sets the rest of the poack to FF
 //
-
-void pk_format_pico_flash(void)
+// For now logfile is ignored. The A: file is just implicitly MAIN
+//
+void pk_format_pico_flash(int logfile)
 {
   PAK_ID pak_id;
   

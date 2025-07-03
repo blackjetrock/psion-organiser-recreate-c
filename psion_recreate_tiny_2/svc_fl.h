@@ -29,14 +29,14 @@ void fl_bsav(void);
 int fl_catl(FL_OP, int device, char *filename, uint8_t *rectype);
   
 void fl_copy(void);
-FL_REC_TYPE fl_cret(char *filename, FL_REC_TYPE type);
+FL_REC_TYPE fl_cret(int logfile, FL_REC_TYPE type);
 void fl_deln(void);
 void fl_eras(void);
 void fl_ffnd(void);
 int fl_find(char *srch, char *dest, int *len);
 int fl_frec(int n, PAK_ADDR *pak_addr, FL_REC_TYPE *rectype, int *reclen);
 void fl_next(void);
-void fl_open(void);
+void fl_open(int logfile);
 int fl_rpos(void);
 void fl_pars(void);
 int fl_read(uint8_t *dest);
@@ -49,6 +49,4 @@ void fl_size(int *bytes_free, int *num_recs, PAK_ADDR *first_free);
 void fl_writ(uint8_t *src, int len);
 
 void tl_cpyx(void);
-void fl_dump_flash_pak(void);
-
-
+int fl_exist(char *filename);

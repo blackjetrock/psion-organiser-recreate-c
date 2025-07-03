@@ -1,3 +1,3 @@
-#include "newopl_all.h"
+//#include "newopl_all.h"
 
 extern NOBJ_MACHINE opl_machine;

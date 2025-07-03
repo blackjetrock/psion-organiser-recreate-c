@@ -9,6 +9,8 @@
 // A:Pico flash
 // B:Recreation serial EEPROM
 //
+// Linux version has A,B,C and D as linux file system calls
+// Each file is in a different file.
 
 #include <ctype.h>
 #include <stdio.h>
@@ -17,15 +19,29 @@
 #include <stdint.h>
 
 //#include "svc_pk_base.h"
-#include "psion_recreate.h"
-#include "svc.h"
+//#include "psion_recreate.h"
+//#include "svc.h"
+
+#include "psion_recreate_all.h"
+
+//#include "nopl.h"
+
+#define DEBUG 0
+#define DB_PK_SETP 0
 
 PAK_ID pkt_id = {0,0,0,0,0,0,0,0,0,0};
 
 PK_DRIVER_SET pk_drivers[] =
   {
-   {pk_rbyt_pico_flash,     pk_save_pico_flash,      pk_format_pico_flash},
-   {pk_rbyt_serial_eeprom,  pk_save_serial_eeprom,   pk_format_serial_eeprom},
+#if 1
+   {pk_open_pico_flash, pk_create_pico_flash,    pk_close_pico_flash, pk_exist_pico_flash, pk_rbyt_pico_flash,     pk_save_pico_flash,      pk_format_pico_flash},
+   //   {pk_rbyt_serial_eeprom,  pk_save_serial_eeprom,   pk_format_serial_eeprom},
+#else
+   {pk_open_linux, pk_create_linux,    pk_close_linux, pk_exist_linux, pk_rbyt_linux,          pk_save_linux,           pk_format_linux},
+   {pk_open_linux, pk_create_linux,    pk_close_linux, pk_exist_linux, pk_rbyt_linux,          pk_save_linux,           pk_format_linux},
+   {pk_open_linux, pk_create_linux,    pk_close_linux, pk_exist_linux, pk_rbyt_linux,          pk_save_linux,           pk_format_linux},
+   {pk_open_linux, pk_create_linux,    pk_close_linux, pk_exist_linux, pk_rbyt_linux,          pk_save_linux,           pk_format_linux},
+#endif
   };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -65,6 +81,8 @@ void pk_build_id_string(uint8_t *id,
   id[9] = (csum & 0xFF00) >> 8;
 }
 
+//------------------------------------------------------------------------------
+
 int pk_valid_pak(PAK pak)
 {
   if( (pak>=0) && (pak <=1) )
@@ -102,8 +120,10 @@ void pk_setp(PAK pak)
 
 void pk_save(int len, uint8_t *src)
 {
-  printf("\n%s:CPAD:%08X Len:%d", __FUNCTION__, pkw_cpad, len);
-
+#if DEBUG
+  printf("\n%s:%08X %d", __FUNCTION__, pkw_cpad, len);
+#endif
+  
   (*pk_drivers[pkb_curp].save)(pkw_cpad, len, src);
 
   // Update the current address
@@ -144,10 +164,14 @@ void pk_skip(int len)
   pkw_cpad += len;
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
 int pk_qadd(void)
 {
   return(pkw_cpad); 
 }
+
+////////////////////////////////////////////////////////////////////////////////
 
 void pk_sadd(int addr)
 {
@@ -159,6 +183,8 @@ void pk_sadd(int addr)
  
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
 void pk_pkof(void)
 {
   // Do nothing for now
@@ -169,3 +195,47 @@ void      pk_fmat(void)
   // Branch to the pak drivers
   return( (*pk_drivers[pkb_curp].format)());
 }
+
+//------------------------------------------------------------------------------
+
+void pk_create(int logfile)
+{
+  char *filename = logical_file_info[logfile].name;
+
+  dbq("Creating '%s'", filename);
+  
+  // Branch to the pak drivers
+  return( (*pk_drivers[pkb_curp].create)(logfile, filename+2));
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void pk_close(int logfile)
+{
+  char *filename = logical_file_info[logfile].name;
+
+  dbq("Closing '%s'", filename);
+  
+  // Branch to the pak drivers
+  return( (*pk_drivers[pkb_curp].close)(logfile, filename+2));
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+int pk_exist(char *filename)
+{
+  //  char *filename = logical_file_info[logfile].name;
+  
+  // Branch to the pak drivers
+  return( (*pk_drivers[pkb_curp].exist)(filename+2));
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void pk_fmat(int logfile)
+{
+  // Branch to the pak drivers
+  return( (*pk_drivers[pkb_curp].format)(logfile));
+}
+
+////////////////////////////////////////////////////////////////////////////////
