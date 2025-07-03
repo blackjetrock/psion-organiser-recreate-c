@@ -507,7 +507,7 @@ void menu_fmat(void)
   
   dp_prnt("Formatting...");
   
-  pk_fmat();
+  pk_fmat(0);
   menu_back();
 }
 
@@ -1053,18 +1053,26 @@ void menu_oled_test(void)
 #if 1
   pixels_clear();
   //return;
+  int maxx = dd_get_x_size();
+  int maxy = dd_get_y_size();
+  int gy = 8;
+  int gx = 6;
+
   
-  for(int y=0; y<dd_get_y_size()-1; y+=dd_get_y_size()/7)
+  int mx = (maxx / gx) * gx;
+  int my = (maxy / gy) * gy;
+  
+  for(int y=0; y<=my; y+=gy)
     {
-      for(int x=0; x<dd_get_x_size()-1; x++)
+      for(int x=0; x<mx; x++)
 	{
 	  dd_plot_point(x, y, 1);
 	}
     }
   
-  for(int x=0; x<dd_get_x_size()-1; x+=dd_get_x_size()/7)
+  for(int x=0; x<=mx; x+=gx)
     {
-      for(int y=0; y<dd_get_y_size()-1; y++)
+      for(int y=0; y<my; y++)
 	{
 	  dd_plot_point(x, y, 1);
 	}
@@ -1116,28 +1124,28 @@ void menu_oled_test(void)
       if( bx > (dd_get_x_size()-1)*100 )
 	{
 	  dxa= -dxa;
-	  dxa = (dxa * 9989)/10000;
+	  dxa = (dxa * 9989)/10000+2;
 	  bx = (dd_get_x_size()-1)*100;
 	}
 
       if( by > (dd_get_y_size()-1)*100 )
 	{
 	  dya = -dya;
-	  dya = (dya * 9998)/10000;
+	  dya = (dya * 9998)/10000+2;
 	  by = (dd_get_y_size()-1)*100;
 	}
 
       if( bx < 300 )
 	{
 	  dxa= -dxa;
-	  dxa = (dxa * 9990)/10000;
+	  dxa = (dxa * 9990)/10000+2;
 	  bx = 300;
 	}
 
       if( by <300 )
 	{
 	  dya = -dya;
-	  dya = (dya * 9998)/10000;
+	  dya = (dya * 9998)/10000+2;
 	  by = 300;
 	}
       

@@ -29,6 +29,8 @@
 #define DEBUG 0
 #define DB_PK_SETP 0
 
+////////////////////////////////////////////////////////////////////////////////
+
 PAK_ID pkt_id = {0,0,0,0,0,0,0,0,0,0};
 
 PK_DRIVER_SET pk_drivers[] =
@@ -101,7 +103,7 @@ void pk_setp(PAK pak)
 {
   if ( !pk_valid_pak(pak) )
     {
-      er_error("Bad pak");
+      runtime_error(ER_PK_IV, "Bad pak");
       return;
     }
   
@@ -190,10 +192,16 @@ void pk_pkof(void)
   // Do nothing for now
 }
 
-void      pk_fmat(void)
+////////////////////////////////////////////////////////////////////////////////
+
+void pk_open(int logfile)
 {
+  char *filename = logical_file_info[logfile].name;
+
+  dbq("Opening '%s'", filename);
+  
   // Branch to the pak drivers
-  return( (*pk_drivers[pkb_curp].format)());
+  return( (*pk_drivers[pkb_curp].open)(logfile, filename+2));
 }
 
 //------------------------------------------------------------------------------

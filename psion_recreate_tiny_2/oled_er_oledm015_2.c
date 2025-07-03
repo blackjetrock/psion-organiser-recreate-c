@@ -211,6 +211,8 @@ int main_er_oledm015_2(void)
     
 
     return(0);
+
+#if 0    
     sleep_ms(3000);
     
     //bcm2835_delay(3000);
@@ -267,6 +269,8 @@ int main_er_oledm015_2(void)
 	    SSD1309_display();
 	  }
     }
+#endif
+    
 #if 0
     bcm2835_i2c_end();
     bcm2835_close();

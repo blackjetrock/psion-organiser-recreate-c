@@ -103,7 +103,7 @@ void cli_dump_language_stack(void)
 
 void cli_dump_flash_pak(void)
 {
-  fl_dump_flash_pak();
+  //fl_dump_flash_pak();
 }
 
 //------------------------------------------------------------------------------
@@ -212,7 +212,7 @@ void cli_digit(void)
 void cli_format(void)
 {
   printf("\nFormatting A:");
-  pk_fmat();
+  pk_fmat(0);
   printf("\nDone...");
   
 }
@@ -257,7 +257,7 @@ void cli_create(void)
   printf("\nEnter filename:");
   filename = serial_get_string();
   
-  fl_cret(filename, 0);
+  //fl_cret(0, filename, 0);
   
   printf("\nDone...");
   
@@ -749,13 +749,13 @@ void ic_createfile(char *str, char *fmt)
   char filename[20];
   sscanf(str, fmt, filename);
 
-  fl_cret(filename, 0);
+  //fl_cret(0, filename, 0);
 
 }
 
 void ic_createmain(char *str, char *fmt)
 {
-  fl_cret("MAIN", 0x90);
+  fl_cret(0,  0x90);
 }
 
 void ic_boot_mass(char *str, char *fmt)
@@ -766,7 +766,7 @@ void ic_boot_mass(char *str, char *fmt)
 void ic_format(char *str, char *fmt)
 {
   printf("\nFormatting %d", pkb_curp);
-  pk_fmat();
+  pk_fmat(0);
 }
 
 void ic_erase(char *str, char *fmt)

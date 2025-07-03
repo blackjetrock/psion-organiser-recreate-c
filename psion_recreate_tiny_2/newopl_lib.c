@@ -10,7 +10,7 @@
 
 #include "newopl.h"
 #include "nopl.h"
-#include "nopl_obj.h"
+//#include "nopl_obj.h"
 
 #define DEBUG_PUSH_POP    1
 
@@ -436,7 +436,7 @@ void init_machine(NOBJ_MACHINE *m)
   // Addresses of variables are referenced from the start of the proc area
   // on the stack anyway, so addresses have to be manipulated.
 
-  m->sp = NOBJ_MACHINE_STACK_SIZE;
+  m->rta_sp = NOBJ_MACHINE_STACK_SIZE;
   printf("\nInit machine done.");
 }
 
@@ -454,15 +454,16 @@ void error(char *fmt, ...)
 
 ////////////////////////////////////////////////////////////////////////////////
 
+#if 0
 void push_machine_8(NOBJ_MACHINE *m, uint8_t v)
 {
 #if DEBUG_PUSH_POP
-  printf("\n%s:pushing %02X SP:%04X", __FUNCTION__, v, m->sp);
+  printf("\n%s:pushing %02X SP:%04X", __FUNCTION__, v, m->rta_sp);
 #endif
   
-  if( m->sp > 0 )
+  if( m->rta_sp > 0 )
     {
-      m->stack[(m->sp)--] = v;
+      m->stack[(m->rta_sp)--] = v;
     }
   else
     {
@@ -482,7 +483,7 @@ uint16_t pop_sp_8(NOBJ_MACHINE *m, uint16_t sp, uint8_t *val)
   *val = m->stack[++sp];
 
 #if DEBUG_PUSH_POP
-  printf("\n%s:Popped %02X from SP:%04X", __FUNCTION__, *val, (m->sp)-1);
+  printf("\n%s:Popped %02X from SP:%04X", __FUNCTION__, *val, (m->rta_sp)-1);
 #endif
 
   return(sp);  
@@ -500,7 +501,7 @@ uint16_t pop_discard_sp_int(NOBJ_MACHINE *m, uint16_t sp)
       ++sp;
       
 #if DEBUG_PUSH_POP
-      printf("\n%s:Popped from SP:%04X", __FUNCTION__, (m->sp)-1);
+      printf("\n%s:Popped from SP:%04X", __FUNCTION__, (m->rta_sp)-1);
 #endif
     }
   
@@ -519,7 +520,7 @@ uint16_t pop_discard_sp_float(NOBJ_MACHINE *m, uint16_t sp)
     {
       ++sp;
 #if DEBUG_PUSH_POP
-      printf("\n%s:Popped and discarded from SP:%04X", __FUNCTION__, (m->sp)-1);
+      printf("\n%s:Popped and discarded from SP:%04X", __FUNCTION__, (m->rta_sp)-1);
 #endif
       
     }
@@ -542,13 +543,14 @@ uint16_t pop_discard_sp_str(NOBJ_MACHINE *m, uint16_t sp)
     {
       ++sp;
 #if DEBUG_PUSH_POP
-      printf("\n%s:Popped and discarded from SP:%04X", __FUNCTION__, (m->sp)-1);
+      printf("\n%s:Popped and discarded from SP:%04X", __FUNCTION__, (m->rta_sp)-1);
 #endif
       
     }
 
   return(sp);  
 }
+#endif
 
 //------------------------------------------------------------------------------
 //
@@ -570,7 +572,7 @@ void push_proc_on_stack(NOBJ_PROC *p, NOBJ_MACHINE *m)
 
   // Check there is sufficient memory
   // Is there more than 255 bytes free?
-  if( !(m->sp > 255) )
+  if( !(m->rta_sp > 255) )
     {
       error("\nOut of memory");
     }
@@ -580,7 +582,7 @@ void push_proc_on_stack(NOBJ_PROC *p, NOBJ_MACHINE *m)
   // Check the parameter count on the stack agrees with what the procedure requires
   
   // Save the stack pointer
-  uint16_t osp = pop_sp_8(m, m->sp, &parm_cnt);
+  uint16_t osp = pop_sp_8(m, m->rta_sp, &parm_cnt);
 
   uint8_t vartype;
   

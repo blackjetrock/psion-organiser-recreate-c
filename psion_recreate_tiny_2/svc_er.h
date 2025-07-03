@@ -1,6 +1,6 @@
 typedef enum _ER_ERRORCODE
   {
-   ER_FL_NP = -246,
+       ER_FL_NPXX = -246,
   } ER_ERRORCODE;
 
 void er_error(char *errstr);

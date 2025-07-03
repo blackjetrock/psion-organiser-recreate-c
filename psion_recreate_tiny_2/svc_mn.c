@@ -402,8 +402,10 @@ int mn_menu2(char *str)
   int selnum = 0;
   int key;
 
+#if TUI
   keypad(stdscr, TRUE);
-
+#endif
+  
   while(!done)
     {
 #if TUI
@@ -419,9 +421,11 @@ int mn_menu2(char *str)
       
       switch(key)
 	{
+#if TUI          
 	case ERR:
 	  break;
-
+#endif
+          
 	case 13:
 	  printf("\nEnter");
 	  break;
@@ -455,8 +459,10 @@ int mn_menu2(char *str)
 	  break;
 	}
     }
-  
+
+#if TUI
   nodelay(stdscr, 0);
+#endif
   
   return(selnum);
 }

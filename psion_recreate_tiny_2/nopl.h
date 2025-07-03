@@ -1,3 +1,6 @@
+#undef TUI
+
+
 #define MAX_NOPL_LINE         256
 #define PRT_MAX_LINE          400
 #define NOPL_MAX_LABEL         12
@@ -41,7 +44,7 @@
 #include "svc_mn.h"
 
 #include "sysvar.h"
-#include "time.h"
+#include "nopl_time.h"
 
 #ifdef TUI
 #include "tui.h"

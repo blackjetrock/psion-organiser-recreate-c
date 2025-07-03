@@ -1326,7 +1326,7 @@ void num_mul(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   while( d_digits[0] == 0 )
     {
       // Shift mantissa digits to the 'left'
-      for(int i=0; i<NUM_MAX_DIGITS*2;  i++)
+      for(int i=0; i<NUM_MAX_DIGITS*2-1;  i++)
 	{
 	  d_digits[i] = d_digits[i+1];
 	}
