@@ -83,7 +83,7 @@ void __not_in_flash_func(core1_code)(void)
       
     core1_ticks++;
 
-    if( (core1_ticks % 1000) == 0 )
+    if( (core1_ticks % 2000) == 0 )
       {
         matrix_scan();
       }

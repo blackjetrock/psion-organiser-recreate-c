@@ -6,7 +6,9 @@
 #include <string.h>
 #include <math.h>
 
-#include "nopl.h"
+//#include "nopl.h"
+
+#include "psion_recreate_all.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 

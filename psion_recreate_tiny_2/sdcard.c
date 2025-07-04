@@ -279,6 +279,35 @@ void ls(const char *dir)
     if (FR_OK != fr) printf("f_mkfs error: %s (%d)\n", FRESULT_str(fr), fr);
 }
 
+//------------------------------------------------------------------------------
+
+void run_cat(char *filename)
+{
+  if (strlen(filename) == 0)
+    {
+      printf("Missing argument\n");
+      return;
+    }
+  
+  FIL fil;
+  FRESULT fr = f_open(&fil, filename, FA_READ);
+  if (FR_OK != fr)
+    {
+      printf("f_open error: %s (%d)\n", FRESULT_str(fr), fr);
+      return;
+    }
+  char buf[256];
+  while (f_gets(buf, sizeof buf, &fil))
+    {
+      printf("%s", buf);
+    }
+  fr = f_close(&fil);
+  if (FR_OK != fr)
+    {
+      printf("f_open error: %s (%d)\n", FRESULT_str(fr), fr);
+    }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 //

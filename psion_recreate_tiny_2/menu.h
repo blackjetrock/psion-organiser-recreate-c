@@ -52,6 +52,7 @@ extern MENU menu_top;
 extern MENU menu_eeprom;
 extern MENU menu_rtc;
 extern MENU menu_test_os;
+extern MENU menu_prog;
 extern MENU menu_buzzer;
 extern MENU menu_format;
 

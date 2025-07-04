@@ -146,6 +146,10 @@ void init_menu_test_os(void)
 {
 }
 
+void init_menu_prog(void)
+{
+}
+
 void init_menu_buzzer(void)
 {
 }
@@ -194,6 +198,11 @@ void menu_goto_test_os(void)
   goto_menu(&menu_test_os);
 }
 
+void menu_goto_prog(void)
+{
+  goto_menu(&menu_prog);
+}
+
 void menu_goto_buzzer(void)
 {
   goto_menu(&menu_buzzer);
@@ -207,6 +216,17 @@ void menu_goto_mems(void)
 void menu_goto_rtc(void)
 {
   goto_menu(&menu_rtc);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void menu_test_file(void)
+{
+  // Open and read the file 'TEST.TXT' in the root directory of the SD card
+  run_mount();
+  run_cd("/");
+  run_cat("TEST.TXT");
+  run_unmount();
 }
 
 void menu_epos_test(void)
@@ -1739,7 +1759,7 @@ MENU menu_top =
     {'F', "Find",       menu_fl_find},
     {'S', "Save",       menu_fl_save},
     {'M', "forMat",     menu_goto_format},
-
+    {'P', "Prog",       menu_goto_prog},
     {'&', "",           menu_null},
    }
   };
@@ -1784,6 +1804,18 @@ MENU menu_test_os =
     {'E', "Epos",       menu_epos_test},
     {'F', "Flowtext",   menu_flowtext_test},
     {'K', "Keytest",    menu_scan_test},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_prog =
+  {
+   &menu_top,
+   "Program",
+   init_menu_prog,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'T', "Test File",  menu_test_file},
     {'&', "",           menu_null},
    }
   };

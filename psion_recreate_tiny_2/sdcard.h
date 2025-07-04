@@ -8,3 +8,4 @@ void run_getfree();
 void run_mkdir(char *arg1);
 void run_getfree();
 void run_cd(char *arg1);
+void run_cat(char *filename);

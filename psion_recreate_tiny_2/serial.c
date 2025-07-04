@@ -426,6 +426,19 @@ void cli_dump_fl_pack(void)
   printf("\n");
 }
 
+//------------------------------------------------------------------------------
+
+void cli_test_ob3(void)
+{
+  run_mount();
+
+  nopl_exec("TEST.OB3");
+  
+  run_unmount();
+}
+
+//------------------------------------------------------------------------------
+
 #define MAX_INPUT_STR   32
 
 int find_free_record(void);
@@ -660,6 +673,12 @@ SERIAL_COMMAND serial_cmds[] =
     "SD dir listing",
     cli_ls,
    },
+   {
+    'r',
+    "Run Test OB3",
+    cli_test_ob3,
+   },
+   
   };
 
 int pcount = 0;

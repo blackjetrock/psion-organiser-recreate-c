@@ -19,6 +19,8 @@
 #include "nopl_obj.h"
 #include "newopl_types.h"
 
+#include "ff_stdio.h"
+
 #include "newopl_exec.h"
 #include "newopl_lib.h"
 

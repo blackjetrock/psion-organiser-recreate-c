@@ -57,8 +57,9 @@ add_executable(${PROJECT}
     #svc_fl.c 
     #svc_kb.c 
     svc_mn.c 
-    sysvar.c 
-
+    sysvar.c
+    clock_pico.c
+    nopl_exec.c
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}

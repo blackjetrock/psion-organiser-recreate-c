@@ -267,8 +267,8 @@ KEYMAP *key_map;
 // We remove short presses,
 //
 
-#define MAX_INPUT_QUEUE  5
-#define MAX_PRESS_QUEUE  5
+#define MAX_INPUT_QUEUE  20
+#define MAX_PRESS_QUEUE  20
 
 MATRIX_MAP  input_queue[MAX_INPUT_QUEUE];
 MATRIX_MAP  pressed_queue[MAX_PRESS_QUEUE];
