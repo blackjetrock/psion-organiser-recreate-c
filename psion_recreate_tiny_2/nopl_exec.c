@@ -782,6 +782,25 @@ void display_machine(NOBJ_MACHINE *m)
   display_machine_procs(m);
 }
 
+void nopl_init(void)
+{
+  printf("\nInitialiseing newopl...");
+
+  exdbfp = stdout;
+  
+  return;
+  
+  run_mount();
+  
+  exdbfp = fopen("exec_db.txt", "w");
+
+  if( exdbfp == NULL )
+    {
+      printf("\nCould not open 'exec_db.txt'\n");
+      exit(-1);
+    }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 //

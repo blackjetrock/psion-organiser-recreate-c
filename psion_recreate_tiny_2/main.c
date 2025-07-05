@@ -392,6 +392,8 @@ int main(void) {
   initialise_oled();
 #endif
 
+  nopl_init();
+  
   int tick = 0;
 
   menu_enter();

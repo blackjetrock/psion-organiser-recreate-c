@@ -7,7 +7,7 @@
 
 #include "nopl.h"
 
-#define DEBUG          0
+#define DEBUG          1
 #define DB_FL_SCAN_PAK 0
 #define DB_FL_SIZE     0
 
