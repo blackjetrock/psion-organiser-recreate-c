@@ -400,7 +400,7 @@ void db_qcode(char *s, ...);
 char *qcode_name(NOBJ_QCODE qcode);
 
 
-extern FILE *exdbfp;
+extern FIL *exdbfp;
 
 
 #if 1

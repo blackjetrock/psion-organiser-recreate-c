@@ -91,7 +91,7 @@ void pk_close_linux(int logfile, char *filename)
 
 int pk_exist_linux(char *filename)
 {
-  FILE *fp;
+  FIL *fp;
 
   fp = fopen(filename, "r");
 
@@ -121,7 +121,7 @@ uint8_t pk_rbyt_linux(PAK_ADDR pak_addr)
   fread(&byte, 1, 1, LINCURFI.fp);
   //perror("error");
 #else
-  FILE *fp;
+  FIL *fp;
 
   fp = fopen("TESTFILE", "r");
 

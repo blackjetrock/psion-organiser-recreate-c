@@ -7,10 +7,10 @@
 #define FP_OFF_RETURN_PC   6
 #define FP_OFF_DEVICE      8
 
-void read_proc_file(FILE *fp, NOBJ_PROC *p);
-void read_ob3_header(FILE *fp);
-int read_item(FILE *fp, void *ptr, int n, size_t size);
-int read_item_16(FILE *fp, uint16_t *ptr);
+void read_proc_file(FIL *fp, NOBJ_PROC *p);
+void read_ob3_header(FIL *fp);
+int read_item(FIL *fp, void *ptr, int n, size_t size);
+int read_item_16(FIL *fp, uint16_t *ptr);
 
 char *decode_vartype(NOBJ_VARTYPE t);
 void init_machine(NOBJ_MACHINE *m);

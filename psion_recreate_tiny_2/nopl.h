@@ -21,6 +21,22 @@
 
 #include "ff_stdio.h"
 
+#if 1
+#undef assert
+#define assert configASSERT
+#define fopen  ff_fopen
+#define fwrite ff_fwrite
+#define fread  ff_fread
+#define fclose ff_fclose
+#define fseek  ff_fseek
+#ifndef FF_DEFINED
+#define errno  stdioGET_ERRNO()
+#define free   vPortFree
+#define malloc pvPortMalloc
+#define fflush ff_fflush
+#endif
+#endif
+
 #include "newopl_exec.h"
 #include "newopl_lib.h"
 
@@ -52,4 +68,5 @@
 #include "tui.h"
 #endif
 
+void fprintstr(FF_FILE *fp, char *str);
 

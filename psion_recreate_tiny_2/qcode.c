@@ -14,7 +14,7 @@
 
 #define LPRINT_FN "LPRINT"
 
-FILE *lprintfp;
+FIL *lprintfp;
 
 //------------------------------------------------------------------------------
 
@@ -42,14 +42,19 @@ int qcode_sizeof_qc_byte_code = (sizeof(qc_byte_code)/sizeof(QC_BYTE_CODE));
 void dbpfq(const char *caller, char *fmt, ...)
 {
   va_list valist;
-
+  char line[300];
+  
   va_start(valist, fmt);
-  fprintf(exdbfp, "\n(%s)", caller);
-  fflush(exdbfp);
+  sprintf(line, "\n(%s)", caller);
+  fprintstr(exdbfp, line);
+  
+  //ff_fflush(exdbfp);
     
-  vfprintf(exdbfp, fmt, valist);
+  vsprintf(line, fmt, valist);
   va_end(valist);
-  fflush(exdbfp);
+
+  fprintstr(exdbfp, line);
+  //fflush(exdbfp);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -606,7 +611,7 @@ void qca_push_proc(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   dbq("QCO_PROC");
 
-  FILE *fp;
+  FIL *fp;
   
   // Get proc name
   s->len = qcode_next_8(m);
@@ -1691,11 +1696,13 @@ void qca_print_sp(NOBJ_MACHINE *m, NOBJ_QCS *s)
 void lprintf(char *fmt, ...)
 {
   va_list valist;
+  char line[300];
   
   va_start(valist, fmt);
   if( lprintfp != NULL )
     {
-      vfprintf(lprintfp, fmt, valist);
+      vsprintf(line, fmt, valist);
+      fprintstr(lprintfp, line);
     }
   va_end(valist);
 
@@ -1708,7 +1715,7 @@ void lprintf(char *fmt, ...)
   va_end(valist);
 #endif
   
-  fflush(lprintfp);
+  //fflush(lprintfp);
 }
 
 void qca_lprint_int(NOBJ_MACHINE *m, NOBJ_QCS *s)
@@ -4075,7 +4082,7 @@ void display_frame(NOBJ_MACHINE *m)
 void display_variables(NOBJ_MACHINE *m)
 {
   int fp = m->rta_fp;
-  FILE *vfp;
+  FIL *vfp;
   char line[300];
   
   // Read the vars.txt file and display the variables
@@ -4102,7 +4109,7 @@ void display_variables(NOBJ_MACHINE *m)
 
   while(!done )
     {
-      if( fgets(line, 300, vfp) == NULL )
+      if( ff_fgets(line, 300, vfp) == NULL )
 	{
 	  // we are done
 	  done = 1;

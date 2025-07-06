@@ -3,23 +3,26 @@
 //
 
 #include <stdlib.h>
-#include <stdio.h>
+
 #include <inttypes.h>
 #include <string.h>
 #include <stdarg.h>
 
 #include "nopl.h"
 
+#include <stdio.h>
+
 #define DEBUG_PUSH_POP    1
 
-FILE *dbfp;
+FIL *dbfp;
 
 int debug_open = 0;
 
 void debug(char *fmt, ...)
 {
   va_list valist;
-
+  char line[300];
+  
   if( !debug_open )
     {
       dbfp = fopen("db.txt", "w");
@@ -28,10 +31,12 @@ void debug(char *fmt, ...)
   
   va_start(valist, fmt);
 
-  vfprintf(dbfp, fmt, valist);
+  vsprintf(line, fmt, valist);
+  
   va_end(valist);
 
-  fflush(dbfp);
+  fprintstr(dbfp, line);
+  //ff_fflush(dbfp);
 }
 
 
@@ -43,11 +48,11 @@ uint16_t swap_uint16(uint16_t n)
   return((l << 8) + h);
 }
 
-int read_item(FILE *fp, void *ptr, int n, size_t size)
+int read_item(FIL *fp, void *ptr, int n, size_t size)
 {
   int ni = fread(ptr, n, size, fp);
   
-  if( feof(fp) || (ni == 0))
+  if( f_eof(fp) || (ni == 0))
     {
       // No more file
       debug("\n    Error");
@@ -57,7 +62,7 @@ int read_item(FILE *fp, void *ptr, int n, size_t size)
   return(1);
 }
 
-int read_item_16(FILE *fp, uint16_t *ptr)
+int read_item_16(FIL *fp, uint16_t *ptr)
 {
   int ni;
   
@@ -111,7 +116,7 @@ uint8_t  ob3_block_file_type = 0;
 uint16_t ob3_file_length_word = 0;
 uint16_t ob3_block_length_word = 0;
 
-void read_ob3_header(FILE *fp)
+void read_ob3_header(FIL *fp)
 {
   int ni;
 
@@ -152,7 +157,7 @@ int debugi = 0;
 // Read the start of an OB3 file
 //
 
-void read_proc_file_header(FILE *fp, NOBJ_PROC *p)
+void read_proc_file_header(FIL *fp, NOBJ_PROC *p)
 {
   READ_ITEM(  fp, p->var_space_size, 1, NOBJ_VAR_SPACE_SIZE, "\nError reading var space size.");
   p->var_space_size.size = swap_uint16(p->var_space_size.size);
@@ -178,7 +183,7 @@ void read_proc_file_header(FILE *fp, NOBJ_PROC *p)
 // The NOBJ_PROC is used for dumping procs
 //------------------------------------------------------------------------------
 
-void read_proc_file(FILE *fp, NOBJ_PROC *p)
+void read_proc_file(FIL *fp, NOBJ_PROC *p)
 {
   debug("\nEnter:%s", __FUNCTION__);
 

@@ -2,7 +2,7 @@
 
 typedef struct
 {
-  FILE *fp;             // File pointer to use when accessing
+  FIL *fp;              // File pointer to use when accessing
                         // the files on the Linux filesystem
 } LINUX_FILE_INFO;
 

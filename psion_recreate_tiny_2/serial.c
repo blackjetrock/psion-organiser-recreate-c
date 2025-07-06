@@ -378,11 +378,12 @@ void cli_itf(void)
 
 void cli_ls(void)
 {
-  printf("/nSD Card Listing:\n");
+  printf("\nSD Card Listing:\n");
   run_mount();
   ls("/");
   run_unmount();
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -431,6 +432,7 @@ void cli_dump_fl_pack(void)
 void cli_test_ob3(void)
 {
   run_mount();
+  run_cd("/");
 
   nopl_exec("TEST.OB3");
   
@@ -800,6 +802,52 @@ void ic_dump(char *str, char *fmt)
   cli_dump_memory();
 }
 
+void fprintstr(FF_FILE *fp, char *str)
+{
+  while(*str)
+    {
+      ff_fputc(*str, fp);
+      str++;
+    }
+}
+
+void ic_writefile(char *str, char *fmt)
+{
+  FF_FILE *fp;
+  
+  printf("\nWriting file\n");
+  run_mount();
+  fp = ff_fopen("testfile.txt", "a+");
+
+  if( fp == NULL )
+    {
+      printf("\nCould not open file for write");
+      return;
+    }
+
+  fprintstr(fp, "\nLine 1\n");
+  fprintstr(fp, "\n");
+  ff_fclose (fp);
+  
+  fp = ff_fopen("testfile.txt", "r");
+  
+  if( fp == NULL )
+    {
+      printf("\nCould not open file for read");
+      return;
+    }
+
+  while( !ff_feof(fp) )
+    {
+      char line[200];
+
+      ff_fgets(line, 200, fp);
+      printf("\n%s", line);
+    }
+  
+  ff_fclose (fp);
+  run_unmount();
+}
 
 void ic_write(char *str, char *fmt)
 {
@@ -990,6 +1038,8 @@ struct _IC_CMD
    {"test",       "",                ic_test},
    {"dump",       "",                ic_dump},
    {"erase",       "",               ic_erase},
+   {"writefile",  "writefile",       ic_writefile},
+
    {"write",      "write %d %[^@]",  ic_write},
    {"read",       "",                ic_read},
    {"recno",      "recno %d",        ic_recno},

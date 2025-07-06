@@ -797,7 +797,6 @@ void nopl_init(void)
   if( exdbfp == NULL )
     {
       printf("\nCould not open 'exec_db.txt'\n");
-      exit(-1);
     }
 }
 
@@ -810,25 +809,25 @@ void nopl_init(void)
 
 int nopl_exec(char *filename)
 {
-  FILE *fp;
-  
-  exdbfp = fopen("exec_db.txt", "w");
+  FF_FILE *fp;
+
+  exdbfp = ff_fopen("exec_db.txt", "w");
 
   if( exdbfp == NULL )
     {
       printf("\nCould not open 'exec_db.txt'\n");
-      exit(-1);
+      return(0);
     }
 
   debug("\nSize of NOBJ_PROC:%ld", sizeof(NOBJ_PROC));
   
   // Load the procedure file
-  fp = fopen(filename, "r");
+  fp = ff_fopen(filename, "r");
 
   if( fp == NULL )
     {
       debug("\nCannot open '%s'", filename);
-      exit(-1);
+      return(0);
     }
 
   debug("\nLoaded '%s'", filename);
@@ -941,12 +940,11 @@ int nopl_exec(char *filename)
   
   debug("\n");
 
-  fclose(exdbfp);
+  ff_fclose(exdbfp);
 
 #ifdef TUI
   tui_end();
 #endif
 
   num_uninit();
-
 }
