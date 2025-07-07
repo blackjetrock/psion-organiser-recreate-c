@@ -60,6 +60,8 @@ add_executable(${PROJECT}
     sysvar.c
     clock_pico.c
     nopl_exec.c
+    parser.c
+    nopl_trans.c
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}

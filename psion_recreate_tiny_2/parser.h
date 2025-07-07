@@ -1,6 +1,6 @@
  #define dbprintf(fmt...) dbpf(__FUNCTION__, fmt)
 void dbpf(const char *caller, char *fmt, ...);
-extern FILE *ptfp;
+extern FIL *ptfp;
 
 
 NOBJ_VARTYPE char_to_type(char ch);
@@ -12,8 +12,8 @@ extern NOBJ_VARTYPE expression_type;
 extern char last_line[MAX_NOPL_LINE];
 extern char cline[MAX_NOPL_LINE];
 extern int cline_i;
-extern FILE *ofp;
-extern FILE *chkfp;
+extern FIL *ofp;
+extern FIL *chkfp;
 extern NOBJ_VARTYPE exp_type_stack[MAX_EXP_TYPE_STACK];
 extern int exp_type_stack_ptr;
 extern char current_expression[200];
@@ -147,7 +147,7 @@ void indent_none(void);
 int scan_expression(int *num_commas, int ignore_comma);
 int check_function(int *index);
 int scan_function(char *cmd_dest);
-int next_composite_line(FILE *fp);
+int next_composite_line(FIL *fp);
 int scan_procdef(void);
 int scan_cline(void);
 int scan_integer(int *intdest);
@@ -172,7 +172,7 @@ void process_token(OP_STACK_ENTRY *token);
 void parser_check(void);
 void indent_more(void);
 int scan_expression_list(int *num_expressions, int insert_types);
-void initialise_line_supplier(FILE *fp);
+void initialise_line_supplier(FIL *fp);
 int pull_next_line(void);
 void op_stack_finalise(void);
 void output_return(OP_STACK_ENTRY op);
@@ -182,7 +182,7 @@ int strn_match(char *s1, char *s2, int n);
 int check_proc_call(int *index);
 int scan_proc_call(void);
 void typecheck_error(char *fmt, ...);
-void fprint_var_info(FILE *fp, NOBJ_VAR_INFO *vi);
+void fprint_var_info(FIL *fp, NOBJ_VAR_INFO *vi);
 void internal_error(char *fmt, ...);
 char *type_to_str(NOBJ_VARTYPE t);
 void make_var_type_array(NOBJ_VARTYPE *vt);
@@ -211,7 +211,7 @@ extern int size_of_qcode_idx;
 extern int procedure_has_return;
 extern int last_line_is_return;
 extern NOBJ_VARTYPE  procedure_type;
-void dump_vars(FILE *fp);
+void dump_vars(FIL *fp);
 
 
 #define FLT_INCLUDES_SIGN   0

@@ -20,7 +20,8 @@
 #include "newopl_types.h"
 
 #include "ff_stdio.h"
-
+void ff_fprintf(FIL *fp, char *fmt, ...);
+  
 #if 1
 #undef assert
 #define assert configASSERT

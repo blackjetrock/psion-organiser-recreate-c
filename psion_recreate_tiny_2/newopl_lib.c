@@ -39,6 +39,21 @@ void debug(char *fmt, ...)
   //ff_fflush(dbfp);
 }
 
+void ff_fprintf(FIL *fp, char *fmt, ...)
+{
+  va_list valist;
+  char line[400];
+  
+  va_start(valist, fmt);
+
+  vsprintf(line, fmt, valist);
+  
+  va_end(valist);
+
+  fprintstr(fp, line);
+
+}
+
 
 uint16_t swap_uint16(uint16_t n)
 {
