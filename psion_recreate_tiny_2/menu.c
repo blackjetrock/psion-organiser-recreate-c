@@ -1504,6 +1504,7 @@ int fsp = 0;
 
 void fac_add(void)
 {
+  printf("\nAdd\n");
   stack[0] = stack[0] + stack[1];
 
   for(int i=1; i<MAX_STACK-1; i++)
@@ -1512,8 +1513,9 @@ void fac_add(void)
     }
 }
 
-void fac_DIV(void)
+void fac_div(void)
 {
+  printf("\nDiv\n");
   stack[0] = stack[0] / stack[1];
 
   for(int i=1; i<MAX_STACK-1; i++)
@@ -1533,7 +1535,7 @@ typedef struct
 FCMD_ENTRY fcmds[] =
   {
     {"+", fac_add},
-    {"/", fac_DIV},
+    {"/", fac_div},
   };
 
 #define NUM_FCMDS (sizeof(fcmds)/sizeof(FCMD_ENTRY))
@@ -1546,15 +1548,30 @@ void display_forth(char *v1)
   dp_cls();
   
   sprintf(forthbuf, "%s", entry);
+  strcat(forthbuf, "                  ");
+  forthbuf[16] = '\0';
+  
   printxy_str(0,0,forthbuf);
-
+  cursor_y = 0;
+  cursor_x = strlen(entry);
+  
   for(int i=0; i<MAX_STACK; i++)
     {
       sprintf(forthbuf, "%e", stack[i]);
       printxy_str(0,i+1,forthbuf);
-      }
+    }
 }
 
+void execute_cmd(char *cmd)
+{
+  for(int i=0; i<NUM_FCMDS; i++)
+    {
+      if( strcmp(fcmds[i].name, cmd)==0 )
+        {
+          (*fcmds[i].action)();
+        }
+    }
+}
 
 void forth_eval(char *e)
 {
@@ -1567,6 +1584,7 @@ void forth_eval(char *e)
   printf("\nEval:%s", entry);
   
   num[0] = '\0';
+  cmd[0] = '\0';
   
   while( strlen(e) > 0 )
     {
@@ -1586,6 +1604,14 @@ void forth_eval(char *e)
           frag[0] = *e;
           strcat(num, frag);
           isnum = 1;
+
+          if( strlen(e) == 1 )
+            {
+              sscanf(num, "%lf", &(stack[fsp++]));
+              printf("\nNum:%s", num);
+              num[0] = '\0';
+              isnum = 0;
+            }
           break;
 
         case ' ':
@@ -1602,13 +1628,7 @@ void forth_eval(char *e)
           if( iscmd )
             {
               // Execute command
-              for(int i=0; i<NUM_FCMDS; i++)
-                {
-                  if( strcmp(fcmds[i].name, cmd)==0 )
-                    {
-                      (*fcmds[i].action)();
-                    }
-                }
+              execute_cmd(cmd);
               printf("\nCmd:%s", cmd);
               cmd[0] = '\0';
               iscmd = 0;
@@ -1619,11 +1639,21 @@ void forth_eval(char *e)
           frag[0] = *e;
           strcat(cmd, frag);
           iscmd = 1;
+          if( strlen(e) == 1)
+            {
+              // Execute command
+              execute_cmd(cmd);
+              printf("\nCmd:%s", cmd);
+              cmd[0] = '\0';
+              iscmd = 0;
+            }
           break;
         }
 
       e++;
     }
+  
+  entry[0] = '\0';
 }
 
 void menu_forth(void)
@@ -1635,7 +1665,8 @@ void menu_forth(void)
   char frag[2] = " ";
   
   cursor_on = 1;
-
+  cursor_blink = 1;
+  
   entry[0] = '\0';
 
   for(int i=0; i<MAX_STACK; i++)

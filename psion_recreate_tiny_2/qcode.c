@@ -14,7 +14,7 @@
 
 #define LPRINT_FN "LPRINT"
 
-FIL *lprintfp;
+FIL *lprintfp = NULL;
 
 //------------------------------------------------------------------------------
 
@@ -3150,11 +3150,16 @@ void qca_rtf_rad(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   NOPL_FLOAT n, a, p;
 
+  printf("\n%s\n", __FUNCTION__);
   a = pop_machine_num(m);
+  printf("\n%s\n", __FUNCTION__);
   num_180_div_pi(&p);
+  printf("\n%s\n", __FUNCTION__);
   
   num_div(&a, &p, &n);
+  printf("\n%s\n", __FUNCTION__);
   push_machine_num(m, &n);
+  printf("\n%s\n", __FUNCTION__);
 }
 
 //------------------------------------------------------------------------------

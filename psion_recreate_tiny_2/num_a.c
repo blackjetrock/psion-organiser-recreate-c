@@ -23,7 +23,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-FIL *numfp;
+FIL *numfp = NULL;
 char num_text[NOBJ_STRING_MAXLEN+1];
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1496,6 +1496,8 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   dbq_num_exploded("%s a:", a);
   dbq_num_exploded("%s b:", b);
 
+  dbq("\nDIV2\n");
+  
   // Now divide mantissas
 #define LONGER_DIGITS  (NUM_MAX_DIGITS*2+2)
   
@@ -1520,6 +1522,8 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
       lb[i+NUM_MAX_DIGITS-1] = b->digits[i];
     }
 
+  dbq("\nDIV3\n");
+    
   // Put significant digits in top half
   while( !all_lower_zero(LONGER_DIGITS, lb) )
     {
@@ -1535,7 +1539,9 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
     {
       la[i] = a->digits[i];
     }
-  
+
+  dbq("\nDIV4\n");
+    
   num_clear_digits(LONGER_DIGITS, w);
   num_clear_digits(LONGER_DIGITS, res);
 
@@ -1551,7 +1557,8 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   while(!done)
     {
       tight_loop_tasks();
-      
+
+      dbq("\nDIV LP\n");
       if( a_digit_pos >= LONGER_DIGITS )
 	{
 	  done = 1;
@@ -1611,6 +1618,8 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   // Shift so first significant digit is in res[0], so we get
   // full resolutio of significant digits in result.
 
+  dbq("\nDIV E\n");
+  
   exponent = 0;
   
   while( res[0] == 0 )
@@ -1632,6 +1641,8 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   // Now propagate any carry
   num_propagate_carry_digits(res, LONGER_DIGITS);
 
+  dbq("\nDIV5\n");
+  
   num_db_digits("\nres after round:", LONGER_DIGITS, res);
 
   for(int i=0; i<NUM_MAX_DIGITS; i++)
@@ -1639,8 +1650,11 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
       r->digits[i] = res[i];
     }
 
+  dbq("\nDIV6\n");
   num_normalise(r);
   dbq_num_exploded("%s result", r);
+
+  dbq("\nDIV7\n");
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -2770,6 +2784,8 @@ double nopl_float_to_double(NOPL_FLOAT *nf)
 
 void num_init(void)
 {
+  printf("\n%s\n", __FUNCTION__);
+  
   numfp = fopen("num_info.txt", "w");
 
   fprintstr(numfp, "\nSummary of numerical calculations");

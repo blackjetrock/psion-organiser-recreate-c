@@ -14,8 +14,7 @@
 
 #define DEBUG_PUSH_POP    1
 
-FIL *dbfp;
-
+FIL *dbfp = NULL;
 int debug_open = 0;
 
 void debug(char *fmt, ...)
@@ -25,6 +24,7 @@ void debug(char *fmt, ...)
   
   if( !debug_open )
     {
+      printf("\ndbfp opened\n");
       dbfp = fopen("db.txt", "w");
       debug_open = 1;
     }

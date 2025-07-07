@@ -936,6 +936,7 @@ void ic_cat(char *str, char *fmt)
   run_cat(arg);
 }
 
+
 void ic_run(char *str, char *fmt)
 {
   char arg[100];
@@ -944,6 +945,24 @@ void ic_run(char *str, char *fmt)
   printf("\n%s\n", str);
   sscanf(str,  fmt, &arg);
   sprintf(ob3_fn, "%s", arg);
+
+  printf("\nRunning %s", ob3_fn);
+  
+  // Mount the SD card and run the OB3
+  run_mount();
+  run_cd("/");
+
+  nopl_exec(ob3_fn);
+  
+  run_unmount();
+}
+
+void ic_runx(char *str, char *fmt)
+{
+  char arg[100];
+  char ob3_fn[100];
+
+  sprintf(ob3_fn, "extst_deg1.ob3", arg);
 
   printf("\nRunning %s", ob3_fn);
   
@@ -1092,7 +1111,9 @@ struct _IC_CMD
    {"getfree",    "getfree",         ic_getfree},
    {"cd",         "cd",              ic_cd},
    {"mkdir",      "mkdir",           ic_mkdir},
+   {"runx",       "runx",            ic_runx},
    {"run",        "run %s",          ic_run},
+
    {"cat",        "cat %s",          ic_cat},
    {"r",          "r %d",            ic_recno},
   };
