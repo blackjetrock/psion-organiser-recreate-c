@@ -4182,6 +4182,9 @@ void execute_qcode(NOBJ_MACHINE *m, int single_step)
   
   while(!s.done)
     {
+      // Keep things alive
+      tight_loop_tasks();
+
 #ifdef TUI
       tui_step(m, &(s.done));
 #endif
@@ -4201,6 +4204,7 @@ void execute_qcode(NOBJ_MACHINE *m, int single_step)
       
       for(q=0; q<SIZEOF_QCODE_INFO; q++)
 	{
+          tight_loop_tasks();
 	  if( s.qcode == qcode_info[q].qcode )
 	    {
 	      qci = q;

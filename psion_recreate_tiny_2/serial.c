@@ -29,6 +29,8 @@ int interactive_done = 0;
 
 void tight_loop_tasks(void)
 {
+  //printf("\nTight\n");
+  
   tud_task();
   
 #if CORE0_SCAN
@@ -428,6 +430,8 @@ void cli_dump_fl_pack(void)
 }
 
 //------------------------------------------------------------------------------
+//
+// Run an OB3 file from SD card
 
 void cli_test_ob3(void)
 {
@@ -923,6 +927,35 @@ void ic_ls(char *str, char *fmt)
   ls(arg);
 }
 
+void ic_cat(char *str, char *fmt)
+{
+  char arg[100];;
+
+  sscanf(str,  fmt, &arg);
+
+  run_cat(arg);
+}
+
+void ic_run(char *str, char *fmt)
+{
+  char arg[100];
+  char ob3_fn[100];
+
+  printf("\n%s\n", str);
+  sscanf(str,  fmt, &arg);
+  sprintf(ob3_fn, "%s", arg);
+
+  printf("\nRunning %s", ob3_fn);
+  
+  // Mount the SD card and run the OB3
+  run_mount();
+  run_cd("/");
+
+  nopl_exec(ob3_fn);
+  
+  run_unmount();
+}
+
 void ic_mount(char *str, char *fmt)
 {
   run_mount();
@@ -1052,13 +1085,16 @@ struct _IC_CMD
    {"back",       "",                ic_back},
    {"exit",       "",                ic_exit},
    {"!",          "",                ic_boot_mass},
-   {"r",          "r %d",            ic_recno},
+
    {"ls",         "ls %s",           ic_ls},
    {"mount",      "mount",           ic_mount},
    {"unmount",    "unmount",         ic_unmount},
    {"getfree",    "getfree",         ic_getfree},
    {"cd",         "cd",              ic_cd},
    {"mkdir",      "mkdir",           ic_mkdir},
+   {"run",        "run %s",          ic_run},
+   {"cat",        "cat %s",          ic_cat},
+   {"r",          "r %d",            ic_recno},
   };
 
 #define NUM_IC_CMD (sizeof(ic_cmds)/sizeof(struct _IC_CMD))

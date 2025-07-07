@@ -55,6 +55,7 @@ extern MENU menu_test_os;
 extern MENU menu_prog;
 extern MENU menu_buzzer;
 extern MENU menu_format;
+extern MENU menu_calc;
 
 void check_menu_launch(void);
 void scan_keys(void);

@@ -16,6 +16,8 @@
 
 #include "psion_recreate_all.h"
 
+#define debug printf
+
 ////////////////////////////////////////////////////////////////////////////////
 
 int do_single_step = 0;
@@ -818,7 +820,7 @@ int nopl_exec(char *filename)
       return(0);
     }
 
-  debug("\nSize of NOBJ_PROC:%ld", sizeof(NOBJ_PROC));
+  printf("\nSize of NOBJ_PROC:%ld", sizeof(NOBJ_PROC));
   
   // Load the procedure file
   fp = ff_fopen(filename, "r");
@@ -931,6 +933,9 @@ int nopl_exec(char *filename)
 
   // Execute it
   current_machine = &machine;
+
+  debug("\n\n");
+  
   execute_qcode(&machine, do_single_step);
   
   debug("\n\n");
@@ -939,7 +944,7 @@ int nopl_exec(char *filename)
   
   debug("\n");
 
-  ff_fclose(exdbfp);
+  //ff_fclose(exdbfp);
 
 #ifdef TUI
   tui_end();
@@ -947,6 +952,6 @@ int nopl_exec(char *filename)
 
   num_uninit();
   
-  fclose(exdbfp);
-  
+  ff_fclose(exdbfp);
+  ff_fclose(fp);
 }

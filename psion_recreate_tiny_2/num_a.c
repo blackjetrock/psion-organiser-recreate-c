@@ -1321,6 +1321,8 @@ void num_mul(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
     {
       for(int j=NUM_MAX_DIGITS-1; j>=0; j--)
 	{
+          tight_loop_tasks();
+          
 	  dbq("%i:d j:%d, p:%d  a:%d b:%d", i, j, a->digits[j]*b->digits[i], a->digits[j], b->digits[i]);
 	  //	  d_digits[i+j+NUM_MAX_DIGITS] += a->digits[j]*b->digits[i];
 	  d_digits[i+j] += a->digits[j]*b->digits[i];
@@ -1521,6 +1523,7 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   // Put significant digits in top half
   while( !all_lower_zero(LONGER_DIGITS, lb) )
     {
+      tight_loop_tasks();
       num_shift_digits_left_n(LONGER_DIGITS, lb, &exponent);
     }
 
@@ -1547,6 +1550,8 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   
   while(!done)
     {
+      tight_loop_tasks();
+      
       if( a_digit_pos >= LONGER_DIGITS )
 	{
 	  done = 1;
@@ -1570,6 +1575,8 @@ void num_div(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
       // Is it possible to divide b into w?
       if( divides_by = num_divides_into(LONGER_DIGITS, w, lb, ttable) )
 	{
+          tight_loop_tasks();
+          
 	  // We have another digit of the result
 	  res[a_digit_pos] = divides_by;
 

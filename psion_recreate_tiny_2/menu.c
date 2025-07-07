@@ -150,6 +150,10 @@ void init_menu_prog(void)
 {
 }
 
+void init_menu_calc(void)
+{
+}
+
 void init_menu_buzzer(void)
 {
 }
@@ -201,6 +205,11 @@ void menu_goto_test_os(void)
 void menu_goto_prog(void)
 {
   goto_menu(&menu_prog);
+}
+
+void menu_goto_calc(void)
+{
+  goto_menu(&menu_calc);
 }
 
 void menu_goto_buzzer(void)
@@ -1485,6 +1494,199 @@ void menu_hex(void)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+//
+
+#define MAX_STACK 4
+
+char entry[200];
+double stack[MAX_STACK];
+int fsp = 0;
+
+void fac_add(void)
+{
+  stack[0] = stack[0] + stack[1];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+}
+
+void fac_DIV(void)
+{
+  stack[0] = stack[0] / stack[1];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+}
+
+typedef void (*FCMD_ACTION)(void);
+
+typedef struct
+{
+  char *name;
+  FCMD_ACTION action;  
+} FCMD_ENTRY;
+
+FCMD_ENTRY fcmds[] =
+  {
+    {"+", fac_add},
+    {"/", fac_DIV},
+  };
+
+#define NUM_FCMDS (sizeof(fcmds)/sizeof(FCMD_ENTRY))
+
+
+void display_forth(char *v1)
+{
+  char forthbuf[80];
+
+  dp_cls();
+  
+  sprintf(forthbuf, "%s", entry);
+  printxy_str(0,0,forthbuf);
+
+  for(int i=0; i<MAX_STACK; i++)
+    {
+      sprintf(forthbuf, "%e", stack[i]);
+      printxy_str(0,i+1,forthbuf);
+      }
+}
+
+
+void forth_eval(char *e)
+{
+  char num[50];
+  char cmd[50];
+  char frag[2] = " ";
+  int isnum = 0;
+  int iscmd = 0;
+
+  printf("\nEval:%s", entry);
+  
+  num[0] = '\0';
+  
+  while( strlen(e) > 0 )
+    {
+      switch(*e)
+        {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '.':
+          frag[0] = *e;
+          strcat(num, frag);
+          isnum = 1;
+          break;
+
+        case ' ':
+          // Push numbers on stack or execute cmds
+          if( isnum )
+            {
+
+              sscanf(num, "%lf", &(stack[fsp++]));
+              printf("\nNum:%s", num);
+              num[0] = '\0';
+              isnum = 0;
+            }
+
+          if( iscmd )
+            {
+              // Execute command
+              for(int i=0; i<NUM_FCMDS; i++)
+                {
+                  if( strcmp(fcmds[i].name, cmd)==0 )
+                    {
+                      (*fcmds[i].action)();
+                    }
+                }
+              printf("\nCmd:%s", cmd);
+              cmd[0] = '\0';
+              iscmd = 0;
+            }
+          break;
+          
+        default:
+          frag[0] = *e;
+          strcat(cmd, frag);
+          iscmd = 1;
+          break;
+        }
+
+      e++;
+    }
+}
+
+void menu_forth(void)
+{
+  int done = 0;
+  int v1=0, v2=0;
+  int hex_ndec = 1;
+
+  char frag[2] = " ";
+  
+  cursor_on = 1;
+
+  entry[0] = '\0';
+
+  for(int i=0; i<MAX_STACK; i++)
+    {
+      stack[i] = 0.0;
+    }
+  
+  display_forth(entry);
+  
+  while(!done)
+    {
+      menu_loop_tasks();
+
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+	  
+	  switch(k)
+	    {
+	    case KEY_ON:
+	      cursor_on = 0;
+	      done = 1;
+	      break;
+
+            default:
+
+              frag[0] = k;
+              strcat(entry, frag);
+	      break;
+
+	    case KEY_EXE:
+              // Evaluate
+              forth_eval(entry);
+	      break;
+	      
+	    case KEY_DEL:
+	      // Remove last character
+              if( strlen(entry) > 0 )
+                {
+                  entry[strlen(entry)-1] = '\0';
+                }
+              
+	      break;
+	    }
+
+	  display_forth(entry);
+	}
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 #define DPVIEW_N 3
 
@@ -1760,6 +1962,7 @@ MENU menu_top =
     {'S', "Save",       menu_fl_save},
     {'M', "forMat",     menu_goto_format},
     {'P', "Prog",       menu_goto_prog},
+    {'C', "Calc",       menu_goto_calc},
     {'&', "",           menu_null},
    }
   };
@@ -1816,6 +2019,18 @@ MENU menu_prog =
    {
     {KEY_ON, "",        menu_back},
     {'T', "Test File",  menu_test_file},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_calc =
+  {
+   &menu_top,
+   "Calc",
+   init_menu_calc,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'F', "Forth",      menu_forth},
     {'&', "",           menu_null},
    }
   };

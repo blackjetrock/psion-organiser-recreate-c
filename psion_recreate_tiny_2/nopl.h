@@ -64,6 +64,8 @@
 #include "sysvar.h"
 #include "nopl_time.h"
 
+#include "serial.h"
+
 #ifdef TUI
 #include "tui.h"
 #endif
