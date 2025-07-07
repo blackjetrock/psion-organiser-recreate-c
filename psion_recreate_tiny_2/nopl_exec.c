@@ -19,13 +19,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 int do_single_step = 0;
-FILE *exdbfp;
+FIL *exdbfp;
 
 ////////////////////////////////////////////////////////////////////////////////
 
 NOBJ_MACHINE machine;
-FILE *exdbfp;
-FILE *fp;
+FIL *exdbfp;
+FIL *fp;
 NOBJ_PROC proc;
 
 #define MAX_ARGS 16
@@ -159,7 +159,7 @@ void print_machine_state(NOBJ_MACHINE *m)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-void push_proc(FILE *fp, NOBJ_MACHINE *m, char *name, int top)
+void push_proc(FIL *fp, NOBJ_MACHINE *m, char *name, int top)
 {
   // We build a header for the frame
   int      base_sp           = 0;
@@ -784,13 +784,10 @@ void display_machine(NOBJ_MACHINE *m)
 
 void nopl_init(void)
 {
-  printf("\nInitialiseing newopl...");
-
-  exdbfp = stdout;
-  
+  printf("\nInitialising newopl...");
   return;
   
-  run_mount();
+  //  run_mount();
   
   exdbfp = fopen("exec_db.txt", "w");
 
@@ -809,8 +806,10 @@ void nopl_init(void)
 
 int nopl_exec(char *filename)
 {
-  FF_FILE *fp;
+  FIL *fp;
 
+  printf("\nExecuting %s", filename);
+  
   exdbfp = ff_fopen("exec_db.txt", "w");
 
   if( exdbfp == NULL )
@@ -826,7 +825,7 @@ int nopl_exec(char *filename)
 
   if( fp == NULL )
     {
-      debug("\nCannot open '%s'", filename);
+      printf("\nCannot open '%s'", filename);
       return(0);
     }
 
@@ -947,4 +946,7 @@ int nopl_exec(char *filename)
 #endif
 
   num_uninit();
+  
+  fclose(exdbfp);
+  
 }

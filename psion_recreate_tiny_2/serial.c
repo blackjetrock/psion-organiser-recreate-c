@@ -434,9 +434,10 @@ void cli_test_ob3(void)
   run_mount();
   run_cd("/");
 
-  nopl_exec("TEST.OB3");
+  nopl_exec("HW.OB3");
   
   run_unmount();
+
 }
 
 //------------------------------------------------------------------------------

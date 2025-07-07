@@ -23,7 +23,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
-FILE *numfp;
+FIL *numfp;
 char num_text[NOBJ_STRING_MAXLEN+1];
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -531,14 +531,18 @@ void num_clear_digits(int n, NOPL_FLOAT_DIG *d)
 
 void num_db_digits(char *text, int n, NOPL_FLOAT_DIG *d)
 {
+  char line[50];
+  
   fprintstr(exdbfp, text);
   
   for(int k=0; k<n; k++)
     {
 #if EXPANDED
-      fprintstr(exdbfp, d[k]);
+      sprintf(line, "%d ", d[k]);
+      fprintstr(exdbfp, line);
 #else
-      fprintstr(exdbfp, d[k]);
+      sprintf(line, "%d", d[k]);
+      fprintstr(exdbfp, line);
 #endif
       if( k == (n/2)-1 )
 	{
@@ -1171,7 +1175,9 @@ void num_add(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
 
   // Summarise
   char line[300];
+
   sprintf(line, "\n(%s): %s",  __FUNCTION__, num_as_text(a1, ""));
+
   fprintstr(numfp, line);
   sprintf(line,      " + %s",                num_as_text(b1, ""));
   fprintstr(numfp, line);
@@ -1255,10 +1261,16 @@ void num_sub(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
     }
 
   // Summarise
-  ff_fprintf(numfp, "\n(%s): %s",  __FUNCTION__, num_as_text(a1, ""));
-  ff_fprintf(numfp,      " - %s",                num_as_text(b1, ""));
-  ff_fprintf(numfp,      " = %s",                num_as_text(r, ""));
+  char line[300];
+  
+  sprintf(line, "\n(%s): %s",  __FUNCTION__, num_as_text(a1, ""));
+  fprintstr(numfp, line);
 
+  sprintf(line,      " - %s",                num_as_text(b1, ""));
+  fprintstr(numfp, line);
+
+  sprintf(line,      " = %s",                num_as_text(r, ""));
+  fprintstr(numfp, line);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1315,7 +1327,8 @@ void num_mul(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
 	  num_propagate_carry_digits(d_digits, NUM_MAX_DIGITS*2);
 	}
 
-      ff_fprintf(exdbfp, "\n");
+      
+      fprintstr(exdbfp, "\n");
 
       // Now propagate the carry
       num_db_digits("d_digits before c:", NUM_MAX_DIGITS*2, d_digits);
@@ -1355,9 +1368,13 @@ void num_mul(NOPL_FLOAT *a1, NOPL_FLOAT *b1, NOPL_FLOAT *r)
   dbq_num_exploded("%s result", r);
 
   // Summarise
-  ff_fprintf(numfp, "\n(%s): %s",  __FUNCTION__, num_as_text(a1, ""));
-  ff_fprintf(numfp,      " + %s",                num_as_text(b1, ""));
-  ff_fprintf(numfp,      " = %s",                num_as_text(r, ""));
+  char line[300];
+  sprintf(line, "\n(%s): %s",  __FUNCTION__, num_as_text(a1, ""));
+  fprintstr(numfp, line);
+  sprintf(line,      " + %s",                num_as_text(b1, ""));
+  fprintstr(numfp, line);
+  sprintf(line,      " = %s",                num_as_text(r, ""));
+  fprintstr(numfp, line);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -2748,7 +2765,7 @@ void num_init(void)
 {
   numfp = fopen("num_info.txt", "w");
 
-  ff_fprintf(numfp, "\nSummary of numerical calculations");
+  fprintstr(numfp, "\nSummary of numerical calculations");
 }
 
 void num_uninit(void)
