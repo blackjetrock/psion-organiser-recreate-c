@@ -432,7 +432,7 @@ typedef struct _SIMPLE_QC_MAP
 #define __  200
 
 
-SIMPLE_QC_MAP qc_map[] =
+const SIMPLE_QC_MAP qc_map[] =
   {
     {EXP_BUFF_ID_VARIABLE, "",    __, NOPL_VAR_CLASS_EXTERNAL,    NOBJ_VARTYPE_INT,    NOPL_OP_ACCESS_READ, QI_INT_SIM_IND, 0},
     {EXP_BUFF_ID_VARIABLE, "",    __, NOPL_VAR_CLASS_EXTERNAL,    NOBJ_VARTYPE_FLT,    NOPL_OP_ACCESS_READ, QI_NUM_SIM_IND, 0},
@@ -2423,7 +2423,7 @@ void modify_expression_type(NOBJ_VARTYPE t)
 
 void type_check_stack_print(void);
 
-#define MAX_TYPE_CHECK_STACK  100
+
 
 EXP_BUFFER_ENTRY type_check_stack[MAX_TYPE_CHECK_STACK];
 int type_check_stack_ptr = 0;
@@ -2931,6 +2931,8 @@ int types_identical(NOBJ_VARTYPE t1, NOBJ_VARTYPE t2)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+#if INFIX_FROM_RPN
+
 #define MAX_INFIX_STACK 500
 #define MAX_INFIX_STR   400
 
@@ -3214,6 +3216,9 @@ char *infix_from_rpn(void)
   dbprintf("exit  '%s'", res);  
   return(result+1);
 }
+
+#endif
+
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -5621,8 +5626,10 @@ void process_expression_types(void)
       // Process the RPN as a tree
       expression_tree_process(current_expression);
 
+#if INFIX_FROM_RPN      
       dbprintf("\n==INFIX==\n",0);
       dbprintf("==%s==", infix = infix_from_rpn());
+#endif
       dbprintf("\n\n",0);
       
       // Generate the QCode from the tree output, but only on pass 2
@@ -6348,11 +6355,12 @@ void dbpfq(const char *caller, char *fmt, ...)
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Translate an OPL proigram
+// Translate an OPL program
 //
+////////////////////////////////////////////////////////////////////////////////
 
 
-int nopl_trans(int argc, char *argv[])
+int nopl_trans(char *filename)
 {
   FIL *fp  = NULL;
   FIL *vfp = NULL;
@@ -6361,7 +6369,8 @@ int nopl_trans(int argc, char *argv[])
 
   ptfp = fopen("parse_text.txt",  "w");
   exfp = fopen("expressions.txt", "w");
-  shfp = fopen("shunting.txt",    "w");  
+  shfp = fopen("shunting.txt",    "w");
+  
   parser_check();
 
   // Perform two passes of translation and qcode generation
@@ -6372,12 +6381,12 @@ int nopl_trans(int argc, char *argv[])
       dbprintf("********************************************************************************");
       
       // Open file and process on a line by line basis
-      fp = fopen(argv[1], "r");
+      fp = fopen(filename, "r");
       
       if( fp == NULL )
 	{
-	  ff_fprintf(ofp, "\nCould not open '%s'", argv[1]);
-	  printf("\nCould not open '%s'", argv[1]);
+	  ff_fprintf(ofp, "\nCould not open '%s'", filename);
+	  printf("\nCould not open '%s'", filename);
 	  exit(-1);
 	}
 
@@ -6395,7 +6404,7 @@ int nopl_trans(int argc, char *argv[])
   set_qcode_header_byte_at(size_of_qcode_idx+1, 1, qcode_len &  0xFF);
 
   dump_exp_buffer(ofp, 2);
-  dump_qcode_data(argv[1]);
+  dump_qcode_data(filename);
   dump_cond_fixup();
   
   fclose(chkfp);

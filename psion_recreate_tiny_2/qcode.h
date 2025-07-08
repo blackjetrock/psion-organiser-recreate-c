@@ -388,7 +388,7 @@ typedef struct _QCODE_DESC
   char *desc;  
 } QCODE_DESC;
 
-extern QCODE_DESC qcode_decode[];
+extern const QCODE_DESC qcode_decode[];
 
 ////////////////////////////////////////////////////////////////////////////////
 

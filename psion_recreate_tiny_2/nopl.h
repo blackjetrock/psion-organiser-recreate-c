@@ -1,11 +1,11 @@
 #undef TUI
 
 
-#define MAX_NOPL_LINE         256
-#define PRT_MAX_LINE          400
+#define MAX_NOPL_LINE         80
+#define PRT_MAX_LINE          80
 #define NOPL_MAX_LABEL         12
 #define NOPL_MAX_SUFFIX_BYTES   8
-#define MAX_COND_FIXUP        400
+#define MAX_COND_FIXUP        100
 #define MAX_NOPL_MENU_SELS     16
 
 #include <stdio.h>
@@ -39,6 +39,8 @@ void ff_fprintf(FIL *fp, char *fmt, ...);
 #endif
 
 #include "newopl_exec.h"
+#include "newopl_trans.h"
+
 #include "newopl_lib.h"
 
 #include "qcode.h"

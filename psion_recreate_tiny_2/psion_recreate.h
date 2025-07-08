@@ -1,5 +1,10 @@
 #include "match.h"
 
+// Optional translation from RPN to infix as a debug help. Uses a
+// lot of RAM so small platforms don't do this
+
+#define INFIX_FROM_RPN 0
+
 typedef uint8_t BYTE;
 typedef unsigned int uint;
 typedef uint16_t u_int16_t;

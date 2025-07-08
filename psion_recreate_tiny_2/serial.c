@@ -975,6 +975,26 @@ void ic_runx(char *str, char *fmt)
   run_unmount();
 }
 
+void ic_trans(char *str, char *fmt)
+{
+  char arg[100];
+  char opl_fn[100];
+
+  printf("\n%s\n", str);
+  sscanf(str,  fmt, &arg);
+  sprintf(opl_fn, "%s", arg);
+
+  printf("\nTranslating %s", opl_fn);
+  
+  // Mount the SD card and translate the OPL file
+  run_mount();
+  run_cd("/");
+
+  nopl_trans(opl_fn);
+  
+  run_unmount();
+}
+
 void ic_mount(char *str, char *fmt)
 {
   run_mount();
@@ -1113,6 +1133,7 @@ struct _IC_CMD
    {"mkdir",      "mkdir",           ic_mkdir},
    {"runx",       "runx",            ic_runx},
    {"run",        "run %s",          ic_run},
+   {"trans",      "trans %s",        ic_trans},
 
    {"cat",        "cat %s",          ic_cat},
    {"r",          "r %d",            ic_recno},

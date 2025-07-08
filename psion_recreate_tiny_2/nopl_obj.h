@@ -6,13 +6,14 @@
 #define NOPL_CONFIG_FORCE_VARS_UPPERCASE 1
 
 #define NOPL_MAX_TOKEN           80
-#define NOPL_MAX_OP_STACK        200
-#define NOPL_MAX_LOCAL           128
-#define NOPL_MAX_GLOBAL          128
+#define NOPL_MAX_OP_STACK        30
+#define NOPL_MAX_LOCAL           16
+#define NOPL_MAX_GLOBAL          16
+#define MAX_TYPE_CHECK_STACK  50
 
 #define NOPL_MAX_FIELDS          16
 
-#define MAX_QCODE_HEADER         60000
+#define MAX_QCODE_HEADER         20000
 #define NOBJ_TRUE                0xFFFF
 #define NOBJ_FALSE               0x0000
 
@@ -204,7 +205,7 @@ typedef struct _NOBJ_VAR_INFO
   uint16_t offset;    // Offset from FP
 } NOBJ_VAR_INFO;
 
-#define MAX_VAR_INFO  300
+#define MAX_VAR_INFO  50
 
 typedef struct _NOBJ_COND_INFO
 {
@@ -215,7 +216,7 @@ typedef struct _NOBJ_COND_INFO
 
 typedef struct _OP_STACK_ENTRY
 {
-  char                    name[256];  // Needs to be large as we put string literals here
+  char                    name[16];  // Needs to be large as we put string literals here
   int                     buf_id;
   NOBJ_INT                integer;
 
@@ -243,10 +244,9 @@ typedef struct _OP_STACK_ENTRY
 
 #define MAX_EXP_BUF_P   20
 
-
 typedef struct _EXP_BUFFER_ENTRY
 {
-  char name[255];
+  char name[16];
   OP_STACK_ENTRY op;
   int node_id;               // Node ID of this entry
   int p_idx;                 // Number of pointers back to argument nodes

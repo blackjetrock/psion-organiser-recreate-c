@@ -1243,8 +1243,6 @@ void calculate_var_offsets(void)
   //
 }
 
-uint8_t qcode_header[MAX_QCODE_HEADER];
-
 // We need not generate any qcode on the first pass
 // That pass is only generating a full variable table, including externals
 

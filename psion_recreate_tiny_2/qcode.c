@@ -18,7 +18,7 @@ FIL *lprintfp = NULL;
 
 //------------------------------------------------------------------------------
 
-QC_BYTE_CODE qc_byte_code[] =
+const QC_BYTE_CODE qc_byte_code[] =
   {
    
     {"v",      null_qc_byte_len_fn_2,      qc_byte_prt_fn_v},
@@ -3176,7 +3176,7 @@ void qca_dow(NOBJ_MACHINE *m, NOBJ_QCS *s)
   push_machine_16(m, time_dow(d, mo, y));
 }
 
-char *dayname[7] =
+const char *dayname[7] =
   {
     "Mon",
     "Tue",
@@ -3253,7 +3253,7 @@ void qca_days(NOBJ_MACHINE *m, NOBJ_QCS *s)
   push_machine_num(m, &num_diff);
 }
 
-char *mname[12] =
+const char *mname[12] =
   {
     "JAN",    
     "FEB",    
@@ -3531,7 +3531,7 @@ void qca_rtf_std(NOBJ_MACHINE *m, NOBJ_QCS *s)
 //
 //
 
-NOBJ_QCODE_INFO qcode_info[] =
+const NOBJ_QCODE_INFO qcode_info[] =
   {
     { QI_INT_SIM_FP,     "QI_INT_SIM_FP",     {qca_fp,           qca_null,        qca_push_int_at_ind}},
     { QI_NUM_SIM_FP,     "QI_NUM_SIM_FP",     {qca_fp,           qca_null,        qca_num_ind_con}},
@@ -3777,7 +3777,7 @@ NOBJ_QCODE_INFO qcode_info[] =
 
 ////////////////////////////////////////////////////////////////////////////////
   
-QCODE_DESC qcode_decode[] =
+const QCODE_DESC qcode_decode[] =
   {
     //        Inline  Pull    Push
     //
