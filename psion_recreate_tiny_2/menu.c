@@ -1511,12 +1511,104 @@ void fac_add(void)
     {
       stack[i] = stack[i+1];
     }
+
+  fsp = 0;
+  
 }
 
 void fac_div(void)
 {
   printf("\nDiv\n");
   stack[0] = stack[0] / stack[1];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_mul(void)
+{
+  printf("\nDiv\n");
+  stack[0] = stack[0] * stack[1];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+
+void fac_minus(void)
+{
+  printf("\nDiv\n");
+  stack[0] = stack[0] - stack[1];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_sin(void)
+{
+  printf("\nDiv\n");
+  stack[0] = sin(stack[0]);
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_cos(void)
+{
+  printf("\nDiv\n");
+  stack[0] = cos(stack[0]);
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_tan(void)
+{
+  stack[0] = tan(stack[0]);
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_sqrt(void)
+{
+  stack[0] = sqrt(stack[0]);
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_chs(void)
+{
+  stack[0] = -stack[0];
 
   for(int i=1; i<MAX_STACK-1; i++)
     {
@@ -1535,7 +1627,14 @@ typedef struct
 FCMD_ENTRY fcmds[] =
   {
     {"+", fac_add},
+    {"-", fac_minus},
+    {"*", fac_mul},
     {"/", fac_div},
+    {"SIN", fac_sin},
+    {"COS", fac_cos},
+    {"TAN", fac_tan},
+    {"SQRT", fac_sqrt},
+    {"CHS", fac_chs},
   };
 
 #define NUM_FCMDS (sizeof(fcmds)/sizeof(FCMD_ENTRY))
@@ -1557,7 +1656,7 @@ void display_forth(char *v1)
   
   for(int i=0; i<MAX_STACK; i++)
     {
-      sprintf(forthbuf, "%e", stack[i]);
+      sprintf(forthbuf, "%g", stack[i]);
       printxy_str(0,i+1,forthbuf);
     }
 }

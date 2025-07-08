@@ -975,6 +975,8 @@ void ic_runx(char *str, char *fmt)
   run_unmount();
 }
 
+#if OPL_TRANSLATOR
+
 void ic_trans(char *str, char *fmt)
 {
   char arg[100];
@@ -994,6 +996,7 @@ void ic_trans(char *str, char *fmt)
   
   run_unmount();
 }
+#endif
 
 void ic_mount(char *str, char *fmt)
 {
@@ -1133,8 +1136,10 @@ struct _IC_CMD
    {"mkdir",      "mkdir",           ic_mkdir},
    {"runx",       "runx",            ic_runx},
    {"run",        "run %s",          ic_run},
+#if OPL_TRANSLATOR
    {"trans",      "trans %s",        ic_trans},
-
+#endif
+   
    {"cat",        "cat %s",          ic_cat},
    {"r",          "r %d",            ic_recno},
   };

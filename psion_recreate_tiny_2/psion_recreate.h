@@ -4,6 +4,7 @@
 // lot of RAM so small platforms don't do this
 
 #define INFIX_FROM_RPN 0
+#define OPL_TRANSLATOR  0
 
 typedef uint8_t BYTE;
 typedef unsigned int uint;
