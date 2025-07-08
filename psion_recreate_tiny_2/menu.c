@@ -1519,7 +1519,7 @@ void fac_add(void)
 void fac_div(void)
 {
   printf("\nDiv\n");
-  stack[0] = stack[0] / stack[1];
+  stack[0] = stack[1] / stack[0];
 
   for(int i=1; i<MAX_STACK-1; i++)
     {
@@ -1546,7 +1546,7 @@ void fac_mul(void)
 void fac_minus(void)
 {
   printf("\nDiv\n");
-  stack[0] = stack[0] - stack[1];
+  stack[0] = stack[1] - stack[0];
 
   for(int i=1; i<MAX_STACK-1; i++)
     {
@@ -1597,23 +1597,20 @@ void fac_tan(void)
 void fac_sqrt(void)
 {
   stack[0] = sqrt(stack[0]);
-
-  for(int i=1; i<MAX_STACK-1; i++)
-    {
-      stack[i] = stack[i+1];
-    }
-  
-  fsp = 0;
 }
 
 void fac_chs(void)
 {
   stack[0] = -stack[0];
+}
 
-  for(int i=1; i<MAX_STACK-1; i++)
-    {
-      stack[i] = stack[i+1];
-    }
+void fac_swp(void)
+{
+  double t;
+
+  t = stack[0];
+  stack[0] = stack[1];
+  stack[1] = t;
 }
 
 typedef void (*FCMD_ACTION)(void);
@@ -1635,6 +1632,7 @@ FCMD_ENTRY fcmds[] =
     {"TAN", fac_tan},
     {"SQRT", fac_sqrt},
     {"CHS", fac_chs},
+    {"SWP", fac_swp},
   };
 
 #define NUM_FCMDS (sizeof(fcmds)/sizeof(FCMD_ENTRY))
@@ -1672,6 +1670,108 @@ void execute_cmd(char *cmd)
     }
 }
 
+void move_stack_up(void)
+{
+  for(int i=MAX_STACK-1; i>0; i--)
+    {
+      stack[i] = stack[i-1];
+    }
+}
+
+// Parse the expression using a state machine
+
+void cpa_neg_num(char c)
+{
+}
+
+void cpa_minus(char c)
+{
+}
+
+void cpa_num_dig(char c)
+{
+}
+
+void cpa_null(char c)
+{
+}
+
+
+typedef void (*CP_ACTION)(char c);
+
+typedef struct _CP_STATE
+{
+  char *c;            // Character in string  _ is '\0'
+  CP_ACTION action;   // NULL if none
+  struct _CP_STATE *next_state;
+} CP_STATE;
+
+CP_STATE *current_state;
+
+CP_STATE cps_neg[];
+CP_STATE cps_in_num[];
+
+// Start state
+CP_STATE cps_init[] =
+  {
+    { "-",           cpa_null,     &(cps_neg[0]) },   // minus, could be number or operator
+    { "",            cpa_null,     NULL},
+  };
+
+CP_STATE cps_neg[] =
+  {
+    {"0123456789e.", cpa_neg_num,  &(cps_in_num[0])},
+    {" ",            cpa_minus,    &(cps_init[0])},
+    {"_",            cpa_minus,    &(cps_init[0])},
+  };
+
+CP_STATE cps_in_num[] =
+  {
+    {"0123456789e.", cpa_num_dig,   &(cps_in_num[0])},
+    {" ",            cpa_minus,     &(cps_init[0])},
+  };
+
+void forth_eval_fsm(char *e)
+{
+  current_state = &(cps_init[0]);
+  CP_STATE *cps = current_state;
+  
+  int done = 0;
+  
+  while( !done )
+    {
+      char ch = *e;
+      
+      // Process current state
+      if( *e == '\0' )
+        {
+          ch = '_';
+
+          // Exit after processing the _
+          done = 1;
+        }
+      else
+        {
+          ch = *e;
+        }
+
+      while( strlen(cps->c) != 0 )
+        {
+          if( strchr(cps->c, ch) != NULL )
+            {
+              if( cps->action != NULL )
+                {
+                  (cps->action)(ch);
+                }
+
+              current_state = cps->next_state;
+            }
+        }
+
+      e++;
+    }
+}
+
 void forth_eval(char *e)
 {
   char num[50];
@@ -1706,7 +1806,8 @@ void forth_eval(char *e)
 
           if( strlen(e) == 1 )
             {
-              sscanf(num, "%lf", &(stack[fsp++]));
+              move_stack_up();
+              sscanf(num, "%lf", &(stack[0]));
               printf("\nNum:%s", num);
               num[0] = '\0';
               isnum = 0;
@@ -1717,8 +1818,8 @@ void forth_eval(char *e)
           // Push numbers on stack or execute cmds
           if( isnum )
             {
-
-              sscanf(num, "%lf", &(stack[fsp++]));
+              move_stack_up();
+              sscanf(num, "%lf", &(stack[0]));
               printf("\nNum:%s", num);
               num[0] = '\0';
               isnum = 0;
