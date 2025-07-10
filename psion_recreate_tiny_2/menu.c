@@ -25,6 +25,8 @@
 
 #include "psion_recreate_all.h"
 
+#define CALC_FSM_DB 1
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Meta menu
@@ -1496,11 +1498,16 @@ void menu_hex(void)
 ////////////////////////////////////////////////////////////////////////////////
 //
 
-#define MAX_STACK 4
+#define MAX_STACK          4
+#define MAX_OPERATOR_LEN  10
+#define MAX_NUM_LEN       15
 
 char entry[200];
 double stack[MAX_STACK];
 int fsp = 0;
+double number;
+char str_num[MAX_NUM_LEN+1];
+char operator[MAX_OPERATOR_LEN+1];
 
 void fac_add(void)
 {
@@ -1678,14 +1685,70 @@ void move_stack_up(void)
     }
 }
 
+void cpa_conv_push_num(char c)
+{
+  sscanf(str_num, "%lf", &number);
+  move_stack_up();
+  stack[0] = number;
+}
+
+void cpa_push_num(char c)
+{
+  move_stack_up();
+  stack[0] = number;
+}
+
 // Parse the expression using a state machine
+
+void cfsm_status(void)
+{
+#if CALC_FSM_DB
+  printf("\nNumber   : %g", number);
+  printf("\nstr_num  : '%s'", str_num);
+  printf("\noperator : '%s'", operator);
+#endif
+}
+
+void cpa_num(char c)
+{
+  char frag[2] = " ";
+
+  frag[0] = c;
+  strcat(str_num, frag);
+  
+}
+
+void cpa_do_op(char c)
+{
+  execute_cmd(operator);
+
+  // Clear the entry
+  
+}
+
+void cpa_build_op(char c)
+{
+  char frag[2] = " ";
+
+  frag[0] = c;
+  strcat(operator, frag);
+  
+}
 
 void cpa_neg_num(char c)
 {
+  char frag[2] = " ";
+
+  frag[0] = c;
+  strcat(str_num, frag);
+  sprintf(str_num, "-%s", str_num);
+
+
 }
 
-void cpa_minus(char c)
+void cpa_do_minus(char c)
 {
+  execute_cmd("-");
 }
 
 void cpa_num_dig(char c)
@@ -1696,47 +1759,130 @@ void cpa_null(char c)
 {
 }
 
+#define EA_DB \
+  if( CALC_FSM_DB )               \
+    {  \
+  printf("\nEA_DB: %s\n", __FUNCTION__);  \
+    }
+
+void cpae_init(char c)
+{
+  EA_DB;
+  
+  number = 0.0;
+  operator[0] ='\0';
+  str_num[0] = '\0';
+}
+
+void cpae_in_num(char c)
+{
+  EA_DB;
+
+  printf("\nEA is %s", __FUNCTION__);
+}
+
+void cpae_in_op(char c)
+{
+  EA_DB;
+
+  printf("\nEA is %s", __FUNCTION__);
+}
+
+void cpae_neg(char c)
+{
+  EA_DB;
+  printf("\nEA is %s", __FUNCTION__);
+}
+
+void cpae_null(char c)
+{
+  EA_DB;
+}
 
 typedef void (*CP_ACTION)(char c);
 
+typedef struct _CP_STATE_ENTRY
+{
+  char             *c;            // Character in string  _ is '\0'
+  CP_ACTION        action;         // NULL if none
+  struct _CP_STATE *next_state;
+} CP_STATE_ENTRY;
+
 typedef struct _CP_STATE
 {
-  char *c;            // Character in string  _ is '\0'
-  CP_ACTION action;   // NULL if none
-  struct _CP_STATE *next_state;
+  char             *name;
+  CP_ACTION         entry_action;         // Executed on entry to state
+  CP_STATE_ENTRY    transition[5];
 } CP_STATE;
 
-CP_STATE *current_state;
 
-CP_STATE cps_neg[];
-CP_STATE cps_in_num[];
+CP_STATE cps_neg;
+CP_STATE cps_in_num;
+CP_STATE cps_in_op;
 
 // Start state
-CP_STATE cps_init[] =
+CP_STATE cps_init =
   {
-    { "-",           cpa_null,     &(cps_neg[0]) },   // minus, could be number or operator
-    { "",            cpa_null,     NULL},
+    "cps_init",
+    cpae_init,
+    {
+      { "-",                             cpa_null,     &cps_neg },   // minus, could be number or operator
+      {"0123456789e.",                   cpa_num,      &cps_in_num},
+      {"abcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
+      { "",                              cpa_null,     NULL},
+    }
   };
 
-CP_STATE cps_neg[] =
+CP_STATE cps_neg =
   {
-    {"0123456789e.", cpa_neg_num,  &(cps_in_num[0])},
-    {" ",            cpa_minus,    &(cps_init[0])},
-    {"_",            cpa_minus,    &(cps_init[0])},
+    "cps_neg",
+    cpae_neg,
+    {
+      {"0123456789e.", cpa_neg_num,  &cps_in_num},
+      {" ",            cpa_do_minus, &cps_init},
+      {"_",            cpa_do_minus, &cps_init},
+      { "",            cpa_null,     NULL},
+    }
   };
 
-CP_STATE cps_in_num[] =
+CP_STATE cps_in_num =
   {
-    {"0123456789e.", cpa_num_dig,   &(cps_in_num[0])},
-    {" ",            cpa_minus,     &(cps_init[0])},
+    "cps_in_num",
+    cpae_in_num,
+    {
+      {"0123456789e.", cpa_num_dig,   &cps_in_num},
+      {" ",            cpa_conv_push_num,  &cps_init},
+      {"_",            cpa_conv_push_num,  &cps_init},
+      { "",            cpa_null,     NULL},
+    }
   };
+
+CP_STATE cps_in_op =
+  {
+    "cps_in_op",
+    cpae_in_op,
+    {
+      {"0123456789.",                    cpa_build_op, &cps_in_op},
+      {"abcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
+      {" ",                              cpa_do_op,    &cps_init},
+      {"_",                              cpa_do_op,    &cps_init},
+      { "",                              cpa_null,     NULL},
+    }
+  };
+
+// Evaluate the entry string using an FSM to do the parsing.
+#define CALL_CUR_STATE_EA (current_state->entry_action)('\0')
 
 void forth_eval_fsm(char *e)
 {
-  current_state = &(cps_init[0]);
-  CP_STATE *cps = current_state;
-  
+  CP_STATE *current_state;
+  CP_STATE *last_state;
   int done = 0;
+  
+  current_state = &cps_init;
+  
+  // Just entered the state so cll the entry action
+  CALL_CUR_STATE_EA;
   
   while( !done )
     {
@@ -1747,7 +1893,7 @@ void forth_eval_fsm(char *e)
         {
           ch = '_';
 
-          // Exit after processing the _
+          // Exit after processing the end of line
           done = 1;
         }
       else
@@ -1755,17 +1901,50 @@ void forth_eval_fsm(char *e)
           ch = *e;
         }
 
-      while( strlen(cps->c) != 0 )
-        {
-          if( strchr(cps->c, ch) != NULL )
-            {
-              if( cps->action != NULL )
-                {
-                  (cps->action)(ch);
-                }
+      int i = 0;
 
-              current_state = cps->next_state;
+#if CALC_FSM_DB
+      printf("\nProcessing ch:'%c'", ch);
+#endif
+
+      while( strlen(current_state->transition[i].c) != 0 )
+        {
+          if( strchr(current_state->transition[i].c, ch) != NULL )
+            {
+#if CALC_FSM_DB
+              printf("\nAction");
+              cfsm_status();
+#endif
+
+              if( current_state->transition[i].action != NULL )
+                {
+#if CALC_FSM_DB
+              printf(" called");
+#endif
+                  (current_state->transition[i].action)(ch);
+                }
+              else
+                {
+#if CALC_FSM_DB
+              printf(" is NULL");
+#endif
+                }
+              
+              // Move states
+              last_state = current_state;
+              current_state = current_state->transition[i].next_state;
+
+              // If we have entered a new state then call entry action
+              if( last_state != current_state )
+                {
+#if CALC_FSM_DB
+                  printf("\nEntering state %s", current_state->name);
+#endif
+                  CALL_CUR_STATE_EA;
+                }
             }
+          
+          i++;
         }
 
       e++;
@@ -1856,7 +2035,7 @@ void forth_eval(char *e)
   entry[0] = '\0';
 }
 
-void menu_forth(void)
+void menu_forth_core(int type)
 {
   int done = 0;
   int v1=0, v2=0;
@@ -1899,7 +2078,19 @@ void menu_forth(void)
 
 	    case KEY_EXE:
               // Evaluate
-              forth_eval(entry);
+              switch(type)
+                {
+                case 1:
+                  forth_eval(entry);
+                  break;
+
+                case 2:
+                  forth_eval_fsm(entry);
+                  break;
+                }
+
+              // Clear the entry just processed
+              entry[0] = '\0';
 	      break;
 	      
 	    case KEY_DEL:
@@ -1916,6 +2107,17 @@ void menu_forth(void)
 	}
     }
 }
+
+void menu_calc1(void)
+{
+  menu_forth_core(1);
+}
+
+void menu_calc2(void)
+{
+  menu_forth_core(2);
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -2261,7 +2463,8 @@ MENU menu_calc =
    init_menu_calc,   
    {
     {KEY_ON, "",        menu_back},
-    {'F', "Forth",      menu_forth},
+    {'C', "Calc",       menu_calc1},
+    {'F', "FSM xCalc",  menu_calc2},
     {'&', "",           menu_null},
    }
   };
