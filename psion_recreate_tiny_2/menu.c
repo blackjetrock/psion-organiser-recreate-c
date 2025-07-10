@@ -1828,7 +1828,7 @@ CP_STATE cps_init =
     {
       { "-",                             cpa_null,     &cps_neg },   // minus, could be number or operator
       {"0123456789e.",                   cpa_num,      &cps_in_num},
-      {"abcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
+      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
       { "",                              cpa_null,     NULL},
     }
   };
@@ -1850,7 +1850,7 @@ CP_STATE cps_in_num =
     "cps_in_num",
     cpae_in_num,
     {
-      {"0123456789e.", cpa_num_dig,   &cps_in_num},
+      {"0123456789e.", cpa_num,            &cps_in_num},
       {" ",            cpa_conv_push_num,  &cps_init},
       {"_",            cpa_conv_push_num,  &cps_init},
       { "",            cpa_null,     NULL},
@@ -1863,7 +1863,7 @@ CP_STATE cps_in_op =
     cpae_in_op,
     {
       {"0123456789.",                    cpa_build_op, &cps_in_op},
-      {"abcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
+      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
       {" ",                              cpa_do_op,    &cps_init},
       {"_",                              cpa_do_op,    &cps_init},
       { "",                              cpa_null,     NULL},
