@@ -1507,6 +1507,7 @@ double stack[MAX_STACK];
 int fsp = 0;
 double number;
 char str_num[MAX_NUM_LEN+1];
+char str_num2[MAX_NUM_LEN+1];
 char operator[MAX_OPERATOR_LEN+1];
 
 void fac_add(void)
@@ -1741,8 +1742,8 @@ void cpa_neg_num(char c)
 
   frag[0] = c;
   strcat(str_num, frag);
-  sprintf(str_num, "-%s", str_num);
-
+  sprintf(str_num2, "-%s", str_num);
+  strcpy(str_num, str_num2);
 
 }
 
@@ -1851,6 +1852,7 @@ CP_STATE cps_in_num =
     cpae_in_num,
     {
       {"0123456789e.", cpa_num,            &cps_in_num},
+      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
       {" ",            cpa_conv_push_num,  &cps_init},
       {"_",            cpa_conv_push_num,  &cps_init},
       { "",            cpa_null,     NULL},
@@ -1887,7 +1889,7 @@ void forth_eval_fsm(char *e)
   while( !done )
     {
       char ch = *e;
-      
+
       // Process current state
       if( *e == '\0' )
         {
@@ -2464,7 +2466,7 @@ MENU menu_calc =
    {
     {KEY_ON, "",        menu_back},
     {'C', "Calc",       menu_calc1},
-    {'F', "FSM xCalc",  menu_calc2},
+    {'F', "FSM Calc",   menu_calc2},
     {'&', "",           menu_null},
    }
   };

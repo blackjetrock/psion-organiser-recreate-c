@@ -1,6 +1,10 @@
 set(PROJECT psion_recreate_ctusb)
 cmake_minimum_required(VERSION 3.12)
 #set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
+
+# set for pico board
+set(PICO_BOARD pico CACHE STRING "Board type")
+
 set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
@@ -9,6 +13,7 @@ project(${PROJECT} C CXX ASM)
 pico_sdk_init()
 
 add_subdirectory(../no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
+#add_subdirectory(../no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src build)
 
 add_executable(${PROJECT}
     main.c
@@ -73,10 +78,10 @@ target_link_libraries(${PROJECT}
     tinyusb_board
     tinyusb_device
     FatFs_SPI
+    #no-OS-FatFS-SD-SDIO-SPI-RPi-Pico
   )
 
-
-  #target_link_libraries(_my_app_ FatFs_SPI)
+#target_link_libraries(_my_app_ FatFs_SPI)
 
 pico_add_extra_outputs(${PROJECT})
 pico_enable_stdio_usb(${PROJECT} 1)
