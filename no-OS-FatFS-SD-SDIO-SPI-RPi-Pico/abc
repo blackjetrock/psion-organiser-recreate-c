@@ -1,0 +1,9 @@
+bool my_spi_init(spi_t *spi_p) {
+    auto_init_mutex(my_spi_init_mutex);
+    mutex_enter_blocking(&my_spi_init_mutex);
+        spi_init(spi_p->hw_inst, 1000 * 1000);
+    mutex_exit(&my_spi_init_mutex);
+bool my_spi_init(spi_t *spi_p);
+DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
+    sd_card_p->init = sd_card_spi_init;
+                    if (!my_spi_init(sd_card_p->spi_if_p->spi)) {
