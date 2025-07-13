@@ -204,8 +204,8 @@ static bool crc_on = true;
 static bool crc_on = false;
 #endif
 
-#define TRACE_PRINTF(fmt, args...)
-//#define TRACE_PRINTF DBG_PRINTF
+//#define TRACE_PRINTF(fmt, args...)
+#define TRACE_PRINTF printf
 
 /**
  * @brief Control Tokens
@@ -1408,6 +1408,8 @@ static block_dev_err_t sd_init_medium(sd_card_t *sd_card_p) {
     // + CS Asserted("0")
     if (in_sd_go_idle_state(sd_card_p) != R1_IDLE_STATE) {
         EMSG_PRINTF("No disk, or could not put SD card in to SPI idle state\n");
+                printf("\nq 1\n");
+
         return SD_BLOCK_DEVICE_ERROR_NO_DEVICE;
     }
 
@@ -1415,6 +1417,7 @@ static block_dev_err_t sd_init_medium(sd_card_t *sd_card_p) {
     // legacy protocol, or is a MMC, or just flat-out broken
     status = sd_cmd8(sd_card_p);
     if (SD_BLOCK_DEVICE_ERROR_NONE != status && SD_BLOCK_DEVICE_ERROR_UNSUPPORTED != status) {
+                printf("\nq 2\n");
         return status;
     }
 
@@ -1429,12 +1432,15 @@ static block_dev_err_t sd_init_medium(sd_card_t *sd_card_p) {
     // Read OCR - CMD58 Response contains OCR register
     if (SD_BLOCK_DEVICE_ERROR_NONE !=
         (status = sd_cmd(sd_card_p, CMD58_READ_OCR, 0x0, false, &response))) {
+                printf("\nq 3\n");
         return status;
     }
     // Check if card supports voltage range: 3.3V
     if (!(response & OCR_3_3V)) {
         sd_card_p->state.card_type = CARD_UNKNOWN;
         status = SD_BLOCK_DEVICE_ERROR_UNUSABLE;
+                        printf("\nq 4\n");
+
         return status;
     }
 
@@ -1456,6 +1462,8 @@ static block_dev_err_t sd_init_medium(sd_card_t *sd_card_p) {
     if ((SD_BLOCK_DEVICE_ERROR_NONE != status) || (0x00 != response)) {
         sd_card_p->state.card_type = CARD_UNKNOWN;
         EMSG_PRINTF("Timeout waiting for card\n");
+                        printf("\nq 5\n");
+
         return status;
     }
 
@@ -1597,20 +1605,27 @@ static bool sd_spi_test_com(sd_card_t *sd_card_p) {
 DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
     TRACE_PRINTF("> %s\n", __FUNCTION__);
 
+    printf("\n%s\n", __FUNCTION__);
+    
     // Acquire the lock
     sd_lock(sd_card_p);
 
     // Check if there's a card in the socket before proceeding
     sd_card_detect(sd_card_p);
+
     if (sd_card_p->state.m_Status & STA_NODISK) {
         // Release the lock and return the current status
         sd_unlock(sd_card_p);
+
+        printf("\nr 1\n");
         return sd_card_p->state.m_Status;
     }
     // Check if we're not already initialized before proceeding
     if (!(sd_card_p->state.m_Status & STA_NOINIT)) {
         // Release the lock and return the current status
         sd_unlock(sd_card_p);
+        printf("\nr 2\n");
+
         return sd_card_p->state.m_Status;
     }
 
@@ -1619,18 +1634,24 @@ DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
 
     // Acquire the SD card
     sd_spi_acquire(sd_card_p);
-
+    
     // Initialize the medium
     int err = sd_init_medium(sd_card_p);
-    if (SD_BLOCK_DEVICE_ERROR_NONE != err) {
+    if (SD_BLOCK_DEVICE_ERROR_NONE != err)
+      {
         EMSG_PRINTF("Failed to initialize card\n");
         sd_release(sd_card_p);
+        printf("\nr 3\n");
+        
         return sd_card_p->state.m_Status;
-    }
+      }
+    
     // No support for SDSC Card (CCS=0) with byte unit address
     if (SDCARD_V2HC != sd_card_p->state.card_type) {
         EMSG_PRINTF("SD Standard Capacity Memory Card unsupported\n");
         sd_release(sd_card_p);
+                printf("\nr 4\n");
+
         return sd_card_p->state.m_Status;
     }
 
@@ -1644,17 +1665,23 @@ DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
     if (0 == sd_card_p->state.sectors) {
         // CMD9 failed
         sd_release(sd_card_p);
+                printf("\nr 5\n");
+
         return sd_card_p->state.m_Status;
     }
     // Get the CID of the card
     if (SD_BLOCK_DEVICE_ERROR_NONE != sd_cmd(sd_card_p, CMD10_SEND_CID, 0x0, false, 0)) {
         DBG_PRINTF("Didn't get a response from the disk\n");
         sd_release(sd_card_p);
+                printf("\nr 6\n");
+
         return sd_card_p->state.m_Status;
     }
     if (read_bytes(sd_card_p, (uint8_t *)&sd_card_p->state.CID, sizeof(CID_t)) != 0) {
         DBG_PRINTF("Couldn't read CID response from disk\n");
         sd_release(sd_card_p);
+                printf("\nr 7\n");
+
         return sd_card_p->state.m_Status;
     }
 
@@ -1663,6 +1690,8 @@ DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
         sd_cmd(sd_card_p, CMD16_SET_BLOCKLEN, sd_block_size, false, 0)) {
         DBG_PRINTF("Set %u-byte block timed out\n", sd_block_size);
         sd_release(sd_card_p);
+                printf("\nr 8\n");
+
         return sd_card_p->state.m_Status;
     }
 

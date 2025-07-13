@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "tulip.h"
+//#include "tulip.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -34,8 +34,8 @@ specific language governing permissions and limitations under the License.
 //
 #include "sd_card.h"
 
-#define TRACE_PRINTF(fmt, args...)
-// #define TRACE_PRINTF printf
+//#define TRACE_PRINTF(fmt, args...)
+#define TRACE_PRINTF printf
 
 #ifdef NDEBUG 
 #  pragma GCC diagnostic ignored "-Wunused-variable"
@@ -58,24 +58,33 @@ bool sd_is_locked(sd_card_t *sd_card_p) {
     return !mutex_try_enter(&sd_card_p->state.mutex, &owner_out);
 }
 
-sd_card_t *sd_get_by_drive_prefix(const char *const drive_prefix) {
-    // Numeric drive number is always valid
-    if (2 == strlen(drive_prefix) && isdigit((unsigned char)drive_prefix[0]) &&
-        ':' == drive_prefix[1])
-        return sd_get_by_num(atoi(drive_prefix));
-#if FF_STR_VOLUME_ID
-    for (size_t i = 0; i < sd_get_num(); ++i) {
-        // Ignore '/', trailing ':'
-        if (strstr(drive_prefix, VolumeStr[i])) return sd_get_by_num(i);
+sd_card_t *sd_get_by_drive_prefix(const char *const drive_prefix)
+{
+  // Numeric drive number is always valid
+  if (2 == strlen(drive_prefix) &&
+      isdigit((unsigned char)drive_prefix[0]) &&
+      ':' == drive_prefix[1])
+    {
+      return sd_get_by_num(atoi(drive_prefix));
     }
-    EMSG_PRINTF("%s: unknown drive prefix %s\n", __func__, drive_prefix);
+  
+#if FF_STR_VOLUME_ID
+  for (size_t i = 0; i < sd_get_num(); ++i)
+    {
+      // Ignore '/', trailing ':'
+      if (strstr(drive_prefix, VolumeStr[i])) return sd_get_by_num(i);
+    }
+
+  EMSG_PRINTF("%s: unknown drive prefix %s\n", __func__, drive_prefix);
 #endif
-    return NULL;
+  return NULL;
 }
 
 /* Return non-zero if the SD-card is present. */
 bool sd_card_detect(sd_card_t *sd_card_p) {
-    TRACE_PRINTF("> %s\r\n", __FUNCTION__);
+
+  TRACE_PRINTF("> %s\r\n", __FUNCTION__);
+    
     if (!sd_card_p->use_card_detect) {
         sd_card_p->state.m_Status &= ~STA_NODISK;
         return true;

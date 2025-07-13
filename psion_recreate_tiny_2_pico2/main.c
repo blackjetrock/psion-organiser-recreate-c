@@ -275,6 +275,18 @@ void opl_task(void)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// If the card is physically removed, unmount the filesystem:
+static volatile bool card_det_int_pend;
+static volatile uint card_det_int_gpio;
+
+static void card_detect_callback(uint gpio, uint32_t events) {
+    (void)events;
+    // This is actually an interrupt service routine!
+    card_det_int_gpio = gpio;
+    card_det_int_pend = true;
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 int main(void) {
 
@@ -376,9 +388,28 @@ int main(void) {
   
   board_init();
   tusb_init();
-
+#if 0
+  sd_init_driver();
   sdcard_init();
+#endif
 
+#if 0
+  for (size_t i = 0; i < sd_get_num(); ++i)
+    {
+      sd_card_t *sd_card_p = sd_get_by_num(i);
+      if (!sd_card_p) 
+        continue;
+      if (sd_card_p->use_card_detect)
+        {
+          // Set up an interrupt on Card Detect to detect removal of the card
+          // when it happens:
+          gpio_set_irq_enabled_with_callback(
+                                             sd_card_p->card_detect_gpio, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
+                                             true, &card_detect_callback);
+        }
+    }
+#endif
+  
 #if 1
   core1_init();
   clear_oled();
@@ -410,7 +441,13 @@ int main(void) {
   dd_init(DD_I2C_SSD);
 #endif
 
+  // Implicitly called by disk_initialize,
+  // but called here to set up the GPIOs
+  // before enabling the card detect interrupt:
+  sd_init_driver();
+
   printf("\nInit done");
+
   
   //sleep_ms(3000);
   dd_clear();

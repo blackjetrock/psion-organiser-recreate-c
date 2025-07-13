@@ -7,6 +7,7 @@
 /* storage control modules to the FatFs module with a defined API.       */
 /*-----------------------------------------------------------------------*/
 
+#include <stdio.h>
 #include "ff.h"			/* Obtains integer types */
 #include "diskio.h"		/* Declarations of disk functions */
 
@@ -64,7 +65,8 @@ DSTATUS disk_initialize (
 {
 	DSTATUS stat;
 	int result;
-
+xxxx
+        printf("\nP di  \n");
 	switch (pdrv) {
 	case DEV_RAM :
 		result = RAM_disk_initialize();
@@ -74,6 +76,7 @@ DSTATUS disk_initialize (
 		return stat;
 
 	case DEV_MMC :
+          printf("\nP MMC\n");
 		result = MMC_disk_initialize();
 
 		// translate the reslut code here
@@ -87,6 +90,7 @@ DSTATUS disk_initialize (
 
 		return stat;
 	}
+        printf("\nP2\n");
 	return STA_NOINIT;
 }
 

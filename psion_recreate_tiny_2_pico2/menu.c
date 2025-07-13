@@ -233,11 +233,17 @@ void menu_goto_rtc(void)
 
 void menu_test_file(void)
 {
+  size_t argc = 0;
+  const char *argv_null[10] = {0}; // Arbitrary limit of 10 arguments
+  const char *argv[10] = {0}; // Arbitrary limit of 10 arguments
+  
   // Open and read the file 'TEST.TXT' in the root directory of the SD card
-  run_mount();
-  run_cd("/");
-  run_cat("TEST.TXT");
-  run_unmount();
+  run_mount(0, argv_null);
+  run_cd(argc, argv);
+  argc = 1;
+  argv[0]  = "TEST.TXT";
+  run_cat(argc, argv);
+  run_unmount(0, argv_null);
 }
 
 void menu_epos_test(void)

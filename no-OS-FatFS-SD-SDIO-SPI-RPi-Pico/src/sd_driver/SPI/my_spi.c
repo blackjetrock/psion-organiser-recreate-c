@@ -20,7 +20,7 @@ specific language governing permissions and limitations under the License.
 #include "hardware/spi.h"
 #include "hardware/structs/clocks.h"
 //#include "hardware/structs/dma_debug.h"
-#include "tulip.h"
+//#include "tulip.h"
 #include "pico/mutex.h"
 #include "pico/platform.h"
 #include "pico/stdlib.h"

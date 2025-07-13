@@ -17,6 +17,10 @@
 
 #include "psion_recreate_all.h"
 
+size_t argc = 0;
+const char *argv_null[10] = {0}; // Arbitrary limit of 10 arguments
+const char *argv[10] = {0}; // Arbitrary limit of 10 arguments
+
 int keypress = 0;
 int parameter = 0;
 unsigned int address = 0;
@@ -381,9 +385,10 @@ void cli_itf(void)
 void cli_ls(void)
 {
   printf("\nSD Card Listing:\n");
-  run_mount();
-  ls("/");
-  run_unmount();
+  run_mount(0, argv_null);
+  argv[0] = "/";
+  run_ls(1, argv);
+  run_unmount(0, argv_null);
 }
 
 
@@ -435,12 +440,14 @@ void cli_dump_fl_pack(void)
 
 void cli_test_ob3(void)
 {
-  run_mount();
-  run_cd("/");
+  run_mount(0, argv_null);
+  argv[0] = "/";
+
+  run_cd(1, argv);
 
   nopl_exec("HW.OB3");
   
-  run_unmount();
+  run_unmount(0, argv_null);
 
 }
 
@@ -821,7 +828,7 @@ void ic_writefile(char *str, char *fmt)
   FF_FILE *fp;
   
   printf("\nWriting file\n");
-  run_mount();
+  run_mount(0, argv_null);
   fp = ff_fopen("testfile.txt", "a+");
 
   if( fp == NULL )
@@ -851,7 +858,7 @@ void ic_writefile(char *str, char *fmt)
     }
   
   ff_fclose (fp);
-  run_unmount();
+  run_unmount(0, argv_null);
 }
 
 void ic_write(char *str, char *fmt)
@@ -924,7 +931,8 @@ void ic_ls(char *str, char *fmt)
 
   sscanf(str,  fmt, &arg);
 
-  ls(arg);
+  argv[0] = arg;
+  run_ls(1, argv);
 }
 
 void ic_cat(char *str, char *fmt)
@@ -933,7 +941,8 @@ void ic_cat(char *str, char *fmt)
 
   sscanf(str,  fmt, &arg);
 
-  run_cat(arg);
+  argv[0] = "/";
+  run_cat(1, argv);
 }
 
 
@@ -949,12 +958,13 @@ void ic_run(char *str, char *fmt)
   printf("\nRunning %s", ob3_fn);
   
   // Mount the SD card and run the OB3
-  run_mount();
-  run_cd("/");
+  run_mount(0, argv_null);
+  argv[0] = "/";
+  run_cd(1, argv);
 
   nopl_exec(ob3_fn);
   
-  run_unmount();
+  run_unmount(0, argv_null);
 }
 
 void ic_runx(char *str, char *fmt)
@@ -967,12 +977,13 @@ void ic_runx(char *str, char *fmt)
   printf("\nRunning %s", ob3_fn);
   
   // Mount the SD card and run the OB3
-  run_mount();
-  run_cd("/");
+  run_mount(0, argv_null);
+  argv[0] = "/";
+  run_cd(1, argv);
 
   nopl_exec(ob3_fn);
   
-  run_unmount();
+  run_unmount(0, argv_null);
 }
 
 #if OPL_TRANSLATOR
@@ -989,23 +1000,26 @@ void ic_trans(char *str, char *fmt)
   printf("\nTranslating %s", opl_fn);
   
   // Mount the SD card and translate the OPL file
-  run_mount();
-  run_cd("/");
+  run_mount(0, argv_null);
+  argv[0] = "/";
+  run_cd(1, argv);
 
   nopl_trans(opl_fn);
   
-  run_unmount();
+  run_unmount(0, argv_null);
 }
 #endif
 
 void ic_mount(char *str, char *fmt)
 {
-  run_mount();
+  argv[0] = "0:";
+  run_mount(1, argv);
 }
 
-void ic_getfree(char *str, char *fmt)
+void ic_info(char *str, char *fmt)
 {
-  run_getfree();
+  //f_getfree();
+  run_info(0, argv_null);
 }
 
 void ic_mkdir(char *str, char *fmt)
@@ -1013,7 +1027,8 @@ void ic_mkdir(char *str, char *fmt)
   char arg[1200];
   
   sscanf(str, fmt, arg);
-  run_mkdir(arg);
+  argv[0] = arg;
+  run_mkdir(1, argv);
 }
 
 void ic_cd(char *str, char *fmt)
@@ -1021,12 +1036,13 @@ void ic_cd(char *str, char *fmt)
   char arg[1200];
   
   sscanf(str, fmt, arg);
-  run_cd(arg);
+  argv[0] = arg;
+  run_cd(1, argv);
 }
 
 void ic_unmount(char *str, char *fmt)
 {
-  run_unmount();
+  run_unmount(0, argv_null);
 }
 
 void ic_next(char *str, char *fmt)
@@ -1131,7 +1147,7 @@ struct _IC_CMD
    {"ls",         "ls %s",           ic_ls},
    {"mount",      "mount",           ic_mount},
    {"unmount",    "unmount",         ic_unmount},
-   {"getfree",    "getfree",         ic_getfree},
+   {"info",       "info",            ic_info},
    {"cd",         "cd",              ic_cd},
    {"mkdir",      "mkdir",           ic_mkdir},
    {"runx",       "runx",            ic_runx},

@@ -20,6 +20,7 @@
 
 
 #include <string.h>
+#include <stdio.h>
 #include "ff.h"			/* Declarations of FatFs API */
 #include "diskio.h"		/* Declarations of device I/O functions */
 
@@ -3396,7 +3397,8 @@ static FRESULT mount_volume (	/* FR_OK(0): successful, !=0: an error occurred */
 	WORD nrsv;
 	UINT fmt;
 
-
+        printf("\n%s\n", __FUNCTION__);
+        
 	/* Get logical drive number */
 	*rfs = 0;
 	vol = get_ldnumber(path);
@@ -3425,10 +3427,16 @@ static FRESULT mount_volume (	/* FR_OK(0): successful, !=0: an error occurred */
 	/* Following code attempts to mount the volume. (find an FAT volume, analyze the BPB and initialize the filesystem object) */
 
 	fs->fs_type = 0;					/* Invalidate the filesystem object */
-	stat = disk_initialize(fs->pdrv);	/* Initialize the volume hosting physical drive */
-	if (stat & STA_NOINIT) { 			/* Check if the initialization succeeded */
-		return FR_NOT_READY;			/* Failed to initialize due to no medium or hard error */
-	}
+        printf("\nfspdrv %d\n", fs->pdrv);
+        
+        stat = disk_initialize(fs->pdrv);	/* Initialize the volume hosting physical drive */
+
+        if (stat & STA_NOINIT)
+          { 			/* Check if the initialization succeeded */
+            printf("\nPA\n");
+            return FR_NOT_READY;			/* Failed to initialize due to no medium or hard error */
+          }
+        
 	if (!FF_FS_READONLY && mode && (stat & STA_PROTECT)) { /* Check disk write protection if needed */
 		return FR_WRITE_PROTECTED;
 	}

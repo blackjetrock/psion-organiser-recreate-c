@@ -1,8 +1,23 @@
+#include <assert.h>
+#include <ctype.h>
+#include <malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <stdint.h>
+#include <time.h>
+
 typedef uint8_t u_int8_t;
 typedef uint16_t u_int16_t;
 typedef uint64_t u_int64_t;
 typedef unsigned int uint;
+
+//#include "hardware/adc.h"
+#include "hardware/clocks.h" 
+#include "pico/aon_timer.h"
+#include "pico/stdio.h"
+#include "pico/stdlib.h"
+#include "pico/time.h"
 
 #include "psion_recreate.h"
 
@@ -40,5 +55,9 @@ typedef unsigned int uint;
 
 #include "sysvar.h"
 
-#include "sdcard.h"
-
+//#include "sdcard.h"
+#include "f_util.h"
+#include "hw_config.h"
+//#include "sd_card.h"
+#include "diskio.h" /* Declarations of disk functions */
+#include "sd_card_utils.h"

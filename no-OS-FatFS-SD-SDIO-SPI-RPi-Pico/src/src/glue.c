@@ -53,13 +53,28 @@ DSTATUS disk_initialize(
     TRACE_PRINTF(">>> %s\n", __FUNCTION__);
 
     bool ok = sd_init_driver();
-    if (!ok) return RES_NOTRDY;
+    if (!ok)
+      {
+        printf("\n**** \n");
+        
+        return RES_NOTRDY;
+      }
 
+    printf("\nok1 \n");
     sd_card_t *sd_card_p = sd_get_by_num(pdrv);
-    if (!sd_card_p) return RES_PARERR;
+    if (!sd_card_p)
+      {
+        printf("\n*4* \n");
+        return RES_PARERR;
+      }
+    
     DSTATUS ds = disk_status(pdrv);
-    if (STA_NODISK & ds) 
+    if (STA_NODISK & ds)
+      {
+        printf("\n*5* \n");
         return ds;
+      }
+    
     // See http://elm-chan.org/fsw/ff/doc/dstat.html
     return sd_card_p->init(sd_card_p);  
 }

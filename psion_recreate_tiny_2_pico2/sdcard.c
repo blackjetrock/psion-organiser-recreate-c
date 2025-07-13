@@ -17,6 +17,8 @@
 // Hardware Configuration of SPI "objects"
 // Note: multiple SD cards can be driven by one SPI if they use different slave
 // selects.
+static volatile bool card_det_int_pend;
+static volatile uint card_det_int_gpio;
 
  spi_t spis[] = {  // One for each SPI.
     {
@@ -138,6 +140,15 @@ FATFS *sd_get_fs_by_name(const char *name) {
     return NULL;
 }
 #endif
+
+// If the card is physically removed, unmount the filesystem:
+static void card_detect_callback(uint gpio, uint32_t events) {
+    (void)events;
+    // This is actually an interrupt service routine!
+    card_det_int_gpio = gpio;
+    card_det_int_pend = true;
+}
+
 #if 0
 // If the card is physically removed, unmount the filesystem:
  void card_detect_callback(uint gpio, uint32_t events) {
@@ -182,9 +193,12 @@ void run_mount(void) {
     }
     sd_card_p->state.mounted = true;
 }
-static void run_unmount(const size_t argc, const char *argv[]) {
-    const char *arg = chk_dflt_log_drv(argc, argv);
-    if (!arg)
+
+void run_unmount(void) {
+  //    const char *arg = chk_dflt_log_drv(argc, argv);
+  const char *arg = "0:";
+  
+  if (!arg)
         return;
 
     sd_card_t *sd_card_p = sd_get_by_drive_prefix(arg);
@@ -252,6 +266,7 @@ void run_unmount() {
 }
 #endif
 
+#if 0
 void ls(const char *dir)
 {
   char cwdbuf[FF_LFN_BUF] = {0};
@@ -321,6 +336,95 @@ void ls(const char *dir)
     }
   f_closedir(&dj);
 }
+
+
+#endif
+
+void run_info(void)
+{
+  //    const char *arg = chk_dflt_log_drv(argc, argv);
+  const char *arg = "0:";
+  
+    if (!arg)
+        return;
+    sd_card_t *sd_card_p = sd_get_by_drive_prefix(arg);
+    if (!sd_card_p) {
+        printf("Unknown logical drive id: \"%s\"\n", arg);
+        return;
+    }
+    int ds = sd_card_p->init(sd_card_p);
+    if (STA_NODISK & ds || STA_NOINIT & ds) {
+        printf("SD card initialization failed\n");
+        return;
+    }
+    // Card IDendtification register. 128 buts wide.
+    cidDmp(sd_card_p, printf);
+    // Card-Specific Data register. 128 bits wide.
+    csdDmp(sd_card_p, printf);
+    
+    // SD Status
+    size_t au_size_bytes;
+    bool ok = sd_allocation_unit(sd_card_p, &au_size_bytes);
+    if (ok)
+        printf("\nSD card Allocation Unit (AU_SIZE) or \"segment\": %zu bytes (%zu sectors)\n", 
+            au_size_bytes, au_size_bytes / sd_block_size);
+    
+    if (!sd_card_p->state.mounted) {
+        printf("Drive \"%s\" is not mounted\n", arg);
+        return;
+    }
+
+    /* Get volume information and free clusters of drive */
+    FATFS *fs_p = &sd_card_p->state.fatfs;
+    if (!fs_p) {
+        printf("Unknown logical drive id: \"%s\"\n", arg);
+        return;
+    }
+    DWORD fre_clust, fre_sect, tot_sect;
+    FRESULT fr = f_getfree(arg, &fre_clust, &fs_p);
+    if (FR_OK != fr) {
+        printf("f_getfree error: %s (%d)\n", FRESULT_str(fr), fr);
+        return;
+    }
+    /* Get total sectors and free sectors */
+    tot_sect = (fs_p->n_fatent - 2) * fs_p->csize;
+    fre_sect = fre_clust * fs_p->csize;
+    /* Print the free space (assuming 512 bytes/sector) */
+    printf("\n%10lu KiB (%lu MiB) total drive space.\n%10lu KiB (%lu MiB) available.\n",
+           tot_sect / 2, tot_sect / 2 / 1024,
+           fre_sect / 2, fre_sect / 2 / 1024);
+
+#if FF_USE_LABEL
+    // Report label:
+    TCHAR buf[34] = {};/* [OUT] Volume label */
+    DWORD vsn;         /* [OUT] Volume serial number */
+    fr = f_getlabel(arg, buf, &vsn);
+    if (FR_OK != fr) {
+        printf("f_getlabel error: %s (%d)\n", FRESULT_str(fr), fr);
+        return;
+    } else {
+        printf("\nVolume label: %s\nVolume serial number: %lu\n", buf, vsn);
+    }
+#endif
+
+    // Report format
+    //printf("\nFilesystem type: %s\n", fs_type_string(fs_p->fs_type));
+
+    // Report Partition Starting Offset
+    // uint64_t offs = fs_p->volbase;
+    // printf("Partition Starting Offset: %llu sectors (%llu bytes)\n",
+    //         offs, offs * sd_block_size);
+	printf("Volume base sector: %llu\n", fs_p->volbase);		
+	printf("FAT base sector: %llu\n", fs_p->fatbase);		
+	printf("Root directory base sector (FAT12/16) or cluster (FAT32/exFAT): %llu\n", fs_p->dirbase);		 
+	printf("Data base sector: %llu\n", fs_p->database);		
+
+    // Report cluster size ("allocation unit")
+    printf("FAT Cluster size (\"allocation unit\"): %d sectors (%llu bytes)\n",
+           fs_p->csize,
+           (uint64_t)sd_card_p->state.fatfs.csize * FF_MAX_SS);
+}
+
 #if 0
  void run_getfree() {
    const char *arg1;
@@ -416,7 +520,7 @@ void run_cat(char *filename)
 
 void sdcard_init(void)
 {
-  
+#if 0
   for (size_t i = 0; i < sd_get_num(); ++i)
     {
       sd_card_t *pSD = sd_get_by_num(i);
@@ -424,9 +528,31 @@ void sdcard_init(void)
         {
           // Set up an interrupt on Card Detect to detect removal of the card
           // when it happens:
-          gpio_set_irq_enabled_with_callback(pSD->card_detect_gpio, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &card_detect_callback);
+          //gpio_set_irq_enabled_with_callback(pSD->card_detect_gpio, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &card_detect_callback);
+          gpio_set_irq_enabled_with_callback(sd_card_p->card_detect_gpio, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &card_detect_callback);
         }
     }
+#endif
+
+    for (size_t i = 0; i < sd_get_num(); ++i) {
+        sd_card_t *sd_card_p = sd_get_by_num(i);
+        if (!sd_card_p)
+            continue;
+        if (sd_card_p->card_detect_gpio == card_det_int_gpio) {
+            if (sd_card_p->state.mounted) {
+                DBG_PRINTF("(Card Detect Interrupt: unmounting %s)\n", sd_get_drive_prefix(sd_card_p));
+                FRESULT fr = f_unmount(sd_get_drive_prefix(sd_card_p));
+                if (FR_OK == fr) {
+                    sd_card_p->state.mounted = false;
+                } else {
+                    printf("f_unmount error: %s (%d)\n", FRESULT_str(fr), fr);
+                }
+            }
+            sd_card_p->state.m_Status |= STA_NOINIT;  // in case medium is removed
+            sd_card_detect(sd_card_p);
+        }
+    }
+
   
 #if 0
     for (;;) {  // Super Loop
@@ -441,3 +567,77 @@ void sdcard_init(void)
     }
 #endif
 }
+
+bool sd_init_driver() {
+    auto_init_mutex(initialized_mutex);
+    mutex_enter_blocking(&initialized_mutex);
+    bool ok = true;
+    if (!driver_initialized) {
+        myASSERT(sd_get_num());
+        for (size_t i = 0; i < sd_get_num(); ++i) {
+            sd_card_t *sd_card_p = sd_get_by_num(i);
+            if (!sd_card_p) continue;
+
+            myASSERT(sd_card_p->type);
+
+            if (!mutex_is_initialized(&sd_card_p->state.mutex))
+                mutex_init(&sd_card_p->state.mutex);
+            sd_lock(sd_card_p);
+
+            sd_card_p->state.m_Status = STA_NOINIT;
+
+            sd_set_drive_prefix(sd_card_p, i);
+
+            // Set up Card Detect
+            if (sd_card_p->use_card_detect) {
+                if (sd_card_p->card_detect_use_pull) {
+                    if (sd_card_p->card_detect_pull_hi) {
+                        gpio_pull_up(sd_card_p->card_detect_gpio);
+                    } else {
+                        gpio_pull_down(sd_card_p->card_detect_gpio);
+                    }
+                }
+                gpio_init(sd_card_p->card_detect_gpio);
+            }
+
+            switch (sd_card_p->type) {
+                case SD_IF_NONE:
+                    myASSERT(false);
+                    break;
+                case SD_IF_SPI:
+                    myASSERT(sd_card_p->spi_if_p);  // Must have an interface object
+                    myASSERT(sd_card_p->spi_if_p->spi);
+                    sd_spi_ctor(sd_card_p);
+                    if (!my_spi_init(sd_card_p->spi_if_p->spi)) {
+                        ok = false;
+                    }
+                    /* At power up the SD card CD/DAT3 / CS  line has a 50KOhm pull up enabled
+                     * in the card. This resistor serves two functions Card detection and Mode
+                     * Selection. For Mode Selection, the host can drive the line high or let it
+                     * be pulled high to select SD mode. If the host wants to select SPI mode it
+                     * should drive the line low.
+                     *
+                     * There is an important thing needs to be considered that the MMC/SDC is
+                     * initially NOT the SPI device. Some bus activity to access another SPI
+                     * device can cause a bus conflict due to an accidental response of the
+                     * MMC/SDC. Therefore the MMC/SDC should be initialized to put it into the
+                     * SPI mode prior to access any other device attached to the same SPI bus.
+                     */
+                    sd_go_idle_state(sd_card_p);
+                    break;
+                case SD_IF_SDIO:
+                    myASSERT(sd_card_p->sdio_if_p);
+                    sd_sdio_ctor(sd_card_p);
+                    break;
+                default:
+                    myASSERT(false);
+            }  // switch (sd_card_p->type)
+
+            sd_unlock(sd_card_p);
+        }  // for
+        driver_initialized = true;
+    }
+    mutex_exit(&initialized_mutex);
+    return ok;
+}
+

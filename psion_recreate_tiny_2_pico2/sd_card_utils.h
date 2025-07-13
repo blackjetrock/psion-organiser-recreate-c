@@ -1,0 +1,9 @@
+void run_info(const size_t argc, const char *argv[]);
+void run_date(const size_t argc, const char *argv[]);
+void run_info(const size_t argc, const char *argv[]);
+void run_mount(const size_t argc, const char *argv[]);
+void run_cd(const size_t argc, const char *argv[]);
+void run_cat(const size_t argc, const char *argv[]);
+void run_unmount(const size_t argc, const char *argv[]);
+void run_mkdir(const size_t argc, const char *argv[]);
+void run_ls(const size_t argc, const char *argv[]);

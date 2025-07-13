@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 3.12)
 #set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
 
 # set for pico board
-set(PICO_BOARD pico2 CACHE STRING "Board type")
+# set(PICO_BOARD pico2 CACHE STRING "Board type")
+set(PICO_BOARD pimoroni_pico_plus2_rp2350 CACHE STRING "Board type")
 
 set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
@@ -46,7 +47,7 @@ add_executable(${PROJECT}
     ssd1351.c
     oled_er_oledm015_2.c
     display_driver.c
-    sdcard.c
+   # sdcard.c
     newopl_lib.c
     newopl_types.c 
     qcode.c 
@@ -67,6 +68,8 @@ add_executable(${PROJECT}
     nopl_exec.c
     parser.c
     nopl_trans.c
+    sd_card_utils.c
+    hw_config.c
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}
@@ -88,6 +91,9 @@ target_link_libraries(${PROJECT}
     pico_stdlib
     pico_multicore
     pico_unique_id
+    hardware_spi
+    hardware_clocks
+    hardware_dma
     tinyusb_board
     tinyusb_device
     #FatFs_SPI
