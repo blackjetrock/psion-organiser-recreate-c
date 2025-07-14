@@ -27,8 +27,8 @@ specific language governing permissions and limitations under the License.
 //
 #include "diskio.h" /* Declarations of disk functions */
 
-#define TRACE_PRINTF(fmt, args...)
-//#define TRACE_PRINTF printf  // task_printf
+//#define TRACE_PRINTF(fmt, args...)
+#define TRACE_PRINTF printf  // task_printf
 
 /*-----------------------------------------------------------------------*/
 /* Get Drive Status                                                      */
@@ -74,6 +74,8 @@ DSTATUS disk_initialize(
         printf("\n*5* \n");
         return ds;
       }
+
+    printf("\nExiting ok...\n");
     
     // See http://elm-chan.org/fsw/ff/doc/dstat.html
     return sd_card_p->init(sd_card_p);  

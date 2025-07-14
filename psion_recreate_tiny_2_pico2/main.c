@@ -385,7 +385,16 @@ int main(void) {
   //  gpio_put(PIN_SDAIN,  1);
   gpio_put(PIN_SCLKIN, 1);
 
-  
+
+  gpio_init(22);
+  gpio_set_dir(22, GPIO_OUT);
+  gpio_init(18);
+  gpio_set_dir(18, GPIO_OUT);
+  gpio_init(19);
+  gpio_set_dir(19, GPIO_OUT);
+  gpio_init(16);
+  gpio_set_dir(16, GPIO_IN);
+
   board_init();
   tusb_init();
 #if 0

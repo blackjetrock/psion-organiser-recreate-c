@@ -15,6 +15,7 @@ endif()
 cmake_minimum_required(VERSION 3.5)
 
 set(PICO_BOARD pico2 CACHE STRING "Board type")
+#set(PICO_BOARD pico CACHE STRING "Board type")
 
 # Pull in Pico SDK (must be before project)
 include(pico_sdk_import.cmake)

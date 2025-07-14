@@ -42,92 +42,6 @@ tab "Dev Brd", for pin assignments assumed in this configuration file.
 //
 #include "hw_config.h"
 
-#if 0
-/* SDIO Interfaces */
-/*
-Pins CLK_gpio, D1_gpio, D2_gpio, and D3_gpio are at offsets from pin D0_gpio.
-The offsets are determined by sd_driver\SDIO\rp2040_sdio.pio.
-    CLK_gpio = (D0_gpio + SDIO_CLK_PIN_D0_OFFSET) % 32;
-    As of this writing, SDIO_CLK_PIN_D0_OFFSET is 30,
-        which is -2 in mod32 arithmetic, so:
-    CLK_gpio = D0_gpio -2.
-    D1_gpio = D0_gpio + 1;
-    D2_gpio = D0_gpio + 2;
-    D3_gpio = D0_gpio + 3;
-*/
-static sd_sdio_if_t sdio_ifs[] = {
-    {   // sdio_ifs[0]
-        .CMD_gpio = 3,
-        .D0_gpio = 4,
-        /* GPIO reset drive strength is 4 mA.
-         * When set_drive_strength is true,
-         * the drive strength is set to 2 mA unless otherwise specified. */
-        .set_drive_strength = true,
-        .CLK_gpio_drive_strength = GPIO_DRIVE_STRENGTH_12MA,
-        .CMD_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D0_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D1_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D2_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D3_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .SDIO_PIO = pio1,
-        .DMA_IRQ_num = DMA_IRQ_1,
-        // .baud_rate = 125 * 1000 * 1000 / 8  // 15625000 Hz
-        // .baud_rate = 125 * 1000 * 1000 / 7  // 17857143 Hz
-        // .baud_rate = 125 * 1000 * 1000 / 6  // 20833333 Hz
-        // .baud_rate = 125 * 1000 * 1000 / 5  // 25000000 Hz
-        .baud_rate = 125 * 1000 * 1000 / 4  // 31250000 Hz
-    },
-    {   // sdio_ifs[1]
-        .CMD_gpio = 17,
-        .D0_gpio = 18,
-        .set_drive_strength = true,
-        .CLK_gpio_drive_strength = GPIO_DRIVE_STRENGTH_12MA,
-        .CMD_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D0_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D1_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D2_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .D3_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .DMA_IRQ_num = DMA_IRQ_1,
-        // .baud_rate = 125 * 1000 * 1000 / 8  // 15625000 Hz
-        // .baud_rate = 125 * 1000 * 1000 / 7  // 17857143 Hz
-        .baud_rate = 125 * 1000 * 1000 / 6  // 20833333 Hz
-        // .baud_rate = 125 * 1000 * 1000 / 5  // 25000000 Hz
-        //.baud_rate = 125 * 1000 * 1000 / 4  // 31250000 Hz
-    }
-};
-
-/* Hardware Configuration of the SD Card "objects"
-    These correspond to SD card sockets
-*/
-static sd_card_t sd_cards[] = {  // One for each SD card
-    {   // sd_cards[0]
-        .type = SD_IF_SDIO,
-        .sdio_if_p = &sdio_ifs[0],  // Pointer to the SPI interface driving this card
-        // SD Card detect:
-        .use_card_detect = false,
-        .card_detect_gpio = 9,  
-        .card_detected_true = 0, // What the GPIO read returns when a card is
-                                 // present.
-        .card_detect_use_pull = true,
-        .card_detect_pull_hi = true                                 
-    },
-#if 0
-    {   // sd_cards[1]
-        .type = SD_IF_SDIO,
-        .sdio_if_p = &sdio_ifs[1], // Pointer to the interface driving this card
-        // SD Card detect:
-        .use_card_detect = true,
-        .card_detect_gpio = 22,  
-        .card_detected_true = 0, // What the GPIO read returns when a card is
-                                 // present.
-        .card_detect_use_pull = true,
-        .card_detect_pull_hi = true
-    }
-#endif
-};
-
-#endif
-
 spi_t spis[] = {  // One for each SPI.
     {
         // spis[0]
@@ -149,18 +63,6 @@ spi_t spis[] = {  // One for each SPI.
         .baud_rate = 125 * 1000 * 1000 / 10  // 20833333 Hz
         // .baud_rate = 125 * 1000 * 1000 / 4  // 31250000 Hz
 
-#if 0        
-        .hw_inst = spi0,  // SPI component
-        .sck_gpio = 18,  // GPIO number (not Pico pin number)
-        .mosi_gpio = 19,
-        .miso_gpio = 16,
-        .set_drive_strength = true,
-        .mosi_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-        .sck_gpio_drive_strength = GPIO_DRIVE_STRENGTH_2MA,
-
-        // .baud_rate = 25 * 1000 * 1000,  // Actual frequency: 20833333.
-        .baud_rate = 125E6 / 4,  
-#endif
         // .DMA_IRQ_num = DMA_IRQ_0
     }
 };
@@ -172,20 +74,6 @@ static sd_spi_if_t spi_ifs[] = {
         .set_drive_strength = true,
         .ss_gpio_drive_strength = GPIO_DRIVE_STRENGTH_2MA
     },
-#if 0
-    {   // spi_ifs[1]
-        .spi = &spis[1],   // Pointer to the SPI driving this card
-        .ss_gpio = 12,     // The SPI slave select GPIO for this SD card
-        .set_drive_strength = true,
-        .ss_gpio_drive_strength = GPIO_DRIVE_STRENGTH_2MA
-    },
-    {   // spi_ifs[2]
-        .spi = &spis[1],   // Pointer to the SPI driving this card
-        .ss_gpio = 13,     // The SPI slave select GPIO for this SD card
-        .set_drive_strength = true,
-        .ss_gpio_drive_strength = GPIO_DRIVE_STRENGTH_2MA
-    }
-#endif
 };
 
 // Hardware Configuration of the SD Card "objects"
@@ -200,20 +88,6 @@ static sd_spi_if_t spi_ifs[] = {
                                  // present.
         .card_detect_use_pull = true,
         .card_detect_pull_hi = true                                 
-#if 0
-        .pcName = "0:",  // Name used to mount device
-        .spi = &spis[0],  // Pointer to the SPI driving this card
-        .ss_gpio = 22,     // The SPI slave select GPIO for this SD card
-        
-        // .set_drive_strength = true,
-        // .ss_gpio_drive_strength = GPIO_DRIVE_STRENGTH_4MA,
-
-        // SD Card detect:
-        .use_card_detect = false,
-        .card_detect_gpio = 9,  
-        .card_detected_true = 0, // What the GPIO read returns when a card is
-                                 // present.
-#endif
     }
 };
 
