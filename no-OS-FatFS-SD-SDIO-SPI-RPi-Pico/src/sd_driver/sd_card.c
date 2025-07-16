@@ -83,8 +83,6 @@ sd_card_t *sd_get_by_drive_prefix(const char *const drive_prefix)
 /* Return non-zero if the SD-card is present. */
 bool sd_card_detect(sd_card_t *sd_card_p) {
 
-  TRACE_PRINTF("> %s\r\n", __FUNCTION__);
-    
     if (!sd_card_p->use_card_detect) {
         sd_card_p->state.m_Status &= ~STA_NODISK;
         return true;

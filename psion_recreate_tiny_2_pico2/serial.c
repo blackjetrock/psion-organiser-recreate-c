@@ -445,7 +445,11 @@ void cli_test_ob3(void)
 
   run_cd(1, argv);
 
-  nopl_exec("HW.OB3");
+  // Translate
+  nopl_trans("/HW2.OPL");
+  
+  // Run
+  nopl_exec("/HW2.OB3");
   
   run_unmount(0, argv_null);
 

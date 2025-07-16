@@ -104,6 +104,8 @@ NOBJ_VARTYPE convert_type_to_non_array(NOBJ_VARTYPE t);
 ////////////////////////////////////////////////////////////////////////////////
 
 //#define dbprintf(fmt,...) dbpf(__FUNCTION__, fmt, ...)
+//#define dbprintf(fmt,...) printf(fmt, ...)
+
 #define MAX_INDENT 30
 
 int indent_level = 0;
@@ -1602,7 +1604,7 @@ void output_qcode_for_line(void)
 	      if( i > (MAX_EXP_BUFFER-1) )
 		{
 		  internal_error("exp_buffer2 overflow");
-		  exit(-1);
+		  return;
 		}
 		
 	      if( exp_buffer2[i].op.buf_id == EXP_BUFF_ID_LOGICALFILE )
@@ -1618,7 +1620,7 @@ void output_qcode_for_line(void)
 	      if( i > (MAX_EXP_BUFFER-1) )
 		{
 		  internal_error("exp_buffer2 overflow");
-		  exit(-1);
+		  return;
 		}
 
 	      // Now add the field variables
@@ -1636,7 +1638,7 @@ void output_qcode_for_line(void)
 		  if( i > (MAX_EXP_BUFFER-1) )
 		    {
 		      internal_error("exp_buffer2 overflow");
-		      exit(-1);
+		      return;
 		    }
 		}
 	      
@@ -2127,7 +2129,7 @@ char *get_name(char *n, NOBJ_VARTYPE *t)
       if( i>=(NOBJ_VARNAME_MAXLEN-1) )
 	{
 	  internal_error("gn_str overflow");
-	  exit(-1);
+	  return("");
 	}
       
       gn_str[i++] = *gns_ptr;
@@ -2573,7 +2575,7 @@ void add_exp_buffer_entry(OP_STACK_ENTRY op, int id)
   if( exp_buffer_i >= (MAX_EXP_BUFFER-1) )
     {
       internal_error("exp buffer overflow");
-      exit(-1);
+      return;
     }
   
   exp_buffer[exp_buffer_i].op = op;
@@ -2587,7 +2589,7 @@ void add_exp_buffer2_entry(OP_STACK_ENTRY op, int id)
   if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
     {
       internal_error("exp buffer2 overflow");
-      exit(-1);
+      return;
     }
 
   exp_buffer2[exp_buffer2_i].op = op;
@@ -2732,7 +2734,7 @@ int insert_buf2_entry_after_node_id(int node_id, EXP_BUFFER_ENTRY e)
   if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
     {
       internal_error("exp buffer 2 overflow (insert)");
-      exit(-1);
+      return(-1);
     }
 
   dump_exp_buffer(ofp, 2);
@@ -2758,7 +2760,7 @@ int insert_buf2_entry_after_node_id(int node_id, EXP_BUFFER_ENTRY e)
 	  exp_buffer2_i++;
 
 	  dump_exp_buffer(ofp, 2);
-	  return(1);	  
+	  return(-1);	  
 	}
     }
   
@@ -2772,7 +2774,7 @@ int insert_buf2_entry_before_node_id(int node_id, EXP_BUFFER_ENTRY e)
   if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
     {
       internal_error("exp buffer 2 overflow (insert)");
-      exit(-1);
+      return(0);
     }
 
   dump_exp_buffer(ofp, 2);
@@ -3470,7 +3472,7 @@ void process_syntax_tree(void)
 	      if( vi == NULL )
 		{
 		  dbprintf("\nCould not find variable '%s'", be.name);
-		  exit(-1);
+		  return;
 		}
 	      
 	      if( var_type_is_array(vi->type) )
@@ -3670,7 +3672,7 @@ void process_syntax_tree(void)
 		  if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
 		    {
 		      internal_error("exp buffer 2 overflow numargs");
-		      exit(-1);
+		      return;
 		    }
 
 		  exp_buffer2[exp_buffer2_i++] = ft;
@@ -3684,7 +3686,7 @@ void process_syntax_tree(void)
 	      if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
 		{
 		  internal_error("exp buffer 2 overflow numargs");
-		  exit(-1);
+		  return;
 		}
 
 	      init_op_stack_entry(&(ft.op));
@@ -3727,7 +3729,7 @@ void process_syntax_tree(void)
 		  if( be.p_idx >= ( MAX_EXP_BUF_P-1) )
 		    {
 		      internal_error("Argument list full");
-		      exit(-1);
+		      return;
 		    }
 		  
 		  be.p[be.p_idx++] = op1.node_id;
@@ -3792,7 +3794,7 @@ void process_syntax_tree(void)
 	      if( be.p_idx >= ( MAX_EXP_BUF_P-1) )
 		{
 		  internal_error("Argument list full");
-		  exit(-1);
+		  return;
 		}
 
 	      // Add to list of arguments
@@ -4110,7 +4112,7 @@ void process_syntax_tree(void)
 	  if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
 	    {
 	      internal_error("exp buffer 2 overflow (insert)");
-	      exit(-1);
+	      return;
 	    }
 	  
 	  exp_buffer2[exp_buffer2_i++] = be;
@@ -4290,7 +4292,7 @@ void typecheck_expression(void)
 	      if( vi == NULL )
 		{
 		  dbprintf("\nCould not find variable '%s'", be.name);
-		  exit(-1);
+		  return;
 		}
 	      
 	      if( var_type_is_array(vi->type) )
@@ -4671,7 +4673,7 @@ void typecheck_expression(void)
 		  if( be.p_idx >= ( MAX_EXP_BUF_P-1) )
 		    {
 		      internal_error("Argument list full");
-		      exit(-1);
+		      return;
 		    }
 
 		  be.p[be.p_idx++] = op1.node_id;
@@ -4775,7 +4777,7 @@ void typecheck_expression(void)
 	      if( be.p_idx >= ( MAX_EXP_BUF_P-1) )
 		{
 		  internal_error("Argument list full");
-		  exit(-1);
+		  return;
 		}
 
 	      be.p[be.p_idx++] = op1.node_id;
@@ -5166,7 +5168,7 @@ void typecheck_expression(void)
 	  if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
 	    {
 	      internal_error("exp buffer 2 overflow (insert)");
-	      exit(-1);
+	      return;
 	    }
 
 	  exp_buffer2[exp_buffer2_i++] = be;
@@ -5205,7 +5207,7 @@ void typecheck_expression(void)
 	  if( exp_buffer2_i >= (MAX_EXP_BUFFER-1) )
 	    {
 	      internal_error("exp buffer 2 overflow (insert)");
-	      exit(-1);
+	      return;
 	    }
 
 	  exp_buffer2[exp_buffer2_i++] = be;
@@ -6272,6 +6274,9 @@ void translate_file(FIL *fp, FIL *ofp)
 
   while( 1 )
     {
+      // Keep things alive
+      tight_loop_tasks();
+
       if( !scan_line(levels) )
 	{
 	  dbprintf("Scan line failed");
@@ -6364,15 +6369,24 @@ int nopl_trans(char *filename)
 {
   FIL *fp  = NULL;
   FIL *vfp = NULL;
+
+  printf("\n%s:A\n", __FUNCTION__);
   
   init_output();
 
+  printf("\n%s:B\n", __FUNCTION__);
+  
   ptfp = fopen("parse_text.txt",  "w");
   exfp = fopen("expressions.txt", "w");
   shfp = fopen("shunting.txt",    "w");
-  
+
+  printf("\n%s:C\n", __FUNCTION__);
+    
   parser_check();
 
+  printf("\n%s:D\n", __FUNCTION__);
+
+  
   // Perform two passes of translation and qcode generation
   for(pass_number = 1; pass_number<=2; pass_number++)
     {
@@ -6387,7 +6401,7 @@ int nopl_trans(char *filename)
 	{
 	  ff_fprintf(ofp, "\nCould not open '%s'", filename);
 	  printf("\nCould not open '%s'", filename);
-	  exit(-1);
+	  return(-1);
 	}
 
       translate_file(fp, ofp);

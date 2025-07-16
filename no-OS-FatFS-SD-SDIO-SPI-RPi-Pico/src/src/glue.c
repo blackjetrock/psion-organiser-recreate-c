@@ -36,7 +36,6 @@ specific language governing permissions and limitations under the License.
 
 DSTATUS disk_status(BYTE pdrv /* Physical drive number to identify the drive */
 ) {
-    TRACE_PRINTF(">>> %s\n", __FUNCTION__);
     sd_card_t *sd_card_p = sd_get_by_num(pdrv);
     if (!sd_card_p) return RES_PARERR;
     sd_card_detect(sd_card_p);   // Fast: just a GPIO read
@@ -50,8 +49,6 @@ DSTATUS disk_status(BYTE pdrv /* Physical drive number to identify the drive */
 DSTATUS disk_initialize(
     BYTE pdrv /* Physical drive number to identify the drive */
 ) {
-    TRACE_PRINTF(">>> %s\n", __FUNCTION__);
-
     bool ok = sd_init_driver();
     if (!ok)
       {
@@ -113,7 +110,6 @@ DRESULT disk_read(BYTE pdrv,  /* Physical drive number to identify the drive */
                   LBA_t sector, /* Start sector in LBA */
                   UINT count    /* Number of sectors to read */
 ) {
-    TRACE_PRINTF(">>> %s\n", __FUNCTION__);
     sd_card_t *sd_card_p = sd_get_by_num(pdrv);
     if (!sd_card_p) return RES_PARERR;
     int rc = sd_card_p->read_blocks(sd_card_p, buff, sector, count);
@@ -131,7 +127,6 @@ DRESULT disk_write(BYTE pdrv, /* Physical drive number to identify the drive */
                    LBA_t sector,     /* Start sector in LBA */
                    UINT count        /* Number of sectors to write */
 ) {
-    TRACE_PRINTF(">>> %s\n", __FUNCTION__);
     sd_card_t *sd_card_p = sd_get_by_num(pdrv);
     if (!sd_card_p) return RES_PARERR;
     int rc = sd_card_p->write_blocks(sd_card_p, buff, sector, count);
@@ -148,7 +143,6 @@ DRESULT disk_ioctl(BYTE pdrv, /* Physical drive number (0..) */
                    BYTE cmd,  /* Control code */
                    void *buff /* Buffer to send/receive control data */
 ) {
-    TRACE_PRINTF(">>> %s\n", __FUNCTION__);
     sd_card_t *sd_card_p = sd_get_by_num(pdrv);
     if (!sd_card_p) return RES_PARERR;
     switch (cmd) {

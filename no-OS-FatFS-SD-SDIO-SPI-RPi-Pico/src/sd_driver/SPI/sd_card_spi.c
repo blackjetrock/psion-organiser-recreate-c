@@ -1605,8 +1605,6 @@ static bool sd_spi_test_com(sd_card_t *sd_card_p) {
 DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
     TRACE_PRINTF("> %s\n", __FUNCTION__);
 
-    printf("\n%s\n", __FUNCTION__);
-    
     // Acquire the lock
     sd_lock(sd_card_p);
 
@@ -1616,16 +1614,12 @@ DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
     if (sd_card_p->state.m_Status & STA_NODISK) {
         // Release the lock and return the current status
         sd_unlock(sd_card_p);
-
-        printf("\nr 1\n");
         return sd_card_p->state.m_Status;
     }
     // Check if we're not already initialized before proceeding
     if (!(sd_card_p->state.m_Status & STA_NOINIT)) {
         // Release the lock and return the current status
         sd_unlock(sd_card_p);
-        printf("\nr 2\n");
-
         return sd_card_p->state.m_Status;
     }
 
@@ -1641,8 +1635,6 @@ DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
       {
         EMSG_PRINTF("Failed to initialize card\n");
         sd_release(sd_card_p);
-        printf("\nr 3\n");
-        
         return sd_card_p->state.m_Status;
       }
     
@@ -1650,8 +1642,6 @@ DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
     if (SDCARD_V2HC != sd_card_p->state.card_type) {
         EMSG_PRINTF("SD Standard Capacity Memory Card unsupported\n");
         sd_release(sd_card_p);
-                printf("\nr 4\n");
-
         return sd_card_p->state.m_Status;
     }
 
@@ -1665,8 +1655,6 @@ DSTATUS sd_card_spi_init(sd_card_t *sd_card_p) {
     if (0 == sd_card_p->state.sectors) {
         // CMD9 failed
         sd_release(sd_card_p);
-                printf("\nr 5\n");
-
         return sd_card_p->state.m_Status;
     }
     // Get the CID of the card
