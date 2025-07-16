@@ -13,8 +13,9 @@ if (EXISTS ${picoVscode})
 endif()
 # ====================================================================================
 cmake_minimum_required(VERSION 3.5)
-
-set(PICO_BOARD pico2 CACHE STRING "Board type")
+set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
+set(PICO_BOARD pimoroni_pico_plus2_rp2350 CACHE STRING "Board type")
+#set(PICO_BOARD pico2 CACHE STRING "Board type")
 #set(PICO_BOARD pico CACHE STRING "Board type")
 
 # Pull in Pico SDK (must be before project)

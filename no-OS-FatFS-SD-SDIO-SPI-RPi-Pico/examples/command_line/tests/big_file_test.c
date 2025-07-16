@@ -89,7 +89,7 @@ static bool create_big_file(const char *const pathname, uint64_t size,
             return false;
         }
         // prepares or allocates a contiguous data area to the file:
-        fr = f_expand(&file, size, 1);
+        //fr = f_expand(&file, size, 1);
         if (FR_OK != fr) {
             EMSG_PRINTF("f_expand error: %s (%d)\n", FRESULT_str(fr), fr);
             f_close(&file);

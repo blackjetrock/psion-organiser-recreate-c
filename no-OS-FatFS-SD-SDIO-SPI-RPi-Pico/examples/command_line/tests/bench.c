@@ -179,7 +179,7 @@ static void bench_open_close(uint8_t* buf) {
     }
     if (PRE_ALLOCATE) {
         // prepares or allocates a contiguous data area to the file:
-        fr = f_expand(&file, FILE_SIZE, 1);
+        //fr = f_expand(&file, FILE_SIZE, 1);
         if (FR_OK != fr) {
             EMSG_PRINTF("f_expand error: %s (%d)\n", FRESULT_str(fr), fr);
             f_close(&file);

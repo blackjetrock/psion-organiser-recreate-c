@@ -446,10 +446,10 @@ void cli_test_ob3(void)
   run_cd(1, argv);
 
   // Translate
-  nopl_trans("/HW2.OPL");
+  nopl_trans("HW2.OPL");
   
   // Run
-  nopl_exec("/HW2.OB3");
+  nopl_exec("HW2.OB3");
   
   run_unmount(0, argv_null);
 
@@ -945,7 +945,7 @@ void ic_cat(char *str, char *fmt)
 
   sscanf(str,  fmt, &arg);
 
-  argv[0] = "/";
+  argv[0] = arg;
   run_cat(1, argv);
 }
 

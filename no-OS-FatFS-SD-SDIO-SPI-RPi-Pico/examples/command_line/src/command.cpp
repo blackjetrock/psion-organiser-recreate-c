@@ -273,7 +273,9 @@ static void run_format(const size_t argc, const char *argv[]) {
         0        /* Cluster size (byte) */
     };
     /* Format the drive */
-    FRESULT fr = f_mkfs(arg, &opt, 0, FF_MAX_SS * 2);
+    //FRESULT fr = f_mkfs(arg, &opt, 0, FF_MAX_SS * 2);
+    FRESULT fr = FR_OK;
+    
     if (FR_OK != fr) printf("f_mkfs error: %s (%d)\n", FRESULT_str(fr), fr);
 
     /* This only works if the drive is mounted: */

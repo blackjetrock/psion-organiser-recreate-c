@@ -365,6 +365,8 @@ void run_mount(const size_t argc, const char *argv[])
         extra_argument_msg(argv[1]);
         return;
     }
+    printf("\n ls '%s'", argv[0]);
+    
     if (argc)
         ls(argv[0]);
     else
@@ -380,16 +382,25 @@ void run_mount(const size_t argc, const char *argv[])
     else
         printf("%s", buf);
 }
- void run_cat(const size_t argc, const char *argv[]) {
-    if (!expect_argc(argc, argv, 1)) return;
 
-    FIL fil;
-    FRESULT fr = f_open(&fil, argv[0], FA_READ);
-    if (FR_OK != fr) {
-        printf("f_open error: %s (%d)\n", FRESULT_str(fr), fr);
-        return;
+void run_cat(const size_t argc, const char *argv[]) {
+  
+  if (!expect_argc(argc, argv, 1))
+    {
+      return;
     }
-    char buf[256];
+
+  printf("\nOpening '%s'", argv[0]);
+  
+  FIL fil;
+  FRESULT fr = f_open(&fil, argv[0], FA_READ);
+
+  if (FR_OK != fr)
+    {
+      printf("f_open error: %s (%d)\n", FRESULT_str(fr), fr);
+      return;
+    }
+  char buf[256];
     while (f_gets(buf, sizeof buf, &fil)) {
         printf("%s", buf);
     }

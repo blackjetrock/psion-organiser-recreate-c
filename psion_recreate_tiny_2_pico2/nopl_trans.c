@@ -6376,9 +6376,9 @@ int nopl_trans(char *filename)
 
   printf("\n%s:B\n", __FUNCTION__);
   
-  ptfp = fopen("parse_text.txt",  "w");
-  exfp = fopen("expressions.txt", "w");
-  shfp = fopen("shunting.txt",    "w");
+  ptfp = ff_fopen("parse_text.txt",  "w");
+  exfp = ff_fopen("expressions.txt", "w");
+  shfp = ff_fopen("shunting.txt",    "w");
 
   printf("\n%s:C\n", __FUNCTION__);
     
@@ -6395,7 +6395,7 @@ int nopl_trans(char *filename)
       dbprintf("********************************************************************************");
       
       // Open file and process on a line by line basis
-      fp = fopen(filename, "r");
+      fp = ff_fopen(filename, "r");
       
       if( fp == NULL )
 	{
