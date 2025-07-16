@@ -443,7 +443,7 @@ void cli_test_ob3(void)
   run_mount(0, argv_null);
   argv[0] = "/";
 
-  run_cd(1, argv);
+  //  run_cd(1, argv);
 
   // Translate
   nopl_trans("HW2.OPL");
@@ -949,6 +949,27 @@ void ic_cat(char *str, char *fmt)
   run_cat(1, argv);
 }
 
+
+void ic_trans_run(char *str, char *fmt)
+{
+  char arg[100];
+  char ob3_fn[100];
+
+  printf("\n%s\n", str);
+  sscanf(str,  fmt, &arg);
+  sprintf(ob3_fn, "%s", arg);
+
+  printf("\nRunning %s", ob3_fn);
+  
+  // Mount the SD card and run the OB3
+  run_mount(0, argv_null);
+  argv[0] = "/";
+  run_cd(1, argv);
+
+  nopl_exec(ob3_fn);
+  
+  run_unmount(0, argv_null);
+}
 
 void ic_run(char *str, char *fmt)
 {

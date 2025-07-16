@@ -6237,20 +6237,25 @@ void translate_file(FIL *fp, FIL *ofp)
 {
   char line[MAX_NOPL_LINE+1];
   int idx;
-
+  char tag = 'A';
+  
   dbprintf("********************************************************************************");
   dbprintf("**                                                                            **");
   dbprintf("**                 TRANSLATE FILE                                             **");
   dbprintf("**                                                                            **");
   dbprintf("********************************************************************************");
 
+  printf("\n%s:%c", __FUNCTION__, tag++);
+  
   // Initialise the line supplier
   initialise_line_supplier(fp);
+  printf("\n%s:%c", __FUNCTION__, tag++);
 
   idx = cline_i;
   
   // Now translate the file
   pull_next_line();
+  printf("\n%s:%c", __FUNCTION__, tag++);
   
   if( scan_procdef() )
     {
@@ -6263,8 +6268,10 @@ void translate_file(FIL *fp, FIL *ofp)
       n_lines_bad++;
       dbprintf("\ncline failed scan");
     }
+  printf("\n%s:%c", __FUNCTION__, tag++);
 
   pull_next_line();
+  printf("\n%s:%c", __FUNCTION__, tag++);
 
   indent_none();
 
@@ -6277,11 +6284,15 @@ void translate_file(FIL *fp, FIL *ofp)
       // Keep things alive
       tight_loop_tasks();
 
+      printf("\nloop\n");
+      
       if( !scan_line(levels) )
 	{
 	  dbprintf("Scan line failed");
 	  break;
 	}
+
+      printf("\nloop B\n");
 
       dbprintf("********************************************************************************");
       dbprintf("********************************************************************************");
@@ -6299,11 +6310,20 @@ void translate_file(FIL *fp, FIL *ofp)
 	  //scan_literal(" :");
 	}
 
+      printf("\nloop B\n");
+            
       indent_none();
+
+      printf("\nloop C\n");
+
     }
 
+  printf("\nloop D\n");
+
   finalise_expression();
-  
+
+  printf("\nloop E\n");
+        
   // Done
   dbprintf("Done");
   dbprintf("");
@@ -6367,45 +6387,46 @@ void dbpfq(const char *caller, char *fmt, ...)
 
 int nopl_trans(char *filename)
 {
-  FIL *fp  = NULL;
+  FIL f;
+  FIL *fp = &f;
   FIL *vfp = NULL;
 
-  printf("\n%s:A\n", __FUNCTION__);
-  
   init_output();
-
-  printf("\n%s:B\n", __FUNCTION__);
   
   ptfp = ff_fopen("parse_text.txt",  "w");
   exfp = ff_fopen("expressions.txt", "w");
   shfp = ff_fopen("shunting.txt",    "w");
-
-  printf("\n%s:C\n", __FUNCTION__);
     
   parser_check();
 
-  printf("\n%s:D\n", __FUNCTION__);
-
-  
   // Perform two passes of translation and qcode generation
   for(pass_number = 1; pass_number<=2; pass_number++)
     {
+      printf("\n%s:Pass %d\n", __FUNCTION__, pass_number);
+
+      // Keep things alive
+      tight_loop_tasks();
+
       dbprintf("********************************************************************************");
       dbprintf("**                         Pass %d                                             **", pass_number);
       dbprintf("********************************************************************************");
       
       // Open file and process on a line by line basis
-      fp = ff_fopen(filename, "r");
+      //fp = ff_fopen(filename, "r");
+      FRESULT fr = f_open(&f, filename, FA_READ);
       
-      if( fp == NULL )
+      if( fr != FR_OK )
 	{
 	  ff_fprintf(ofp, "\nCould not open '%s'", filename);
-	  printf("\nCould not open '%s'", filename);
+	  printf("\nCould not open '%s' (%d)", filename, fr);
+          ff_fclose(ofp);
 	  return(-1);
 	}
 
       translate_file(fp, ofp);
-      fclose(fp);
+      printf("\n%s:Pass done %d\n", __FUNCTION__, pass_number);
+            
+      f_close(&f);
     }
 
   output_qcode_suffix();

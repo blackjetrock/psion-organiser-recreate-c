@@ -1647,7 +1647,8 @@ void dump_qcode_data(char *opl_filename)
   //
   ////////////////////////////////////////////////////////////////////////////////
 
-  FIL *objfp = NULL;
+  FIL objf;
+  FIL *objfp = &objf;
   char basename[NOBJ_FILENAME_MAXLEN];
   char ob3_fn[NOBJ_FILENAME_MAXLEN];
 
@@ -1660,12 +1661,17 @@ void dump_qcode_data(char *opl_filename)
   printf("\nBase name:%s", basename);
 
   strcpy(ob3_fn, basename);
-  strcat(ob3_fn, ".ob3");
+  strcat(ob3_fn, ".OB3");
   
   printf("\nOutput name:%s", ob3_fn);
 
-  objfp = fopen(ob3_fn, "wb");
+  FRESULT fr = f_open(&objf, ob3_fn, FA_WRITE | FA_CREATE_ALWAYS);
 
+  if( fr != FR_OK )
+    {
+      printf("\nCould not open '%s' (%d)\n", ob3_fn, fr);
+    }
+  
   ff_fprintf(objfp, "ORG%c%c%c%c%c", 0x01, 0xce, 0x83, 0x01, 0xca);
   
   for(int i=0; i<qcode_header_len+qcode_len; i++)
@@ -7224,16 +7230,24 @@ int scan_line(LEVEL_INFO levels)
   int idx = cline_i;
   char cmdname[300];
   char label[NOPL_MAX_LABEL+1];
+
+  printf("\n%s:A", __FUNCTION__);
   
   indent_more();
+
+  printf("\n%s:B", __FUNCTION__);
+
   
   drop_space(&cline_i);
-  
+    printf("\n%s:C", __FUNCTION__);
+
   dbprintf("cline:'%s'", &(cline[cline_i]));
 
   // Before we parse a line we pull more data from the parser text buffer which
   // is presented to the parser in the cline[] array.
-  
+
+  printf("\n%s:D", __FUNCTION__);
+
   if( !pull_next_line() )
     {
       // No more text available, so fail the line scan, we are done
@@ -7251,6 +7265,8 @@ int scan_line(LEVEL_INFO levels)
       dbprintf("ret1");
       return(1);
     }
+
+  printf("\n%s:E", __FUNCTION__);
 
   idx = cline_i;
   if( check_literal(&idx, " REM& ") )
