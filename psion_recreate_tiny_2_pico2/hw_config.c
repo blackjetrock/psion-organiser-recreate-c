@@ -97,7 +97,8 @@ const char *VolumeStr[FF_VOLUMES] = {"sd0"};	/* Pre-defined volume ID */
 
 /* ********************************************************************** */
 
-size_t sd_get_num() { return count_of(sd_cards); }
+//size_t sd_get_num() { return count_of(sd_cards); }
+size_t sd_get_num() { return 1; }
 
 /**
  * @brief Get a pointer to an SD card object by its number.
