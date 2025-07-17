@@ -6,7 +6,8 @@
 #include <stdarg.h>
 #include <inttypes.h>
 
-#include "nopl.h"
+//#include "nopl.h"
+#include "psion_recreate_all.h"
 
 char last_line[MAX_NOPL_LINE];
 
@@ -15,7 +16,7 @@ void check_array_index(int idx, int max_idx, char *name)
   if( idx >= (max_idx -1) )
     {
       internal_error("Array bound %s exceeded", name);
-      exit(-1);
+      return;
     }
 }
 
@@ -66,7 +67,7 @@ int size_of_qcode_idx = 0;
 ////////////////////////////////////////////////////////////////////////////////
 
 
-char *exp_buffer_id_str[] =
+const char *exp_buffer_id_str[] =
   {
     "EXP_BUFF_ID_???",
     "EXP_BUFF_ID_TKN",
@@ -121,12 +122,12 @@ char *exp_buffer_id_str[] =
 
 ////////////////////////////////////////////////////////////////////////////////
 
-NOBJ_VAR_INFO var_info[MAX_VAR_INFO];
+NOBJ_VAR_INFO var_info[MAX_VAR_INFO] PSRAM;
 int num_var_info = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-struct _FN_INFO
+const struct _FN_INFO
 {
   char    *name;
   int     command;         // 1 if command, 0 if function
@@ -394,7 +395,7 @@ char function_arg_parse(char *fname)
 //
 
 
-OP_INFO  op_info[] =
+const OP_INFO  op_info[] =
   {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //
@@ -457,7 +458,7 @@ typedef struct _OTHER_KEYWORD_INFO
   char *name;
 } OTHER_KEYWORD_INFO;
 
-OTHER_KEYWORD_INFO other_keywords[] =
+const OTHER_KEYWORD_INFO other_keywords[] =
   {
     {"REM"},
     {"IF"},
@@ -1093,7 +1094,7 @@ NOPL_QCH_FIELD qch_fields[] =
 #define NOPL_QCH_SIZE_QCODE     0x02
 #define NOPL_QCH_NUM_PARAM      0x04
 
-uint8_t qcode_header[ MAX_QCODE_HEADER];
+uint8_t qcode_header[ MAX_QCODE_HEADER] PSRAM;
 
 int calculate_num_in_class( NOPL_VAR_CLASS class)
 {
@@ -1826,7 +1827,7 @@ void syntax_error(char *fmt, ...)
   printf("\n\n   %s", line);
   printf("\n");
   
-  //  exit(-1);
+  //  return;
 }
 
 void typecheck_error(char *fmt, ...)
@@ -1882,7 +1883,7 @@ void internal_error(char *fmt, ...)
   printf("\n\n   %s", line);
   printf("\n");
   
-  //exit(-1);
+  //return;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -2979,7 +2980,7 @@ int check_integer(int *index)
       if( strlen(intval) >=19 )
 	{
 	  internal_error("Integer too large %s", __FUNCTION__);
-	  exit(-1);
+	  return(0);
 	}
       
       strcat(intval, chstr);
@@ -3036,7 +3037,7 @@ int scan_integer(int *intdest)
       if( strlen(intval) >=19 )
 	{
 	  internal_error("Integer too large %s", __FUNCTION__);
-	  exit(-1);
+	  return(0);
 	}
        
       strcat(intval, chstr);
@@ -3273,7 +3274,7 @@ int check_float(int *index)
       if( strlen(fltval) >=19 )
 	{
 	  internal_error("Float too large %s", __FUNCTION__);
-	  exit(-1);
+	  return(0);
 	}
  
       if( chstr[0] == '.' )
@@ -3347,7 +3348,7 @@ int scan_float(char *fltdest)
       if( strlen(fltval) >=19 )
 	{
 	  internal_error("Float too large %s", __FUNCTION__);
-	  exit(-1);
+	  return(0);
 	}
 
       if( chstr[0] == '.' )
@@ -3416,7 +3417,7 @@ int check_hex(int *index)
       if( strlen(intval) >=19 )
 	{
 	  internal_error("Integer too large %s", __FUNCTION__);
-	  exit(-1);
+	  return(0);
 	}
 
       strcat(intval, chstr);
@@ -3471,7 +3472,7 @@ int scan_hex(int *intdest)
       if( strlen(intval) >=19 )
 	{
 	  internal_error("Integer too large %s", __FUNCTION__);
-	  exit(-1);
+	  return(0);
 	}
 
       strcat(intval, chstr);
@@ -5742,7 +5743,7 @@ int scan_onerr(void)
 #define PRINT_TYPE_PRINT 0
 #define PRINT_TYPE_LPRINT 1
 
-struct
+const struct
 {
   char *token_name;
   char *op_name;
@@ -6137,7 +6138,7 @@ int check_proc_call(int *index)
 
 //------------------------------------------------------------------------------
 
-struct
+const struct
 {
   char *suffix;
   NOBJ_VARTYPE type;

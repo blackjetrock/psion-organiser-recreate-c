@@ -650,7 +650,7 @@ void qca_push_proc(NOBJ_MACHINE *m, NOBJ_QCS *s)
 	{
 	  runtime_error(ER_RT_PN, "Cannot open '%s'", s->str);
 	  dbq("Cannot open '%s'", s->str);
-	  exit(-1);
+	  return;
 	}
     }
   

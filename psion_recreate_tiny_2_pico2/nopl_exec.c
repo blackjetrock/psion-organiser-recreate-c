@@ -39,7 +39,8 @@ typedef struct _ARG_INFO_ENTRY
 } ARG_INFO_ENTRY;
 
 int arg_count = 0;
-ARG_INFO_ENTRY arg_info[MAX_ARGS];
+ARG_INFO_ENTRY arg_info[MAX_ARGS] PSRAM;
+
 void push_parameters(NOBJ_MACHINE *m)
 {
   debug("\nPush parameters...");

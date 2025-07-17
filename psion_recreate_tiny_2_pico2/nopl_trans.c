@@ -29,12 +29,12 @@ FIL *shfp  = NULL;
 char current_expression[200] PSRAM;
 int first_token = 1;
 
-OP_STACK_ENTRY op_stack[NOPL_MAX_OP_STACK+1];
+OP_STACK_ENTRY op_stack[NOPL_MAX_OP_STACK+1] PSRAM;
 
 int op_stack_ptr = 0;
 
 
-NOBJ_VARTYPE exp_type_stack[MAX_EXP_TYPE_STACK];
+NOBJ_VARTYPE exp_type_stack[MAX_EXP_TYPE_STACK] PSRAM;
 int exp_type_stack_ptr = 0;
 
 #define SAVE_I     1
@@ -46,10 +46,10 @@ int exp_type_stack_ptr = 0;
 // Indices start at 1, 0 is 'no p'
 int node_id_index = 1;
 
-EXP_BUFFER_ENTRY exp_buffer[MAX_EXP_BUFFER];
+EXP_BUFFER_ENTRY exp_buffer[MAX_EXP_BUFFER] PSRAM;
 int exp_buffer_i = 0;
 
-EXP_BUFFER_ENTRY exp_buffer2[MAX_EXP_BUFFER];
+EXP_BUFFER_ENTRY exp_buffer2[MAX_EXP_BUFFER] PSRAM;
 int exp_buffer2_i = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -807,7 +807,7 @@ typedef struct _COND_FIXUP_ENTRY
 } COND_FIXUP_ENTRY;
 
 
-COND_FIXUP_ENTRY cond_fixup[MAX_COND_FIXUP];
+COND_FIXUP_ENTRY cond_fixup[MAX_COND_FIXUP] PSRAM;
 int cond_fixup_i = 0;
 
 void add_cond_fixup(int offset_idx, int target_idx, int buf_id, int level)
@@ -1458,8 +1458,8 @@ typedef struct _VAR_INFO
   uint16_t offset;    // Offset from FP
 } VAR_INFO;
 
-VAR_INFO local_info[NOPL_MAX_LOCAL];
-VAR_INFO global_info[NOPL_MAX_GLOBAL];
+VAR_INFO local_info[NOPL_MAX_LOCAL] PSRAM;
+VAR_INFO global_info[NOPL_MAX_GLOBAL] PSRAM;
 
 int local_info_index  = 0;
 int global_info_index = 0;
@@ -2427,7 +2427,7 @@ void type_check_stack_print(void);
 
 
 
-EXP_BUFFER_ENTRY type_check_stack[MAX_TYPE_CHECK_STACK];
+EXP_BUFFER_ENTRY type_check_stack[MAX_TYPE_CHECK_STACK] PSRAM;
 int type_check_stack_ptr = 0;
 
 void type_check_stack_push(EXP_BUFFER_ENTRY entry)
@@ -2938,9 +2938,9 @@ int types_identical(NOBJ_VARTYPE t1, NOBJ_VARTYPE t2)
 #define MAX_INFIX_STACK 500
 #define MAX_INFIX_STR   400
 
-char infix_stack[MAX_INFIX_STACK][MAX_INFIX_STR];
+char infix_stack[MAX_INFIX_STACK][MAX_INFIX_STR] PSRAM;
 int infix_stack_ptr = 0;
-char result[MAX_INFIX_STR*20];
+char result[MAX_INFIX_STR*20] PSRAM;
 
 void infix_stack_push(char *entry)
 {

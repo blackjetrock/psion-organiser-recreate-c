@@ -69,7 +69,7 @@ enum
     EXP_BUFF_ID_MAX,
   };
 
-extern char *exp_buffer_id_str[];
+extern const char *exp_buffer_id_str[];
 
 extern int node_id_index;
 extern EXP_BUFFER_ENTRY exp_buffer[MAX_EXP_BUFFER];
@@ -101,7 +101,7 @@ typedef struct _OP_INFO
   int           percent_convertible;       // Can be turned into a percent operator
 } OP_INFO;
 
-extern OP_INFO  op_info[];
+extern const OP_INFO  op_info[];
 extern int num_operators(void);
 
 //#define NUM_OPERATORS (sizeof(op_info)/sizeof(struct _OP_INFO))
