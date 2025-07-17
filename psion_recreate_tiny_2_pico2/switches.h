@@ -1,5 +1,7 @@
 // Switches and debug
 
+#define SWITCH_EXTERNAL_PSRAM   1
+
 #define KEY_SCAN_IN_MAIN 1
 
 #define DB_KB_GETK       0

@@ -14,10 +14,12 @@ typedef unsigned int uint;
 
 //#include "hardware/adc.h"
 #include "hardware/clocks.h" 
+#include "hardware/structs/xip_ctrl.h"
 #include "pico/aon_timer.h"
 #include "pico/stdio.h"
 #include "pico/stdlib.h"
 #include "pico/time.h"
+#include <pico/platform.h>
 
 #include "psion_recreate.h"
 
@@ -61,3 +63,5 @@ typedef unsigned int uint;
 //#include "sd_card.h"
 #include "diskio.h" /* Declarations of disk functions */
 #include "sd_card_utils.h"
+
+#define PSRAM __attribute__((section(".psram.")))

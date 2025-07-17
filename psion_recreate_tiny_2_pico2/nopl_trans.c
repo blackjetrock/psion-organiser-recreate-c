@@ -14,8 +14,8 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include <string.h>
-#include "nopl.h"
-
+//#include "nopl.h"
+#include "psion_recreate_all.h"
 
 FIL *icfp  = NULL;
 FIL *ofp   = NULL;
@@ -26,7 +26,7 @@ FIL *shfp  = NULL;
 
 // Reads next composite line into buffer
 
-char current_expression[200];
+char current_expression[200] PSRAM;
 int first_token = 1;
 
 OP_STACK_ENTRY op_stack[NOPL_MAX_OP_STACK+1];

@@ -385,7 +385,7 @@ int main(void) {
   //  gpio_put(PIN_SDAIN,  1);
   gpio_put(PIN_SCLKIN, 1);
 
-
+  // SPI for SD card, this should be done by the SD card library
   gpio_init(22);
   gpio_set_dir(22, GPIO_OUT);
   gpio_init(18);
@@ -395,6 +395,13 @@ int main(void) {
   gpio_init(16);
   gpio_set_dir(16, GPIO_IN);
 
+#if SWITCH_EXTERNAL_PSRAM
+
+  // Pico2 external memory
+  gpio_set_function(PIMORONI_PICO_PLUS2_PSRAM_CS_PIN, GPIO_FUNC_XIP_CS1); // CS for PSRAM
+  xip_ctrl_hw->ctrl|=XIP_CTRL_WRITABLE_M1_BITS;
+#endif
+  
   board_init();
   tusb_init();
 #if 0
