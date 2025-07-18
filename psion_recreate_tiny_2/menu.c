@@ -1816,6 +1816,7 @@ typedef struct _CP_STATE
   CP_STATE_ENTRY    transition[5];
 } CP_STATE;
 
+// '_' indicates end of the string
 
 CP_STATE cps_neg;
 CP_STATE cps_in_num;

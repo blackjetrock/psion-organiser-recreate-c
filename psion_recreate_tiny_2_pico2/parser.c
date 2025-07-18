@@ -11,10 +11,14 @@
 
 char last_line[MAX_NOPL_LINE];
 
-void check_array_index(int idx, int max_idx, char *name)
+void check_array_index(int *idx, int max_idx, char *name)
 {
-  if( idx >= (max_idx -1) )
+  if( *idx >= (max_idx -1) )
     {
+      // Limit index
+      
+      *idx = max_idx-1;
+
       internal_error("Array bound %s exceeded", name);
       return;
     }
@@ -1519,7 +1523,7 @@ int print_qch_field(int idx, FIL *fp, char *title, int len)
 
 void write_qcode_header_byte(int idx, int value)
 {
-  check_array_index(idx, MAX_QCODE_HEADER, "qcode_header");
+  check_array_index(&idx, MAX_QCODE_HEADER, "qcode_header");
   qcode_header[idx++] = value;    
 }
 
@@ -1655,7 +1659,8 @@ void dump_qcode_data(char *opl_filename)
 
   printf("\nWriting binary...");
   printf("\nLength:%04X", qcode_header_len);
-
+  printf("\nCode length:%04X", qcode_len);
+  
   // Create the output filename from the OPL file name
 
   sscanf(opl_filename, "%[^.].opl", basename);
@@ -1674,17 +1679,25 @@ void dump_qcode_data(char *opl_filename)
     }
   
   ff_fprintf(objfp, "ORG%c%c%c%c%c", 0x01, 0xce, 0x83, 0x01, 0xca);
-  
+
+  printf("\nHeader written\n");
+    
   for(int i=0; i<qcode_header_len+qcode_len; i++)
     {
       //      fprintf(objfp, "%c", qcode_header[i]);
       ff_fputc(qcode_header[i], objfp);
     }
 
-  ff_fputc(0x00, objfp);
-  ff_fputc(0x00, objfp);
-  fclose(objfp);
+  printf("\nData written\n");
   
+  ff_fputc(0x00, objfp);
+  ff_fputc(0x00, objfp);
+
+  printf("\nZeros written\n");
+
+  fclose(objfp);
+
+  printf("\nClosed binary file\n");
 }
 
 //------------------------------------------------------------------------------
@@ -1796,8 +1809,6 @@ NOBJ_VARTYPE char_to_type(char ch)
 void syntax_error(char *fmt, ...)
 {
   va_list valist;
-  char line[80];
-  
   va_start(valist, fmt);
 
   vsprintf(line, fmt, valist);
@@ -1833,8 +1844,6 @@ void syntax_error(char *fmt, ...)
 void typecheck_error(char *fmt, ...)
 {
   va_list valist;
-  char line[80];
-  
   va_start(valist, fmt);
 
   vsprintf(line, fmt, valist);
@@ -1862,8 +1871,7 @@ void typecheck_error(char *fmt, ...)
 void internal_error(char *fmt, ...)
 {
   va_list valist;
-  char line[80];
-  
+
   va_start(valist, fmt);
 
   vsprintf(line, fmt, valist);
@@ -1874,6 +1882,7 @@ void internal_error(char *fmt, ...)
   
   printf("\n%s", cline);
   printf("\n");
+
   for(int i=0; i<cline_i-1; i++)
     {
       printf(" ");
@@ -1882,6 +1891,9 @@ void internal_error(char *fmt, ...)
   
   printf("\n\n   %s", line);
   printf("\n");
+
+  // We need to unwind or exit from the process we ar ein here. Somehow.
+  // On the PC, exit() was called, that's not possible on the Pico
   
   //return;
 }
@@ -2303,7 +2315,7 @@ int is_logfile_char(char ch)
 // Scans for a variable name string part
 int scan_vname(char *vname_dest)
 {
-  char vname[300];
+  char vname[NOBJ_VARNAME_MAXLEN];
   int vname_i = 0;
   char ch;
 
@@ -2701,7 +2713,7 @@ int check_variable(int *index)
   int idx = *index;
   int orig_index = *index;
   
-  char vname[300];
+  char vname[NOBJ_VARNAME_MAXLEN];
   char chstr[2];
   int var_is_string  = 0;
   int var_is_integer = 0;
@@ -3758,10 +3770,13 @@ int check_atom(int *index)
 // Double quotes can be included in the string by using ""
 //
 
+// No strings within strings so this can be off the stack
+char strval[NOBJ_STRING_MAXLEN+1];
+
 int scan_string(void)
 {
   char chstr[2];
-  char strval[300];
+
   OP_STACK_ENTRY op;
   indent_more();
   
@@ -7229,25 +7244,26 @@ int check_line(int *index)
 int scan_line(LEVEL_INFO levels)
 {
   int idx = cline_i;
-  char cmdname[300];
+  LVAD(idx);
+  char cmdname[NOBJ_VARNAME_MAXLEN+1];
   char label[NOPL_MAX_LABEL+1];
 
-  printf("\n%s:A", __FUNCTION__);
+  //printf("\n%s:A", __FUNCTION__);
   
   indent_more();
 
-  printf("\n%s:B", __FUNCTION__);
+  //printf("\n%s:B", __FUNCTION__);
 
   
   drop_space(&cline_i);
-    printf("\n%s:C", __FUNCTION__);
+  //printf("\n%s:C", __FUNCTION__);
 
   dbprintf("cline:'%s'", &(cline[cline_i]));
 
   // Before we parse a line we pull more data from the parser text buffer which
   // is presented to the parser in the cline[] array.
 
-  printf("\n%s:D", __FUNCTION__);
+  //printf("\n%s:D", __FUNCTION__);
 
   if( !pull_next_line() )
     {
@@ -7267,7 +7283,7 @@ int scan_line(LEVEL_INFO levels)
       return(1);
     }
 
-  printf("\n%s:E", __FUNCTION__);
+  //printf("\n%s:E", __FUNCTION__);
 
   idx = cline_i;
   if( check_literal(&idx, " REM& ") )
@@ -7706,9 +7722,9 @@ int is_all_spaces(int idx)
 // Display the text to be parsed, as the parser will see it.
 //
 
+ char cltext[500];
 void dump_cline(void)
 {
-  char cltext[500];
   char str[2] = " ";
   
   cltext[0] = '\0';
@@ -7772,6 +7788,7 @@ void truncate_not_in_string(char *str_start, char *rempos)
 int pull_next_line(void)
 {
   int all_spaces = 0;
+  LVAD(all_spaces);
   int idx = cline_i;
   
   dbprintf("Processing expression just parsed");

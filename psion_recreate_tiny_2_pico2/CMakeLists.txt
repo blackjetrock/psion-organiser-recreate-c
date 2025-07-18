@@ -5,6 +5,9 @@ cmake_minimum_required(VERSION 3.12)
 # set for pico board
 # set(PICO_BOARD pico2 CACHE STRING "Board type")
 set(PICO_BOARD pimoroni_pico_plus2_rp2350 CACHE STRING "Board type")
+set(CMAKE_BUILD_TYPE Debug)
+set(PICO_USE_STACK_GUARDS 1)
+set(PICO_STACK_SIZE 4096)
 
 set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)

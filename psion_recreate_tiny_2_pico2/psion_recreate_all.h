@@ -31,6 +31,7 @@ typedef unsigned int uint;
 
 #include "newopl_lib.h"
 
+#define LVAD(XXX) printf("\n%s:%p\n", __FUNCTION__, &XXX-lvadp)
 
 #include "emulator.h"
 #include "wireless.h"
@@ -65,3 +66,6 @@ typedef unsigned int uint;
 #include "sd_card_utils.h"
 
 #define PSRAM __attribute__((section(".psram.")))
+
+extern char line[MAX_NOPL_LINE+1];
+extern int *lvadp;

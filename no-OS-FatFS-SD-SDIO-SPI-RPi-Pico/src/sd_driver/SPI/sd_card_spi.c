@@ -204,8 +204,8 @@ static bool crc_on = true;
 static bool crc_on = false;
 #endif
 
-//#define TRACE_PRINTF(fmt, args...)
-#define TRACE_PRINTF printf
+#define TRACE_PRINTF(fmt, args...)
+//#define TRACE_PRINTF printf
 
 /**
  * @brief Control Tokens
@@ -893,7 +893,7 @@ static block_dev_err_t in_sd_read_blocks(sd_card_t *sd_card_p, uint8_t *buffer,
 }
 static block_dev_err_t sd_read_blocks(sd_card_t *sd_card_p, uint8_t *buffer,
                                       uint32_t data_address, uint32_t num_rd_blks) {
-    TRACE_PRINTF("sd_read_blocks(0x%p, 0x%lx, 0x%lx)\n", buffer, data_address, num_rd_blks);
+  //TRACE_PRINTF("sd_read_blocks(0x%p, 0x%lx, 0x%lx)\n", buffer, data_address, num_rd_blks);
     sd_acquire(sd_card_p);
     unsigned retries = sd_timeouts.sd_command_retries;
     block_dev_err_t status;

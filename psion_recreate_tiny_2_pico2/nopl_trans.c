@@ -6034,7 +6034,7 @@ void process_token(OP_STACK_ENTRY *token)
       op_stack_push(o1);
       first_token = 0;
       unary_next = 0;
-  op_stack_fprint(shfp);
+      op_stack_fprint(shfp);
       return;
     }
 
@@ -6233,9 +6233,10 @@ int n_stack_errors = 0;
 // These requirements could be relaxed.
 //
 
+char line[MAX_NOPL_LINE+1];
+
 void translate_file(FIL *fp, FIL *ofp)
 {
-  char line[MAX_NOPL_LINE+1];
   int idx;
   char tag = 'A';
   
@@ -6245,17 +6246,17 @@ void translate_file(FIL *fp, FIL *ofp)
   dbprintf("**                                                                            **");
   dbprintf("********************************************************************************");
 
-  printf("\n%s:%c", __FUNCTION__, tag++);
+  //  printf("\n%s:%c", __FUNCTION__, tag++);
   
   // Initialise the line supplier
   initialise_line_supplier(fp);
-  printf("\n%s:%c", __FUNCTION__, tag++);
+  //printf("\n%s:%c", __FUNCTION__, tag++);
 
   idx = cline_i;
   
   // Now translate the file
   pull_next_line();
-  printf("\n%s:%c", __FUNCTION__, tag++);
+  //printf("\n%s:%c", __FUNCTION__, tag++);
   
   if( scan_procdef() )
     {
@@ -6268,10 +6269,10 @@ void translate_file(FIL *fp, FIL *ofp)
       n_lines_bad++;
       dbprintf("\ncline failed scan");
     }
-  printf("\n%s:%c", __FUNCTION__, tag++);
+  //printf("\n%s:%c", __FUNCTION__, tag++);
 
   pull_next_line();
-  printf("\n%s:%c", __FUNCTION__, tag++);
+  //printf("\n%s:%c", __FUNCTION__, tag++);
 
   indent_none();
 
@@ -6284,7 +6285,7 @@ void translate_file(FIL *fp, FIL *ofp)
       // Keep things alive
       tight_loop_tasks();
 
-      printf("\nloop\n");
+      //printf("\nloop\n");
       
       if( !scan_line(levels) )
 	{
@@ -6292,7 +6293,7 @@ void translate_file(FIL *fp, FIL *ofp)
 	  break;
 	}
 
-      printf("\nloop B\n");
+      //      printf("\nloop B\n");
 
       dbprintf("********************************************************************************");
       dbprintf("********************************************************************************");
@@ -6310,19 +6311,19 @@ void translate_file(FIL *fp, FIL *ofp)
 	  //scan_literal(" :");
 	}
 
-      printf("\nloop B\n");
+      //printf("\nloop B\n");
             
       indent_none();
 
-      printf("\nloop C\n");
+      //printf("\nloop C\n");
 
     }
 
-  printf("\nloop D\n");
+  //printf("\nloop D\n");
 
   finalise_expression();
 
-  printf("\nloop E\n");
+  //printf("\nloop E\n");
         
   // Done
   dbprintf("Done");

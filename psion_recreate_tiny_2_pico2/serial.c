@@ -1033,6 +1033,27 @@ void ic_trans(char *str, char *fmt)
   
   run_unmount(0, argv_null);
 }
+
+void ic_transtest(char *str, char *fmt)
+{
+  char arg[100];
+  char opl_fn[100];
+
+  printf("\n%s\n", str);
+  sscanf(str,  fmt, &arg);
+  sprintf(opl_fn, "extst_arith.opl", arg);
+
+  printf("\nTranslating %s", opl_fn);
+  
+  // Mount the SD card and translate the OPL file
+  run_mount(0, argv_null);
+  argv[0] = "/";
+  run_cd(1, argv);
+
+  nopl_trans(opl_fn);
+  
+  run_unmount(0, argv_null);
+}
 #endif
 
 void ic_mount(char *str, char *fmt)
@@ -1179,6 +1200,7 @@ struct _IC_CMD
    {"run",        "run %s",          ic_run},
 #if OPL_TRANSLATOR
    {"trans",      "trans %s",        ic_trans},
+   {"trt",        "trt",             ic_transtest},
 #endif
    
    {"cat",        "cat %s",          ic_cat},
@@ -1211,7 +1233,7 @@ void cli_interactive(void)
     {
       tight_loop_tasks();
       
-      printf("\n%c: RECT:%d RECNO:%d ADD:%08X>", 'A'+pkb_curp, flb_rect, flw_crec, pkw_cpad);
+      printf("\n%c: RECT:%d RECNO:%d ADD:%08X LVADP:%p>", 'A'+pkb_curp, flb_rect, flw_crec, pkw_cpad, lvadp);
       
       cmd = serial_get_string();
       

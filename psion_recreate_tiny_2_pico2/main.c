@@ -288,8 +288,13 @@ static void card_detect_callback(uint gpio, uint32_t events) {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-int main(void) {
+int *lvadp;
 
+int main(void) {
+  int lvad;
+
+  lvadp = &lvad;
+  
   // Set up the GPIOs
   gpio_init(PIN_VBAT_SW_ON);
   gpio_set_dir(PIN_VBAT_SW_ON, GPIO_OUT);

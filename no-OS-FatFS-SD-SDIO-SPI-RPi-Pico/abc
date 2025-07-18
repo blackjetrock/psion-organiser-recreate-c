@@ -1,53 +1,7 @@
-    fr = file.open("bench.dat", FA_READ | FA_WRITE | FA_CREATE_ALWAYS);
-    fr = file.open(filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = file.open(filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = file.open("filename.txt", FA_OPEN_APPEND | FA_WRITE);
-    fr = file.open("filename2.txt", FA_OPEN_APPEND | FA_WRITE);
-    fr = file.open(filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = f_open(&fdst, argv[1], FA_WRITE | FA_CREATE_ALWAYS);
-    fr = f_open(fp, filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = f_open(&fdst, argv[1], FA_WRITE | FA_CREATE_ALWAYS);
-    FRESULT fr = f_open(&file, "bench.dat", FA_READ | FA_WRITE | FA_CREATE_ALWAYS);
-    fr = f_open(&file, pathname, FA_WRITE | FA_CREATE_ALWAYS);
-    fr = f_open(&f, "numbers.txt", FA_READ | FA_WRITE);
-        fr = f_open(&f, "numbers.txt", FA_CREATE_ALWAYS | FA_WRITE | FA_READ);
-    fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
-    fr = f_open(&fil, filename, FA_OPEN_APPEND | FA_WRITE);
-    FRESULT fr = f_open(&fil, DRIVE "/times_ub.csv", FA_CREATE_ALWAYS | FA_WRITE);
-    FRESULT fr = f_open(&fil, pathname, FA_OPEN_APPEND | FA_WRITE);
-    fr = f_open(fp, path, FA_WRITE | FA_OPEN_ALWAYS);
-/ If the file has been opened without FA_WRITE flag, it only checks if
-    if (!(fp->flag & FA_WRITE)) return 0;   /* Exit if the file object is for read-only */
-    fr = f_open(&fil, "fastrec.log", FA_READ | FA_WRITE | FA_OPEN_ALWAYS);
-	mode &= FF_FS_READONLY ? FA_READ : FA_READ | FA_WRITE | FA_CREATE_ALWAYS | FA_CREATE_NEW | FA_OPEN_ALWAYS | FA_OPEN_APPEND;
-					if ((mode & FA_WRITE) && (dj.obj.attr & AM_RDO)) { /* Write mode open against R/O file */
-	if (!(fp->flag & FA_WRITE)) LEAVE_FF(fs, FR_DENIED);	/* Check access mode */
-		if (ofs > fp->obj.objsize && (FF_FS_READONLY || !(fp->flag & FA_WRITE))) {	/* In read-only mode, clip offset with the file size */
-					if (fp->flag & FA_WRITE) {			/* Check if in write mode or not */
-	if (!(fp->flag & FA_WRITE)) LEAVE_FF(fs, FR_DENIED);	/* Check access mode */
-	res = mount_volume(&path, &fs, FA_WRITE);
-	res = mount_volume(&path, &fs, FA_WRITE);	/* Get logical drive */
-	res = mount_volume(&path_old, &fs, FA_WRITE);	/* Get logical drive of the old object */
-	res = mount_volume(&path, &fs, FA_WRITE);	/* Get logical drive */
-	res = mount_volume(&path, &fs, FA_WRITE);	/* Get logical drive */
-	res = mount_volume(&label, &fs, FA_WRITE);
-	if (fsz == 0 || fp->obj.objsize != 0 || !(fp->flag & FA_WRITE)) LEAVE_FF(fs, FR_DENIED);
-#define	FA_WRITE			0x02
-    if (0 == strcmp("r+", pcMode)) return FA_READ | FA_WRITE;
-    if (0 == strcmp("w", pcMode)) return FA_CREATE_ALWAYS | FA_WRITE;
-    if (0 == strcmp("w+", pcMode)) return FA_CREATE_ALWAYS | FA_WRITE | FA_READ;
-    if (0 == strcmp("a", pcMode)) return FA_OPEN_APPEND | FA_WRITE;
-    if (0 == strcmp("a+", pcMode)) return FA_OPEN_APPEND | FA_WRITE | FA_READ;
-    if (0 == strcmp("wx", pcMode)) return FA_CREATE_NEW | FA_WRITE;
-    if (0 == strcmp("w+x", pcMode)) return FA_CREATE_NEW | FA_WRITE | FA_READ;
-    FRESULT fr = f_open(fp, pcFileName, FA_OPEN_APPEND | FA_WRITE);
-        mode = FA_READ | FA_WRITE;
-        mode = FA_CREATE_ALWAYS | FA_WRITE;
-        mode = FA_CREATE_ALWAYS | FA_WRITE | FA_READ;
-        mode = FA_OPEN_APPEND | FA_WRITE;
-        mode = FA_OPEN_APPEND | FA_WRITE | FA_READ;
-        mode = FA_CREATE_NEW | FA_WRITE;
-        mode = FA_CREATE_NEW | FA_WRITE | FA_READ;
+./examples/command_line/build/CMakeFiles/command_line.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o
+./examples/command_line/build/command_line.elf.map
+./examples/command_line/build/command_line.elf
+./examples/command_line/build/command_line.dis
+./examples/command_line/build/command_line.bin
+./examples/command_line/build/command_line.uf2
+./src/sd_driver/SPI/sd_card_spi.c

@@ -1,0 +1,24 @@
+#0  0x10031e34 in __ssprint_r (ptr=ptr@entry=0x20023c90 <_impure_data>, fp=fp@entry=0x20081370, 
+    uio=uio@entry=0x200812d4) at ../../../../../../newlib/libc/stdio/ssprint_r.c:32
+#1  0x1002e774 in _svfprintf_r (data=<optimized out>, fp=fp@entry=0x20081370, 
+    fmt0=fmt0@entry=0x10004307 <fprintstr+14> "4 x", ap=...)
+    at ../../../../../../newlib/libc/stdio/vfprintf.c:1523
+#2  0x1002acf4 in _vsprintf_r (ptr=<optimized out>, 
+    str=0x200813ec "\n (check_assignment) check_assignment:\003\020\001", fmt=<optimized out>, ap=...)
+    at ../../../../../../newlib/libc/stdio/vsprintf.c:63
+#3  vsprintf (str=str@entry=0x200813ec "\n (check_assignment) check_assignment:\003\020\001", 
+    fmt=fmt@entry=0x4 "\211", ap=..., ap@entry=...)
+    at ../../../../../../newlib/libc/stdio/vsprintf.c:38
+#4  0x10004fb0 in ff_fprintf (fp=0x20031538, fmt=0x1003d130 "\n%s(%s) %s")
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.c:49
+#5  0x10012936 in dbpf (caller=caller@entry=0x10044390 <__FUNCTION__.33> "check_assignment", 
+    fmt=0x1003b8dc "%s:")
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_trans.c:147
+#6  0x1000f8f8 in check_assignment (index=index@entry=0x20081c24)
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/parser.c:5340
+#7  0x10011a3c in scan_line (levels=...)
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/parser.c:7309
+#8  0x10018498 in translate_file (fp=fp@entry=0x20081c58, ofp=<optimized out>)
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_trans.c:6289
+#9  0x100185d0 in nopl_trans (filename=filename@entry=0x20081ed0 "extst_arith.opl")
+    at /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_trans.c:6426
