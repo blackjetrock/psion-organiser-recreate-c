@@ -1,0 +1,34 @@
+./ff15/documents/res/app4.c:    if (sz_buff < FF_MAX_SS + 8) {
+./ff15/documents/res/app4.c:#if FF_MAX_SS != FF_MIN_SS
+./ff15/documents/res/app4.c:        sz_sect = FF_MAX_SS;
+./ff15/documents/res/app4.c:    DWORD buff[FF_MAX_SS];  /* Working buffer (4 sector in size) */
+./ff15/documents/res/app5.c:#if FF_MAX_SS == FF_MIN_SS
+./ff15/documents/res/app5.c:    clsz = (DWORD)fp->obj.fs->csize * FF_MAX_SS;    /* Cluster size */
+./ff15/documents/res/app6.c:    UINT sz_buff    /* Size of read/write buffer (must be multiple of FF_MAX_SS) */
+./ff15/documents/res/app6.c:#if FF_MIN_SS != FF_MAX_SS
+./ff15/documents/res/app6.c:    ss = FF_MAX_SS;
+./ff15/source/!ffconf.h:#define FF_MAX_SS		512
+./ff15/source/!ffconf.h:/  type of optical media. When FF_MAX_SS is larger than FF_MIN_SS, FatFs is configured
+./ff15/source/!ffconf.h:/  At the tiny configuration, size of file object (FIL) is shrinked FF_MAX_SS bytes.
+./ff15/source/diskio.h:#define GET_SECTOR_SIZE		2	/* Get sector size (needed at FF_MAX_SS != FF_MIN_SS) */
+./ff15/source/ff.c:#if (FF_MAX_SS < FF_MIN_SS) || (FF_MAX_SS != 512 && FF_MAX_SS != 1024 && FF_MAX_SS != 2048 && FF_MAX_SS != 4096) || (FF_MIN_SS != 512 && FF_MIN_SS != 1024 && FF_MIN_SS != 2048 && FF_MIN_SS != 4096)
+./ff15/source/ff.c:#if FF_MAX_SS == FF_MIN_SS
+./ff15/source/ff.c:#define SS(fs)	((UINT)FF_MAX_SS)	/* Fixed sector size */
+./ff15/source/ff.c:#define MAX_MALLOC	0x8000	/* Must be >=FF_MAX_SS */
+./ff15/source/ff.c:		if ((w & (w - 1)) == 0 && w >= FF_MIN_SS && w <= FF_MAX_SS	/* Properness of sector size (512-4096 and 2^n) */
+./ff15/source/ff.c:#if FF_MAX_SS != FF_MIN_SS				/* Get sector size (multiple sector size cfg only) */
+./ff15/source/ff.c:	if (SS(fs) > FF_MAX_SS || SS(fs) < FF_MIN_SS || (SS(fs) & (SS(fs) - 1))) return FR_DISK_ERR;
+./ff15/source/ff.c:#if FF_MAX_SS != FF_MIN_SS
+./ff15/source/ff.c:		if (ss > FF_MAX_SS || ss < FF_MIN_SS || (ss & (ss - 1))) return FR_DISK_ERR;
+./ff15/source/ff.c:		ss = FF_MAX_SS;
+./ff15/source/ff.c:		memset(buf, 0, FF_MAX_SS);		/* Clear MBR */
+./ff15/source/ff.c:#if FF_MAX_SS != FF_MIN_SS
+./ff15/source/ff.c:	if (ss > FF_MAX_SS || ss < FF_MIN_SS || (ss & (ss - 1))) return FR_DISK_ERR;
+./ff15/source/ff.c:	ss = FF_MAX_SS;
+./ff15/source/ff.c:	if (!buf) buf = ff_memalloc(FF_MAX_SS);	/* Use heap memory for working buffer */
+./ff15/source/ff.h:#if FF_MAX_SS != FF_MIN_SS
+./ff15/source/ff.h:	BYTE	win[FF_MAX_SS];	/* Disk access window for Directory, FAT (and file data at tiny cfg) */
+./ff15/source/ff.h:	BYTE	buf[FF_MAX_SS];	/* File private data read/write window */
+./include/ffconf.h:#define FF_MAX_SS		512
+./include/ffconf.h:/  type of optical media. When FF_MAX_SS is larger than FF_MIN_SS, FatFs is configured
+./include/ffconf.h:/  At the tiny configuration, size of file object (FIL) is shrinked FF_MAX_SS bytes.

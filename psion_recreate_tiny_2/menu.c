@@ -1501,6 +1501,7 @@ void menu_hex(void)
 #define MAX_STACK          4
 #define MAX_OPERATOR_LEN  10
 #define MAX_NUM_LEN       15
+#define MAX_LINE          64
 
 char entry[200];
 double stack[MAX_STACK];
@@ -1509,6 +1510,7 @@ double number;
 char str_num[MAX_NUM_LEN+1];
 char str_num2[MAX_NUM_LEN+1];
 char operator[MAX_OPERATOR_LEN+1];
+char fcalc[MAX_LINE];
 
 void fac_add(void)
 {
@@ -1602,6 +1604,17 @@ void fac_tan(void)
   fsp = 0;
 }
 
+void fac_def(void)
+{
+  // Define a function
+  printf("\nDEF: '%s'", fcalc);
+
+  // Can do anything here
+
+  // All done, wipe the entry line
+  entry[strlen("DEF")+1] = '\0';
+}
+
 void fac_sqrt(void)
 {
   stack[0] = sqrt(stack[0]);
@@ -1641,6 +1654,7 @@ FCMD_ENTRY fcmds[] =
     {"SQRT", fac_sqrt},
     {"CHS", fac_chs},
     {"SWP", fac_swp},
+    {"DEF", fac_def},
   };
 
 #define NUM_FCMDS (sizeof(fcmds)/sizeof(FCMD_ENTRY))
@@ -1686,11 +1700,22 @@ void move_stack_up(void)
     }
 }
 
+void cpa_build_op(char c);
+
 void cpa_conv_push_num(char c)
 {
   sscanf(str_num, "%lf", &number);
   move_stack_up();
   stack[0] = number;
+}
+
+// Finish the number, push it and then start building an op
+
+void cpa_conv_push_num_build_op(char c)
+{
+  cpa_conv_push_num(' ');
+  cpa_build_op(c);
+
 }
 
 void cpa_push_num(char c)
@@ -1853,7 +1878,7 @@ CP_STATE cps_in_num =
     cpae_in_num,
     {
       {"0123456789e.", cpa_num,            &cps_in_num},
-      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
+      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_conv_push_num_build_op, &cps_in_op},
       {" ",            cpa_conv_push_num,  &cps_init},
       {"_",            cpa_conv_push_num,  &cps_init},
       { "",            cpa_null,     NULL},
@@ -1886,6 +1911,9 @@ void forth_eval_fsm(char *e)
   
   // Just entered the state so cll the entry action
   CALL_CUR_STATE_EA;
+
+  // Store the line for processing later, maybe.
+  strcpy(fcalc, e);
   
   while( !done )
     {

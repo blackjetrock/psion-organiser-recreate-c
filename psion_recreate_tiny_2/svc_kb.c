@@ -51,7 +51,7 @@ uint64_t last_key_press_time = 0;
 int init_last_key = 1;
 
 // How long we wait before turning off if no keys pressed
-uint64_t kb_inactivity_timeout = 20*60*1000*1000;
+uint64_t kb_inactivity_timeout = 2*60*1000*1000;
 uint64_t last_tick_time = 0;
 uint64_t tick_interval = 5*1000*1000;
 int tick = 0;
@@ -480,7 +480,7 @@ void __not_in_flash_func(matrix_debounce)(MATRIX_MAP matrix)
     }
 
   // Inactivity processing
-#if 0
+#if 1
   // Initialise the last key time as global initialisation has to be constant
   if( init_last_key )
     {
@@ -515,7 +515,7 @@ void __not_in_flash_func(matrix_debounce)(MATRIX_MAP matrix)
 	    }
 	}
     }
-  #endif
+#endif
   
 }
 

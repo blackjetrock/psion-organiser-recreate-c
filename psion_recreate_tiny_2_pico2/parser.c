@@ -9,6 +9,8 @@
 //#include "nopl.h"
 #include "psion_recreate_all.h"
 
+//#define dbprintf printf("\n%s", __FUNCTION__);printf
+
 char last_line[MAX_NOPL_LINE];
 
 void check_array_index(int *idx, int max_idx, char *name)
@@ -1577,6 +1579,12 @@ void dump_qcode_data(char *opl_filename)
   
   fp = fopen("qcode_data.txt", "w");
 
+  if( fp == NULL )
+    {
+      printf("\nCould not open '%s'", "qcode_data.txt");
+      return;
+    }
+  
   idx = print_qch_field(idx, fp, "size of the variables on stack", 2);
   idx = print_qch_field(idx, fp, "size of Q code", 2);
 
@@ -1652,8 +1660,8 @@ void dump_qcode_data(char *opl_filename)
   //
   ////////////////////////////////////////////////////////////////////////////////
 
-  FIL objf;
-  FIL *objfp = &objf;
+  //  FIL objf;
+  FIL *objfp = NULL;
   char basename[NOBJ_FILENAME_MAXLEN];
   char ob3_fn[NOBJ_FILENAME_MAXLEN];
 
@@ -1671,11 +1679,11 @@ void dump_qcode_data(char *opl_filename)
   
   printf("\nOutput name:%s", ob3_fn);
 
-  FRESULT fr = f_open(&objf, ob3_fn, FA_WRITE | FA_CREATE_ALWAYS);
+  objfp = fopen(ob3_fn, "w");
 
-  if( fr != FR_OK )
+  if( objfp == NULL )
     {
-      printf("\nCould not open '%s' (%d)\n", ob3_fn, fr);
+      printf("\nCould not open '%s' (%d)\n", ob3_fn);
     }
   
   ff_fprintf(objfp, "ORG%c%c%c%c%c", 0x01, 0xce, 0x83, 0x01, 0xca);
@@ -7248,17 +7256,13 @@ int scan_line(LEVEL_INFO levels)
   char cmdname[NOBJ_VARNAME_MAXLEN+1];
   char label[NOPL_MAX_LABEL+1];
 
-  //printf("\n%s:A", __FUNCTION__);
+  printf("\n%s:'%s'", __FUNCTION__, &(cline[idx]));
   
   indent_more();
 
-  //printf("\n%s:B", __FUNCTION__);
-
-  
   drop_space(&cline_i);
-  //printf("\n%s:C", __FUNCTION__);
 
-  dbprintf("cline:'%s'", &(cline[cline_i]));
+  printf("cline:'%s'", &(cline[cline_i]));
 
   // Before we parse a line we pull more data from the parser text buffer which
   // is presented to the parser in the cline[] array.
@@ -7669,6 +7673,8 @@ int scan_line(LEVEL_INFO levels)
      dbprintf("ret0: Scanning for trappable command failed");
      return(0);
     }
+  
+  return(0);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -7790,6 +7796,8 @@ int pull_next_line(void)
   int all_spaces = 0;
   LVAD(all_spaces);
   int idx = cline_i;
+
+  printf("\n%s:'%s'", __FUNCTION__, &(cline[idx]));
   
   dbprintf("Processing expression just parsed");
 

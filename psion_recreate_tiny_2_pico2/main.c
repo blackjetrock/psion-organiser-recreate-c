@@ -432,7 +432,7 @@ int main(void) {
 #endif
   
 #if 1
-  core1_init();
+  ////////////////////////////core1_init();
   clear_oled();
 #endif
   
@@ -475,6 +475,7 @@ int main(void) {
   
   while(true)
     {
+      matrix_scan();
       menu_loop_tasks();
 
 #if PSION_MINI

@@ -566,11 +566,14 @@ void core1_main(void)
 #endif      
     }
 }
+   
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//
-////////////////////////////////////////////////////////////////////////////////
+#define CORE1_STACK_SIZE 16384
+uint8_t core1_stack[CORE1_STACK_SIZE];
 
 int main()
 {
@@ -707,9 +710,12 @@ int main()
   
   //#if MULTI_CORE
   // If multi core then we run the LCD update on the other core
-  multicore_launch_core1(core1_main);
 
-    //#endif
+  // Use a bigger stack, this allows core 0 to have a larger stack too
+  
+  //  multicore_launch_core1(core1_main);
+  // multicore_launch_core1_with_stack(core1_main, core1_stack, CORE1_STACK_SIZE);
+  //#endif
 
 
 
@@ -732,7 +738,7 @@ int main()
 
     while(1)
       {
-	core1_main();
+	//core1_main();
 
 	t++;
 	menu_loop_tasks();
