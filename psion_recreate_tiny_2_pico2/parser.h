@@ -7,7 +7,7 @@ NOBJ_VARTYPE char_to_type(char ch);
 char type_to_char(NOBJ_VARTYPE t);
 extern NOBJ_VARTYPE expression_type;
 
-#define MAX_EXP_TYPE_STACK  100
+#define MAX_EXP_TYPE_STACK  200
 
 extern char last_line[MAX_NOPL_LINE];
 extern char cline[MAX_NOPL_LINE];
@@ -18,7 +18,7 @@ extern NOBJ_VARTYPE exp_type_stack[MAX_EXP_TYPE_STACK];
 extern int exp_type_stack_ptr;
 extern char current_expression[200];
 
-#define MAX_EXP_BUFFER   100
+#define MAX_EXP_BUFFER   200
 enum
   {
     EXP_BUFF_ID_TKN = 1,

@@ -3838,7 +3838,7 @@ int scan_string(void)
 	}
     }
   syntax_error("Bad string");
-  dbprintf("ret1");
+  dbprintf("ret0");
   return(0);
 }
 
