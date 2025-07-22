@@ -955,4 +955,6 @@ int nopl_exec(char *filename)
   
   ff_fclose(exdbfp);
   ff_fclose(fp);
+  
+  return(1);
 }

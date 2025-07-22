@@ -1179,6 +1179,9 @@ int size_of_type(NOBJ_VAR_INFO *vi)
       internal_error("Void has no size");
       break;
     }
+
+  internal_error("Unknown type");
+  return(0);
 }
 
 int data_offset_of_type(NOBJ_VAR_INFO *vi)
@@ -1221,6 +1224,9 @@ int data_offset_of_type(NOBJ_VAR_INFO *vi)
       internal_error("Void has no data offset");
       break;
     }
+
+  internal_error("Unknown type");
+  return(0);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1970,12 +1976,6 @@ int start_get_line(int start_idx)
   return(retval);
 }
 
-int get_next_line(void)
-{
-  
-}
-
-
 ////////////////////////////////////////////////////////////////////////////////
 
 // Gets next line. Lines come from the input source, which provides
@@ -2192,6 +2192,9 @@ int scan_literal_core(char *lit, OP_STACK_ENTRY *op)
     {
       strcpy(op->name, origlit);
     }
+
+  dbprintf("ret1");  
+  return(1);
 }
 
 //------------------------------------------------------------------------------

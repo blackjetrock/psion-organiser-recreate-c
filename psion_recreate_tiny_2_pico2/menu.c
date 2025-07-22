@@ -2,15 +2,6 @@
 //
 // The Menu
 //
-// This is the menu that lives outside the emulation and allows 'meta' tasks
-// to be performed.
-//
-// **********
-//
-// As it accesses the I2c, it MUST run on the core that is handling the I2C
-// which is core1 at the moment.
-//
-// **********
 //
 ////////////////////////////////////////////////////////////////////////////////
 
