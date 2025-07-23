@@ -268,6 +268,9 @@ const struct _FN_INFO
     { "VIEW",     0,  0, ' ',  "is",        "i", 0x00, 0 },   
     { "WEEK",     0,  0, ' ',  "iii",       "i", 0x00, 0 },
     { "YEAR",     0,  0, ' ',  "",          "i", 0x00, 0 },
+    { "GCLS",     1,  0, ' ',  "",          "v", 0x00, 0 },   // Graphics clear
+    { "GPOINT",   1,  0, ' ',  "ii",        "v", 0x00, 0 },   // Graphics point
+    { "GLINE",    1,  0, ' ',  "iiii",      "v", 0x00, 0 },   // Graphics line
   };
 
 

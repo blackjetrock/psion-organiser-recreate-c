@@ -647,6 +647,9 @@ const SIMPLE_QC_MAP qc_map[] =
 
     {EXP_BUFF_ID_FUNCTION, "INT",  NOBJ_VARTYPE_INT,     __,                   __,        __,               RTF_INT, 0},
     {EXP_BUFF_ID_FUNCTION, "INTF", NOBJ_VARTYPE_FLT,     __,                   __,        __,               RTF_INTF, 0},
+    {EXP_BUFF_ID_FUNCTION, "GCLS",               __,     __,                   __,        __,               QCX_GCLS, 0},
+    {EXP_BUFF_ID_FUNCTION, "GLINE",              __,     __,                   __,        __,               QCX_GLINE, 0},
+    {EXP_BUFF_ID_FUNCTION, "GPOINT",             __,     __,                   __,        __,               QCX_GPOINT, 0},
 
 
     
