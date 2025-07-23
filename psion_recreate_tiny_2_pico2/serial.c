@@ -38,7 +38,7 @@ void tight_loop_tasks(void)
   tud_task();
   
 #if CORE0_SCAN
-  matrix_scan();
+  //matrix_scan();
 #endif
   
   cursor_task();

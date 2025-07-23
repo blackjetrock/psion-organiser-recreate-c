@@ -27,7 +27,7 @@
 #define DB_NEXT_PRINTPOS 0
 
 // Key scanning in core1 main() or core0 loops?
-#define CORE0_SCAN       0
+#define CORE0_SCAN       1
 
 // Different builds
 #define PSION_MINI       1   // Small hardware version

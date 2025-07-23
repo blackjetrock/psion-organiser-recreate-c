@@ -523,11 +523,29 @@ void __not_in_flash_func(matrix_debounce)(MATRIX_MAP matrix)
 // Scans the key matrix and returns a raw bitmap with a 1 for a
 // detected keypress and a 0 for no press. There's a small enough
 // number of keys for this to fit in a uint32_t
+//
+// We want to call this at fairly regular intervals, not as fast as possibly
+//
 
 int m;
 
+// If time is past this time then run
+
+uint64_t run_after_this_time = 0;
+
+
 void __not_in_flash_func(matrix_scan)(void)
 {
+  uint64_t now = time_us_64 ();
+
+  if( !(now > run_after_this_time) )
+    {
+      return;
+    }
+
+  // Run again in 1ms
+  run_after_this_time += 1000;
+  
 #if 0
   printf("\n%s:State:%d Drive:%d", __FUNCTION__, mat_scan_state, mat_scan_drive);
 #endif
