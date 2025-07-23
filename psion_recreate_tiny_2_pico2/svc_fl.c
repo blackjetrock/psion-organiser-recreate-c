@@ -13,11 +13,14 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 
+#if 0
 int fl_check_op(int op)
 {
-
+  return(0);
 }
- 
+
+#endif
+
 #define fl_check_op(XXX) {			\
   static int opened;				\
   switch(op)					\
@@ -726,6 +729,9 @@ int fl_find(char *srch, char *dest, int *len)
 	  return(0);
 	}
     }
+
+  // No record
+  return(0);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -874,7 +880,7 @@ void fl_open(int logfile)
 
 int fl_exist(char *filename)
 {
-  pk_exist(filename);
+  return(pk_exist(filename));
 }
 
 ////////////////////////////////////////////////////////////////////////////////

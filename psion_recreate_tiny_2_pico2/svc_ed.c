@@ -74,6 +74,7 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
 
 KEYCODE ed_edit(char *str)
 {
+  return(KEY_NONE);
 }
 
 ////////////////////////////////////////////////////////////////////////////////

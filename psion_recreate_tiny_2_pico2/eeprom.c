@@ -72,6 +72,8 @@ int write_eeprom(int slave_addr, int start, int len, BYTE *src)
 
   // Delay for the eeprom write time
   sleep_ms(4);
+
+  return(0);
 }
 
 

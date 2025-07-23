@@ -175,6 +175,8 @@ int dd_get_x_size(void)
       return(128);
       break;
     }
+  
+  return(10);
 }
 
 int dd_get_y_size(void)
@@ -193,5 +195,7 @@ int dd_get_y_size(void)
       return(32);
       break;
     }
+
+  return(10);
 }
 

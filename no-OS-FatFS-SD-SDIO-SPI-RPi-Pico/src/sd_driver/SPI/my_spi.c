@@ -31,7 +31,7 @@ specific language governing permissions and limitations under the License.
 #include "util.h"
 //
 #include "my_spi.h"
-#define USE_DBG_PRINTF 1
+#define USE_DBG_PRINTF 0
 
 #ifndef USE_DBG_PRINTF
 #pragma GCC diagnostic ignored "-Wunused-variable"

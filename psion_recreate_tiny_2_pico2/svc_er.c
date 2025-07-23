@@ -17,6 +17,7 @@ void er_error(char *errstr)
 
 char *er_lkup(ER_ERRORCODE e)
 {
+  return("");
 }
 
 

@@ -6465,6 +6465,7 @@ int nopl_trans(char *filename)
   printf("  %d variables",               num_var_info);
   printf("  %d lines blank\n",           n_lines_blank);
 
-  uninit_output();  
+  uninit_output();
+  return(0);
 }
 

@@ -157,7 +157,7 @@ uint16_t pk_rwrd(void)
 
   word  = pk_rbyt() << 8;
   word |= pk_rbyt();
-  
+  return(word);  
 }
 
 void pk_skip(int len)
