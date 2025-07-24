@@ -235,15 +235,14 @@ void menu_test_file(void)
   run_unmount(0, argv_null);
 }
 
+char e_buffer[64] = "";
+
 void menu_prog_translate(void)
 {
-  char e_buffer[64];
-
   dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
 
   dp_prnt("Default:");
 
-  strcpy(e_buffer, "DATA");
   ed_epos(e_buffer, 30, 0, 0);
 
   // Refresh menu on exit
@@ -262,13 +261,10 @@ void menu_prog_translate(void)
 
 void menu_prog_run(void)
 {
-  char e_buffer[64];
-
   dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
 
   dp_prnt("Run:");
 
-  strcpy(e_buffer, "DATA");
   ed_epos(e_buffer, 30, 0, 0);
 
   // Refresh menu on exit
