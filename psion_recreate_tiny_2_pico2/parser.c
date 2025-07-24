@@ -10,6 +10,7 @@
 #include "psion_recreate_all.h"
 
 //#define dbprintf printf("\n%s", __FUNCTION__);printf
+#define dbprintf
 
 char last_line[MAX_NOPL_LINE];
 
@@ -7262,13 +7263,11 @@ int scan_line(LEVEL_INFO levels)
   char cmdname[NOBJ_VARNAME_MAXLEN+1];
   char label[NOPL_MAX_LABEL+1];
 
-  printf("\n%s:'%s'", __FUNCTION__, &(cline[idx]));
-  
   indent_more();
 
   drop_space(&cline_i);
 
-  printf("cline:'%s'", &(cline[cline_i]));
+  //printf("cline:'%s'", &(cline[cline_i]));
 
   // Before we parse a line we pull more data from the parser text buffer which
   // is presented to the parser in the cline[] array.
@@ -7803,7 +7802,7 @@ int pull_next_line(void)
   LVAD(all_spaces);
   int idx = cline_i;
 
-  printf("\n%s:'%s'", __FUNCTION__, &(cline[idx]));
+  //printf("\n%s:'%s'", __FUNCTION__, &(cline[idx]));
   
   dbprintf("Processing expression just parsed");
 

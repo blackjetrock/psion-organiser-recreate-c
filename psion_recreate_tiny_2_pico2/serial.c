@@ -933,6 +933,11 @@ void ic_ls(char *str, char *fmt)
 {
   char arg[100];;
 
+  // Mount drive
+  
+  argv[0] = "0:";
+  run_mount(1, argv);
+
   sscanf(str,  fmt, &arg);
 
   argv[0] = arg;

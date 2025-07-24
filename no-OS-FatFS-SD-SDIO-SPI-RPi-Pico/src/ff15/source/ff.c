@@ -3397,7 +3397,7 @@ static FRESULT mount_volume (	/* FR_OK(0): successful, !=0: an error occurred */
 	WORD nrsv;
 	UINT fmt;
 
-        printf("\n%s\n", __FUNCTION__);
+        //printf("\n%s\n", __FUNCTION__);
         
 	/* Get logical drive number */
 	*rfs = 0;
@@ -3427,13 +3427,13 @@ static FRESULT mount_volume (	/* FR_OK(0): successful, !=0: an error occurred */
 	/* Following code attempts to mount the volume. (find an FAT volume, analyze the BPB and initialize the filesystem object) */
 
 	fs->fs_type = 0;					/* Invalidate the filesystem object */
-        printf("\nfspdrv %d\n", fs->pdrv);
+        //printf("\nfspdrv %d\n", fs->pdrv);
         
         stat = disk_initialize(fs->pdrv);	/* Initialize the volume hosting physical drive */
 
         if (stat & STA_NOINIT)
           { 			/* Check if the initialization succeeded */
-            printf("\nPA\n");
+            //printf("\nPA\n");
             return FR_NOT_READY;			/* Failed to initialize due to no medium or hard error */
           }
         

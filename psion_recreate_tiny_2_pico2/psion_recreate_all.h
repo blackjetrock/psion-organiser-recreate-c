@@ -31,7 +31,8 @@ typedef unsigned int uint;
 
 #include "newopl_lib.h"
 
-#define LVAD(XXX) printf("\n%s:%p\n", __FUNCTION__, &XXX-lvadp)
+//#define LVAD(XXX) printf("\n%s:%p\n", __FUNCTION__, &XXX-lvadp)
+#define LVAD(XXX) 
 
 #include "emulator.h"
 #include "wireless.h"

@@ -522,7 +522,7 @@ void __not_in_flash_func(matrix_debounce)(MATRIX_MAP matrix)
 ////////////////////////////////////////////////////////////////////////////////
 // Scans the key matrix and returns a raw bitmap with a 1 for a
 // detected keypress and a 0 for no press. There's a small enough
-// number of keys for this to fit in a uint32_t
+// number of keys for this to fit in a uint64_t
 //
 // We want to call this at fairly regular intervals, not as fast as possibly
 //
