@@ -225,8 +225,6 @@ void menu_goto_rtc(void)
 void menu_test_file(void)
 {
   size_t argc = 0;
-  const char *argv_null[10] = {0}; // Arbitrary limit of 10 arguments
-  const char *argv[10] = {0}; // Arbitrary limit of 10 arguments
   
   // Open and read the file 'TEST.TXT' in the root directory of the SD card
   run_mount(0, argv_null);
@@ -236,6 +234,58 @@ void menu_test_file(void)
   run_cat(argc, argv);
   run_unmount(0, argv_null);
 }
+
+void menu_prog_translate(void)
+{
+  char e_buffer[64];
+
+  dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
+
+  dp_prnt("Default:");
+
+  strcpy(e_buffer, "DATA");
+  ed_epos(e_buffer, 30, 0, 0);
+
+  // Refresh menu on exit
+  menu_init = 1;
+
+  // Mount the SD card and translate the OPL file
+  run_mount(0, argv_null);
+
+  // Add suffix, as it has to be an ob3 file
+  strcat(e_buffer, ".opl");
+  nopl_trans(e_buffer);
+  
+  run_unmount(0, argv_null);
+
+}
+
+void menu_prog_run(void)
+{
+  char e_buffer[64];
+
+  dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
+
+  dp_prnt("Run:");
+
+  strcpy(e_buffer, "DATA");
+  ed_epos(e_buffer, 30, 0, 0);
+
+  // Refresh menu on exit
+  menu_init = 1;
+
+  // Mount the SD card and translate the OPL file
+  run_mount(0, argv_null);
+
+  // Add suffix, as it has to be an ob3 file
+  strcat(e_buffer, ".ob3");
+  nopl_exec(e_buffer);
+  
+  run_unmount(0, argv_null);
+
+
+}
+
 
 void menu_epos_test(void)
 {
@@ -2449,7 +2499,8 @@ MENU menu_prog =
    init_menu_prog,   
    {
     {KEY_ON, "",        menu_back},
-    {'T', "Test File",  menu_test_file},
+    {'T', "Translate",  menu_prog_translate},
+    {'R', "Run",        menu_prog_run},
     {'&', "",           menu_null},
    }
   };

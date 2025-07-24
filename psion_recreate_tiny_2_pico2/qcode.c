@@ -3555,6 +3555,11 @@ void qca_gline(NOBJ_MACHINE *m, NOBJ_QCS *s)
   // get four ints and draw a line
 }
 
+void qca_gupdate(NOBJ_MACHINE *m, NOBJ_QCS *s)
+{
+  dd_update();
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 //
@@ -3801,9 +3806,10 @@ const NOBJ_QCODE_INFO qcode_info[] =
     { RTF_MONTHSTR,      "RTF_MONTHSTR",      {qca_pop_int,      qca_month_str,   qca_push_string}},        // RTF_MONTHSTR            0xE6
 
     // Extended Qcode
-    { QCX_GCLS,          "QCX_GCLS",          {qca_gcls,         qca_null,        qca_null}},                // QCX_GCLX            0xF0
+    { QCX_GCLS,          "QCX_GCLS",          {qca_gcls,         qca_null,        qca_null}},                // QCX_GCLX          0xF0
     { QCX_GPOINT,        "QCX_GPOINT",        {qca_pop_2int,     qca_gpoint,      qca_null}},                // QCX_POINT         0xF1
     { QCX_GLINE,         "QCX_GLINE",         {qca_gline,        qca_null,        qca_null}},                // QCX_GLINE         0xF2
+    { QCX_GUPDATE,       "QCX_GUPDATE",       {qca_gupdate,      qca_null,        qca_null}},                // QCX_GUPDATE       0xF3
   };
 
 #define SIZEOF_QCODE_INFO (sizeof(qcode_info)/sizeof(NOBJ_QCODE_INFO))
@@ -4048,6 +4054,7 @@ const QCODE_DESC qcode_decode[] =
     {0xF0,	"-",	"-",	"-",	"GCLS"},
     {0xF1,	"-",	"II",	"-",	"GPOINT"},
     {0xF2,	"-",	"IIII",	"-",	"GLINE"},
+    {0xF3,	"-",	"-",	"-",	"GUPDATE"},
   };
 
 int qcode_sizeof_qcode_decode = (sizeof(qcode_decode)/sizeof(QCODE_DESC));

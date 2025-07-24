@@ -272,6 +272,7 @@ const struct _FN_INFO
     { "GCLS",     1,  0, ' ',  "",          "v", 0x00, 0 },   // Graphics clear
     { "GPOINT",   1,  0, ' ',  "ii",        "v", 0x00, 0 },   // Graphics point
     { "GLINE",    1,  0, ' ',  "iiii",      "v", 0x00, 0 },   // Graphics line
+    { "GUPDATE",  1,  0, ' ',  "",          "v", 0x00, 0 },   // Graphics update
   };
 
 

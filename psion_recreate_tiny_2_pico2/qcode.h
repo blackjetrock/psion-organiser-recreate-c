@@ -244,6 +244,7 @@
 #define QCX_GCLS                0xF0
 #define QCX_GPOINT              0xF1
 #define QCX_GLINE               0xF2
+#define QCX_GUPDATE             0xF3
 
 ////////////////////////////////////////////////////////////////////////////////
 //

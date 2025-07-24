@@ -5,3 +5,6 @@ void serial_plot_point_byte(int x, int y, uint8_t byte);
 void serial_loop(void);
 void serial_help(void);
 void tight_loop_tasks(void);
+
+extern const char *argv_null[10];
+extern const char *argv[10];

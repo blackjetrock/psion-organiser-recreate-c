@@ -46,7 +46,7 @@ add_executable(${PROJECT}
     sysvar.c
     eeprom.c
     panel.c
-    opl.c
+#    opl.c
     msc_disk.c
     ssd1309.c
     ssd1351.c

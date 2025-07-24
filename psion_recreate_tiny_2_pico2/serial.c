@@ -31,8 +31,15 @@ void cli_interactive(void);
 
 int interactive_done = 0;
 
+int tight_loop_count = 0;
+
 void tight_loop_tasks(void)
 {
+  if( !((tight_loop_count++) % 100) == 0 )
+    {
+      return;
+    }
+  
   //printf("\nTight\n");
   
   tud_task();
