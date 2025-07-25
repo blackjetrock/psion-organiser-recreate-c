@@ -27,6 +27,19 @@ void cli_interactive(void);
 
 int interactive_done = 0;
 
+void tight_loop_tasks(void)
+{
+  //printf("\nTight\n");
+  
+  tud_task();
+  
+#if CORE0_SCAN
+  matrix_scan();
+#endif
+  
+  cursor_task();
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
   
@@ -92,7 +105,7 @@ void cli_dump_language_stack(void)
 
 void cli_dump_flash_pak(void)
 {
-  fl_dump_flash_pak();
+  //fl_dump_flash_pak();
 }
 
 //------------------------------------------------------------------------------
@@ -201,7 +214,7 @@ void cli_digit(void)
 void cli_format(void)
 {
   printf("\nFormatting A:");
-  pk_fmat();
+  pk_fmat(0);
   printf("\nDone...");
   
 }
@@ -246,7 +259,7 @@ void cli_create(void)
   printf("\nEnter filename:");
   filename = serial_get_string();
   
-  fl_cret(filename, 0);
+  //fl_cret(0, filename, 0);
   
   printf("\nDone...");
   
@@ -365,6 +378,17 @@ void cli_itf(void)
   //txbyte(parameter, 'X');
 }
 
+void cli_ls(void)
+{
+  printf("\nSD Card Listing:\n");
+  run_mount();
+  ls("/");
+  run_unmount();
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
 void cli_dump_fl_pack(void)
 {
   uint8_t *bp;
@@ -404,6 +428,23 @@ void cli_dump_fl_pack(void)
 
   printf("\n");
 }
+
+//------------------------------------------------------------------------------
+//
+// Run an OB3 file from SD card
+
+void cli_test_ob3(void)
+{
+  run_mount();
+  run_cd("/");
+
+  nopl_exec("HW.OB3");
+  
+  run_unmount();
+
+}
+
+//------------------------------------------------------------------------------
 
 #define MAX_INPUT_STR   32
 
@@ -634,6 +675,17 @@ SERIAL_COMMAND serial_cmds[] =
     "Write test records",
     cli_save_test,
    },
+   {
+    'l',
+    "SD dir listing",
+    cli_ls,
+   },
+   {
+    'r',
+    "Run Test OB3",
+    cli_test_ob3,
+   },
+   
   };
 
 int pcount = 0;
@@ -667,15 +719,15 @@ char *serial_get_string(void)
   int done = 0;
   char key_str[2] = " ";
   int key;
-  
+
   serial_get_string_buffer[0] = '\0';
-  
+
   while(!done)
     {
-
+      tight_loop_tasks();
+      
       if( ((key = getchar_timeout_us(100)) != PICO_ERROR_TIMEOUT))
 	{
-	  
 	  switch(key)
 	    {
 	    case 13:
@@ -723,13 +775,13 @@ void ic_createfile(char *str, char *fmt)
   char filename[20];
   sscanf(str, fmt, filename);
 
-  fl_cret(filename, 0);
+  //fl_cret(0, filename, 0);
 
 }
 
 void ic_createmain(char *str, char *fmt)
 {
-  fl_cret("MAIN", 0x90);
+  fl_cret(0,  0x90);
 }
 
 void ic_boot_mass(char *str, char *fmt)
@@ -740,7 +792,7 @@ void ic_boot_mass(char *str, char *fmt)
 void ic_format(char *str, char *fmt)
 {
   printf("\nFormatting %d", pkb_curp);
-  pk_fmat();
+  pk_fmat(0);
 }
 
 void ic_erase(char *str, char *fmt)
@@ -755,6 +807,52 @@ void ic_dump(char *str, char *fmt)
   cli_dump_memory();
 }
 
+void fprintstr(FF_FILE *fp, char *str)
+{
+  while(*str)
+    {
+      ff_fputc(*str, fp);
+      str++;
+    }
+}
+
+void ic_writefile(char *str, char *fmt)
+{
+  FF_FILE *fp;
+  
+  printf("\nWriting file\n");
+  run_mount();
+  fp = ff_fopen("testfile.txt", "a+");
+
+  if( fp == NULL )
+    {
+      printf("\nCould not open file for write");
+      return;
+    }
+
+  fprintstr(fp, "\nLine 1\n");
+  fprintstr(fp, "\n");
+  ff_fclose (fp);
+  
+  fp = ff_fopen("testfile.txt", "r");
+  
+  if( fp == NULL )
+    {
+      printf("\nCould not open file for read");
+      return;
+    }
+
+  while( !ff_feof(fp) )
+    {
+      char line[200];
+
+      ff_fgets(line, 200, fp);
+      printf("\n%s", line);
+    }
+  
+  ff_fclose (fp);
+  run_unmount();
+}
 
 void ic_write(char *str, char *fmt)
 {
@@ -818,6 +916,117 @@ void ic_recno(char *str, char *fmt)
   sscanf(str,  fmt, &recno);
 
   fl_rset(recno);
+}
+
+void ic_ls(char *str, char *fmt)
+{
+  char arg[100];;
+
+  sscanf(str,  fmt, &arg);
+
+  ls(arg);
+}
+
+void ic_cat(char *str, char *fmt)
+{
+  char arg[100];;
+
+  sscanf(str,  fmt, &arg);
+
+  run_cat(arg);
+}
+
+
+void ic_run(char *str, char *fmt)
+{
+  char arg[100];
+  char ob3_fn[100];
+
+  printf("\n%s\n", str);
+  sscanf(str,  fmt, &arg);
+  sprintf(ob3_fn, "%s", arg);
+
+  printf("\nRunning %s", ob3_fn);
+  
+  // Mount the SD card and run the OB3
+  run_mount();
+  run_cd("/");
+
+  nopl_exec(ob3_fn);
+  
+  run_unmount();
+}
+
+void ic_runx(char *str, char *fmt)
+{
+  char arg[100];
+  char ob3_fn[100];
+
+  sprintf(ob3_fn, "extst_deg1.ob3", arg);
+
+  printf("\nRunning %s", ob3_fn);
+  
+  // Mount the SD card and run the OB3
+  run_mount();
+  run_cd("/");
+
+  nopl_exec(ob3_fn);
+  
+  run_unmount();
+}
+
+#if OPL_TRANSLATOR
+
+void ic_trans(char *str, char *fmt)
+{
+  char arg[100];
+  char opl_fn[100];
+
+  printf("\n%s\n", str);
+  sscanf(str,  fmt, &arg);
+  sprintf(opl_fn, "%s", arg);
+
+  printf("\nTranslating %s", opl_fn);
+  
+  // Mount the SD card and translate the OPL file
+  run_mount();
+  run_cd("/");
+
+  nopl_trans(opl_fn);
+  
+  run_unmount();
+}
+#endif
+
+void ic_mount(char *str, char *fmt)
+{
+  run_mount();
+}
+
+void ic_getfree(char *str, char *fmt)
+{
+  run_getfree();
+}
+
+void ic_mkdir(char *str, char *fmt)
+{
+  char arg[1200];
+  
+  sscanf(str, fmt, arg);
+  run_mkdir(arg);
+}
+
+void ic_cd(char *str, char *fmt)
+{
+  char arg[1200];
+  
+  sscanf(str, fmt, arg);
+  run_cd(arg);
+}
+
+void ic_unmount(char *str, char *fmt)
+{
+  run_unmount();
 }
 
 void ic_next(char *str, char *fmt)
@@ -905,6 +1114,8 @@ struct _IC_CMD
    {"test",       "",                ic_test},
    {"dump",       "",                ic_dump},
    {"erase",       "",               ic_erase},
+   {"writefile",  "writefile",       ic_writefile},
+
    {"write",      "write %d %[^@]",  ic_write},
    {"read",       "",                ic_read},
    {"recno",      "recno %d",        ic_recno},
@@ -916,6 +1127,20 @@ struct _IC_CMD
    {"back",       "",                ic_back},
    {"exit",       "",                ic_exit},
    {"!",          "",                ic_boot_mass},
+
+   {"ls",         "ls %s",           ic_ls},
+   {"mount",      "mount",           ic_mount},
+   {"unmount",    "unmount",         ic_unmount},
+   {"getfree",    "getfree",         ic_getfree},
+   {"cd",         "cd",              ic_cd},
+   {"mkdir",      "mkdir",           ic_mkdir},
+   {"runx",       "runx",            ic_runx},
+   {"run",        "run %s",          ic_run},
+#if OPL_TRANSLATOR
+   {"trans",      "trans %s",        ic_trans},
+#endif
+   
+   {"cat",        "cat %s",          ic_cat},
    {"r",          "r %d",            ic_recno},
   };
 
@@ -939,9 +1164,12 @@ void cli_interactive(void)
   int rect;
   
   interactive_done = 0;
+  printf("\nInteractive mode.\n");
   
   while(!interactive_done)
     {
+      tight_loop_tasks();
+      
       printf("\n%c: RECT:%d RECNO:%d ADD:%08X>", 'A'+pkb_curp, flb_rect, flw_crec, pkw_cpad);
       
       cmd = serial_get_string();

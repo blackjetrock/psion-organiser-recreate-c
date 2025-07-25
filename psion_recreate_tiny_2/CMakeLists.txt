@@ -1,12 +1,20 @@
 set(PROJECT psion_recreate_ctusb)
 cmake_minimum_required(VERSION 3.12)
 #set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
+
+# set for pico board
+set(PICO_BOARD pico CACHE STRING "Board type")
+
 set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 project(${PROJECT} C CXX ASM)
 
 pico_sdk_init()
+
+add_subdirectory(../no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
+#add_subdirectory(../no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src build)
+
 add_executable(${PROJECT}
     main.c
     cdc.c
@@ -21,6 +29,7 @@ add_executable(${PROJECT}
     svc_er.c
     svc_db.c
     svc_pak_pico_flash.c
+    svc_pak_linux.c
     svc_pak_serial_eeprom.c
     display.c
     cursor.c
@@ -37,9 +46,30 @@ add_executable(${PROJECT}
     ssd1351.c
     oled_er_oledm015_2.c
     display_driver.c
+    sdcard.c
+    newopl_lib.c
+    newopl_types.c 
+    qcode.c 
+    time_nopl.c 
+    calc.c 
+    #clock_pc.c 
+    num_a.c 
+    machine.c 
+    logical_files.c 
+    errors.c 
+    #svc_pak_linux.c 
+    #svc_pk.c 
+    #svc_fl.c 
+    #svc_kb.c 
+    svc_mn.c 
+    sysvar.c
+    clock_pico.c
+    nopl_exec.c
+    parser.c
+    nopl_trans.c
   )
 target_include_directories(${PROJECT} PUBLIC
-    ${CMAKE_CURRENT_LIST_DIR}
+  ${CMAKE_CURRENT_LIST_DIR}
 )
 target_link_libraries(${PROJECT}
     pico_stdlib
@@ -47,7 +77,11 @@ target_link_libraries(${PROJECT}
     pico_unique_id
     tinyusb_board
     tinyusb_device
-)
+    FatFs_SPI
+    #no-OS-FatFS-SD-SDIO-SPI-RPi-Pico
+  )
+
+#target_link_libraries(_my_app_ FatFs_SPI)
 
 pico_add_extra_outputs(${PROJECT})
 pico_enable_stdio_usb(${PROJECT} 1)

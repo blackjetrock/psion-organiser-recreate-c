@@ -1,0 +1,34 @@
+How to add a new QCode to NewOPL
+================================
+
+1. Add code to qcode .h,
+
+E.g.:
+
+#define QCX_GRAPHICS            0xF0
+
+2. Add an entry into qcode_info[]
+
+E.g.:
+
+    { QCX_GRAPHICS,      "QCX_GRAPHICS",      {qca_graphics,     qca_null,        qca_null}}                // QCX_GRAPHICS            0xF0
+
+
+3. Add the Qcode action:
+
+
+// Special 'escape' qcode that indicates a graphics qcode command
+//
+// Next qcode byte: graphics sub command
+//
+
+void qca_graphics(NOBJ_MACHINE *m, NOBJ_QCS *s)
+{
+}
+
+4. Add a line to fn_info[]
+
+E.g.:
+
+    { "GCLS",     0,  0, ' ',  "",          "v", 0x00, 0 },   // Graphics 
+

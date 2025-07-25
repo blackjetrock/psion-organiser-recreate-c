@@ -25,6 +25,8 @@
 
 #include "psion_recreate_all.h"
 
+#define CALC_FSM_DB 1
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Meta menu
@@ -146,6 +148,14 @@ void init_menu_test_os(void)
 {
 }
 
+void init_menu_prog(void)
+{
+}
+
+void init_menu_calc(void)
+{
+}
+
 void init_menu_buzzer(void)
 {
 }
@@ -194,6 +204,16 @@ void menu_goto_test_os(void)
   goto_menu(&menu_test_os);
 }
 
+void menu_goto_prog(void)
+{
+  goto_menu(&menu_prog);
+}
+
+void menu_goto_calc(void)
+{
+  goto_menu(&menu_calc);
+}
+
 void menu_goto_buzzer(void)
 {
   goto_menu(&menu_buzzer);
@@ -207,6 +227,17 @@ void menu_goto_mems(void)
 void menu_goto_rtc(void)
 {
   goto_menu(&menu_rtc);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void menu_test_file(void)
+{
+  // Open and read the file 'TEST.TXT' in the root directory of the SD card
+  run_mount();
+  run_cd("/");
+  run_cat("TEST.TXT");
+  run_unmount();
 }
 
 void menu_epos_test(void)
@@ -507,7 +538,7 @@ void menu_fmat(void)
   
   dp_prnt("Formatting...");
   
-  pk_fmat();
+  pk_fmat(0);
   menu_back();
 }
 
@@ -1053,18 +1084,26 @@ void menu_oled_test(void)
 #if 1
   pixels_clear();
   //return;
+  int maxx = dd_get_x_size();
+  int maxy = dd_get_y_size();
+  int gy = 8;
+  int gx = 6;
+
   
-  for(int y=0; y<dd_get_y_size()-1; y+=10)
+  int mx = (maxx / gx) * gx;
+  int my = (maxy / gy) * gy;
+  
+  for(int y=0; y<=my; y+=gy)
     {
-      for(int x=0; x<dd_get_x_size()-1; x++)
+      for(int x=0; x<mx; x++)
 	{
 	  dd_plot_point(x, y, 1);
 	}
     }
   
-  for(int x=0; x<dd_get_x_size()-1; x+=10)
+  for(int x=0; x<=mx; x+=gx)
     {
-      for(int y=0; y<dd_get_y_size()-1; y++)
+      for(int y=0; y<my; y++)
 	{
 	  dd_plot_point(x, y, 1);
 	}
@@ -1116,28 +1155,28 @@ void menu_oled_test(void)
       if( bx > (dd_get_x_size()-1)*100 )
 	{
 	  dxa= -dxa;
-	  dxa = (dxa * 9989)/10000;
+	  dxa = (dxa * 9989)/10000+2;
 	  bx = (dd_get_x_size()-1)*100;
 	}
 
       if( by > (dd_get_y_size()-1)*100 )
 	{
 	  dya = -dya;
-	  dya = (dya * 9998)/10000;
+	  dya = (dya * 9998)/10000+2;
 	  by = (dd_get_y_size()-1)*100;
 	}
 
       if( bx < 300 )
 	{
 	  dxa= -dxa;
-	  dxa = (dxa * 9990)/10000;
+	  dxa = (dxa * 9990)/10000+2;
 	  bx = 300;
 	}
 
       if( by <300 )
 	{
 	  dya = -dya;
-	  dya = (dya * 9998)/10000;
+	  dya = (dya * 9998)/10000+2;
 	  by = 300;
 	}
       
@@ -1457,6 +1496,661 @@ void menu_hex(void)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+//
+
+#define MAX_STACK          4
+#define MAX_OPERATOR_LEN  10
+#define MAX_NUM_LEN       15
+#define MAX_LINE          64
+
+char entry[200];
+double stack[MAX_STACK];
+int fsp = 0;
+double number;
+char str_num[MAX_NUM_LEN+1];
+char str_num2[MAX_NUM_LEN+1];
+char operator[MAX_OPERATOR_LEN+1];
+char fcalc[MAX_LINE];
+
+void fac_add(void)
+{
+  printf("\nAdd\n");
+  stack[0] = stack[0] + stack[1];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+
+  fsp = 0;
+  
+}
+
+void fac_div(void)
+{
+  printf("\nDiv\n");
+  stack[0] = stack[1] / stack[0];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_mul(void)
+{
+  printf("\nDiv\n");
+  stack[0] = stack[0] * stack[1];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+
+void fac_minus(void)
+{
+  printf("\nDiv\n");
+  stack[0] = stack[1] - stack[0];
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_sin(void)
+{
+  printf("\nDiv\n");
+  stack[0] = sin(stack[0]);
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_cos(void)
+{
+  printf("\nDiv\n");
+  stack[0] = cos(stack[0]);
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_tan(void)
+{
+  stack[0] = tan(stack[0]);
+
+  for(int i=1; i<MAX_STACK-1; i++)
+    {
+      stack[i] = stack[i+1];
+    }
+  
+  fsp = 0;
+}
+
+void fac_def(void)
+{
+  // Define a function
+  printf("\nDEF: '%s'", fcalc);
+
+  // Can do anything here
+
+  // All done, wipe the entry line
+  entry[strlen("DEF")+1] = '\0';
+}
+
+void fac_sqrt(void)
+{
+  stack[0] = sqrt(stack[0]);
+}
+
+void fac_chs(void)
+{
+  stack[0] = -stack[0];
+}
+
+void fac_swp(void)
+{
+  double t;
+
+  t = stack[0];
+  stack[0] = stack[1];
+  stack[1] = t;
+}
+
+typedef void (*FCMD_ACTION)(void);
+
+typedef struct
+{
+  char *name;
+  FCMD_ACTION action;  
+} FCMD_ENTRY;
+
+FCMD_ENTRY fcmds[] =
+  {
+    {"+", fac_add},
+    {"-", fac_minus},
+    {"*", fac_mul},
+    {"/", fac_div},
+    {"SIN", fac_sin},
+    {"COS", fac_cos},
+    {"TAN", fac_tan},
+    {"SQRT", fac_sqrt},
+    {"CHS", fac_chs},
+    {"SWP", fac_swp},
+    {"DEF", fac_def},
+  };
+
+#define NUM_FCMDS (sizeof(fcmds)/sizeof(FCMD_ENTRY))
+
+
+void display_forth(char *v1)
+{
+  char forthbuf[80];
+
+  dp_cls();
+  
+  sprintf(forthbuf, "%s", entry);
+  strcat(forthbuf, "                  ");
+  forthbuf[16] = '\0';
+  
+  printxy_str(0,0,forthbuf);
+  cursor_y = 0;
+  cursor_x = strlen(entry);
+  
+  for(int i=0; i<MAX_STACK; i++)
+    {
+      sprintf(forthbuf, "%g", stack[i]);
+      printxy_str(0,i+1,forthbuf);
+    }
+}
+
+void execute_cmd(char *cmd)
+{
+  for(int i=0; i<NUM_FCMDS; i++)
+    {
+      if( strcmp(fcmds[i].name, cmd)==0 )
+        {
+          (*fcmds[i].action)();
+        }
+    }
+}
+
+void move_stack_up(void)
+{
+  for(int i=MAX_STACK-1; i>0; i--)
+    {
+      stack[i] = stack[i-1];
+    }
+}
+
+void cpa_build_op(char c);
+
+void cpa_conv_push_num(char c)
+{
+  sscanf(str_num, "%lf", &number);
+  move_stack_up();
+  stack[0] = number;
+}
+
+// Finish the number, push it and then start building an op
+
+void cpa_conv_push_num_build_op(char c)
+{
+  cpa_conv_push_num(' ');
+  cpa_build_op(c);
+
+}
+
+void cpa_push_num(char c)
+{
+  move_stack_up();
+  stack[0] = number;
+}
+
+// Parse the expression using a state machine
+
+void cfsm_status(void)
+{
+#if CALC_FSM_DB
+  printf("\nNumber   : %g", number);
+  printf("\nstr_num  : '%s'", str_num);
+  printf("\noperator : '%s'", operator);
+#endif
+}
+
+void cpa_num(char c)
+{
+  char frag[2] = " ";
+
+  frag[0] = c;
+  strcat(str_num, frag);
+  
+}
+
+void cpa_do_op(char c)
+{
+  execute_cmd(operator);
+
+  // Clear the entry
+  
+}
+
+void cpa_build_op(char c)
+{
+  char frag[2] = " ";
+
+  frag[0] = c;
+  strcat(operator, frag);
+  
+}
+
+void cpa_neg_num(char c)
+{
+  char frag[2] = " ";
+
+  frag[0] = c;
+  strcat(str_num, frag);
+  sprintf(str_num2, "-%s", str_num);
+  strcpy(str_num, str_num2);
+
+}
+
+void cpa_do_minus(char c)
+{
+  execute_cmd("-");
+}
+
+void cpa_num_dig(char c)
+{
+}
+
+void cpa_null(char c)
+{
+}
+
+#define EA_DB \
+  if( CALC_FSM_DB )               \
+    {  \
+  printf("\nEA_DB: %s\n", __FUNCTION__);  \
+    }
+
+void cpae_init(char c)
+{
+  EA_DB;
+  
+  number = 0.0;
+  operator[0] ='\0';
+  str_num[0] = '\0';
+}
+
+void cpae_in_num(char c)
+{
+  EA_DB;
+
+  printf("\nEA is %s", __FUNCTION__);
+}
+
+void cpae_in_op(char c)
+{
+  EA_DB;
+
+  printf("\nEA is %s", __FUNCTION__);
+}
+
+void cpae_neg(char c)
+{
+  EA_DB;
+  printf("\nEA is %s", __FUNCTION__);
+}
+
+void cpae_null(char c)
+{
+  EA_DB;
+}
+
+typedef void (*CP_ACTION)(char c);
+
+typedef struct _CP_STATE_ENTRY
+{
+  char             *c;            // Character in string  _ is '\0'
+  CP_ACTION        action;         // NULL if none
+  struct _CP_STATE *next_state;
+} CP_STATE_ENTRY;
+
+typedef struct _CP_STATE
+{
+  char             *name;
+  CP_ACTION         entry_action;         // Executed on entry to state
+  CP_STATE_ENTRY    transition[5];
+} CP_STATE;
+
+// '_' indicates end of the string
+
+CP_STATE cps_neg;
+CP_STATE cps_in_num;
+CP_STATE cps_in_op;
+
+// Start state
+CP_STATE cps_init =
+  {
+    "cps_init",
+    cpae_init,
+    {
+      { "-",                             cpa_null,     &cps_neg },   // minus, could be number or operator
+      {"0123456789e.",                   cpa_num,      &cps_in_num},
+      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
+      { "",                              cpa_null,     NULL},
+    }
+  };
+
+CP_STATE cps_neg =
+  {
+    "cps_neg",
+    cpae_neg,
+    {
+      {"0123456789e.", cpa_neg_num,  &cps_in_num},
+      {" ",            cpa_do_minus, &cps_init},
+      {"_",            cpa_do_minus, &cps_init},
+      { "",            cpa_null,     NULL},
+    }
+  };
+
+CP_STATE cps_in_num =
+  {
+    "cps_in_num",
+    cpae_in_num,
+    {
+      {"0123456789e.", cpa_num,            &cps_in_num},
+      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_conv_push_num_build_op, &cps_in_op},
+      {" ",            cpa_conv_push_num,  &cps_init},
+      {"_",            cpa_conv_push_num,  &cps_init},
+      { "",            cpa_null,     NULL},
+    }
+  };
+
+CP_STATE cps_in_op =
+  {
+    "cps_in_op",
+    cpae_in_op,
+    {
+      {"0123456789.",                    cpa_build_op, &cps_in_op},
+      {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-*/", cpa_build_op, &cps_in_op},
+      {" ",                              cpa_do_op,    &cps_init},
+      {"_",                              cpa_do_op,    &cps_init},
+      { "",                              cpa_null,     NULL},
+    }
+  };
+
+// Evaluate the entry string using an FSM to do the parsing.
+#define CALL_CUR_STATE_EA (current_state->entry_action)('\0')
+
+void forth_eval_fsm(char *e)
+{
+  CP_STATE *current_state;
+  CP_STATE *last_state;
+  int done = 0;
+  
+  current_state = &cps_init;
+  
+  // Just entered the state so cll the entry action
+  CALL_CUR_STATE_EA;
+
+  // Store the line for processing later, maybe.
+  strcpy(fcalc, e);
+  
+  while( !done )
+    {
+      char ch = *e;
+
+      // Process current state
+      if( *e == '\0' )
+        {
+          ch = '_';
+
+          // Exit after processing the end of line
+          done = 1;
+        }
+      else
+        {
+          ch = *e;
+        }
+
+      int i = 0;
+
+#if CALC_FSM_DB
+      printf("\nProcessing ch:'%c'", ch);
+#endif
+
+      while( strlen(current_state->transition[i].c) != 0 )
+        {
+          if( strchr(current_state->transition[i].c, ch) != NULL )
+            {
+#if CALC_FSM_DB
+              printf("\nAction");
+              cfsm_status();
+#endif
+
+              if( current_state->transition[i].action != NULL )
+                {
+#if CALC_FSM_DB
+              printf(" called");
+#endif
+                  (current_state->transition[i].action)(ch);
+                }
+              else
+                {
+#if CALC_FSM_DB
+              printf(" is NULL");
+#endif
+                }
+              
+              // Move states
+              last_state = current_state;
+              current_state = current_state->transition[i].next_state;
+
+              // If we have entered a new state then call entry action
+              if( last_state != current_state )
+                {
+#if CALC_FSM_DB
+                  printf("\nEntering state %s", current_state->name);
+#endif
+                  CALL_CUR_STATE_EA;
+                }
+            }
+          
+          i++;
+        }
+
+      e++;
+    }
+}
+
+void forth_eval(char *e)
+{
+  char num[50];
+  char cmd[50];
+  char frag[2] = " ";
+  int isnum = 0;
+  int iscmd = 0;
+
+  printf("\nEval:%s", entry);
+  
+  num[0] = '\0';
+  cmd[0] = '\0';
+  
+  while( strlen(e) > 0 )
+    {
+      switch(*e)
+        {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case '.':
+          frag[0] = *e;
+          strcat(num, frag);
+          isnum = 1;
+
+          if( strlen(e) == 1 )
+            {
+              move_stack_up();
+              sscanf(num, "%lf", &(stack[0]));
+              printf("\nNum:%s", num);
+              num[0] = '\0';
+              isnum = 0;
+            }
+          break;
+
+        case ' ':
+          // Push numbers on stack or execute cmds
+          if( isnum )
+            {
+              move_stack_up();
+              sscanf(num, "%lf", &(stack[0]));
+              printf("\nNum:%s", num);
+              num[0] = '\0';
+              isnum = 0;
+            }
+
+          if( iscmd )
+            {
+              // Execute command
+              execute_cmd(cmd);
+              printf("\nCmd:%s", cmd);
+              cmd[0] = '\0';
+              iscmd = 0;
+            }
+          break;
+          
+        default:
+          frag[0] = *e;
+          strcat(cmd, frag);
+          iscmd = 1;
+          if( strlen(e) == 1)
+            {
+              // Execute command
+              execute_cmd(cmd);
+              printf("\nCmd:%s", cmd);
+              cmd[0] = '\0';
+              iscmd = 0;
+            }
+          break;
+        }
+
+      e++;
+    }
+  
+  entry[0] = '\0';
+}
+
+void menu_forth_core(int type)
+{
+  int done = 0;
+  int v1=0, v2=0;
+  int hex_ndec = 1;
+
+  char frag[2] = " ";
+  
+  cursor_on = 1;
+  cursor_blink = 1;
+  
+  entry[0] = '\0';
+
+  for(int i=0; i<MAX_STACK; i++)
+    {
+      stack[i] = 0.0;
+    }
+  
+  display_forth(entry);
+  
+  while(!done)
+    {
+      menu_loop_tasks();
+
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+	  
+	  switch(k)
+	    {
+	    case KEY_ON:
+	      cursor_on = 0;
+	      done = 1;
+	      break;
+
+            default:
+
+              frag[0] = k;
+              strcat(entry, frag);
+	      break;
+
+	    case KEY_EXE:
+              // Evaluate
+              switch(type)
+                {
+                case 1:
+                  forth_eval(entry);
+                  break;
+
+                case 2:
+                  forth_eval_fsm(entry);
+                  break;
+                }
+
+              // Clear the entry just processed
+              entry[0] = '\0';
+	      break;
+	      
+	    case KEY_DEL:
+	      // Remove last character
+              if( strlen(entry) > 0 )
+                {
+                  entry[strlen(entry)-1] = '\0';
+                }
+              
+	      break;
+	    }
+
+	  display_forth(entry);
+	}
+    }
+}
+
+void menu_calc1(void)
+{
+  menu_forth_core(1);
+}
+
+void menu_calc2(void)
+{
+  menu_forth_core(2);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 #define DPVIEW_N 3
 
@@ -1731,7 +2425,8 @@ MENU menu_top =
     {'F', "Find",       menu_fl_find},
     {'S', "Save",       menu_fl_save},
     {'M', "forMat",     menu_goto_format},
-
+    {'P', "Prog",       menu_goto_prog},
+    {'C', "Calc",       menu_goto_calc},
     {'&', "",           menu_null},
    }
   };
@@ -1776,6 +2471,31 @@ MENU menu_test_os =
     {'E', "Epos",       menu_epos_test},
     {'F', "Flowtext",   menu_flowtext_test},
     {'K', "Keytest",    menu_scan_test},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_prog =
+  {
+   &menu_top,
+   "Program",
+   init_menu_prog,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'T', "Test File",  menu_test_file},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_calc =
+  {
+   &menu_top,
+   "Calc",
+   init_menu_calc,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'C', "Calc",       menu_calc1},
+    {'F', "FSM Calc",   menu_calc2},
     {'&', "",           menu_null},
    }
   };

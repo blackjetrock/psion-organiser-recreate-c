@@ -6,7 +6,7 @@
 #include "psion_recreate_all.h"
 
 #include "ssd1309.h"
-
+//#include "nopl.h"
 
 extern void core1_init(void);
 extern bool core1_tick(void);
@@ -258,7 +258,7 @@ PANEL_T panel_opl =
   {
     panel_opl_init,
     {
-      {1, 1, 15, "SP",      PANEL_ITEM_TYPE_INT, (int *)&opl_machine.sp},
+      //      {1, 1, 15, "SP",      PANEL_ITEM_TYPE_INT, (int *)&opl_machine.sp},
       {1, 1, 15, "",        PANEL_ITEM_TYPE_INT, NULL},
     }
   };
@@ -377,6 +377,7 @@ int main(void) {
   board_init();
   tusb_init();
 
+  sdcard_init();
 
 #if 1
   core1_init();
@@ -391,6 +392,8 @@ int main(void) {
   initialise_oled();
 #endif
 
+  nopl_init();
+  
   int tick = 0;
 
   menu_enter();

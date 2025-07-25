@@ -1,0 +1,2 @@
+cp ../gdb_commands .
+gdb -x gdb_commands psion_recreate_ctusb.elf

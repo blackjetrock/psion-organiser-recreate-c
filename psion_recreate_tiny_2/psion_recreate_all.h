@@ -6,6 +6,13 @@ typedef unsigned int uint;
 
 #include "psion_recreate.h"
 
+//#include "nos.h"
+//#include "newopl_types.h"
+//#include "newopl.h"
+//#include "nopl_obj.h"
+#include "nopl.h"
+
+#include "newopl_lib.h"
 
 
 #include "emulator.h"
@@ -26,10 +33,12 @@ typedef unsigned int uint;
 #include "core1.h"
 #include "panel.h"
 #include "svc.h"
-#include "opl.h"
+//#include "opl.h"
 
 #include "menu.h"
 #include "switches.h"
 
 #include "sysvar.h"
+
+#include "sdcard.h"
 

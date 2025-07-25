@@ -1,0 +1,148 @@
+./examples/command_line/build/command_line.elf.map: .text.mount_volume
+./examples/command_line/build/command_line.elf.map: .rodata.mount_volume.str1.4
+./examples/command_line/build/command_line.dis:10004810 <mount_volume>:
+./examples/command_line/build/command_line.dis:10004818:	489a      	ldr	r0, [pc, #616]	@ (10004a84 <mount_volume+0x274>)
+./examples/command_line/build/command_line.dis:1000481a:	499b      	ldr	r1, [pc, #620]	@ (10004a88 <mount_volume+0x278>)
+./examples/command_line/build/command_line.dis:1000482c:	f000 8103 	beq.w	10004a36 <mount_volume+0x226>
+./examples/command_line/build/command_line.dis:10004832:	e002      	b.n	1000483a <mount_volume+0x2a>
+./examples/command_line/build/command_line.dis:10004836:	f000 80f7 	beq.w	10004a28 <mount_volume+0x218>
+./examples/command_line/build/command_line.dis:10004840:	d8f8      	bhi.n	10004834 <mount_volume+0x24>
+./examples/command_line/build/command_line.dis:10004842:	4b92      	ldr	r3, [pc, #584]	@ (10004a8c <mount_volume+0x27c>)
+./examples/command_line/build/command_line.dis:10004846:	4b92      	ldr	r3, [pc, #584]	@ (10004a90 <mount_volume+0x280>)
+./examples/command_line/build/command_line.dis:1000484e:	f000 8106 	beq.w	10004a5e <mount_volume+0x24e>
+./examples/command_line/build/command_line.dis:1000485c:	f040 80bb 	bne.w	100049d6 <mount_volume+0x1c6>
+./examples/command_line/build/command_line.dis:10004866:	488b      	ldr	r0, [pc, #556]	@ (10004a94 <mount_volume+0x284>)
+./examples/command_line/build/command_line.dis:10004874:	f100 8101 	bmi.w	10004a7a <mount_volume+0x26a>
+./examples/command_line/build/command_line.dis:10004878:	b115      	cbz	r5, 10004880 <mount_volume+0x70>
+./examples/command_line/build/command_line.dis:1000487c:	f100 80eb 	bmi.w	10004a56 <mount_volume+0x246>
+./examples/command_line/build/command_line.dis:1000488c:	f000 80b0 	beq.w	100049f0 <mount_volume+0x1e0>
+./examples/command_line/build/command_line.dis:10004892:	f000 80f0 	beq.w	10004a76 <mount_volume+0x266>
+./examples/command_line/build/command_line.dis:10004898:	f200 80c2 	bhi.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:100048a2:	f000 80cc 	beq.w	10004a3e <mount_volume+0x22e>
+./examples/command_line/build/command_line.dis:100048ae:	f040 80b7 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:100048b6:	b908      	cbnz	r0, 100048bc <mount_volume+0xac>
+./examples/command_line/build/command_line.dis:100048c8:	f200 80aa 	bhi.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:100048d4:	f000 80a4 	beq.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:100048e0:	f040 809e 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:100048f0:	f040 8096 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:100048fc:	d101      	bne.n	10004902 <mount_volume+0xf2>
+./examples/command_line/build/command_line.dis:10004908:	f000 808a 	beq.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:1000491a:	f0c0 8081 	bcc.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004924:	d37c      	bcc.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:1000492a:	4a5b      	ldr	r2, [pc, #364]	@ (10004a98 <mount_volume+0x288>)
+./examples/command_line/build/command_line.dis:1000492e:	d877      	bhi.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004948:	f200 8200 	bhi.w	10004d4c <mount_volume+0x53c>
+./examples/command_line/build/command_line.dis:10004952:	f200 8259 	bhi.w	10004e08 <mount_volume+0x5f8>
+./examples/command_line/build/command_line.dis:1000496a:	d059      	beq.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:1000498c:	d348      	bcc.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:1000499e:	483f      	ldr	r0, [pc, #252]	@ (10004a9c <mount_volume+0x28c>)
+./examples/command_line/build/command_line.dis:100049a4:	4b3e      	ldr	r3, [pc, #248]	@ (10004aa0 <mount_volume+0x290>)
+./examples/command_line/build/command_line.dis:100049d4:	e008      	b.n	100049e8 <mount_volume+0x1d8>
+./examples/command_line/build/command_line.dis:100049de:	f53f af3f 	bmi.w	10004860 <mount_volume+0x50>
+./examples/command_line/build/command_line.dis:100049e2:	b10d      	cbz	r5, 100049e8 <mount_volume+0x1d8>
+./examples/command_line/build/command_line.dis:100049e6:	d436      	bmi.n	10004a56 <mount_volume+0x246>
+./examples/command_line/build/command_line.dis:100049f6:	f000 80ee 	beq.w	10004bd6 <mount_volume+0x3c6>
+./examples/command_line/build/command_line.dis:10004a0e:	f040 80ba 	bne.w	10004b86 <mount_volume+0x376>
+./examples/command_line/build/command_line.dis:10004a14:	f040 80c3 	bne.w	10004b9e <mount_volume+0x38e>
+./examples/command_line/build/command_line.dis:10004a1a:	f040 80cd 	bne.w	10004bb8 <mount_volume+0x3a8>
+./examples/command_line/build/command_line.dis:10004a1e:	bb06      	cbnz	r6, 10004a62 <mount_volume+0x252>
+./examples/command_line/build/command_line.dis:10004a2c:	d103      	bne.n	10004a36 <mount_volume+0x226>
+./examples/command_line/build/command_line.dis:10004a32:	f000 80cd 	beq.w	10004bd0 <mount_volume+0x3c0>
+./examples/command_line/build/command_line.dis:10004a44:	e001      	b.n	10004a4a <mount_volume+0x23a>
+./examples/command_line/build/command_line.dis:10004a48:	d02e      	beq.n	10004aa8 <mount_volume+0x298>
+./examples/command_line/build/command_line.dis:10004a52:	d0f8      	beq.n	10004a46 <mount_volume+0x236>
+./examples/command_line/build/command_line.dis:10004a54:	e7e4      	b.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004a60:	e7df      	b.n	10004a22 <mount_volume+0x212>
+./examples/command_line/build/command_line.dis:10004a6e:	f67f af15 	bls.w	1000489c <mount_volume+0x8c>
+./examples/command_line/build/command_line.dis:10004a74:	d1d4      	bne.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004a78:	e7d3      	b.n	10004a22 <mount_volume+0x212>
+./examples/command_line/build/command_line.dis:10004a7a:	480a      	ldr	r0, [pc, #40]	@ (10004aa4 <mount_volume+0x294>)
+./examples/command_line/build/command_line.dis:10004a82:	e7ce      	b.n	10004a22 <mount_volume+0x212>
+./examples/command_line/build/command_line.dis:10004ab0:	d1b6      	bne.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004ab8:	d1b2      	bne.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004ad0:	d1a6      	bne.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004ade:	d09f      	beq.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004ae4:	4ec4      	ldr	r6, [pc, #784]	@ (10004df8 <mount_volume+0x5e8>)
+./examples/command_line/build/command_line.dis:10004ae8:	d89a      	bhi.n	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004b26:	f4ff af7b 	bcc.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004b36:	b9dd      	cbnz	r5, 10004b70 <mount_volume+0x360>
+./examples/command_line/build/command_line.dis:10004b3e:	f67f af6f 	bls.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004b6e:	d182      	bne.n	10004a76 <mount_volume+0x266>
+./examples/command_line/build/command_line.dis:10004b7c:	f000 810c 	beq.w	10004d98 <mount_volume+0x588>
+./examples/command_line/build/command_line.dis:10004b84:	e7d7      	b.n	10004b36 <mount_volume+0x326>
+./examples/command_line/build/command_line.dis:10004b94:	f67f ae82 	bls.w	1000489c <mount_volume+0x8c>
+./examples/command_line/build/command_line.dis:10004b9a:	f43f af3d 	beq.w	10004a18 <mount_volume+0x208>
+./examples/command_line/build/command_line.dis:10004bae:	f67f ae75 	bls.w	1000489c <mount_volume+0x8c>
+./examples/command_line/build/command_line.dis:10004bb4:	f43f af33 	beq.w	10004a1e <mount_volume+0x20e>
+./examples/command_line/build/command_line.dis:10004bc4:	f67f ae6a 	bls.w	1000489c <mount_volume+0x8c>
+./examples/command_line/build/command_line.dis:10004bca:	f43f af29 	beq.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004bce:	e748      	b.n	10004a62 <mount_volume+0x252>
+./examples/command_line/build/command_line.dis:10004bd4:	e637      	b.n	10004846 <mount_volume+0x36>
+./examples/command_line/build/command_line.dis:10004be2:	f47f af48 	bne.w	10004a76 <mount_volume+0x266>
+./examples/command_line/build/command_line.dis:10004be8:	4984      	ldr	r1, [pc, #528]	@ (10004dfc <mount_volume+0x5ec>)
+./examples/command_line/build/command_line.dis:10004bf8:	f47f af12 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004c06:	f63f af0b 	bhi.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004c1a:	4979      	ldr	r1, [pc, #484]	@ (10004e00 <mount_volume+0x5f0>)
+./examples/command_line/build/command_line.dis:10004c22:	e04b      	b.n	10004cbc <mount_volume+0x4ac>
+./examples/command_line/build/command_line.dis:10004cba:	d00b      	beq.n	10004cd4 <mount_volume+0x4c4>
+./examples/command_line/build/command_line.dis:10004cc2:	d8af      	bhi.n	10004c24 <mount_volume+0x414>
+./examples/command_line/build/command_line.dis:10004cd2:	e7b8      	b.n	10004c46 <mount_volume+0x436>
+./examples/command_line/build/command_line.dis:10004cda:	f47f aea1 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004ce4:	f47f ae9c 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004cf0:	f63f ae96 	bhi.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004d06:	e003      	b.n	10004d10 <mount_volume+0x500>
+./examples/command_line/build/command_line.dis:10004d0c:	f43f ae88 	beq.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004d20:	f47f aea9 	bne.w	10004a76 <mount_volume+0x266>
+./examples/command_line/build/command_line.dis:10004d2e:	4935      	ldr	r1, [pc, #212]	@ (10004e04 <mount_volume+0x5f4>)
+./examples/command_line/build/command_line.dis:10004d3a:	d1e5      	bne.n	10004d08 <mount_volume+0x4f8>
+./examples/command_line/build/command_line.dis:10004d48:	d8de      	bhi.n	10004d08 <mount_volume+0x4f8>
+./examples/command_line/build/command_line.dis:10004d4a:	e5a7      	b.n	1000489c <mount_volume+0x8c>
+./examples/command_line/build/command_line.dis:10004d64:	f47f ae5c 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004d7c:	f4ff ae50 	bcc.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004d92:	d05b      	beq.n	10004e4c <mount_volume+0x63c>
+./examples/command_line/build/command_line.dis:10004d96:	e601      	b.n	1000499c <mount_volume+0x18c>
+./examples/command_line/build/command_line.dis:10004da2:	f67f ae3d 	bls.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004daa:	f67f ae39 	bls.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004dc4:	e007      	b.n	10004dd6 <mount_volume+0x5c6>
+./examples/command_line/build/command_line.dis:10004dce:	d05e      	beq.n	10004e8e <mount_volume+0x67e>
+./examples/command_line/build/command_line.dis:10004dd2:	f47f ae25 	bne.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004df2:	d0e8      	beq.n	10004dc6 <mount_volume+0x5b6>
+./examples/command_line/build/command_line.dis:10004df4:	e63f      	b.n	10004a76 <mount_volume+0x266>
+./examples/command_line/build/command_line.dis:10004e1c:	f43f ae00 	beq.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004e38:	f4ff adf2 	bcc.w	10004a20 <mount_volume+0x210>
+./examples/command_line/build/command_line.dis:10004e4a:	e5a7      	b.n	1000499c <mount_volume+0x18c>
+./examples/command_line/build/command_line.dis:10004e5a:	d19b      	bne.n	10004d94 <mount_volume+0x584>
+./examples/command_line/build/command_line.dis:10004e68:	d194      	bne.n	10004d94 <mount_volume+0x584>
+./examples/command_line/build/command_line.dis:10004e6c:	4b0a      	ldr	r3, [pc, #40]	@ (10004e98 <mount_volume+0x688>)
+./examples/command_line/build/command_line.dis:10004e70:	d190      	bne.n	10004d94 <mount_volume+0x584>
+./examples/command_line/build/command_line.dis:10004e82:	d187      	bne.n	10004d94 <mount_volume+0x584>
+./examples/command_line/build/command_line.dis:10004e8c:	e782      	b.n	10004d94 <mount_volume+0x584>
+./examples/command_line/build/command_line.dis:10004e94:	e582      	b.n	1000499c <mount_volume+0x18c>
+./examples/command_line/build/command_line.dis:10007a96:	f7fc febb 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:10007ae4:	f7fc fe94 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:100088c4:	f7fb ffa4 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:100089ca:	f7fb ff21 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:1000929e:	f7fb fab7 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:1000974a:	f7fb f861 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:1000985a:	f7fa ffd9 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:100098d4:	f7fa ff9c 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:10009b74:	f7fa fe4c 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:10009d30:	f7fa fd6e 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:10009f92:	f7fa fc3d 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:1000a2ba:	f7fa faa9 	bl	10004810 <mount_volume>
+./examples/command_line/build/command_line.dis:1000a448:	f7fa f9e2 	bl	10004810 <mount_volume>
+./src/ff15/source/ff.c:static FRESULT mount_volume (	/* FR_OK(0): successful, !=0: an error occurred */
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, 0);	/* Force mounted the volume */
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, mode);
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, 0);
+./src/ff15/source/ff.c:	res = mount_volume((const TCHAR**)&buff, &fs, 0);	/* Get current volume */
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, 0);
+./src/ff15/source/ff.c:	res = mount_volume(&path, &dj.obj.fs, 0);
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, 0);
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, FA_WRITE);
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, FA_WRITE);	/* Get logical drive */
+./src/ff15/source/ff.c:	res = mount_volume(&path_old, &fs, FA_WRITE);	/* Get logical drive of the old object */
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, FA_WRITE);	/* Get logical drive */
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, FA_WRITE);	/* Get logical drive */
+./src/ff15/source/ff.c:	res = mount_volume(&path, &fs, 0);
+./src/ff15/source/ff.c:	res = mount_volume(&label, &fs, FA_WRITE);

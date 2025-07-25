@@ -1,0 +1,2 @@
+cd /home/menadue/tree/github/openocd
+sudo src/openocd -s tcl -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000"
