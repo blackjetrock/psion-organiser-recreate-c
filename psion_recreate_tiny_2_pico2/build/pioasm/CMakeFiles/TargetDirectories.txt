@@ -1,0 +1,7 @@
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/pioasm/CMakeFiles/pioasm.dir
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/pioasm/CMakeFiles/edit_cache.dir
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/pioasm/CMakeFiles/rebuild_cache.dir
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/pioasm/CMakeFiles/list_install_components.dir
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/pioasm/CMakeFiles/install.dir
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/pioasm/CMakeFiles/install/local.dir
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/pioasm/CMakeFiles/install/strip.dir
