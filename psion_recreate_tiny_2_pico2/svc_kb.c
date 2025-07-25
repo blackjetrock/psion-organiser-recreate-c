@@ -454,8 +454,16 @@ void __not_in_flash_func(matrix_debounce)(MATRIX_MAP matrix)
       if( (key_map[i].mask) & pressed_edges )
 	{
 	  // Key pressed
-	  //printf("\nC:%c", key_map[i].c);
-
+#if DB_KB_KEYCODE_IN_BUFFER          
+          if( i < '0' )
+            {
+              printf("\nC:0x%X", key_map[i].c);
+            }
+          else
+            {
+              printf("\nC:%c", key_map[i].c);
+            }
+#endif     
 	  // Update inactivity timeout
 	  last_key_press_time = time_us_64();
 	  

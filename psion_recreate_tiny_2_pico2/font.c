@@ -370,6 +370,22 @@ void next_printpos(int ch)
   
 }
 
+//------------------------------------------------------------------------------
+//
+// Return the number of lines and characters
+
+int display_num_lines(void)
+{
+  return(DISPLAY_NUM_LINES);
+}
+
+int display_num_chars(void)
+{
+  return(DISPLAY_NUM_CHARS);
+}
+
+//------------------------------------------------------------------------------
+
 void new_line(void)
 {
 

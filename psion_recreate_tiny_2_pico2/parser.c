@@ -9,9 +9,6 @@
 //#include "nopl.h"
 #include "psion_recreate_all.h"
 
-//#define dbprintf printf("\n%s", __FUNCTION__);printf
-#define dbprintf
-
 char last_line[MAX_NOPL_LINE];
 
 void check_array_index(int *idx, int max_idx, char *name)

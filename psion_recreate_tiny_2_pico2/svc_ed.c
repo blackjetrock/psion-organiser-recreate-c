@@ -32,12 +32,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // Update the display for the epos service.
-
+//
+// Prompt at start of display
+// Then the line being edited (which can be on multiple lines, delimited by tabs)
+//
+// 
 void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_line, int display_start_index)
 {
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
-  printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
+  printf("\n%s: Entry printpos_x:%d printpos_y:%d",      __FUNCTION__, printpos_x, printpos_y);
   printf("\n");
 #endif
 
@@ -58,10 +62,19 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
   printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
   printf("\n");
 #endif
-  
+
+  // Cursor is at the insert_point position
+#if 0
   cursor_x = printpos_x;
   cursor_y = printpos_y;
+#endif
+  int cursor_i = strlen(epos_prompt)+insert_point;
+  
+  cursor_x = cursor_i % display_num_chars();
+  cursor_y = cursor_i / display_num_chars();
 
+  printf("\n%s:cursor_x:%d cursor_y:%d",      __FUNCTION__, cursor_x, cursor_y);
+    
 #if DB_ED_EPOS
   printf("\n%s: Exit", __FUNCTION__);
 #endif
@@ -105,7 +118,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 {
   int done = 0;
   char charstr[2] = "";
-  int insert_point        = 0;  // Index where next character should be inserted
+  int insert_point        = 0;  // Index in str where next character should be inserted
   int cursor_line         = 0;  // Which line the cursor is on (0-based)
   int display_start_index = 0;  // The index of the first character in the string that is currently
                                 // displayed
@@ -126,13 +139,22 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
     {
       epos_prompt[i] = under_cursor_char[i%DISPLAY_NUM_CHARS][i/DISPLAY_NUM_CHARS];
     }
+  
   epos_prompt[epos_py*DISPLAY_NUM_CHARS+epos_px] = '\0';
 
   cursor_on = 1;
   cursor_blink = 1;
+
+#if 0
   cursor_x = printpos_x;
   cursor_y = printpos_y;
+#endif
   
+  int cursor_i = strlen(epos_prompt)+insert_point;
+  
+  cursor_x = cursor_i % display_num_chars();
+  cursor_y = cursor_i / display_num_lines();
+
   ed_state = ED_STATE_EDIT;
 
   cursor_line = 0;
@@ -186,23 +208,60 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 		case KEY_EXE:
 		  done = 1;
 		  break;
-		  
+
+                case KEY_LEFT:
+                  if( insert_point > 0)
+                    {
+                      insert_point--;
+                    }
+                  break;
+
+                case KEY_RIGHT:
+                  if( insert_point < strlen(str))
+                    {
+                      insert_point++;
+                    }
+                  break;
+                  
 		  // Insert newline character
 		case KEY_DOWN:
 		  charstr[0] = CHRCODE_TAB;;
-		  strcat(str, charstr);
+                  // Shift up
+                  for(int i=strlen(str); i>=insert_point; i--)
+                    {
+                      str[i+1] = str[i];
+                    }
+                  str[insert_point++] = k;
+		  //strcat(str, charstr);
 		  break;
 		  
 		case KEY_DEL:
-		  if( strlen(str) > 0 )
+		  if( insert_point > 0 )
 		    {
-		      str[strlen(str)-1] = '\0';
+                      // Move string over insert_point
+                      insert_point--;
+                      int end = strlen(str)-1;
+                      
+                      for(int i=insert_point; i<=end; i++)
+                        {
+                          str[i] = str[i+1];
+                        }
+                      str[end] = '\0';
 		    }
 		  break;
 		  
 		default:
+                  // Insert character at insert point
 		  charstr[0] = k;
-		  strcat(str, charstr);
+
+                  // Shift up
+                  for(int i=strlen(str); i>=insert_point; i--)
+                    {
+                      str[i+1] = str[i];
+                    }
+                  str[insert_point++] = k;
+                  
+		  //strcat(str, charstr);
 		  break;
 		}
 	      break;

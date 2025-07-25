@@ -1328,7 +1328,7 @@ void serial_loop(void)
 		  break;
 
 		default:
-		  // not a sequene, send the previous and this key
+		  // not a sequence, send the previous and this key
 		  queue_key(key_queue[0]);
 		  queue_key(key);
 		  sl_state = SL_STATE_INIT;

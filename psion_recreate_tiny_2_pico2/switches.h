@@ -4,10 +4,12 @@
 
 #define KEY_SCAN_IN_MAIN 1
 
-#define DB_KB_GETK       0
-#define DB_KB_DEBOUNCE   0
-#define DB_KB_MATRIX     0
-#define DB_KB_TEST       0
+#define DB_KB_GETK              0 
+#define DB_KB_DEBOUNCE          0
+#define DB_KB_MATRIX            0
+#define DB_KB_TEST              0
+#define DB_KB_KEYCODE_IN_BUFFER 0
+
 #define DB_DIGIT         0
 #define DB_PK_SAVE       1
 #define DB_PK_SETP       0
@@ -23,7 +25,7 @@
 #define DB_FL_FIND       0
 #define DB_FL_ERAS       0
 
-#define DB_ED_EPOS       0
+#define DB_ED_EPOS       1
 #define DB_NEXT_PRINTPOS 0
 
 // Key scanning in core1 main() or core0 loops?
