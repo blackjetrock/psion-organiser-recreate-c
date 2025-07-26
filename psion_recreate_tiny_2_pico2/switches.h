@@ -10,6 +10,8 @@
 #define DB_KB_TEST              0
 #define DB_KB_KEYCODE_IN_BUFFER 0
 
+#define DB_DP_VIEW       1
+
 #define DB_DIGIT         0
 #define DB_PK_SAVE       1
 #define DB_PK_SETP       0
@@ -29,7 +31,10 @@
 #define DB_NEXT_PRINTPOS 0
 
 // Key scanning in core1 main() or core0 loops?
-#define CORE0_SCAN       1
+#define CORE0_SCAN       0
+
+// Core 1 might be unused
+#define CORE1_UNUSED     0
 
 // Different builds
 #define PSION_MINI       1   // Small hardware version

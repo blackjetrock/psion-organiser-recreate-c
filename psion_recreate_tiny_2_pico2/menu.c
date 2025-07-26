@@ -38,9 +38,16 @@ MENU menu_mems;
 // keep the display, wireless and so on running.
 
 u_int64_t now[NUM_STATS];
+int menu_loop_count = 0;
+
 
 void menu_loop_tasks(void)
 {
+  if( !((menu_loop_count++) % 10) == 0 )
+    {
+      return;
+    }
+  
   tud_task();
 
 #if CORE0_SCAN

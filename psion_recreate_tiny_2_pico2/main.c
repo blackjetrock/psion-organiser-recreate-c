@@ -430,11 +430,12 @@ int main(void) {
         }
     }
 #endif
-  
-#if 1
-  ////////////////////////////core1_init();
-  clear_oled();
+
+#if !CORE1_UNUSED
+  core1_init();
 #endif
+  
+  clear_oled();
   
   stdio_init_all();
   //  sleep_ms(400);
@@ -475,7 +476,10 @@ int main(void) {
   
   while(true)
     {
+#if CORE0_SCAN
       matrix_scan();
+#endif
+      
       menu_loop_tasks();
 
 #if PSION_MINI

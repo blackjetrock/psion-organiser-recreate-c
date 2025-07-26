@@ -13,6 +13,8 @@
 // Display string on line and scroll so it is all viewable.
 // return when key is pressed
 
+uint64_t scroll_after_this_time = 0;
+ 
 KEYCODE dp_view(char *str, int line)
 {
   int scroll_dir = 1;
@@ -22,6 +24,10 @@ KEYCODE dp_view(char *str, int line)
   char w_str[DP_MAX_STR+3];
   int offset2 = 0;
   
+#if DB_DP_VIEW
+  printf("\n%s:Entry", __FUNCTION__);
+#endif
+  
   strcpy(w_str, str);
   strcat(w_str, "  ");
   
@@ -29,9 +35,12 @@ KEYCODE dp_view(char *str, int line)
 
   int swlen = strlen(w_str);
   int slen = strlen(str);
-  
-  //sleep_ms(500);
-  
+  uint64_t now = time_us_64 ();
+    
+#if DB_DP_VIEW
+  printf("\n%s:Loop entry", __FUNCTION__);
+#endif
+
   while(!done)
     {
       menu_loop_tasks();
@@ -43,36 +52,61 @@ KEYCODE dp_view(char *str, int line)
 	{
 	  scroll_dir = 0;
 	}
+
+      now = time_us_64 ();
+ 
+      if( (now > scroll_after_this_time) )
+        {
+          printf("\nX");
       
-      // Display DP_LEN_CHARS characters from the string
-      for(int i=0; i<DP_NUM_CHARS; i++)
-	{
-	  //printf("\ni:%d off:%d scrldir:%d", i, offset, scroll_dir);
-	  
-	  if( (i+offset) >= swlen )
-	    {
-	      if( swlen > DP_NUM_CHARS )
-		{
-		  ch = w_str[(offset2++) % swlen];
-		}
-	      else
-		{
-		  ch = ' ';
-		}
-	    }
-	  else
-	    {
-	      ch = w_str[(i+offset) % swlen];
-	    }
-	  
-	  i_printxy(i, line, ch);
-	}
+          // Scroll every 200ms
+          scroll_after_this_time += 200000;
+          
+          // Display DP_LEN_CHARS characters from the string
+          for(int i=0; i<DP_NUM_CHARS; i++)
+            {
+#if DB_DP_VIEW
+              //printf("\n%s:i:%d off:%d scrldir:%d", __FUNCTION__, i, offset, scroll_dir);
+#endif
+              if( (i+offset) >= swlen )
+                {
+                  if( swlen > DP_NUM_CHARS )
+                    {
+                      ch = w_str[(offset2++) % swlen];
+                    }
+                  else
+                    {
+                      ch = ' ';
+                    }
+                }
+              else
+                {
+                  ch = w_str[(i+offset) % swlen];
+                }
+              
+              i_printxy(i, line, ch);
+            }
+
+          offset += scroll_dir;
+          
+          if( offset < 0 )
+            {
+              offset = swlen-1;
+            }
+          
+          if( offset >= swlen )
+            {
+              offset = 0;
+            }
+        }
       
       if( kb_test() != KEY_NONE )
 	{
 	  KEYCODE k = kb_getk();
-	  printf("\n%s:KC:%d", __FUNCTION__, k);
-	  
+
+#if DB_DP_VIEW
+	  printf("\n%s:Key:%d", __FUNCTION__, k);
+#endif
 	  switch(k)
 	    {
 	    case KEY_NONE:
@@ -118,25 +152,12 @@ KEYCODE dp_view(char *str, int line)
 	      break;
 	    }
 	}
-      else
-	{
-	  // Delay for the scrolling lines
-	  
-	  sleep_ms(200);	  
-	}
-      
-      offset += scroll_dir;
 
-      if( offset < 0 )
-	{
-	  offset = swlen-1;
-	}
-      
-      if( offset >= swlen )
-	{
-	  offset = 0;
-	}
     }
+
+#if DB_DP_VIEW
+  printf("\n%s:Exit", __FUNCTION__);
+#endif
   
   return(KEY_NONE);  
 }

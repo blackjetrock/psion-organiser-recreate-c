@@ -307,6 +307,11 @@ void ed_dump_edit_buffer(void)
   printf("\n");
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Import string into line buffers, splitting at TAB characters.
+//
+
 void ed_import_str(char *str)
 {
   int line = 0;
@@ -342,6 +347,8 @@ void ed_import_str(char *str)
       str++;
     }
 }
+
+////////////////////////////////////////////////////////////////////////////////
 
 KEYCODE ed_view(char *str, int ln)
 {
