@@ -192,6 +192,7 @@ void cli_dump_memory(void)
   
   printf("\n");
 
+  parameter += 512;
 }
 
 // Another digit pressed, update the parameter variable
@@ -396,6 +397,13 @@ void cli_ls(void)
   argv[0] = "/";
   run_ls(1, argv);
   run_unmount(0, argv_null);
+}
+
+void cli_local_stack(void)
+{
+  uint8_t local_var;
+
+  printf("\nLocal var address:%p", &local_var);
 }
 
 
@@ -652,6 +660,11 @@ SERIAL_COMMAND serial_cmds[] =
     '*',
     "Format",
     cli_format,
+   },
+   {
+    's',
+    "Local stack address",
+    cli_local_stack,
    },
    {
     '+',

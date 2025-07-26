@@ -80,7 +80,7 @@ target_include_directories(${PROJECT} PUBLIC
 )
 
 target_compile_definitions(${PROJECT} PRIVATE
-        PICO_STACK_SIZE=0x4000
+        PICO_STACK_SIZE=0x8000
       )
       
 # Add the standard include files to the build
