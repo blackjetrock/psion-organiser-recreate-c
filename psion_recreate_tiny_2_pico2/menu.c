@@ -2178,7 +2178,7 @@ char *dpview_data =
   
    "Long test string for dpview that requires scrolling\t"
    "Short string\t"
-   "Str";
+   "String";
 
 void menu_dp_view(void)
 {

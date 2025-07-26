@@ -363,7 +363,19 @@ KEYCODE ed_view(char *str, int ln)
   // Display the strings initially
   for(int i=0; i<DP_NUM_LINE; i++)
     {
-      i_printxy_str(0, i, ed_edit_buffer[i]); 
+      int len = strlen(ed_edit_buffer[i]);
+                       
+      for(int j=0; j<DP_NUM_CHARS; j++)
+        {
+          if( j >= len )
+            {
+              i_printxy(j, i, ' ');
+            }
+          else
+            {
+              i_printxy(j, i, ed_edit_buffer[i][j]);
+            }
+        }
     }
   
   while(!done)

@@ -31,7 +31,7 @@ KEYCODE dp_view(char *str, int line)
   strcpy(w_str, str);
   strcat(w_str, "  ");
   
-  i_printxy_str(0, line, w_str);
+  //  i_printxy_str(0, line, w_str);
 
   int swlen = strlen(w_str);
   int slen = strlen(str);
@@ -57,8 +57,6 @@ KEYCODE dp_view(char *str, int line)
  
       if( (now > scroll_after_this_time) )
         {
-          printf("\nX");
-      
           // Scroll every 200ms
           scroll_after_this_time += 200000;
           
@@ -147,7 +145,20 @@ KEYCODE dp_view(char *str, int line)
 	    default:
 
 	      // Re-display string in starting position
-	      i_printxy_str(0, line, w_str);
+              int len = strlen(w_str);
+              
+              for(int j=0; j<DP_NUM_CHARS; j++)
+                {
+                  if( j >= len )
+                    {
+                      i_printxy(j, line, ' ');
+                    }
+                  else
+                    {
+                      i_printxy(j, line, w_str[j]);
+                    }
+                }
+	      //i_printxy_str(0, line, w_str);
 	      return(k);
 	      break;
 	    }
