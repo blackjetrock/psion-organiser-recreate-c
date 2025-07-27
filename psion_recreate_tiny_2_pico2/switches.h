@@ -32,6 +32,7 @@
 
 #define DB_ED_EPOS       1
 #define DB_NEXT_PRINTPOS 0
+#define DB_PRINTPOS      0
 
 // Key scanning in core1 main() or core0 loops?
 #define CORE0_SCAN       0

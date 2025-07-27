@@ -33,6 +33,7 @@ char linline[FH_LINE_MAX+1] = "";
 FILE_LINE *lnode;
 char *line_text;
 FILE_LINE *curline;
+FILE_LINE *line_ptr;
 FILE_LINE *fh_last_line = NULL;
 FILE_LINE *linep;
 
@@ -201,11 +202,14 @@ void file_dump_list(void)
 // code.
 
 FILE_INFO finfo;
+int curlineno = 0;
 
 void file_editor(char *filename)
 {
   int k;
+  int move_in_list = 0;
   int done = 0;
+  int cursor_line = 0;
   
 #if DB_FILE_EDITOR
   printf("\n%s:", __FUNCTION__);
@@ -216,8 +220,17 @@ void file_editor(char *filename)
 
   // Display and allow editing
   dp_cls();
-  printxy_str(0, 0, "");
+  i_printxy_str(0, 0, "");
 
+  printpos_x = 0;
+  printpos_y = 0;
+  
+#if DB_FILE_EDITOR
+  printf("\n%s:printpos_x:%d printpos_y:%d", __FUNCTION__, printpos_x, printpos_y);
+#endif
+
+  // The line that we are editing, we just display the other lines around it if
+  // possible
   curline = first_line;
   
   while(!done)
@@ -225,8 +238,34 @@ void file_editor(char *filename)
       // Edit line in a larger buffer so text can be added, then create a new node if
       // it has increased in size after edit
       strcpy(linline, curline->text);
+
+      // Display lines to make curline appear at the cursor_line
+      dp_cls();
       
-      k = ed_epos(linline, FH_LINE_MAX, 1, 0);
+      line_ptr = curline->prev;
+      for(int i=0; i<cursor_line;i++)
+        {
+          if( line_ptr != NULL )
+            {
+              i_printxy_str(0, cursor_line-i-1, "");
+              display_epos(line_ptr->text, "", 0, cursor_line-i-1, 0, ED_SINGLE_LINE);
+              line_ptr = line_ptr->prev;
+            }
+        }
+
+      line_ptr = curline->next;
+      for(int i=cursor_line+1; i<display_num_lines();i++)
+        {
+          if( line_ptr != NULL )
+            {
+              i_printxy_str(0, i, "");
+              display_epos(line_ptr->text, "", 0, i, 0, ED_SINGLE_LINE);
+              line_ptr = line_ptr->next;
+            }
+        }
+
+      i_printxy_str(0, cursor_line, "");
+      k = ed_epos(linline, FH_LINE_MAX, ED_SINGLE_LINE, 0, cursor_line);
 
       switch(k)
         {
@@ -236,6 +275,45 @@ void file_editor(char *filename)
           
         case KEY_EXE:
           break;
+
+          // Insert newline character
+        case KEY_DOWN:
+          move_in_list = 1;
+          if( cursor_line < display_num_lines()-1 )
+            {
+              cursor_line++;
+            }
+          break;
+          
+        case KEY_UP:
+          move_in_list = -1;
+          if( cursor_line > 0 )
+            {
+              cursor_line--;
+            }
+          break;
+        }
+
+      if( move_in_list != 0 )
+        {
+          // Move along the linked list of lines
+          if( move_in_list == 1 )
+            {
+              if( curline->next != NULL )
+                {
+                  curline = curline->next;
+                }
+            }
+
+          if( move_in_list == -1 )
+            {
+              if( curline->prev != NULL )
+                {
+                  curline = curline->prev;
+                }
+            }
+
+          move_in_list = 0;
         }
     }
   

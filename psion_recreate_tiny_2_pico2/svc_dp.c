@@ -233,9 +233,16 @@ void dp_clr_eos(void)
 // Clears the display
 //
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Does not disrupt printpos_x,y
+//
 
 void dp_cls(void)
 {
+  int sx, sy;
+  sx = printpos_x;
+  sy = printpos_y;
+  
   for(int x=0; x<DISPLAY_NUM_CHARS; x++)
     {
       for(int y=0; y<DISPLAY_NUM_LINES; y++)
@@ -245,6 +252,10 @@ void dp_cls(void)
     }
   
   print_home();
+
+  printpos_x = sx;
+  printpos_y = sy;
+  
 }
 
 ////////////////////////////////////////////////////////////////////////////////

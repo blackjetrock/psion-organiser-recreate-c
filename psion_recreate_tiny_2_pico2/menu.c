@@ -259,7 +259,7 @@ void menu_prog_translate(void)
 
   dp_prnt("Default:");
 
-  ed_epos(e_buffer, 30, 0, 0);
+  ed_epos(e_buffer, 30, 0, 0, 0);
 
   // Refresh menu on exit
   menu_init = 1;
@@ -281,7 +281,7 @@ void menu_prog_run(void)
 
   dp_prnt("Run:");
 
-  ed_epos(e_buffer, 30, 0, 0);
+  ed_epos(e_buffer, 30, 0, 0, 0);
 
   // Refresh menu on exit
   menu_init = 1;
@@ -309,7 +309,7 @@ void menu_epos_test(void)
   dp_prnt("Default:");
 
   strcpy(e_buffer, "DATA");
-  ed_epos(e_buffer, 30, 0, 0);
+  ed_epos(e_buffer, 30, 0, 0, 0);
 
   // Refresh menu on exit
   menu_init = 1;
@@ -797,7 +797,7 @@ void menu_fl_find(void)
 	  printxy_str(0, 0, "Find:");
 	  //printxy_str(5,0, find_str);
 	  
-	  k = ed_epos(find_str, 64, 0, 0);
+	  k = ed_epos(find_str, 64, 0, 0, 0);
 	  
 	  switch(k)
 	    {
@@ -1084,7 +1084,7 @@ void menu_fl_save(void)
     {
       menu_loop_tasks();
       
-      k = ed_epos(save_str, 64, 0, 0);
+      k = ed_epos(save_str, 64, 0, 0, 0);
       
       switch(k)
 	{
@@ -2458,7 +2458,7 @@ void menu_file_edit(void)
   dp_cls();
   printxy_str(0, 0, "Edit:");
 	  
-  k = ed_epos(edit_filename, NOPL_MAX_FILE_NAME, 0, 0);
+  k = ed_epos(edit_filename, NOPL_MAX_FILE_NAME, 0, 0, 0);
   
   switch(k)
     {

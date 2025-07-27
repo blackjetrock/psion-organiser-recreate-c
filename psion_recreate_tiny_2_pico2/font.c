@@ -471,6 +471,10 @@ void i_printxy(int x, int y, int ch)
   printpos_y = y;
   next_printpos(ch);
 
+#if DB_PRINTPOS
+  printf("\npx,y: %d, %d", printpos_x, printpos_y);
+#endif
+  
   serial_display_xy(x, y, ch);
   
   ch -= 0;

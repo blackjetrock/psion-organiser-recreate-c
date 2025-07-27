@@ -11,18 +11,6 @@
 
 #include "psion_recreate_all.h"
 
-#if 0
-#include "menu.h"
-#include "emulator.h"
-#include "eeprom.h"
-#include "rtc.h"
-#include "display.h"
-#include "record.h"
-#include "svc_kb.h"
-#include "svc_dp.h"
-#include "svc_ed.h"
-#endif
-
 #include "nos.h"
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -36,26 +24,58 @@
 // Prompt at start of display
 // Then the line being edited (which can be on multiple lines, delimited by tabs)
 //
-// 
-void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_line, int display_start_index)
+//
+
+char line1[DP_MAX_CHARS+1];
+
+void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_line, int display_start_index, int single_nmulti_line)
 {
+  char *str;
+  int px, py;
+
+  px = printpos_x;
+  py = printpos_y;
+  
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
   printf("\n%s: Entry printpos_x:%d printpos_y:%d",      __FUNCTION__, printpos_x, printpos_y);
   printf("\n");
 #endif
 
-  i_printxy_str(0, 0, epos_prompt);
-    
+  i_printxy_str(0, cursor_line, epos_prompt);
+
+  // Ensure single lin edoesn't go onto other lines
+  if( single_nmulti_line )
+    {
+      // Single line mode, ensure we stay on the current line
+      int i;
+      
+      for(i=0; (i<DP_MAX_CHARS) && str_in[i] != '\0'; i++)
+        {
+          line1[i] = str_in[i+display_start_index];
+        }
+
+      line1[i] = '\0';
+    }
+  else
+    {
+      // Multi line, can display on all lines
+    }
+
+  str = line1;
+  
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
   printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
   printf("\n");
 #endif
 
+  printpos_y = cursor_line;
+  printpos_x = 0;
+  
   dp_prnt(str+display_start_index);
 
-  dp_clr_eos();
+  //dp_clr_eos();
 
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
@@ -74,7 +94,10 @@ void display_epos(char *str, char *epos_prompt, int insert_point, int cursor_lin
   cursor_y = cursor_i / display_num_chars();
 
   printf("\n%s:cursor_x:%d cursor_y:%d",      __FUNCTION__, cursor_x, cursor_y);
-    
+
+  printpos_x = px;
+  printpos_y = py;
+  
 #if DB_ED_EPOS
   printf("\n%s: Exit", __FUNCTION__);
 #endif
@@ -113,28 +136,30 @@ ED_STATE ed_state = ED_STATE_INIT;
 int epos_px = 0;
 int epos_py = 0;
 char epos_prompt[DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES];
-char line1[DP_MAX_CHARS+1];
 
-KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
+
+KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, int cursor_line)
 {
   int done = 0;
   char charstr[2] = "";
   int insert_point        = 0;  // Index in str where next character should be inserted
-  int cursor_line         = 0;  // Which line the cursor is on (0-based)
   int display_start_index = 0;  // The index of the first character in the string that is currently
                                 // displayed
   KEYCODE k;
   
   // printpos defines any prompt before the string
 #if DB_ED_EPOS
-  printf("\n%s: ", __FUNCTION__);
+  printf("\n%s: Entry", __FUNCTION__);
   printf("\n");
   sleep_ms(100);
 #endif
 
   epos_px = printpos_x;
   epos_py = printpos_y;
+
+  //dp_cls();
   
+#if 0
   // Copy prompt
   for(int i=0; i<DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES; i++)
     {
@@ -142,23 +167,45 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
     }
   
   epos_prompt[epos_py*DISPLAY_NUM_CHARS+epos_px] = '\0';
-
+#endif
+  
   cursor_on = 1;
   cursor_blink = 1;
 
-#if 0
+#if 1
   cursor_x = printpos_x;
   cursor_y = printpos_y;
 #endif
-  
+
+#if 1
   int cursor_i = strlen(epos_prompt)+insert_point;
+#endif
   
+#if DB_ED_EPOS
+  printf("\n%s:InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
+  printf("\n%s:printpos_x:%d printpos_y:%d",      __FUNCTION__, printpos_x, printpos_y);
+  printf("\n%s:cursor_x:%d cursor_y:%d",          __FUNCTION__, cursor_x, cursor_y);
+  printf("\n%s:cursor_i:%d",          __FUNCTION__, cursor_i);
+  printf("\n");
+#endif
+
+#if 0
   cursor_x = cursor_i % display_num_chars();
   cursor_y = cursor_i / display_num_lines();
+#endif
+  
+#if DB_ED_EPOS
+  printf("\n%s:InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
+  printf("\n%s:printpos_x:%d printpos_y:%d",      __FUNCTION__, printpos_x, printpos_y);
+  printf("\n%s:cursor_x:%d cursor_y:%d",      __FUNCTION__, cursor_x, cursor_y);
+  printf("\n");
+#endif
 
+  i_printxy_str(cursor_x, cursor_y, "");
+ 
   ed_state = ED_STATE_EDIT;
 
-  cursor_line = 0;
+  //  cursor_line = 0;
   insert_point = 0;
   display_start_index = 0;
 
@@ -168,142 +215,117 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
   printf("\n");
   sleep_ms(100);
 #endif
-
-  dp_cls();
   
-  if( single_nmulti_line )
-    {
-      // Single line mode, ensure we stay on the current line
-      strncpy(line1, str, DP_MAX_CHARS);
-      line1[DP_MAX_CHARS] = '\0';
-      
-      display_epos(line1, epos_prompt, insert_point, cursor_line, display_start_index);
-    }
-  else
-    {
-      // Multi line, can display on all lines
-      display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
-    }
+  display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index, single_nmulti_line);
   
   while(!done)
     {
+
 #if 0
-  printf("\n%s: Loop", __FUNCTION__);
-  printf("\n");
-  sleep_ms(100);
+      printf("\n%s: Loop", __FUNCTION__);
+      printf("\n");
+      sleep_ms(100);
 #endif
 
       // Keep the display updated
       menu_loop_tasks();
-
+  
       // Handle keypresses
       if( kb_test() != KEY_NONE )
-	{
-	  k = kb_getk();
-
-	  cursor_phase = 0;
-	  force_cursor_update = 1;
+        {
+          k = kb_getk();
+      
+          cursor_phase = 0;
+          force_cursor_update = 1;
+      
+          switch(ed_state)
+            {
+              // Clear display and put string on display
+            case ED_STATE_INIT:
+              break;
 	  
-	  switch(ed_state)
-	    {
-	      // Clear display and put string on display
-	    case ED_STATE_INIT:
-	      
-	      break;
-	      
-	    case ED_STATE_EDIT:
-	      switch(k)
-		{
-		case KEY_ON:
-		  cursor_on = 0;
-		  done = 1;
-		  break;
-
-		case KEY_EXE:
-		  done = 1;
-		  break;
-
+            case ED_STATE_EDIT:
+              switch(k)
+                {
+                case KEY_ON:
+                  cursor_on = 0;
+                  done = 1;
+                  break;
+              
+                case KEY_EXE:
+                  done = 1;
+                  break;
+              
                 case KEY_LEFT:
                   if( insert_point > 0)
                     {
                       insert_point--;
                     }
+              
+                  if( insert_point < display_start_index )
+                    {
+                      display_start_index = insert_point;
+                    }
                   break;
-
+              
                 case KEY_RIGHT:
                   if( insert_point < strlen(str))
                     {
                       insert_point++;
                     }
-                  break;
-                  
-		  // Insert newline character
-		case KEY_DOWN:
-		  charstr[0] = CHRCODE_TAB;;
-                  // Shift up
-                  for(int i=strlen(str); i>=insert_point; i--)
+              
+                  if( insert_point > display_start_index+display_num_chars()-3 )
                     {
-                      str[i+1] = str[i];
+                      display_start_index = insert_point-display_num_chars()+3;
                     }
-                  str[insert_point++] = k;
-		  //strcat(str, charstr);
-		  break;
-		  
-		case KEY_DEL:
-		  if( insert_point > 0 )
-		    {
+              
+                  break;
+              
+                  
+                case KEY_DEL:
+                  if( insert_point > 0 )
+                    {
                       // Move string over insert_point
                       insert_point--;
                       int end = strlen(str)-1;
-                      
+                  
                       for(int i=insert_point; i<=end; i++)
                         {
                           str[i] = str[i+1];
                         }
                       str[end] = '\0';
-		    }
-		  break;
-		  
-		default:
-                  // Insert character at insert point
-		  charstr[0] = k;
+                    }
+                  break;
 
+                case KEY_DOWN:
+                case KEY_UP:
+                  return(k);
+                  break;
+                  
+                default:
+                  // Insert character at insert point
+                  charstr[0] = k;
+              
                   // Shift up
                   for(int i=strlen(str); i>=insert_point; i--)
                     {
                       str[i+1] = str[i];
                     }
                   str[insert_point++] = k;
-                  
-		  //strcat(str, charstr);
-		  break;
-		}
-	      break;
-	      
-	    }
-          
-	  // Update the display
-          if( single_nmulti_line )
-            {
-              // Single line mode, ensure we stay on the current line
-              strncpy(line1, str, DP_MAX_CHARS);
-              line1[DP_MAX_CHARS] = '\0';
               
-              display_epos(line1, epos_prompt, insert_point, cursor_line, display_start_index);
+                  //strcat(str, charstr);
+                  break;
+                }
+              break;
             }
-          else
-            {
-              // Multi line, can display on all lines
-              display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
-            }
-          //	  display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
-	  
-	}
+      
+          // Update the display
+          display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index, single_nmulti_line);
+        }
     }
   
   // return last key pressed if it caused an exit
   return(k);
-  
 }
 
 
