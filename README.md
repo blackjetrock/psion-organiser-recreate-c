@@ -18,3 +18,20 @@ It's easy to do graphics:
 ![IMG_20240810_140754626](https://github.com/user-attachments/assets/940a2ced-eca9-40f7-9196-6f506f1189c1)
 
 There's no support for data storage yet, but the hardware has some serial EEPROMs (64K or 128K I think) and the Pico flash available. There's the gpios to the datapack slots too, of course, so some functionality from the datapack tool could be copied over. There's a USB menu, as well. If you build a recreation with a PicoW then you have Wifi and BT as well. I haven't done that yet.
+
+NewOPL
+======
+
+Newopl translate and execute has been ported to the recreation. It requires an SD card and 8Mb of external PSRAM. I used a Pimoroni Pico Plus 2, anything similar should work.
+The code runs in the RP2350 in a larger stack for both cores. A custom .ld script has been added to the code and that handles the different stack position. The SD card is used for log files, these are the same as the Linux version of NewOPL. The code is not common between Linux and the Pico2 as there are a lot of differences in file IO and so on. It may be possible later to merge the code back together, but for now it's separate.
+
+New OPL commands
+
+It's possible to add new commands to OPL, that is mainky a table update process. The parser and the rintime have tables of QCodes and OPl commands and addind entries to those allows new commands to be added. There is some code to add and a parser to update, but for simple syntax and commands that is minimal.
+The Pico2 code here has these commands added:
+
+GCLS    Clears the display
+GPOINT  Plots a pixel
+GUPDATE Updates the display
+
+
