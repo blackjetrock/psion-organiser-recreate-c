@@ -89,10 +89,15 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
   cursor_y = printpos_y;
 #endif
   int cursor_i = strlen(epos_prompt)+insert_point;
-  
-  cursor_x = cursor_i % display_num_chars();
-  cursor_y = cursor_i / display_num_chars();
 
+  cursor_x = cursor_i % display_num_chars();
+
+#if 0
+  cursor_y = cursor_i / display_num_chars();
+#else
+  cursor_y = cursor_line;
+#endif
+  
   printf("\n%s:cursor_x:%d cursor_y:%d",      __FUNCTION__, cursor_x, cursor_y);
 
   printpos_x = px;
