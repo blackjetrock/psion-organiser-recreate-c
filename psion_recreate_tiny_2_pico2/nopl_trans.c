@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include <string.h>
-//#include "nopl.h"
+
 #include "psion_recreate_all.h"
 
 FIL *icfp  = NULL;

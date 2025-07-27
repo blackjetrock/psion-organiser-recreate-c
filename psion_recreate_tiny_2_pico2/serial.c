@@ -399,11 +399,26 @@ void cli_ls(void)
   run_unmount(0, argv_null);
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
+uint32_t getTotalHeap(void) {
+   extern char __StackLimit, __bss_end__;
+   
+   return &__StackLimit  - &__bss_end__;
+}
+
+uint32_t getFreeHeap(void) {
+   struct mallinfo m = mallinfo();
+
+   return getTotalHeap() - m.uordblks;
+}
+
 void cli_local_stack(void)
 {
   uint8_t local_var;
 
   printf("\nLocal var address:%p", &local_var);
+  printf("\nHeap left:%d", getFreeHeap());
 }
 
 
@@ -663,8 +678,18 @@ SERIAL_COMMAND serial_cmds[] =
    },
    {
     's',
-    "Local stack address",
+    "Memory information",
     cli_local_stack,
+   },
+   {
+    'h',
+    "Dump file handling line list",
+    file_dump_list,
+   },
+   {
+    'u',
+    "Unload file handling line list",
+    file_unload,
    },
    {
     '+',

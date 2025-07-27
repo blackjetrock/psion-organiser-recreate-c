@@ -66,7 +66,11 @@ typedef unsigned int uint;
 #include "diskio.h" /* Declarations of disk functions */
 #include "sd_card_utils.h"
 
+#include "file_handling.h"
+
 #define PSRAM __attribute__((section(".psram.")))
+
+//------------------------------------------------------------------------------
 
 extern char line[MAX_NOPL_LINE+1];
 extern int *lvadp;

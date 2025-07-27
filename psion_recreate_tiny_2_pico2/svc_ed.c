@@ -113,6 +113,7 @@ ED_STATE ed_state = ED_STATE_INIT;
 int epos_px = 0;
 int epos_py = 0;
 char epos_prompt[DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES];
+char line1[DP_MAX_CHARS+1];
 
 KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 {
@@ -169,7 +170,20 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 #endif
 
   dp_cls();
-  display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
+  
+  if( single_nmulti_line )
+    {
+      // Single line mode, ensure we stay on the current line
+      strncpy(line1, str, DP_MAX_CHARS);
+      line1[DP_MAX_CHARS] = '\0';
+      
+      display_epos(line1, epos_prompt, insert_point, cursor_line, display_start_index);
+    }
+  else
+    {
+      // Multi line, can display on all lines
+      display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
+    }
   
   while(!done)
     {
@@ -267,13 +281,26 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode)
 	      break;
 	      
 	    }
-
+          
 	  // Update the display
-	  display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
+          if( single_nmulti_line )
+            {
+              // Single line mode, ensure we stay on the current line
+              strncpy(line1, str, DP_MAX_CHARS);
+              line1[DP_MAX_CHARS] = '\0';
+              
+              display_epos(line1, epos_prompt, insert_point, cursor_line, display_start_index);
+            }
+          else
+            {
+              // Multi line, can display on all lines
+              display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
+            }
+          //	  display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index);
 	  
 	}
     }
-
+  
   // return last key pressed if it caused an exit
   return(k);
   

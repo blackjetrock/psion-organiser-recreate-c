@@ -154,6 +154,10 @@ void init_menu_calc(void)
 {
 }
 
+void init_menu_file(void)
+{
+}
+
 void init_menu_buzzer(void)
 {
 }
@@ -210,6 +214,11 @@ void menu_goto_prog(void)
 void menu_goto_calc(void)
 {
   goto_menu(&menu_calc);
+}
+
+void menu_goto_file(void)
+{
+  goto_menu(&menu_file);
 }
 
 void menu_goto_buzzer(void)
@@ -2426,7 +2435,56 @@ void menu_bubble(void)
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////
 
+
+
+// File menu
+char edit_filename[NOPL_MAX_FILE_NAME+1];
+
+void menu_file_edit(void)
+{
+  int done = 0;
+  int k;
+
+  ////////////////////////////////////////////////////////////////////////////////
+  
+  file_editor("v3.opl");
+  return;
+
+  ////////////////////////////////////////////////////////////////////////////////
+    
+    
+  dp_cls();
+  printxy_str(0, 0, "Edit:");
+	  
+  k = ed_epos(edit_filename, NOPL_MAX_FILE_NAME, 0, 0);
+  
+  switch(k)
+    {
+    case KEY_ON:
+      if( strlen(edit_filename) == 0)
+        {
+          // Refresh menu on exit
+          menu_init = 1;
+          done = 1;
+        }
+      else
+        {
+          edit_filename[0] ='\0';
+          
+          dp_cls();
+          printxy_str(0, 0, "Edit:");
+          printxy_str(5, 0, edit_filename);
+        }
+      break;
+      
+    case KEY_EXE:
+      //      file_editor(edit_filename);
+      file_editor("v3.opl");
+      break;
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 	   
@@ -2447,6 +2505,7 @@ MENU menu_top =
     {'M', "forMat",     menu_goto_format},
     {'P', "Prog",       menu_goto_prog},
     {'C', "Calc",       menu_goto_calc},
+    {'L', "fiLe",       menu_goto_file},
     {'&', "",           menu_null},
    }
   };
@@ -2517,6 +2576,18 @@ MENU menu_calc =
     {KEY_ON, "",        menu_back},
     {'C', "Calc",       menu_calc1},
     {'F', "FSM Calc",   menu_calc2},
+    {'&', "",           menu_null},
+   }
+  };
+
+MENU menu_file =
+  {
+   &menu_top,
+   "File",
+   init_menu_file,   
+   {
+    {KEY_ON, "",        menu_back},
+    {'E', "Edit",       menu_file_edit},
     {'&', "",           menu_null},
    }
   };

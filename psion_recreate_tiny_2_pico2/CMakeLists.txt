@@ -74,6 +74,7 @@ add_executable(${PROJECT}
     nopl_trans.c
     sd_card_utils.c
     hw_config.c
+    file_handling.c
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}

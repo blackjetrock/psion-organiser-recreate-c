@@ -27,6 +27,9 @@
 #define DB_FL_FIND       0
 #define DB_FL_ERAS       0
 
+#define DB_FILE_LOAD     1
+#define DB_FILE_EDITOR   1
+
 #define DB_ED_EPOS       1
 #define DB_NEXT_PRINTPOS 0
 
