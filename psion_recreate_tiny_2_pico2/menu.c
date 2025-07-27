@@ -2442,7 +2442,7 @@ void menu_bubble(void)
 // File menu
 char edit_filename[NOPL_MAX_FILE_NAME+1];
 
-void menu_file_edit(void)
+void menu_file_editv3(void)
 {
   int done = 0;
   int k;
@@ -2451,10 +2451,13 @@ void menu_file_edit(void)
   
   file_editor("v3.opl");
   return;
+}
 
-  ////////////////////////////////////////////////////////////////////////////////
-    
-    
+void menu_file_edit(void)
+{
+  int done = 0;
+  int k;
+
   dp_cls();
   printxy_str(0, 0, "Edit:");
 	  
@@ -2480,8 +2483,7 @@ void menu_file_edit(void)
       break;
       
     case KEY_EXE:
-      //      file_editor(edit_filename);
-      file_editor("v3.opl");
+      file_editor(edit_filename);
       break;
     }
 }
@@ -2588,6 +2590,7 @@ MENU menu_file =
    {
     {KEY_ON, "",        menu_back},
     {'E', "Edit",       menu_file_edit},
+    {'V', "editV3",     menu_file_editv3},
     {'&', "",           menu_null},
    }
   };

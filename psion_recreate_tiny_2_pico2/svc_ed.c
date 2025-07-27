@@ -98,7 +98,7 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
   cursor_y = cursor_line;
 #endif
   
-  printf("\n%s:cursor_x:%d cursor_y:%d",      __FUNCTION__, cursor_x, cursor_y);
+  //printf("\n%s:cursor_x:%d cursor_y:%d",      __FUNCTION__, cursor_x, cursor_y);
 
   printpos_x = px;
   printpos_y = py;
