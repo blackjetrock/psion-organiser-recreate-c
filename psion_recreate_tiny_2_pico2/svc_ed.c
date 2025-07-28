@@ -119,8 +119,9 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
 ////////////////////////////////////////////////////////////////////////////////
 
 
-KEYCODE ed_edit(char *str)
+KEYCODE ed_edit(char *str, int len, int exit_on_mode)
 {
+  ed_epos(str, len, ED_SINGLE_LINE, exit_on_mode, printpos_y);
   return(KEY_NONE);
 }
 

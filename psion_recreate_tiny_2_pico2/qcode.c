@@ -1083,24 +1083,25 @@ void qca_get(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 //------------------------------------------------------------------------------
 
+char qc_input_buffer[260];
+
 void qca_input_int(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   int intval;
   int scan_ret = 0;
+
+  qc_input_buffer[0] = '\0';
   
   // Get integer from user
   while(scan_ret == 0 )
     {
-#if TUI
-      wprintw(output_win, "?");
-#else
-      printf("?");
-#endif      
-      scan_ret = scanf("%d", &intval);
+      //dp_cls();
+      i_printxy_str(0,0, "?");
+      
+      ed_edit(qc_input_buffer, 255, ED_DO_NOT_EXIT_ON_MODE);
+      scan_ret = sscanf(qc_input_buffer, "%d", &intval);
     }
 
-  fgetc(stdin);
-  
   s->integer = intval;
   
   // Check for field

@@ -231,7 +231,9 @@ int mn_menu(char *str)
   return(selnum+1);
 #else
 
-  // On command line, print the selections and nunbers and allow the number to be selected
+  // Pico version
+  
+  // On command line, print the selections and numbers and allow the number to be selected
   for(int i=0; i<num_sels; i++)
     {
       printf("\n%d:%s", i+1, selstr[i]);
