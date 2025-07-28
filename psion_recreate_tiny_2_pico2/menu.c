@@ -104,6 +104,9 @@ void menu_process(void)
 	}
 
       (*active_menu->init_fn)();
+
+      cursor_on = 0;
+      //      cursor_y = 0;
     }
 
   
@@ -251,6 +254,8 @@ void menu_test_file(void)
   run_unmount(0, argv_null);
 }
 
+//------------------------------------------------------------------------------
+
 char e_buffer[64] = "";
 char fn_buff[70];
 
@@ -258,7 +263,8 @@ void menu_prog_translate(void)
 {
   dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
 
-  dp_prnt("Default:");
+  dp_cls();
+  dp_prnt("Trans:");
 
   ed_epos(e_buffer, 30, 0, 0, 0);
 
@@ -277,10 +283,13 @@ void menu_prog_translate(void)
 
 }
 
+//------------------------------------------------------------------------------
+
 void menu_prog_run(void)
 {
   dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
 
+  dp_cls();
   dp_prnt("Run:");
 
   ed_epos(e_buffer, 30, 0, 0, 0);
@@ -295,6 +304,7 @@ void menu_prog_run(void)
   strcpy(fn_buff, e_buffer);
   strcat(fn_buff, ".ob3");
 
+  dp_cls();
   nopl_exec(fn_buff);
   
   run_unmount(0, argv_null);

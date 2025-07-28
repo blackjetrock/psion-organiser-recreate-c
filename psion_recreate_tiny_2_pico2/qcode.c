@@ -1096,12 +1096,17 @@ void qca_input_int(NOBJ_MACHINE *m, NOBJ_QCS *s)
   while(scan_ret == 0 )
     {
       //dp_cls();
-      i_printxy_str(0,0, "?");
+
+      dp_prnt("?");
+      //      cursor_x = printpos_x;
+      //cursor_y = printpos_y;
       
       ed_edit(qc_input_buffer, 255, ED_DO_NOT_EXIT_ON_MODE);
       scan_ret = sscanf(qc_input_buffer, "%d", &intval);
     }
 
+  dp_newline();
+  
   s->integer = intval;
   
   // Check for field
@@ -1654,6 +1659,8 @@ void qca_print_int(NOBJ_MACHINE *m, NOBJ_QCS *s)
 #else
   sprintf(qc_intbuf, "%d", s->integer);
   dp_prnt(qc_intbuf);
+  cursor_x = printpos_x;
+  cursor_y = printpos_y;
   
   //printf("%d", s->integer);
 #endif

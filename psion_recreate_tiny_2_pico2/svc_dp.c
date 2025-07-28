@@ -239,9 +239,9 @@ void dp_clr_eos(void)
 
 void dp_cls(void)
 {
-  int sx, sy;
-  sx = printpos_x;
-  sy = printpos_y;
+  //int sx, sy;
+  //sx = printpos_x;
+  //sy = printpos_y;
   
   for(int x=0; x<DISPLAY_NUM_CHARS; x++)
     {
@@ -253,9 +253,10 @@ void dp_cls(void)
   
   print_home();
 
-  printpos_x = sx;
-  printpos_y = sy;
-  
+  printpos_x = 0;
+  printpos_y = 0;
+  cursor_x = 0;
+  cursor_y = 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -46,7 +46,7 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
 #if 0
   i_printxy_str(0, cursor_line, epos_prompt);
 #else
-  i_printxy_str(0, py, epos_prompt);
+  //i_printxy_str(0, py, epos_prompt);
 #endif
   
   // Ensure single line doesn't go onto other lines
@@ -78,9 +78,12 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
 
   printpos_y = cursor_line;
   printpos_x = px;
-  
-  dp_prnt(str+display_start_index);
+  cursor_x = px+insert_point;
 
+  dp_prnt(str+display_start_index);
+  //cursor_x = printpos_x;
+  cursor_y = printpos_y;  
+  
   //dp_clr_eos();
 
 #if DB_ED_EPOS
@@ -94,10 +97,11 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
   cursor_x = printpos_x;
   cursor_y = printpos_y;
 #endif
-  int cursor_i = strlen(epos_prompt)+insert_point;
+  int cursor_i = /*strlen(epos_prompt)+*/insert_point;
 
-  cursor_x = cursor_i % display_num_chars();
-
+  //cursor_x = cursor_i % display_num_chars();
+  //cursor_x = px;
+  
 #if 0
   cursor_y = cursor_i / display_num_chars();
 #else
@@ -121,6 +125,7 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
 
 KEYCODE ed_edit(char *str, int len, int exit_on_mode)
 {
+  //printpos_x = 0;
   ed_epos(str, len, ED_SINGLE_LINE, exit_on_mode, printpos_y);
   return(KEY_NONE);
 }
@@ -171,7 +176,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
 
   //dp_cls();
   
-#if 1
+#if 0
   // Copy prompt
   for(int i=0; i<DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES; i++)
     {
@@ -218,7 +223,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
   printf("\n");
 #endif
 
-  i_printxy_str(cursor_x, cursor_y, "");
+  //i_printxy_str(cursor_x, cursor_y, "");
  
   ed_state = ED_STATE_EDIT;
 

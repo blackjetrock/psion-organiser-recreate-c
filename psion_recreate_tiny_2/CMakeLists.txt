@@ -66,7 +66,9 @@ add_executable(${PROJECT}
     clock_pico.c
     nopl_exec.c
     parser.c
-    nopl_trans.c
+    #nopl_trans.c
+    i2ckbd.c
+    lcdspi.c
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}
