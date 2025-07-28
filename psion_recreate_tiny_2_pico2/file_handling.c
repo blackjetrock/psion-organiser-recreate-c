@@ -451,15 +451,47 @@ void file_editor(char *filename)
 
       if( move_in_list != 0 )
         {
-          // Move along the linked list of lines
+          // Move forward along the linked list of lines
           if( move_in_list == 1 )
             {
               if( curline->next != NULL )
                 {
                   curline = curline->next;
                 }
-            }
+              else
+                {
+                  // Moving off the end of the file
+                  // Add a blank line at end of file
 
+                  // Build node and add to list
+                  FILE_LINE *new_node = malloc(sizeof(FILE_LINE));
+      
+                  if( new_node != NULL )
+                    {
+#if DB_FILE_EDITOR
+                      printf("   new_node malloc OK (%p)", curline);
+#endif
+                      new_node->next = NULL;
+                      new_node->prev = curline;
+          
+                      // line data
+                      new_node->text = malloc(sizeof(""));
+
+                      if( new_node->text != NULL)
+                        {
+#if DB_FILE_EDITOR
+                          printf("  text malloc OK");
+#endif
+                          strcpy(new_node->text, "");
+
+                          // Add to list
+                          curline->next = new_node;
+                        }
+                    }
+                }
+            }
+          
+          // Move back along th elist of lines
           if( move_in_list == -1 )
             {
               if( curline->prev != NULL )
