@@ -794,7 +794,7 @@ void menu_fl_find(void)
 	{
 	case MF_STATE_INIT:
 	  dp_cls();
-	  printxy_str(0, 0, "Find:");
+	  i_printxy_str(0, 0, "Find:");
 	  
 	  k = ed_epos(find_str, 64, 0, 0, 0);
 	  

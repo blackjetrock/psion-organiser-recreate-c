@@ -39,12 +39,17 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
   printf("\n%s: Entry printpos_x:%d printpos_y:%d",      __FUNCTION__, printpos_x, printpos_y);
+  printf("\n%s: Epos prompt:'%s'", __FUNCTION__, epos_prompt);
   printf("\n");
 #endif
 
+#if 0
   i_printxy_str(0, cursor_line, epos_prompt);
-
-  // Ensure single lin edoesn't go onto other lines
+#else
+  i_printxy_str(0, py, epos_prompt);
+#endif
+  
+  // Ensure single line doesn't go onto other lines
   if( single_nmulti_line )
     {
       // Single line mode, ensure we stay on the current line
@@ -60,6 +65,7 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
   else
     {
       // Multi line, can display on all lines
+      strcpy(line1, str_in);
     }
 
   str = line1;
@@ -67,11 +73,11 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
 #if DB_ED_EPOS
   printf("\n%s: Entry InsPt:%d cursline:%d dispstrt:%d", __FUNCTION__, insert_point, cursor_line, display_start_index);
   printf("\n%s: Entry printpos_x:%d printpos_t:%d",      __FUNCTION__, printpos_x, printpos_y);
-  printf("\n");
+  printf("\n%s: Str:'%s'", __FUNCTION__, str);
 #endif
 
   printpos_y = cursor_line;
-  printpos_x = 0;
+  printpos_x = px;
   
   dp_prnt(str+display_start_index);
 
@@ -173,6 +179,11 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
   
   epos_prompt[epos_py*DISPLAY_NUM_CHARS+epos_px] = '\0';
 #endif
+  
+#if DB_ED_EPOS
+  printf("\n%s:Epos prompt:'%s'", __FUNCTION__, epos_prompt);
+#endif
+
   
   cursor_on = 1;
   cursor_blink = 1;
@@ -283,9 +294,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
                     {
                       display_start_index = insert_point-display_num_chars()+3;
                     }
-              
                   break;
-              
                   
                 case KEY_DEL:
                   if( insert_point > 0 )
@@ -325,6 +334,9 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
             }
       
           // Update the display
+          printpos_x = epos_px;
+          printpos_y = epos_py;
+          
           display_epos(str, epos_prompt, insert_point, cursor_line, display_start_index, single_nmulti_line);
         }
     }
