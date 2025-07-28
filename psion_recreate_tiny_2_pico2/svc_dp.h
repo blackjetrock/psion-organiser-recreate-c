@@ -18,3 +18,4 @@ void dp_clr_eos(void);
 void dp_cls(void);
 void dp_prnt(char *s);
 void dp_emit(int ch);
+void dp_newline(void);

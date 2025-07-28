@@ -1062,9 +1062,22 @@ void qca_escape(NOBJ_MACHINE *m, NOBJ_QCS *s)
 void qca_get(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   int c;
+  int done = 0;
   
+#if 0
   c = fgetc(stdin);
-  
+#endif
+  while( !done)
+    {
+      tight_loop_tasks();
+      
+      if( kb_test() != KEY_NONE )
+        {
+          c = kb_getk();
+          done = 1;
+        }
+    }
+
   push_machine_16(m, c);
 }
 
@@ -1630,13 +1643,18 @@ void qca_pop_2str(NOBJ_MACHINE *m, NOBJ_QCS *s)
 //
 //
 
+char qc_intbuf[12];
+
 void qca_print_int(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
 #if TUI
   wprintw(output_win, "%d", s->integer);
   wrefresh(output_win);
 #else
-  printf("%d", s->integer);
+  sprintf(qc_intbuf, "%d", s->integer);
+  dp_prnt(qc_intbuf);
+  
+  //printf("%d", s->integer);
 #endif
 
 
@@ -1649,20 +1667,25 @@ void qca_print_num(NOBJ_MACHINE *m, NOBJ_QCS *s)
   wprintw(output_win, "%s", num_to_text(&n));
   wrefresh(output_win);
 #else
-  printf("%s", num_to_text(&n));
+  //printf("%s", num_to_text(&n));
+  dp_prnt( num_to_text(&n));
 #endif
 
 }
 
 void qca_print_str(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
+  char qc_frag[2] = " ";
+  
   for(int i=0; i<s->len; i++)
     {
 #if TUI
       wprintw(output_win, "%c", s->str[i]);
       wrefresh(output_win);
 #else
-      printf("%c", s->str[i]);
+      //printf("%c", s->str[i]);
+      qc_frag[0] = s->str[i];
+      dp_prnt(qc_frag);
 #endif
     }
 }
@@ -1673,7 +1696,8 @@ void qca_print_cr(NOBJ_MACHINE *m, NOBJ_QCS *s)
   wprintw(output_win, "\n");
   wrefresh(output_win);
 #else
-  printf("\n");
+  //printf("\n");
+  dp_newline();
 #endif
 }
 
@@ -1683,7 +1707,8 @@ void qca_print_sp(NOBJ_MACHINE *m, NOBJ_QCS *s)
   wprintw(output_win, " ");
   wrefresh(output_win);
 #else
-  printf(" ");
+  //printf(" ");
+  dp_prnt(" ");
 #endif
 }
 

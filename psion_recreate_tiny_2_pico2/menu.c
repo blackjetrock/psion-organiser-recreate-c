@@ -252,6 +252,7 @@ void menu_test_file(void)
 }
 
 char e_buffer[64] = "";
+char fn_buff[70];
 
 void menu_prog_translate(void)
 {
@@ -268,8 +269,9 @@ void menu_prog_translate(void)
   run_mount(0, argv_null);
 
   // Add suffix, as it has to be an ob3 file
-  strcat(e_buffer, ".opl");
-  nopl_trans(e_buffer);
+  strcpy(fn_buff, e_buffer);
+  strcat(fn_buff, ".opl");
+  nopl_trans(fn_buff);
   
   run_unmount(0, argv_null);
 
@@ -290,8 +292,10 @@ void menu_prog_run(void)
   run_mount(0, argv_null);
 
   // Add suffix, as it has to be an ob3 file
-  strcat(e_buffer, ".ob3");
-  nopl_exec(e_buffer);
+  strcpy(fn_buff, e_buffer);
+  strcat(fn_buff, ".ob3");
+
+  nopl_exec(fn_buff);
   
   run_unmount(0, argv_null);
 
