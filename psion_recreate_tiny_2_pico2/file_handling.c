@@ -18,6 +18,45 @@
 #include "psion_recreate_all.h"
 
 ////////////////////////////////////////////////////////////////////////////////
+
+void file_handling_error(char *msg)
+{
+  dp_cls();
+  i_printxy_str(0, 0, msg);
+  sleep_ms(3000);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+
+void file_delete(char *filename, int ignore_error)
+{
+  FRESULT fr = f_unlink(filename);
+
+  if( (fr != FR_OK) && !ignore_error )
+    {
+      file_handling_error("Unknown file");
+      return;
+    }
+
+  // File has been deleted, or not
+}
+
+void file_rename(char *existing_filename, char *filename)
+{
+  FRESULT fr = f_rename(existing_filename, filename);
+
+  if( fr != FR_OK )
+    {
+      file_handling_error("Could not rename");
+      return;
+    }
+
+  // File has been renamed
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
 //
 // Load a file into memory
 // Lines are then accessed by asking for them by line number
@@ -165,6 +204,41 @@ void file_unload(void)
   return;
 }
 
+//------------------------------------------------------------------------------
+//
+// Write the file data to a file
+//
+FIL *outfp;
+
+void file_write(char *filename)
+{
+  // Open sd card 
+  run_mount(0, argv_null);
+  
+  // Open the file
+  outfp = ff_fopen(filename, "w");
+
+  if( first_line == NULL )
+    {
+      // Nothing to do
+      ff_fclose(outfp);
+      return;
+    }
+
+  // Run through the list freeing every thing
+  linep = first_line;
+
+  while(linep != NULL )
+    {
+      // Write line
+      ff_fprintf(outfp, "%s\n", linep->text);
+
+      linep = linep->next;
+    }
+
+  ff_fclose(outfp);
+}
+
 FILE_LINE *linep = NULL;
 
 void file_dump_list(void)
@@ -190,6 +264,74 @@ void file_dump_list(void)
   
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// If line buffer is different then build a new node with the new details
+// and insert it into the line linked list
+//
+// curline updated to point to new node
+//
+
+void file_edit_new_node_if_different(FILE_LINE **curlinep, char *linline)
+{
+  FILE_LINE *new_node;
+  FILE_LINE *curline = *curlinep;
+  
+  if( strcmp(linline, curline->text) != 0 )
+    {
+      new_node = malloc(sizeof(FILE_LINE));
+
+      if( new_node == NULL )
+        {
+          // Out of memory
+          file_handling_error("Out of memory");
+          return;
+        }
+
+      // Text for the node
+      new_node->text = malloc(strlen(linline));
+
+      if( new_node->text == NULL )
+        {
+          // Out of memory
+          file_handling_error("Out of text memory");
+          free(new_node);
+          return;
+        }
+      
+      // Fill in new node
+      strcpy(new_node->text, linline);
+      
+      // Link it into the list
+      if( curline->next == NULL )
+        {
+        }
+      else
+        {
+          curline->next->prev = new_node;
+        }
+
+      new_node->next = curline->next;
+          
+      if( curline->prev == NULL )
+        {
+          first_line = new_node;
+        }
+      else
+        {
+          curline->prev->next = new_node;
+        }
+
+      new_node->prev = curline->prev;
+
+      // Data copied, and new node linked in to the list
+      // Free up the old node and data
+      free(curline->text);
+      free(curline);
+
+      *curlinep = new_node;
+    }
+}
 
 //------------------------------------------------------------------------------
 //
@@ -203,6 +345,8 @@ void file_dump_list(void)
 
 FILE_INFO finfo;
 int curlineno = 0;
+// Filename plus '.bak'
+char backup_filename[NOBJ_FILENAME_MAXLEN+1+5];
 
 void file_editor(char *filename)
 {
@@ -276,8 +420,13 @@ void file_editor(char *filename)
         case KEY_EXE:
           break;
 
-          // Insert newline character
         case KEY_DOWN:
+          // About to move to another line, check this one and see
+          // if the editing buffer is different to th eline nodem if
+          // it is then something has changed, so we create a new node
+          // in case the size has changed and insert it into the list
+          file_edit_new_node_if_different(&curline, linline);
+          
           move_in_list = 1;
           if( cursor_line < display_num_lines()-1 )
             {
@@ -286,6 +435,12 @@ void file_editor(char *filename)
           break;
           
         case KEY_UP:
+          // About to move to another line, check this one and see
+          // if the editing buffer is different to th eline nodem if
+          // it is then something has changed, so we create a new node
+          // in case the size has changed and insert it into the list
+          file_edit_new_node_if_different(&curline, linline);
+
           move_in_list = -1;
           if( cursor_line > 0 )
             {
@@ -316,6 +471,17 @@ void file_editor(char *filename)
           move_in_list = 0;
         }
     }
+
+  // Exit from editing loop
+  // Delete any backup
+  strcpy(backup_filename, filename);
+  strcat(backup_filename, ".bak");
+  
+  file_delete(backup_filename, FH_IGNORE_ERROR);
+  file_rename(filename, backup_filename);
+  
+  // Write the new version of the file out
+  file_write(filename);
   
   // Unload the file and free memory etc.
   file_unload();
