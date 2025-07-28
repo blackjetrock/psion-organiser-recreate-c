@@ -36,3 +36,8 @@ void file_editor(char *filename);
 int file_load(char *filename, FILE_INFO *fi);
 void file_unload(void);
 void file_dump_list(void);
+void file_create(char *filename);
+void file_delete(char *filename, int ignore_error);
+void file_rename(char *existing_filename, char *filename);
+
+

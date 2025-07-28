@@ -164,7 +164,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
 
   //dp_cls();
   
-#if 0
+#if 1
   // Copy prompt
   for(int i=0; i<DISPLAY_NUM_CHARS*DISPLAY_NUM_LINES; i++)
     {

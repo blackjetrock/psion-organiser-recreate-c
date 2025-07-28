@@ -518,3 +518,30 @@ void file_editor(char *filename)
   // Unload the file and free memory etc.
   file_unload();
 }
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Create a file
+//
+// We don't handle totally empty files at the moment, so create one with
+// a blank line in it.
+
+void file_create(char *filename)
+{
+  FIL *fp;
+
+  // Check it doesn't already exist
+  fp = fopen(filename, "r");
+
+  if( fp != NULL )
+    {
+      fclose(fp);
+      file_handling_error("File exists");
+      return;
+    }
+
+  fp = fopen(filename, "w");
+  ff_fprintf(fp, "%s:", filename);
+  fclose(fp);
+}

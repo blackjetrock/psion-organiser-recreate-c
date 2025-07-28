@@ -795,7 +795,6 @@ void menu_fl_find(void)
 	case MF_STATE_INIT:
 	  dp_cls();
 	  printxy_str(0, 0, "Find:");
-	  //printxy_str(5,0, find_str);
 	  
 	  k = ed_epos(find_str, 64, 0, 0, 0);
 	  
@@ -2440,15 +2439,13 @@ void menu_bubble(void)
 
 
 // File menu
-char edit_filename[NOPL_MAX_FILE_NAME+1];
+char edit_filename[NOPL_MAX_FILE_NAME+1] = "";
 
 void menu_file_editv3(void)
 {
   int done = 0;
   int k;
 
-  ////////////////////////////////////////////////////////////////////////////////
-  
   file_editor("v3.opl");
   return;
 }
@@ -2460,7 +2457,9 @@ void menu_file_edit(void)
 
   dp_cls();
   printxy_str(0, 0, "Edit:");
-	  
+
+  //  strcpy(edit_filename, "");
+  
   k = ed_epos(edit_filename, NOPL_MAX_FILE_NAME, 0, 0, 0);
   
   switch(k)
@@ -2484,6 +2483,80 @@ void menu_file_edit(void)
       
     case KEY_EXE:
       file_editor(edit_filename);
+      break;
+    }
+}
+
+void menu_file_delete(void)
+{
+  int done = 0;
+  int k;
+
+  dp_cls();
+  printxy_str(0, 0, "Delete:");
+
+  //  strcpy(edit_filename, "");
+  
+  k = ed_epos(edit_filename, NOPL_MAX_FILE_NAME, 0, 0, 0);
+  
+  switch(k)
+    {
+    case KEY_ON:
+      if( strlen(edit_filename) == 0)
+        {
+          // Refresh menu on exit
+          menu_init = 1;
+          done = 1;
+        }
+      else
+        {
+          edit_filename[0] ='\0';
+          
+          dp_cls();
+          printxy_str(0, 0, "Delete:");
+          printxy_str(5, 0, edit_filename);
+        }
+      break;
+      
+    case KEY_EXE:
+      file_delete(edit_filename, FH_DO_NOT_IGNORE_ERROR);
+      break;
+    }
+}
+
+void menu_file_create(void)
+{
+  int done = 0;
+  int k;
+
+  dp_cls();
+  printxy_str(0, 0, "Create:");
+
+  //  strcpy(edit_filename, "");
+  
+  k = ed_epos(edit_filename, NOPL_MAX_FILE_NAME, 0, 0, 0);
+  
+  switch(k)
+    {
+    case KEY_ON:
+      if( strlen(edit_filename) == 0)
+        {
+          // Refresh menu on exit
+          menu_init = 1;
+          done = 1;
+        }
+      else
+        {
+          edit_filename[0] ='\0';
+          
+          dp_cls();
+          printxy_str(0, 0, "Create:");
+          printxy_str(5, 0, edit_filename);
+        }
+      break;
+      
+    case KEY_EXE:
+      file_create(edit_filename);
       break;
     }
 }
@@ -2590,6 +2663,8 @@ MENU menu_file =
    {
     {KEY_ON, "",        menu_back},
     {'E', "Edit",       menu_file_edit},
+    {'N', "Create",     menu_file_create},
+    {'D', "Delete",     menu_file_delete},
     {'V', "editV3",     menu_file_editv3},
     {'&', "",           menu_null},
    }
