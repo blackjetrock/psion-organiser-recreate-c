@@ -1,37 +1,37 @@
 
 #include <string.h>
 
-#include "nopl.h"
-
-#define MENU_DB 0
+#include "psion_recreate_all.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Uses menustr to put a menu on the display, returns the index of
 // the selected item, or -1 if menu was exited
 
+// Avoid stack use by not making these local
+
+char sels[MAX_NOPL_MENU_SELS];
+char *sp;
+int num_sels = 0;
+int strx, stry;
+
+int ipos[32];
+int iposx[32];
+int iposy[32];
+char selchar[32];
+int how_many_have_sel[32];  
+char frag[2] = " ";
+char selstr[32][32];
+
 int mn_menu(char *str)
 {
-  char sels[MAX_NOPL_MENU_SELS];
-  char *sp;
-  int num_sels = 0;
-  int strx, stry;
-
+  int i=0;
+  num_sels = 0;
+  
   // Build up information about the menu
   // Find the selection letters
   sp = str;
 
-  //  sels[num_sels++] = *sp;
-  
-  int i=0;
-  int ipos[32];
-  int iposx[32];
-  int iposy[32];
-  char selchar[32];
-  int how_many_have_sel[32];  
-  char frag[2] = " ";
-  char selstr[32][32];
-  
   for(int i=0; i<32; i++)
     {
       how_many_have_sel[i] = 0;
@@ -104,7 +104,7 @@ int mn_menu(char *str)
 	}
     }
   
-#if 1
+#if DB_MN_MENU
   printf("\nnumsels:%d", num_sels);
   
   for(int i=0; i<num_sels; i++)
@@ -114,7 +114,7 @@ int mn_menu(char *str)
     }
 #endif
   
-#if MENU_DB
+#if DB_MN_MENU
   // Dump all the data gathered
   printf("\nStr:'%s'", str);
   
@@ -131,133 +131,116 @@ int mn_menu(char *str)
   // Process the menu, in the compiled manner
   //
   //------------------------------------------------------------------------------
-  
-#if TUI
 
-  // TUI has a display that is more similar to the original Organiser
-  
   // Wait for one of the selection letters to be pressed
   int done = 0;
   int done_srch = 0;
   int selnum = 0;
   int key;
 
-  curs_set(3);
+  dp_cls();
+  
+  //  curs_set(3);
   
   // Display the menu, storing the positions of the entries
   for(int i=0; i<num_sels; i++)
     {
-      wprintw(output_win, " ");
-      getyx(output_win, iposy[i], iposx[i]);
-      wprintw(output_win, selstr[i]);
-      wprintw(output_win, " ");
+      dp_prnt(" ");
+      iposy[i] = printpos_y;
+      iposx[i] = printpos_x;
+      
+      dp_prnt(selstr[i]);
+      dp_prnt(" ");
     }
   
-  wrefresh(output_win);
-
-  keypad(stdscr, TRUE);
+  //  keypad(stdscr, TRUE);
 
   while(!done)
     {
-      //printf("\nLoop");
-      mvwprintw(output_win, iposy[selnum], iposx[selnum], "");
-      wrefresh(output_win);
-
-      key = wgetch(stdscr);
+      tight_loop_tasks();
       
-      switch(key)
-	{
-	case ERR:
-	  break;
+      cursor_y = iposy[selnum];
+      cursor_x = iposx[selnum];
+      
+      if( (kb_test() != KEY_NONE) )
+        {
+          key = kb_getk();
+          
+          switch(key)
+            {
+            case KEY_EXE:
+              done = 1;
+              if( (selnum >=0) && (selnum < num_sels) )
+                {
+                  done = 1;
+                }
+              break;
+              
+            case KEY_ON:
+              selnum = 0;
+              done = 1;
+              break;
+              
+            default:
+              done_srch = 0;
 
-	case 10:
-	  done = 1;
-	  if( (selnum >=0) && (selnum < num_sels) )
-	    {
-	      done = 1;
-	    }
-	  break;
-	  
-	case 27:
-	  selnum = 0;
-	  done = 1;
-	  break;
+              // We have a key that could be the first letter of an entry
+              int last_i = selnum>0? selnum-1 : num_sels-1;
 
-	default:
-#if 0
-	  wprintw(output_win, "\nKey:%02X", key);
-	  wrefresh(output_win);
+#if DB_MN_MENU
+              printf("\nKey:%c", key);
+              printf("\nlast_i:%d selnum:%d", last_i, selnum);
 #endif
-	  done_srch = 0;
-	  
-	  // We have a key that could be the first letter of an entry
-	  int last_i = selnum>0? selnum-1 : num_sels-1;
-	  
-	  for(int i=selnum; (i != last_i) && !done_srch; i=((i+1) % num_sels))
-	    {
-	      //printf("\ni:%d selnum:%d", i, selnum);
-	      if( key == sels[i] )
-		{
-		  if( how_many_have_sel[i] == 1 )
-		    {
-		      selnum = i;
-		      done = 1;
-		      break;
-		    }
-		  else
-		    {
-		      // Rotate around the entries and select with EXE (ENTER)
-		      // Find next entry that starts with this letter
-		      for(int j=((i+1) % num_sels); (j!=i); j=((j+1) % num_sels))
-			{
-			  //printf("\nj:%d", j);
-			  if( key == sels[j] )
-			    {
-			      // Found it
-			      selnum = j;
-			      done_srch = 1;
-			      break;
-			    }
-			}
-		    }
-		}
-	    }
-	  break;
-	}
+              
+              for(int i=selnum; !done_srch; i=((i+1) % num_sels))
+                {
+#if DB_MN_MENU
+                  printf("\ni:%d selnum:%d", i, selnum);
+#endif
+                  if( key == sels[i] )
+                    {
+                      if( how_many_have_sel[i] == 1 )
+                        {
+                          selnum = i;
+                          done = 1;
+                          break;
+                        }
+                      else
+                        {
+                          // Rotate around the entries and select with EXE (ENTER)
+                          // Find next entry that starts with this letter
+                          for(int j=((i+1) % num_sels); (j!=i); j=((j+1) % num_sels))
+                            {
+#if DB_MN_MENU
+                              printf("\nj:%d", j);
+#endif
+                              if( key == sels[j] )
+                                {
+                                  // Found it
+#if DB_MN_MENU
+                                  printf("\nFound key");
+#endif
+
+                                  selnum = j;
+                                  done_srch = 1;
+                                  break;
+                                }
+                            }
+                        }
+                    }
+
+                  // have we processed the last entry we will look at?
+                  if( i == (last_i) )
+                    {
+                      done = 1;
+                    }
+                }
+              break;
+            }
+        }
     }
-  
-  nodelay(stdscr, 0);
   
   return(selnum+1);
-#else
-
-  // Pico version
-  
-  // On command line, print the selections and numbers and allow the number to be selected
-  for(int i=0; i<num_sels; i++)
-    {
-      printf("\n%d:%s", i+1, selstr[i]);
-    }
-
-  // Get integer and return it if valid
-  char input[64];
-  int result = -1;
-  int done = 0;
-  
-  while(!done)
-    {
-      fgets(input, 63, stdin);
-      sscanf(input, "%d", &result);
-
-      if( (result>=1) && (result <= num_sels) )
-	{
-	  done = 1;
-	}
-    }
-  return(result);
- 
-#endif
-
 }
 
 

@@ -78,6 +78,42 @@ FILE_LINE *linep;
 
 int is_first_line;
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Create a file with just one line in it
+//
+
+void fh_one_line(void)
+{
+  //
+  strcpy(linline, " ");
+  
+  // Build node and add to list
+  curline = malloc(sizeof(FILE_LINE));
+  
+  if( curline != NULL )
+    {
+#if DB_FILE_LOAD
+      printf("   curline malloc OK (%p)", curline);
+#endif
+      
+      curline->next = NULL;
+      curline->prev = NULL;
+      
+      
+      // line data
+      line_text = malloc(strlen(linline)+1);
+      
+      //
+      curline->text = line_text;
+      
+      first_line = curline;
+    }
+  
+}
+
+//------------------------------------------------------------------------------
+
 int file_load(char *filename, FILE_INFO *fi)
 {
 #if DB_FILE_LOAD
@@ -96,6 +132,7 @@ int file_load(char *filename, FILE_INFO *fi)
 #if DB_FILE_LOAD
       printf("Cannot open '%s'", filename);
 #endif
+      fh_one_line();
       return(false);    
     }
   
@@ -160,6 +197,13 @@ int file_load(char *filename, FILE_INFO *fi)
     }
 
   fclose(linfp);
+
+  // If no lines at all, create one blank one
+  
+  if( first_line == NULL )
+    {
+      fh_one_line();
+    }
   
   return(true);
 }

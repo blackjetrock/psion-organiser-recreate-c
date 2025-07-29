@@ -1059,6 +1059,11 @@ void qca_escape(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 //------------------------------------------------------------------------------
 
+void qca_kstat(NOBJ_MACHINE *m, NOBJ_QCS *s)
+{
+  push_machine_16(m, kb_test());
+}
+
 void qca_get(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   int c;
@@ -1089,17 +1094,17 @@ void qca_input_int(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   int intval;
   int scan_ret = 0;
-
-  qc_input_buffer[0] = '\0';
   
   // Get integer from user
   while(scan_ret == 0 )
     {
-      //dp_cls();
-
+      // Force ? to the start of the line
+      cursor_x = 0;
+      printpos_x = 0;
+      qc_input_buffer[0] = '\0';
+      
       dp_prnt("?");
-      //      cursor_x = printpos_x;
-      //cursor_y = printpos_y;
+      dp_clr_eol();
       
       ed_edit(qc_input_buffer, 255, ED_DO_NOT_EXIT_ON_MODE);
       scan_ret = sscanf(qc_input_buffer, "%d", &intval);
@@ -1150,18 +1155,20 @@ void qca_input_num(NOBJ_MACHINE *m, NOBJ_QCS *s)
   // Get float from user
   while(scan_ret == 0 )
     {
-#if TUI
-      wprintw(output_win, "?");
-#else
-      printf("?");
-#endif      
+      // Force ? to the start of the line
+      cursor_x = 0;
+      printpos_x = 0;
+      qc_input_buffer[0] = '\0';
       
-      scan_ret = scanf("%s", inp);
+      dp_prnt("?");
+      dp_clr_eol();
+
+      ed_edit(qc_input_buffer, 255, ED_DO_NOT_EXIT_ON_MODE);
+      
+      scan_ret = sscanf(qc_input_buffer, "%s", inp);
       f = num_from_text(inp);
     }
 
-  fgetc(stdin);
-  
   // f is set up for following code
   
   // Check for field
@@ -1203,23 +1210,15 @@ void qca_input_str(NOBJ_MACHINE *m, NOBJ_QCS *s)
   int scan_ret = 0;
   char inp[256];
   
-  // Drop string
-  //  pop_machine_string(m, &(s->len), s->str);
-  
-  // Get string from user
-  //while( fgets(&(inp[0]), 254, stdin) != NULL)
-  //   {
-  //  }
-
   while(scan_ret == 0 )
     {
-#if TUI
-      wprintw(output_win, "?");
-#else
-      printf("?");
-#endif      
+      cursor_x = 0;
+      printpos_x = 0;
+      qc_input_buffer[0] = '\0';
       
-      //scan_ret = scanf("%s", &(s->str));
+      dp_prnt("?");
+      dp_clr_eol();
+      
       if( fgets(&(inp[0]), 254, stdin) != NULL )
 	{
 	  //printf("\nstr='%s'", inp);
@@ -3706,8 +3705,8 @@ const NOBJ_QCODE_INFO qcode_info[] =
     { QCO_POSITION,       "QCO_POSITION",       {qca_position,    qca_null,       qca_null}},    // QCO_POSITION            0x66    
     // QCO_RENAME              0x67    
     // QCO_UPDATE              0x68
-    { QCO_USE,            "QCO_USE",            {qca_use,         qca_null,       qca_null}},  // QCO_USE                 0x69    
-    // QCO_KSTAT               0x6A    
+    { QCO_USE,            "QCO_USE",            {qca_use,         qca_null,       qca_null}},    // QCO_USE                 0x69    
+    { QCO_KSTAT,          "QCO_KSTAT",          {qca_kstat,       qca_null,       qca_null}},    // QCO_KSTAT               0x6A    
     // QCO_EDIT                0x6B    
     { QCO_INPUT_INT,      "QCO_INPUT_INT",      {qca_input_int,   qca_null,       qca_null}},    // QCO_INPUT_INT           0x6C    
     { QCO_INPUT_NUM,      "QCO_INPUT_NUM",      {qca_input_num,   qca_null,       qca_null}},    // QCO_INPUT_NUM           0x6D    
