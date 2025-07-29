@@ -1112,17 +1112,19 @@ void qca_get(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   int c;
   int done = 0;
+
+  printf("\nrtf_get");
   
-#if 0
-  c = fgetc(stdin);
-#endif
   while( !done)
     {
       tight_loop_tasks();
       
       if( kb_test() != KEY_NONE )
         {
+
+          
           c = kb_getk();
+          printf("\nkey found %d\n", c);
           done = 1;
         }
     }
