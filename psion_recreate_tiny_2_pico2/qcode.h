@@ -210,9 +210,11 @@
 #define RTF_UPPER               0xC7    
 #define RTF_SUSR                0xC8    
 #define RTF_SADDR               0xC9    
+#define RTF_CA                  0xCA
+#define RTF_CB                  0xCB
 
 // LZ QCode
-#define RTF_DOW                 0xD7
+
 #define RTF_LTPERCENT           0xCC
 #define RTF_GTPERCENT           0xCD
 #define RTF_PLUSPERCENT         0xCE
@@ -240,6 +242,15 @@
 #define RTF_DAYNAME             0xE4
 #define RTF_DIRW                0xE5
 #define RTF_MONTHSTR            0xE6
+#define RTF_E7                  0xE7
+#define RTF_E8                  0xE8
+#define RTF_E9                  0xE9
+#define RTF_EA                  0xEA
+#define RTF_EB                  0xEB
+#define RTF_EC                  0xEC
+#define RTF_ED                  0xED
+#define RTF_EE                  0xEE
+#define RTF_EF                  0xEF
 
 #define QCX_GCLS                0xF0
 #define QCX_GPOINT              0xF1
