@@ -277,7 +277,11 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
                 case KEY_EXE:
                   done = 1;
                   break;
-              
+
+                case KEY_SHIFT_DEL:
+                  done = 1;
+                  break;
+                  
                 case KEY_LEFT:
                   if( insert_point > 0)
                     {

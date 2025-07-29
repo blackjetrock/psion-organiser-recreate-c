@@ -1058,10 +1058,34 @@ void qca_escape(NOBJ_MACHINE *m, NOBJ_QCS *s)
 }
 
 //------------------------------------------------------------------------------
+//
+// Set up key status
+//
 
 void qca_kstat(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
-  push_machine_16(m, kb_test());
+  switch(s->integer)
+    {
+    case 1:
+      kb_set_num(0);
+      kb_set_caps(1);
+      break;
+
+    case 2:
+      kb_set_num(0);
+      kb_set_caps(0);
+      break;
+
+    case 3:
+      kb_set_num(1);
+      kb_set_caps(1);
+      break;
+
+    case 4:
+      kb_set_num(1);
+      kb_set_caps(0);
+      break;
+    }
 }
 
 void qca_get(NOBJ_MACHINE *m, NOBJ_QCS *s)
@@ -3706,7 +3730,7 @@ const NOBJ_QCODE_INFO qcode_info[] =
     // QCO_RENAME              0x67    
     // QCO_UPDATE              0x68
     { QCO_USE,            "QCO_USE",            {qca_use,         qca_null,       qca_null}},    // QCO_USE                 0x69    
-    { QCO_KSTAT,          "QCO_KSTAT",          {qca_kstat,       qca_null,       qca_null}},    // QCO_KSTAT               0x6A    
+    { QCO_KSTAT,          "QCO_KSTAT",          {qca_pop_int,     qca_kstat,      qca_null}},    // QCO_KSTAT               0x6A    
     // QCO_EDIT                0x6B    
     { QCO_INPUT_INT,      "QCO_INPUT_INT",      {qca_input_int,   qca_null,       qca_null}},    // QCO_INPUT_INT           0x6C    
     { QCO_INPUT_NUM,      "QCO_INPUT_NUM",      {qca_input_num,   qca_null,       qca_null}},    // QCO_INPUT_NUM           0x6D    

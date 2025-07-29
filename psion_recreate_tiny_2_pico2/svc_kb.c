@@ -30,7 +30,7 @@
 
 // This allows other code to insert keys into the key queue. Note: Core1
 // has to be the code that does this, and i tmust run on core1. So, put a key in this
-// location and wait for it to tuirn to KEY_NONE before putting another one there.
+// location and wait for it to turn to KEY_NONE before putting another one there.
 // If multiple code needs ot do this, then add more variables and add insertion in the KB code.
 
 KEYCODE kb_external_key = KEY_NONE;
@@ -97,6 +97,17 @@ int tick = 0;
 
 #define MATRIX_BIT_SHIFT  5
 #define MATRIX_BIT_ON    63
+
+// This table picks a key map from the current values
+// of shift_pressed, caps_on and num_on
+// They are bit numbers in cur_modes
+
+#define CAPS_ON    1
+#define NUM_ON     2
+#define SHIFT_ON   4
+#define CAPS_OFF   0
+#define NUM_OFF    0
+#define SHIFT_OFF  0
 
 
 volatile MATRIX_MAP mat_scan_matrix = 0;
@@ -227,14 +238,6 @@ KEYMAP shifted_map[] =
    { 0,                '-' }
   };
 
-// This table picksa key map from the current values
-// of shift_pressed, caps_on and num_on
-#define CAPS_ON    1
-#define NUM_ON     2
-#define SHIFT_ON   4
-#define CAPS_OFF   0
-#define NUM_OFF    0
-#define SHIFT_OFF  0
 
 typedef struct _KEY_MAP_MAP
 {
@@ -808,4 +811,24 @@ int translate_to_hid(char ch)
   ret = ch;
 #endif
   return(ret);
+}
+
+void kb_set_caps(int on_noff)
+{
+  cur_modes &= ~CAPS_ON;
+  
+  if( on_noff )
+    {
+      cur_modes |= CAPS_ON;
+    }
+}
+
+void kb_set_num(int on_noff)
+{
+  cur_modes &= ~NUM_ON;
+  
+  if( on_noff )
+    {
+      cur_modes |= NUM_ON;
+    }
 }

@@ -288,7 +288,7 @@ FILE_LINE *linep = NULL;
 void file_dump_list(void)
 {
   printf("\nFile handling line list:\n");
-  
+  printf("\nCurrent line:%p", curline);
   if( first_line == NULL )
     {
       printf("\nLine list empty\n");
@@ -379,8 +379,42 @@ void file_edit_new_node_if_different(FILE_LINE **curlinep, char *linline)
 
 //------------------------------------------------------------------------------
 //
+// Add a blank line after the current line. This is an insertion
+//
+
+void file_add_blank_line_after(void)
+{
+  // Build node and add to list
+  FILE_LINE *new_node = malloc(sizeof(FILE_LINE));
+  
+  if( new_node != NULL )
+    {
+#if DB_FILE_EDITOR
+      printf("   new_node malloc OK (%p)", curline);
+#endif
+      new_node->next = curline->next;
+      new_node->prev = curline;
+      
+      // line data
+      new_node->text = malloc(sizeof(""));
+      
+      if( new_node->text != NULL)
+        {
+#if DB_FILE_EDITOR
+          printf("  text malloc OK");
+#endif
+          strcpy(new_node->text, "");
+          
+          // Add to list
+          curline->next = new_node;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+//
 // We want a file editor, but don't want to use a lot of stack. Create a pool of
-// lines in the external RAM that we load the file into. This is a simple N lines
+// lines in RAM that we load the file into. This is a simple N lines
 // for now, but a window of lines could be maintained later, allowing large files
 // to be edited. The problem is rewriting lines that have changed in size.
 //
@@ -455,6 +489,8 @@ void file_editor(char *filename)
       i_printxy_str(0, cursor_line, "");
       k = ed_epos(linline, FH_LINE_MAX, ED_SINGLE_LINE, 0, cursor_line);
 
+      printf("\nKEY:%d", k);
+      
       switch(k)
         {
         case KEY_ON:
@@ -462,8 +498,49 @@ void file_editor(char *filename)
           break;
           
         case KEY_EXE:
+          // Add a blank line after the one we are on, then move to it
+          file_add_blank_line_after();
+
+          move_in_list = 1;
+          if( cursor_line < display_num_lines()-1 )
+            {
+              cursor_line++;
+            }
           break;
 
+        case KEY_SHIFT_DEL:
+          // Delete the current line, only if this isn't the last line
+          if( curline->next != NULL )
+            {
+              FILE_LINE *new_curline = curline->next;
+              
+              // Take the curline node out of the list
+              if( curline->prev == NULL )
+                {
+                  // first_line is pointing to this node, point it at the one after
+                  first_line = curline->next;
+                }
+              else
+                {
+                  curline->prev->next = curline->next;
+                }
+              
+              if( curline->next == NULL )
+                {
+                  // Nothing after this line, so nothing to do.
+                }
+              else
+                {
+                  curline->next->prev = curline->prev;
+                }
+              
+              // And free up the storage
+              free(curline->text);
+              free(curline);
+              curline = new_curline;
+            }
+          break;
+          
         case KEY_DOWN:
           // About to move to another line, check this one and see
           // if the editing buffer is different to th eline nodem if
@@ -506,32 +583,7 @@ void file_editor(char *filename)
                 {
                   // Moving off the end of the file
                   // Add a blank line at end of file
-
-                  // Build node and add to list
-                  FILE_LINE *new_node = malloc(sizeof(FILE_LINE));
-      
-                  if( new_node != NULL )
-                    {
-#if DB_FILE_EDITOR
-                      printf("   new_node malloc OK (%p)", curline);
-#endif
-                      new_node->next = NULL;
-                      new_node->prev = curline;
-          
-                      // line data
-                      new_node->text = malloc(sizeof(""));
-
-                      if( new_node->text != NULL)
-                        {
-#if DB_FILE_EDITOR
-                          printf("  text malloc OK");
-#endif
-                          strcpy(new_node->text, "");
-
-                          // Add to list
-                          curline->next = new_node;
-                        }
-                    }
+                  file_add_blank_line_after();
                 }
             }
           
