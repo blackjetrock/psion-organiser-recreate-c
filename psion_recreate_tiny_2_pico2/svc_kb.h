@@ -26,6 +26,9 @@ void matrix_scan(void);
 
 extern volatile int nos_key_in;
 extern volatile int nos_key_out;
+extern int caps_mode;
+extern int num_mode;
+extern int cur_modes;
 
 void nos_put_key(char key);
 char nos_get_key(void);

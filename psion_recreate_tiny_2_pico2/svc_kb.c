@@ -813,7 +813,9 @@ int translate_to_hid(char ch)
   return(ret);
 }
 
-void kb_set_caps(int on_noff)
+//------------------------------------------------------------------------------
+
+void kb_set_caps2(int on_noff)
 {
   cur_modes &= ~CAPS_ON;
   
@@ -823,7 +825,7 @@ void kb_set_caps(int on_noff)
     }
 }
 
-void kb_set_num(int on_noff)
+void kb_set_num2(int on_noff)
 {
   cur_modes &= ~NUM_ON;
   
@@ -831,4 +833,14 @@ void kb_set_num(int on_noff)
     {
       cur_modes |= NUM_ON;
     }
+}
+
+void kb_set_caps(int on_noff)
+{
+  caps_mode = on_noff;
+}
+
+void kb_set_num(int on_noff)
+{
+  num_mode = on_noff;
 }

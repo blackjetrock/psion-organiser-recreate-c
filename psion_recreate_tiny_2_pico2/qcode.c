@@ -1064,26 +1064,28 @@ void qca_escape(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 void qca_kstat(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
+  printf("\nkstat:%d\n", s->integer);
+  
   switch(s->integer)
     {
     case 1:
       kb_set_num(0);
-      kb_set_caps(1);
+      kb_set_caps(0);
       break;
 
     case 2:
       kb_set_num(0);
-      kb_set_caps(0);
+      kb_set_caps(1);
       break;
 
     case 3:
       kb_set_num(1);
-      kb_set_caps(1);
+      kb_set_caps(0);
       break;
 
     case 4:
       kb_set_num(1);
-      kb_set_caps(0);
+      kb_set_caps(1);
       break;
     }
 }
