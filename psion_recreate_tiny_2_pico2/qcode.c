@@ -14,7 +14,7 @@
 
 #define LPRINT_FN "LPRINT"
 //#define dbq printf
-#define dbq
+//#define dbq
 
 FIL *lprintfp = NULL;
 
