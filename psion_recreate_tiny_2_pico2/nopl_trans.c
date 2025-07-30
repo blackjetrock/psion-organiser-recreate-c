@@ -650,6 +650,7 @@ const SIMPLE_QC_MAP qc_map[] =
     {EXP_BUFF_ID_FUNCTION, "GCLS",               __,     __,                   __,        __,               QCX_GCLS, 0},
     {EXP_BUFF_ID_FUNCTION, "GLINE",              __,     __,                   __,        __,               QCX_GLINE, 0},
     {EXP_BUFF_ID_FUNCTION, "GPOINT",             __,     __,                   __,        __,               QCX_GPOINT, 0},
+    {EXP_BUFF_ID_FUNCTION, "GUPDATE",            __,     __,                   __,        __,               QCX_GUPDATE, 0},
 
 
     
