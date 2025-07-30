@@ -1,0 +1,19 @@
+goto:
+
+print "A"
+
+goto lab1::
+
+print "FAIL"
+return
+
+lab2::
+print "PASS"
+return
+
+lab1::
+print "B"
+
+goto lab2::
+
+print "FAIL"

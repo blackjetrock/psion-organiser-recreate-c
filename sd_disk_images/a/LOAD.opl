@@ -1,0 +1,148 @@
+LOAD:
+REM Load v1.0 - Object code loader for Psion Organiser II models LZ/LZ64
+REM Just for the fun of it - 24.01.1998 Filip Van Vooren - FREEWARE 
+
+REM e-mail: Filip.Van.Vooren@t-online.de
+
+REM DESCRIPTION
+REM Load is a small program to load object code files from a PC into the Psion organiser LZ.
+REM At startup it looks for *.OB3 files in the current remote directory and asks you 
+REM to specify a destination pack.  
+REM A sorted menu will appear in which you can select a single file or all files for downloading.
+REM A progress bar is shown during the download. Once a file is loaded it is marked in the menu.
+
+REM ODDITIES
+REM - Note that you don't need to press on/clear in the main menu to boot your commslink before   
+REM   starting this program. This is done automatically during program startup.
+REM - Load needs a procedure named SYSLIB$ to access OS routines. SYSLIB$ is used in most of my programs.  
+REM   This, for example, allows me to display a bar graphic with a single opl-statement. 
+REM - Note that Load can only handle up to 50 object code files and that it can crash 
+REM   with a "MENU TOO BIG" error. I split up my directories anyway. 
+
+LOCAL F$(50,8)         REM Objectcode files in current remote dir on PC
+LOCAL F                REM Total number of objectcode files in current dir on PC
+LOCAL P$(1)            REM Letter of pack used to load object code on
+LOCAL O$(12)           REM Filename of current object code file or temp string
+LOCAL L                REM Loop counter
+LOCAL A%               REM Item user selected in menu or temp value
+LOCAL B%               REM Progress indicator bar value or temp value
+LOCAL M$(255)          REM Menu containing names of objectcode files or error message
+
+
+REM Initialisation part
+UDG 7,0,31,14,4,8,8,4,0                       REM Define commslink icon without underline
+                            
+
+REM Check if commslink device is booted. If not, boot devices  
+ONERR A::                                       
+LSET:(-1)                                     REM Just check if procedure is available
+GOTO B::                                      REM ok. no error. Go to search remote directory 
+A::
+ONERR OFF                                     REM Procedure not available. Commslink not booted yet
+SYSLIB$:(23,0,0,0.0,"",0,0)                   REM Boot devices
+
+
+REM Connect to PC and search directory for "*.OB3"-files
+B::                                           REM Search remote directory
+ONERR E::
+AT 4,2 : PRINT CHR$(7);" Connecting..."       
+XFOPEN:("*.OB3",0,2)                          REM Open remote directory
+DO                                            
+  O$=XFGET$:(12)                              REM Read remote directory
+  IF NOT XFEOF:  
+     A%=Loc(O$,".") - 1                       REM Find start of file-extension
+     F=F+1 : F$(F)=LEFT$(O$,A%)               REM Get rid of file-extension
+  ENDIF
+UNTIL XFEOF: OR F=50                          REM Max. 50 files in a directory     
+
+
+REM Sort array using bubble sort. Isn't very pretty but does the job
+IF F>1 
+   AT 6,2 : PRINT " Sorting...";CHR$(26)
+   A%=1 
+   DO
+     B%=A%+1 
+     DO
+       IF F$(B%) < F$(A%) 
+          O$=F$(A%) : F$(A%)=F$(B%) : F$(B%)=O$  
+       ENDIF
+       B%=B%+1
+     UNTIL B%>F
+     A%=A%+1 
+   UNTIL A%=F
+ELSEIF F=0                                    REM No *.OB3 files found in remote directory
+   M$="NO *.OB3 FILES FOUND IN CURRENT DIR ON REMOTE PC" 
+   GOTO E::   
+ENDIF
+
+
+REM Build Menustring. Contains sorted filenames 
+M$="<*>"                                           REM Wild card to load all files
+L=0
+DO
+  L=L+1 : M$=M$+","+F$(L)+CHR$(254)
+UNTIL L=F 
+
+
+REM Let user specify pack to load object code on
+C::                                                REM Pack selection
+O$="A:"                                            REM There is always pack A:
+IF EXIST("B:MAIN") : O$=O$+",B:" : ENDIF           REM Do we have a pack B: ?
+IF EXIST("C:MAIN") : O$=O$+",C:" : ENDIF           REM Do we have a pack C: ?
+PRINT CHR$(12);"   SPECIFY PACK         TO LOAD ON";CHR$(25) 
+A%=MENUN(1,O$)                                     REM Let user select a pack
+IF A%=0 : RETURN : ENDIF                           REM User left the program
+P$=CHR$(A%+64)                                     REM Generate pack letter
+
+
+REM Let user select a file to download. Selecting <*> loads all
+D::                                         REM File selection menu
+UDG 0,31,14,4,8,8,4,0,31                    REM Define commslink icon with underline
+UDG 2,0,0,0,0,0,0,0,31                      REM Define underline
+L=0                                         REM Set loop counter
+PRINT CHR$(12);CHR$(0);REPT$(CHR$(2),19)    REM Show top-line menu 
+CLOCK(1) : A%=MENUN(2,M$) : CLOCK(0)        REM Let user select an object code file 
+IF A%=0 : GOTO C:: : ENDIF                  REM ON/Clear pressed. Go back to Pack selection
+
+
+REM Download one or all object code file(s) and mark filename(s) in menustring
+UDG 7,0,31,14,4,8,8,4,0                     REM Define commlink icon without underline
+AT 1,3 : PRINT "0%              100%"       REM Show progress indicator
+ 
+WHILE L<F                                   REM All files processed?
+  IF A%>1                                   REM User selected only one file to download 
+     L=A%-1                                 REM Get index of selected file  
+     B%=100                                 REM Set progress indicator bar value to 100%
+  ELSE                                      REM A%=1 meaning load all object code files
+     L=L+1                                  REM Set index to next file                                 
+     B%=L/F * 100                           REM Update progress indicator bar value
+  ENDIF
+  O$=P$+":"+F$(L)                                           REM Generate local filename  
+  AT 1,4 : PRINT RIGHT$(SYSLIB$:(162,B%,0,0.0,"",0,0),20)   REM Show progress indicator bar
+  AT 1,1 : PRINT CHR$(7);" Load... ";O$;CHR$(26)            REM Show current file
+  XTRECV:(F$(L)+".OB3",O$,3)                                REM Load the object code file 
+  
+  B%=LOC(M$,F$(L)+CHR$(254))                                REM Get pos of filename in menustring  
+  IF B% > 0                                                 REM B%=0 means filename already marked                 
+     B%=B% + ADDR(M$) + LEN(F$(L))                          REM Get memory address of last char filename 
+     POKEB B%,223                                           REM Change character 
+  ENDIF
+IF A%>1 : GOTO D:: : ENDIF                                  REM Only 1 file selected. Back to menu 
+ENDWH
+GOTO D::                                                    REM All files done. Back to menu
+
+
+REM Error handling routine
+E::
+ONERR OFF                                                   REM Turn error handling off
+AT 1,1
+PRINT CHR$(26);CHR$(10);"   ";CHR$(7);"  Error";CHR$(33);CHR$(33);CHR$(33);CHR$(26);CHR$(25);CHR$(16)    
+IF ERR=193
+   M$="CL.EXE NOT RUNNING ON REMOTE PC OR COMMSLINK NOT ATTACHED TO REMOTE PC" 
+ELSEIF ERR=203
+   M$="COMMSLINK NOT CONNECTED TO ORGANISER OR PROC SYSLIB$ MISSING"
+ELSEIF ERR>0
+   M$=ERR$(ERR)                                                 
+ENDIF
+VIEW(4,M$)                                                  REM Show error message
+RETURN                                                      REM Leave the program

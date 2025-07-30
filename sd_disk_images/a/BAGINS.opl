@@ -1,0 +1,24 @@
+BAGINS:
+LOCAL A%,G%,A$(3,255)
+CLS :PRINT DS$
+AT 3,4 :PRINT"(E)exit  (P)page"
+A$(1)="PAGE 1 of 3 - Try to find Psions 3,4,5 or 6 digit code. It consists of the numbers 0 to 9. Correct digits in the correct position are indicated by "+ CHR$(3)+". Correct digits wrong position are indicated by "+ CHR$(4)+"."
+A$(1)=A$(1)+" Wrong digits are indicated by "+ CHR$(5)+".  "+CHR$(1)+CHR$(2)+CHR$(1)
+A$(2)="PAGE 2 of 3 - DEL key will remove incorrect entries - The "+CHR$(127)+" and "+CHR$(126)+" keys allow stepping back and forward through entries - ON key terminates current game.  "+CHR$(1)+CHR$(2)+CHR$(1)
+A$(3)="PAGE 3 of 3 - You will have to apply detective techniques to discover the code"+CHR$(33)+" It is not easy"+CHR$(33)+" Once you discover the knack it will become very hard to put this Organiser down.  "+CHR$(1)+CHR$(2)+CHR$(1)
+A%=1
+NXPG::
+G%=VIEW(3,A$(A%))
+NULL::
+IF G%=%E OR G%=%Q
+CLS :RETURN
+ELSEIF G%=%P
+A%=A%+1
+IF A%>3
+A%=1
+ENDIF
+GOTO NXPG::
+ELSE G%=VIEW(3,"")
+GOTO NULL::
+ENDIF
+

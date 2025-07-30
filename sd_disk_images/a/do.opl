@@ -1,0 +1,31 @@
+DO:
+
+LOCAL ABC%
+
+
+DO
+
+ABC% = ABC% + 17
+
+CONTINUE
+
+DO
+
+ABC% = ABC% + 17
+
+DO
+
+ABC% = ABC% + 17
+
+UNTIL ABC% = 200
+
+UNTIL ABC% = 200
+
+UNTIL ABC% = 200
+
+IF A%=3
+
+DO
+i%=10
+UNTIL i%=10
+ENDIF

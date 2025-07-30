@@ -1,0 +1,70 @@
+float2:
+
+local A, B, E, e%, E$(20), ANS, ANS%, ANS$(20)
+local pass%, pass2%, num%
+
+pass% = 1
+pass2% = 0
+num% = 0
+
+rem ---------------------------------SETUP-------------------------------------------
+
+create "A:STRFILE", A, A$, B$, C$
+use a
+
+A.A$ = "a str 1a"
+A.B$ = "a str 1b"
+A.C$ = "a str 1c"
+
+append
+
+A.A$ = "a str 2a"
+A.B$ = "a str 2b"
+A.C$ = "a str 2c"
+
+append
+
+A.A$ = "a str 3a"
+A.B$ = "a str 3b"
+A.C$ = "a str 3c"
+
+append
+
+
+A.A$ = "a str end a"
+A.B$ = "a str end b"
+A.C$ = "a str end c"
+
+append
+
+rem ------------------------------------A--------------------------------------------
+
+first
+
+E$ = A.A$
+ANS$= "a str 1a"
+print CHR$(num%+asc("A"));"(";ANS$;"):";e$,(e$=ANS$) : PASS2%=PASS2%+(e$=ANS$)
+num%=num%+1
+
+rem ------------------------------------A--------------------------------------------
+
+next
+
+E$ = A.B$
+ANS$= "a str 2b"
+print CHR$(num%+asc("A"));"(";ANS$;"):";e$,(e$=ANS$) : PASS2%=PASS2%+(e$=ANS$)
+num%=num%+1
+
+rem --------------------------------------------------------------------------------
+
+if pass2% <> -num%
+pass%=0
+endif
+
+rem --------------------------------------------------------------------------------
+
+IF PASS%
+print "PASS"
+else
+print "FAIL"
+ENDIF

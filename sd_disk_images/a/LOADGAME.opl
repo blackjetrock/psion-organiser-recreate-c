@@ -1,0 +1,36 @@
+loadgame:
+
+REM This loads a savegame file from slot A as saved by SAVEGAME
+
+REM Check if file exists
+ IF NOT EXIST ("a:saveg")
+  PRINT "No saved game found."
+  PAUSE -50
+  RETURN
+ ENDIF
+REM Open file to read data
+PRINT "Loading saved game..."
+OPEN "a:saveg", A, m1$, m2$, m3$, m4$, hp%, att%, def%, moves%, maxhp%, sx%, sy%, px%, py%
+
+REM Load map rows (in GAME) from file
+map$(1) = A.m1$
+map$(2) = A.m2$
+map$(3) = A.m3$
+map$(4) = A.m4$
+
+REM Load player stats (in GAME) from file
+plHealt% = A.hp%
+plAtt% = A.att%
+plDef% = A.def%
+plMoves% = A.moves%
+plMaxHe% = A.maxhp%
+
+REM Load coordinates from file
+startX% = A.sx%
+startY% = A.sy%
+px% = A.px%
+py% = A.py%
+
+CLOSE REM Close a:saveg, no further actions required
+PRINT "Game loaded successfully!"
+PAUSE -50

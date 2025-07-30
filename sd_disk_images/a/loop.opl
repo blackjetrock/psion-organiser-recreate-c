@@ -1,0 +1,18 @@
+loop:
+
+
+local i%,j%
+
+i% = 1000
+while i% > 0
+print i%
+j% = 1000
+while j% > 0
+j% = j% -1
+endwh
+
+i%=i%-1
+endwh
+
+
+

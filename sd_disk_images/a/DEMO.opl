@@ -1,0 +1,33 @@
+DEMO:
+REM CM/XP procedure
+GLOBAL FLAG1%,FLAG2%
+LOCAL L1%,L2%(8),L3%,L4%(2)
+
+POKEB 8345,32
+POKEB 8582,0
+POKEB 9006,129
+IF PEEKB($BCFF)>=128
+ FLAG1%=1
+ M5=1
+ENDIF
+L1%=PEEKB($8EFF)
+L3%=1
+DO
+ L2%(L3%)=L1%-2*INT(L1%/2)
+ L1%=INT(L1%/2)
+ L3%=L3%+1
+UNTIL L3%>8
+IF L2%(4)=1
+ FLAG2%=1
+ M5=M5+1
+ENDIF
+IF FLAG1%=1 AND FLAG2%=1
+ L4%(1)=16258
+ L4%(2)=14592
+ USR(ADDR(L4%()),256)
+ FILLMAIN:              :REM COPY dataabse from pack to A:
+ MENU4:                 :REM LZ demo
+ELSE
+ FILLMAIN:              :REM COPY dataabse from pack to A:
+ MENU2:                 :REM CM/XP demo
+ENDIF

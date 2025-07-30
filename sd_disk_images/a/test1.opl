@@ -1,0 +1,58 @@
+TEST1:
+
+LOCAL A, B,C,D , E  ,  F   ,    G
+LOCAL A%
+LOCAL A%(10)
+LOCAL A%,B%
+LOCAL A%(1),B%(2),  A%(1000),    B%(2000)
+LOCAL A$(10),B$(1,2)
+LOCAL STR$(12 , 34)
+GLOBAL A%,B,C$(5),D$(20,40)
+
+PRINT X%
+PRINT X%;
+print X%,Y%
+
+PRINT A(2+3*7)+B(1+2+3+4)
+
+A= A + (2*3+3*Z%-   ABC%*1.1)
+X%=2
+  A   = A + ( 2 * 3 + 3 * Z%-   ABC%*1.1)
+  X%  =  2
+
+
+X%=Y%
+X%= Z%
+A% = 1+2
+A% = B%
+A% = A% + B%
+A% = 2 + (A% * B%)
+A = A% + (2*3+3*Z%-   ABC%*1.1)
+A% = 20
+
+
+PRINT "abc"
+PRINT "asdfgh"
+PRINT   "    abc    "
+PRINT A%
+PRINT B
+PRINT ABC
+PRINT ABC%
+PRINT A$
+PRINT DEF$
+PRINT A(2)
+PRINT B%(10)
+PRINT D$(2)
+PRINT F$(10,12)
+UDG 1,2,3,4,5,6,7,8,9
+UDG 1,2,3,4,5,6,7,8,9
+UDG 1,2.3, 3.4, 5.6, 7, 8, 9, 10, 11
+     UDG 1 , 2.3, 3.4, 5.6, 7, 8, 9, 10, 11
+
+A%(2) = 6
+G$(12,45) = "a"
+A%=1
+B%=3
+A%=1:B%=9
+Z%=A%(34)
+POKEB 181,U%(A%)

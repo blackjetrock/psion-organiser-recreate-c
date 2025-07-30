@@ -1,0 +1,9 @@
+slot:
+
+IF EXIST ("b:trace66")
+ slot$="B"
+ELSEIF EXIST ("c:trace66")
+ slot$="C"
+ELSE
+ slot$="X"
+ENDIF

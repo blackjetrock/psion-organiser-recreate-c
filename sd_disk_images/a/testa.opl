@@ -1,0 +1,22 @@
+testa:
+
+local A, A%
+
+DO
+
+IF A% > 2.5
+
+A = 12 A% = 13.6
+
+IF A% =5
+A% = 10.2 * A%
+ENDIF
+
+ELSE
+
+A = 1 * 10
+A% = (1*A%) + (10.2*A)
+
+ENDIF
+
+UNTIL A% = 10.2

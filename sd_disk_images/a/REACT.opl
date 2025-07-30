@@ -1,0 +1,27 @@
+react:
+REM CM/XP procedure
+LOCAL C%,K%
+
+Loop::
+CLS
+PRINT "Reaction test"
+PRINT "Get ready";
+PAUSE 5+40*RND
+WHILE KEY$<>""
+ENDWH
+AT 1,2
+PRINT "Now:     ";
+C%=-1
+DO
+ C%=C%+1
+ AT 5,2
+ PRINT C%;
+UNTIL KEY OR C%=1500
+AT 1,1
+PRINT "Again (Y/N)  ";
+DO
+ K%=ASC(UPPER$(GET$))
+ IF K%=%Y
+  GOTO Loop::
+ ENDIF
+UNTIL K%=%N OR K%=1

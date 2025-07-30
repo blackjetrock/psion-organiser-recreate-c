@@ -1,0 +1,23 @@
+hertz:
+LOCAL C,A,H
+PRINT "Camera Speed",CHR$(63)
+INPUT C
+CLS
+PRINT "Shutter Angle",CHR$(63)
+INPUT A
+H=C*360/A
+H=(INTF(H*10))
+H=H/10
+CLS
+PRINT H,"HERTZ"
+PRINT "Electrical Freq."
+GET
+C=MENU("HERTZ,HMI,FILM,MENU")
+IF C=1
+HERTZ:
+ELSEIF C=2
+HMI:
+ELSEIF C=3
+FILM:
+ENDIF
+

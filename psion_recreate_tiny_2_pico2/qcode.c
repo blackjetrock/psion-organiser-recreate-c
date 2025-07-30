@@ -1095,14 +1095,18 @@ void qca_kstat(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 void qca_key(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
+  printf("\nrtf_key");
+  
   if( kb_test() == KEY_NONE )
     {
+      printf("  no key");
       // No key
-      s->integer = 0;
+      s->result = 0;
     }
   else
     {
-      s->integer = kb_getk();
+      s->result = kb_getk();
+      printf("  key %d", s->result);
     }
 }
 
@@ -1121,8 +1125,6 @@ void qca_get(NOBJ_MACHINE *m, NOBJ_QCS *s)
       
       if( kb_test() != KEY_NONE )
         {
-
-          
           c = kb_getk();
           printf("\nkey found %d\n", c);
           done = 1;
@@ -3623,9 +3625,17 @@ void qca_gcls(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 void qca_gpoint(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
-  // We have two ints, plot a point
-  dd_plot_point(s->integer, s->integer2, 1);
-  dd_update();
+  int x, y, mode;
+
+  mode = pop_machine_int(m);
+  y    = pop_machine_int(m);
+  x    = pop_machine_int(m);
+  
+  // We have three ints, plot a point, in a mode
+  dd_plot_point(x, y, mode);
+
+  // Update done using gupdate
+  //dd_update();
 }
 
 void qca_gline(NOBJ_MACHINE *m, NOBJ_QCS *s)
@@ -3798,7 +3808,7 @@ const NOBJ_QCODE_INFO qcode_info[] =
     { RTF_FIND,          "RTF_FIND",          {qca_null,         qca_null,        qca_null}},   // RTF_FIND                0x8F   ///////////
     
     { RTF_FREE,          "RTF_FREE",          {qca_null,         qca_null,        qca_null}},   // RTF_FREE                0x90    /////////////////
-    { RTF_GET,           "RTF_GET",           {qca_null,         qca_get,         qca_null}},           // RTF_GET                 0x91    
+    { RTF_GET,           "RTF_GET",           {qca_get,          qca_null,        qca_null}},           // RTF_GET                 0x91    
     { RTF_HOUR,          "RTF_HOUR",          {qca_clock_hour,   qca_null,        qca_null}},
     { RTF_IABS,          "RTF_IABS",          {qca_pop_int,      qca_iabs,        qca_push_result}},    // RTF_IABS                0x93    
     { RTF_INT,           "RTF_INT",           {qca_pop_num,      qca_num_to_int,  qca_push_result}},    // RTF_INT                 0x94
@@ -3908,7 +3918,7 @@ const NOBJ_QCODE_INFO qcode_info[] =
 
     // Extended Qcode
     { QCX_GCLS,          "QCX_GCLS",          {qca_gcls,         qca_null,        qca_null}},                // QCX_GCLX          0xF0
-    { QCX_GPOINT,        "QCX_GPOINT",        {qca_pop_2int,     qca_gpoint,      qca_null}},                // QCX_POINT         0xF1
+    { QCX_GPOINT,        "QCX_GPOINT",        {qca_gpoint,       qca_null,        qca_null}},                // QCX_POINT         0xF1
     { QCX_GLINE,         "QCX_GLINE",         {qca_gline,        qca_null,        qca_null}},                // QCX_GLINE         0xF2
     { QCX_GUPDATE,       "QCX_GUPDATE",       {qca_gupdate,      qca_null,        qca_null}},                // QCX_GUPDATE       0xF3
   };
@@ -4153,7 +4163,7 @@ const QCODE_DESC qcode_decode[] =
     {0xE5,	"-",	"S",	"S",	"DIRW$"},
     {0xE6,	"-",	"I",	"S",	"MONTH$"},
     {0xF0,	"-",	"-",	"-",	"GCLS"},
-    {0xF1,	"-",	"II",	"-",	"GPOINT"},
+    {0xF1,	"-",	"III",	"-",	"GPOINT"},
     {0xF2,	"-",	"IIII",	"-",	"GLINE"},
     {0xF3,	"-",	"-",	"-",	"GUPDATE"},
   };

@@ -1,0 +1,10 @@
+e10:
+
+
+print "ONERR 10"
+
+raise 302
+
+print "ONERR 10 after raise"
+
+print "PASS"
