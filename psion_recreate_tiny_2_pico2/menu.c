@@ -13,6 +13,7 @@
 
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
+#include "pico/bootrom.h"
 
 #include "psion_recreate_all.h"
 
@@ -355,6 +356,14 @@ void init_scan_test(void)
 {
   dp_cls();
   printxy_str(0,0, "Key test    ");
+}
+
+//------------------------------------------------------------------------------
+// Boot to mass storage mode
+//
+void menu_test_mass_storage(void)
+{
+  reset_usb_boot(0,0);
 }
 
 void menu_scan_test(void)
@@ -2639,6 +2648,7 @@ MENU menu_test_os =
     {'E', "Epos",       menu_epos_test},
     {'F', "Flowtext",   menu_flowtext_test},
     {'K', "Keytest",    menu_scan_test},
+    {'M', "Mass_storage",    menu_test_mass_storage},
     {'&', "",           menu_null},
    }
   };

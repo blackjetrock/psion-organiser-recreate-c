@@ -911,6 +911,8 @@ void qca_cursor(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   m->cursor_flag = qcode_next_8(m);  // Get type
 
+  cursor_on = m->cursor_flag;
+  
   dbq("\nCursor flag now set to %d", m->cursor_flag);
 }
 
@@ -3645,6 +3647,7 @@ void qca_gline(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 void qca_gupdate(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
+  printf("\n%s\n", __FUNCTION__);
   dd_update();
 }
 
