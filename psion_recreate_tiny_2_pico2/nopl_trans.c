@@ -6389,6 +6389,7 @@ void dbpfq(const char *caller, char *fmt, ...)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+char trans_res[30] PSRAM;
 
 int nopl_trans(char *filename)
 {
@@ -6404,11 +6405,17 @@ int nopl_trans(char *filename)
     
   parser_check();
 
+  dp_cls();
+
+  
   // Perform two passes of translation and qcode generation
   for(pass_number = 1; pass_number<=2; pass_number++)
     {
       printf("\n%s:Pass %d\n", __FUNCTION__, pass_number);
 
+      sprintf(trans_res, "Pass %d", pass_number);
+      i_printxy_str(0, 0, trans_res);
+      
       // Keep things alive
       tight_loop_tasks();
 
@@ -6469,7 +6476,18 @@ int nopl_trans(char *filename)
   printf("  %d variables",               num_var_info);
   printf("  %d lines blank\n",           n_lines_blank);
 
+  dp_cls();
+  sprintf(trans_res, "%d lines",       n_lines_ok);
+  i_printxy_str(0, 0, trans_res);
+  sprintf(trans_res, "%d failed",    n_lines_bad);
+  i_printxy_str(0, 1, trans_res);
+  sprintf(trans_res, "%d vars",               num_var_info);
+  i_printxy_str(0, 2, trans_res);
+
   uninit_output();
+
+  kb_getk();
+  
   return(0);
 }
 
