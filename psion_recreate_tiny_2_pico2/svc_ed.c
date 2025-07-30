@@ -81,6 +81,12 @@ void display_epos(char *str_in, char *epos_prompt, int insert_point, int cursor_
   cursor_x = px+insert_point;
 
   dp_prnt(str+display_start_index);
+
+  if( single_nmulti_line,1 )
+    {
+    dp_clr_eol();
+    }
+  
   //cursor_x = printpos_x;
   cursor_y = printpos_y;  
   
