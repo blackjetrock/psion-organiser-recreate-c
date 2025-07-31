@@ -655,10 +655,14 @@ KEYCODE kb_getk(void)
       // Keep the display updated
       menu_loop_tasks();
       
-      if( kb_test() != KEY_NONE )
+      if( (k = kb_test()) != KEY_NONE )
 	{
+#if !PICOCALC          
 	  k = nos_get_key();
+#else
 
+#endif
+          
 #if DB_KB_GETK
 	  printf("\n%s::exit:%d", __FUNCTION__, k);
 #endif
@@ -680,6 +684,7 @@ KEYCODE kb_getk(void)
 // Does not take key from buffer
 //
 
+#if !PICOCALC
 KEYCODE kb_test(void)
 {
 
@@ -705,6 +710,46 @@ KEYCODE kb_test(void)
   // Return key code but don't remove key from buffer
   return(nos_key_buffer[nos_key_out]);
 }
+#endif
+
+#if PICOCALC
+KEYCODE kb_test(void)
+{
+  int k;
+  
+  menu_loop_tasks();
+
+  k = read_i2c_kbd();
+
+  if( k != -1 )
+    {
+      printf("\nK:%d %X %d", k, k, k==-79);
+    }
+  
+  switch(k)
+    {
+    case -1:
+      return(KEY_NONE);
+      break;
+
+    case 10:
+      return(13);
+      break;
+
+    case 177:
+      return(1);
+      break;
+      
+    case 27:
+      return(1);
+      break;
+      
+    default:
+      return(k);
+      break;
+    }
+}
+#endif
 
 
 ////////////////////////////////////////////////////////////////////////////////

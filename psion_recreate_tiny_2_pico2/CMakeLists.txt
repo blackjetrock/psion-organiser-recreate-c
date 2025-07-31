@@ -75,6 +75,8 @@ add_executable(${PROJECT}
     sd_card_utils.c
     hw_config.c
     file_handling.c
+    lcdspi.c
+    i2ckbd.c
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}
@@ -101,6 +103,7 @@ target_link_libraries(${PROJECT}
     pico_unique_id
     hardware_spi
     hardware_clocks
+    hardware_i2c
     hardware_dma
     tinyusb_board
     tinyusb_device

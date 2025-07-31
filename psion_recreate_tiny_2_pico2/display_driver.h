@@ -5,6 +5,7 @@ typedef enum
     DD_I2C_SSD,
     DD_SPI_SSD1309,
     DD_SPI_SSD1351,
+    DD_PICOCALC,
   } DD_TYPE;
 
 void dd_init(DD_TYPE type);

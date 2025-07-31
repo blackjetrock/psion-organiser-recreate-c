@@ -30,6 +30,7 @@ typedef unsigned int uint;
 #include "nopl.h"
 
 #include "newopl_lib.h"
+#include "lcdspi.h"
 
 //#define LVAD(XXX) printf("\n%s:%p\n", __FUNCTION__, &XXX-lvadp)
 #define LVAD(XXX) 
@@ -67,6 +68,7 @@ typedef unsigned int uint;
 #include "sd_card_utils.h"
 
 #include "file_handling.h"
+#include "i2ckbd.h"
 
 #define PSRAM __attribute__((section(".psram.")))
 

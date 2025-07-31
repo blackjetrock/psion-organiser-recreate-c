@@ -13,7 +13,6 @@ extern bool core1_tick(void);
 
 extern void own_task(void);
 
-
 ////////////////////////////////////////////////////////////////////////////////
 //
 // GPIOs
@@ -52,36 +51,65 @@ const uint PIN_VBAT_SW_ON = 27;
 
 #endif
 
+#if PICOCALC
+#define PIN_SD0 0
+#define PIN_SD1 1
+#define PIN_SD2 2
+#define PIN_SD3 3
+#define PIN_SD4 4
+#define PIN_SD5 5
+#define PIN_SD6 6
+#define PIN_SD7 7
+
+#define PIN_SCLK       10
+#define PIN_SOE        11
+#define PIN_SMR        12
+#define PIN_P57        13
+
+const uint PIN_SDAOUT     = 14;
+const uint PIN_LATCHOUT2  = 15;
+const uint PIN_I2C_SDA    = 16;
+const uint PIN_I2C_SCL    = 17;
+const uint PIN_LS_DIR     = 18;
+const uint PIN_LATCHIN    = 19;
+const uint PIN_SCLKIN     = 20;
+const uint PIN_SDAIN      = 21;
+const uint PIN_LATCHOUT1  = 22;
+
+const uint PIN_SCLKOUT    = 26;
+const uint PIN_VBAT_SW_ON = 27;
+#endif
+
 #if PSION_MINI
 
 // No datapack interface
-#define PIN_SD0 7
-#define PIN_SD1 7
-#define PIN_SD2 7
-#define PIN_SD3 7
-#define PIN_SD4 7
-#define PIN_SD5 7
-#define PIN_SD6 7
-#define PIN_SD7 7
+#define PIN_SD0 27
+#define PIN_SD1 27
+#define PIN_SD2 27
+#define PIN_SD3 27
+#define PIN_SD4 27
+#define PIN_SD5 27
+#define PIN_SD6 27
+#define PIN_SD7 27
 
-#define PIN_SCLK       7
-#define PIN_SOE        7
-#define PIN_SMR        7
-#define PIN_P57        7
+#define PIN_SCLK       27
+#define PIN_SOE        27
+#define PIN_SMR        27
+#define PIN_P57        27
 
 const uint PIN_SDAOUT     = 27;
-const uint PIN_LATCHOUT2  = 15;
-const uint PIN_I2C_SDA    = 5;
-const uint PIN_I2C_SCL    = 6;
+const uint PIN_LATCHOUT2  = 27;
+const uint PIN_I2C_SDA    = 27;
+const uint PIN_I2C_SCL    = 27;
   
-const uint PIN_LS_DIR     = 7;
-const uint PIN_LATCHIN    = 12;
-const uint PIN_SCLKIN     = 13;
-const uint PIN_SDAIN      = 17;
-const uint PIN_LATCHOUT1  = 14;
+const uint PIN_LS_DIR     = 27;
+const uint PIN_LATCHIN    = 27;
+const uint PIN_SCLKIN     = 27;
+const uint PIN_SDAIN      = 27;
+const uint PIN_LATCHOUT1  = 27;
 
-const uint PIN_SCLKOUT    = 26;
-const uint PIN_VBAT_SW_ON = 11;
+const uint PIN_SCLKOUT    = 27;
+const uint PIN_VBAT_SW_ON = 27;
 
 #endif
 
@@ -290,11 +318,22 @@ static void card_detect_callback(uint gpio, uint32_t events) {
 
 int *lvadp;
 
-int main(void) {
+int main(void)
+{
   int lvad;
 
-  lvadp = &lvad;
+  set_sys_clock_khz(133000, true);
+  uart_init(uart0, 115200);
   
+  lvadp = &lvad;
+
+#if PICOCALC
+  gpio_init(PIN_VBAT_SW_ON);
+  gpio_set_dir(PIN_VBAT_SW_ON, GPIO_OUT);
+  
+#endif
+  
+#if !PICOCALC
   // Set up the GPIOs
   gpio_init(PIN_VBAT_SW_ON);
   gpio_set_dir(PIN_VBAT_SW_ON, GPIO_OUT);
@@ -342,7 +381,8 @@ int main(void) {
 
   gpio_init(PIN_I2C_SCL);
   gpio_init(PIN_I2C_SDA);
-
+#endif
+  
 #if PSION_MINI
   gpio_init(PIN_OLED_RES);
   gpio_init(PIN_OLED_DC);
@@ -361,7 +401,8 @@ int main(void) {
   sleep_ms(10);
   gpio_put(PIN_OLED_RES, 1);
 #endif
-  
+
+#if !PICOCALC
   // Use pull ups
   gpio_pull_up(PIN_I2C_SDA);
   gpio_pull_up(PIN_I2C_SCL);
@@ -399,7 +440,8 @@ int main(void) {
   gpio_set_dir(19, GPIO_OUT);
   gpio_init(16);
   gpio_set_dir(16, GPIO_IN);
-
+#endif
+  
 #if SWITCH_EXTERNAL_PSRAM
 
   // Pico2 external memory
@@ -440,6 +482,8 @@ int main(void) {
   stdio_init_all();
   //  sleep_ms(400);
 
+  init_i2c_kbd();
+   
 #if !PSION_MINI
   sleep_ms(10);
   initialise_oled();
@@ -454,7 +498,8 @@ int main(void) {
   int main_ticks = 0;
 
   printf("\nAbout to init...");
-  
+
+#if !PICOCALC
 #if PSION_MINI
   dd_init(DD_SPI_SSD1309);
   //dd_init(DD_SPI_SSD1351);
@@ -462,7 +507,10 @@ int main(void) {
 #else
   dd_init(DD_I2C_SSD);
 #endif
-
+#else
+  dd_init(DD_PICOCALC);
+#endif
+  
   // Implicitly called by disk_initialize,
   // but called here to set up the GPIOs
   // before enabling the card detect interrupt:

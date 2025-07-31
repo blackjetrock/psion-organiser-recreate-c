@@ -43,8 +43,9 @@
 #define CORE1_UNUSED     0
 
 // Different builds
-#define PSION_MINI       1   // Small hardware version
+#define PSION_MINI       0   // Small hardware version
 #define PSION_RECREATE   0   // Hardware replacement for original case
+#define PICOCALC         1   // Use Picocalc hardware
 
 #define SPI              1
 #define DD               1   // Display driver scheme
