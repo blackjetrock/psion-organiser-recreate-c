@@ -1,5 +1,12 @@
 // Switches and debug
 
+// Different builds
+#define PSION_MINI       0   // Small hardware version
+#define PSION_RECREATE   0   // Hardware replacement for original case
+#define PICOCALC         1   // Use Picocalc hardware
+
+//------------------------------------------------------------------------------
+
 #define SWITCH_EXTERNAL_PSRAM   1
 
 #define KEY_SCAN_IN_MAIN 1
@@ -40,12 +47,11 @@
 #define CORE0_SCAN       0
 
 // Core 1 might be unused
+#if PICOCALC
+#define CORE1_UNUSED     1
+#else
 #define CORE1_UNUSED     0
-
-// Different builds
-#define PSION_MINI       0   // Small hardware version
-#define PSION_RECREATE   0   // Hardware replacement for original case
-#define PICOCALC         1   // Use Picocalc hardware
+#endif
 
 #define SPI              1
 #define DD               1   // Display driver scheme

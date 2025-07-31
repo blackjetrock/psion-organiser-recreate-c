@@ -638,6 +638,6 @@ void file_create(char *filename)
     }
 
   fp = fopen(filename, "w");
-  ff_fprintf(fp, "%s:", filename);
+  ff_fprintf(fp, "\n%s:\n\n", filename);
   fclose(fp);
 }

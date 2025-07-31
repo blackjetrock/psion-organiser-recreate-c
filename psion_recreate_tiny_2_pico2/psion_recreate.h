@@ -211,9 +211,17 @@ void write_595(const uint latchpin, int value, int n);
 #define MAX_DDRAM 0xFF
 #define MAX_CGRAM (5*16)
 
+#if !PICOCALC
 #define DISPLAY_NUM_LINES   4
 #define DISPLAY_NUM_CHARS  21
 #define DISPLAY_NUM_EXTRA   4
+#endif
+
+#if PICOCALC
+#define DISPLAY_NUM_LINES   (320/12)
+#define DISPLAY_NUM_CHARS  (320/8)
+#define DISPLAY_NUM_EXTRA   4
+#endif
 
 extern unsigned char font_5x7_letters[];
 extern char lcd_display_buffer[MAX_DDRAM+2];

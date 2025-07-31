@@ -119,7 +119,7 @@ extern int  lcd_getc(uint8_t devn);
 extern void lcd_sleeping(uint8_t devn);
 
 extern char lcd_put_char(char c, int flush);
-extern void lcd_print_string(char* s);
+extern void picocalc_lcd_print_string(char* s);
 
 extern void lcd_spi_init();
 extern void picocalc_lcd_init();
@@ -127,6 +127,7 @@ extern void picocalc_lcd_clear();
 extern void reset_controller(void);
 extern void pin_set_bit(int pin, unsigned int offset);
 extern void picocalc_lcd_print_char( int fc, int bc, char c, int orientation);
+extern void picocalc_set_pixel(int x, int y, int col);
 
 extern short picocalc_current_x, picocalc_current_y;
 

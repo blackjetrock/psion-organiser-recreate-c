@@ -240,15 +240,20 @@ void draw_bitmap_spi(int x1, int y1, int width, int height, int scale, int fc, i
   b[2] = (bc & 0xFF);
 
 #endif
-  //printf("draw_bitmap_spi-> XStart %d, y1 %d, XEnd %d, YEnd %d\n",XStart,y1,XEnd,YEnd);
+  //printf("\ndraw_bitmap_spi-> XStart %d, y1 %d, XEnd %d, YEnd %d\n",XStart,y1,XEnd,YEnd);
+  //printf("\nheight:%d", height);
+  
   define_region_spi(XStart, y1, XEnd, YEnd, 1);
 
   n = 0;
   for (i = 0; i < height; i++)
     {                                   // step thru the font scan line by line
+      //printf("\ni:%d", i);
     for (j = 0; j < scale; j++)
       {                                // repeat lines to scale the font
-      if (vertCoord++ < 0)
+        //printf("\nj:%d", j);
+
+        if (vertCoord++ < 0)
         {
           continue;                           // we are above the top of the screen
         }
@@ -263,8 +268,11 @@ void draw_bitmap_spi(int x1, int y1, int width, int height, int scale, int fc, i
 
       for (k = 0; k < width; k++)
         {                            // step through each bit in a scan line
+          //          printf("\nk:%d width:%d", k, width);
+                
         for (m = 0; m < scale; m++)
           {                        // repeat pixels to scale in the x axis
+            //printf("\nm:%d scale:%d", m, scale);
           if (horizCoord++ < 0)
             {
               continue;                  // we have not reached the left margin
@@ -497,7 +505,7 @@ char lcd_put_char(char c, int flush)
   return c;
 }
 
-void lcd_print_string(char *s)
+void picocalc_lcd_print_string(char *s)
 {
   while (*s)
     {
@@ -798,7 +806,19 @@ void picocalc_lcd_init() {
 
   picocalc_lcd_clear();
     
-  lcd_print_string("Psion Recreate");
-  lcd_print_string("Picocalc Version");
+  picocalc_lcd_print_string("Psion Recreate");
+  picocalc_lcd_print_string("Picocalc Version");
 
+}
+
+void picocalc_set_pixel(int x, int y, int col)
+{
+  unsigned char colb[3];
+  
+  define_region_spi(x, y, x, y, 1);
+
+  colb[0] = (col >> 16);
+  colb[1] = (col >> 8) & 0xFF;
+  colb[2] = (col & 0xFF);
+  hw_send_spi(colb, 3);
 }

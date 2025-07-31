@@ -990,6 +990,10 @@ uint8_t display_pixels[PIXEL_BUFFER_SIZE_BYTES*2];
 
 void pixels_clear(void)
 {
+#if PICOCALC
+  dd_clear_graphics();
+#endif
+  
 #if PSION_MINI
   dd_clear_graphics();
 #else

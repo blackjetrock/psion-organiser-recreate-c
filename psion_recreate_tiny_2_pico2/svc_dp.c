@@ -193,10 +193,12 @@ void dp_stat(int x, int y, int curs_on, int cursor_block)
 
 void dp_clr_eol(void)
 {
+  printf("\n%s: printpos_x:%d printpos_y:%d", printpos_x, printpos_y);
+  
   int save_pp_x = printpos_x;
   int save_pp_y = printpos_y;
   
-  while( save_pp_y == printpos_y )
+  for(int i=printpos_x; i<DISPLAY_NUM_CHARS-1; i++)
     {
       dp_prnt(" ");
       //i_printxy(printpos_x++, printpos_y, ' ');

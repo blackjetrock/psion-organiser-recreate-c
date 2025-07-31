@@ -2270,6 +2270,8 @@ void menu_buz1(void)
 #define SH (32.0/2.0)
 #endif
 
+#if !PICOCALC
+
 void menu_bubble(void)
 {
   int var_idx = 0;
@@ -2457,6 +2459,398 @@ void menu_bubble(void)
 	}
     }
 }
+#endif
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Picocalc has more pixels and colour...
+//
+
+#if PICOCALC
+
+void menu_bubble(void)
+{
+  int var_idx = 0;
+
+#define N_IDX 0
+#define T_IDX 1
+#define H_IDX 2
+  
+  double tau = 3.1415*2;
+  double r   = tau/2.350;
+  double h = 0.7;
+  int cx, cy;
+  
+  int    n   = 5;
+  int    sz  = 200;
+  double sw  = dd_get_x_size()/2.0;
+  double sh  = dd_get_y_size()/2.0;
+  double t   = 20.0;
+  double t2   = 1.0;
+  
+  double u, v, y=0.0, x = 0.0;
+  double a, b;
+  int ax, by;
+  int c = 0;
+  int mi = 200;
+  int mj = 5;
+  double ii, jj;
+  double tinc = 0.025;
+
+  printf("\nBubble Universe Approximation");
+  printf("\n");
+  printf("\nC: Toggle screen clear each loop");
+  printf("\n");
+  printf("\nPress + or - after one of these keys to adjust the following:");
+  printf("\nN: Controls number of dots-ish");
+  printf("\nT: Controls time -ish");
+  printf("\nH: Controls density of dots-ish");
+  
+  pixels_clear();
+  
+  while(1)
+    {
+      if( c )
+	{
+	  pixels_clear();
+	}
+      
+      menu_loop_tasks();
+      
+      for (int i=0; i<mi; i++)
+	{
+	  
+	  double ang1_start = i+t;
+	  double ang2_start = r*i+t;
+	  double v=0;
+	  double u=0;
+	  
+	  for(int j=0; j<n; j++)
+	    {
+	      double ang1 = ang1_start+v;
+	      double ang2 = ang2_start+u;
+	      u = sin(ang1)+sin(ang2);
+	      v = cos(ang1)+cos(ang2);
+
+	      a = u/2.0*sw+sw;
+	      b = v/2.0*sh+sh;
+	      ax = (int)a;
+	      by = (int)b;
+
+	      cx = ax;
+	      cy = by;
+	      //dd_plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
+              //              printf("\ni:%d j:%j", i, j);
+              dd_plot_point(ax, by, ((i)<<16)+((j*20)<<8)+0x80);
+	    }
+	}
+      
+      dd_update();
+	  
+      t += tinc;
+
+      if( t > (2.0 * 3.14159265358) )
+	{
+	  t -= (2.0 * 3.14159265358);
+	}
+      
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+	
+	  // Exit on ON key, exiting demonstrates it is working...
+	  if( k == KEY_ON )
+	    {
+	      break;
+	    }
+	  
+	  if ( k == KEY_RIGHT )
+	    {
+	      sw *= 2.0;
+	    }
+
+	  if ( k == KEY_LEFT )
+	    {
+	      sw /= 2.0;
+	    }
+
+	  if ( k == KEY_UP )
+	    {
+	      v += 3.1;
+	    }
+
+	  if ( k == 'N' )
+	    {
+	      var_idx = N_IDX;
+	      printf("\nN adjust");
+	    }
+
+	  if ( k == 'H' )
+	    {
+	      var_idx = H_IDX;
+	      printf("\nH adjust");
+	    }
+
+	  if ( k == 'T' )
+	    {
+	      var_idx = T_IDX;
+	      printf("\nT adjust");
+	    }
+
+	  if ( k == '+' )
+	    {
+	      switch(var_idx)
+		{
+		case N_IDX:
+		  n++;
+		  printf("\nN:%d", n);
+		  break;
+		  
+		case T_IDX:
+		  tinc+=0.005;
+		  printf("\nT:%g", t);
+		  break;
+
+		case H_IDX:
+		  h += 0.02;
+		  printf("\nH:%g", h);
+		  break;
+		}
+	    }
+
+	  if ( k == '-' )
+	    {
+	      switch(var_idx)
+		{
+		case N_IDX:
+		  n--;
+		  printf("\nN:%d", n);
+		  break;
+		  
+		case T_IDX:
+		  tinc -= 0.005;
+		  printf("\nT:%g", t);
+		  break;
+
+		case H_IDX:
+		  h -= 0.02;
+		  printf("\nH:%g", h);
+		  break;
+		}
+	    }
+	  
+	  if ( k == ' ' )
+	    {
+	      c = !c;;
+	    }
+
+	  if( k == 'I' )
+	    {
+	      // Dump information
+	      printf("\ncx,cy=(%d,%d)", cx, cy);
+	    }
+	  
+	  if ( k == KEY_DOWN )
+	    {
+	      v -= 3.2;
+	    }
+	}
+    }
+}
+
+void menu_bubble2(void)
+{
+  int var_idx = 0;
+
+#define N_IDX 0
+#define T_IDX 1
+#define H_IDX 2
+  
+  double tau = 3.1415*2;
+  double r   = tau/2.350;
+  double h = 0.7;
+  int cx, cy;
+  
+  int    n   = 5;
+  int    sz  = 200;
+  double sw  = dd_get_x_size()/2.0;
+  double sh  = dd_get_y_size()/2.0;
+  double t   = 20.0;
+  double t2   = 1.0;
+  
+  double u, v, y=0.0, x = 0.0;
+  double a, b;
+  int ax, by;
+  int c = 0;
+  int mi = 200;
+  int mj = 5;
+  double ii, jj;
+  double tinc = 0.025;
+  
+  printf("\nBubble Universe Approximation");
+  printf("\n");
+  printf("\nC: Toggle screen clear each loop");
+  printf("\n");
+  printf("\nPress + or - after one of these keys to adjust the following:");
+  printf("\nN: Controls number of dots-ish");
+  printf("\nT: Controls time -ish");
+  printf("\nH: Controls density of dots-ish");
+  
+  pixels_clear();
+  
+  while(1)
+    {
+      if( c )
+	{
+	  pixels_clear();
+	}
+      
+      menu_loop_tasks();
+      
+      for (int i=0; i<mi; i++)
+	{
+	  
+	  double ang1_start = i+t;
+	  double ang2_start = r*i+t;
+	  double v=0;
+	  double u=0;
+	  
+	  for(int j=0; j<n; j++)
+	    {
+	      double ang1 = ang1_start+v;
+	      double ang2 = ang2_start+u;
+	      u = sin(i+v)+sin(r*i+x);
+	      v = cos(i+v)+cos(r*i+x);
+
+	      a = u/2.0*sw+sw;
+	      b = v/2.0*sh+sh;
+	      ax = (int)a;
+	      by = (int)b;
+
+              x = u+t;
+              
+	      cx = ax;
+	      cy = by;
+	      //dd_plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
+              printf("\ni:%d j:%j", i, j);
+              dd_plot_point(ax, by, ((i*255/mi)<<16)+((j*255/n)<<8)+((255-i/mi+j/n)*128));
+	    }
+	}
+      
+      dd_update();
+	  
+      t += tinc;
+
+      if( t > (2.0 * 3.14159265358) )
+	{
+	  t -= (2.0 * 3.14159265358);
+	}
+      
+      if( kb_test() != KEY_NONE )
+	{
+	  KEYCODE k = kb_getk();
+	
+	  // Exit on ON key, exiting demonstrates it is working...
+	  if( k == KEY_ON )
+	    {
+	      break;
+	    }
+	  
+	  if ( k == KEY_RIGHT )
+	    {
+	      sw *= 2.0;
+	    }
+
+	  if ( k == KEY_LEFT )
+	    {
+	      sw /= 2.0;
+	    }
+
+	  if ( k == KEY_UP )
+	    {
+	      v += 3.1;
+	    }
+
+	  if ( k == 'N' )
+	    {
+	      var_idx = N_IDX;
+	      printf("\nN adjust");
+	    }
+
+	  if ( k == 'H' )
+	    {
+	      var_idx = H_IDX;
+	      printf("\nH adjust");
+	    }
+
+	  if ( k == 'T' )
+	    {
+	      var_idx = T_IDX;
+	      printf("\nT adjust");
+	    }
+
+	  if ( k == '+' )
+	    {
+	      switch(var_idx)
+		{
+		case N_IDX:
+		  n++;
+		  printf("\nN:%d", n);
+		  break;
+		  
+		case T_IDX:
+		  tinc+=0.005;
+		  printf("\nT:%g", t);
+		  break;
+
+		case H_IDX:
+		  h += 0.02;
+		  printf("\nH:%g", h);
+		  break;
+		}
+	    }
+
+	  if ( k == '-' )
+	    {
+	      switch(var_idx)
+		{
+		case N_IDX:
+		  n--;
+		  printf("\nN:%d", n);
+		  break;
+		  
+		case T_IDX:
+		  tinc -= 0.005;
+		  printf("\nT:%g", t);
+		  break;
+
+		case H_IDX:
+		  h -= 0.02;
+		  printf("\nH:%g", h);
+		  break;
+		}
+	    }
+	  
+	  if ( k == ' ' )
+	    {
+	      c = !c;;
+	    }
+
+	  if( k == 'I' )
+	    {
+	      // Dump information
+	      printf("\ncx,cy=(%d,%d)", cx, cy);
+	    }
+	  
+	  if ( k == KEY_DOWN )
+	    {
+	      v -= 3.2;
+	    }
+	}
+    }
+}
+
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -2597,6 +2991,9 @@ MENU menu_top =
 
     {'O', "Off",        menu_instant_off},
     {'B', "Bubble",     menu_bubble},
+#if PICOCALC
+    {'2', "Bubble2",    menu_bubble2},
+#endif
     {'T', "Test",       menu_goto_test_os},
     {'H', "Hex",        menu_hex},
     {'F', "Find",       menu_fl_find},
@@ -2688,7 +3085,7 @@ MENU menu_file =
    {
     {KEY_ON, "",        menu_back},
     {'E', "Edit",       menu_file_edit},
-    {'N', "Create",     menu_file_create},
+    {'C', "Create",     menu_file_create},
     {'D', "Delete",     menu_file_delete},
     {'V', "editV3",     menu_file_editv3},
     {'&', "",           menu_null},

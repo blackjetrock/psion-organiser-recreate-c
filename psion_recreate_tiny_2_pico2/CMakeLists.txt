@@ -22,6 +22,7 @@ add_subdirectory(../no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src build)
 
 add_executable(${PROJECT}
     main.c
+    hwmain.c
     cdc.c
     core1.c
     usb_descriptors.c

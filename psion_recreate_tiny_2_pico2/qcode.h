@@ -256,6 +256,18 @@
 #define QCX_GPOINT              0xF1
 #define QCX_GLINE               0xF2
 #define QCX_GUPDATE             0xF3
+#define RTF_F4                  0xF4
+#define RTF_F5                  0xF5
+#define RTF_F6                  0xF6
+#define RTF_F7                  0xF7
+#define RTF_F8                  0xF8
+#define RTF_F9                  0xF9
+#define RTF_FA                  0xFA
+#define RTF_FB                  0xFB
+#define RTF_FC                  0xFC
+#define RTF_FD                  0xFD
+#define RTF_FE                  0xFE
+#define RTF_FF                  0xFF
 
 ////////////////////////////////////////////////////////////////////////////////
 //

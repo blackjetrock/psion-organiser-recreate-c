@@ -318,16 +318,24 @@ static void card_detect_callback(uint gpio, uint32_t events) {
 
 int *lvadp;
 
+void hwmain(void);
+
 int main(void)
 {
   int lvad;
 
+  //hwmain();
+
+  sleep_ms(100);
+  
+#if 0
   set_sys_clock_khz(133000, true);
   uart_init(uart0, 115200);
+#endif
   
   lvadp = &lvad;
 
-#if PICOCALC
+#if !PICOCALC
   gpio_init(PIN_VBAT_SW_ON);
   gpio_set_dir(PIN_VBAT_SW_ON, GPIO_OUT);
   
@@ -451,6 +459,7 @@ int main(void)
   
   board_init();
   tusb_init();
+
 #if 0
   sd_init_driver();
   sdcard_init();
@@ -473,17 +482,19 @@ int main(void)
     }
 #endif
 
+#if !PICOCALC
 #if !CORE1_UNUSED
   core1_init();
 #endif
+#endif
   
   clear_oled();
-  
+
   stdio_init_all();
   //  sleep_ms(400);
 
   init_i2c_kbd();
-   
+  
 #if !PSION_MINI
   sleep_ms(10);
   initialise_oled();

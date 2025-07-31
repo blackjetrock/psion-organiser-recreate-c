@@ -3924,6 +3924,19 @@ const NOBJ_QCODE_INFO qcode_info[] =
     { QCX_GPOINT,        "QCX_GPOINT",        {qca_gpoint,       qca_null,        qca_null}},                // QCX_POINT         0xF1
     { QCX_GLINE,         "QCX_GLINE",         {qca_gline,        qca_null,        qca_null}},                // QCX_GLINE         0xF2
     { QCX_GUPDATE,       "QCX_GUPDATE",       {qca_gupdate,      qca_null,        qca_null}},                // QCX_GUPDATE       0xF3
+    
+    { RTF_F4,            "RTF_F4",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_F5,            "RTF_F5",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_F6,            "RTF_F6",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_F7,            "RTF_F7",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_F8,            "RTF_F8",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_F9,            "RTF_F9",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_FA,            "RTF_FA",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_FB,            "RTF_FB",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_FC,            "RTF_FC",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_FD,            "RTF_FD",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_FE,            "RTF_FE",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
+    { RTF_FF,            "RTF_FF",            {qca_null,            qca_null,          qca_null}},     /////////////////////////////////
   };
 
 #define SIZEOF_QCODE_INFO (sizeof(qcode_info)/sizeof(NOBJ_QCODE_INFO))

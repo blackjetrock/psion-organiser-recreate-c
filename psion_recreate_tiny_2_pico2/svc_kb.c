@@ -109,6 +109,7 @@ int tick = 0;
 #define NUM_OFF    0
 #define SHIFT_OFF  0
 
+KEYCODE key_from_test = KEY_NONE;
 
 volatile MATRIX_MAP mat_scan_matrix = 0;
 
@@ -649,6 +650,15 @@ KEYCODE kb_getk(void)
 #if DB_KB_GETK
   printf("\n%s::", __FUNCTION__);
 #endif
+
+#if PICOCALC
+  if( key_from_test != KEY_NONE )
+    {
+      k = key_from_test;
+      key_from_test = KEY_NONE;
+      return(k);
+    }
+#endif
   
   while(1)
     {
@@ -713,41 +723,81 @@ KEYCODE kb_test(void)
 #endif
 
 #if PICOCALC
+
+typedef struct _PICOCALC_KEYMAP
+{
+  int i2c;
+  KEYCODE key;
+} PICOCALC_KEYMAP;
+
+PICOCALC_KEYMAP pclc_keymap[] =
+  {
+    {-1,  KEY_NONE},
+    {177, KEY_ON},
+    {180, KEY_LEFT},
+    {181, KEY_UP},  
+    {182, KEY_DOWN},
+    {183, KEY_RIGHT},
+    { 10, KEY_EXE},
+    { 8, KEY_DEL},
+    {162, KEY_NONE},  // Shift key
+    {163, KEY_NONE},  // Other Shift key
+    {193, KEY_NONE},  // CAPS LOCK
+    
+  };
+
+#define NUM_PC_KEYMAP ((sizeof(pclc_keymap))/(sizeof(PICOCALC_KEYMAP)))
+
+uint64_t kb_poll_after = 0;
+
+
 KEYCODE kb_test(void)
 {
-  int k;
+  int k, ret_k;
   
   menu_loop_tasks();
 
-  k = read_i2c_kbd();
+  // Only poll keyboard at greater than 10ms intervals
+  if( time_us_64() < kb_poll_after )
+    {
+      return(KEY_NONE);
+    }
 
+  kb_poll_after = time_us_64() + 10000;
+  
+  if( kb_external_key != KEY_NONE )
+    {
+      // Update inactivity timeout
+      last_key_press_time = time_us_64();
+
+      k = kb_external_key;
+      kb_external_key = KEY_NONE;
+      return(k);
+    }
+
+  k = read_i2c_kbd();
+  
   if( k != -1 )
     {
       printf("\nK:%d %X %d", k, k, k==-79);
     }
+
+  ret_k = k;
   
-  switch(k)
+  // Map various keys
+  for(int i=0; i<NUM_PC_KEYMAP; i++)
     {
-    case -1:
-      return(KEY_NONE);
-      break;
-
-    case 10:
-      return(13);
-      break;
-
-    case 177:
-      return(1);
-      break;
-      
-    case 27:
-      return(1);
-      break;
-      
-    default:
-      return(k);
-      break;
+      if( pclc_keymap[i].i2c == k )
+        {
+          ret_k = pclc_keymap[i].key;
+          break;
+        }
     }
+  
+  // kb_getk can pick this up
+  key_from_test = ret_k;
+  
+  return(ret_k);
 }
 #endif
 
