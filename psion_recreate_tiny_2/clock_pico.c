@@ -31,6 +31,7 @@ typedef enum
   } CLK_COMP;
 
 
+#if RTC_PICO_CLOCK
 void qca_clock_component(NOBJ_MACHINE *m, NOBJ_QCS *s, CLK_COMP comp)
 {
   time_t now;
@@ -83,6 +84,71 @@ void qca_clock_component(NOBJ_MACHINE *m, NOBJ_QCS *s, CLK_COMP comp)
   push_machine_16(m, value);
       
 }
+#endif
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Use the MCP7940 as an RTC
+//
+// I2C will be set up, just access it
+//
+
+
+#if RTC_MCP7940_CLOCK
+void qca_clock_component(NOBJ_MACHINE *m, NOBJ_QCS *s, CLK_COMP comp)
+{
+  time_t now;
+  struct tm *tm;
+  int value = 0;
+   
+  now = time(0);
+  tm = localtime (&now);
+
+  if( tm != NULL )
+    {
+	
+      switch(comp)
+	{
+	case CC_SECOND:
+	  value = rtc_get_seconds();
+	  break;
+
+	case CC_MINUTE:
+	  value = rtc_get_minutes();
+	  break;
+
+	case CC_HOUR:
+	  value = rtc_get_hours();
+	  break;
+
+	case CC_DAY:
+	  value = tm->tm_mday;
+	  break;
+
+	case CC_MONTH:
+	  value = tm->tm_mon;
+	  break;
+
+	case CC_YEAR:
+	  value = tm->tm_year;
+	  break;
+
+	default:
+	  value = 0;
+	  break;
+	}
+    }
+  else
+    {
+      // Return zero
+      value = 0;
+    }
+
+  push_machine_16(m, value);
+      
+}
+#endif
+
 
 void qca_clock_second(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
