@@ -1232,9 +1232,36 @@ void menu_oled_test(void)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+
+#define TO_BCD(XX) ( ((XX / 10)*16) + ((XX % 10)))
+
+void cli_set_hours(void)
+{
+  rtc_set_hours(TO_BCD(parameter));
+}
+
+void cli_set_minutes(void)
+{
+  rtc_set_minutes(TO_BCD(parameter));
+}
+
+void cli_set_seconds(void)
+{
+  rtc_set_seconds(TO_BCD(parameter));
+}
+
 void menu_rtc_varset(void)
 {
   rtc_set_variables = 1;
+}
+
+void menu_rtc_get_time(void)
+{
+  dp_cls();
+
+  dp_printxy_str(0, 0, rtc_get_time());
+
+  kb_get();
 }
 
 void menu_rtc_regset(void)
@@ -2435,6 +2462,7 @@ MENU menu_top =
     {'M', "forMat",     menu_goto_format},
     {'P', "Prog",       menu_goto_prog},
     {'C', "Calc",       menu_goto_calc},
+    {'R', "Rtc",        menu_rtc},
     {'&', "",           menu_null},
    }
   };
@@ -2528,7 +2556,7 @@ MENU menu_rtc =
    init_menu_rtc,   
    {
     {KEY_ON, "",           menu_back},
-    {'V', "VarSet",     menu_rtc_varset},
+    {'G', "Get",        menu_rtc_get_time},
     {'R', "RegSet",     menu_rtc_regset},
     {'&', "",           menu_null},
    }
