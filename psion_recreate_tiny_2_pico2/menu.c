@@ -2539,9 +2539,9 @@ void menu_bubble(void)
 
 	      cx = ax;
 	      cy = by;
-	      //dd_plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
+	      dd_plot_point(ax, by, (i*j)>(mi*mj)*h?0xffffff:0);
               //              printf("\ni:%d j:%j", i, j);
-              dd_plot_point(ax, by, ((i)<<16)+((j*20)<<8)+0x80);
+              //              dd_plot_point(ax, by, ((i)<<16)+((j*20)<<8)+0x80);
 	    }
 	}
       
