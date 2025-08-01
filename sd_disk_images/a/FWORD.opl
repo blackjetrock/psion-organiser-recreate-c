@@ -1,0 +1,217 @@
+FWORD:
+REM CM/XP procedure
+GLOBAL WORD$(5),ATPT%,GO%,GO$(20,16),INP$(6),SCORE$(20,5),MNU%,TRY%(20),IMG%(20),GK%,DONE%,MAX%,LTR%,ICO$(1),LEFT%,EASY%,LIST%,LIST$(1)
+LOCAL L1$(10),L2%,L3%
+
+IGAME:
+LIST%=110
+EASY%=5
+CLS
+PRINT " Find Word Game Opening WordList"
+PAUSE 20
+IF EXIST("B:WrdLst32")
+ L1$="B:WrdLst32"
+ GOTO Lab1::
+ENDIF
+IF EXIST("C:WrdLst32")
+ L1$="C:WrdLst32"
+ GOTO Lab1::
+ENDIF
+IF EXIST("B:WrdLst64")
+ L1$="B:WrdLst64"
+ GOTO Lab1::
+ENDIF
+IF EXIST("C:WrdLst64")
+ L1$="C:WrdLst64"
+ GOTO Lab1::
+ENDIF
+IF EXIST("B:WdLst128")
+ L1$="B:WdLst128"
+ GOTO Lab1::
+ENDIF
+IF EXIST("C:WdLst128")
+ L1$="C:WdLst128"
+ GOTO Lab1::
+ENDIF
+L1$=""
+Lab1::
+IF L1$<>""
+ OPEN L1$,A,TXT$
+ L2%=1
+ LIST%=121
+ GOTO Lab2::
+ENDIF
+AT 1,1
+PRINT "No Word List PAKusing DEMO mode!"
+PAUSE -20
+L2%=0
+Lab2::
+PAUSE -20
+Lab10::
+GO%=1
+DO
+ SCORE$(GO%)=""
+ GO$(GO%)=""
+ TRY%(GO%)=0
+ IMG%(GO%)=0
+ GO%=GO%+1
+UNTIL GO%=20
+DONE%=0
+GO%=0
+ATPT%=1
+LTR%=1
+MAX%=EASY%+1
+INP$=""
+LEFT%=0
+IF L2%=0
+ WORD$="abcde"
+ GOTO Lab3::
+ENDIF
+USE A
+POSITION INT(RND*4000)
+WORD$=LEFT$(A.TXT$,5)
+IF WORD$=""
+ WORD$="abcde"
+ENDIF
+Lab3::
+DO
+ KSTAT 2
+ SCN:
+ GK%=GETKEY%:
+ IF GK%=1
+  GOTO Lab4::
+ ELSEIF GK%=2
+ ELSEIF GK%=3
+  GO%=GO%-1
+  IF GO%<1
+   GO%=1
+  ENDIF
+ ELSEIF GK%=4
+  GO%=GO%+1
+  IF GO%>=ATPT%
+   GO%=ATPT%-1
+  ENDIF
+ ELSEIF GK%=5
+  LEFT%=1
+  GOTO Lab5::
+ ELSEIF GK%=6
+  GK%=2
+ ELSEIF GK%=7
+  GK%=2
+ ELSEIF GK%=8
+  GK%=2
+ ELSEIF GK%=32
+  GK%=2
+ ELSEIF GK%=13
+  IF LEN(INP$)=5
+   IF ATPT%=1
+    ICO$=CHR$(5)
+    GOTO Lab6::
+   ENDIF
+   ICO$=CHR$(6)
+Lab6::
+   IF LIST%=121
+    IF L2%=1
+     AT 12,2
+     PRINT "Wait "
+     USE A
+     FIRST
+     L3%=FIND(INP$)
+     IF L3%=0
+      AT 12,2
+      PRINT "Again"
+      GET
+      GOTO Lab5::
+     ENDIF
+    ENDIF
+   ENDIF
+   SCORE$(ATPT%)=CHECK$:
+   GO$(ATPT%)=NUM$(ATPT%,1)+"= "+INP$+CHR$(TRY%(ATPT%))+SCORE$(ATPT%)+" "+ICO$
+   INP$=""
+   LTR%=0
+   ATPT%=ATPT%+1
+   IF ATPT%>MAX%
+    ATPT%=MAX%
+   ENDIF
+   GO%=ATPT%-1
+   IF SCORE$(GO%)="22222"
+    GO$(GO%)=LEFT$(GO$(GO%),9)+"Right"+" "+CHR$(4)
+    DONE%=1
+    GOTO Lab7::
+   ENDIF
+  ENDIF
+ ELSE
+  GOTO Lab5::
+ ENDIF
+Lab9::
+UNTIL GK%=0 OR GK%=1
+GET
+STOP
+Lab5::
+IF LTR%>5
+ GOTO Lab8::
+ENDIF
+IF LEFT%=0
+ INP$=INP$+CHR$(GK%)
+ LTR%=LTR%+1
+ IF LEN(INP$)>5
+  INP$=LEFT$(INP$,5)
+  LTR%=5
+ ENDIF
+ GOTO Lab8::
+ENDIF
+LTR%=LTR%-1
+IF LTR%<0
+ LTR%=0
+ENDIF
+INP$=LEFT$(INP$,LTR%)
+Lab8::
+IF LTR%>5
+ LTR%=5
+ENDIF
+LEFT%=0
+GOTO Lab9::
+Lab7::
+SCN:
+GOTO Lab9::
+STOP
+Lab4::
+DO
+ KSTAT 2
+ AT 1,1
+ PRINT "MENU:Quit Easy="+NUM$(EASY%,-1);
+ AT 1,2
+ PRINT " New Play List="+CHR$(LIST%);
+ MNU%=GETKEY%:
+ IF MNU%=113
+  IF L2%=1
+   CLOSE
+  ENDIF
+  STOP
+ ELSEIF MNU%=111
+  OFF
+ ELSEIF MNU%=112
+  IF DONE%=1
+   GOTO Lab10::
+  ELSE
+   GOTO Lab3::
+  ENDIF
+ ELSEIF MNU%=110
+  GOTO Lab10::
+ ELSEIF MNU%=101
+  DO
+   AT 1,1
+   PRINT "Easy: Enter 5or9Maximum Tries ";
+   INPUT EASY%
+  UNTIL EASY%=5 OR EASY%=9
+  MAX%=EASY%+1
+ ELSEIF MNU%=108
+  DO
+   AT 1,1
+   PRINT "List: Check WordAgainst List ";
+   INPUT LIST$
+   LIST%=ASC(LIST$)
+  UNTIL LIST%=110 OR LIST%=121
+ ENDIF
+UNTIL MNU%=113
+STOP

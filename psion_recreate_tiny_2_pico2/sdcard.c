@@ -27,6 +27,7 @@ static volatile uint card_det_int_gpio;
         .sck_gpio = 18,    // GPIO number (not Pico pin number)
         .mosi_gpio = 19,
         .miso_gpio = 16,
+
         /* GPIO reset drive strength is 4 mA.
          * When set_drive_strength is true,
          * the drive strength is set to 2 mA unless otherwise specified. */
@@ -58,7 +59,11 @@ static volatile uint card_det_int_gpio;
 static sd_spi_if_t spi_ifs[] = {
     {   // spi_ifs[0]
         .spi = &spis[0],  // Pointer to the SPI driving this card
+#if PICOCALC
+        .ss_gpio = 17,     // The SPI slave select GPIO for this SD card
+#else
         .ss_gpio = 7,     // The SPI slave select GPIO for this SD card
+#endif
         .set_drive_strength = true,
         .ss_gpio_drive_strength = GPIO_DRIVE_STRENGTH_2MA
     },
@@ -83,7 +88,11 @@ static sd_spi_if_t spi_ifs[] = {
         .spi_if_p = &spi_ifs[0],  // Pointer to the SPI interface driving this card
         // SD Card detect:
         .use_card_detect = true,
-        .card_detect_gpio = 9,  
+#if PICOCALC
+        .card_detect_gpio = 22,
+#else
+        .card_detect_gpio = 9,
+#endif        
         .card_detected_true = 0, // What the GPIO read returns when a card is
                                  // present.
         .card_detect_use_pull = true,

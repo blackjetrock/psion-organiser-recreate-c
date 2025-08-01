@@ -1,0 +1,39 @@
+mired:
+GLOBAL M
+LOCAL T,F
+PRINT "Colour temperature"
+PRINT "of filmstock.."
+F=MENUN(2,"TUNGSTEN,DAYLIGHT,OTHER")
+IF F=1
+F=3200
+ELSEIF F=2
+F=5500
+ELSEIF F=3
+CLS
+PRINT "Colour temperature"
+PRINT "of film/filter"
+INPUT F
+ENDIF
+CLS
+PRINT "Colour temperature"
+PRINT "of light?"
+INPUT T
+CLS
+M=(1000000/F)-(1000000/T)
+M=INT(M)
+IF M>5
+ORANGE:
+ELSEIF M<-5
+BLUE:
+ELSEIF (M<=5)AND(M>=-5)
+PRINT"NO FILTER"
+ENDIF
+GET
+CLS
+PRINT "Choose..."
+M=MENUN(2,"MIRED,FILM,MENU")
+IF M=1
+MIRED:
+ELSEIF M=2
+FILM:
+ENDIF

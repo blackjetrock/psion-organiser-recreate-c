@@ -1,0 +1,74 @@
+use:
+REM Handles the effects of using an item
+REM Applying items to the player
+REM The function will have an item name passed to it and will take care of the effects
+REM Will use INVTOOL to check for equipped status
+
+LOCAL tmp$(14)
+REM LOCAL m%
+GLOBAL No$(3)
+GLOBAL Lst$(14)
+GLOBAL Amnt%
+GLOBAL cons%
+GLOBAL equip%
+GLOBAL food%
+GLOBAL tool%
+GLOBAL worn%
+GLOBAL succ$(40)
+GLOBAL fail$(40)
+GLOBAL damage%
+GLOBAL def%
+GLOBAL locdesc$(200)
+
+TOP::
+ONERR PROBLEM::
+mode% = 1
+
+WHILE mode% <> 4
+ tmp$=FromLst$:("items","Backpack","Sword")
+ CLS
+
+ REM AT 1,4
+ REM PRINT "Rtn: ";tmp$+CHR$(26)
+ 
+
+REM PRINT "Mode: " ;mode%
+
+ IF mode% = 1
+  PRINT "Do Use ";tmp$
+  GET
+  
+ ELSEIF mode% = 2
+  PRINT "Do Drop ";tmp$
+  GET
+  
+ ELSEIF mode% = 3
+  CLS
+  disptext:(idesc$,4) 
+  CLS
+
+ ELSEIF mode%=4
+  
+ ELSE
+  PRINT "Error 1 in INV.OPL"
+  
+ ENDIF
+
+REM m% = GET
+ENDWH
+
+GOTO EXIT::
+
+PROBLEM::
+ONERR OFF
+CLS
+IF ERR=194 :PRINT " The Battery is Low    Switching off     change the Battery" :PAUSE -50 :OFF :STOP
+ ELSEIF ERR=252 :PRINT tmp$;" invalid" :AT 1,2 :PRINT "careful with Numbers"
+ELSE PRINT ERR :PRINT ERR$(ERR)
+ENDIF
+PRINT "[SPACE] continues" :GET 
+GOTO TOP::
+STOP
+
+REM 252 STR TO NUM ERR
+EXIT::

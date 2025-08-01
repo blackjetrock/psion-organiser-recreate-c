@@ -1,0 +1,30 @@
+scan:
+LOCAL key%,length%
+loop::
+CLS
+PRINT "Scan barcode:"
+ESCAPE OFF
+A.barcode$ = BAR$:(31,-1)
+IF A.barcode$ = ""
+  key% = KEY
+  IF key% < 32
+    ESCAPE ON
+    RETURN
+  ENDIF
+  CLS
+  PRINT "Enter Product No"
+  INPUT A.barcode$
+  GOTO keyin::
+ENDIF
+length% = LEN(A.barcode$)
+A.barcode$ = RIGHT$(A.barcode$,length%-1)
+PRINT "Product No:"
+PRINT A.barcode$
+GET
+keyin::
+KSTAT 3
+PRINT "Enter Quantity:"
+INPUT A.qty$
+APPEND
+KSTAT 1
+GOTO loop::

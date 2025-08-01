@@ -1,0 +1,6 @@
+GRAPH1:
+
+gcls
+
+gline 0,0,10,0
+gline 10, 0, 10, 10

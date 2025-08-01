@@ -1,0 +1,207 @@
+fromlst$:(FName$,Cat$,Df$)
+REM Df$ is to set the cursor on that item in the list if it exists
+LOCAL FN$(14),fo%,mx%,l%,g%,v%,w%,p%,m$(6)
+LOCAL dir% REM Direction of the menu
+           REM -1 is up, +1 is down
+
+ONERR PROBLEM::
+
+FN$=":"+FName$ REM formats the text to be used in OPEN to use the correct memory slot
+
+IF EXIST("A"+FN$)
+ FN$="A"+FN$
+ELSE
+ GOTO Other::
+ENDIF
+
+mode% = 1 REM init state
+
+OPEN "A:items",D,No$,Lst$,Amnt%,locdesc$,eq%,caneq%,statv%,armour%,weap%,food%
+fo%=1
+mx%=count REM count returns the number of records in the current file.
+w% = 1
+dir% = 1 REM this will cause the menu filter to start in the right direction of travel(ascending from the lowest position)
+
+
+PRINT CHR$(14)
+AT 1,1
+PRINT Cat$
+REM w% current item POS
+REM v% next item POS
+REM p% previous item POS
+REM mx% max. POS
+
+
+WHILE g%<>1 AND g%<>13 REM Until ON/CLEAR OR EXE
+
+POSITION w%
+
+REM The next 2 IF statements find the next valid item to focus on in the menu
+
+IF dir% < 0
+ IF w% < 1
+  w% = mx%
+ ENDIF
+POSITION w%
+ WHILE D.Amnt% < 1
+  IF w% < 1
+   w% = mx%
+  ENDIF
+   w% = w% - 1
+   POSITION w%
+ ENDWH
+ENDIF
+
+IF w% > mx%
+ w% = 1
+ENDIF
+
+IF dir% > 0
+ IF w% > mx%
+  w% = 1
+ ENDIF
+POSITION w%
+ WHILE D.Amnt% < 1
+  IF w% > mx%
+   w% = 1
+  ENDIF
+   w% = w% + 1
+   POSITION w%
+ ENDWH
+ENDIF
+
+REM This finds the next valid item above the item in focus
+  p% = w%-1
+  IF p% < 1
+        p% = mx%
+      ENDIF
+
+  POSITION p%
+    WHILE D.Amnt% < 1
+    p% = p% - 1
+      IF p% < 1
+        p% = mx%
+      ENDIF
+    POSITION p%
+    ENDWH
+
+REM This finds the next valid item below he item in focus
+  v% = w%+1
+IF v% > mx%
+        v% = 1
+ENDIF
+
+  POSITION v%
+  WHILE D.Amnt% < 1
+    v% = v% + 1
+      IF v% > mx%
+        v% = 1
+      ENDIF
+  POSITION v%
+  ENDWH
+
+  dir% = 0 REM Init dir% ready for use 
+
+  POSITION v% REM Next focus
+  AT 1,4
+  PRINT CHR$(23)+"      "+LEFT$(D.Lst$,14)
+
+
+  POSITION w% REM the item at POS w%
+  AT 1,3
+  IF mode% = 1
+    PRINT CHR$(22) + "Use > "+ LEFT$(D.Lst$,14)
+  ELSEIF mode% = 2
+    PRINT CHR$(22) + "Drop> "+ LEFT$(D.Lst$,14)
+  ELSE
+    PRINT CHR$(22) + "Info> "+ LEFT$(D.Lst$,14)
+  ENDIF
+  AT 1,2
+  PRINT CHR$(26) + "Holding " ; D.Amnt%
+
+  AT 10,1
+  PRINT D.caneq%
+  AT 12,1
+  PRINT D.statv%
+  AT 14,1
+  PRINT D.armour%
+  AT 16,1
+  PRINT D.weap%
+  
+g%=GET
+
+
+  IF g%=3
+    w%=w%-1
+    dir% = -1
+  ENDIF REM UP
+
+  IF g%=4
+    w%=w%+1
+    dir% = 1
+  ENDIF REM DOWN
+
+
+  IF g%=2 REM MODE button
+    mode% = mode% + 1
+      IF mode%> 3
+        mode% = 1
+      ENDIF
+  ENDIF
+REM MODE changes the action on the item
+
+idesc$ = D.locdesc$
+equi%=D.eq%
+ENDWH
+
+  IF g%=1 REM Exit
+    mode%=4
+    CLOSE
+    GOTO CLS::
+  ELSEIF g%=13 REM Confirm
+    FN$=LEFT$(D.Lst$,(14)) REM EXE returns current record Lst$ string
+    CLOSE
+  ENDIF
+
+
+RETURN FN$
+GOTO CLS::
+
+STOP
+
+Other::
+CLS
+PRINT "Looks like"
+PRINT fname$
+PRINT "doesn't exist!"
+GET
+
+
+IF mx%=0
+ AP:(1,1,"**Database Missing**")
+ELSE
+ PRINT CHR$(15)
+ENDIF
+
+AP:(1,3,M$+"value then EXE")
+AP:(1,4,Cat$+": ")
+FN$=LEFT$(Df$,14)
+POKEW $73,$0100 :POKEB $20B0,4 :POKEW $73,$0001
+TRAP EDIT FN$
+ IF fo%=1 : CLOSE :ENDIF
+RETURN FN$
+
+PROBLEM::
+ONERR OFF
+CLS
+IF ERR=194 :PRINT " The Battery is Low    Switching off     change the Battery" :PAUSE -50 :OFF :STOP
+ REM File in use 199
+ ELSEIF ERR=199 :CLOSE :PRINT "Found and corrected an error.."
+ ELSEIF ERR=201 OR ERR=207 or ERR=220 :PRINT "There is an error in"+Cat$+" Database"
+ ELSEIF ERR=209 :PRINT "There is a database conflict; Logical D."
+ ELSE PRINT ERR :PRINT ERR$(ERR)
+ENDIF
+PRINT "[SPACE] continues" :GET 
+RETURN ""
+
+CLS::

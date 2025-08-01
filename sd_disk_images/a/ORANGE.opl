@@ -1,0 +1,30 @@
+orange:
+LOCAL A$(4),B$(4),T
+T=M
+IF M>136
+B$="85B+"
+M=M-131
+ENDIF
+IF (M>=5)AND(M<=15)
+A$="81"
+ELSEIF(M>15)AND(M<=25)
+A$="81A"
+ELSEIF(M>25)AND(M<=30)
+A$="81B"
+ELSEIF M>30 AND M<=40
+A$="81C"
+ELSEIF(M>40)AND(M<=50)
+A$="81D"
+ELSEIF(M>50)AND(M<=70)
+A$="81EF"
+ELSEIF(M>70)AND(M<=100)
+A$="85C"
+ELSEIF(M>100)AND(M<=125)
+A$="85"
+ELSEIF(M>125)
+A$="85B" 
+ENDIF
+PRINT "Colour correction"
+PRINT "ORANGE",T;" mired"
+PRINT B$;A$,"Filter"
+

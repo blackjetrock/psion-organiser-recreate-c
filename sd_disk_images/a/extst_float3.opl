@@ -1,0 +1,247 @@
+add:
+
+local A%, B%, C%, E, PASS%, PASS2%
+rem local s$(10), t$(5, 12)
+rem local AR%(11), F(4)
+local ans
+
+PASS% = 1
+
+B% = 12345
+print b%
+
+IF B% <> 12345
+PASS% = 0
+print "B% <> 12345 failed"
+ENDIF
+
+C% = 2345
+print c%
+
+IF C% <> 2345
+PASS% = 0
+print "C% <> 2345 failed"
+ENDIF
+
+A% = 100+156
+print a%
+
+IF A% <> 256
+PASS% = 0
+print "A% <> 256 failed"
+ENDIF
+
+E = 123.4
+print e
+
+IF E <> 123.4
+PASS% = 0
+print "E <> 123.4 failed"	
+ENDIF
+
+E = -123.4
+print e
+
+IF E <> -123.4
+PASS% = 0
+print "E <> -123.4 failed"	
+ENDIF
+
+E = 123.4E12
+print e
+
+IF E <> 123.4E12
+PASS% = 0
+print "E <> 123.4E12 failed"	
+ENDIF
+
+E = 123.4E-5
+print e
+
+IF E <> 123.4E-5
+PASS% = 0
+print "E <> 123.4E-5 failed"	
+ENDIF
+
+E = E + 2.3
+print e
+
+IF E <> 2.301234
+PASS% = 0
+print "E <> 2.3 failed"	
+ENDIF
+
+E = 1111.0
+
+IF E <> 1111.0
+PASS% = 0
+print "E <> 1111.0 failed"	
+ENDIF
+
+print E, E+23.0,  E+19.0
+print E, E+199.0, E+999.0, E+ 9999.0
+print e, 5E99+5E99
+
+print 2000.0 + 2000.0
+print 123.0 - 23.0
+print 682.3 - 319.8
+
+A% = -345
+print a%
+
+IF A% <> -345 
+PASS% = 0
+print "A% <> -345 failed"
+print a%
+ENDIF
+
+IF 10 > 2 AND 3 < 5
+else
+PASS% = 0
+print "Test A failed"
+ENDIF
+
+IF NOT(3) = -4
+ELSE
+pass% = 0
+print "not(3) = -4 failed"
+ENDIF
+
+IF (3 AND 5) = 1
+ELSE
+pass% = 0
+print "(3 AND 5) = 1 failed"
+ENDIF
+
+IF (3 OR 5) = 7
+ELSE
+pass% = 0
+print "(3 OR 5) = 7 failed"
+ENDIF
+
+if NOT(3.0) = 0
+else
+pass%=0
+print "NOT(3.0) = 0 failed"
+endif
+
+if  NOT(3.0)
+pass%=0
+print "NOT(3.0) failed"
+else
+endif
+
+if  (3.0 AND 5.0)
+else
+pass%=0
+print "(3.0 AND 5.0) failed res:";(3.0 and 5.0)
+endif
+
+if  (3.0 AND 0.0)
+pass%=0
+print "(3.0 AND 0.0) failed res:";(3.0 and 0.0)
+else
+endif
+
+if  (0.0 AND 5.0)
+pass%=0
+print "(0.0 AND 5.0) failed res:";(0.0 and 5.0)
+else
+endif
+
+if  (0.0 AND 0.0)
+pass%=0
+print "(0.0 AND 0.0) failed res:";(0.0 and 0.0)
+else
+endif
+
+print sin(23.6)
+print cos(134.98)
+print tan(87.988)
+
+print asin(sin(0.5))
+print acos(cos(0.6))
+print atan(tan(0.7))
+
+PASS2% = 0
+
+E = ln(1.2)
+print "A(1.823216E-1):";e,(e=1.823216E-1) : PASS2%=PASS2%+(e=1.823216E-1)
+
+E = log(1.2)
+print "A(7.918125E-2):";e,(e=7.918125E-2) : PASS2%=PASS2%+(e=7.918125E-2)
+
+E = 1.2 + 3.4
+print "A(4.6):";e,(e=4.6) : PASS2%=PASS2%+(e=4.6)
+
+E = abs(1.2)
+print "A(1.2):";e,(e=1.2) : PASS2%=PASS2%+(e=1.2)
+
+E = abs(-1.2)
+print "A(1.2):";e,(e=1.2) : PASS2%=PASS2%+(e=1.2)
+
+E = -1.2 + 3.4
+print "B(2.2):";e,(e=2.2) : PASS2%=PASS2%+(e=2.2)
+
+E = 1.2 - 3.4
+print "C(-2.2):";e,(e=-2.2) : PASS2%=PASS2%+(e=-2.2)
+
+E = -1.2 - 3.4
+print "D(-4.6):";e,(e=-4.6) : PASS2%=PASS2%+(e=-4.6)
+
+E = 1.2 + -3.4
+print "E(-2.2):";e,(e=-2.2) : PASS2%=PASS2%+(e=-2.2)
+
+E = 1.2 - -3.4
+print "F(4.6):";e,(e=4.6) : PASS2%=PASS2%+(e=4.6)
+
+E = 3.4 + 1.2
+print "G(4.6):";e,(e=4.6) : PASS2%=PASS2%+(e=4.6)
+
+E = -3.4 + 1.2
+print "H(-2.2):";e,(e=-2.2) : PASS2%=PASS2%+(e=-2.2)
+
+E = 3.4 - 1.2
+print "I(2.2):";e,(e=2.2) : PASS2%=PASS2%+(e=2.2)
+
+E = -3.4 - 1.2
+print "J(-4.6):";e,(e=-4.6) : PASS2%=PASS2%+(e=-4.6)
+
+E = 3.4 + -1.2
+print "K(2.2):";e,(e=2.2) : PASS2%=PASS2%+(e=2.2)
+
+E = 3.4 - -1.2
+print "L(4.6):";e,(e=4.6) : PASS2%=PASS2%+(e=4.6)
+
+E = exp(17.89)
+ANS = 5.882044E7
+print "M(";ans;"):";e,(e=ans) : PASS2%=PASS2%+(e=ans)
+
+E = sqr(2.0)
+ANS = 1.41421400000E+0
+print "N1(";ans;"):";e,(e=ans) : PASS2%=PASS2%+(e=ans)
+
+E = sqr(16.0)
+ANS = 4
+print "N2(";ans;"):";e,(e=ans) : PASS2%=PASS2%+(e=ans)
+
+E = sqr(17.89)
+ANS = 4.229657E0
+print "N3(";ans;"):";e,(e=ans) : PASS2%=PASS2%+(e=ans)
+
+if pass2% <> -20
+pass%=0
+endif
+
+rem print pass2%
+
+
+rem --------------------------------------------------------------------------------
+
+IF PASS%
+print "PASS"
+else
+print "FAIL"
+ENDIF
+
+

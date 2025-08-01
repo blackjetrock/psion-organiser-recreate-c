@@ -1,0 +1,7 @@
+VARNAME:
+
+LOCAL X%, GETXX
+
+X%=GET
+X%=GETXX
+

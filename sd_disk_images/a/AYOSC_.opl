@@ -1,0 +1,41 @@
+AYOSC%:
+LOCAL A%,B%,C%,D%,E%,F%,S%
+
+S%=0
+A%=1+(6 AND M%=2)
+IF A%(A%)=0 AND A%(A%+1)=0
+ IF A%(A%+2)=0 AND A%(A%+3)=0
+  IF A%(A%+4)=0 AND A%(A%+5)=0
+   RETURN 48-S%(1)-S%(2)
+  ENDIF
+ ENDIF
+ENDIF
+B%=1
+DO
+ C%=A%(A%)
+ D%=1
+ WHILE C%>=11
+  C%=C%-11
+  D%=D%+1
+ ENDWH
+ IF C%>=B% AND C%<=B%+5
+  C%=A%-C%
+  C%=C%+(12 AND C%<1)
+  F%=0
+  E%=0
+  IF A%(C%)+D%>=2 AND A%(C%)+D%<=3
+   DO
+    E%=E%+A%(C%)+D%
+    C%=C%+1-(12 AND C%=12)
+    F%=F%+1
+   UNTIL A%(C%)+D%<2 OR A%(C%)+D%>3 OR C%=7 OR C%=1
+  ENDIF
+  IF F%<>6
+   S%=MAX(S%,E%)
+  ENDIF
+ ENDIF
+B%=B%+1
+A%=A%+1
+UNTIL B%=6
+
+RETURN S%

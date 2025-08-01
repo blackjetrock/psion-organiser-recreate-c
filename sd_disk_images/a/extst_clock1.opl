@@ -1,0 +1,27 @@
+clock1:
+
+local p%
+
+p% = clock(0)
+print "P%",p%
+p% = clock(1)
+print "P%",p%
+
+if p% <> 0
+print "P% is not 0"
+print "FAIL"
+return
+endif
+
+
+p% = clock(0)
+print "P%",p%
+
+if p% <> 1
+print "P% is not 1"
+print "FAIL"
+return
+endif
+
+print "PASS"
+

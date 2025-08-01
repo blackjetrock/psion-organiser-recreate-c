@@ -1,0 +1,8 @@
+MOD%:
+LOCAL NUM%, DIV%, m%
+
+num% = 10
+div% = 3
+m% = mod%(NUM%, DIV%)
+
+m% = NUM%-((NUM%/DIV%)*DIV%)

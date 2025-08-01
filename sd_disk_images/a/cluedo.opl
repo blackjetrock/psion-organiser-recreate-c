@@ -1,0 +1,53 @@
+cluedo:
+local k%,r%,file$(9,4),m%
+
+Rem filenames
+file$(1)="Furn"
+file$(2)="Time"
+file$(3)="Char"
+file$(4)="Toy"
+
+cls : print"For use with  By";
+print "Cluedo junior DN" 
+
+clear::
+rem clear any flags
+r%=1
+do
+open "c:"+file$(r%),A,ITEM$
+use a
+first 
+ do
+ if right$(a.item$,1)="X" : A.ITEM$=LEFT$(A.ITEM$,(LEN(A.ITEM$)-1)) : UPDATE
+FIRST : ENDIF : next
+ until eof
+CLOSE
+r%=r%+1
+until r%>4
+
+menu::
+cls
+m%=menu("Furn,Time,Char,Toy,Quit,Clear")
+if m%=5 : stop 
+elseif m%=6 
+print"clearing.." : GOTO CLEAR:: 
+endif 
+
+open "c:"+file$(m%),A,ITEM$
+use a 
+cls : at 6,1 : print file$(m%)
+print"Use ";chr$(127); " ";chr$(126);" DEL EXE"
+do
+K%=GET
+IF K%=5: BACK
+ELSEIF K%=6: NEXT
+elseif k%=8:
+ if right$(a.item$,1)="X" : A.ITEM$=LEFT$(A.ITEM$,(LEN(A.ITEM$)-1))
+ ELSE a.item$=a.item$+"X"
+ ENDIF :UPDATE : print chr$(14); a.item$
+endif
+if eof : first :endif
+print chr$(14); a.item$
+until k%=13
+close 
+goto menu::

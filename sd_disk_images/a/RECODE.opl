@@ -1,0 +1,8 @@
+recode:
+
+  REM Combine the bits to form the ASCII value
+  tAscii% = bit0% + (bit1% * 2) + (bit2% * 4) + (bit3% * 8) + (bit4% * 16) + (bit5% * 32) + (bit6% * 64)
+  tAscii% = tAscii% + 32  REM Adjust ASCII value back to original range
+
+  REM Convert the ASCII value to a character
+  tChar$ = CHR$(tAscii%)

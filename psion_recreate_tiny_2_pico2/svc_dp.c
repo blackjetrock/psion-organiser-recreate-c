@@ -13,6 +13,8 @@
 // Display string on line and scroll so it is all viewable.
 // return when key is pressed
 
+uint64_t scroll_after_this_time = 0;
+ 
 KEYCODE dp_view(char *str, int line)
 {
   int scroll_dir = 1;
@@ -22,16 +24,23 @@ KEYCODE dp_view(char *str, int line)
   char w_str[DP_MAX_STR+3];
   int offset2 = 0;
   
+#if DB_DP_VIEW
+  printf("\n%s:Entry", __FUNCTION__);
+#endif
+  
   strcpy(w_str, str);
   strcat(w_str, "  ");
   
-  i_printxy_str(0, line, w_str);
+  //  i_printxy_str(0, line, w_str);
 
   int swlen = strlen(w_str);
   int slen = strlen(str);
-  
-  //sleep_ms(500);
-  
+  uint64_t now = time_us_64 ();
+    
+#if DB_DP_VIEW
+  printf("\n%s:Loop entry", __FUNCTION__);
+#endif
+
   while(!done)
     {
       menu_loop_tasks();
@@ -43,36 +52,59 @@ KEYCODE dp_view(char *str, int line)
 	{
 	  scroll_dir = 0;
 	}
-      
-      // Display DP_LEN_CHARS characters from the string
-      for(int i=0; i<DP_NUM_CHARS; i++)
-	{
-	  //printf("\ni:%d off:%d scrldir:%d", i, offset, scroll_dir);
-	  
-	  if( (i+offset) >= swlen )
-	    {
-	      if( swlen > DP_NUM_CHARS )
-		{
-		  ch = w_str[(offset2++) % swlen];
-		}
-	      else
-		{
-		  ch = ' ';
-		}
-	    }
-	  else
-	    {
-	      ch = w_str[(i+offset) % swlen];
-	    }
-	  
-	  i_printxy(i, line, ch);
-	}
+
+      now = time_us_64 ();
+ 
+      if( (now > scroll_after_this_time) )
+        {
+          // Scroll every 200ms
+          scroll_after_this_time += 200000;
+          
+          // Display DP_LEN_CHARS characters from the string
+          for(int i=0; i<DP_NUM_CHARS; i++)
+            {
+#if DB_DP_VIEW
+              //printf("\n%s:i:%d off:%d scrldir:%d", __FUNCTION__, i, offset, scroll_dir);
+#endif
+              if( (i+offset) >= swlen )
+                {
+                  if( swlen > DP_NUM_CHARS )
+                    {
+                      ch = w_str[(offset2++) % swlen];
+                    }
+                  else
+                    {
+                      ch = ' ';
+                    }
+                }
+              else
+                {
+                  ch = w_str[(i+offset) % swlen];
+                }
+              
+              i_printxy(i, line, ch);
+            }
+
+          offset += scroll_dir;
+          
+          if( offset < 0 )
+            {
+              offset = swlen-1;
+            }
+          
+          if( offset >= swlen )
+            {
+              offset = 0;
+            }
+        }
       
       if( kb_test() != KEY_NONE )
 	{
 	  KEYCODE k = kb_getk();
-	  printf("\n%s:KC:%d", __FUNCTION__, k);
-	  
+
+#if DB_DP_VIEW
+	  printf("\n%s:Key:%d", __FUNCTION__, k);
+#endif
 	  switch(k)
 	    {
 	    case KEY_NONE:
@@ -113,30 +145,30 @@ KEYCODE dp_view(char *str, int line)
 	    default:
 
 	      // Re-display string in starting position
-	      i_printxy_str(0, line, w_str);
+              int len = strlen(w_str);
+              
+              for(int j=0; j<DP_NUM_CHARS; j++)
+                {
+                  if( j >= len )
+                    {
+                      i_printxy(j, line, ' ');
+                    }
+                  else
+                    {
+                      i_printxy(j, line, w_str[j]);
+                    }
+                }
+	      //i_printxy_str(0, line, w_str);
 	      return(k);
 	      break;
 	    }
 	}
-      else
-	{
-	  // Delay for the scrolling lines
-	  
-	  sleep_ms(200);	  
-	}
-      
-      offset += scroll_dir;
 
-      if( offset < 0 )
-	{
-	  offset = swlen-1;
-	}
-      
-      if( offset >= swlen )
-	{
-	  offset = 0;
-	}
     }
+
+#if DB_DP_VIEW
+  printf("\n%s:Exit", __FUNCTION__);
+#endif
   
   return(KEY_NONE);  
 }
@@ -161,10 +193,12 @@ void dp_stat(int x, int y, int curs_on, int cursor_block)
 
 void dp_clr_eol(void)
 {
+  printf("\n%s: printpos_x:%d printpos_y:%d", printpos_x, printpos_y);
+  
   int save_pp_x = printpos_x;
   int save_pp_y = printpos_y;
   
-  while( save_pp_y == printpos_y )
+  for(int i=printpos_x; i<DISPLAY_NUM_CHARS-1; i++)
     {
       dp_prnt(" ");
       //i_printxy(printpos_x++, printpos_y, ' ');
@@ -201,9 +235,16 @@ void dp_clr_eos(void)
 // Clears the display
 //
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Does not disrupt printpos_x,y
+//
 
 void dp_cls(void)
 {
+  //int sx, sy;
+  //sx = printpos_x;
+  //sy = printpos_y;
+  
   for(int x=0; x<DISPLAY_NUM_CHARS; x++)
     {
       for(int y=0; y<DISPLAY_NUM_LINES; y++)
@@ -213,6 +254,11 @@ void dp_cls(void)
     }
   
   print_home();
+
+  printpos_x = 0;
+  printpos_y = 0;
+  cursor_x = 0;
+  cursor_y = 0;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -231,6 +277,13 @@ void dp_emit(int ch)
       i_printxy(printpos_x, printpos_y, ch);
       break;
     }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+void dp_newline(void)
+{
+  next_printpos_line();
 }
 
 ////////////////////////////////////////////////////////////////////////////////

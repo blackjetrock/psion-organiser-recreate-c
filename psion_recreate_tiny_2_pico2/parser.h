@@ -1,4 +1,6 @@
- #define dbprintf(fmt...) dbpf(__FUNCTION__, fmt)
+#define dbprintf(fmt...) dbpf(__FUNCTION__, fmt)
+//#define dbprintf(fmt...)
+
 void dbpf(const char *caller, char *fmt, ...);
 extern FIL *ptfp;
 

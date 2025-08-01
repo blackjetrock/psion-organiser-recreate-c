@@ -1,0 +1,54 @@
+MEM:
+
+REM CM/XP procedure
+LOCAL A$(16),K$(1),K%,I%
+
+Loop::
+CLS
+K%=VIEW(1,"Press any key (S=Stop)")
+IF K%=%S OR K%=%s OR K%=1
+ RETURN
+ENDIF
+A$=""
+K%=0
+DO
+ K%=K%+1
+ A$=A$+CHR$(INT(RND*26+65))
+ I%=1
+ DO
+  CLS
+  AT I%,1
+  PRINT MID$(A$,I%,1)
+  PAUSE 10
+  I%=I%+1
+ UNTIL I%>K%
+ CLS
+ PRINT "Repeat that:"
+ I%=1
+ DO
+  DO
+   K$=UPPER$(GET$)
+  UNTIL K$>="A" AND K$<="Z"
+  IF K$<>MID$(A$,I%,1)
+   AT 1,1
+   PRINT "Wrong:";MID$(A$,I%,1);" Score:";K%;
+   PAUSE 10
+   WHILE KEY
+   ENDWH
+   GET
+   AT 1,1
+   PRINT A$;REPT$(" ",16-K%)
+   GET
+   GOTO Loop::
+  ENDIF
+  AT I%,2
+  PRINT K$;
+  I%=I%+1
+ UNTIL I%>K%
+ AT 1,1
+ PRINT "Correct   (Key)"
+ GET
+UNTIL K%=16
+CLS
+PRINT "Nobody can beat that"
+GET

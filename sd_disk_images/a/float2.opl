@@ -1,0 +1,33 @@
+float2:
+
+local A, B, E
+local pass%, pass2%
+
+pass% = 1
+
+
+PASS2% = 0
+
+E = 3862.0 * 43.0
+print "A(16606.0):";e,(e=166066.0) : PASS2%=PASS2%+(e=166066.0)
+
+E = 234.0 * 0.0078
+print "A():";e,(e=1.8252) : PASS2%=PASS2%+(e=1.8252)
+
+
+if pass2% <> -2
+pass%=0
+endif
+
+rem print pass2%
+
+rem --------------------------------------------------------------------------------
+
+IF PASS%
+print "PASS"
+else
+print "FAIL"
+ENDIF
+
+
+

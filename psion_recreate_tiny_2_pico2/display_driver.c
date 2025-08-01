@@ -39,6 +39,12 @@ void dd_init(DD_TYPE type)
       printf("\nSSD1351 driver");
       SSD1351_begin();
       break;
+
+    case DD_PICOCALC:
+      printf("\nPicocalc driver");
+      picocalc_lcd_init();
+      picocalc_lcd_clear();
+      break;
     }
 }
 
@@ -59,6 +65,10 @@ void dd_clear(void)
       SSD1351_clear();
       SSD1351_display();
       break;
+
+    case DD_PICOCALC:
+      picocalc_lcd_clear();
+      break;
     }
 }
 
@@ -77,6 +87,14 @@ void dd_char_at_xy(int x, int y, int ch)
     case DD_SPI_SSD1351:
       SSD1351_char(x*6, y*12, ch, 12, 1, 0x00FF00);
       break;
+
+    case DD_PICOCALC:
+      picocalc_current_x = x*9;
+      picocalc_current_y = y*13;
+      //      picocalc_lcd_print_char(PICOCALC_GREEN, PICOCALC_BLACK, ch, ORIENT_NORMAL);
+      picocalc_lcd_putc(ch);
+      break;
+
     }
 }
 
@@ -95,6 +113,9 @@ void dd_set_udg_as_char(int ch)
 
     case DD_SPI_SSD1351:
       //SSD1351_char(x*6, y*12, ch, 12, 1, 0x00FF00);
+      break;
+
+    case DD_PICOCALC:
       break;
     }
 }
@@ -116,6 +137,11 @@ void dd_clear_graphics(void)
       SSD1351_clear();
       SSD1351_display();
       break;
+
+    case DD_PICOCALC:
+      picocalc_lcd_clear();
+      break;
+
     }
 }
 
@@ -138,7 +164,13 @@ void dd_plot_point(int x, int y, int mode)
     case DD_SPI_SSD1351:
       SSD1351_draw_point(x, y, mode);
       break;
+
+    case DD_PICOCALC:
+      picocalc_set_pixel(x, y, mode);
+      break;
+
     }
+
 }
 
 void dd_update(void)
@@ -174,6 +206,11 @@ int dd_get_x_size(void)
     case DD_SPI_SSD1351:
       return(128);
       break;
+
+    case DD_PICOCALC:
+      return(320);
+      break;
+
     }
   
   return(10);
@@ -194,8 +231,14 @@ int dd_get_y_size(void)
     case DD_SPI_SSD1351:
       return(32);
       break;
+
+    case DD_PICOCALC:
+      return(320);
+      break;
+
     }
 
+  
   return(10);
 }
 

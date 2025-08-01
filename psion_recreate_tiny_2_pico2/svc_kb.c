@@ -30,7 +30,7 @@
 
 // This allows other code to insert keys into the key queue. Note: Core1
 // has to be the code that does this, and i tmust run on core1. So, put a key in this
-// location and wait for it to tuirn to KEY_NONE before putting another one there.
+// location and wait for it to turn to KEY_NONE before putting another one there.
 // If multiple code needs ot do this, then add more variables and add insertion in the KB code.
 
 KEYCODE kb_external_key = KEY_NONE;
@@ -98,6 +98,18 @@ int tick = 0;
 #define MATRIX_BIT_SHIFT  5
 #define MATRIX_BIT_ON    63
 
+// This table picks a key map from the current values
+// of shift_pressed, caps_on and num_on
+// They are bit numbers in cur_modes
+
+#define CAPS_ON    1
+#define NUM_ON     2
+#define SHIFT_ON   4
+#define CAPS_OFF   0
+#define NUM_OFF    0
+#define SHIFT_OFF  0
+
+KEYCODE key_from_test = KEY_NONE;
 
 volatile MATRIX_MAP mat_scan_matrix = 0;
 
@@ -227,14 +239,6 @@ KEYMAP shifted_map[] =
    { 0,                '-' }
   };
 
-// This table picksa key map from the current values
-// of shift_pressed, caps_on and num_on
-#define CAPS_ON    1
-#define NUM_ON     2
-#define SHIFT_ON   4
-#define CAPS_OFF   0
-#define NUM_OFF    0
-#define SHIFT_OFF  0
 
 typedef struct _KEY_MAP_MAP
 {
@@ -454,8 +458,16 @@ void __not_in_flash_func(matrix_debounce)(MATRIX_MAP matrix)
       if( (key_map[i].mask) & pressed_edges )
 	{
 	  // Key pressed
-	  //printf("\nC:%c", key_map[i].c);
-
+#if DB_KB_KEYCODE_IN_BUFFER          
+          if( i < '0' )
+            {
+              printf("\nC:0x%X", key_map[i].c);
+            }
+          else
+            {
+              printf("\nC:%c", key_map[i].c);
+            }
+#endif     
 	  // Update inactivity timeout
 	  last_key_press_time = time_us_64();
 	  
@@ -638,16 +650,29 @@ KEYCODE kb_getk(void)
 #if DB_KB_GETK
   printf("\n%s::", __FUNCTION__);
 #endif
+
+#if PICOCALC
+  if( key_from_test != KEY_NONE )
+    {
+      k = key_from_test;
+      key_from_test = KEY_NONE;
+      return(k);
+    }
+#endif
   
   while(1)
     {
       // Keep the display updated
       menu_loop_tasks();
       
-      if( kb_test() != KEY_NONE )
+      if( (k = kb_test()) != KEY_NONE )
 	{
+#if !PICOCALC          
 	  k = nos_get_key();
+#else
 
+#endif
+          
 #if DB_KB_GETK
 	  printf("\n%s::exit:%d", __FUNCTION__, k);
 #endif
@@ -669,6 +694,7 @@ KEYCODE kb_getk(void)
 // Does not take key from buffer
 //
 
+#if !PICOCALC
 KEYCODE kb_test(void)
 {
 
@@ -694,6 +720,86 @@ KEYCODE kb_test(void)
   // Return key code but don't remove key from buffer
   return(nos_key_buffer[nos_key_out]);
 }
+#endif
+
+#if PICOCALC
+
+typedef struct _PICOCALC_KEYMAP
+{
+  int i2c;
+  KEYCODE key;
+} PICOCALC_KEYMAP;
+
+PICOCALC_KEYMAP pclc_keymap[] =
+  {
+    {-1,  KEY_NONE},
+    {177, KEY_ON},
+    {180, KEY_LEFT},
+    {181, KEY_UP},  
+    {182, KEY_DOWN},
+    {183, KEY_RIGHT},
+    { 10, KEY_EXE},
+    { 8, KEY_DEL},
+    {162, KEY_NONE},  // Shift key
+    {163, KEY_NONE},  // Other Shift key
+    {193, KEY_NONE},  // CAPS LOCK
+    
+  };
+
+#define NUM_PC_KEYMAP ((sizeof(pclc_keymap))/(sizeof(PICOCALC_KEYMAP)))
+
+uint64_t kb_poll_after = 0;
+
+
+KEYCODE kb_test(void)
+{
+  int k, ret_k;
+  
+  menu_loop_tasks();
+
+  // Only poll keyboard at greater than 10ms intervals
+  if( time_us_64() < kb_poll_after )
+    {
+      return(KEY_NONE);
+    }
+
+  kb_poll_after = time_us_64() + 10000;
+  
+  if( kb_external_key != KEY_NONE )
+    {
+      // Update inactivity timeout
+      last_key_press_time = time_us_64();
+
+      k = kb_external_key;
+      kb_external_key = KEY_NONE;
+      return(k);
+    }
+
+  k = read_i2c_kbd();
+  
+  if( k != -1 )
+    {
+      printf("\nK:%d %X %d", k, k, k==-79);
+    }
+
+  ret_k = k;
+  
+  // Map various keys
+  for(int i=0; i<NUM_PC_KEYMAP; i++)
+    {
+      if( pclc_keymap[i].i2c == k )
+        {
+          ret_k = pclc_keymap[i].key;
+          break;
+        }
+    }
+  
+  // kb_getk can pick this up
+  key_from_test = ret_k;
+  
+  return(ret_k);
+}
+#endif
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -800,4 +906,36 @@ int translate_to_hid(char ch)
   ret = ch;
 #endif
   return(ret);
+}
+
+//------------------------------------------------------------------------------
+
+void kb_set_caps2(int on_noff)
+{
+  cur_modes &= ~CAPS_ON;
+  
+  if( on_noff )
+    {
+      cur_modes |= CAPS_ON;
+    }
+}
+
+void kb_set_num2(int on_noff)
+{
+  cur_modes &= ~NUM_ON;
+  
+  if( on_noff )
+    {
+      cur_modes |= NUM_ON;
+    }
+}
+
+void kb_set_caps(int on_noff)
+{
+  caps_mode = on_noff;
+}
+
+void kb_set_num(int on_noff)
+{
+  num_mode = on_noff;
 }

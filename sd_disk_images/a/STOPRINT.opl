@@ -1,0 +1,34 @@
+stoprint:
+REM LSET:(2400,1,8,2,2,0,0,"",CHR$(26),"",CHR$(10),CHR$(26),"",4,0)
+CLS
+PRINT "Printing...."
+LPRINT " PSION CAMERA PROGRAM by Maxim Ford"
+LPRINT
+LPRINT A,"ASA Filmstock",D,A$,SH;" degrees"
+LPRINT F/100, "Ftcd",E,"EV units"
+LPRINT
+LPRINT "BLACK               18%          WHITE"
+LPRINT E-5,E-4,E-3,E-2,E-1,E,E+1,E+2,E+3
+LPRINT
+IF N>0
+LPRINT N, "Neutral density filter =", N/0.3,"Stops"
+LPRINT "Real Stop ";RS
+LPRINT
+LPRINT CHR$(27);"E";
+LPRINT "T Stop with ND filters ";S
+ELSEIF N=0 
+LPRINT
+LPRINT CHR$(27);"E"; 
+
+LPRINT "    ***   T Stop ",S;"   ***"
+ENDIF
+LPRINT CHR$(27);"F";
+LPRINT
+LPRINT DATIM$,
+LPRINT
+LPRINT 
+LPRINT
+LPRINT
+lprint
+CLS
+FILM:

@@ -1,0 +1,23 @@
+files2:
+
+create "A:TESTFILE", A, A, B, C
+use a
+
+A.A = 111.33
+A.B = 111.44
+A.C = 111.55
+
+append
+
+A.A = 222.33
+A.B = 222.44
+A.C = 222.55
+
+append
+
+first
+print A.A, A.b, A.c
+next
+print A.A, A.b, A.c
+
+close 

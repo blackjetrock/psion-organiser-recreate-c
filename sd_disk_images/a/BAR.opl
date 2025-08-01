@@ -1,0 +1,26 @@
+bar:
+REM *** BAR is a demonstration program that displays barcode reads. ***
+
+LOCAL barstr$(32)  : REM   Barstr$ is a 32 byte string variable that
+    : REM   will hold the returned barcode characters.
+
+
+ESCAPE OFF   : REM   Disable ON/CLEAR key.
+
+CLS
+PRINT "  Scan barcode"
+
+WHILE 1
+  barstr$ = bar$:(31,-1) : REM   31 = read EAN,UPC,CODE-39,ITF and CODABAR.
+    : REM   -1 = Wait for good read or keypress.
+
+  IF barstr$ = ""
+    KEY    : REM   A key was pressed: clear buffer.
+    STOP   : REM   Return to menu.
+  ENDIF
+
+  AT 1,2
+  PRINT barstr$   : REM   Display the barcode characters including a
+    : REM   leading 'TYPE' letter.
+  BEEP 100,500
+ENDWH

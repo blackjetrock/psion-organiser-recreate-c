@@ -1,0 +1,6 @@
+vars1:
+
+LOCAL  A%, A1%
+GLOBAL G%, G1%, GG%
+
+

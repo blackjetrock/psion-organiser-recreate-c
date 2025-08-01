@@ -1,0 +1,35 @@
+movement:
+
+REM This function handles the movement of the player on the map and the opening of the menu - arrow keys(3,4,5,6) and MODE (2)
+mstart:: REM a loop implementation to only get out of this function by pressing MODE and going to state 2
+
+key% = GET
+IF key% = 3  REM Move up
+ IF py% > 1 REM map bounds
+  py% = py% - 1
+  plMoves% = plMoves% +1
+  state% = 9
+ ENDIF
+ELSEIF key% = 4  REM Move down
+ IF py% < 4 REM map bounds
+  py% = py% + 1
+  plMoves% = plMoves% +1
+  state% = 9
+ ENDIF
+ELSEIF key% = 5  REM Move left
+ IF px% > 1 REM map bounds
+  px% = px% - 1
+  plMoves% = plMoves% +1
+  state% = 9
+ ENDIF
+ELSEIF key% = 6  REM Move right
+ IF px% < 20 REM map bounds
+  px% = px% + 1
+  plMoves% = plMoves% +1
+  state% = 9
+ ENDIF
+ELSEIF key% = 2  REM In game menu
+ state% = 2
+ELSE
+ GOTO mstart::
+ENDIF  REM End of key input handling

@@ -1,0 +1,41 @@
+MENU2:
+REM CM/XP procedure
+LOCAL L1$(1),X1%(2),L2%,L3%
+
+CLS
+PRINT " Demonstration?"
+PRINT "  press Y or N"
+L1$=GET$
+IF UPPER$(L1$)="Y"
+ ONERR Lab1::
+ LINPUT$:(0,1)
+ GOTO Lab2::
+Lab1::
+ L2%=0
+ GOTO Lab3::
+Lab2::
+ L2%=-1
+Lab3::
+ ONERR Lab4::
+ XPRINT%:(1)
+ GOTO Lab5::
+Lab4::
+ L3%=0
+ GOTO Lab6::
+Lab5::
+ L3%=-1
+Lab6::
+ ONERR OFF
+ IF L3%
+  PDEMO:
+ ELSEIF L2%
+  CLS
+  PRINT "Comms Link demo"
+  PRINT "for LZ+LZ64 only";
+  PAUSE -100
+ ELSE
+  DEMO2:
+ ENDIF
+ELSE
+ RETURN
+ENDIF

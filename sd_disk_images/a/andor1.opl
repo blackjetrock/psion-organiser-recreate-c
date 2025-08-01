@@ -1,0 +1,25 @@
+ANDOR1:
+
+LOCAL A%,B%,C%
+LOCAL X,Y,Z
+
+B% = 1
+C% = 1
+
+A% = B% AND C%
+PRINT A%
+
+A% = B% OR C%
+PRINT A%
+
+Y = 1.2
+Z = 3.9
+
+X = Y AND Z
+PRINT X
+
+X = Y OR Z
+PRINT X
+
+GET
+
