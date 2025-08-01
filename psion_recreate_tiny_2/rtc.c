@@ -150,6 +150,94 @@ void set_out_bit()
 }
 
 
+void rtc_dump(void)
+{
+  char line[10];
+  
+  // Dump RTC registers
+  printf("\nRTC Dump\n");
+    
+  for(int i=0; i<128; i++)
+    {
+      if( (i % 16) == 0 )
+	{
+	  printf("\n%04X: ", i);
+	}
+
+      BYTE reg = read_mcp7940(i);
+      printf("%02X ", reg);
+    }
+  printf("\n");
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Read date and time from RTC
+//
+
+uint8_t timedate[20];
+uint8_t memdata[64];
+
+// Reads first set of registers into timedate[]
+// These are timekeeping registers
+
+void read_rtc(void)
+{
+  for(int i=0; i<9; i++)
+    {
+      BYTE reg = read_mcp7940(i);
+      timedate[i] = reg;      
+    }
+}
+
+void rtc_read_mem(void)
+{
+  for(int i=0x20; i<0x60; i++)
+    {
+      BYTE reg = read_mcp7940(i);
+      memdata[i-0x20] = reg;      
+    }
+}
+
+void rtc_write_mem(void)
+{
+  for(int i=0x20; i<0x60; i++)
+    {
+      write_mcp7940(i, memdata[i-0x20]);
+    }
+}
+
+char rtc_buffer[40];
+
+char *rtc_get_time(void)
+{
+  int seconds, minutes, hours;
+  
+  read_rtc();
+  
+  seconds = ((timedate[0] & 0x70) >> 4)* 10 + (timedate[0] & 0xf);
+  minutes = ((timedate[1] & 0x70) >> 4)* 10 + (timedate[1] & 0xf);
+  hours   = ((timedate[2] & 0x70) >> 4)* 10 + (timedate[2] & 0xf);
+
+  sprintf(rtc_buffer, "%02d:%02d:%02d",hours, minutes, seconds);
+  return(rtc_buffer);
+}
+
+void rtc_set_seconds(int s)
+{
+  write_mcp7940( MCP_RTCSEC_REG, s | MCP_ST_MASK);
+}
+
+void rtc_set_minutes(int m)
+{
+  write_mcp7940( MCP_RTCMIN_REG, m);
+}
+
+void rtc_set_hours(int h)
+{
+  write_mcp7940( MCP_RTCHOUR_REG, h);
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  RTC tasks concerning the I2C bus are done here.

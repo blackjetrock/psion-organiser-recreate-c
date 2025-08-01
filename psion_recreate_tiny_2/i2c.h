@@ -24,11 +24,12 @@ typedef enum _I2C_BUS_ID
 #define PIN_I2C_SCL         6
 #endif
 
-#define PIN_I2C_RTC_SDA      0
-#define PIN_I2C_RTC_SCL      1
+#define PIN_I2C_RTC_SDA      1
+#define PIN_I2C_RTC_SCL      0
 
 //------------------------------------------------------------------------------
 
+void i2c_fn_initialise(I2C_BUS_ID id);
 void i2c_set_delay_value(int delay);
 void i2c_release(I2C_BUS_ID id);
 void i2c_delay(I2C_BUS_ID id);

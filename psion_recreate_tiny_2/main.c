@@ -390,6 +390,8 @@ int main(void) {
   initialise_oled();
 #endif
 
+  i2c_fn_initialise(I2C_BUS_RTC);
+  
   nopl_init();
   
   int tick = 0;

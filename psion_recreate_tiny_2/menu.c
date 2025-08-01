@@ -742,7 +742,7 @@ void menu_fl_find(void)
       switch(mf_state)
 	{
 	case MF_STATE_INIT:
-	  dp_cls();
+ 	  dp_cls();
 	  printxy_str(0, 0, "Find:");
 	  //printxy_str(5,0, find_str);
 	  
@@ -1232,7 +1232,7 @@ void menu_oled_test(void)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
+#if 0
 #define TO_BCD(XX) ( ((XX / 10)*16) + ((XX % 10)))
 
 void cli_set_hours(void)
@@ -1255,18 +1255,62 @@ void menu_rtc_varset(void)
   rtc_set_variables = 1;
 }
 
-void menu_rtc_get_time(void)
-{
-  dp_cls();
-
-  dp_printxy_str(0, 0, rtc_get_time());
-
-  kb_get();
-}
 
 void menu_rtc_regset(void)
 {
   rtc_set_registers = 1;
+}
+
+#endif
+
+void menu_rtc_get_time(void)
+{
+  dp_cls();
+
+  i_printxy_str(0, 0, rtc_get_time());
+
+  kb_getk();
+}
+
+void menu_rtc_enable(void)
+{
+  set_vbaten_bit();
+  set_st_bit();
+}
+
+void menu_rtc_dump(void)
+{
+  rtc_dump();
+}
+
+void menu_rtc_write_mem(void)
+{
+  KEYCODE k;
+  
+  dp_cls();
+  printxy_str(0, 0, "RTCMEM:");
+  
+  k = ed_epos(memdata, 64, 0, 0);
+  
+  switch(k)
+    {
+    case KEY_ON:
+      // Exit
+      break;
+      
+    case KEY_EXE:
+      rtc_write_mem();
+      break;
+    }
+}
+
+void menu_rtc_read_mem(void)
+{
+  rtc_read_mem();
+
+  dp_cls();
+  printxy_str(0, 0, memdata);
+  kb_getk();
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -2462,7 +2506,7 @@ MENU menu_top =
     {'M', "forMat",     menu_goto_format},
     {'P', "Prog",       menu_goto_prog},
     {'C', "Calc",       menu_goto_calc},
-    {'R', "Rtc",        menu_rtc},
+    {'R', "Rtc",        menu_goto_rtc},
     {'&', "",           menu_null},
    }
   };
@@ -2555,9 +2599,16 @@ MENU menu_rtc =
    "RTC",
    init_menu_rtc,   
    {
-    {KEY_ON, "",           menu_back},
+    {KEY_ON, "",        menu_back},
+    {'S', "Start",      menu_rtc_enable},
+    {'D', "Dump",       menu_rtc_dump},
+    {'G', "Get",        menu_rtc_get_time},
+    {'W', "Writemem",   menu_rtc_write_mem},
+    {'R', "Readmem",    menu_rtc_read_mem},
+#if 0
     {'G', "Get",        menu_rtc_get_time},
     {'R', "RegSet",     menu_rtc_regset},
+#endif
     {'&', "",           menu_null},
    }
   };

@@ -36,3 +36,20 @@ extern int rtc_hours;
 #define MCP_ALMPOL_MASK      0x80
 
 
+extern uint8_t timedate[20];
+extern uint8_t memdata[64];
+
+// Reads first set of registers into timedate[]
+// These are timekeeping registers
+
+void read_rtc(void);
+char *rtc_get_time(void);
+void rtc_set_seconds(int s);
+void rtc_set_minutes(int m);
+void rtc_set_hours(int h);
+void set_st_bit();
+void rtc_dump(void);
+void rtc_write_mem(void);
+void rtc_read_mem(void);
+
+
