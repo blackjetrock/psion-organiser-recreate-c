@@ -52,4 +52,9 @@ void rtc_dump(void);
 void rtc_write_mem(void);
 void rtc_read_mem(void);
 
+int rtc_get_seconds(void);
+int rtc_get_minutes(void);
+int rtc_get_hours(void);
+
+ 
 

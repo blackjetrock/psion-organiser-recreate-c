@@ -77,6 +77,7 @@ target_link_libraries(${PROJECT}
     pico_stdlib
     pico_multicore
     pico_unique_id
+    hardware_i2c
     tinyusb_board
     tinyusb_device
     FatFs_SPI

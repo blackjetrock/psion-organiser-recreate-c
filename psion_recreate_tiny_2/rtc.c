@@ -238,6 +238,21 @@ void rtc_set_hours(int h)
   write_mcp7940( MCP_RTCHOUR_REG, h);
 }
 
+int rtc_get_seconds(void)
+{
+  return(read_mcp7940(MCP_RTCSEC_REG));
+}
+
+int rtc_get_minutes(void)
+{
+  return(read_mcp7940(MCP_RTCMIN_REG));
+}
+
+int rtc_get_hours(void)
+{
+  return(read_mcp7940(MCP_RTCHOUR_REG));
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  RTC tasks concerning the I2C bus are done here.

@@ -31,5 +31,15 @@
 #define PSION_MINI       1   // Small hardware version
 #define PSION_RECREATE   0   // Hardware replacement for original case
 
-#define SPI              1
-#define DD               1   // Display driver scheme
+//------------------------------------------------------------------------------
+//
+// RTC options
+//
+
+#define RTC_PICO_CLOCK     0
+#define RTC_MCP7940_CLOCK  1
+
+//------------------------------------------------------------------------------
+
+#define SPI                1
+#define DD                 1   // Display driver scheme
