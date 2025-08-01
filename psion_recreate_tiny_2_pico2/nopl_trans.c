@@ -5836,7 +5836,7 @@ void process_token(OP_STACK_ENTRY *token)
     case EXP_BUFF_ID_LPRINT_NEWLINE:
       ff_fprintf(ofp, "\nBuff id print");
       
-      NOBJ_VARTYPE vt;
+      NOBJ_VARTYPE vt = NOBJ_VARTYPE_UNKNOWN;
       
       // The type of the function is known, use that, not the expression type
       // which is more of a hint.

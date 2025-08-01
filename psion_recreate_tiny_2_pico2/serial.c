@@ -1308,14 +1308,14 @@ void cli_interactive(void)
 }
 
 //------------------------------------------------------------------------------
+
 int sl_state = SL_STATE_INIT;
 
 void serial_loop(void)
 {
   int key = KEY_NONE;
-
   
-  int key_queue[3];
+  int key_queue[3] = {0, 0, 0};
   
   if( serial_terminal_mode )
     {

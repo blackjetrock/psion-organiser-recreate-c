@@ -16,6 +16,7 @@ project(${PROJECT} C CXX ASM)
 pico_sdk_init()
 
 add_compile_options(-Wreturn-type)
+add_compile_options(-Werror=uninitialized)
 
 #add_subdirectory(../no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
 add_subdirectory(../no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src build)

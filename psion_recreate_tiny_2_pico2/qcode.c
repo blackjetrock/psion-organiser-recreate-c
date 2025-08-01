@@ -975,7 +975,7 @@ void qca_trap(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 void qca_peekw(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
-  NOPL_INT w;
+  NOPL_INT w = 0;
   
   s->result = 0;
   
@@ -995,7 +995,7 @@ void qca_peekw(NOBJ_MACHINE *m, NOBJ_QCS *s)
 
 void qca_peekb(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
-  NOPL_INT w;
+  NOPL_INT w = 0;
   
   s->result = 0;
   
@@ -3376,7 +3376,7 @@ void qca_rtf_sum(NOBJ_MACHINE *m, NOBJ_QCS *s)
   NOPL_FLOAT sum;
   uint16_t num_i;
   NOPL_FLOAT x;
-  int count;
+  int count = 0;
   
   zero_num(&sum);
   

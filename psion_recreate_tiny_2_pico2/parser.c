@@ -2742,7 +2742,7 @@ int check_variable(int *index)
   vname[0] = '\0';
   chstr[1] = '\0';
 
-  int is_comma;
+  int is_comma = 0;
   
   // If this is an operator then we fail
   if( check_operator(&idx, &is_comma, 1) )
@@ -4102,7 +4102,7 @@ int check_expression(int *index, int ignore_comma)
   int idx = *index;
   int n_commas = 0;
   int n_commas2 = 0;
-  int is_comma;
+  int is_comma = 0;
   
   indent_more();
   
@@ -4195,7 +4195,7 @@ int scan_expression(int *num_commas, int ignore_comma)
   int idx = cline_i;
   int n_commas = 0;
   int n_commas2 = 0;
-  int is_comma;
+  int is_comma = 0;
   
   indent_more();
   
