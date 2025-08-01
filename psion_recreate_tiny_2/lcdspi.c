@@ -12,7 +12,7 @@
 #include "pico/multicore.h"
 ////////////////////**************************************fonts
 
-#include "fonts/font1.h"
+#include "font1.h"
 unsigned char *MainFont = (unsigned char *) font1;
 
 static int gui_fcolour;
