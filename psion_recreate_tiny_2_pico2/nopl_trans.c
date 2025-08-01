@@ -24,6 +24,18 @@ FIL *trfp  = NULL;
 FIL *exfp  = NULL;
 FIL *shfp  = NULL;
 
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+//
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int n_lines_ok    = 0;
+int n_lines_bad   = 0;
+int n_lines_blank = 0;
+int n_stack_errors = 0;
+
 // Reads next composite line into buffer
 
 char current_expression[200] PSRAM;
@@ -6211,17 +6223,6 @@ void finalise_expression(void)
   dbprintf("Finalise expression done.");
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//
-//
-//
-////////////////////////////////////////////////////////////////////////////////
-
-int n_lines_ok    = 0;
-int n_lines_bad   = 0;
-int n_lines_blank = 0;
-int n_stack_errors = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -6397,6 +6398,17 @@ int nopl_trans(char *filename)
   FIL *fp = &f;
   FIL *vfp = NULL;
 
+  // This is run multiple times before exiting when on a device. When on the PC it runs and exits,
+  // so we have to cear these variables, or they retain their values from previous translations.
+  
+  // Clear variables
+  num_var_info = 0;
+
+  n_lines_ok    = 0;
+  n_lines_bad   = 0;
+  n_lines_blank = 0;
+  n_stack_errors = 0;
+  
   init_output();
   
   ptfp = ff_fopen("parse_text.txt",  "w");

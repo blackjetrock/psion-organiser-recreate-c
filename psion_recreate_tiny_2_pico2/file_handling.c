@@ -462,7 +462,7 @@ void file_editor(char *filename)
       strcpy(linline, curline->text);
 
       // Display lines to make curline appear at the cursor_line
-      dp_cls();
+      //dp_cls();
       
       line_ptr = curline->prev;
       for(int i=0; i<cursor_line;i++)

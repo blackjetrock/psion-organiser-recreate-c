@@ -2732,7 +2732,7 @@ void menu_bubble2(void)
 	      cx = ax;
 	      cy = by;
 	      //dd_plot_point(ax, by, (i*j)>(mi*mj)*h?1:0);
-              printf("\ni:%d j:%j", i, j);
+              //printf("\ni:%d j:%j", i, j);
               dd_plot_point(ax, by, ((i*255/mi)<<16)+((j*255/n)<<8)+((255-i/mi+j/n)*128));
 	    }
 	}

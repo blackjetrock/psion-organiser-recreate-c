@@ -1,3 +1,5 @@
+#include "switches.h"
+
 #include <assert.h>
 #include <ctype.h>
 #include <malloc.h>
@@ -56,7 +58,7 @@ typedef unsigned int uint;
 //#include "opl.h"
 
 #include "menu.h"
-#include "switches.h"
+
 
 #include "sysvar.h"
 

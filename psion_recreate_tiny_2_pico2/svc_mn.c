@@ -135,7 +135,7 @@ int mn_menu(char *str)
   // Wait for one of the selection letters to be pressed
   int done = 0;
   int done_srch = 0;
-  int selnum = 0;
+  unsigned int selnum = 0;
   int key;
 
   dp_cls();
@@ -180,6 +180,15 @@ int mn_menu(char *str)
               selnum = 0;
               done = 1;
               break;
+
+            case KEY_RIGHT:
+              selnum = (selnum + 1) % num_sels;
+              break;
+
+            case KEY_LEFT:
+              selnum = (selnum - 1) % num_sels;
+              break;
+
               
             default:
               done_srch = 0;
@@ -202,6 +211,7 @@ int mn_menu(char *str)
                       if( how_many_have_sel[i] == 1 )
                         {
                           selnum = i;
+                          done_srch = 1;
                           done = 1;
                           break;
                         }
@@ -232,6 +242,7 @@ int mn_menu(char *str)
                   // have we processed the last entry we will look at?
                   if( i == (last_i) )
                     {
+                      done_srch = 1;
                       done = 1;
                     }
                 }
@@ -239,7 +250,12 @@ int mn_menu(char *str)
             }
         }
     }
-  
+
+#if DB_MN_MENU
+  printf("\nSelected:%d", selnum+1);
+#endif
+
+  // Menu command returns 1..n
   return(selnum+1);
 }
 

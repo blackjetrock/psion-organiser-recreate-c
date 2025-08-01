@@ -366,6 +366,7 @@ void cli_information(void)
   printf("\nCore1 safe count : %d", core1_safe_x);
   printf("\nCPAD: %08X", pkw_cpad);
   printf("\nCaps modes:%02X num_mode:%02X cur_mode:%02X", caps_mode, num_mode, cur_modes);
+  printf("\nDisplay: DISPLAY_NUM_LINES:%d DISPLAY_NUM_CHARS:%d", DISPLAY_NUM_LINES, DISPLAY_NUM_CHARS);
   
   printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
   for(int i=0; i<NUM_STATS; i++)
