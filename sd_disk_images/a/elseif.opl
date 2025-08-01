@@ -1,0 +1,15 @@
+if:
+
+local A%
+
+IF A%=2
+A%=200
+
+ELSEIF A%=10
+  a%=100
+
+ELSEIF A%=20
+  a%=200
+ENDIF
+
+

@@ -1,0 +1,47 @@
+comb:
+  LOCAL tPos%, sPos%, c%, success%
+
+  tPos% = 10  REM Example target position (mid-screen)
+  sPos% = 1
+
+  REM Draw the target on the first line
+  AT tPos%, 2
+  PRINT "X"
+
+  REM Sweep loop
+  
+  c% = 0
+  DO
+
+    REM Clear previous sword position
+    AT sPos%, 1
+    PRINT " "
+    REM Update sword position
+    sPos% = sPos% + 1
+    IF sPos% > 20 
+      sPos% = 1  REM Reset to start
+    ENDIF
+    REM Draw sword at new position
+    AT sPos%, 1
+    PRINT "A"
+    REM Delay for visibility
+    PAUSE 5
+    c% = c% + 1
+ 
+  UNTIL KEY OR c% = 30  REM Wait for key press or timeout
+
+  REM Determine success
+  success% = ABS(sPos% - tPos%) <= 2  REM Success range
+
+  REM Display result
+  IF success% 
+    PRINT "Hit!"
+ GET
+  ELSE
+    PRINT "Miss!"
+ GET
+  ENDIF
+
+  REM Clear any remaining keypress
+  WHILE KEY$ <> ""
+  ENDWH

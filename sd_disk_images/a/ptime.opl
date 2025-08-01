@@ -1,0 +1,12 @@
+ptime%:
+LOCAL S%,MIN%,HOUR%,DAY%,MONTH%,YEAR%
+
+S%     = SECOND
+MIN%   = MINUTE
+HOUR%  = HOUR
+DAY%   = DAY
+MONTH% = MONTH
+YEAR%  = YEAR
+
+print "Time:";Hour%;":";MIN%;":";S%
+

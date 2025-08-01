@@ -1,0 +1,20 @@
+badif:
+
+local A%
+
+
+if A% = 2
+ELSE
+A% = 6
+ELSEIF A% = 9
+A% = 7
+ENDIF
+
+IF A%=3
+A%=2
+ELSE
+A5=4
+ELSE
+A% = 900
+ENDIF
+

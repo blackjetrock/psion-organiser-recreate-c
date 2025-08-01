@@ -1,0 +1,275 @@
+MISC:
+rem
+rem Shell for GPack for the Psion Organiser II LZ
+rem Copyright 1997 Zac Schroff, all rights reserved.
+rem
+rem This program is free for use and distribution as long
+rem as it is distributed only in an unmodified state,
+rem this notice is left intact, and the associated files
+rem are included with it :
+rem    GPSHELL.DOC  (the documentation file)
+rem    GPSHELL.OPL  (this source file)
+rem    GPSHELL.OB3  (the object only file)
+rem
+rem If you intend to distribute modified of translated
+rem versions of this program, please contact the author
+rem for permission.
+rem
+rem Neither the author of the program nor anybody who
+rem distributes it takes any responsibility for how it
+rem will behave under the way you use or abuse it on
+rem your system, nor any responsibility for damages to
+rem data, other software, or hardware.  The limit of the
+rem liability of the author or distributor is the sum
+rem which you paid for the program.
+rem
+rem If you feel you'd like to send me something for this
+rem little program, or if you just want to chat, or ask
+rem about using the program for your own purpose, please
+rem contact me :
+rem
+rem     zschroff@docsware.com
+rem     Zac Schroff
+rem     2906 Firethorn Drive
+rem     Tuscaloosa, Alabama  35405
+rem     USA
+rem
+
+rem 19970228 : Updated to use common config file
+
+
+rem This is a shell for the LZ GamesPack that restores the
+rem keyboard settings and the top four calculator memories.
+rem It also provides a menu, and tracks the top two scores
+rem for each of the games.  I wrote it because I use the
+rem top four calculator memories, and I don't much like how
+rem the GPack seems to mess with my keyboard settings.
+
+local SC$(4,20),SH%(4),SL%(4),CM(4),MX,RF%,T%,C%,R%,KS%,KC%,K%,CLS$(22)
+local F$(9),F%
+SC$(1)="Tetris" :SH%(1)=0 :SL%(1)=0
+SC$(2)="Pac-man" :SH%(2)=0 :SL%(2)=0
+SC$(3)="Breakout" :SH%(3)=0 :SL%(3)=0
+SC$(4)="Scramble" :SH%(4)=9999 :SL%(4)=9999
+CLS$=chr$(12)+chr$(0)+rept$(chr$(2),19)
+F$="A:ZCONFIG"
+loop::
+do
+ escape off
+ onerr errors::
+ RF%=0
+ goto fixscrn::
+ rf0::
+ print "Loading scores...";
+ t%=1
+ onerr errors1::
+ if exist(F$)
+  open F$,A,D$,SH%,SL%
+  do
+   if find(sc$(t%)) and A.D$=sc$(t%)
+    SH%(t%)=A.SH%
+    SL%(t%)=A.SL%
+   endif
+   t%=t%+1
+  until t%>4
+  close
+ endif
+ skipload::
+ T%=0
+ CM(1)=M6
+ CM(2)=M7
+ CM(3)=M8
+ CM(4)=M9
+ KS%=peekw($77)
+ KC%=peekb($20C0)
+ do
+  RF%=1
+  goto fixscrn::
+  rf1::
+  onerr errors1::
+  at 1,2
+  T%=menun(2,SC$(1)+","+SC$(2)+","+SC$(3)+","+SC$(4)+",Highs")
+  clock(0)
+  C%=T%
+  R%=0
+  if T%=1
+   M9=SL%(1)
+   f1:
+   MX=M9
+   goto disphigh::
+   menu1::
+  elseif T%=2
+   M8=SL%(2)
+   f2:
+   MX=M8
+   goto disphigh::
+   menu2::
+  elseif T%=3
+   M7=SL%(3)
+   f3:
+   MX=M7
+   goto disphigh::
+   menu3::
+  elseif T%=4
+   M6=SL%(4)
+   f4:
+   MX=M6
+   goto disphigh::
+   menu4::
+  elseif T%=5
+   C%=1
+   do
+    R%=1
+    goto disphigh::
+    highdret::
+    K%=get
+    if K%=3
+     if C%>1
+      C%=C%-1
+     endif
+    elseif K%=4
+     if C%<4
+      C%=C%+1
+     endif
+    endif
+   until (K%=1)
+  endif
+  if T%<>0
+   T%=-1
+  endif
+  M6=CM(1)
+  M7=CM(2)
+  M8=CM(3)
+  M9=CM(4)
+  pokew $77,KS%
+  pokeb $20C0,KC%
+  onerr errors::
+ until T%=0
+ onerr skipsave::
+ RF%=2
+ goto fixscrn::
+ rf2::
+ print "Saving scores...";
+ if exist(F$)
+  open F$,A,D$,SH%,SL%
+ else
+  create F$,A,D$,SH%,SL%
+ endif
+ C%=1
+ do
+  first
+  F%=find(SC$(C%))
+  A.SH%=SH%(C%)
+  A.SL%=SL%(C%)
+  if F%<>0 and A.D$=SC$(C%)
+   A.D$=SC$(C%)
+   update
+  else
+   A.D$=SC$(C%)
+   append
+  endif
+  C%=C%+1
+ until C%>4
+ close
+ skipsave::
+ onerr errors::
+until T%=0
+return
+
+disphigh::
+rf%=3
+goto fixscrn::
+rf3::
+print "Highs for ";SC$(C%);chr$(26)
+pokew $77,KS%
+pokeb $20C0,KC%
+if (R%=0) and (((MX>SH%(C%)) and (C%<>4)) or ((MX<SH%(C%)) and (C%=4)))
+ SL%(C%)=SH%(C%)
+ SH%(C%)=MX
+ print "  ->  #1 : ";SH%(C%);chr$(26)
+ print "      #2 : ";SL%(C%);chr$(26);
+elseif (R%=0) and (((MX>SL%(C%)) and (C%<>4)) or ((MX<SL%(C%)) and (C%=4)))
+ SL%(C%)=MX
+ print "      #1 : ";SH%(C%);chr$(26)
+ print "  ->  #2 : ";SL%(C%);chr$(26);
+else
+ print "      #1 : ";SH%(C%);chr$(26)
+ print "      #2 : ";SL%(C%);chr$(26);
+endif
+while key<>0
+ get
+endwh
+if R%=0
+ get
+ if C%=1
+  goto menu1::
+ elseif C%=2
+  goto menu2::
+ elseif C%=3
+  goto menu3::
+ elseif C%=4
+  goto menu4::
+ endif
+elseif R%=1
+ goto highdret::
+endif
+raise 0
+
+fixscrn::
+udg 0,2,2,4,4,0,8,0,31
+udg 2,0,0,0,0,0,0,0,31
+print CLS$;
+clock(1)
+if RF%=0
+ goto rf0::
+elseif RF%=1
+ goto rf1::
+elseif RF%=2
+ goto rf2::
+elseif RF%=3
+ goto rf3::
+endif
+raise 197
+
+errors1::
+onerr off
+pokew $77,KS%
+pokeb $20C0,KC%
+M6=CM(1)
+M7=CM(2)
+M8=CM(3)
+M9=CM(4)
+errors::
+onerr off
+cursor off
+cls
+udg 0,16,8,6,15,15,6,0,31
+udg 2,0,0,0,0,0,0,0,31
+print chr$(0);rept$(chr$(2),19);chr$(16);
+clock(1)
+at 1,2
+print "Err:";err$(err);
+at 1,3
+print "Prg:";
+if T%=1
+ print"F1.OPL"
+elseif T%=2
+ print"F2.OPL"
+elseif T%=3
+ print"F3.OPL"
+elseif T%=4
+ print"F4.OPL"
+else
+ print"GPSHELL.OPL"
+endif
+while key :endwh
+at 1,4
+print "*** Press a key. ***";
+at 1,4
+while key<>0
+ get
+endwh
+get
+clock(0)
+goto loop::
+

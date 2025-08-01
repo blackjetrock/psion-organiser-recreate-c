@@ -1,0 +1,177 @@
+MEMDUMP:
+LOCAL BYTE$(16,2),ASCI$(16,1),LINE$(80),ST$(4),ED$(4),K%,ST%,ED%,BYT%
+K%=1
+DO
+ BYTE$(K%)="  "
+ ASCI$(K%)=" "
+ K%=K%+1
+UNTIL K%>16
+
+CURSOR ON
+PRINT "Start Add $"
+DO
+K%=GET
+IF LEN(ST$) = 4 AND K% <> 1 AND K% <> 13 AND K% <> 8
+ PRINT CHR$(16)
+ELSEIF K%=1
+ IF LEN(ST$)=0
+  RETURN
+ ELSE
+  ST$=""
+ ENDIF
+ELSEIF K%=65
+ ST$=ST$+CHR$(K%)
+ELSEIF K%=66
+ ST$=ST$+CHR$(K%)
+ELSEIF K%=67
+ ST$=ST$+CHR$(K%)
+ELSEIF K%=68
+ ST$=ST$+CHR$(K%)
+ELSEIF K%=69
+ ST$=ST$+CHR$(K%)
+ELSEIF K%=70
+ ST$=ST$+CHR$(K%)
+ELSEIF K%=73
+ ST$=ST$+CHR$(55)
+ELSEIF K%=74
+ ST$=ST$+CHR$(56)
+ELSEIF K%=75
+ ST$=ST$+CHR$(57)
+ELSEIF K%=79
+ ST$=ST$+CHR$(52)
+ELSEIF K%=80
+ ST$=ST$+CHR$(53)
+ELSEIF K%=81
+ ST$=ST$+CHR$(54)
+ELSEIF K%=85
+ ST$=ST$+CHR$(49)
+ELSEIF K%=86
+ ST$=ST$+CHR$(50)
+ELSEIF K%=87
+ ST$=ST$+CHR$(51)
+ELSEIF K%=89
+ ST$=ST$+CHR$(48)
+ELSEIF K%=8
+ IF LEN(ST$) > 0
+  ST$=LEFT$(ST$,(LEN(ST$)-1))
+ ELSE
+  PRINT CHR$(16)
+ ENDIF
+ELSEIF K%=13
+ IF LEN(ST$) < 4
+  PRINT CHR$(16)
+  K%=32
+ ENDIF
+ELSE
+ PRINT CHR$(16)
+ENDIF
+AT 1,1 :PRINT "Start Add $"+ST$
+UNTIL K%=13
+
+
+
+AT 1,2 :PRINT " End  Add $"
+DO
+K%=GET
+IF LEN(ED$) = 4 AND K% <> 1 AND K% <> 13 AND K% <> 8
+ PRINT CHR$(16)
+ELSEIF K%=1
+ IF LEN(ED$)=0
+  RETURN
+ ELSE
+  ED$=""
+ ENDIF
+ELSEIF K%=65
+ ED$=ED$+CHR$(K%)
+ELSEIF K%=66
+ ED$=ED$+CHR$(K%)
+ELSEIF K%=67
+ ED$=ED$+CHR$(K%)
+ELSEIF K%=68
+ ED$=ED$+CHR$(K%)
+ELSEIF K%=69
+ ED$=ED$+CHR$(K%)
+ELSEIF K%=70
+ ED$=ED$+CHR$(K%)
+ELSEIF K%=73
+ ED$=ED$+CHR$(55)
+ELSEIF K%=74
+ ED$=ED$+CHR$(56)
+ELSEIF K%=75
+ ED$=ED$+CHR$(57)
+ELSEIF K%=79
+ ED$=ED$+CHR$(52)
+ELSEIF K%=80
+ ED$=ED$+CHR$(53)
+ELSEIF K%=81
+ ED$=ED$+CHR$(54)
+ELSEIF K%=85
+ ED$=ED$+CHR$(49)
+ELSEIF K%=86
+ ED$=ED$+CHR$(50)
+ELSEIF K%=87
+ ED$=ED$+CHR$(51)
+ELSEIF K%=89
+ ED$=ED$+CHR$(48)
+ELSEIF K%=8
+ IF LEN(ED$) > 0
+  ED$=LEFT$(ED$,(LEN(ED$)-1))
+ ELSE
+  PRINT CHR$(16)
+ ENDIF
+ELSEIF K%=13
+ IF LEN(ED$) < 4
+  PRINT CHR$(16)
+  K%=32
+ ENDIF
+ELSE
+ PRINT CHR$(16)
+ENDIF
+AT 1,2 :PRINT " End  Add $"+ED$
+UNTIL K%=13
+CURSOR OFF
+
+PRINT "Dumping ";
+
+ST%=INTHEX%:(ST$)
+ED%=INTHEX%:(ED$)
+LPRINT "$Address  00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F  |--ASCII Text--|"
+
+DO
+ PRINT ".";
+ LINE$="    "+REPT$("0",4-LEN(HEX$(ST%)))+HEX$(ST%)+"  "
+ K%=MOD%:(ST%,INT(16))+1
+ DO
+  BYT%=PEEKB(ST%)
+  BYTE$(K%)=REPT$("0",2-LEN(HEX$(BYT%)))+HEX$(BYT%)
+  IF BYT% < 32
+   ASCI$(K%)="."
+  ELSE
+   ASCI$(K%)=CHR$(BYT%)
+  ENDIF
+  K%=K%+1
+  ST%=ST%+1
+  IF ST%>ED%
+   BREAK
+  ENDIF
+ UNTIL K%>16
+
+ K%=1
+ DO
+  LINE$=LINE$+BYTE$(K%)+" "
+  BYTE$(K%)="  "
+  K%=K%+1
+ UNTIL K%>16
+ K%=1
+ LINE$=LINE$+" "
+ DO
+  LINE$=LINE$+ASCI$(K%)
+  ASCI$(K%)=" "
+  K%=K%+1
+ UNTIL K%>16
+ LPRINT LINE$
+UNTIL ST%>ED%
+
+LPRINT ""
+PRINT CHR$(13)+CHR$(10)+"End"
+GET

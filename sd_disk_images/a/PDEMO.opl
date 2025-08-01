@@ -1,0 +1,65 @@
+PDEMO:
+REM CM/XP procedure
+LOCAL L1%(2)
+
+ONERR Lab1::
+CLS
+PRINT "PRINTING..."
+LPRINT
+LPRINT CHR$(14)
+LPRINT CHR$(17)+"PSION PRINTER II"
+LPRINT CHR$(15)
+LPRINT REPT$("=",40)
+LPRINT
+LPRINT "* Designed for PSION Organiser II"
+LPRINT "  Advanced Electronic Organiser and"
+LPRINT "  Hand-held Computers"
+LPRINT
+LPRINT "* Rechargeable"
+LPRINT
+LPRINT "* Complete with Mains Adaptor"
+LPRINT
+LPRINT "* Compatible with Organiser Software"
+LPRINT
+LPRINT "* Wide range of print styles possible"
+LPRINT CHR$(15)
+LPRINT CHR$(14)+"20 COLUMN MODE"
+LPRINT
+LPRINT CHR$(15)+"40 COLUMN MODE"+CHR$(23)+"   60 COLUMN MODE"+CHR$(22)+"   80 COLUMN MODE"
+LPRINT
+LPRINT CHR$(21)+"Underline"+CHR$(23)+"Underline"+CHR$(15)+"Underline"+CHR$(14)+"Underline"
+LPRINT
+LPRINT CHR$(17)+"20 Col Double HEIGHT"+CHR$(24)+CHR$(15)
+LPRINT
+LPRINT "* Graphics Capability"
+LPRINT
+LOGO:
+LPRINT
+LPRINT REPT$("=",40)
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+ONERR OFF
+RETURN
+Lab1::
+IF M5>=2
+ CLS
+ L1%(1)=16258
+ L1%(2)=14592
+ USR(ADDR(L1%(1)),256)
+ PRINT
+ PRINT " Demonstration not  ";"     Available"
+ PAUSE 30
+ELSE
+ CLS
+ PRINT " Demonstration  ";" not Available"
+ PAUSE 30
+ENDIF

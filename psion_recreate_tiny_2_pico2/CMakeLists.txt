@@ -7,7 +7,6 @@ cmake_minimum_required(VERSION 3.12)
 set(PICO_BOARD pimoroni_pico_plus2_rp2350 CACHE STRING "Board type")
 set(CMAKE_BUILD_TYPE Debug)
 set(PICO_USE_STACK_GUARDS 1)
-set(PICO_STACK_SIZE 4096)
 
 set(PICO_SDK_PATH "/home/menadue/pico/pico-sdk")
 include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
@@ -17,12 +16,14 @@ project(${PROJECT} C CXX ASM)
 pico_sdk_init()
 
 add_compile_options(-Wreturn-type)
+add_compile_options(-Werror=uninitialized)
 
 #add_subdirectory(../no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
 add_subdirectory(../no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src build)
 
 add_executable(${PROJECT}
     main.c
+    hwmain.c
     cdc.c
     core1.c
     usb_descriptors.c
@@ -75,12 +76,18 @@ add_executable(${PROJECT}
     nopl_trans.c
     sd_card_utils.c
     hw_config.c
+    file_handling.c
+    lcdspi.c
+    i2ckbd.c
   )
 target_include_directories(${PROJECT} PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}
 )
 
-
+target_compile_definitions(${PROJECT} PRIVATE
+        PICO_STACK_SIZE=0x8000
+      )
+      
 # Add the standard include files to the build
 target_include_directories(${PROJECT} PRIVATE
                         .
@@ -91,13 +98,14 @@ target_include_directories(${PROJECT} PRIVATE
                         # $ENV{PICO_SDK_PATH}/lib/tinyusb/src
                         )
 
-
+pico_set_linker_script(${PROJECT} ${CMAKE_SOURCE_DIR}/memmap_custom.ld)                 
 target_link_libraries(${PROJECT}
     pico_stdlib
     pico_multicore
     pico_unique_id
     hardware_spi
     hardware_clocks
+    hardware_i2c
     hardware_dma
     tinyusb_board
     tinyusb_device

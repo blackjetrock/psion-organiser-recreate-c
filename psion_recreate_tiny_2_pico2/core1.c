@@ -40,6 +40,9 @@ void __not_in_flash_func(core1_ram_wait)(void)
 
 void put_core1_into_ram(void)
 {
+#if CORE1_UNUSED
+#else
+  
 #if DB_CORE1
   printf("\n%s:", __FUNCTION__);
 #endif
@@ -49,7 +52,7 @@ void put_core1_into_ram(void)
   while( !core1_in_ram )
     {
     }
-  
+#endif
 }
 
 void take_core1_out_of_ram(void)

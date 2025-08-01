@@ -1,0 +1,9 @@
+not:
+
+Local A%
+
+IF NOT (A% = 3)
+
+Y% = 23 AND SIN( 45)
+
+endif

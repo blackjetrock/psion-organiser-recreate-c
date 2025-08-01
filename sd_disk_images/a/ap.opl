@@ -1,0 +1,4 @@
+ap:(x%,y%,z$)
+REM Written by Martin Reid  
+REM A function to combine the AT and PRINT commands
+AT x%,y% :PRINT z$;

@@ -88,7 +88,7 @@ void eeprom_test(void)
 {
   BYTE data[TEST_LEN];
   int i;
-  int j;
+  int j = 0;
 
   //DEBUG_STOP;
   while(1)

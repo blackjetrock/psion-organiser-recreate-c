@@ -9,9 +9,6 @@
 //#include "nopl.h"
 #include "psion_recreate_all.h"
 
-//#define dbprintf printf("\n%s", __FUNCTION__);printf
-#define dbprintf
-
 char last_line[MAX_NOPL_LINE];
 
 void check_array_index(int *idx, int max_idx, char *name)
@@ -270,7 +267,7 @@ const struct _FN_INFO
     { "WEEK",     0,  0, ' ',  "iii",       "i", 0x00, 0 },
     { "YEAR",     0,  0, ' ',  "",          "i", 0x00, 0 },
     { "GCLS",     1,  0, ' ',  "",          "v", 0x00, 0 },   // Graphics clear
-    { "GPOINT",   1,  0, ' ',  "ii",        "v", 0x00, 0 },   // Graphics point
+    { "GPOINT",   1,  0, ' ',  "iii",       "v", 0x00, 0 },   // Graphics point
     { "GLINE",    1,  0, ' ',  "iiii",      "v", 0x00, 0 },   // Graphics line
     { "GUPDATE",  1,  0, ' ',  "",          "v", 0x00, 0 },   // Graphics update
   };
@@ -2745,7 +2742,7 @@ int check_variable(int *index)
   vname[0] = '\0';
   chstr[1] = '\0';
 
-  int is_comma;
+  int is_comma = 0;
   
   // If this is an operator then we fail
   if( check_operator(&idx, &is_comma, 1) )
@@ -4105,7 +4102,7 @@ int check_expression(int *index, int ignore_comma)
   int idx = *index;
   int n_commas = 0;
   int n_commas2 = 0;
-  int is_comma;
+  int is_comma = 0;
   
   indent_more();
   
@@ -4198,7 +4195,7 @@ int scan_expression(int *num_commas, int ignore_comma)
   int idx = cline_i;
   int n_commas = 0;
   int n_commas2 = 0;
-  int is_comma;
+  int is_comma = 0;
   
   indent_more();
   

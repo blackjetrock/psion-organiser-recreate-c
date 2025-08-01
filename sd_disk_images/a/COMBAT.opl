@@ -1,0 +1,25 @@
+combat:
+
+PRINT "There's an enemy!"
+    PRINT "Enemy: "; enName$
+    PRINT "Health: "; enHealt%
+    PRINT "Attack: "; enAtt%
+    GET
+
+    CLS
+    menu%=MENU("Fight, Run")
+    IF menu% = 1 REM Fight
+      CLS
+      PRINT "Battle mechanics"
+      bit4% = 0 REM So there's no loop of combat on the tile
+      GET
+    ELSEIF menu% = 2 REM Run
+      CLS
+      PRINT "Run mechanics"
+      bit4% = 0 REM So there's no loop of combat on the tile
+    GET
+
+    ELSE
+      state% = 2 REM Goes to in game menu - breaks from combat without resetting bit4
+    ENDIF
+ 

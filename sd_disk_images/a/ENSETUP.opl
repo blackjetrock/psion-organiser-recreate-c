@@ -1,0 +1,46 @@
+ensetup:
+REM This sets up all the variables in GAME (enName,enHealt,enAtt) to be used in COMB for a combat encounter
+
+REM Could add more enemies and generate by biome - biome specific enemies
+
+enType% = RND * 4 REM Randomly select from 0 to 3 representing 4 enemy types per time window
+
+
+IF HOUR > 18 OR HOUR < 8 REM Night time creatures
+ IF enType% = 0
+  enName$ = "Wolf"
+  enHealt% = 25 + RND * 10  REM Base health 25, plus up to 10 points of randomness
+  enAtt% = 3 + RND * 5   REM Base attack 3, plus up to 5 points of randomness
+ ELSEIF enType% = 1
+  enName$ = "Orc"
+  enHealt% = 35 + RND * 15  REM Base health 35, plus up to 15 points of randomness
+  enAtt% = 5 + RND * 6   REM Base attack 5, plus up to 6 points of randomness
+ ELSEIF enType% = 2
+  enName$ = "Werewolf"
+  enHealt% = 45 + RND * 20  REM Base health 45, plus up to 20 points of randomness
+  enAtt% = 7 + RND * 7   REM Base attack 7, plus up to 7 points of randomness
+ ELSEIF enType% = 3
+  enName$ = "Vampire"
+  enHealt% = 60 + RND * 25  REM Base health 60, plus up to 25 points of randomness
+  enAtt% = 10 + RND * 10  REM Base attack 10, plus up to 10 points of randomness
+ ENDIF
+
+ELSE REM Day creatures
+ IF enType% = 0
+  enName$ = "Goblin"
+  enHealt% = 25 + RND * 10  REM Base health 25, plus up to 10 points of randomness
+  enAtt% = 3 + RND * 5   REM Base attack 3, plus up to 5 points of randomness
+ELSEIF enType% = 1
+ enName$ = "Orc"
+ enHealt% = 35 + RND * 15  REM Base health 35, plus up to 15 points of randomness
+ enAtt% = 5 + RND * 6   REM Base attack 5, plus up to 6 points of randomness
+ELSEIF enType% = 2
+ enName$ = "Troll"
+ enHealt% = 45 + RND * 20  REM Base health 45, plus up to 20 points of randomness
+ enAtt% = 7 + RND * 7   REM Base attack 7, plus up to 7 points of randomness
+ELSEIF enType% = 3
+ enName$ = "Dragon"
+ enHealt% = 60 + RND * 25  REM Base health 60, plus up to 25 points of randomness
+ enAtt% = 10 + RND * 10  REM Base attack 10, plus up to 10 points of randomness
+ENDIF
+ENDIF

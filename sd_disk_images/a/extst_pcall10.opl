@@ -1,0 +1,5 @@
+pcall0:(P0%)
+
+local L0%, M0%
+
+print "PASS",P0%

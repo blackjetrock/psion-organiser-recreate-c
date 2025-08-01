@@ -1,0 +1,54 @@
+ARITH%:
+
+LOCAL A%, B%, R%
+
+A% = 100
+R% = 0
+
+print A%
+A% = A% / 2
+
+print "A:";A%
+A% = A% * 3
+
+A% = A% + 1000
+print A%
+
+B% = 1000 + 100 / 2 * 3
+
+print "B:";B%
+
+
+R% = 0
+
+rem A% and B% should be the same, so we should add 1 and 1000
+rem together to get 1001 in the following IF statements
+
+IF A% = B%
+R% = R% + 1
+ELSE
+R% = R% + 10
+ENDIF
+
+IF A% <> B%
+R% = R% + 100
+ELSE
+R% = R% + 1000
+ENDIF
+
+rem now work out pass or fail
+IF R% = 1001
+R% = 1
+ELSE
+R% = 0
+ENDIF
+
+PRINT "Result:";R%
+IF R% = 1
+PRINT "PASS"
+ELSE
+PRINT "FAIL"
+ENDIF
+
+return R%
+

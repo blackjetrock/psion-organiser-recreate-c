@@ -192,6 +192,7 @@ void cli_dump_memory(void)
   
   printf("\n");
 
+  parameter += 512;
 }
 
 // Another digit pressed, update the parameter variable
@@ -364,6 +365,9 @@ void cli_information(void)
   printf("\nFlash pak start:%08X", flash_pak_base_read);
   printf("\nCore1 safe count : %d", core1_safe_x);
   printf("\nCPAD: %08X", pkw_cpad);
+  printf("\nCaps modes:%02X num_mode:%02X cur_mode:%02X", caps_mode, num_mode, cur_modes);
+  printf("\nDisplay: DISPLAY_NUM_LINES:%d DISPLAY_NUM_CHARS:%d", DISPLAY_NUM_LINES, DISPLAY_NUM_CHARS);
+  
   printf("\n Core 1 victim:%d", multicore_lockout_victim_is_initialized (1));
   for(int i=0; i<NUM_STATS; i++)
     {
@@ -396,6 +400,28 @@ void cli_ls(void)
   argv[0] = "/";
   run_ls(1, argv);
   run_unmount(0, argv_null);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+uint32_t getTotalHeap(void) {
+   extern char __StackLimit, __bss_end__;
+   
+   return &__StackLimit  - &__bss_end__;
+}
+
+uint32_t getFreeHeap(void) {
+   struct mallinfo m = mallinfo();
+
+   return getTotalHeap() - m.uordblks;
+}
+
+void cli_local_stack(void)
+{
+  uint8_t local_var;
+
+  printf("\nLocal var address:%p", &local_var);
+  printf("\nHeap left:%d", getFreeHeap());
 }
 
 
@@ -652,6 +678,21 @@ SERIAL_COMMAND serial_cmds[] =
     '*',
     "Format",
     cli_format,
+   },
+   {
+    's',
+    "Memory information",
+    cli_local_stack,
+   },
+   {
+    'h',
+    "Dump file handling line list",
+    file_dump_list,
+   },
+   {
+    'u',
+    "Unload file handling line list",
+    file_unload,
    },
    {
     '+',
@@ -955,9 +996,15 @@ void ic_cat(char *str, char *fmt)
 {
   char arg[100];;
 
+  argv[0] = "0:";
+  run_mount(1, argv);
+
   sscanf(str,  fmt, &arg);
 
   argv[0] = arg;
+
+  printf("\n\n");
+  
   run_cat(1, argv);
 }
 
@@ -1262,14 +1309,14 @@ void cli_interactive(void)
 }
 
 //------------------------------------------------------------------------------
+
 int sl_state = SL_STATE_INIT;
 
 void serial_loop(void)
 {
   int key = KEY_NONE;
-
   
-  int key_queue[3];
+  int key_queue[3] = {0, 0, 0};
   
   if( serial_terminal_mode )
     {
@@ -1328,7 +1375,7 @@ void serial_loop(void)
 		  break;
 
 		default:
-		  // not a sequene, send the previous and this key
+		  // not a sequence, send the previous and this key
 		  queue_key(key_queue[0]);
 		  queue_key(key);
 		  sl_state = SL_STATE_INIT;

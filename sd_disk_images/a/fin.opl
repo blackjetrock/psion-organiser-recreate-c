@@ -1,0 +1,25 @@
+fins:
+
+local i%,j%
+
+do
+  i%=menu("BANK,EXPENSES,NPV,IRR,COMPOUND,BOND,MORTGAGE,APR,END")
+  if     i%=1 : bank:
+  elseif i%=2 : expenses:
+  elseif i%=3 : npv:
+  elseif i%=4 : irr:
+  elseif i%=5
+    do
+      j%=menu("VALUE,FUTURE,PAYMENT,DURATION,INTEREST,END")
+      if     j%=1 : value:
+      elseif j%=2 : future:
+      elseif j%=3 : payment:
+      elseif j%=4 : duration:
+      elseif j%=5 : interest:
+      endif
+    until j%=0 or j%=6
+  elseif i%=6 : bond:
+  elseif i%=7 : mortgage:
+  elseif i%=8 : apr:
+  endif
+until i%=0 or i%=9

@@ -1,0 +1,10 @@
+rxfile:
+
+PRINT " Call CL on PC"
+PAUSE -80
+PRINT "  PLEASE WAIT"
+PRINT " RECEIVING FILE"
+LSET:(9600,0,8,1,1,1,-1,-1,-1,CHR$(44)+CHR$(9),-1,-1,-1,10,2)
+XTRECV:("product.odb","A:product",0)
+CLS
+RETURN

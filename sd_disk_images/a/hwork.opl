@@ -1,0 +1,170 @@
+HWORK:
+LOCAL k%,p%,m%,day%,time%,t%,ref%,menu%,lnum%,num%,dayt%,z%,e%,zz%
+LOCAL subj$(9),date$(4),due$(6),note$(54)
+CLS
+AT 2,2 :PRINT "Initialising...."
+
+UDG 0,0,0,0,0,0,0,0,31
+UDG 2,0,10,10,14,10,10,0,31
+
+IF NOT EXIST ("A:HOMEWORK")
+  CREATE "A:HOMEWORK",B,lnum%,due$,note$,subj$,dayt%,date$
+ELSE
+  OPEN "A:HOMEWORK",B,lnum%,due$,note$,subj$,dayt%,date$
+ENDIF
+
+IF NOT EXIST ("A:NUM")
+  CREATE "A:NUM",C,num%
+ELSE
+  OPEN "A:NUM",C,num%
+ENDIF
+
+TRAP OPEN "A:LESSON",A,sort%,whens$,rm%,name$,hworks%
+IF ERR :CLS :PRINT "***NO LESSON FILE***" :GET :RETURN :ENDIF
+
+USE A
+REF::
+day%=DOW(DAY,MONTH,YEAR)
+time%=HOUR
+IF time%=9 OR time%=10
+  t%=1
+ELSEIF time%=11 OR time%=12
+  t%=2
+ELSEIF time%=13 OR time%=14
+  t%=3
+ELSEIF time%=15
+  t%=4
+ELSE
+  t%=1
+ENDIF
+ref%=((day%-1)*4)+(t%-1)
+TOP::
+USE A
+IF ref%<20
+  POSITION ref%+1
+ELSE
+  FIRST
+ENDIF
+TOPPPP::
+DO
+  CLS
+  PRINT REPT$(CHR$(0),14)
+  CLOCK(1)
+  AT 1,1 :PRINT CHR$(2) 
+  AT 2,2 :PRINT A.whens$
+  AT 11,2 :PRINT "Room: " 
+  AT 17,2 :PRINT A.rm%
+  AT 1,3 :PRINT A.name$
+  AT 3,4 :PRINT "Homeworks:"
+  AT 14,4 :PRINT C.num%
+  k%=GET
+  IF k%=6
+    IF POS=20 :FIRST
+      ELSE :NEXT
+    ENDIF
+  ELSEIF k%=5
+    IF POS=1 :LAST
+      ELSE :BACK
+    ENDIF
+  ELSEIF k%=13
+    NEXT
+  ELSEIF k%=4
+    IF POS<5 
+      POSITION POS+16 
+    ELSE
+      POSITION POS-4
+    ENDIF
+  ELSEIF k%=3
+    IF POS>15 
+      POSITION POS-16
+    ELSE
+      p%= POS+4
+      POSITION p%
+    ENDIF
+  ELSEIF k%=1
+    RETURN
+  ELSEIF k%=2
+    GOTO MODE::
+  ELSEIF k%=%O
+    OFF
+    GOTO REF::  
+  ENDIF
+UNTIL EOF
+GOTO TOPPPP::
+
+MODE::
+CLOCK(0)
+UDG 7,21,0,0,0,0,0,0,0
+AT 1,2 :PRINT REPT$(CHR$(7),20)
+AT 1,1 :menu%=MENUN(1,"Add,View/edit,Quit,Off")
+IF menu%=0
+  GOTO TOP::
+ELSEIF menu%=1
+  USE C
+  C.num%=C.num%+1
+  UPDATE
+  USE B
+  B.lnum%=POS
+  CLS
+  AT 1,1 :PRINT "Subject: "
+  AT 9,1 :INPUT B.subj$
+  AT 1,2 :PRINT "Due: "
+  AT 5,2 :INPUT B.due$
+  AT 1,3 :PRINT "Notes: "
+  AT 8,3 :INPUT B.note$
+  AT 1,4 :PRINT "Saving...         "
+  B.dayt%=DAY
+  B.date$=MONTH$(MONTH)
+  APPEND
+  GOTO TOP::
+ELSEIF menu%=2
+  TOPP::
+  USE B
+  DO
+    CLS
+    PRINT "Subj:";B.subj$
+    AT 14,1 :PRINT B.dayt%,B.date$
+    AT 1,2 :PRINT "Due: "
+    AT 6,2 :PRINT B.due$
+    AT 1,3 :PRINT "Notes: "
+    AT 8,3 :PRINT B.note$
+    KSTAT 1 :z%=GET
+    IF z%=4 OR z%=6 OR z%=13
+      NEXT
+    ELSEIF z%=3 OR z%=5
+      BACK
+    ELSEIF z%=8
+      AT 1,4 :PRINT " ERASE Y/N          "
+      e%=GET
+      IF e%=%Y
+        ERASE
+        USE C
+        C.num%=C.num%-1 
+        UPDATE
+        USE B
+      ELSE e%=%Y
+        GOTO TOPP::
+      ENDIF
+    ELSEIF z%=2
+      CLS
+      PRINT "Subject: "
+      AT 10,1 :EDIT B.subj$
+      AT 1,2 :PRINT "Due: "
+      AT 6,2 :EDIT B.due$
+      AT 1,3 :PRINT "Notes: "
+      AT 8,3 :EDIT B.note$
+      UPDATE
+      GOTO TOPP::
+    ELSEIF z%=1
+      GOTO TOP::
+    ENDIF
+  UNTIL EOF
+  GOTO TOPP::
+ELSEIF menu%=3
+  RETURN
+ELSE menu%=4
+  OFF
+  GOTO REF::
+ENDIF
+
+

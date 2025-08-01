@@ -1,0 +1,20 @@
+frame:
+local n,s,fps,hz
+PRINT "Hertz ?"
+input hz
+cls
+Print "Shutter Angle ?"
+input s
+cls
+fps=hz/(360/s)
+print "Camera Speed"
+print fps,"fps"
+GET
+n=menu("FPS,HMI,FILM,MENU")
+if n=1
+frame:
+elseif n=2
+HMI:
+elseif n=3
+FILM:
+ENDIF

@@ -1,0 +1,11 @@
+onerr:
+
+rem onerr off
+onerr handler::
+
+RAISE 300
+PRINT "FAIL"
+RETURN
+
+handler::
+PRINT "PASS"

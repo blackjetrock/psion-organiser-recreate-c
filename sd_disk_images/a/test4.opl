@@ -1,0 +1,9 @@
+ALL:
+
+LOCAL A%,Q%,o%
+LOCAL b
+
+B=23.5
+A%=23.4*9
+
+print A%+b

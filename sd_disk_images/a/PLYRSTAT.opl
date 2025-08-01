@@ -1,0 +1,35 @@
+plyrstat:(st%)
+
+REM This shows the player stats
+REM st% is the state GAME.OPL will return to after this runs
+REM if st% is 0, it will not set a state and continue after the call
+
+CLS
+PRINT "Health: "; plHealt%;"/";maxplh%
+PRINT "Attack: "; plAtt%
+PRINT "Defence: "; plDef%
+PRINT "Moves: "; plMoves% 
+GET
+CLS
+PRINT "Weapon: "; plweap$
+PRINT "Armour: "; plarm$
+PRINT "Defence: "; plDef%
+PRINT "Moves: "; plMoves% 
+GET
+CLS
+PRINT "Difficulty: "; diff% 
+PRINT "Location X: "; px% 
+PRINT "Location Y: "; py% 
+PRINT "Hour: "; HOUR 
+GET
+CLS
+PRINT bit0%, bit1%, bit2%, bit3%, bit4%, bit5%, bit6%
+PRINT biome%
+GET
+CLS
+
+ IF st%>0
+  state% = st%
+ ENDIF
+
+

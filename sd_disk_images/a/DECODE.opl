@@ -1,0 +1,14 @@
+decode:(decodex%,decodey%)
+
+
+  tChar$ = MID$(map$(decodey%), decodex%, 1)  REM Get the tile character
+  tAscii% = ASC(tChar$) - 32  REM Convert to ASCII value and adjust for usable range
+
+  REM Extract each bit
+  bit0% = (tAscii% AND 1)  REM Terrain Least significant bit
+  bit1% = (tAscii% AND 2) / 2 REM Terrain
+  bit2% = (tAscii% AND 4) / 4 REM Weather good= 0, bad = 1
+  bit3% = (tAscii% AND 8) / 8 
+  bit4% = (tAscii% AND 16) / 16 REM Combat 
+  bit5% = (tAscii% AND 32) / 32 REM NPC
+  bit6% = (tAscii% AND 64) / 64  REM encounter,treasure

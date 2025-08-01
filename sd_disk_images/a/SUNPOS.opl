@@ -1,0 +1,200 @@
+sunpos:
+global GST,YR,MO,DY,HR,MI
+local n%,LATI$(20),LONG$(20),flag%,ALT1,AZI1,LST,LNG,DE,CH,AZI,ALT,S,MN,LAT,AS,X,Y,GEL,DEC,geo,D,N,NU,M,EU
+CLS
+
+NEWPLACE::
+PRINT "Part of the World?"
+n%=MENUN(2,"North-West,North-East,South-West,South-East")
+CLS
+
+
+
+PRINT "LATITUDE?  N-S"
+PRINT "degrees..."
+INPUT LAT
+LATI$=FIX$(LAT,0,2)
+AT 1,2 
+PRINT "minutes..."
+INPUT MN
+LAT=LAT+MN/60
+LATI$=LATI$+CHR$(223)+FIX$(MN,0,2)
+
+AT 1,2
+PRINT "Seconds....."
+INPUT S
+LAT=LAT+S/3600
+LATI$=LATI$+"'"+FIX$(S,0,2)+CHR$(34)
+
+IF n% =3 OR n%=4
+LAT=0-LAT
+ENDIF
+
+
+
+CLS
+PRINT "LONGITUDE E-W"
+PRINT "Degrees..."
+INPUT DE
+LONG$=FIX$(DE,0,2)+CHR$(223)
+
+AT 1,2
+PRINT "Minutes..."
+INPUT MN
+LONG$=LONG$+FIX$(MN,0,2)+"'"
+
+AT 1,2
+PRINT "Seconds..."
+INPUT S
+LONG$=LONG$+FIX$(S,0,2)+CHR$(34)
+
+LNG=DE+MN/60+S/3600
+
+IF n%=1 OR n%=3
+LNG=0-LNG
+ENDIF
+
+CLS
+
+
+NEWDATE::
+IF flag%<>1
+  PRINT "DATE?"
+  PRINT "Year...."
+  INPUT YR
+  AT 1,2
+  PRINT "Month...."
+  INPUT MO
+  AT 1,2
+  PRINT "Day..."
+  INPUT DY
+
+NEWTIME::
+
+  CLS
+  PRINT "TIME?  24 clock"
+  PRINT "Hours...."
+  INPUT HR
+  AT 1,2
+  PRINT "Minutes..."
+  INPUT MI
+  flag%=0
+ENDIF
+
+CLS
+AT 1,2
+PRINT "Thinking...."
+TIMESIDE:
+D=WATCH:
+N=360/365.242191*D
+NU=N/360
+NU=INTF(NU)
+N=N-(NU*360)
+M=N+279.403303-282.768422
+IF M<0
+M=M+360
+ENDIF
+M=SIN(RAD(M))
+EU=(360/PI)*0.016713*M
+
+GEO=N+EU+279.403303
+IF GEO>360
+GEO=GEO-360
+ENDIF
+REM GEO is Sun's geocentric ecliptic longitude
+REM End of Sun calculation....Start of the ecliptic to equatoral conv
+GEL=0
+DEC=SIN(RAD(GEL))*COS(RAD(23.441884))+COS(RAD(GEL))*SIN(RAD(23.441884))*SIN(RAD(GEO))
+DEC=DEG(ASIN(DEC))
+Y=SIN(RAD(GEO))*COS(RAD(23.441884))-TAN(RAD(GEL))*SIN(RAD(23.441884))
+X=COS(RAD(GEO))
+AS=Y/X
+AS=DEG(ATAN(AS))
+IF X>=0 AND Y>=0
+  WHILE AS <0 OR AS >90
+    IF AS<0
+    AS=AS+180
+    ELSEIF AS>0
+    AS=AS-180
+    ENDIF
+  ENDWH
+ELSEIF Y>=0 AND X<0
+   WHILE AS<90 OR AS>180
+      IF AS<90
+      AS=AS+180
+      ELSEIF AS>180
+      AS=AS-180
+      ENDIF
+    ENDWH
+ELSEIF Y<0 AND X<0
+   WHILE AS<180 OR AS>270
+     IF AS<180
+     AS=AS+180
+     ELSEIF AS>270
+     AS=AS-180
+     ENDIF
+   ENDWH
+ELSEIF Y<0 AND X>=0
+    WHILE AS<270 OR AS>360
+       IF AS < 270
+       AS=AS+180
+       ELSEIF AS>360
+       AS=AS-180
+       ENDIF
+    ENDWH
+ENDIF
+
+REM AS=Right Ascension; DEC=declination 
+REM end of ecliptic to equartorial conv...
+REM Conv right ascension to hour angle
+AS=AS/15
+
+LST=GST+(LNG/15)
+NU=INTF(LST/24)
+LST=LST-24*NU
+ALT=LST-AS
+NU=INTF(ALT/24)
+AS=ALT-24*NU
+REM AS = hours
+AS=AS*15
+REM Start of equatoral to horizon DEC OK to here
+CH=SIN(RAD(AS))
+
+ALT=SIN(RAD(DEC))*SIN(RAD(LAT))+COS(RAD(DEC))*COS(RAD(LAT))*COS(RAD(AS))
+ALT=DEG(ASIN(ALT))
+AZI=(SIN(RAD(DEC))-(SIN(RAD(LAT))*SIN(RAD(ALT))))/(COS(RAD(LAT))*COS(RAD(ALT)))
+AZI=DEG(ACOS(AZI))
+IF CH>=0
+AZI=360-AZI
+ENDIF
+CLS
+
+PRINT "   Sun's position"
+PRINT DY;"/";MO;"/";YR,"@",HR;".";MI
+PRINT "Horizontal",INT((AZI+0.5));CHR$(223);CHR$(175)
+PRINT "Height",INT((ALT+0.5));CHR$(223);CHR$(169)
+GET
+AGAIN::
+CLS
+PRINT "Choose..."
+S=MENUN(2,"Again,Newdate,Newplace,Newtime,Print,Film,Menu")
+IF S=1
+SUNPOS:
+ELSEIF S=2
+GOTO NEWDATE::
+ELSEIF S=3
+flag%=1
+GOTO NEWPLACE::
+ELSEIF S=4
+GOTO NEWTIME::
+ELSEIF S=5
+LPRINT "              Sun's position"
+LPRINT
+LPRINT "Latitude ";LATI$,"Longitude",LONG$
+
+LPRINT DY;"/";MO;"/";YR,"@",HR;".";MI
+LPRINT "Horizontal",INT((AZI+0.5));CHR$(223);CHR$(175);"Height",INT((ALT+0.5));CHR$(223);CHR$(169)
+GOTO AGAIN::
+ELSEIF S=6
+FILM:
+ENDIF

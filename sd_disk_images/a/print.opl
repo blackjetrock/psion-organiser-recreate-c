@@ -1,0 +1,29 @@
+print:
+
+local A
+
+print fix$(ZY%,0,3)," ",
+
+PRINT
+PRINT "abc"
+PRINT "asdfgh"
+PRINT   "    abc    "
+PRINT A%
+PRINT B
+PRINT ABC
+PRINT ABC%
+PRINT A$
+PRINT DEF$
+PRINT A(2)
+PRINT B%(10)
+PRINT D$(2)
+PRINT F$(10,12)
+print A%,
+print A%,A%
+print A%,A%,
+print " ",
+print "a","a"
+print "a"," ",
+print (A% +3) * 5
+
+lprint fix$(KY%,0,3)," ",	

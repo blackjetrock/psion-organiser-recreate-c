@@ -1,0 +1,69 @@
+strcmp1:
+
+local A$(5), B$(5) , E$(10)
+local A, B, E, e%, ANS, ANS%, ANS$(10)
+local pass%, pass2%, num%
+
+pass% = 1
+pass2% = 0
+num% = 0
+
+rem ------------------------------------A--------------------------------------------
+
+A$ = "abc" : B$ = "xyz" : E% = a$ < B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "xyz" : B$ = "abc" : E% = a$ < B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "abc" : B$ = "abc" : E% = a$ < B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+
+A$ = "abc" : B$ = "xyz" : E% = a$ > B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "xyz" : B$ = "abc" : E% = a$ > B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "abc" : B$ = "abc" : E% = a$ > B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+
+A$ = "abc" : B$ = "xyz" : E% = a$ <= B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "xyz" : B$ = "abc" : E% = a$ <= B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "abc" : B$ = "abc" : E% = a$ <= B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+
+A$ = "abc" : B$ = "xyz" : E% = a$ >= B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "xyz" : B$ = "abc" : E% = a$ >= B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "abc" : B$ = "abc" : E% = a$ >= B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+
+A$ = "abc" : B$ = "xyz" : E% = a$ = B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "xyz" : B$ = "abc" : E% = a$ = B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "abc" : B$ = "abc" : E% = a$ = B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+
+A$ = "abc" : B$ = "xyz" : E% = a$ <> B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "xyz" : B$ = "abc" : E% = a$ <> B$ : ANS%= -1
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+A$ = "abc" : B$ = "abc" : E% = a$ <> B$ : ANS%= 0
+print CHR$(num%+asc("A"));"(";ANS%;"):";e%,(e%=ANS%) : PASS2%=PASS2%+(e%=ANS%) num%=num%+1
+
+
+rem --------------------------------------------------------------------------------
+
+if pass2% <> -num%
+pass%=0
+endif
+
+rem --------------------------------------------------------------------------------
+
+IF PASS%
+print "PASS"
+else
+print "FAIL"
+ENDIF
+

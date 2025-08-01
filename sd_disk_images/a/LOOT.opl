@@ -1,0 +1,97 @@
+loot:(ltype$)
+REM This generates a piece of loot for the player based on ltype% (loot type)
+REM typically loot time will be linked to the type of enemy defeated
+REM Although other types may be for quest rewards etc 
+REM ltype and difficulty should determine the loot
+
+REM determine ltype
+REM modify generation for difficulty if needed 
+REM (diff% between 0-22 natively, maybe 21 depending on starting pos)
+REM update the inventory
+REM Inform the player
+
+LOCAL lrnd% REM random number to use in loot drop chance
+
+lrnd% = RND*100
+
+ IF lType$ = "Wolf"
+  IF (lrnd%+diff%)>1
+   invtool:(1,"Wolf",1)
+   CLS
+   disptext:("One of the wolf's claws came loose and you're able to pull it from the paw. It's very sharp.",4)
+  ELSE
+   disptext:("You take one look over the corpse of the wolf, it doesn't look like there's anything useful left.",4)
+  ENDIF
+
+ ELSEIF lType$ = "Orc"
+  IF (lrnd%+diff%)>1
+   invtool:(1,"mushroom",1)
+   CLS
+   disptext:("Picking through the orc's pockets you find a mushroom, you don't know how it survived!",4)
+  ELSE
+   disptext:("You take one look over the corpse of the orc, it doesn't look like there's anything useful left.",4)
+  ENDIF
+
+
+ ELSEIF lType$ = "Werewolf"
+  IF (lrnd%+diff%)>1
+   invtool:(1,"Oil",1)
+   CLS
+   disptext:("You know that werewolf joints can yield a useful oil, you manage to extract some from the intact legs.",4)
+  ELSE
+   disptext:("You take one look over the corpse of the werewolf, it doesn't look like there's anything useful left.",4)
+  ENDIF
+
+
+ ELSEIF lType$ = "Vampire"
+  IF (lrnd%+diff%)>1
+   IF lrnd%>97
+    invtool:(1,"strange",1)
+    CLS
+    disptext:("As the dust settles you notice a faint humming coming from a leather wrapped pack the vampire was holding. You open it to reveal a heavy, strange book. You put it in your pack and quickly leave.",4)
+   ELSE
+   invtool:(1,"vampire",1)
+   CLS
+   disptext:("With a rock you manage to break a sharp tooth from the mouth of the vampire.",4)
+   ENDIF
+  ELSE
+   disptext:("You take one look over the corpse of the wretched vampire, it doesn't look like there's anything useful left.",4)
+  ENDIF
+
+
+ ELSEIF lType$ = "Goblin"
+  IF (lrnd%+diff%)>1
+   invtool:(1,"acid",1)
+   CLS
+   disptext:("In the ragged pile of meat and green sinew you see an organic sac about the size of your fist. It's a sac which holds a very powerful acid. You put it on your belt to dry and harden",4)
+  ELSE
+   disptext:("You take one look over the corpse of the wretched goblin, it doesn't look like there's anything useful left.",4)
+ ENDIF
+
+
+ ELSEIF lType$ = "Troll"
+  IF (lrnd%+diff%)>1
+   invtool:(1,"grapes",1)
+   CLS
+   disptext:("In the ragged pile of meat and green sinew you see a small wrapped bunch of grapes",4)
+  ELSE
+   disptext:("You take one look over the corpse of the stinking troll, it doesn't look like there's anything useful left.",4)
+  ENDIF
+
+ ELSEIF lType$ = "Dragon"
+  IF (lrnd%+diff%)>1
+   invtool:(1,"dragon",1)
+   CLS
+   disptext:("You are able to pry a perfect dragon scale from the beautiful corpse of the dragon.",4)
+  ELSE
+   disptext:("You take one look over the corpse of the dragon, it doesn't look like there's anything useful.",4)
+  ENDIF
+
+
+ ELSEIF lType$ = "Story1"
+
+ ELSE
+ REM Catch any error here
+
+ ENDIF
+

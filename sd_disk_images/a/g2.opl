@@ -1,0 +1,32 @@
+g2:
+
+local x%,y%
+
+gcls
+
+x% = 0
+
+while x% <80
+gpoint x%, 5
+gpoint x%, 10
+gpoint x%, 15
+gpoint x%, 20
+
+gpoint x%, 25
+x%=x%+1
+endwh
+
+y% = 0
+
+while y% <80
+gpoint 5, y%
+gpoint 10, y%
+gpoint 15, y%
+gpoint 20, y%
+
+gpoint 25, y%
+y% = y% +1
+endwh
+
+
+get

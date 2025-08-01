@@ -1,0 +1,35 @@
+PILL:
+
+LOCAL TEXT$(10),m%,IND$(2)
+
+KSTAT 1
+start::
+m%=menu("New,Last")
+if m%=1: goto new::
+elseif m%=2: text$="Last time:" : goto last::
+else stop
+endif
+
+new::
+CLS
+m%=menu("Ibuprofin,Paracetemol")
+if m%>0 : text$="Recorded." 
+m0=hour : m1=minute
+m2=m%
+goto last::
+
+else GOTO start::
+endif
+
+
+last::
+cls
+print text$;m0;
+IF m1<10 :IND$=":0" : ELSE IND$=":" : ENDIF
+PRINT IND$;m1
+if M2=1 : print CHR$(15);"Ibuprofin."
+elseif M2=2 : print CHR$(15);"Paracetamol"
+else print CHR$(15);"no record."
+endif
+M%=GET
+stop

@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include <string.h>
-//#include "nopl.h"
+
 #include "psion_recreate_all.h"
 
 FIL *icfp  = NULL;
@@ -23,6 +23,18 @@ FIL *chkfp = NULL;
 FIL *trfp  = NULL;
 FIL *exfp  = NULL;
 FIL *shfp  = NULL;
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+//
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int n_lines_ok    = 0;
+int n_lines_bad   = 0;
+int n_lines_blank = 0;
+int n_stack_errors = 0;
 
 // Reads next composite line into buffer
 
@@ -650,6 +662,7 @@ const SIMPLE_QC_MAP qc_map[] =
     {EXP_BUFF_ID_FUNCTION, "GCLS",               __,     __,                   __,        __,               QCX_GCLS, 0},
     {EXP_BUFF_ID_FUNCTION, "GLINE",              __,     __,                   __,        __,               QCX_GLINE, 0},
     {EXP_BUFF_ID_FUNCTION, "GPOINT",             __,     __,                   __,        __,               QCX_GPOINT, 0},
+    {EXP_BUFF_ID_FUNCTION, "GUPDATE",            __,     __,                   __,        __,               QCX_GUPDATE, 0},
 
 
     
@@ -5835,7 +5848,7 @@ void process_token(OP_STACK_ENTRY *token)
     case EXP_BUFF_ID_LPRINT_NEWLINE:
       ff_fprintf(ofp, "\nBuff id print");
       
-      NOBJ_VARTYPE vt;
+      NOBJ_VARTYPE vt = NOBJ_VARTYPE_UNKNOWN;
       
       // The type of the function is known, use that, not the expression type
       // which is more of a hint.
@@ -6210,17 +6223,6 @@ void finalise_expression(void)
   dbprintf("Finalise expression done.");
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//
-//
-//
-//
-////////////////////////////////////////////////////////////////////////////////
-
-int n_lines_ok    = 0;
-int n_lines_bad   = 0;
-int n_lines_blank = 0;
-int n_stack_errors = 0;
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -6388,6 +6390,7 @@ void dbpfq(const char *caller, char *fmt, ...)
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+char trans_res[30] PSRAM;
 
 int nopl_trans(char *filename)
 {
@@ -6395,6 +6398,17 @@ int nopl_trans(char *filename)
   FIL *fp = &f;
   FIL *vfp = NULL;
 
+  // This is run multiple times before exiting when on a device. When on the PC it runs and exits,
+  // so we have to cear these variables, or they retain their values from previous translations.
+  
+  // Clear variables
+  num_var_info = 0;
+
+  n_lines_ok    = 0;
+  n_lines_bad   = 0;
+  n_lines_blank = 0;
+  n_stack_errors = 0;
+  
   init_output();
   
   ptfp = ff_fopen("parse_text.txt",  "w");
@@ -6403,11 +6417,17 @@ int nopl_trans(char *filename)
     
   parser_check();
 
+  dp_cls();
+
+  
   // Perform two passes of translation and qcode generation
   for(pass_number = 1; pass_number<=2; pass_number++)
     {
       printf("\n%s:Pass %d\n", __FUNCTION__, pass_number);
 
+      sprintf(trans_res, "Pass %d", pass_number);
+      i_printxy_str(0, 0, trans_res);
+      
       // Keep things alive
       tight_loop_tasks();
 
@@ -6468,7 +6488,18 @@ int nopl_trans(char *filename)
   printf("  %d variables",               num_var_info);
   printf("  %d lines blank\n",           n_lines_blank);
 
+  dp_cls();
+  sprintf(trans_res, "%d lines",       n_lines_ok);
+  i_printxy_str(0, 0, trans_res);
+  sprintf(trans_res, "%d failed",    n_lines_bad);
+  i_printxy_str(0, 1, trans_res);
+  sprintf(trans_res, "%d vars",               num_var_info);
+  i_printxy_str(0, 2, trans_res);
+
   uninit_output();
+
+  kb_getk();
+  
   return(0);
 }
 

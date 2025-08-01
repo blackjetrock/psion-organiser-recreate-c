@@ -1,3 +1,5 @@
+#include "switches.h"
+
 #include <assert.h>
 #include <ctype.h>
 #include <malloc.h>
@@ -30,6 +32,7 @@ typedef unsigned int uint;
 #include "nopl.h"
 
 #include "newopl_lib.h"
+#include "lcdspi.h"
 
 //#define LVAD(XXX) printf("\n%s:%p\n", __FUNCTION__, &XXX-lvadp)
 #define LVAD(XXX) 
@@ -55,7 +58,7 @@ typedef unsigned int uint;
 //#include "opl.h"
 
 #include "menu.h"
-#include "switches.h"
+
 
 #include "sysvar.h"
 
@@ -66,7 +69,12 @@ typedef unsigned int uint;
 #include "diskio.h" /* Declarations of disk functions */
 #include "sd_card_utils.h"
 
+#include "file_handling.h"
+#include "i2ckbd.h"
+
 #define PSRAM __attribute__((section(".psram.")))
+
+//------------------------------------------------------------------------------
 
 extern char line[MAX_NOPL_LINE+1];
 extern int *lvadp;

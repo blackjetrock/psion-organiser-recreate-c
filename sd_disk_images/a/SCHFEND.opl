@@ -1,0 +1,31 @@
+SCHFEND:
+LOCAL K%
+PRINT CHR$(11);"a";A$(1)
+PRINT "b";A$(2)
+PRINT "c";A$(3);
+DO
+ AT 8,4
+ PRINT "AGAIN Y/N";
+ DO
+  K%=ASC(UPPER$(GET$))
+ UNTIL K%=%N OR K%=1 OR K%=%Y
+ AT 8,4
+ PRINT "         ";
+ IF K%=1
+  RETURN 0
+ ELSEIF K%=%N
+  RETURN 1
+ ENDIF
+ DO
+  AT 6,4
+  PRINT "Same position";CHR$(63);
+  K%=ASC(UPPER$(GET$))
+ UNTIL K%=%Y OR K%=%N OR K%=1
+ AT 6,4
+ PRINT "              ";
+UNTIL K%<>1
+IF K%=%Y
+ RETURN 2
+ELSE
+ RETURN 3
+ENDIF

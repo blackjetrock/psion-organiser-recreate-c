@@ -19,17 +19,22 @@ typedef enum _KEYCODE
    KEY_NONE      = -1,
   } KEYCODE;
 
+
 void matrix_scan(void);
 
 #define NOS_KEY_BUFFER_LEN 16
 
 extern volatile int nos_key_in;
 extern volatile int nos_key_out;
+extern int caps_mode;
+extern int num_mode;
+extern int cur_modes;
 
 void nos_put_key(char key);
 char nos_get_key(void);
 void check_keys(void);
-
+void kb_set_caps(int on_noff);
+void kb_set_num(int on_noff);
 
 KEYCODE kb_getk(void);
 KEYCODE kb_test(void);

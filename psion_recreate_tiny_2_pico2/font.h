@@ -8,6 +8,9 @@ void i_printxy_str(int x, int y, char *str);
 void i_printxy_hex(int x, int y, int value);
 void next_printpos_line(void);
 
+int display_num_lines(void);
+int display_num_chars(void);
+  
 extern int printpos_x;
 extern int printpos_y;
 extern int printpos_at_end;

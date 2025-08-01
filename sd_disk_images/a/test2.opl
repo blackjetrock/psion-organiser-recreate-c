@@ -1,0 +1,7 @@
+test2:
+mc1addr% = addr(mc1%())
+
+mc1%(1) = $3f62    :REM os     pk$setp
+
+mc1%(2) = $3900    :REM rts ;for now!
+

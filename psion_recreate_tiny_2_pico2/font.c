@@ -370,6 +370,22 @@ void next_printpos(int ch)
   
 }
 
+//------------------------------------------------------------------------------
+//
+// Return the number of lines and characters
+
+int display_num_lines(void)
+{
+  return(DISPLAY_NUM_LINES);
+}
+
+int display_num_chars(void)
+{
+  return(DISPLAY_NUM_CHARS);
+}
+
+//------------------------------------------------------------------------------
+
 void new_line(void)
 {
 
@@ -455,6 +471,10 @@ void i_printxy(int x, int y, int ch)
   printpos_y = y;
   next_printpos(ch);
 
+#if DB_PRINTPOS
+  printf("\npx,y: %d, %d", printpos_x, printpos_y);
+#endif
+  
   serial_display_xy(x, y, ch);
   
   ch -= 0;

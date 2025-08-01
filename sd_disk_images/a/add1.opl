@@ -1,0 +1,6 @@
+add1:
+
+local E
+
+e = 3862.0 * 43.0
+print e
