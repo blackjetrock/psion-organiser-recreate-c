@@ -95,6 +95,7 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: \
  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/psion_recreate_all.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/switches.h \
  /usr/arm-none-eabi/include/malloc.h \
  /usr/arm-none-eabi/include/machine/malloc.h \
  /usr/arm-none-eabi/include/time.h \
@@ -180,6 +181,10 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sysvar.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_time.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/serial.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/lcdspi.h \
+ /home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
+ /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/spi.h \
+ /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/spi.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/emulator.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/wireless.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/ssd1309.h \
@@ -201,7 +206,6 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_serial_eeprom.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_db.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/menu.h \
- /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/switches.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.h \
@@ -215,9 +219,6 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: \
  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/dma.h \
  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/dma.h \
  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/dma_debug.h \
- /home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
- /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/spi.h \
- /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/spi.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/sd_timeouts.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/diskio.h \
@@ -225,4 +226,9 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card_constants.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_regs.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/util.h \
- /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sd_card_utils.h
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sd_card_utils.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/file_handling.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2ckbd.h \
+ /home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+ /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/i2c.h \
+ /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/i2c.h

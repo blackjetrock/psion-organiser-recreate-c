@@ -410,6 +410,30 @@ errors.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/errors.c.s
 .PHONY : errors.c.s
 
+file_handling.o: file_handling.c.o
+.PHONY : file_handling.o
+
+# target to build an object file
+file_handling.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o
+.PHONY : file_handling.c.o
+
+file_handling.i: file_handling.c.i
+.PHONY : file_handling.i
+
+# target to preprocess a source file
+file_handling.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.i
+.PHONY : file_handling.c.i
+
+file_handling.s: file_handling.c.s
+.PHONY : file_handling.s
+
+# target to generate assembly for a file
+file_handling.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.s
+.PHONY : file_handling.c.s
+
 font.o: font.c.o
 .PHONY : font.o
 
@@ -1321,6 +1345,30 @@ home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/menadue/pic
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.o: home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.o
+
+# target to build an object file
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i
+
+# target to preprocess a source file
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s
+
+# target to generate assembly for a file
+home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
 home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 .PHONY : home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o
@@ -2866,6 +2914,30 @@ hw_config.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.s
 .PHONY : hw_config.c.s
 
+hwmain.o: hwmain.c.o
+.PHONY : hwmain.o
+
+# target to build an object file
+hwmain.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o
+.PHONY : hwmain.c.o
+
+hwmain.i: hwmain.c.i
+.PHONY : hwmain.i
+
+# target to preprocess a source file
+hwmain.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.i
+.PHONY : hwmain.c.i
+
+hwmain.s: hwmain.c.s
+.PHONY : hwmain.s
+
+# target to generate assembly for a file
+hwmain.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.s
+.PHONY : hwmain.c.s
+
 i2c.o: i2c.c.o
 .PHONY : i2c.o
 
@@ -2889,6 +2961,54 @@ i2c.s: i2c.c.s
 i2c.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/i2c.c.s
 .PHONY : i2c.c.s
+
+i2ckbd.o: i2ckbd.c.o
+.PHONY : i2ckbd.o
+
+# target to build an object file
+i2ckbd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o
+.PHONY : i2ckbd.c.o
+
+i2ckbd.i: i2ckbd.c.i
+.PHONY : i2ckbd.i
+
+# target to preprocess a source file
+i2ckbd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.i
+.PHONY : i2ckbd.c.i
+
+i2ckbd.s: i2ckbd.c.s
+.PHONY : i2ckbd.s
+
+# target to generate assembly for a file
+i2ckbd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.s
+.PHONY : i2ckbd.c.s
+
+lcdspi.o: lcdspi.c.o
+.PHONY : lcdspi.o
+
+# target to build an object file
+lcdspi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o
+.PHONY : lcdspi.c.o
+
+lcdspi.i: lcdspi.c.i
+.PHONY : lcdspi.i
+
+# target to preprocess a source file
+lcdspi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.i
+.PHONY : lcdspi.c.i
+
+lcdspi.s: lcdspi.c.s
+.PHONY : lcdspi.s
+
+# target to generate assembly for a file
+lcdspi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.s
+.PHONY : lcdspi.c.s
 
 logical_files.o: logical_files.c.o
 .PHONY : logical_files.o
@@ -3723,6 +3843,9 @@ help:
 	@echo "... errors.o"
 	@echo "... errors.i"
 	@echo "... errors.s"
+	@echo "... file_handling.o"
+	@echo "... file_handling.i"
+	@echo "... file_handling.s"
 	@echo "... font.o"
 	@echo "... font.i"
 	@echo "... font.s"
@@ -3837,6 +3960,9 @@ help:
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.o"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
+	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.o"
+	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
+	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.o"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s"
@@ -4030,9 +4156,18 @@ help:
 	@echo "... hw_config.o"
 	@echo "... hw_config.i"
 	@echo "... hw_config.s"
+	@echo "... hwmain.o"
+	@echo "... hwmain.i"
+	@echo "... hwmain.s"
 	@echo "... i2c.o"
 	@echo "... i2c.i"
 	@echo "... i2c.s"
+	@echo "... i2ckbd.o"
+	@echo "... i2ckbd.i"
+	@echo "... i2ckbd.s"
+	@echo "... lcdspi.o"
+	@echo "... lcdspi.i"
+	@echo "... lcdspi.s"
 	@echo "... logical_files.o"
 	@echo "... logical_files.i"
 	@echo "... logical_files.s"

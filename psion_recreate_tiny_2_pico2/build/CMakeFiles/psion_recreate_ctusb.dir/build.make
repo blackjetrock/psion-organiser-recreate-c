@@ -86,10 +86,24 @@ CMakeFiles/psion_recreate_ctusb.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/main.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/main.c -o CMakeFiles/psion_recreate_ctusb.dir/main.c.s
 
+CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
+CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/hwmain.c
+CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/hwmain.c
+
+CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/hwmain.c > CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.i
+
+CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/hwmain.c -o CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.s
+
 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/cdc.c
 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/cdc.c
 
 CMakeFiles/psion_recreate_ctusb.dir/cdc.c.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/psion_recreate_ctusb.dir/cdc.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/core1.c
 CMakeFiles/psion_recreate_ctusb.dir/core1.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/psion_recreate_ctusb.dir/core1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/psion_recreate_ctusb.dir/core1.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/core1.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/core1.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/core1.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/core1.c
 
 CMakeFiles/psion_recreate_ctusb.dir/core1.c.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/psion_recreate_ctusb.dir/core1.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/usb_descriptors.c
 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/usb_descriptors.c
 
 CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/font.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/font.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/font.c
 CMakeFiles/psion_recreate_ctusb.dir/font.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/psion_recreate_ctusb.dir/font.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/psion_recreate_ctusb.dir/font.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/font.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/font.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/font.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/font.c
 
 CMakeFiles/psion_recreate_ctusb.dir/font.c.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/psion_recreate_ctusb.dir/font.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_kb.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_kb.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.i: cmake_force
@@ -159,7 +173,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_dp.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_dp.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.i: cmake_force
@@ -173,7 +187,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_ed.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_ed.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_fl.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_fl.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.i: cmake_force
@@ -201,7 +215,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pk.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pk.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.i: cmake_force
@@ -215,7 +229,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_er.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_er.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.i: cmake_force
@@ -229,7 +243,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_db.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_db.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.i: cmake_force
@@ -243,7 +257,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_pico_flash.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_pico_flash.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.i: cmake_force
@@ -257,7 +271,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_linux.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_linux.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.i: cmake_force
@@ -271,7 +285,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_serial_eeprom.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_serial_eeprom.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.i: cmake_force
@@ -285,7 +299,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/display.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/display.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/display.c
 CMakeFiles/psion_recreate_ctusb.dir/display.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/psion_recreate_ctusb.dir/display.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/psion_recreate_ctusb.dir/display.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/display.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/display.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/display.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/display.c
 
 CMakeFiles/psion_recreate_ctusb.dir/display.c.i: cmake_force
@@ -299,7 +313,7 @@ CMakeFiles/psion_recreate_ctusb.dir/display.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/cursor.c
 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/cursor.c
 
 CMakeFiles/psion_recreate_ctusb.dir/cursor.c.i: cmake_force
@@ -313,7 +327,7 @@ CMakeFiles/psion_recreate_ctusb.dir/cursor.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/rtc.c
 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/rtc.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/rtc.c
 
 CMakeFiles/psion_recreate_ctusb.dir/rtc.c.i: cmake_force
@@ -327,7 +341,7 @@ CMakeFiles/psion_recreate_ctusb.dir/rtc.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2c.c
 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/i2c.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2c.c
 
 CMakeFiles/psion_recreate_ctusb.dir/i2c.c.i: cmake_force
@@ -341,7 +355,7 @@ CMakeFiles/psion_recreate_ctusb.dir/i2c.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/menu.c
 CMakeFiles/psion_recreate_ctusb.dir/menu.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/psion_recreate_ctusb.dir/menu.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/psion_recreate_ctusb.dir/menu.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/menu.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/menu.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/menu.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/menu.c
 
 CMakeFiles/psion_recreate_ctusb.dir/menu.c.i: cmake_force
@@ -355,7 +369,7 @@ CMakeFiles/psion_recreate_ctusb.dir/menu.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/serial.c
 CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/psion_recreate_ctusb.dir/serial.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/psion_recreate_ctusb.dir/serial.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/serial.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/serial.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/serial.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/serial.c
 
 CMakeFiles/psion_recreate_ctusb.dir/serial.c.i: cmake_force
@@ -369,7 +383,7 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sysvar.c
 CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sysvar.c
 
 CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.i: cmake_force
@@ -383,7 +397,7 @@ CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/eeprom.c
 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/eeprom.c
 
 CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.i: cmake_force
@@ -397,7 +411,7 @@ CMakeFiles/psion_recreate_ctusb.dir/eeprom.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/panel.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/panel.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/panel.c
 CMakeFiles/psion_recreate_ctusb.dir/panel.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/psion_recreate_ctusb.dir/panel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/psion_recreate_ctusb.dir/panel.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/panel.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/panel.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/panel.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/panel.c
 
 CMakeFiles/psion_recreate_ctusb.dir/panel.c.i: cmake_force
@@ -411,7 +425,7 @@ CMakeFiles/psion_recreate_ctusb.dir/panel.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/msc_disk.c
 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/msc_disk.c
 
 CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.i: cmake_force
@@ -425,7 +439,7 @@ CMakeFiles/psion_recreate_ctusb.dir/msc_disk.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/ssd1309.c
 CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/ssd1309.c
 
 CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.i: cmake_force
@@ -439,7 +453,7 @@ CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/ssd1351.c
 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/ssd1351.c
 
 CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.i: cmake_force
@@ -453,7 +467,7 @@ CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/oled_er_oledm015_2.c
 CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/oled_er_oledm015_2.c
 
 CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.i: cmake_force
@@ -467,7 +481,7 @@ CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/display_driver.c
 CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/display_driver.c
 
 CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.i: cmake_force
@@ -481,7 +495,7 @@ CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.c
 CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.c
 
 CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.i: cmake_force
@@ -495,7 +509,7 @@ CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.c
 CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.c
 
 CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.i: cmake_force
@@ -509,7 +523,7 @@ CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/qcode.c
 CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/qcode.c
 
 CMakeFiles/psion_recreate_ctusb.dir/qcode.c.i: cmake_force
@@ -523,7 +537,7 @@ CMakeFiles/psion_recreate_ctusb.dir/qcode.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/time_nopl.c
 CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/time_nopl.c
 
 CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.i: cmake_force
@@ -537,7 +551,7 @@ CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/calc.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/calc.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/calc.c
 CMakeFiles/psion_recreate_ctusb.dir/calc.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/psion_recreate_ctusb.dir/calc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/psion_recreate_ctusb.dir/calc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/calc.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/calc.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/calc.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/calc.c
 
 CMakeFiles/psion_recreate_ctusb.dir/calc.c.i: cmake_force
@@ -551,7 +565,7 @@ CMakeFiles/psion_recreate_ctusb.dir/calc.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/num_a.c
 CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/num_a.c
 
 CMakeFiles/psion_recreate_ctusb.dir/num_a.c.i: cmake_force
@@ -565,7 +579,7 @@ CMakeFiles/psion_recreate_ctusb.dir/num_a.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/machine.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/machine.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/machine.c
 CMakeFiles/psion_recreate_ctusb.dir/machine.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/psion_recreate_ctusb.dir/machine.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/psion_recreate_ctusb.dir/machine.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/machine.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/machine.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/machine.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/machine.c
 
 CMakeFiles/psion_recreate_ctusb.dir/machine.c.i: cmake_force
@@ -579,7 +593,7 @@ CMakeFiles/psion_recreate_ctusb.dir/machine.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/logical_files.c
 CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/logical_files.c
 
 CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.i: cmake_force
@@ -593,7 +607,7 @@ CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/errors.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/errors.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/errors.c
 CMakeFiles/psion_recreate_ctusb.dir/errors.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/psion_recreate_ctusb.dir/errors.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/psion_recreate_ctusb.dir/errors.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/errors.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/errors.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/errors.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/errors.c
 
 CMakeFiles/psion_recreate_ctusb.dir/errors.c.i: cmake_force
@@ -607,7 +621,7 @@ CMakeFiles/psion_recreate_ctusb.dir/errors.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_mn.c
 CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_mn.c
 
 CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.i: cmake_force
@@ -621,7 +635,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/clock_pico.c
 CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/clock_pico.c
 
 CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.i: cmake_force
@@ -635,7 +649,7 @@ CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_exec.c
 CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_exec.c
 
 CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.i: cmake_force
@@ -649,7 +663,7 @@ CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/parser.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/parser.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/parser.c
 CMakeFiles/psion_recreate_ctusb.dir/parser.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/psion_recreate_ctusb.dir/parser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/psion_recreate_ctusb.dir/parser.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/parser.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/parser.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/parser.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/parser.c
 
 CMakeFiles/psion_recreate_ctusb.dir/parser.c.i: cmake_force
@@ -663,7 +677,7 @@ CMakeFiles/psion_recreate_ctusb.dir/parser.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_trans.c
 CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_trans.c
 
 CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.i: cmake_force
@@ -677,7 +691,7 @@ CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sd_card_utils.c
 CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sd_card_utils.c
 
 CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.i: cmake_force
@@ -691,7 +705,7 @@ CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.s: cmake_force
 CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/hw_config.c
 CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/hw_config.c
 
 CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.i: cmake_force
@@ -702,10 +716,52 @@ CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/hw_config.c -o CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.s
 
+CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
+CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/file_handling.c
+CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/file_handling.c
+
+CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/file_handling.c > CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.i
+
+CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/file_handling.c -o CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.s
+
+CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
+CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/lcdspi.c
+CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/lcdspi.c
+
+CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/lcdspi.c > CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.i
+
+CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/lcdspi.c -o CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.s
+
+CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
+CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2ckbd.c
+CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2ckbd.c
+
+CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2ckbd.c > CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.i
+
+CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2ckbd.c -o CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.s
+
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
@@ -719,7 +775,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
@@ -733,7 +789,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o: /home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o -c /home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.i: cmake_force
@@ -747,7 +803,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_p
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i: cmake_force
@@ -761,7 +817,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o: /home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.o -c /home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardware_claim/claim.c.i: cmake_force
@@ -775,7 +831,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/hardwa
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
@@ -789,7 +845,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i: cmake_force
@@ -803,7 +859,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
@@ -816,7 +872,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i: cmake_force
@@ -830,7 +886,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o: /home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
@@ -844,7 +900,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_s
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o: /home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
@@ -858,7 +914,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_s
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o: /home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
@@ -872,7 +928,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_s
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o: /home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
@@ -886,7 +942,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_s
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o: /home/menadue/pico/pico-sdk/src/common/pico_time/time.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_time/time.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/time.c.i: cmake_force
@@ -900,7 +956,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_t
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o: /home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
@@ -914,7 +970,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_t
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
@@ -928,7 +984,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o: /home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
@@ -942,7 +998,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_u
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o: /home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
@@ -956,7 +1012,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_u
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o: /home/menadue/pico/pico-sdk/src/common/pico_util/queue.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.o -c /home/menadue/pico/pico-sdk/src/common/pico_util/queue.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
@@ -970,7 +1026,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/common/pico_u
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
@@ -984,7 +1040,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
@@ -998,7 +1054,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
@@ -1012,7 +1068,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
@@ -1026,7 +1082,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
@@ -1040,7 +1096,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i: cmake_force
@@ -1054,7 +1110,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
@@ -1068,7 +1124,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i: cmake_force
@@ -1082,7 +1138,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i: cmake_force
@@ -1096,7 +1152,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_flash/flash.c.i: cmake_force
@@ -1110,7 +1166,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
@@ -1124,7 +1180,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_divider/divider.c.i: cmake_force
@@ -1138,7 +1194,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
@@ -1152,7 +1208,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
@@ -1166,7 +1222,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
@@ -1180,7 +1236,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
@@ -1193,7 +1249,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
@@ -1207,7 +1263,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i: cmake_force
@@ -1221,7 +1277,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
@@ -1234,7 +1290,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.i: cmake_force
@@ -1247,7 +1303,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.i: cmake_force
@@ -1260,7 +1316,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.i: cmake_force
@@ -1273,7 +1329,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.i: cmake_force
@@ -1287,7 +1343,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
@@ -1300,7 +1356,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.i: cmake_force
@@ -1313,7 +1369,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.i: cmake_force
@@ -1326,7 +1382,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.i: cmake_force
@@ -1340,7 +1396,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i: cmake_force
@@ -1354,7 +1410,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i: cmake_force
@@ -1368,7 +1424,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i: cmake_force
@@ -1382,7 +1438,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i: cmake_force
@@ -1396,7 +1452,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
@@ -1409,7 +1465,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building ASM object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o   -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i: cmake_force
@@ -1423,7 +1479,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i: cmake_force
@@ -1437,7 +1493,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
@@ -1451,7 +1507,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
@@ -1465,7 +1521,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
@@ -1479,7 +1535,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
@@ -1493,7 +1549,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
@@ -1507,7 +1563,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
@@ -1521,7 +1577,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i: cmake_force
@@ -1535,7 +1591,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
@@ -1549,7 +1605,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/p
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
@@ -1563,7 +1619,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/p
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
@@ -1577,7 +1633,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/d
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
@@ -1591,7 +1647,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/d
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
@@ -1605,7 +1661,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
@@ -1619,7 +1675,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
@@ -1633,7 +1689,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
@@ -1647,7 +1703,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
@@ -1661,7 +1717,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
@@ -1675,7 +1731,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
@@ -1689,7 +1745,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
@@ -1703,7 +1759,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
@@ -1717,7 +1773,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
@@ -1731,7 +1787,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
@@ -1745,7 +1801,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
@@ -1759,7 +1815,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
@@ -1773,7 +1829,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/t
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
@@ -1787,7 +1843,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/src/c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
@@ -1801,7 +1857,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i: cmake_force
@@ -1815,7 +1871,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
@@ -1826,10 +1882,24 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
+CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
+CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+
+CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c > CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
@@ -1843,7 +1913,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o: /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o -c /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i: cmake_force
@@ -1857,7 +1927,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bs
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.i: cmake_force
@@ -1871,7 +1941,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffsystem.c.i: cmake_force
@@ -1885,7 +1955,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ffunicode.c.i: cmake_force
@@ -1899,7 +1969,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/dma_interrupts.c.i: cmake_force
@@ -1913,7 +1983,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.c.i: cmake_force
@@ -1927,7 +1997,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_timeouts.c.i: cmake_force
@@ -1941,7 +2011,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.c.i: cmake_force
@@ -1955,7 +2025,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/sd_card_sdio.c.i: cmake_force
@@ -1969,7 +2039,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.c.i: cmake_force
@@ -1983,7 +2053,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c.i: cmake_force
@@ -1997,7 +2067,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.c.i: cmake_force
@@ -2011,7 +2081,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crash.c.i: cmake_force
@@ -2025,7 +2095,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/crc.c.i: cmake_force
@@ -2039,7 +2109,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/f_util.c.i: cmake_force
@@ -2053,7 +2123,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/ff_stdio.c.i: cmake_force
@@ -2067,7 +2137,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/file_stream.c.i: cmake_force
@@ -2081,7 +2151,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/glue.c.i: cmake_force
@@ -2095,7 +2165,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_debug.c.i: cmake_force
@@ -2109,7 +2179,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/my_rtc.c.i: cmake_force
@@ -2123,7 +2193,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.o -c /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/src/util.c.i: cmake_force
@@ -2137,7 +2207,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-rec
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i: cmake_force
@@ -2151,7 +2221,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/aon_timer.c.i: cmake_force
@@ -2165,7 +2235,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pi
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_powman/powman.c.i: cmake_force
@@ -2179,7 +2249,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/ha
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o: CMakeFiles/psion_recreate_ctusb.dir/flags.make
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o: /home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o: CMakeFiles/psion_recreate_ctusb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o -MF CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o.d -o CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o -c /home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c
 
 CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.i: cmake_force
@@ -2193,6 +2263,7 @@ CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cm
 # Object files for target psion_recreate_ctusb
 psion_recreate_ctusb_OBJECTS = \
 "CMakeFiles/psion_recreate_ctusb.dir/main.c.o" \
+"CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/core1.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o" \
@@ -2237,6 +2308,9 @@ psion_recreate_ctusb_OBJECTS = \
 "CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o" \
+"CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o" \
+"CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o" \
+"CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o" \
@@ -2318,6 +2392,7 @@ psion_recreate_ctusb_OBJECTS = \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
+"CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o" \
 "CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o" \
@@ -2349,6 +2424,7 @@ psion_recreate_ctusb_OBJECTS = \
 psion_recreate_ctusb_EXTERNAL_OBJECTS =
 
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/main.c.o
+psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/core1.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o
@@ -2393,6 +2469,9 @@ psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/parser.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o
+psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o
+psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o
+psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/i2ckbd.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2350/pico_platform/platform.c.o
@@ -2474,6 +2553,7 @@ psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.c.o
@@ -2502,9 +2582,9 @@ psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c.o
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/build.make
 psion_recreate_ctusb.elf: pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-psion_recreate_ctusb.elf: /home/menadue/pico/pico-sdk/src/rp2_common/pico_crt0/rp2350/memmap_default.ld
+psion_recreate_ctusb.elf: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/memmap_custom.ld
 psion_recreate_ctusb.elf: CMakeFiles/psion_recreate_ctusb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Linking CXX executable psion_recreate_ctusb.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Linking CXX executable psion_recreate_ctusb.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/psion_recreate_ctusb.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/psion_recreate_ctusb.elf > psion_recreate_ctusb.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/build/psion_recreate_ctusb.elf >> psion_recreate_ctusb.dis
