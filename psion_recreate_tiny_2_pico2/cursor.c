@@ -12,8 +12,15 @@
 //------------------------------------------------------------------------------
 //
 // Cursor
+#if !PICOCALC
 #define CURSOR_CHAR        0x100
 #define CURSOR_UNDERLINE   0x101
+#endif
+
+#if PICOCALC
+#define CURSOR_CHAR        250
+#define CURSOR_UNDERLINE   251
+#endif
 
 int cursor_on = 0;
 uint64_t cursor_upd_time = 1000000L;
