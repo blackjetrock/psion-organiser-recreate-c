@@ -39,8 +39,6 @@ extern void own_task(void);
 
 const uint PIN_SDAOUT     = 14;
 const uint PIN_LATCHOUT2  = 15;
-const uint PIN_I2C_SDA    = 16;
-const uint PIN_I2C_SCL    = 17;
 const uint PIN_LS_DIR     = 18;
 const uint PIN_LATCHIN    = 19;
 const uint PIN_SCLKIN     = 20;
@@ -71,8 +69,8 @@ const uint PIN_VBAT_SW_ON = 27;
 
 const uint PIN_SDAOUT     = 27;
 const uint PIN_LATCHOUT2  = 15;
-const uint PIN_I2C_SDA    = 5;
-const uint PIN_I2C_SCL    = 6;
+//const uint PIN_I2C_SDA    = 5;
+//const uint PIN_I2C_SCL    = 6;
   
 const uint PIN_LS_DIR     = 7;
 const uint PIN_LATCHIN    = 12;

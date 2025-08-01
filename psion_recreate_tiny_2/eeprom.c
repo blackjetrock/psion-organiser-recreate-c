@@ -33,9 +33,9 @@ int read_eeprom(int slave_addr, int start, int len, BYTE *dest)
   
   // Set up the write address
 
-  i2c_send_bytes(slave_addr & 0xFE, 2, a);
+  i2c_send_bytes(I2C_BUS_OLED, slave_addr & 0xFE, 2, a);
 
-  return(i2c_read_bytes(slave_addr | 0x01, len, dest));
+  return(i2c_read_bytes(I2C_BUS_OLED, slave_addr | 0x01, len, dest));
 }
 
 int write_eeprom(int slave_addr, int start, int len, BYTE *src)
@@ -53,22 +53,22 @@ int write_eeprom(int slave_addr, int start, int len, BYTE *src)
   a[0] = start >> 8;
   a[1] = start & 0xFF;
 
-  i2c_start();
+  i2c_start(I2C_BUS_OLED);
 
   // Send slave address with write bit
-  i2c_send_byte(slave_addr);
+  i2c_send_byte(I2C_BUS_OLED, slave_addr);
 
   // Address
-  i2c_send_byte(a[0]);
-  i2c_send_byte(a[1]);
+  i2c_send_byte(I2C_BUS_OLED, a[0]);
+  i2c_send_byte(I2C_BUS_OLED, a[1]);
 
   // Write the data
     for (i = 0; i < len; i++)
     {
-      i2c_send_byte(*(src++));
+      i2c_send_byte(I2C_BUS_OLED, *(src++));
     }
 
-  i2c_stop();
+  i2c_stop(I2C_BUS_OLED);
 
   // Delay for the eeprom write time
   sleep_ms(4);

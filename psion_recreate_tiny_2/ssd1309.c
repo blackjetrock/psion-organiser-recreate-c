@@ -300,8 +300,8 @@ static const uint8_t Font3216[11][64] =
 extern const uint PIN_OLED_RES;
 extern const uint PIN_OLED_CS;
 extern const uint PIN_OLED_DC;
-extern const uint PIN_I2C_SDA;
-extern const uint PIN_I2C_SCL;
+//extern const uint PIN_I2C_SDA;
+//extern const uint PIN_I2C_SCL;
 
 //I2C
 #define IIC_CMD        0X00

@@ -400,11 +400,11 @@ void i2c_ssd_plot_point(int x, int y, int mode)
   Set_Page_Address(cy);
   Set_Column_Address(cx+4);
 
-  i2c_start();
+  i2c_start(I2C_BUS_OLED);
   
   // Send slave address with read bit
-  i2c_send_byte(Write_Address);
-  i2c_send_byte(0x40);
+  i2c_send_byte(I2C_BUS_OLED, Write_Address);
+  i2c_send_byte(I2C_BUS_OLED, 0x40);
 
   // Set a pixel
   //  i2c_send_byte(0x1 << (y % 8));
@@ -429,13 +429,13 @@ void i2c_ssd_plot_point(int x, int y, int mode)
 
   serial_plot_point_byte(x, y, mode);
   
-  i2c_send_byte(invert_byte(byte));
+  i2c_send_byte(I2C_BUS_OLED, invert_byte(byte));
 
   display_pixels[cy*128+cx] = byte;
   //printf("  byte:%02X", byte);
   
   //  i2c_send_byte(0);
-  i2c_stop();
+  i2c_stop(I2C_BUS_OLED);
 }
 
 //------------------------------------------------------------------------------
@@ -474,18 +474,18 @@ void i_printxy(int x, int y, int ch)
   Set_Page_Address(cy);
   Set_Column_Address(cx);
   
-  i2c_start();
+  i2c_start(I2C_BUS_OLED);
   
   // Send slave address with read bit
-  i2c_send_byte(Write_Address);
-  i2c_send_byte(0x40);
+  i2c_send_byte(I2C_BUS_OLED, Write_Address);
+  i2c_send_byte(I2C_BUS_OLED, 0x40);
   
   for(int j=0; j<5; j++)
     {
-      i2c_send_byte(invert_byte(font_5x7_letters[ch*5+(4-j)]));
+      i2c_send_byte(I2C_BUS_OLED, invert_byte(font_5x7_letters[ch*5+(4-j)]));
     }
-  i2c_send_byte(0);
-  i2c_stop();
+  i2c_send_byte(I2C_BUS_OLED, 0);
+  i2c_stop(I2C_BUS_OLED);
 #endif
 #endif
   
@@ -496,18 +496,18 @@ void i2c_ssd(int cx, int cy, int ch)
   Set_Page_Address(cy);
   Set_Column_Address(cx);
   
-  i2c_start();
+  i2c_start(I2C_BUS_OLED);
   
   // Send slave address with read bit
-  i2c_send_byte(Write_Address);
-  i2c_send_byte(0x40);
+  i2c_send_byte(I2C_BUS_OLED, Write_Address);
+  i2c_send_byte(I2C_BUS_OLED, 0x40);
   
   for(int j=0; j<5; j++)
     {
-      i2c_send_byte(invert_byte(font_5x7_letters[ch*5+(4-j)]));
+      i2c_send_byte(I2C_BUS_OLED, invert_byte(font_5x7_letters[ch*5+(4-j)]));
     }
-  i2c_send_byte(0);
-  i2c_stop();
+  i2c_send_byte(I2C_BUS_OLED, 0);
+  i2c_stop(I2C_BUS_OLED);
 }
 
 void i2c_ssd_clear_oled(void)
@@ -520,20 +520,20 @@ void i2c_ssd_clear_oled(void)
       Set_Column_Address(0x00);
 
 #if NEW_I2C
-      i2c_start();
-      i2c_send_byte(Write_Address);
-      i2c_send_byte(0x40);
+      i2c_start(I2C_BUS_OLED);
+      i2c_send_byte(I2C_BUS_OLED, Write_Address);
+      i2c_send_byte(I2C_BUS_OLED, 0x40);
 
       for(j=0; j<132; j++)
 	{
-	  i2c_send_byte(0);
+	  i2c_send_byte(I2C_BUS_OLED, 0);
 	}
       
-      i2c_stop();
+      i2c_stop(I2C_BUS_OLED);
 #else
       Start();
-      SentByte(Write_Address);
-      SentByte(0x40);
+      SentByte(I2C_BUS_OLED, Write_Address);
+      SentByte(I2C_BUS_OLED, 0x40);
       
       for(j=0; j<132; j++)
 	{
@@ -562,18 +562,18 @@ void print_cursor(int x, int y, int ch)
   Set_Page_Address(cy);
   Set_Column_Address(cx);
 
-  i2c_start();
+  i2c_start(I2C_BUS_OLED);
   
   // Send slave address with read bit
-  i2c_send_byte(Write_Address);
-  i2c_send_byte(0x40);
+  i2c_send_byte(I2C_BUS_OLED, Write_Address);
+  i2c_send_byte(I2C_BUS_OLED, 0x40);
 
   for(int j=0; j<5; j++)
     {
-      i2c_send_byte(invert_byte(font_5x7_letters[ch*5+(4-j)]));
+      i2c_send_byte(I2C_BUS_OLED, invert_byte(font_5x7_letters[ch*5+(4-j)]));
     }
-  i2c_send_byte(0);
-  i2c_stop();
+  i2c_send_byte(I2C_BUS_OLED, 0);
+  i2c_stop(I2C_BUS_OLED);
 #else
   dd_char_at_xy(x, y, ch);
   dd_update();

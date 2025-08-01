@@ -9,10 +9,12 @@
 //#include "hardware/clocks.h"
 #include "hardware/uart.h"
 
-#include "psion_recreate.h"
-#include "emulator.h"
+#include "psion_recreate_all.h"
 
-#include "rtc.h"
+//#include "psion_recreate.h"
+//#include "emulator.h"
+
+//#include "rtc.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -36,8 +38,8 @@ int read_mcp7940(int r)
   BYTE sb[1] = {r};
   
 #if NEW_I2C
-  i2c_send_bytes(MCP_WRITE_ADDR, 1, sb);  
-  i2c_read_bytes(MCP_READ_ADDR, 1, &b);
+  i2c_send_bytes(I2C_BUS_OLED, MCP_WRITE_ADDR, 1, sb);  
+  i2c_read_bytes(I2C_BUS_OLED, MCP_READ_ADDR, 1, &b);
 #else
   
   Start();
@@ -61,7 +63,7 @@ void write_mcp7940(int r, BYTE value)
 #if NEW_I2C
   BYTE data[2] = {r, value};
   data[1] = value;
-  i2c_send_bytes(MCP_WRITE_ADDR, 2, data);
+  i2c_send_bytes(I2C_BUS_OLED, MCP_WRITE_ADDR, 2, data);
 #else
   Start();
 

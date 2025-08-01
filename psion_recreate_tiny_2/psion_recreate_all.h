@@ -1,8 +1,11 @@
 #include <stdint.h>
+
 typedef uint8_t u_int8_t;
 typedef uint16_t u_int16_t;
 typedef uint64_t u_int64_t;
 typedef unsigned int uint;
+
+#include "switches.h"
 
 #include "psion_recreate.h"
 
@@ -23,6 +26,8 @@ typedef unsigned int uint;
 #include "ssd1351b.h"
 #include "display_driver.h"
 
+#include "i2c.h"
+
 #include "eeprom.h"
 #include "rtc.h"
 #include "display.h"
@@ -36,7 +41,7 @@ typedef unsigned int uint;
 //#include "opl.h"
 
 #include "menu.h"
-#include "switches.h"
+
 
 #include "sysvar.h"
 

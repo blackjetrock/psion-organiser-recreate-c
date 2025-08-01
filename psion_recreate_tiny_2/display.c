@@ -34,8 +34,8 @@ void write_595(const uint latchpin, int value, int n);
 ////////////////////////////////////////////////////////////////////////////////
 
 
-extern const uint PIN_I2C_SDA;
-extern const uint PIN_I2C_SCL;
+//extern const uint PIN_I2C_SDA;
+//extern const uint PIN_I2C_SCL;
 
 //#define SDA                  P1_1
 //#define SCL                  P1_0
@@ -580,7 +580,7 @@ void Set_Page_Address(unsigned char add)
 {
 #if NEW_I2C
   u_int8_t bytes[] = {0x80, 0xb0|(add & 0x7)};
-  i2c_send_bytes(Write_Address, 2, bytes);  
+  i2c_send_bytes(I2C_BUS_OLED, Write_Address, 2, bytes);  
 #else
   Start();
   SentByte(Write_Address);
@@ -596,7 +596,7 @@ void Set_Column_Address(unsigned char add)
 {
 #if NEW_I2C
   u_int8_t bytes[] = {0x80, 0x10|(add >> 4), 0x80, (0x0f&add)|0x00};
-  i2c_send_bytes(Write_Address, 4, bytes);  
+  i2c_send_bytes(I2C_BUS_OLED, Write_Address, 4, bytes);  
 #else
   Start();
   SentByte(Write_Address);
@@ -656,84 +656,84 @@ void initialise_oled(void)
     Delay(2000);
 
 #if NEW_I2C
-    i2c_start();
-    i2c_send_byte(Write_Address);
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xae);//--turn off oled panel
+    i2c_start(I2C_BUS_OLED);
+    i2c_send_byte(I2C_BUS_OLED, Write_Address);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xae);//--turn off oled panel
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xd5);//--set display clock divide ratio/oscillator frequency
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xa0);//--set divide ratio
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xd5);//--set display clock divide ratio/oscillator frequency
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xa0);//--set divide ratio
 
-    i2c_send_byte(CMD_I2C);  
-    i2c_send_byte(0xa8);//--set multiplex ratio(1 to 64)
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x1f);//--1/32 duty
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);  
+    i2c_send_byte(I2C_BUS_OLED, 0xa8);//--set multiplex ratio(1 to 64)
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x1f);//--1/32 duty
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xd3);//-set display offset
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x00);//-not offset
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xd3);//-set display offset
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x00);//-not offset
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xad);//--Set Master Configuration
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x8e);//--
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xad);//--Set Master Configuration
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x8e);//--
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xd8);//--Set Area Color Mode On/Off & Low Power Display Mode
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x05);//
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xd8);//--Set Area Color Mode On/Off & Low Power Display Mode
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x05);//
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xa1);//--set segment re-map 128 to 0
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xa1);//--set segment re-map 128 to 0
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xC8);//--Set COM Output Scan Direction 64 to 1
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xC8);//--Set COM Output Scan Direction 64 to 1
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xda);//--Set COM Pins Hardware Configuration
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x12);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xda);//--Set COM Pins Hardware Configuration
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x12);
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x91);//--Set current drive pulse width of BANK0, Color A, Band C.
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x3f);
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x3f);
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x3f);
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x3f);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x91);//--Set current drive pulse width of BANK0, Color A, Band C.
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x3f);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x3f);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x3f);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x3f);
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x81);//--set contrast control register
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(Contrast_level);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x81);//--set contrast control register
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, Contrast_level);
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xd9);//--set pre-charge period
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xd2);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xd9);//--set pre-charge period
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xd2);
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xdb);//--set vcomh
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0x34);
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xdb);//--set vcomh
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0x34);
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xa6);//--set normal display
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xa6);//--set normal display
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xa4);//Disable Entire Display On 
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xa4);//Disable Entire Display On 
 
-    i2c_send_byte(CMD_I2C);
-    i2c_send_byte(0xaf);//--turn on oled panel
+    i2c_send_byte(I2C_BUS_OLED, CMD_I2C);
+    i2c_send_byte(I2C_BUS_OLED, 0xaf);//--turn on oled panel
 
   
-    i2c_stop();
+    i2c_stop(I2C_BUS_OLED);
 #else
     Start();
     SentByte(Write_Address);
@@ -832,25 +832,25 @@ void Display_Chess(unsigned char value)
 
       Set_Column_Address(0x00);
 
-      i2c_start();
+      i2c_start(I2C_BUS_OLED);
       
-      i2c_send_byte(Write_Address);
-      i2c_send_byte(0x40);
+      i2c_send_byte(I2C_BUS_OLED, Write_Address);
+      i2c_send_byte(I2C_BUS_OLED, 0x40);
 
       for(j=0; j<16; j++)
 	{
 	  for(k=0; k<4; k++)
 	    {
-	    i2c_send_byte(value++);
+	    i2c_send_byte(I2C_BUS_OLED, value++);
 	    }
 	  
 	  for(k=0; k<4; k++)
 	    {
-	    i2c_send_byte(value++);
+	    i2c_send_byte(I2C_BUS_OLED, value++);
 	    }
 	}
       
-      i2c_stop();
+      i2c_stop(I2C_BUS_OLED);
     }
 }
 
@@ -946,16 +946,16 @@ void clear_oled(void)
       Set_Column_Address(0x00);
 
 #if NEW_I2C
-      i2c_start();
-      i2c_send_byte(Write_Address);
-      i2c_send_byte(0x40);
+      i2c_start(I2C_BUS_OLED);
+      i2c_send_byte(I2C_BUS_OLED, Write_Address);
+      i2c_send_byte(I2C_BUS_OLED, 0x40);
 
       for(j=0; j<132; j++)
 	{
-	  i2c_send_byte(0);
+	  i2c_send_byte(I2C_BUS_OLED, 0);
 	}
       
-      i2c_stop();
+      i2c_stop(I2C_BUS_OLED);
 #else
       Start();
       SentByte(Write_Address);
@@ -999,19 +999,19 @@ void pixels_clear(void)
 
       Set_Page_Address(i/128);
       Set_Column_Address(i%128);
-      i2c_start();
+      i2c_start(I2C_BUS_OLED);
   
       // Send slave address with read bit
-      i2c_send_byte(Write_Address);
-      i2c_send_byte(0x40);
+      i2c_send_byte(I2C_BUS_OLED, Write_Address);
+      i2c_send_byte(I2C_BUS_OLED, 0x40);
       
       // Set a pixel
-      //  i2c_send_byte(0x1 << (y % 8));
+      //  i2c_send_byte(I2C_BUS_OLED, 0x1 << (y % 8));
       
-      i2c_send_byte(BLANK_VAL);
+      i2c_send_byte(I2C_BUS_OLED, BLANK_VAL);
       
-      //      i2c_send_byte(0);
-      i2c_stop();
+      //      i2c_send_byte(I2C_BUS_OLED, 0);
+      i2c_stop(I2C_BUS_OLED);
     }
 #endif
 }
@@ -1048,14 +1048,14 @@ void plot_point(int x, int y, int mode)
   Set_Page_Address(cy);
   Set_Column_Address(cx+4);
 
-  i2c_start();
+  i2c_start(I2C_BUS_OLED);
   
   // Send slave address with read bit
-  i2c_send_byte(Write_Address);
-  i2c_send_byte(0x40);
+  i2c_send_byte(I2C_BUS_OLED, Write_Address);
+  i2c_send_byte(I2C_BUS_OLED, 0x40);
 
   // Set a pixel
-  //  i2c_send_byte(0x1 << (y % 8));
+  //  i2c_send_byte(I2C_BUS_OLED, 0x1 << (y % 8));
 
   uint8_t byte = display_pixels[cy*128+cx];
 
@@ -1077,13 +1077,13 @@ void plot_point(int x, int y, int mode)
 
   serial_plot_point_byte(x, y, mode);
   
-  i2c_send_byte(invert_byte(byte));
+  i2c_send_byte(I2C_BUS_OLED, invert_byte(byte));
 
   display_pixels[cy*128+cx] = byte;
   //printf("  byte:%02X", byte);
   
-  //  i2c_send_byte(0);
-  i2c_stop();
+  //  i2c_send_byte(I2C_BUS_OLED, 0);
+  i2c_stop(I2C_BUS_OLED);
 
 }
 #endif

@@ -154,8 +154,10 @@ typedef uint8_t BYTE;
 
 extern const uint PIN_SDAOUT;
 extern const uint PIN_LATCHOUT2;
-extern const uint PIN_I2C_SDA;
-extern const uint PIN_I2C_SCL;
+//extern const uint PIN_I2C_SDA;
+//extern const uint PIN_I2C_SCL;
+//extern const uint PIN_I2C_RTC_SDA;
+//extern const uint PIN_I2C_RTC_SCL;
 extern const uint PIN_LS_DIR;
 extern const uint PIN_LATCHIN;
 extern const uint PIN_SCLKIN;
@@ -309,17 +311,6 @@ extern uint8_t ramdata[RAM_SIZE];
 //void i2c_fn_initialise(void);
 //void i2c_fn_set_delay(int delay);
 
-void i2c_release(void);
-void i2c_delay(void);
-void i2c_sda_low(void);
-void i2c_sda_high(void);
-void i2c_scl_low(void);
-void i2c_scl_high(void);
-void i2c_start(void);
-void i2c_stop(void);
-int i2c_send_byte(BYTE b);
-int i2c_read_bytes(BYTE slave_addr, int n, BYTE *data);
-void i2c_send_bytes(BYTE slave_addr, int n, BYTE *data);
 
 // EEPROM
 
