@@ -218,17 +218,35 @@ void rtc_write_mem(void)
 
 char rtc_buffer[40];
 
+char *wdayn[8] =
+  {
+    "???",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun",
+  };
+
 char *rtc_get_time(void)
 {
   int seconds, minutes, hours;
+  int day, month, year;
+  int wday;
   
   read_rtc();
   
   seconds = ((timedate[0] & 0x70) >> 4)* 10 + (timedate[0] & 0xf);
   minutes = ((timedate[1] & 0x70) >> 4)* 10 + (timedate[1] & 0xf);
   hours   = ((timedate[2] & 0x70) >> 4)* 10 + (timedate[2] & 0xf);
+  wday    = ((timedate[3] & 0x00) >> 4)* 10 + (timedate[3] & 0x7);
+  day     = ((timedate[4] & 0x30) >> 4)* 10 + (timedate[4] & 0xf);
+  month   = ((timedate[5] & 0x30) >> 4)* 10 + (timedate[5] & 0xf);
+  year    = ((timedate[6] & 0xF0) >> 4)* 10 + (timedate[6] & 0xf);
 
-  sprintf(rtc_buffer, "%02d:%02d:%02d",hours, minutes, seconds);
+  sprintf(rtc_buffer, "%02d:%02d:%02d %02d/%02d/%02d %s",hours, minutes, seconds, day, month, year, wdayn[wday]);
   return(rtc_buffer);
 }
 
@@ -260,6 +278,46 @@ int rtc_get_minutes(void)
 int rtc_get_hours(void)
 {
   return(read_mcp7940(MCP_RTCHOUR_REG));
+}
+
+void rtc_set_wday(int s)
+{
+  write_mcp7940( MCP_RTCWKDAY_REG, s | MCP_ST_MASK);
+}
+
+void rtc_set_day(int s)
+{
+  write_mcp7940( MCP_RTCDATE_REG, s | MCP_ST_MASK);
+}
+
+void rtc_set_month(int m)
+{
+  write_mcp7940( MCP_RTCMTH_REG, m);
+}
+
+void rtc_set_year(int h)
+{
+  write_mcp7940( MCP_RTCYEAR_REG, h);
+}
+
+int rtc_get_wday(void)
+{
+  return(read_mcp7940(MCP_RTCWKDAY_REG));
+}
+
+int rtc_get_day(void)
+{
+  return(read_mcp7940(MCP_RTCDATE_REG));
+}
+
+int rtc_get_month(void)
+{
+  return(read_mcp7940(MCP_RTCMTH_REG));
+}
+
+int rtc_get_year(void)
+{
+  return(read_mcp7940(MCP_RTCYEAR_REG));
 }
 
 ////////////////////////////////////////////////////////////////////////////////

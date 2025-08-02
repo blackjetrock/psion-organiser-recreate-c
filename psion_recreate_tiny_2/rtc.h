@@ -57,5 +57,12 @@ int rtc_get_seconds(void);
 int rtc_get_minutes(void);
 int rtc_get_hours(void);
 
- 
+void rtc_set_wday(int s);
+void rtc_set_day(int s);
+void rtc_set_month(int m);
+void rtc_set_year(int h);
+int rtc_get_wday(void);
+int rtc_get_day(void);
+int rtc_get_month(void);
+int rtc_get_year(void);
 

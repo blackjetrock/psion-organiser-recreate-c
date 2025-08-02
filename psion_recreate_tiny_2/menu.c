@@ -1301,7 +1301,14 @@ enum
     MINUTES_L = 4,
     SECONDS_U = 6,
     SECONDS_L = 7,
-    
+    DATE_U = 9,    
+    DATE_L = 10,    
+    MONTH_U = 12,    
+    MONTH_L = 13,    
+    YEAR_U = 15,    
+    YEAR_L = 16,
+    WDAY_U = 18,
+    WDAY_L = 19,
   };
 
 void rtc_adjust(int what, int digit)
@@ -1330,6 +1337,35 @@ void rtc_adjust(int what, int digit)
 
     case SECONDS_L:
       rtc_set_seconds(bcd_ins(rtc_get_seconds(), digit, 0));
+      break;
+    
+    case WDAY_U:
+    case WDAY_L:
+      rtc_set_wday(digit);
+      break;
+
+    case DATE_U:
+      rtc_set_day(bcd_ins(rtc_get_day(), digit, 0));
+      break;
+
+      case DATE_L:
+      rtc_set_day(bcd_ins(rtc_get_day(), digit, 0));
+      break;
+
+    case MONTH_U:
+      rtc_set_month(bcd_ins(rtc_get_month(), digit, 1));
+      break;
+
+    case MONTH_L:
+      rtc_set_month(bcd_ins(rtc_get_month(), digit, 0));
+      break;
+
+    case YEAR_U:
+      rtc_set_year(bcd_ins(rtc_get_year(), digit, 1));
+      break;
+
+    case YEAR_L:
+      rtc_set_year(bcd_ins(rtc_get_year(), digit, 0));
       break;
     }
 }
@@ -1375,7 +1411,10 @@ void menu_rtc_clock(void)
             case HOURS_U:
             case MINUTES_U:
             case SECONDS_U:
-
+            case WDAY_U:
+            case DATE_U:
+            case MONTH_U:
+            case YEAR_U:
               set_cursor(set_val, u_l);
               break;
             }
@@ -1395,11 +1434,27 @@ void menu_rtc_clock(void)
               set_val = MINUTES_U;
               break;
               
-            case 'S':
+            case 'W':
               u_l = 0;
-              set_val = SECONDS_U;
+              set_val = WDAY_U;
+              break;
+              
+            case 'D':
+              u_l = 0;
+              set_val = DATE_U;
+              break;
+              
+            case 'O':
+              u_l = 0;
+              set_val = MONTH_U;
+              break;
+              
+            case 'Y':
+              u_l = 0;
+              set_val = YEAR_U;
               break;
 
+              
             case '0':
             case '1':
             case '2':
