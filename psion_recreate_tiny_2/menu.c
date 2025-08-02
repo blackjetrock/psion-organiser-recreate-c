@@ -1272,10 +1272,116 @@ void menu_rtc_get_time(void)
   kb_getk();
 }
 
+enum
+  {
+    NOTHING = 0,
+    HOURS,
+    MINUTES,
+    SECONDS,
+    
+  };
+
+void rtc_adjust(int what, int delta)
+{
+  switch(what)
+    {
+    case HOURS:
+      rtc_set_hours(rtc_get_hours()+delta);
+      break;
+
+    case MINUTES:
+      rtc_set_minutes((rtc_get_minutes()+delta+0x66) & 0xFF);
+      break;
+
+    case SECONDS:
+      rtc_set_seconds((rtc_get_seconds()+delta+0x66));
+      break;
+    }
+}
+
+void menu_rtc_clock(void)
+{
+  int done = 0;
+  uint64_t next_sample = 0;
+  int set_val = NOTHING;
+  
+  dp_cls();
+  
+  while( !done)
+    {
+      if( time_us_64() > next_sample )
+        {
+          next_sample = time_us_64()+100000;
+          
+          i_printxy_str(0, 0, rtc_get_time());
+
+          switch(set_val)
+            {
+            case NOTHING:
+              cursor_on = 0;
+              break;
+
+            case HOURS:
+              cursor_on = 1;
+              cursor_x = 0;
+              cursor_y = 0;
+              break;
+
+            case MINUTES:
+              cursor_on = 1;
+              cursor_x = 3;
+              cursor_y = 0;
+              break;
+
+            case SECONDS:
+              cursor_on = 1;
+              cursor_x = 6;
+              cursor_y = 0;
+              break;
+            }
+        }
+      
+      if( kb_test() != KEY_NONE )
+        {
+          switch(kb_getk() )
+            {
+            case 'H':
+              set_val = HOURS;
+              break;
+              
+            case 'M':
+              set_val = MINUTES;
+              break;
+              
+            case 'S':
+              set_val = SECONDS;
+              break;
+
+            case '+':
+              rtc_adjust(set_val, 1);
+              break;
+
+            case '-':
+              rtc_adjust(set_val, -1);
+              break;
+              
+            case KEY_ON:
+              done = 1;
+              break;
+            }
+        }
+    }
+}
+
 void menu_rtc_enable(void)
 {
   set_vbaten_bit();
   set_st_bit();
+}
+
+void menu_rtc_stop(void)
+{
+  clr_st_bit();
 }
 
 void menu_rtc_dump(void)
@@ -2601,8 +2707,10 @@ MENU menu_rtc =
    {
     {KEY_ON, "",        menu_back},
     {'S', "Start",      menu_rtc_enable},
+    {'P', "Stop",       menu_rtc_stop},
     {'D', "Dump",       menu_rtc_dump},
     {'G', "Get",        menu_rtc_get_time},
+    {'C', "Clock",      menu_rtc_clock},
     {'W', "Writemem",   menu_rtc_write_mem},
     {'R', "Readmem",    menu_rtc_read_mem},
 #if 0

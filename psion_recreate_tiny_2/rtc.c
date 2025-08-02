@@ -25,7 +25,6 @@
 #define MCP_WRITE_ADDR  (ADDR_MCP7940 & 0xFE)
 
 
-
 ////////////////////////////////////////////////////////////////////////////////
 //
 //
@@ -123,9 +122,21 @@ void set_st_bit()
 
 }
 
+// Clears the ST bit
+void clr_st_bit(void)
+{
+  BYTE reg0;
+
+  reg0 = read_mcp7940(MCP_RTCSEC_REG);
+  reg0 &= ~MCP_ST_MASK;
+
+  write_mcp7940(MCP_RTCSEC_REG, reg0);
+
+}
+
 // Clear the MCP_OUT bit
 
-void clear_out_bit()
+void clear_out_bit(void)
 {
   BYTE reg0;
 
@@ -146,9 +157,7 @@ void set_out_bit()
   reg0 |= MCP_OUT_MASK;
 
   write_mcp7940(MCP_RTCC_CONTROL_REG, reg0);
-
 }
-
 
 void rtc_dump(void)
 {
