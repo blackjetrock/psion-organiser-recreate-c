@@ -1272,30 +1272,79 @@ void menu_rtc_get_time(void)
   kb_getk();
 }
 
+//------------------------------------------------------------------------------
+
+int bcd_ins(int x, int d, int pos)
+{
+  int y;
+
+  if( pos == 0 )
+    {
+      y = (x & 0xF0) | (d<<0);
+    }
+
+  if( pos == 1 )
+    {
+      y = (x & 0x0F) | (d<<4);
+    }
+  
+  return(y);
+}
+
+// What we are adjusting and also cursor x pos
 enum
   {
-    NOTHING = 0,
-    HOURS,
-    MINUTES,
-    SECONDS,
+    NOTHING = 19,
+    HOURS_U = 0,
+    HOURS_L = 1,
+    MINUTES_U = 3,
+    MINUTES_L = 4,
+    SECONDS_U = 6,
+    SECONDS_L = 7,
     
   };
 
-void rtc_adjust(int what, int delta)
+void rtc_adjust(int what, int digit)
 {
   switch(what)
     {
-    case HOURS:
-      rtc_set_hours(rtc_get_hours()+delta);
+    case HOURS_U:
+      rtc_set_hours(bcd_ins(rtc_get_hours(), digit, 1));
       break;
 
-    case MINUTES:
-      rtc_set_minutes((rtc_get_minutes()+delta+0x66) & 0xFF);
+    case HOURS_L:
+      rtc_set_hours(bcd_ins(rtc_get_hours(), digit, 0));
       break;
 
-    case SECONDS:
-      rtc_set_seconds((rtc_get_seconds()+delta+0x66));
+    case MINUTES_U:
+      rtc_set_minutes(bcd_ins(rtc_get_minutes(), digit, 1));
       break;
+
+    case MINUTES_L:
+      rtc_set_minutes(bcd_ins(rtc_get_minutes(), digit, 0));
+      break;
+
+    case SECONDS_U:
+      rtc_set_seconds(bcd_ins(rtc_get_seconds(), digit, 1));
+      break;
+
+    case SECONDS_L:
+      rtc_set_seconds(bcd_ins(rtc_get_seconds(), digit, 0));
+      break;
+    }
+}
+
+void set_cursor(int what, int u_l)
+{
+  if( what == NOTHING )
+    {
+      cursor_on = 0;
+    }
+  else
+    {
+      cursor_on = 1;
+      cursor_x = what+u_l;
+      cursor_y = 0;
     }
 }
 
@@ -1304,6 +1353,8 @@ void menu_rtc_clock(void)
   int done = 0;
   uint64_t next_sample = 0;
   int set_val = NOTHING;
+  int keycode = KEY_NONE;
+  int u_l = 1;
   
   dp_cls();
   
@@ -1318,51 +1369,49 @@ void menu_rtc_clock(void)
           switch(set_val)
             {
             case NOTHING:
-              cursor_on = 0;
+              set_cursor(set_val, u_l);
               break;
 
-            case HOURS:
-              cursor_on = 1;
-              cursor_x = 0;
-              cursor_y = 0;
-              break;
+            case HOURS_U:
+            case MINUTES_U:
+            case SECONDS_U:
 
-            case MINUTES:
-              cursor_on = 1;
-              cursor_x = 3;
-              cursor_y = 0;
-              break;
-
-            case SECONDS:
-              cursor_on = 1;
-              cursor_x = 6;
-              cursor_y = 0;
+              set_cursor(set_val, u_l);
               break;
             }
         }
       
-      if( kb_test() != KEY_NONE )
+      if( (keycode = kb_test()) != KEY_NONE )
         {
           switch(kb_getk() )
             {
             case 'H':
-              set_val = HOURS;
+              u_l = 0;
+              set_val = HOURS_U;
               break;
               
             case 'M':
-              set_val = MINUTES;
+              u_l = 0;
+              set_val = MINUTES_U;
               break;
               
             case 'S':
-              set_val = SECONDS;
+              u_l = 0;
+              set_val = SECONDS_U;
               break;
 
-            case '+':
-              rtc_adjust(set_val, 1);
-              break;
-
-            case '-':
-              rtc_adjust(set_val, -1);
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+              rtc_adjust(set_val+u_l, keycode - '0');
+              u_l = 1 - u_l;
               break;
               
             case KEY_ON:
