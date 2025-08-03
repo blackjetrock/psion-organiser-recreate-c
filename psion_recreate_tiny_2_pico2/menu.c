@@ -2,6 +2,7 @@
 //
 // The Menu
 //
+// This is shown on whatever hardware display exists.
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -83,18 +84,22 @@ int do_menu_init(void)
 //
 // Menu handling
 //
+////////////////////////////////////////////////////////////////////////////////
+
+char menu_fn[NOBJ_FILENAME_MAXLEN+1];
+char ob3_fn[NOBJ_FILENAME_MAXLEN+1];
 
 void menu_process(void)
 {
+  FIL *mfp;
+  
   // Initialise?  
   if( do_menu_init() )
     {
       dp_cls();
       
-      //      i_printxy_str(0, 0, active_menu->name);
-      //print_nl();
-      
       int e = 0;
+
       while( active_menu->item[e].key != '&' )
 	{
 	  print_nl_if_necessary(active_menu->item[e].item_text);
@@ -103,7 +108,33 @@ void menu_process(void)
 	  print_str(" ");
 	  e++;
 	}
+#if 0
+      // Once we have displayed all the menu options in the table, see if the SD card
+      // has a list of OPL code to run, and add those names to the display
+      sprintf(menu_fn, "%s.mcfg", active_menu->name);
 
+      printf("\nLoading from %s", menu_fn);
+      
+      mfp = fopen(menu_fn, "r");
+
+      if( mfp != NULL )
+        {
+          // Read the lines, these are OPL OB3 filenames
+          while( !ff_feof(mfp) )
+            {
+              ff_fgets(ob3_fn, NOBJ_FILENAME_MAXLEN, mfp);
+              
+              print_nl_if_necessary(ob3_fn);
+              
+              print_str(ob3_fn);
+              print_str(" ");
+              
+            }
+          
+          fclose(mfp);
+        }
+#endif 
+      // Initialise the menu
       (*active_menu->init_fn)();
 
       cursor_on = 0;

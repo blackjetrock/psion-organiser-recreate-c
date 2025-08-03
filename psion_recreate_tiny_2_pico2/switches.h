@@ -6,10 +6,15 @@
 #define PICOCALC         1   // Use Picocalc hardware
 
 //------------------------------------------------------------------------------
+// Pico 2 with external PSRAM
 
 #define SWITCH_EXTERNAL_PSRAM   1
 
+#if PICOCALC
 #define KEY_SCAN_IN_MAIN 1
+#else
+#define KEY_SCAN_IN_MAIN 0
+#endif
 
 #define DB_KB_GETK              0 
 #define DB_KB_DEBOUNCE          0

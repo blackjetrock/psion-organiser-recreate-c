@@ -83,33 +83,33 @@ const uint PIN_VBAT_SW_ON = 27;
 #if PSION_MINI
 
 // No datapack interface
-#define PIN_SD0 27
-#define PIN_SD1 27
-#define PIN_SD2 27
-#define PIN_SD3 27
-#define PIN_SD4 27
-#define PIN_SD5 27
-#define PIN_SD6 27
-#define PIN_SD7 27
+#define PIN_SD0 7
+#define PIN_SD1 7
+#define PIN_SD2 7
+#define PIN_SD3 7
+#define PIN_SD4 7
+#define PIN_SD5 7
+#define PIN_SD6 7
+#define PIN_SD7 7
 
-#define PIN_SCLK       27
-#define PIN_SOE        27
-#define PIN_SMR        27
-#define PIN_P57        27
+#define PIN_SCLK       7
+#define PIN_SOE        7
+#define PIN_SMR        7
+#define PIN_P57        7
 
 const uint PIN_SDAOUT     = 27;
-const uint PIN_LATCHOUT2  = 27;
-const uint PIN_I2C_SDA    = 27;
-const uint PIN_I2C_SCL    = 27;
+const uint PIN_LATCHOUT2  = 15;
+const uint PIN_I2C_SDA    = 5;
+const uint PIN_I2C_SCL    = 6;
   
-const uint PIN_LS_DIR     = 27;
-const uint PIN_LATCHIN    = 27;
-const uint PIN_SCLKIN     = 27;
-const uint PIN_SDAIN      = 27;
-const uint PIN_LATCHOUT1  = 27;
+const uint PIN_LS_DIR     = 7;
+const uint PIN_LATCHIN    = 12;
+const uint PIN_SCLKIN     = 13;
+const uint PIN_SDAIN      = 17;
+const uint PIN_LATCHOUT1  = 14;
 
-const uint PIN_SCLKOUT    = 27;
-const uint PIN_VBAT_SW_ON = 27;
+const uint PIN_SCLKOUT    = 26;
+const uint PIN_VBAT_SW_ON = 11;
 
 #endif
 
@@ -451,7 +451,6 @@ int main(void)
 #endif
   
 #if SWITCH_EXTERNAL_PSRAM
-
   // Pico2 external memory
   gpio_set_function(PIMORONI_PICO_PLUS2_PSRAM_CS_PIN, GPIO_FUNC_XIP_CS1); // CS for PSRAM
   xip_ctrl_hw->ctrl|=XIP_CTRL_WRITABLE_M1_BITS;
@@ -488,12 +487,18 @@ int main(void)
 #endif
 #endif
   
-  clear_oled();
+  //clear_oled();
 
+  //  sleep_ms(7000);
+  
   stdio_init_all();
   //  sleep_ms(400);
 
+  //sleep_ms(7000);
+
+#if PICOCALC
   init_i2c_kbd();
+#endif
   
 #if !PSION_MINI
   sleep_ms(10);
@@ -511,6 +516,7 @@ int main(void)
   printf("\nAbout to init...");
 
 #if !PICOCALC
+
 #if PSION_MINI
   dd_init(DD_SPI_SSD1309);
   //dd_init(DD_SPI_SSD1351);
@@ -518,6 +524,7 @@ int main(void)
 #else
   dd_init(DD_I2C_SSD);
 #endif
+  
 #else
   dd_init(DD_PICOCALC);
 #endif
@@ -529,8 +536,6 @@ int main(void)
 
   printf("\nInit done");
 
-  
-  //sleep_ms(3000);
   dd_clear();
   
   while(true)

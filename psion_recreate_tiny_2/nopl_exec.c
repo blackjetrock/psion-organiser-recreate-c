@@ -935,6 +935,9 @@ int nopl_exec(char *filename)
   current_machine = &machine;
 
   debug("\n\n");
+
+  // Clear screen before qcode is run
+  dp_cls();
   
   execute_qcode(&machine, do_single_step);
   
@@ -954,4 +957,6 @@ int nopl_exec(char *filename)
   
   ff_fclose(exdbfp);
   ff_fclose(fp);
+  
+  return(1);
 }
