@@ -5,7 +5,7 @@ C based psion Organiser recreation code
 
 This is an alternative for the code that runs on the Psion Organiser 2 recreation. It uses the standard RP Pico SDK to create the code that runs on the new organiser PCBs instead of the original code that emulated the original organiser processor (6303) and ROMs. This code is much much faster, but all the functionality that is needed has to be created from scratch.
 
-This code is very much work in progress, I'm hacking the original emulatior based code and gradually removing what isn't needed.
+This code is very much work in progress, I'm hacking the original emulator based code and gradually removing what isn't needed.
 
 This is the simple menu I've started with, there's a framework taken from the emulator code that runs a set of menus that are very similar to the original organiser code menus.
 
