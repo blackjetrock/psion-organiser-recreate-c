@@ -9,13 +9,13 @@ This code is very much work in progress, I'm hacking the original emulatior base
 
 This is the simple menu I've started with, there's a framework taken from the emulator code that runs a set of menus that are very similar to the original organiser code menus.
 
-![IMG_20240810_140745952 (1)](https://github.com/user-attachments/assets/aa69ab7a-5603-4dbf-93de-effacbcaf2b0)
+<img src="https://github.com/user-attachments/assets/aa69ab7a-5603-4dbf-93de-effacbcaf2b0" width="600">
 
 psion_recreate_tiny_2 is the latest code. This uses the TinyUSB library for USB and presents many USB functions. There's a CLI and a mass storage device and some other consoles.
 
 It's easy to do graphics:
 
-![IMG_20240810_140754626](https://github.com/user-attachments/assets/940a2ced-eca9-40f7-9196-6f506f1189c1)
+<img src="https://github.com/user-attachments/assets/940a2ced-eca9-40f7-9196-6f506f1189c1" width="600">
 
 There's no support for data storage yet, but the hardware has some serial EEPROMs (64K or 128K I think) and the Pico flash available. There's the gpios to the datapack slots too, of course, so some functionality from the datapack tool could be copied over. There's a USB menu, as well. If you build a recreation with a PicoW then you have Wifi and BT as well. I haven't done that yet.
 
@@ -26,6 +26,8 @@ I've moved to the Pico 2, specifically the Pimoroni Pico Plus 2 as it has an ext
 
 The code runs on a Psion Mini fitted with the Pico Plus 2:
 
+
+<img src="https://github.com/user-attachments/assets/fb29606a-36d0-4813-8abe-4f0acc360326" width="600">
 
 
 NewOPL
