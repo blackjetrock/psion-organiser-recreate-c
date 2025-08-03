@@ -1,9 +1,9 @@
 // Switches and debug
 
 // Different builds
-#define PSION_MINI       0   // Small hardware version
+#define PSION_MINI       1   // Small hardware version
 #define PSION_RECREATE   0   // Hardware replacement for original case
-#define PICOCALC         1   // Use Picocalc hardware
+#define PICOCALC         0   // Use Picocalc hardware
 
 //------------------------------------------------------------------------------
 // Pico 2 with external PSRAM

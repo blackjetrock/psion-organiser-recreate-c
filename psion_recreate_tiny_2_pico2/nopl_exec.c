@@ -829,6 +829,7 @@ int nopl_exec(char *filename)
   if( fp == NULL )
     {
       printf("\nCannot open '%s'", filename);
+      ff_fclose(exdbfp);
       return(0);
     }
 

@@ -994,7 +994,7 @@ void ic_ls(char *str, char *fmt)
 
 void ic_cat(char *str, char *fmt)
 {
-  char arg[100];;
+  char arg[100];
 
   argv[0] = "0:";
   run_mount(1, argv);

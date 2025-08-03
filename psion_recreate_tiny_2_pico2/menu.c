@@ -80,19 +80,102 @@ int do_menu_init(void)
   return(0);
 }
 
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// SD card menu items
+//
+
+char menu_fn[NOBJ_FILENAME_MAXLEN+1];
+char ob3_fn[NOBJ_FILENAME_MAXLEN+1];
+char nm[NOBJ_FILENAME_MAXLEN+1];
+KEYCODE menu_sel_key = KEY_NONE;
+
+typedef void (*MENU_SD_ACTION)(void);
+
+void menu_sd_action_load(void)
+{
+  // Don't put empty lines up
+  if( strlen(ob3_fn) > 0 )
+    {
+      char selchar;
+      sscanf(ob3_fn, "%s %c", nm, &selchar);
+      print_nl_if_necessary(nm);
+      
+      print_str(nm);
+      print_str(" ");
+    }
+}
+
+void menu_sd_action_exec(void)
+{
+  // Don't put empty lines up
+  if( strlen(ob3_fn) > 0 )
+    {
+      char selchar;
+      sscanf(ob3_fn, "%s %c", nm, &selchar);
+      printf("\n%s -> %s %c", ob3_fn, nm, selchar);
+      
+      if( menu_sel_key == selchar )
+        {
+          // Run the OB3 file, if there is one  
+          // Mount the SD card and translate the OPL file
+          run_mount(0, argv_null);
+          
+          // Add suffix, as it has to be an ob3 file
+          strcpy(ob3_fn, nm);
+          strcat(ob3_fn, ".ob3");
+          
+          dp_cls();
+          nopl_exec(ob3_fn);
+          
+          //          run_unmount(0, argv_null);
+         }
+     }
+ }
+
+void menu_sd_action(MENU_SD_ACTION action)
+{
+  FIL *mfp;
+  
+  sprintf(menu_fn, "%s.mcfg", active_menu->name);
+  
+  printf("\nLoading from %s", menu_fn);
+  run_mount(0, argv_null);
+  
+  mfp = fopen(menu_fn, "r");
+  
+  if( mfp != NULL )
+    {
+      // Read the lines, these are OPL OB3 filenames
+      while( !ff_feof(mfp) )
+        {
+          ff_fgets(ob3_fn, NOBJ_FILENAME_MAXLEN, mfp);
+          printf("\nfeof=%d ob3_fn:'%s'", ff_feof(mfp), ob3_fn);
+          int lstch = strlen(ob3_fn)-1;
+          
+          if( ob3_fn[lstch] == '\n' )
+            {
+              ob3_fn[lstch] = '\0';
+            }
+
+          (*action)();
+          
+        }
+      
+      fclose(mfp);
+    }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Menu handling
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-char menu_fn[NOBJ_FILENAME_MAXLEN+1];
-char ob3_fn[NOBJ_FILENAME_MAXLEN+1];
 
 void menu_process(void)
 {
-  FIL *mfp;
-  
   // Initialise?  
   if( do_menu_init() )
     {
@@ -108,32 +191,11 @@ void menu_process(void)
 	  print_str(" ");
 	  e++;
 	}
-#if 0
+
       // Once we have displayed all the menu options in the table, see if the SD card
       // has a list of OPL code to run, and add those names to the display
-      sprintf(menu_fn, "%s.mcfg", active_menu->name);
-
-      printf("\nLoading from %s", menu_fn);
+      menu_sd_action(menu_sd_action_load);
       
-      mfp = fopen(menu_fn, "r");
-
-      if( mfp != NULL )
-        {
-          // Read the lines, these are OPL OB3 filenames
-          while( !ff_feof(mfp) )
-            {
-              ff_fgets(ob3_fn, NOBJ_FILENAME_MAXLEN, mfp);
-              
-              print_nl_if_necessary(ob3_fn);
-              
-              print_str(ob3_fn);
-              print_str(" ");
-              
-            }
-          
-          fclose(mfp);
-        }
-#endif 
       // Initialise the menu
       (*active_menu->init_fn)();
 
@@ -145,6 +207,7 @@ void menu_process(void)
   if( kb_test() != KEY_NONE )
     {
       KEYCODE k= kb_getk();
+      int executed = 0;
       
       int e = 0;
      
@@ -154,12 +217,21 @@ void menu_process(void)
 	    {
 	      // Call the function
 	      (*active_menu->item[e].do_fn)();
-
+              executed = 1;
 	      menu_init = 1;
 	      break;
 	    }
 	  e++;
 	}
+
+      
+      // If we haven't run anything, check against the SD card menu items
+      if( !executed )
+        {
+          menu_init = 1;
+          menu_sel_key = k;
+          menu_sd_action(menu_sd_action_exec);
+        }
     }
 }
 
