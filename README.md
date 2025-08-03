@@ -19,6 +19,11 @@ It's easy to do graphics:
 
 There's no support for data storage yet, but the hardware has some serial EEPROMs (64K or 128K I think) and the Pico flash available. There's the gpios to the datapack slots too, of course, so some functionality from the datapack tool could be copied over. There's a USB menu, as well. If you build a recreation with a PicoW then you have Wifi and BT as well. I haven't done that yet.
 
+Pico2
+=====
+
+I've moved to the Pico 2, specifically the Pimoroni Pico Plus 2 as it has an external 8MB PSRAM IC on board. this is needed for the port of NewOPL to the Pico. I've basically moved the PC version of the translator and runtime to the Pico. As that is a recursive descent parsrr it needs more than the default 4 or 8K stack that the standard Pico 2 provides. The tyranslator and runtime both write log files and I have kept those, they are written to the SD card. So, to use NewOPl on the Pico, you need a Pico with 8Mb of PSRAM and an SD card. There is still a Pico version of the code that has no NewOPL.
+
 NewOPL
 ======
 
@@ -28,7 +33,7 @@ The code runs in the RP2350 in a larger stack for both cores. A custom .ld scrip
 New OPL commands
 ----------------
 
-It's possible to add new commands to OPL, that is mainky a table update process. The parser and the rintime have tables of QCodes and OPl commands and addind entries to those allows new commands to be added. There is some code to add and a parser to update, but for simple syntax and commands that is minimal.
+It's possible to add new commands to OPL, that is mainly a table update process. The parser and the rintime have tables of QCodes and OPl commands and addind entries to those allows new commands to be added. There is some code to add and a parser to update, but for simple syntax and commands that is minimal.
 The Pico2 code here has these commands added:
 
 * GCLS    Clears the display
