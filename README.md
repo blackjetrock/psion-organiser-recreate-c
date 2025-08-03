@@ -29,6 +29,16 @@ The code runs on a Psion Mini fitted with the Pico Plus 2:
 
 <img src="https://github.com/user-attachments/assets/fb29606a-36d0-4813-8abe-4f0acc360326" width="600">
 
+Picocalc
+========
+
+You can also run the code on the Picocalc. If you fit the Picocal with a Pimoroni Pico Pluis 2 then you can yranslate and run NewOPL.
+
+<img src="https://github.com/user-attachments/assets/08678f7a-9d40-4b1e-a9da-61e1aa56eb24" width="600">
+
+The C framework also works, this is the bubble universe demo:
+
+<img src="https://github.com/user-attachments/assets/ced8bea9-3942-4986-a24b-74aca4811257" width="600">
 
 NewOPL
 ======
