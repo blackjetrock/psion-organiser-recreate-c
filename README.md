@@ -24,15 +24,21 @@ Pico2
 
 I've moved to the Pico 2, specifically the Pimoroni Pico Plus 2 as it has an external 8MB PSRAM IC on board. this is needed for the port of NewOPL to the Pico. I've basically moved the PC version of the translator and runtime to the Pico. As that is a recursive descent parsrr it needs more than the default 4 or 8K stack that the standard Pico 2 provides. The tyranslator and runtime both write log files and I have kept those, they are written to the SD card. So, to use NewOPl on the Pico, you need a Pico with 8Mb of PSRAM and an SD card. There is still a Pico version of the code that has no NewOPL.
 
+
 The code runs on a Psion Mini fitted with the Pico Plus 2:
 
 
 <img src="https://github.com/user-attachments/assets/fb29606a-36d0-4813-8abe-4f0acc360326" width="600">
 
+
+To build for the Mini with a Pico 2, set the PSION_MINI switch in switches.h in the psion_recreate_tiny_2_pico2 directory and rebuild. The psion_recreate_tiny_2 directory is a build for the Pico.
+
+
 Picocalc
 ========
 
 You can also run the code on the Picocalc. If you fit the Picocal with a Pimoroni Pico Pluis 2 then you can yranslate and run NewOPL.
+To build for the Picocalc with a Pico 2, set the PICOCALC switch in switches.h in the psion_recreate_tiny_2_pico2 directory and rebuild. The psion_recreate_tiny_2 directory is a build for the Pico.
 
 <img src="https://github.com/user-attachments/assets/08678f7a-9d40-4b1e-a9da-61e1aa56eb24" width="600">
 
