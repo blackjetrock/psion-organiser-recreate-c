@@ -24,6 +24,10 @@ Pico2
 
 I've moved to the Pico 2, specifically the Pimoroni Pico Plus 2 as it has an external 8MB PSRAM IC on board. this is needed for the port of NewOPL to the Pico. I've basically moved the PC version of the translator and runtime to the Pico. As that is a recursive descent parsrr it needs more than the default 4 or 8K stack that the standard Pico 2 provides. The tyranslator and runtime both write log files and I have kept those, they are written to the SD card. So, to use NewOPl on the Pico, you need a Pico with 8Mb of PSRAM and an SD card. There is still a Pico version of the code that has no NewOPL.
 
+The code runs on a Psion Mini fitted with the Pico Plus 2:
+
+
+
 NewOPL
 ======
 
