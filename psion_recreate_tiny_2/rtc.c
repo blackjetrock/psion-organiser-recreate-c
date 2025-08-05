@@ -42,10 +42,21 @@ MCP7940_FIELD mcp7940_fields[] =
     {0x03, 0x07},    // WKDAY
     {0x00, 0x7F},    // SECONDS
     {0x01, 0x7F},    // MINUTES
-    {0x02, 0x1F},    // HOURS
+    {0x02, 0x3F},    // HOURS
     {0x04, 0x3F},    // DAY
     {0x05, 0x1F},    // MONTH
     {0x06, 0xFF},    // YEAR
+    {0x03, 0x10},    // PWRFAIL
+    {0x18, 0x7F},    // PDMINUTES
+    {0x19, 0x3F},    // PDHOURS
+    {0x1A, 0x3F},    // PDDAY
+    {0x1B, 0x1F},    // PDMONTH
+    {0x1B, 0xE0},    // PDWKDAY
+    {0x1C, 0x7F},    // PUMINUTES
+    {0x1D, 0x3F},    // PUHOURS
+    {0x1E, 0x3F},    // PUDAY
+    {0x1F, 0x1F},    // PUMONTH
+    {0x1F, 0xE0},    // PUWKDAY
   };
 
 #define NUM_FIELDS (sizeof(mcp7940_fields)/sizeof(MCP7940_FIELD))
@@ -60,6 +71,17 @@ enum {
   MCP7940_F_DAY,
   MCP7940_F_MONTH,
   MCP7940_F_YEAR,
+  MCP7940_F_PWRFAIL,
+  MCP7940_F_PDMINUTES,
+  MCP7940_F_PDHOURS,
+  MCP7940_F_PDDAY,
+  MCP7940_F_PDMONTH,
+  MCP7940_F_PDWKDAY,
+  MCP7940_F_PUMINUTES,
+  MCP7940_F_PUHOURS,
+  MCP7940_F_PUDAY,
+  MCP7940_F_PUMONTH,
+  MCP7940_F_PUWKDAY,
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -170,21 +192,18 @@ void rtc_write_field(int fieldnum, int value)
 
 // Sets the VBATEN bit
 
-void set_vbaten_bit()
+void set_vbaten_bit(void)
 {
-  BYTE reg0;
-
   rtc_write_field(MCP7940_F_VBATEN, 1);
-#if 0  
-  reg0 = read_mcp7940(MCP_RTCWKDAY_REG);
-  reg0 |= MCP_VBATEN_MASK;
+}
 
-  write_mcp7940(MCP_RTCWKDAY_REG, reg0);
-#endif
+void clr_pwrfail_bit(void)
+{
+  rtc_write_field(MCP7940_F_PWRFAIL, 0);
 }
 
 // Sets the ALMPOL 0 bit
-void set_almpol0_bit()
+void set_almpol0_bit(void)
 {
   BYTE reg0;
 
@@ -284,7 +303,7 @@ void rtc_dump(void)
 // Read date and time from RTC
 //
 
-uint8_t timedate[20];
+uint8_t timedate[MCP_LAST_BYTE+1];
 uint8_t memdata[64];
 
 // Reads first set of registers into timedate[]
@@ -292,7 +311,7 @@ uint8_t memdata[64];
 
 void read_rtc(void)
 {
-  for(int i=0; i<9; i++)
+  for(int i=0; i<=MCP_LAST_BYTE; i++)
     {
       BYTE reg = read_mcp7940(i);
       timedate[i] = reg;      
@@ -330,6 +349,42 @@ char *wdayn[8] =
     "Sun",
   };
 
+char *rtc_get_pdtime(void)
+{
+  int minutes, hours;
+  int day, month;
+  int wday;
+  
+  read_rtc();
+
+  minutes = rtc_read_field(MCP7940_F_PDMINUTES);
+  hours   = rtc_read_field(MCP7940_F_PDHOURS);
+  wday    = rtc_read_field(MCP7940_F_PDWKDAY);
+  day     = rtc_read_field(MCP7940_F_PDDAY);
+  month   = rtc_read_field(MCP7940_F_PDMONTH);
+  
+  sprintf(rtc_buffer, "%02X:%02X %02X/%02X %s", hours, minutes,  day, month, wdayn[wday]);
+  return(rtc_buffer);
+}
+
+char *rtc_get_putime(void)
+{
+  int minutes, hours;
+  int day, month;
+  int wday;
+  
+  read_rtc();
+
+  minutes = rtc_read_field(MCP7940_F_PUMINUTES);
+  hours   = rtc_read_field(MCP7940_F_PUHOURS);
+  wday    = rtc_read_field(MCP7940_F_PUWKDAY);
+  day     = rtc_read_field(MCP7940_F_PUDAY);
+  month   = rtc_read_field(MCP7940_F_PUMONTH);
+  
+  sprintf(rtc_buffer, "%02X:%02X %02X/%02X %s", hours, minutes,  day, month, wdayn[wday]);
+  return(rtc_buffer);
+}
+
 char *rtc_get_time(void)
 {
   int seconds, minutes, hours;
@@ -337,16 +392,16 @@ char *rtc_get_time(void)
   int wday;
   
   read_rtc();
-  
-  seconds = ((timedate[0] & 0x70) >> 4)* 10 + (timedate[0] & 0xf);
-  minutes = ((timedate[1] & 0x70) >> 4)* 10 + (timedate[1] & 0xf);
-  hours   = ((timedate[2] & 0x70) >> 4)* 10 + (timedate[2] & 0xf);
-  wday    = ((timedate[3] & 0x00) >> 4)* 10 + (timedate[3] & 0x7);
-  day     = ((timedate[4] & 0x30) >> 4)* 10 + (timedate[4] & 0xf);
-  month   = ((timedate[5] & 0x30) >> 4)* 10 + (timedate[5] & 0xf);
-  year    = ((timedate[6] & 0xF0) >> 4)* 10 + (timedate[6] & 0xf);
 
-  sprintf(rtc_buffer, "%02d:%02d:%02d %02d/%02d/%02d %s",hours, minutes, seconds, day, month, year, wdayn[wday]);
+  seconds = rtc_read_field(MCP7940_F_SECONDS);
+  minutes = rtc_read_field(MCP7940_F_MINUTES);
+  hours   = rtc_read_field(MCP7940_F_HOURS);
+  wday    = rtc_read_field(MCP7940_F_WKDAY);
+  day     = rtc_read_field(MCP7940_F_DAY);
+  month   = rtc_read_field(MCP7940_F_MONTH);
+  year    = rtc_read_field(MCP7940_F_YEAR);
+  
+  sprintf(rtc_buffer, "%02X:%02X:%02X %02X/%02X/%02X %s", hours, minutes, seconds, day, month, year, wdayn[wday]);
   return(rtc_buffer);
 }
 

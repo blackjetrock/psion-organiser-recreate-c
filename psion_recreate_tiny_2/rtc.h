@@ -34,9 +34,11 @@ extern int rtc_hours;
 #define MCP_ALM0WKDAY_REG    0x0D
 #define MCP_ALM1WKDAY_REG    0x14
 #define MCP_ALMPOL_MASK      0x80
+#define MCP_POWER_UP_TIME    0x18
+#define MCP_POWER_DOWN_TIME  0x1C
+#define MCP_LAST_BYTE        0x1F
 
-
-extern uint8_t timedate[20];
+extern uint8_t timedate[MCP_LAST_BYTE+1];
 extern uint8_t memdata[64];
 
 // Reads first set of registers into timedate[]
@@ -44,6 +46,9 @@ extern uint8_t memdata[64];
 
 void read_rtc(void);
 char *rtc_get_time(void);
+char *rtc_get_pdtime(void);
+char *rtc_get_putime(void);
+
 void rtc_set_seconds(int s);
 void rtc_set_minutes(int m);
 void rtc_set_hours(int h);
@@ -52,6 +57,7 @@ void clr_st_bit(void);
 void rtc_dump(void);
 void rtc_write_mem(void);
 void rtc_read_mem(void);
+void clr_pwrfail_bit(void);
 
 int rtc_get_seconds(void);
 int rtc_get_minutes(void);

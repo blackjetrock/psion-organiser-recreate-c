@@ -1268,7 +1268,8 @@ void menu_rtc_get_time(void)
   dp_cls();
 
   i_printxy_str(0, 0, rtc_get_time());
-
+  i_printxy_str(0, 1, rtc_get_pdtime());
+  i_printxy_str(0, 2, rtc_get_putime());
   kb_getk();
 }
 
@@ -1481,6 +1482,11 @@ void menu_rtc_enable(void)
 {
   set_vbaten_bit();
   set_st_bit();
+}
+
+void menu_clr_pwrfail(void)
+{
+  clr_pwrfail_bit();
 }
 
 void menu_rtc_stop(void)
@@ -2817,6 +2823,7 @@ MENU menu_rtc =
     {'C', "Clock",      menu_rtc_clock},
     {'W', "Writemem",   menu_rtc_write_mem},
     {'R', "Readmem",    menu_rtc_read_mem},
+    {'F', "clrpFail",   menu_clr_pwrfail},
 #if 0
     {'G', "Get",        menu_rtc_get_time},
     {'R', "RegSet",     menu_rtc_regset},
