@@ -321,6 +321,8 @@ int printpos_at_end = 0;
 
 void next_printpos_line(void)
 {
+  int save_pp_x, save_pp_y;
+  
 #if DB_NEXT_PRINTPOS
   printf("\n%s:Entry printpos_at_end:%d printpos_x:%d printpos_y:%d", __FUNCTION__, printpos_at_end, printpos_x, printpos_y);
 #endif
@@ -330,8 +332,37 @@ void next_printpos_line(void)
   
   if( printpos_y >= DISPLAY_NUM_LINES )
     {
+      // Off end of screen
+
+      // Scroll screen up, then move to start of first line
+      for(int x = 0; x<DISPLAY_NUM_CHARS; x++)
+        {
+          for(int y = 1; y<DISPLAY_NUM_LINES; y++)
+            {
+              i_printxy(x, y-1, under_cursor_char[x][y]);
+            }
+        }
+
+      printpos_x = 0;
+      printpos_y--;
+
+      save_pp_x = printpos_x;
+      save_pp_y = printpos_y;
+      
+      for(int x=0; x<DISPLAY_NUM_CHARS; x++)
+        {
+          i_printxy(x, printpos_y, ' ');
+          under_cursor_char[x][printpos_y] = ' ';
+        }
+      
+      printpos_x = save_pp_x;
+      printpos_y = save_pp_y;
+
+#if 0
       printpos_y--;
       printpos_x = (DISPLAY_NUM_CHARS-2);
+#endif
+      return;
     }
   
   if( (printpos_x == (DISPLAY_NUM_CHARS-2)) && (printpos_y == (DISPLAY_NUM_LINES-1) ))

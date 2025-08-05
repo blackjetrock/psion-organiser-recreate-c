@@ -1268,16 +1268,13 @@ void qca_input_str(NOBJ_MACHINE *m, NOBJ_QCS *s)
       
       dp_prnt("?");
       dp_clr_eol();
-      
-      if( fgets(&(inp[0]), 254, stdin) != NULL )
-	{
-	  //printf("\nstr='%s'", inp);
-	  //gets(&(s->str));
-	  scan_ret = 1;
 
-	  // Drop trailing newline
-	  inp[strlen(inp)-1] = '\0';
-	}
+      ed_edit(qc_input_buffer, 255, ED_DO_NOT_EXIT_ON_MODE);
+     
+      scan_ret = 1;
+
+      // Drop trailing newline
+      inp[strlen(inp)-1] = '\0';
     }
 
   s->len = strlen(inp);

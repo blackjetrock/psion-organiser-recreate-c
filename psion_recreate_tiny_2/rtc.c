@@ -24,6 +24,31 @@
 #define MCP_READ_ADDR   (ADDR_MCP7940  | 0x01)
 #define MCP_WRITE_ADDR  (ADDR_MCP7940 & 0xFE)
 
+// Changed to use a field based system to avoid overwriting other setting when
+// adjusting things
+
+typedef struct _MCP7940_FIELD
+{
+  int reg;
+  int mask;
+} MCP7940_FIELD;
+
+// The register fields
+
+MCP7940_FIELD mcp7940_fields[] =
+  {
+    {0x00, 0x80},    // START
+    {0x03, 0x08},    // VBATEN
+    {0x03, 0x07},    // WKDAY
+  };
+
+#define NUM_FIELDS (sizeof(mcp7940_fields)/sizeof(MCP7940_FIELD))
+
+enum {
+  MCP7940_F_START = 0,
+  MCP7940_F_VBATEN,
+  MCP7940_F_WKDAY,
+};
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -78,15 +103,72 @@ void write_mcp7940(int r, BYTE value)
 #endif
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
+#define FIELDMASK(FIELDN) mcp7940_fields[FIELDN].mask
+#define FIELDREG(FIELDN) mcp7940_fields[FIELDN].reg
+
+int find_shifts(int fieldnum)
+{
+  int mask = FIELDMASK(fieldnum);
+  int shift = 0;
+
+while( (mask & 1) == 0 )
+  {
+    shift++;
+    mask >>= 1;
+  }
+
+return(shift);
+}
+
+//
+// Read and write a field
+//
+
+int rtc_read_field(int fieldnum)
+{
+  int shifts = find_shifts(fieldnum);
+  
+  // Read the register then mask and shift the data
+  return( (read_mcp7940(FIELDREG(fieldnum)) & FIELDMASK(fieldnum)) >> shifts );
+}
+
+// Writing is a read, modify write operation
+
+void rtc_write_field(int fieldnum, int value)
+{
+  int regval = read_mcp7940(FIELDREG(fieldnum));
+  int shifts = find_shifts(fieldnum);
+
+  // Shift and mask the data
+  int data = (value << shifts) & FIELDMASK(fieldnum);
+
+  // Mask out the field in the register value
+  regval &= ~(FIELDMASK(fieldnum));
+  
+  // Add the field data in
+  regval |= data;
+
+  // Write to the register
+  write_mcp7940(FIELDREG(fieldnum), regval);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
 // Sets the VBATEN bit
+
 void set_vbaten_bit()
 {
   BYTE reg0;
 
+  rtc_write_field(MCP7940_F_VBATEN, 1);
+#if 0  
   reg0 = read_mcp7940(MCP_RTCWKDAY_REG);
   reg0 |= MCP_VBATEN_MASK;
 
   write_mcp7940(MCP_RTCWKDAY_REG, reg0);
+#endif
 }
 
 // Sets the ALMPOL 0 bit
@@ -113,24 +195,30 @@ void set_almpol1_bit()
 // Sets the ST bit
 void set_st_bit()
 {
+  rtc_write_field(MCP7940_F_START, 1);
+#if 0
   BYTE reg0;
 
   reg0 = read_mcp7940(MCP_RTCSEC_REG);
   reg0 |= MCP_ST_MASK;
 
   write_mcp7940(MCP_RTCSEC_REG, reg0);
-
+#endif
+  
 }
 
 // Clears the ST bit
 void clr_st_bit(void)
 {
+  rtc_write_field(MCP7940_F_START, 0);
+#if 0
   BYTE reg0;
 
   reg0 = read_mcp7940(MCP_RTCSEC_REG);
   reg0 &= ~MCP_ST_MASK;
 
   write_mcp7940(MCP_RTCSEC_REG, reg0);
+#endif
 
 }
 
@@ -166,7 +254,7 @@ void rtc_dump(void)
   // Dump RTC registers
   printf("\nRTC Dump\n");
     
-  for(int i=0; i<128; i++)
+  for(int i=0; i<0x60; i++)
     {
       if( (i % 16) == 0 )
 	{
@@ -282,7 +370,9 @@ int rtc_get_hours(void)
 
 void rtc_set_wday(int s)
 {
-  write_mcp7940( MCP_RTCWKDAY_REG, s | MCP_ST_MASK);
+  rtc_write_field(MCP7940_F_WKDAY, s);
+  
+  //write_mcp7940( MCP_RTCWKDAY_REG, s | MCP_ST_MASK);
 }
 
 void rtc_set_day(int s)

@@ -27,6 +27,10 @@ uint64_t cursor_upd_time = 1000000L;
 uint64_t cursor_last_time = 0;
 volatile int cursor_phase = 0;
 int cursor_char = 0x101;
+
+// Buffer of all characters on the display. Used for the blinking cursor
+// and also scrolling of the text screen
+
 int under_cursor_char[DISPLAY_NUM_CHARS][DISPLAY_NUM_LINES];
 int under_char;
 int cursor_x = 3;
