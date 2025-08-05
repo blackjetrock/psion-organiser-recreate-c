@@ -40,6 +40,12 @@ MCP7940_FIELD mcp7940_fields[] =
     {0x00, 0x80},    // START
     {0x03, 0x08},    // VBATEN
     {0x03, 0x07},    // WKDAY
+    {0x00, 0x7F},    // SECONDS
+    {0x01, 0x7F},    // MINUTES
+    {0x02, 0x1F},    // HOURS
+    {0x04, 0x3F},    // DAY
+    {0x05, 0x1F},    // MONTH
+    {0x06, 0xFF},    // YEAR
   };
 
 #define NUM_FIELDS (sizeof(mcp7940_fields)/sizeof(MCP7940_FIELD))
@@ -48,6 +54,12 @@ enum {
   MCP7940_F_START = 0,
   MCP7940_F_VBATEN,
   MCP7940_F_WKDAY,
+  MCP7940_F_SECONDS,
+  MCP7940_F_MINUTES,
+  MCP7940_F_HOURS,
+  MCP7940_F_DAY,
+  MCP7940_F_MONTH,
+  MCP7940_F_YEAR,
 };
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -340,74 +352,72 @@ char *rtc_get_time(void)
 
 void rtc_set_seconds(int s)
 {
-  write_mcp7940( MCP_RTCSEC_REG, s | MCP_ST_MASK);
+  rtc_write_field(MCP7940_F_SECONDS, s);
 }
 
 void rtc_set_minutes(int m)
 {
-  write_mcp7940( MCP_RTCMIN_REG, m);
+  rtc_write_field(MCP7940_F_MINUTES, m);
 }
 
 void rtc_set_hours(int h)
 {
-  write_mcp7940( MCP_RTCHOUR_REG, h);
+  rtc_write_field(MCP7940_F_HOURS, h);
 }
 
 int rtc_get_seconds(void)
 {
-  return(read_mcp7940(MCP_RTCSEC_REG));
+  return(rtc_read_field(MCP7940_F_SECONDS));
 }
 
 int rtc_get_minutes(void)
 {
-  return(read_mcp7940(MCP_RTCMIN_REG));
+  return(rtc_read_field(MCP7940_F_MINUTES));
 }
 
 int rtc_get_hours(void)
 {
-  return(read_mcp7940(MCP_RTCHOUR_REG));
+  return(rtc_read_field(MCP7940_F_HOURS));
 }
 
 void rtc_set_wday(int s)
 {
   rtc_write_field(MCP7940_F_WKDAY, s);
-  
-  //write_mcp7940( MCP_RTCWKDAY_REG, s | MCP_ST_MASK);
 }
 
 void rtc_set_day(int s)
 {
-  write_mcp7940( MCP_RTCDATE_REG, s | MCP_ST_MASK);
+  rtc_write_field(MCP7940_F_DAY, s);
 }
 
 void rtc_set_month(int m)
 {
-  write_mcp7940( MCP_RTCMTH_REG, m);
+  rtc_write_field(MCP7940_F_MONTH, m);
 }
 
 void rtc_set_year(int h)
 {
-  write_mcp7940( MCP_RTCYEAR_REG, h);
+  rtc_write_field(MCP7940_F_YEAR, h);
 }
 
 int rtc_get_wday(void)
 {
-  return(read_mcp7940(MCP_RTCWKDAY_REG));
+  return(rtc_read_field(MCP7940_F_WKDAY));
 }
 
 int rtc_get_day(void)
 {
-  return(read_mcp7940(MCP_RTCDATE_REG));
+  return(rtc_read_field(MCP7940_F_DAY));
 }
 
 int rtc_get_month(void)
 {
-  return(read_mcp7940(MCP_RTCMTH_REG));
+  return(rtc_read_field(MCP7940_F_MONTH));
 }
 
 int rtc_get_year(void)
 {
-  return(read_mcp7940(MCP_RTCYEAR_REG));
+  return(rtc_read_field(MCP7940_F_YEAR));
 }
 
 ////////////////////////////////////////////////////////////////////////////////
