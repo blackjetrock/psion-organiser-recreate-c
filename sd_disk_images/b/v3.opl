@@ -1,0 +1,32 @@
+TEST2:(P1,P2%,P3$)
+
+LOCAL L1,L2%,L3$(5) 
+LOCAL L4(4),L5%(5),L6$(6,12),L7% 
+GLOBAL G1,G2%,G3$(13) 
+GLOBAL G4(4),G5%(5),G6$(6,14),G7% 
+PRINT "PPP";P1;P2%;P3$ 
+PRINT "LLL";L1;L2%;L3$ 
+PRINT "LL";L4(4);L5%(5);L6$(6) 
+PRINT "GGG";G1;G2%;G3$ 
+PRINT "GG";G4(4);G5%(5);G6$(6) 
+PRINT "EEE";E1;E2%;E3$ 
+PRINT "EE";E4(4);E5%(5);E6$(6) 
+L1=234 
+L2%=345 
+L3$="BCD" 
+L4(2)=345 
+L5%(3)=456 
+L6$(4)="CDE" 
+G1=12
+G2%=23 
+G3$="DEF" 
+G4(3)=34 
+G5%(4)=4 
+G6$(5)="EFG" 
+E1=45 
+E2%=56 
+E3$="FGH" 
+E4(4)=67 
+E5%(5)=78 
+E6$(6)="GHI"
+

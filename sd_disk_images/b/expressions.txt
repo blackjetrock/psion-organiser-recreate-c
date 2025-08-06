@@ -1,0 +1,314 @@
+
+====================
+
+EXP_BUFF_ID_META PROCDEF
+--------------------
+
+====================
+
+--------------------
+
+Push:'M%'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+--------------------
+
+Push:'"SDOP CMD"'
+Pop: '"SDOP CMD"'
+====================
+
+EXP_BUFF_ID_STR "SDOP CMD"
+Push:'"SDOP CMD"'
+                    000: '"SDOP CMD"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"SDOP CMD"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'M%'
+Push:'"SCR,SCR2"'
+Pop: '"SCR,SCR2"'
+Push:'000'
+Pop: '000'
+Pop: 'M%'
+====================
+
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_SUB_START 
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_SUB_START 
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_STR "SCR,SCR2"
+Push:'"SCR,SCR2"'
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_FUNCTION MENU
+Pop: '"SCR,SCR2"'
+Push:'000'
+                    000: 'M%' type:i (0), %:0
+                    001: '000' type:i (0), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'M%'
+--------------------
+
+Push:'M%'
+Push:'1'
+Pop: '1'
+Pop: 'M%'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_INTEGER 1
+Push:'1'
+                    000: 'M%' type:i (0), %:0
+                    001: '1' type:i (0), %:0
+EXP_BUFF_ID_OPERATOR =
+Pop: '1'
+Pop: 'M%'
+Push:'000'
+                    000: '000' type:i (0), %:0
+EXP_BUFF_ID_IF IF
+Pop: '000'
+--------------------
+
+Push:'000'
+====================
+
+EXP_BUFF_ID_PROC_CALL SCR
+Push:'000'
+                    000: '000' type:f (1), %:0
+--------------------
+
+====================
+
+EXP_BUFF_ID_ENDIF ENDIF
+--------------------
+
+Push:'M%'
+Push:'2'
+Pop: '2'
+Pop: 'M%'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_INTEGER 2
+Push:'2'
+                    000: 'M%' type:i (0), %:0
+                    001: '2' type:i (0), %:0
+EXP_BUFF_ID_OPERATOR =
+Pop: '2'
+Pop: 'M%'
+Push:'000'
+                    000: '000' type:i (0), %:0
+EXP_BUFF_ID_IF IF
+Pop: '000'
+--------------------
+
+Push:'000'
+====================
+
+EXP_BUFF_ID_PROC_CALL SCR2
+Push:'000'
+                    000: '000' type:f (1), %:0
+--------------------
+
+====================
+
+EXP_BUFF_ID_ENDIF ENDIF
+--------------------
+
+====================
+
+--------------------
+
+====================
+
+EXP_BUFF_ID_META PROCDEF
+--------------------
+
+====================
+
+--------------------
+
+Push:'M%'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+--------------------
+
+Push:'"SDOP CMD"'
+Pop: '"SDOP CMD"'
+====================
+
+EXP_BUFF_ID_STR "SDOP CMD"
+Push:'"SDOP CMD"'
+                    000: '"SDOP CMD"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"SDOP CMD"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'M%'
+Push:'"SCR,SCR2"'
+Pop: '"SCR,SCR2"'
+Push:'000'
+Pop: '000'
+Pop: 'M%'
+====================
+
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_SUB_START 
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_SUB_START 
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_STR "SCR,SCR2"
+Push:'"SCR,SCR2"'
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: 'M%' type:i (0), %:0
+                    001: '"SCR,SCR2"' type:s (2), %:0
+EXP_BUFF_ID_FUNCTION MENU
+Pop: '"SCR,SCR2"'
+Push:'000'
+                    000: 'M%' type:i (0), %:0
+                    001: '000' type:i (0), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'M%'
+--------------------
+
+Push:'M%'
+Push:'1'
+Pop: '1'
+Pop: 'M%'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_INTEGER 1
+Push:'1'
+                    000: 'M%' type:i (0), %:0
+                    001: '1' type:i (0), %:0
+EXP_BUFF_ID_OPERATOR =
+Pop: '1'
+Pop: 'M%'
+Push:'000'
+                    000: '000' type:i (0), %:0
+EXP_BUFF_ID_IF IF
+Pop: '000'
+--------------------
+
+Push:'000'
+====================
+
+EXP_BUFF_ID_PROC_CALL SCR
+Push:'000'
+                    000: '000' type:f (1), %:0
+--------------------
+
+====================
+
+EXP_BUFF_ID_ENDIF ENDIF
+--------------------
+
+Push:'M%'
+Push:'2'
+Pop: '2'
+Pop: 'M%'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE M%
+Push:'M%'
+                    000: 'M%' type:i (0), %:0
+EXP_BUFF_ID_INTEGER 2
+Push:'2'
+                    000: 'M%' type:i (0), %:0
+                    001: '2' type:i (0), %:0
+EXP_BUFF_ID_OPERATOR =
+Pop: '2'
+Pop: 'M%'
+Push:'000'
+                    000: '000' type:i (0), %:0
+EXP_BUFF_ID_IF IF
+Pop: '000'
+--------------------
+
+Push:'000'
+====================
+
+EXP_BUFF_ID_PROC_CALL SCR2
+Push:'000'
+                    000: '000' type:f (1), %:0
+--------------------
+
+====================
+
+EXP_BUFF_ID_ENDIF ENDIF
+--------------------
+
+====================
+
+--------------------

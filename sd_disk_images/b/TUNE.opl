@@ -1,0 +1,7 @@
+TUNE:
+LOCAL N%
+N%=400
+DO
+BEEP 15,N%
+N%=N%-2
+UNTIL N%=50

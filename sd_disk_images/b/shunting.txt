@@ -1,0 +1,130 @@
+
+PROCDEF
+
+ LOCAL
+
+M%
+
+"SDOP CMD"
+
+PRINT
+          000:type:U 'PRINT'
+
+M%
+
+:=
+          000:type:i ':='
+
+(
+          000:type:i ':='
+          001:type:U '('
+
+(
+          000:type:i ':='
+          001:type:U '('
+          002:type:U '('
+
+"SCR,SCR2"
+          000:type:i ':='
+          001:type:U '('
+          002:type:U '('
+
+)
+          000:type:i ':='
+          001:type:U '('
+
+)
+          000:type:i ':='
+
+MENU
+          000:type:i ':='
+          001:type:i 'MENU'
+
+M%
+
+=
+          000:type:i '='
+
+1
+          000:type:i '='
+
+SCR
+
+ENDIF
+
+M%
+
+=
+          000:type:i '='
+
+2
+          000:type:i '='
+
+SCR2
+
+ENDIF
+
+PROCDEF
+
+ LOCAL
+
+M%
+
+"SDOP CMD"
+
+PRINT
+          000:type:U 'PRINT'
+
+M%
+
+:=
+          000:type:i ':='
+
+(
+          000:type:i ':='
+          001:type:U '('
+
+(
+          000:type:i ':='
+          001:type:U '('
+          002:type:U '('
+
+"SCR,SCR2"
+          000:type:i ':='
+          001:type:U '('
+          002:type:U '('
+
+)
+          000:type:i ':='
+          001:type:U '('
+
+)
+          000:type:i ':='
+
+MENU
+          000:type:i ':='
+          001:type:i 'MENU'
+
+M%
+
+=
+          000:type:i '='
+
+1
+          000:type:i '='
+
+SCR
+
+ENDIF
+
+M%
+
+=
+          000:type:i '='
+
+2
+          000:type:i '='
+
+SCR2
+
+ENDIF

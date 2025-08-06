@@ -1,0 +1,21 @@
+BEP:(t%)
+local x%
+
+Rem Test for Psion
+Rem or PC
+If Peekb(121)=0
+return :endif
+
+Rem Error Value for Bep
+If t%>4 :cls :Print"Error - Bep 1-4"
+x%=t% :do
+beep 50,100
+x%=x%-1
+until x%=0 
+
+ElseIF T%=1 :BEEP 50,200
+ELSEIF T%=2 :BEEP 50,500
+ELSEIF T%=3 :BEEP 50,1500
+ELSEIF T%=4 :BEEP 50,100 :PAUSE 10 :BEEP 50,100
+ENDIF
+Return

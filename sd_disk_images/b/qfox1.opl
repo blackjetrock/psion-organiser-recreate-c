@@ -1,0 +1,445 @@
+qfox1:
+LOCAL A, X%, Y$(10)
+LOCAL B(10), C%(10), D$(10,10) 
+LOCAL dice%,key%
+LOCAL recnum%,search$(30),k%
+LOCAL I1, I2, I3
+LOCAL d1%, m1%, y1%, d2%, m2%, y2%
+LOCAL num%,loan,x,term,rate,pay,ques$(2)
+
+A = 10.1
+A = 20
+X% = 20.2
+X% = 30
+Y$="ABCD"
+
+B(1) = 11.2
+B(2) = 21
+C%(1) = 22
+C%(2) = 23.5
+
+B(1) = A + X% + B(1) + C%(1)
+
+X% = 1
+DO
+
+IF X% = 5
+CONTINUE
+ENDIF
+
+IF X% > 20
+BREAK
+ENDIF
+
+X% = X% + 1
+UNTIL X% > 10
+
+GET
+
+A = GET
+
+
+OPEN "A:ABC", A, T1$, T2%, T3$
+trap OPEN "A:ABC", A, T1$, T2%, T3$
+
+A = A > 2
+A = A < 3
+A = A = 3
+A = A >= 10
+A = A <=30
+A = A <> 100
+
+X% = X% > 2
+X% = X% < 3
+X% = X% = 3
+X% = X% >= 10
+X% = X% <=30
+X% = X% <> 100
+
+Y$ = Y$ + Y$
+Y$ = Y$ + "AXC"
+
+A = A + A
+A = A - A
+A = A / A
+A = A * A
+A = A ** A
+
+X% = X% + X%
+X% = X% - X%
+X% = X% / X%
+X% = X% * X%
+X% = X% ** X%
+
+A = -A
+X% = -X%
+A = NOT A
+X% = NOT X%
+
+X% = X% AND 10
+A = A AND 12
+X% = X% OR 101
+A = A OR 45
+X% = A OR X% AND X%
+
+A = Y$ < "A"
+A = Y$ > Y$
+A = Y$ >= "XXX"
+A = Y$ <= "XXX"
+A = Y$ = "XXX"
+A = Y$ <> "XXX"
+
+AT X%, X%
+AT 2,3
+AT 2.5, 3.6
+rem BEEP 2
+CLS
+rem CURSOR
+
+dest::
+
+goto DEST::
+
+OFF
+OFF x%
+ONERR OFF
+ONERR dest::
+escape off
+escape on
+pause 20
+
+POKEB 100, 2
+POKEW 200, 5
+RAISE 20
+randomize 345
+
+stop
+
+trap close
+trap append
+close
+append
+
+
+CREATE "A:ABC", A, T1$, T2%, T3$
+trap CREATE "A:ABC", A, T1$, T2%, T3$
+COPY "dev1:fname1","dev2:fname2"
+COPY "dev1:fname1","dev2:"
+COPY "dev1:","dev2:"
+COPYW "dev1:fname1.ext","dev2:fname2"
+COPYW "dev1:fname1.ext","dev2:"
+COPYW "dev1:*.*","dev2:"
+DELETEW "C:*.NTS"
+
+ERASE
+FIRST
+LAST
+NEXT
+BACK
+POSITION 0
+POSITION 1
+FIRST
+RENAME "dev:fname1","fname2"
+UPDATE
+
+USE A
+
+REM=============================================================
+
+KSTAT 1
+top::
+CLS :PRINT "****DICE ROLLING****"
+PRINT "PRESS S TO STOP"
+DO
+dice%=(RND*6+1)
+UNTIL KEY$="S"
+CLS
+PRINT "********* ";dice%;" ********"
+BEEP 50,100
+AT 1,4 :PRINT "ROLL AGAIN Y/N"
+label::
+key%=GET
+IF key%=%Y
+GOTO top::
+ELSEIF key%=%N
+RETURN
+ELSE
+GOTO label::
+ENDIF
+
+REM=============================================================
+
+DO
+FIRST :CLS
+PRINT "ALTER:"; :TRAP INPUT search$
+IF ERR=206 :RETURN :ENDIF
+recnum%=FIND(search$)
+IF recnum%=0
+CLS :PRINT "NOT FOUND"
+PAUSE 20 :CONTINUE
+ENDIF
+DO
+KSTAT 1 :CLS :AT 1,2 :PRINT "EDIT Y/N"
+k%=VIEW(1,A.n$)
+IF k%=%Y :CLS
+EDIT A.n$ :EDIT A.ad1$
+EDIT A.ad2$ :EDIT A.ad3$
+EDIT A.pc$ :EDIT A.tel$ :UPDATE :RETURN
+ELSEIF k%=%N :NEXT :recnum%=FIND(search$)
+IF recnum%=0
+CLS :PRINT "NOT FOUND" :PAUSE 20 :BREAK
+ENDIF
+ENDIF
+UNTIL 0
+UNTIL 0
+
+INPUT X%
+INPUT A
+INPUT C$
+PRINT C$
+PRINT X%
+PRINT A
+PRINT A, C$; X%
+LPRINT C$
+LPRINT X%
+LPRINT A
+LPRINT A, C$; X%
+
+RETURN
+RETURN 0
+RETURN 2.4
+
+dopr:
+dopr%:
+dopr$:
+dopr$:(1, 2.3, "abc")
+
+GET
+SIN(20)
+CHR$(65)
+ASC("A")
+
+USR(ADDR(A%()),pos%)
+
+now%=DAYS(DAY,MONTH,YEAR)
+
+d%=DISP(x%,a$)
+DISP(-1,"") 
+IF ERR=206 :RETURN :ENDIF
+
+FIRST :CLS :PRINT "FIND:";
+TRAP INPUT search$
+IF ERR=206
+RETURN
+ENDIF
+recnum%=FIND(search$)
+IF recnum%=0
+CLS :PRINT "NOT FOUND" :PAUSE 20
+GOTO top::
+ENDIF
+DO
+DISP(-1,"") :NEXT :recnum%=FIND(search$)
+IF recnum%=0 :CLS
+PRINT " NO MORE ENTRIES"
+PAUSE 20 :RETURN
+ENDIF
+UNTIL 0
+
+f%=FREE
+h%=HOUR
+i%=IABS(x%)
+i%=INT(x)
+k%=KEY
+KSTAT x%
+b$=LEFT$(a$,x%)
+a%=LEN(a$)
+a%=LOC(a$,b$)
+a=LN(x)
+a=LOG(x)
+b$=LOWER$(a$)
+LPRINT x,y%;a$
+LPRINT "The year is", YEAR
+rem m=MAX(I1, I2, I3)
+m=MAX(array(),n)
+rem m=MEAN(item1,item2,item3)
+m=MEAN(array(),n)
+rem m=MEAN(12,x,y%,3.6)
+m=MEAN(arr(),3)
+a(1)=10
+a(2)=15
+a(3)=20
+PRINT MEAN(a(),2)
+m%=MENUN(n%,m1$)
+m$=MID$(a$,x%,y%)
+m=MIN(array(),n)
+m%=MINUTE
+m%=MONTH
+m$=MONTH$(x%)
+NEXT
+n$=NUM$(x,y%)
+PAUSE x%
+P%=PEEKB(x%)
+p%=PEEKW(x%)
+n=RAD(x)
+RAISE x%
+r%=RECSIZE
+r$=REPT$(a$,x%)
+r$=RIGHT$(a$,x%)
+r=RND
+s$=SCI$(x,y%,z%)
+SCI$ (123456, 2, 8)
+SCI$(1,2,8)
+SCI$(123456789,2,-9)
+s=SIN(x)
+SECOND
+s=SPACE
+s=SQR(x)
+rem s=STD(item1,item2,item3)
+rem s=STD(array(),n)
+STOP
+rem s=SUM(item1,item2.item3)
+rem s=SUM(array(),n)
+t=TAN(x)
+ UDG x%,a%,b%,c%,d%,e%,f%,g%,h%
+UPDATE
+u$=UPPER$(a$)
+USE A
+u%=USR(x%,y%)
+u$=USR$(x%,y%)
+v=VAL(a$)
+ v=VAR(item1,item2,item3)
+v=VAR(array(),n)
+v%=VIEW(x%,a$)
+w%=WEEK(day%,month%,year%)
+ y%=YEAR
+c%=COUNT
+a=ABS(x)
+a=ACOS(x)
+a%=ASC(a$)
+a=ASIN(x)
+a=ATAN(x)
+BACK
+BEEP x%,y%
+a$=CHR$(x%)
+c%=CLOCK(x%)
+c=COS(x)
+d$=DATIM$
+d%=DAY
+d$=DAYNAME$(X%)
+d%=DAYS(day%,month%,year%)
+d=DEG(x)
+DELETE "dev:fname"
+DELETEW "dev:fname.ext"
+d$=DIR$("dev")
+d$=DIR$("")
+d$=DIRW$("dev:fname.ext")
+d$=DIRW$("")
+d%=DOW(day%,month%,year%)
+ e%=EOF
+ ERASE
+ e%=ERR
+ e$=ERR$(x%)
+c%=EXIST("dev:fname")
+e=EXP(x)
+ f%=FIND(a$)
+  f%=FINDW(a$)
+FIRST
+f$=FIX$(x,y%,z%)
+f=FLT(x%)
+ f%=FREE
+ g$=gen$(x,y%)
+g%=GET
+g$=GET$
+h$=HEX$(x%)
+h%=HOUR
+i%=IABS(x%)
+INPUT var%
+INPUT A
+INPUT var$
+INPUT C.field
+ i%=INT(x)
+ i=INTF(x)
+  k%=KEY
+  k$=KEY$
+  LAST
+b$=LEFT$(a$,x%)
+a%=LEN(a$)
+a=LN(x)
+a%=LOC(a$,b$)
+a=LOG(x)
+b$=LOWER$(a$)
+p%=POS
+i=INTF(x)
+m$=MONTH$(x%)
+
+A = sin(20)+cos(30)+tan(40)*PI
+
+
+PRINT PEEKW(ADDR(A%()))
+
+PRINT A%(1)
+PRINT A%
+
+
+
+X% = a%**b%**c%
+A = a+b*c/d
+A = (a+b)*(c/d)
+a%=b%+c
+a%=3.0*(7/2)
+a%=(3.0*7)/2
+
+IF salary<expenses
+PRINT "bad"
+ELSEIF salary>expenses
+PRINT "good"
+ENDIF
+
+
+PRINT "ENTER FIRST DAY"
+INPUT d1%
+PRINT "ENTER FIRST MONTH"
+INPUT m1%
+PRINT "ENTER FIRST YEAR"
+INPUT y1%
+PRINT "ENTER SECOND DAY"
+INPUT d2%
+PRINT "ENTER SECOND MONTH"
+INPUT m2%
+PRINT "ENTER SECOND YEAR"
+INPUT y2%
+PRINT DAYS(d2%,m2%,y2%)-DAYS(d1%,m1%,y1%)
+GET
+
+
+CLS
+PRINT "EVALUATE MONTHLY"
+PRINT "MORTGAGE PAYMENT"
+PAUSE 30
+ques$=CHR$(63)+" "
+REM CHR$(63) is a "?" - See Appendix A
+loan=q:("ENTER LOAN"+ques$)
+DO
+rate=q:("INTEREST RATE % "+ques$)
+UNTIL rate>0 AND rate<99
+DO
+term=q:("ENTER TERM (YRS)"+ques$)
+UNTIL term>.5 AND term<100
+num%=MENU("BUILDING-SOCIETY,BANK,OTHER")
+IF num%=0 :RETURN :ENDIF
+rate=rate/100 :x=1+11*(num%/2)
+pay=loan*rate/12/(1-((1+rate/x)**(-x*term)))
+CLS :PRINT "MONTHLY PAYMENT"
+PRINT FIX$(pay, 2, -8)
+GET
+RETURN
+
+
+rem X% = ADDR(A$())-2
+rem PRINT PEEKW(ADDR(A%))
+rem A = 100+5%
+rem A = 100-5%
+rem A = 100*5%
+rem A = 100/5%
+rem A = 115<15%
+rem A = 115>15%

@@ -1,0 +1,36 @@
+distance:
+LOCAL WI,S$(8),LE
+PRINT "Select known data"
+A=MENUN(2,"HEIGHT,WIDTH")
+IF A=1
+PRINT "WHAT HEIGHT mt";CHR$(63)
+INPUT H
+WI=H
+S$="m height"
+H=H*1000
+CLS
+PRINT "WHAT mm LENS";CHR$(63)
+INPUT L
+LE=L
+D=(H*L)/T
+CLS
+ELSEIF A=2
+PRINT "WHAT WIDTH mt";CHR$(63)
+INPUT W
+WI=W
+S$="m width"
+W=W*1000
+CLS
+PRINT "WHAT LENS mm";CHR$(63)
+INPUT L
+LE=L
+CLS
+D=(W*L)/I
+ENDIF
+D=INTF(D/10)
+D=D/100
+PRINT "A",LE,"mm lens" 
+PRINT "gives a",WI, S$
+PRINT "@",D,"metres"
+PRINT "Distance..."
+GET

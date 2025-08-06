@@ -1,0 +1,23 @@
+SCHUIF:
+GLOBAL GM%,U%(64),Z$(200),A$(3,3)
+LOCAL A%,B$(3,3)
+SCHFINI1:
+A%=0
+DO
+ IF A%<>2
+  SCHFINI2:
+  B$(1)=A$(1)
+  B$(2)=A$(2)
+  B$(3)=A$(3)
+ ENDIF
+ A$(1)=B$(1)
+ A$(2)=B$(2)
+ A$(3)=B$(3)
+ SCHFCOMP:
+ A$(1)=B$(1)
+ A$(2)=B$(2)
+ A$(3)=B$(3)
+ DO
+  A%=SCHFHUM:
+ UNTIL A%
+UNTIL A%=1

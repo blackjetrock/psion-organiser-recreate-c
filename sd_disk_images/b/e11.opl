@@ -1,0 +1,19 @@
+e11:
+
+print "onerr11"
+
+rem Set onerr handler in this proc and
+rem try to invoke it from another proc
+
+onerr x10::
+
+onerr10:
+
+print "Back from onerr10"	
+return
+
+
+x10::
+
+print "ERR11 ERR:", ERR
+print "PASS"

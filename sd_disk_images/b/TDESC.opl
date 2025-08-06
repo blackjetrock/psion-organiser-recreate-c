@@ -1,0 +1,154 @@
+tdesc:
+
+LOCAL  desc1$(22), desc2$(30), desc3$(26)
+REM used in the description of the tile
+LOCAL hour%, weather%, terrain%, randVal%
+
+REM Generate and store tile description
+REM bit2 is good/bad weather
+
+  REM Initialize fulDesc$ to empty
+  fulDesc$ = ""
+  desc1$ = ""
+  desc2$ = ""
+  desc3$ = ""
+
+
+          tChar$ = MID$(map$(py%), px%, 1)
+          tAscii% = ASC(tChar$) - 32
+          biome% = tAscii% AND 3  REM Isolating the last two LSBs
+          
+    
+  REM Determine the current hour for time slot. hour% is used so the windows of the day can be easily changed in one place
+
+    IF HOUR < 6 
+        hour% = 0 REM Night
+    ELSEIF HOUR < 12 
+        hour% = 1 REM Morning
+    ELSEIF HOUR < 18 
+        hour% = 2 REM Day
+    ELSE
+        hour% = 3 REM Evening
+    ENDIF
+
+  REM Generate random number for description selection
+  randVal% = RND * 3
+
+  REM Weather Descriptions
+    IF bit2% = 0 
+        IF randVal% = 0 
+            desc1$ = "Under beautiful skies,"
+        ELSEIF randVal% = 1 
+            desc1$ = "With gentle breezes,"
+        ELSE
+      desc1$ = "In warm, sweet air,"
+        ENDIF
+    ELSE
+        IF randVal% = 0 
+            desc1$ = "Under a brewing storm,"
+        ELSEIF randVal% = 1 
+            desc1$ = "Under heavy rain,"
+        ELSE
+      desc1$ = "With thunder echoing,"
+        ENDIF
+    ENDIF
+
+  REM Generate random number for description selection
+  randVal% = RND * 3
+
+  REM Terrain Descriptions
+
+    REM Mountains
+    IF biome% = 2
+        IF randVal% = 0 
+            desc2$ = "a mountain peak stands watch" 
+        ELSEIF randVal% = 1 
+            desc2$ = "a majestic mountain reaches" 
+        ELSE
+      desc2$ = "sharp cliffs watch"
+        ENDIF
+
+    REM Forests
+    ELSEIF biome% = 0
+        IF randVal% = 0 
+            desc2$ = "a misty forest glade hangs"
+        ELSEIF randVal% = 1 
+            desc2$ = "a wooded clearing creaks"
+        ELSE 
+      desc2$ = "a magical grove hums"
+    ENDIF
+
+    REM Deserts
+    ELSEIF biome% = 1 
+         IF randVal% = 0 
+             desc2$ = "a vast desert rolls"
+         ELSEIF randVal% = 1 
+             desc2$ = "endless dunes swirl"
+         ELSE desc2$ = "glassy vast sands shimmer"
+    ENDIF
+
+    REM Plains
+    ELSEIF biome% = 3 
+         IF randVal% = 0 
+             desc2$ = "rolling plains dance"
+         ELSEIF randVal% = 1 
+             desc2$ = "lush, full fields roll"
+         ELSE desc2$ = "vast grasslands breathe"
+    ENDIF
+  ENDIF
+
+
+  REM Generate random number for description selection
+  randVal% = RND * 3
+
+  REM Time of Day Descriptions
+  IF hour% = 0 
+  
+    REM Night
+ 
+    IF randVal% = 0 
+         desc3$ = "beneath the white moon."
+    ELSEIF randVal% = 1 
+         desc3$ = "in the blackness of night."
+    ELSE
+      desc3$ = "under starlit skies."
+    ENDIF
+ 
+ REM Morning
+ 
+    ELSEIF hour% = 1 
+      IF randVal% = 0 
+         desc3$ = "in the rays of morning."
+      ELSEIF randVal% = 1 
+         desc3$ = "as the dawn breaks."
+      ELSE
+      desc3$ = "in the morning breeze."
+      ENDIF
+ 
+ REM Day
+ 
+    ELSEIF hour% = 2 
+      IF randVal% = 0 
+         desc3$ = "under the bright day sun."
+      ELSEIF randVal% = 1 
+         desc3$ = "during the midday warmth."
+      ELSE
+      desc3$ = "in the beauty of the day."
+      ENDIF
+ 
+ REM Evening
+ 
+    ELSEIF hour% = 3 
+      IF randVal% = 0 
+         desc3$ = "in the evening."
+      ELSEIF randVal% = 1 
+         desc3$ = "as dusk falls."
+      ELSE
+      desc3$ = "under the twilight sky."
+    ENDIF
+ 
+  ENDIF
+
+  fulDesc$ = desc1$ + " " + desc2$ + " " + desc3$
+  
+  

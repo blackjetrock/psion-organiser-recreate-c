@@ -1,0 +1,9 @@
+persistw:
+
+open "A:PERSIST", A, s$
+
+use a
+first
+print "R:'",a.s$,"'"
+print count
+

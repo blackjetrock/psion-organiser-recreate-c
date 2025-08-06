@@ -1,0 +1,72 @@
+inv:
+
+REM mode 1 = use, 2 = drop, 3 = information 
+
+LOCAL tmp$(14)
+REM LOCAL m%
+GLOBAL No$(3)
+GLOBAL Lst$(14)
+GLOBAL Amnt%
+GLOBAL cons%
+GLOBAL equip%
+GLOBAL food%
+GLOBAL tool%
+GLOBAL worn%
+GLOBAL succ$(40)
+GLOBAL fail$(40)
+GLOBAL damage%
+GLOBAL def%
+GLOBAL locdesc$(200)
+GLOBAL equi% REM Debug to see if items are being updated
+
+TOP::
+ONERR PROBLEM::
+mode% = 1
+
+WHILE mode% <> 4
+ tmp$=FromLst$:("items","Backpack","Sword")
+ CLS
+ 
+ IF mode% = 1
+  invtool:(3,tmp$,0) 
+ PRINT "Do Use ";tmp$
+  GET
+  
+ ELSEIF mode% = 2
+  invtool:(1,tmp$,-1)
+  PRINT "Do Drop ";tmp$
+  GET
+  
+ ELSEIF mode% = 3
+  CLS
+  PRINT equi%
+  GET
+  CLS
+  disptext:(idesc$,4) 
+  CLS
+
+ ELSEIF mode%=4
+  
+ ELSE
+  PRINT "Error 1 in INV.OPL"
+  
+ ENDIF
+
+REM m% = GET
+ENDWH
+
+GOTO EXIT::
+
+PROBLEM::
+ONERR OFF
+CLS
+IF ERR=194 :PRINT " The Battery is Low    Switching off     change the Battery" :PAUSE -50 :OFF :STOP
+ ELSEIF ERR=252 :PRINT tmp$;" invalid" :AT 1,2 :PRINT "careful with Numbers"
+ELSE PRINT ERR :PRINT ERR$(ERR)
+ENDIF
+PRINT "[SPACE] continues" :GET 
+GOTO TOP::
+STOP
+
+REM 252 STR TO NUM ERR
+EXIT::

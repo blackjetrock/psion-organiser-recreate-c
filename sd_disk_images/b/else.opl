@@ -1,0 +1,12 @@
+else:
+
+local A%
+
+IF A%=3
+PRINT A%
+ELSE
+PRINT A%+1
+ENDIF
+
+A%=99
+PRINT SIN(50)+3

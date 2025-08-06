@@ -1,0 +1,5 @@
+
+0000: EXP_BUFF_ID_IF            Level:  3 Offset:0025 Target:0025 Label:''
+0001: EXP_BUFF_ID_ENDIF         Level:  3 Offset:002F Target:002F Label:''
+0002: EXP_BUFF_ID_IF            Level:  4 Offset:0037 Target:0037 Label:''
+0003: EXP_BUFF_ID_ENDIF         Level:  4 Offset:0042 Target:0042 Label:''

@@ -1,0 +1,26 @@
+shut:
+LOCAL f,hz,s,N%
+CLS
+PRINT "Camera Speed FPS?"
+INPUT f
+CLS
+PRINT "Electrical freq."
+PRINT "in Hertz?"
+INPUT hz
+CLS
+s=f*360/hz
+PRINT f;" FPS Camera &"
+PRINT hz;" Hertz lights"
+PRINT s;CHR$(223)
+PRINT "Camera Shutter"
+GET
+N%=MENU("Again,HMI,FILM,MENU")
+IF N%=1
+SHUT:
+ELSEIF N%=2
+HMI:
+ELSEIF N%=3
+FILM:
+ELSEIF N%=4
+STOP
+ENDIF

@@ -1,0 +1,82 @@
+lens:
+GLOBAL foot%,S$(6),DI,WI,A,N,I,T,D,L,H,W
+CLS
+PRINT "Choose....."
+foot%=MENUN(2,"Imperial,Metric")
+CLS
+PRINT "Choose film format"
+N=MENUN(2,"35mm,16mm,Anam,1.85,Sup16,8mm,")
+IF N=1
+I=20.96
+T=15.29
+ELSEIF N=2
+I=9.65
+T=7.26
+ELSEIF N=3
+I=42.58
+T=17.78
+ELSEIF N=4
+I=20.96
+T=11.9
+ELSEIF N=5
+I=11.79
+T=7.26
+ELSEIF N=6
+I=5.31
+T=4.01
+ENDIF
+IF foot%=1
+FOOTLENS:
+ENDIF
+PRINT "Select sought data"
+N=MENUN(2,"LENS,DISTANCE,HEIGHT-WIDTH,")
+IF N=1
+PRINT "Select known factor"
+A=MENUN(2,"HEIGHT,WIDTH")
+CLS
+IF A=2
+PRINT "WIDTH metres";CHR$(63)
+INPUT W
+S$="width"
+WI=W
+W=W*1000
+CLS
+PRINT"DISTANCE mtrs";CHR$(63)
+INPUT D
+DI=D
+D=D*1000
+L=(D*I)/W
+ELSEIF A=1
+PRINT "HEIGHT metres";CHR$(63)
+INPUT H
+WI=H
+S$="height"
+H=H*1000
+CLS
+PRINT "DISTANCE mtrs";CHR$(63)
+INPUT D
+
+DI=D
+D=D*1000
+L=(D*T)/H
+ENDIF
+CLS
+L=INTF(L+0.5)
+PRINT "@",DI,"m distance"
+PRINT "&",WI,"m", S$,
+PRINT "needs a....."
+PRINT L,"mm lens"
+GET
+ELSEIF N=2
+DISTANCE:
+ELSEIF N=3
+WIDTH:
+ENDIF
+CLS
+PRINT "Choose..."
+N=MENUN(2,"LENS,FILM,MENU")
+IF N=1
+LENS:
+ELSEIF N=2
+FILM:
+ENDIF

@@ -1,0 +1,69 @@
+newgame:
+
+REM This  function sets the game up for a newplay, removes all old item databases, creates a new one, clears any existing save game, builds the worldmap and initialises the player stats
+
+
+GLOBAL i% REM for looping through biome decoding of neighbours
+REM GLOBAL rnd% REM to decide 
+LOCAL path$(14)
+
+REM Clear any old information from old plays/saves
+CLS
+IF EXIST ("A:items")
+ DELETE "A:items"
+ PRINT "Old inv. deleted"
+ PAUSE -10
+ENDIF
+IF EXIST ("A:saveg")
+ DELETE "A:saveg"
+ PRINT "Old game deleted"
+ PAUSE -10
+ENDIF
+
+REM Set up databases to be used by the game
+path$=slot$+":items"
+COPY path$,"A:" REM 
+
+REM This creates a new world map, populating map$ and finally sets the player position
+REM using px and py as counters before they are used in the game
+
+REM create a world then smooth it out with averaging
+REM go through each tile and look at its neihbours
+REM 70% to count each type of biome and change it to the most common or do nothing
+
+PRINT "Building first world"
+py% = 1
+ WHILE py% <= 4
+  px% = 1
+   WHILE px% <= 20
+    randVal% = 32 + (RND * 224) 
+    REM Get a random integer between 32 and 255
+    map$(py%) = map$(py%) + CHR$(randVal%)
+    px% = px% + 1
+   ENDWH
+  py% = py% + 1
+ ENDWH
+REM The world map is populated randomly
+REM Now go through each tile and see what its neihbours are and change them
+CLS
+PRINT "Smoothing world"
+smooth:
+
+REM Initialise the player position, random but biased to the north west quarter
+px% = (RND * 5) + 1 REM init player x
+py% = (RND * 2) + 1 REM init player y
+
+REM ensure no combat on the starting tile
+decode:(px%,py%)
+bit4% = 0 
+recode: REM recoding the tile with bit 4 as 0 effectively clearing the enemy
+chngmap:(px%,py%,tChar$)
+
+
+plHealt% = 10
+maxplh% = plHealt%
+plweap$="Fists"
+plarm$="None"
+plAtt% = 2
+plDef% = 0
+plMoves% = 0 REM Initialise player stats

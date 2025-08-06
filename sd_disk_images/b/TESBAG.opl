@@ -1,0 +1,26 @@
+TESBAG:
+LOCAL A%,B%
+LOCAL A$(5)
+A%=1 :D$(1)="" :D$(2)=""
+DO
+IF MID$(G$,A%,1)=MID$(O$,A%,1)
+D$(1)=D$(1)+BG$(1)
+ELSE
+B%=1
+DO
+IF MID$(G$,B%,1)=MID$(O$,A%,1)
+D$(2)=D$(2)+BG$(2)
+ENDIF
+B%=B%+1
+UNTIL B%>L%
+ENDIF
+A%=A%+1
+UNTIL A%>L%
+D$(1)=D$(1)+D$(2)
+NEXTD::
+IF LEN(D$(1))=L%
+RETURN
+ENDIF
+D$(1)=D$(1)+BG$(3)
+GOTO NEXTD::
+

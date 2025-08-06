@@ -1,0 +1,21 @@
+a2:
+REM Source: ANNBD.OPL
+REM Version 1.1
+REM Revised version of BIRTHD.OPL to work in
+REM conjunction with complete Psion anniversary package
+REM (C) OCT 1998 LRS
+REM L.R.Sluijk@student.utwente.nl
+
+REM Vars for DOB and name$
+LOCAL j%,jmn%,jmx%,p%,t%
+LOCAL dat%(3),mn%(3),mx%(3),p%(3)
+LOCAL d$(3,4),n$(50)
+REM& EXTERNAL dbase$
+
+LOCAL k%
+
+j%=0 :jmn%=1 :jmx%=3
+p%(1)=11 :p%(2)=p%(1)+4 :p%(3)=p%(1)+9 :p%=p%(1) :t%=p%(3) :REM Screen positions
+dat%(1)=DAY :dat%(2)=MONTH :dat%(3)=YEAR :REM Current date variables
+mx%(1)=31 :mx%(2)=12 :mx%(3)=2155 :REM Maximum values for date variables
+mn%(1)=1 :mn%(2)=1 :mn%(3)=1900 :REM Minimum values for date variables

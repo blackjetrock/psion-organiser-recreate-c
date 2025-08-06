@@ -1,0 +1,9 @@
+strexpr:
+
+local a$,b$
+
+a$="abc"
+b$="qwe"
+a$=a$+b$
+
+a$=b$+"acde"+a$

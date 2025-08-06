@@ -1,0 +1,4 @@
+
+Variables
+
+   0:  VAR: '                M%'      Local Integer           DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFFC

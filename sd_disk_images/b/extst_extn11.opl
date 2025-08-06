@@ -1,0 +1,33 @@
+extn11:
+
+global GB1%
+
+local pass%
+
+pass% = 0
+
+GB1% = 11
+
+print "A:",gb1%
+
+if gb1% = 11
+print "OK"
+pass% = pass% + 1
+else
+print "not ok, expecting 11"
+endif
+
+extn10:(123)
+
+print "B:",gb1%
+
+if gb1% = 10
+print "OK"
+pass% = pass% + 1
+else
+print "not ok, expecting 10"
+endif
+
+if pass% = 2
+print "PASS"
+endif

@@ -1,0 +1,36 @@
+AYOHUM%:
+LOCAL K%
+IF M%=1
+ IF A%(7)=0 AND A%(8)=0 AND A%(9)=0 AND A%(10)=0 AND A%(11)=0 AND A%(12)=0
+  RETURN -1
+ ENDIF
+ELSEIF A%(1)=0 AND A%(2)=0 AND A%(3)=0 AND A%(4)=0 AND A%(5)=0 AND A%(6)=0
+ RETURN -1
+ENDIF
+
+DO
+ DO
+  K%=GET
+  IF K%=%H
+   P%=3
+   RETURN
+  ELSEIF K%=%M
+   P%=3-P%+(M% AND P%=3)
+   RETURN
+  ELSEIF K%=%P
+   P%=0
+   RETURN
+  ELSEIF K%=%O
+   AYOOR:
+   RETURN
+  ELSEIF K%=1
+   RETURN -2
+  ENDIF
+ UNTIL K%>=%A AND K%<=%F
+ K%=K%-%A+1
+ IF M%=1
+  K%=13-K%
+ ENDIF
+UNTIL A%(K%)<>0
+AYOMOV%:(K%,1)
+M%=3-M%

@@ -1,0 +1,23 @@
+DBACK:
+LOCAL lname$(8),rname$(8),m%
+REM XP and CM only
+m%=MENU("Backup,Restore")
+IF m%=1
+  PRINT "From:";
+  TRAP INPUT lname$
+  IF ERR=206 :RETURN :ENDIF
+  PRINT "To:";
+  TRAP INPUT rname$
+  IF ERR=206 :RETURN :ENDIF
+  XTSEND:(rname$,lname$,2)
+ELSEIF m%=2
+  PRINT "To:";
+  TRAP INPUT lname$
+  IF ERR=206 :RETURN :ENDIF
+  PRINT "From:";
+  TRAP INPUT rname$
+  IF ERR=206 :RETURN :ENDIF
+  XTRECV:(rname$,lname$,2)
+ENDIF
+
+

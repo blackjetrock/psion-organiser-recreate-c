@@ -1,0 +1,15 @@
+add:
+
+local E
+
+rem E = 1234.0 / 789.0
+e = 1.0 / 7.0
+print e
+
+print 1234.0 / 789.0
+print 1234.0 / 123.0
+print 100.0/5.0
+print 12.0 /4.0
+print 1000000.0 / 5.0
+print 200.0 / 0.1
+print 1.0E38 / 100.0

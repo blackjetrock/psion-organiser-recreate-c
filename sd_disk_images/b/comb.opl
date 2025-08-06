@@ -1,0 +1,172 @@
+comb:
+LOCAL tPos% REM Target position
+LOCAL sPos% REM Sword position
+LOCAL c% REM Count - determines end through inaction
+LOCAL success% REM Used as a bool to determine if the enemy was hit
+LOCAL sehealt% REM Starting enemy health
+LOCAL sphealt% REM Starting player health
+LOCAL hitbox% REM How wide the weapon is - the wider the easier
+LOCAL g% REM To store the user key press
+LOCAL speed% REM How fast the target moves - could be linked to difficulty
+LOCAL r% REM Random number for chance attack
+LOCAL locdiff% REM difficulty modifier
+LOCAL m% REM menu variable
+LOCAL tmp$(14) REM Inventory return
+LOCAL enHealt REM float for some maths to determine scaled health
+
+tPos% = 10  REM Example target position (mid-screen)
+sPos% = 1 REM Starting position of the sword
+locdiff%= diff%*5 REM A difficulty integer derived from the tile's difficulty- formatted for easier use in the code
+
+REM The higher the difficulty the fatster the swordwillmove, however at the lower difficulty it's too slow - this sets the speed at 5 when the tile difficulty is below 5
+
+IF diff%<5 
+ speed% = 5
+ELSE
+ speed% = 25/diff% REM highest difficulty is about 25 so this will scale between 5 and 1 throughout the game
+ENDIF
+
+REM Set enemy health based on difficulty and the master data
+REM Converting to a float to allow division before going back to a rounded int
+enhealt = enHealt%
+enHealt = enHealt*((diff%+1)*4)/100
+enHealt% = enHealt
+
+REM Starting healths - for the stats display
+sehealt% = enHealt%
+
+PRINT "There's an enemy!"
+PRINT "Enemy: "; enName$
+PRINT "Health: "; enHealt%
+PRINT "Attack: "; enAtt%
+GET
+
+COMBAT::
+CLS
+AT 1,3
+PRINT "                    "
+AT 1,3
+PRINT "Player: ";plHealt%;"/";plMaxHe%
+AT 1,4
+PRINT "                    "
+AT 1,4
+PRINT "Enemy: ";enHealt%;"/";sehealt%
+REM Draw the target on the first line
+AT tPos%, 2
+PRINT "X"
+REM Sweep loop
+c% = 0
+
+DO
+ REM Clear previous sword position
+ AT sPos%, 1
+ PRINT " "
+ REM Update sword position
+ sPos% = sPos% + 1
+  IF sPos% > 20 
+   sPos% = 1  REM Reset to start
+  ENDIF
+ REM Draw sword at new position
+ AT sPos%, 1
+ PRINT "A"
+ REM Delay for visibility
+ PAUSE speed%
+ c% = c% + 1
+ g% = KEY
+ UNTIL g% > 0 
+ IF g% <> 2 REM MODE button = 2
+  g% = 0
+  REM Determine success
+  success% = ABS(sPos% - tPos%) <= hitbox%  REM Success range
+  REM Display result
+   IF success% 
+    PRINT "Hit!"
+    enHealt% = enHealt% - plAtt%
+    IF enHealt%<1
+     enHealt% = 0
+     AT 1,4
+     GOTO RESOLVE::
+    ELSE
+     AT 1,4
+     PRINT "                    "
+     AT 1,4
+     PRINT "Enemy: ";enHealt%;"/";sehealt%
+     GET
+     GOTO COMBAT::
+    ENDIF
+   ELSE
+    PRINT "Miss!"
+    r% = RND*100
+     IF r% < locdiff%
+      plHealt% = plHealt% - enAtt%
+      AT 1,2
+      PRINT "     "
+      AT 1,2
+      PRINT "Ouch!"
+      AT 1,3
+      PRINT "                    "
+      AT 1,3
+      PRINT "Player: ";plHealt%;"/";plMaxHe%
+       IF plHealt%<1
+        plHealt% = 0
+        GOTO RESOLVE::
+       ELSE
+        AT 1,3
+        PRINT "                    "
+        AT 1,3
+        PRINT "Player: ";plHealt%;"/";plMaxHe%
+        GET
+        GOTO COMBAT::
+       ENDIF
+      ELSE
+      
+      GET
+      GOTO COMBAT::
+     ENDIF
+   ENDIF   
+ ELSEIF g% = 2
+  CLS
+  m%=MENU("Fight,Inventory,Run")
+  IF m% = 1
+   GOTO COMBAT::
+  ELSEIF m% = 2
+   inv:
+  ELSEIF m% = 3
+   GOTO RUNAWAY::
+  ELSE
+   GOTO COMBAT::
+  ENDIF
+   GOTO COMBAT::
+ ELSE
+  GOTO COMBAT::
+ ENDIF
+RESOLVE::
+CLS
+IF enHealt% < 1
+ loot:(enName$)
+ REM call a loot chance and generation function here
+ bit4% = 0 
+ recode: REM recoding the tile with bit 4 as 0 effectively clearing the enemy
+ chngmap:(px%,py%,tChar$)
+ GOTO EXIT::
+ELSEIF plHealt% < 1
+ PRINT "You died"
+ PRINT "Death resolution"
+ REM Call a game over function here
+ GET
+  GOTO EXIT::
+ENDIF
+
+GOTO COMBAT::
+
+RUNAWAY::
+ bit4% = 0 REM So there's no loop of combat on the tile while the player is still there and hasnot moved off
+ CLS
+ PRINT "Running away!"
+ GET
+
+EXIT::
+ REM Clear any remaining keypress
+ WHILE KEY$ <> ""
+ ENDWH
+ 

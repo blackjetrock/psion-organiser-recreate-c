@@ -1,0 +1,30 @@
+max1:
+
+local F(3), M1
+local pass%
+
+f(1) = 1.3
+f(2) = 99.3
+f(3) = 54.6
+
+pass% =1
+
+M1 = min(f(), 3)
+print "M1:";M1
+
+if m1 <> 1.3
+pass% = 0
+endif
+
+M1 = min(10.0, 100.0, 200.0, 10.5)
+print "M1:";M1
+
+if m1 <> 10
+pass% = 0
+endif
+
+if pass% = 1
+print "PASS"
+else
+print "FAIL"
+endif

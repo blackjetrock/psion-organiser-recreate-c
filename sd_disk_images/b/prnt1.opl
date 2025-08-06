@@ -1,0 +1,6 @@
+prnt1:
+
+LOCAL P
+
+PRINT "PPP";P
+

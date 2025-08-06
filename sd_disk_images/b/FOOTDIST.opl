@@ -1,0 +1,50 @@
+footdist:
+LOCAL FT,INS,WI,A$(15),S$(8),LE
+PRINT "Select known data"
+A=MENUN(2,"HEIGHT,WIDTH")
+IF A=1
+PRINT "WHAT HEIGHT?"
+AT 1,2
+PRINT "Feet..."
+INPUT FT
+AT 1,2
+PRINT "Inches..."
+INPUT INS
+H=FOOT:(FT,INS)
+WI=H
+S$="height"
+H=H*1000
+CLS
+PRINT "WHAT mm LENS";CHR$(63)
+INPUT L
+LE=L
+D=(H*L)/T
+CLS
+ELSEIF A=2
+PRINT "Width of subject?"
+AT 1,2
+PRINT "Feet..."
+INPUT FT
+AT 1,2
+PRINT "Inches..."
+INPUT INS
+W=FOOT:(FT,INS)
+WI=W
+S$="width"
+W=W*1000
+CLS
+PRINT "WHAT LENS mm?"
+INPUT L
+LE=L
+CLS
+D=(W*L)/I
+ENDIF
+D=INTF(D/10)
+D=D/100
+A$=metre$:(WI)
+PRINT "A",LE,"mm lens" 
+PRINT A$, S$
+A$=metre$:(D)
+PRINT "@",A$
+PRINT "Distance..."
+GET
