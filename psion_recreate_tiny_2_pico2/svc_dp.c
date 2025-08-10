@@ -245,9 +245,13 @@ void dp_cls(void)
     {
       for(int y=0; y<DISPLAY_NUM_LINES; y++)
 	{
-	  i_printxy(x, y, ' ');
+          dd_char_at_xy(x, y, ' ');
+          under_cursor_char[x][y] = ' ';
+           // i_printxy(x, y, ' ');
 	}
     }
+
+  dd_update();
   
   print_home();
 

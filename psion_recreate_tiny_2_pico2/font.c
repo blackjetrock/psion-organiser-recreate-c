@@ -361,7 +361,7 @@ void next_printpos_line(void)
         {
           dd_char_at_xy(x, printpos_y, ' ');
           under_cursor_char[x][printpos_y] = ' ';
-          dd_update();
+          //          dd_update();
 
           //i_printxy(x, printpos_y, ' ');
           under_cursor_char[x][printpos_y] = ' ';
