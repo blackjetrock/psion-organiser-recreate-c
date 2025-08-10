@@ -339,29 +339,39 @@ void next_printpos_line(void)
         {
           for(int y = 1; y<DISPLAY_NUM_LINES; y++)
             {
-              i_printxy(x, y-1, under_cursor_char[x][y]);
+              printf("\nx:%d y:%d", x, y);
+
+              dd_char_at_xy(x, y-1, under_cursor_char[x][y]);
+              under_cursor_char[x][y-1] = under_cursor_char[x][y];
+                
+              //i_printxy(x, y-1, under_cursor_char[x][y]);
             }
         }
 
+      dd_update();
+      
       printpos_x = 0;
-      printpos_y--;
+      //printpos_y--;
+      printpos_y = DISPLAY_NUM_LINES-1;
 
       save_pp_x = printpos_x;
       save_pp_y = printpos_y;
       
       for(int x=0; x<DISPLAY_NUM_CHARS; x++)
         {
-          i_printxy(x, printpos_y, ' ');
+          dd_char_at_xy(x, printpos_y, ' ');
+          under_cursor_char[x][printpos_y] = ' ';
+          dd_update();
+
+          //i_printxy(x, printpos_y, ' ');
           under_cursor_char[x][printpos_y] = ' ';
         }
+
+      dd_update();
       
       printpos_x = save_pp_x;
       printpos_y = save_pp_y;
 
-#if 0
-      printpos_y--;
-      printpos_x = (DISPLAY_NUM_CHARS-2);
-#endif
       return;
     }
   

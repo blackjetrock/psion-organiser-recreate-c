@@ -6,7 +6,7 @@
 #include "ssd1309.h"
 
 #define WIDTH 128
-#define HEIGHT 64
+#define HEIGHT 60
 #define PAGES 8
 
 #define RST 25 

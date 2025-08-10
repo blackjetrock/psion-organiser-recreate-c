@@ -17,6 +17,10 @@
 
 #include "psion_recreate_all.h"
 
+size_t argc = 0;
+const char *argv_null[10] = {0}; // Arbitrary limit of 10 arguments
+const char *argv[10] = {0}; // Arbitrary limit of 10 arguments
+
 int keypress = 0;
 int parameter = 0;
 unsigned int address = 0;

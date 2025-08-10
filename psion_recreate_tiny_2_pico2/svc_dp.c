@@ -241,10 +241,6 @@ void dp_clr_eos(void)
 
 void dp_cls(void)
 {
-  //int sx, sy;
-  //sx = printpos_x;
-  //sy = printpos_y;
-  
   for(int x=0; x<DISPLAY_NUM_CHARS; x++)
     {
       for(int y=0; y<DISPLAY_NUM_LINES; y++)
