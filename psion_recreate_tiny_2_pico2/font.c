@@ -339,7 +339,7 @@ void next_printpos_line(void)
         {
           for(int y = 1; y<DISPLAY_NUM_LINES; y++)
             {
-              printf("\nx:%d y:%d", x, y);
+              //  printf("\nx:%d y:%d", x, y);
 
               dd_char_at_xy(x, y-1, under_cursor_char[x][y]);
               under_cursor_char[x][y-1] = under_cursor_char[x][y];

@@ -150,10 +150,13 @@ int mn_menu(char *str)
       iposx[i] = printpos_x;
       
       dp_prnt(selstr[i]);
-      dp_prnt(" ");
+      //dp_prnt(" ");
     }
   
   //  keypad(stdscr, TRUE);
+
+  // Cursor on
+  cursor_on = 1;
 
   while(!done)
     {
@@ -177,8 +180,12 @@ int mn_menu(char *str)
               break;
               
             case KEY_ON:
-              selnum = 0;
+              // We add one to selnum for return value
+              selnum = -1;
               done = 1;
+#if DB_MN_MENU
+              printf("\nKey:KEY_ON");
+#endif
               break;
 
             case KEY_RIGHT:
@@ -255,6 +262,9 @@ int mn_menu(char *str)
   printf("\nSelected:%d", selnum+1);
 #endif
 
+  // Cursor off again
+  cursor_on = 0;
+  
   // Menu command returns 1..n
   return(selnum+1);
 }

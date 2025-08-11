@@ -35,6 +35,9 @@ volatile int menu_init = 0;
 
 MENU menu_mems;
 
+// The menu string that will be displayed and run.
+char menu_str[300] PSRAM;
+
 //------------------------------------------------------------------------------
 // These are the tasks the menu functions need to perform in order to
 // keep the display, wireless and so on running.
@@ -42,6 +45,10 @@ MENU menu_mems;
 u_int64_t now[NUM_STATS];
 int menu_loop_count = 0;
 
+void menu_back(void);
+
+////////////////////////////////////////////////////////////////////////////////
+//  
 
 void menu_loop_tasks(void)
 {
@@ -99,11 +106,17 @@ void menu_sd_action_load(void)
   if( strlen(ob3_fn) > 0 )
     {
       char selchar;
+#if 0      
       sscanf(ob3_fn, "%s %c", nm, &selchar);
       print_nl_if_necessary(nm);
       
       print_str(nm);
       print_str(" ");
+#else
+      sscanf(ob3_fn, "%s %c", nm, &selchar);
+      strcat(menu_str, nm);
+      strcat(menu_str, " ");
+#endif
     }
 }
 
@@ -151,7 +164,9 @@ void menu_sd_action(MENU_SD_ACTION action)
       while( !ff_feof(mfp) )
         {
           ff_fgets(ob3_fn, NOBJ_FILENAME_MAXLEN, mfp);
+
           printf("\nfeof=%d ob3_fn:'%s'", ff_feof(mfp), ob3_fn);
+
           int lstch = strlen(ob3_fn)-1;
           
           if( ob3_fn[lstch] == '\n' )
@@ -174,7 +189,54 @@ void menu_sd_action(MENU_SD_ACTION action)
 ////////////////////////////////////////////////////////////////////////////////
 
 
+
 void menu_process(void)
+{
+  // Build menu string from fixed items and also the xxx.mcfg file for this menu
+  // xxx is the menu name in the menu structures.
+
+  menu_str[0] = '\0';
+  
+  int e = 0;
+  int mi = 0;
+  
+  while( active_menu->item[e].key != '&' )
+    {
+      strcat(menu_str, active_menu->item[e].item_text);
+      strcat(menu_str, " ");
+      e++;
+    }
+
+  // Now add in the entries fromt he xxx.mcfg file. These are OPL
+  // .ob3 filenames
+  menu_sd_action(menu_sd_action_load);
+
+  // Run the menu
+  mi = mn_menu(menu_str);
+
+  if( mi == 0 )
+    {
+      menu_back();
+    }
+  else
+    {
+      
+      // Now execute either one of the fixed items or an OPL object file
+      if( mi <= e )
+        {
+          // Fixed item
+          (*active_menu->item[mi-1].do_fn)();
+        }
+      else
+        {
+          // OPL object file
+        }
+    }
+}
+
+
+
+void menu_process2(void)
 {
   // Initialise?  
   if( do_menu_init() )
@@ -3115,7 +3177,7 @@ MENU menu_eeprom =
    "EEPROM",
    init_menu_eeprom,   
    {
-    {KEY_ON, "",           menu_back},
+     //    {KEY_ON, "",           menu_back},
     {'I', "Invalidate", menu_eeprom_invalidate},
     {'M', "Mem",        menu_goto_mems},
     {'&', "",           menu_null},
@@ -3128,7 +3190,7 @@ MENU menu_format =
    "Format Y/N?",
    init_menu_format,   
    {
-    {KEY_ON, "",        menu_back},
+     //    {KEY_ON, "",        menu_back},
     {'Y', "Yes",        menu_fmat},
     {'N', "No",         menu_back},
     {'&', "",           menu_null},
@@ -3141,7 +3203,7 @@ MENU menu_test_os =
    "Test OS",
    init_menu_test_os,   
    {
-    {KEY_ON, "",        menu_back},
+     //    {KEY_ON, "",        menu_back},
     {'D', "DispTest",   menu_oled_test},
     {'V', "dpView",     menu_dp_view},
     {'B', "Buzz",       menu_goto_buzzer},
@@ -3160,7 +3222,7 @@ MENU menu_prog =
    "Program",
    init_menu_prog,   
    {
-    {KEY_ON, "",        menu_back},
+     //    {KEY_ON, "",        menu_back},
     {'T', "Translate",  menu_prog_translate},
     {'R', "Run",        menu_prog_run},
     {'&', "",           menu_null},
@@ -3173,7 +3235,7 @@ MENU menu_calc =
    "Calc",
    init_menu_calc,   
    {
-    {KEY_ON, "",        menu_back},
+     //    {KEY_ON, "",        menu_back},
     {'C', "Calc",       menu_calc1},
     {'F', "FSM Calc",   menu_calc2},
     {'&', "",           menu_null},
@@ -3186,7 +3248,7 @@ MENU menu_file =
    "File",
    init_menu_file,   
    {
-    {KEY_ON, "",        menu_back},
+     //    {KEY_ON, "",        menu_back},
     {'E', "Edit",       menu_file_edit},
     {'C', "Create",     menu_file_create},
     {'D', "Delete",     menu_file_delete},
@@ -3201,7 +3263,7 @@ MENU menu_buzzer =
    "Buzz",
    init_menu_buzzer,   
    {
-    {KEY_ON, "",        menu_back},
+     //    {KEY_ON, "",        menu_back},
     {'B', "Buzz1",      menu_buz1},
     {'&', "",           menu_null},
    }
@@ -3213,7 +3275,7 @@ MENU menu_rtc =
    "RTC",
    init_menu_rtc,   
    {
-    {KEY_ON, "",           menu_back},
+     //    {KEY_ON, "",           menu_back},
     {'V', "VarSet",     menu_rtc_varset},
     {'R', "RegSet",     menu_rtc_regset},
     {'&', "",           menu_null},
@@ -3226,7 +3288,7 @@ MENU menu_mems =
    "Memories",
    init_menu_mems,   
    {
-    {KEY_ON, "",           menu_back},
+     //    {KEY_ON, "",           menu_back},
     {'S', "Save",       menu_eeprom_save_mems},
     {'L', "Load",       menu_eeprom_load_mems},
     {'E', "Extract",    menu_eeprom_extract_mems},
