@@ -739,12 +739,13 @@ SERIAL_COMMAND serial_cmds[] =
     "SD dir listing",
     cli_ls,
    },
+#if PICO2
    {
     'r',
     "Run Test OB3",
     cli_test_ob3,
    },
-   
+#endif   
   };
 
 int pcount = 0;
@@ -1071,7 +1072,7 @@ void ic_runx(char *str, char *fmt)
 }
 
 #if OPL_TRANSLATOR
-
+#if PICO2
 void ic_trans(char *str, char *fmt)
 {
   char arg[100];
@@ -1092,7 +1093,9 @@ void ic_trans(char *str, char *fmt)
   
   run_unmount(0, argv_null);
 }
+#endif
 
+#if PICO2
 void ic_transtest(char *str, char *fmt)
 {
   char arg[100];
@@ -1113,6 +1116,7 @@ void ic_transtest(char *str, char *fmt)
   
   run_unmount(0, argv_null);
 }
+#endif
 #endif
 
 void ic_mount(char *str, char *fmt)

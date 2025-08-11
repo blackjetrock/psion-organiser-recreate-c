@@ -180,7 +180,7 @@ void menu_process(void)
   if( do_menu_init() )
     {
       dp_cls();
-      
+
       int e = 0;
 
       while( active_menu->item[e].key != '&' )

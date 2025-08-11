@@ -72,7 +72,13 @@ typedef unsigned int uint;
 #include "file_handling.h"
 #include "i2ckbd.h"
 
+// Macro to put things in external PSRAM
+
+#if SWITCH_EXTERNAL_PSRAM
 #define PSRAM __attribute__((section(".psram.")))
+#else
+#define PSRAM 
+#endif
 
 //------------------------------------------------------------------------------
 

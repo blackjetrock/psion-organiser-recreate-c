@@ -5,10 +5,15 @@
 #define PSION_RECREATE   0   // Hardware replacement for original case
 #define PICOCALC         0   // Use Picocalc hardware
 
+#define PICO             1
+#define PICO2            0
+
 //------------------------------------------------------------------------------
 // Pico 2 with external PSRAM
 
-#define SWITCH_EXTERNAL_PSRAM   1
+#define SWITCH_EXTERNAL_PSRAM   0
+
+//------------------------------------------------------------------------------
 
 #if PICOCALC
 #define KEY_SCAN_IN_MAIN 1
