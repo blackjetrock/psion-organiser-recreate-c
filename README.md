@@ -37,7 +37,7 @@ To build for the Mini with a Pico 2, set the PSION_MINI switch in switches.h in 
 Picocalc
 ========
 
-You can also run the code on the Picocalc. If you fit the Picocal with a Pimoroni Pico Pluis 2 then you can yranslate and run NewOPL.
+You can also run the code on the Picocalc. If you fit the Picocal with a Pimoroni Pico Plus 2 then you can yranslate and run NewOPL.
 To build for the Picocalc with a Pico 2, set the PICOCALC switch in switches.h in the psion_recreate_tiny_2_pico2 directory and rebuild. The psion_recreate_tiny_2 directory is a build for the Pico.
 
 <img src="https://github.com/user-attachments/assets/08678f7a-9d40-4b1e-a9da-61e1aa56eb24" width="600">
