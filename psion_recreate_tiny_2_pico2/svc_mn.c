@@ -157,7 +157,8 @@ int mn_menu(char *str)
 
   // Cursor on
   cursor_on = 1;
-
+  cursor_blink = 1;
+  
   while(!done)
     {
       tight_loop_tasks();

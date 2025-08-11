@@ -97,6 +97,8 @@ char menu_fn[NOBJ_FILENAME_MAXLEN+1];
 char ob3_fn[NOBJ_FILENAME_MAXLEN+1];
 char nm[NOBJ_FILENAME_MAXLEN+1];
 KEYCODE menu_sel_key = KEY_NONE;
+int sd_index;                             // Which sd menu item this is
+int required_sd_index;                    // Which sd menu item we have selected
 
 typedef void (*MENU_SD_ACTION)(void);
 
@@ -120,7 +122,39 @@ void menu_sd_action_load(void)
     }
 }
 
+// Execute the object file 
 void menu_sd_action_exec(void)
+{
+  int i;
+  
+  // Don't put empty lines up
+  if( strlen(ob3_fn) > 0 )
+    {
+      char selchar;
+      
+      sscanf(ob3_fn, "%s %c", nm, &selchar);
+      printf("\n%s -> %s %c", ob3_fn, nm, selchar);
+      
+      if( sd_index == required_sd_index )
+        {
+          // Run the OB3 file, if there is one  
+          // Mount the SD card and translate the OPL file
+          run_mount(0, argv_null);
+          
+          // Add suffix, as it has to be an ob3 file
+          strcpy(ob3_fn, nm);
+          strcat(ob3_fn, ".ob3");
+          
+          dp_cls();
+          nopl_exec(ob3_fn);
+          
+          //          run_unmount(0, argv_null);
+         }
+     }
+ }
+
+// Old version
+void menu_sd_action_exec2(void)
 {
   // Don't put empty lines up
   if( strlen(ob3_fn) > 0 )
@@ -157,6 +191,7 @@ void menu_sd_action(MENU_SD_ACTION action)
   run_mount(0, argv_null);
   
   mfp = fopen(menu_fn, "r");
+  sd_index = 0;
   
   if( mfp != NULL )
     {
@@ -175,7 +210,8 @@ void menu_sd_action(MENU_SD_ACTION action)
             }
 
           (*action)();
-          
+
+          sd_index++;
         }
       
       fclose(mfp);
@@ -230,6 +266,10 @@ void menu_process(void)
       else
         {
           // OPL object file
+          required_sd_index = mi - (e+1);
+
+          // Run the required OPL file
+          menu_sd_action(menu_sd_action_exec);          
         }
     }
 }
@@ -3163,10 +3203,10 @@ MENU menu_top =
     {'H', "Hex",        menu_hex},
     {'F', "Find",       menu_fl_find},
     {'S', "Save",       menu_fl_save},
-    {'M', "forMat",     menu_goto_format},
+    {'M', "Format",     menu_goto_format},
     {'P', "Prog",       menu_goto_prog},
     {'C', "Calc",       menu_goto_calc},
-    {'L', "fiLe",       menu_goto_file},
+    {'L', "File",       menu_goto_file},
     {'&', "",           menu_null},
    }
   };
@@ -3205,7 +3245,7 @@ MENU menu_test_os =
    {
      //    {KEY_ON, "",        menu_back},
     {'D', "DispTest",   menu_oled_test},
-    {'V', "dpView",     menu_dp_view},
+    {'V', "Dpview",     menu_dp_view},
     {'B', "Buzz",       menu_goto_buzzer},
     {'C', "Cursor",     menu_cursor_test},
     {'E', "Epos",       menu_epos_test},
@@ -3237,7 +3277,7 @@ MENU menu_calc =
    {
      //    {KEY_ON, "",        menu_back},
     {'C', "Calc",       menu_calc1},
-    {'F', "FSM Calc",   menu_calc2},
+    {'F', "FSMCalc",    menu_calc2},
     {'&', "",           menu_null},
    }
   };
@@ -3252,7 +3292,7 @@ MENU menu_file =
     {'E', "Edit",       menu_file_edit},
     {'C', "Create",     menu_file_create},
     {'D', "Delete",     menu_file_delete},
-    {'V', "editV3",     menu_file_editv3},
+    {'V', "Editv3",     menu_file_editv3},
     {'&', "",           menu_null},
    }
   };
