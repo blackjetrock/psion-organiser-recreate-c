@@ -1501,7 +1501,7 @@ void rtc_adjust(int what, int digit)
       break;
 
     case DATE_U:
-      rtc_set_day(bcd_ins(rtc_get_day(), digit, 0));
+      rtc_set_day(bcd_ins(rtc_get_day(), digit, 1));
       break;
 
       case DATE_L:
