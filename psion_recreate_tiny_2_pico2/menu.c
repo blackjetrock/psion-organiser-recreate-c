@@ -186,8 +186,11 @@ void menu_sd_action(MENU_SD_ACTION action)
   FIL *mfp;
   
   sprintf(menu_fn, "%s.mcfg", active_menu->name);
-  
+
+#if DB_SD_MENU
   printf("\nLoading from %s", menu_fn);
+#endif
+  
   run_mount(0, argv_null);
   
   mfp = fopen(menu_fn, "r");
@@ -200,8 +203,10 @@ void menu_sd_action(MENU_SD_ACTION action)
         {
           ff_fgets(ob3_fn, NOBJ_FILENAME_MAXLEN, mfp);
 
+#if DB_SD_MENU
           printf("\nfeof=%d ob3_fn:'%s'", ff_feof(mfp), ob3_fn);
-
+#endif
+          
           int lstch = strlen(ob3_fn)-1;
           
           if( ob3_fn[lstch] == '\n' )
@@ -243,7 +248,11 @@ void menu_process(void)
       e++;
     }
 
-  // Now add in the entries fromt he xxx.mcfg file. These are OPL
+#if DB_SD_MENU
+  printf("\nMenu string:'%s'", menu_str);
+#endif
+  
+  // Now add in the entries from the xxx.mcfg file. These are OPL
   // .ob3 filenames
   menu_sd_action(menu_sd_action_load);
 

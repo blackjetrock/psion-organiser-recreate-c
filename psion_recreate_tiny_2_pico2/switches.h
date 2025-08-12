@@ -53,6 +53,8 @@
 #define DB_NEXT_PRINTPOS 0
 #define DB_PRINTPOS      0
 
+#define DB_SD_MENU       1
+
 // Key scanning in core1 main() or core0 loops?
 #define CORE0_SCAN       0
 
