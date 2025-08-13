@@ -352,7 +352,7 @@ void qca_num_qc_con(NOBJ_MACHINE *m, NOBJ_QCS *s)
       
       push_machine_8(m, digit[j]);
       
-      dbq("Byte %d: j:%d digit:(%02X)", i, j, digit);
+      dbq("Byte %d: j:%d digit:(%02X)", i, j, digit[j]);
     }
 
   // Zero bytes on stack

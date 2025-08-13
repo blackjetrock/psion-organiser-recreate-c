@@ -2679,6 +2679,7 @@ void dump_exp_buffer(FIL *fp, int bufnum)
       ff_fprintf(fp, "  %d:", token.p_idx);
 
       for(int pi=0; pi< MAX_EXP_BUF_P/*token.p_idx*/; pi++)
+      //for(int pi=0; pi< token.p_idx; pi++)
 	{
 	  ff_fprintf(fp, " %d", token.p[pi]);
 	}
@@ -4274,7 +4275,7 @@ void typecheck_expression(void)
 	  
 	  if( (strcmp(be.op.name, "PAR_TYPE") == 0) )
 	    {
-	      // We need to unstack the parameter, find th etyope, update the
+	      // We need to unstack the parameter, find the type, update the
 	      // PAR_TYPE type and re-stack the parameter
 
 	      // Parameter
@@ -6400,7 +6401,24 @@ int nopl_trans(char *filename)
 
   // This is run multiple times before exiting when on a device. When on the PC it runs and exits,
   // so we have to cear these variables, or they retain their values from previous translations.
-  
+
+  // Conditional information
+  cond_fixup_i = 0;
+
+  first_token = 1;
+  op_stack_ptr = 0;
+  exp_type_stack_ptr = 0;
+
+  node_id_index = 1;
+  exp_buffer_i = 0;
+  exp_buffer2_i = 0;
+
+  indent_level = 0;
+  defline = 1;
+
+  local_info_index  = 0;
+  global_info_index = 0;
+
   // Clear variables
   num_var_info = 0;
 
