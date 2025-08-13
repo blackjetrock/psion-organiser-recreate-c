@@ -156,7 +156,7 @@ int mn_menu(char *str)
   //  keypad(stdscr, TRUE);
 
   // Cursor on
-  cursor_on = 1;
+  cursor_on();
   cursor_blink = 1;
   
   while(!done)
@@ -264,7 +264,7 @@ int mn_menu(char *str)
 #endif
 
   // Cursor off again
-  cursor_on = 0;
+  cursor_off();
   
   // Menu command returns 1..n
   return(selnum+1);

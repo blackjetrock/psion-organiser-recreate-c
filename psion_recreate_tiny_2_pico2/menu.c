@@ -310,8 +310,7 @@ void menu_process2(void)
       // Initialise the menu
       (*active_menu->init_fn)();
 
-      cursor_on = 0;
-      //      cursor_y = 0;
+      cursor_off();
     }
 
   
@@ -647,7 +646,7 @@ void menu_cursor_test(void)
   i_printxy_str(0, 0, "Cursor keys to move");
   i_printxy_str(0, 1, "B:Toggle blink");
 
-  cursor_on = 1;
+  cursor_on();
   
    while(!done)
     {
@@ -661,7 +660,7 @@ void menu_cursor_test(void)
 	  switch(k)
 	    {
 	    case KEY_ON:
-	      cursor_on = 0;
+	      cursor_off();
 	      done = 1;
 	      break;
 	      
@@ -1728,7 +1727,7 @@ void menu_hex(void)
 	  switch(k)
 	    {
 	    case KEY_ON:
-	      cursor_on = 0;
+	      cursor_off();
 	      done = 1;
 	      break;
 
@@ -2363,7 +2362,7 @@ void menu_forth_core(int type)
 
   char frag[2] = " ";
   
-  cursor_on = 1;
+  cursor_on();
   cursor_blink = 1;
   
   entry[0] = '\0';
@@ -2386,7 +2385,7 @@ void menu_forth_core(int type)
 	  switch(k)
 	    {
 	    case KEY_ON:
-	      cursor_on = 0;
+	      cursor_off();
 	      done = 1;
 	      break;
 

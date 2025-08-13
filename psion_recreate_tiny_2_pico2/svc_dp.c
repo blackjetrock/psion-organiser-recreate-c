@@ -181,7 +181,15 @@ void dp_stat(int x, int y, int curs_on, int cursor_block)
   printpos_y       = 0;
   printpos_at_end  = 0;
 
-  cursor_on = curs_on;
+  if( curs_on )
+    {
+      cursor_on();
+    }
+  else
+    {
+      cursor_off();
+    }
+  
   cursor_blink = cursor_block;
 }
 

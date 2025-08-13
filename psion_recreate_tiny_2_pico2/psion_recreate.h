@@ -238,7 +238,7 @@ extern char display_line[DISPLAY_NUM_LINES][DISPLAY_NUM_CHARS+1];
 // Cursor
 //
 
-extern int cursor_on;
+//extern int cursor_on;
 extern uint64_t cursor_upd_time;
 extern uint64_t cursor_last_time;
 extern volatile int cursor_phase;

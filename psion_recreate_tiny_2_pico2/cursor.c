@@ -22,7 +22,7 @@
 #define CURSOR_UNDERLINE   251
 #endif
 
-int cursor_on = 0;
+int cursor_is_on = 0;
 uint64_t cursor_upd_time = 1000000L;
 uint64_t cursor_last_time = 0;
 volatile int cursor_phase = 0;
@@ -44,7 +44,7 @@ void cursor_task(void)
 {
   int ch;
   
-  if( cursor_on)
+  if( cursor_is_on)
     {
       u_int64_t now = time_us_64();
       if( ((now - cursor_last_time) > cursor_upd_time) || force_cursor_update )
@@ -114,11 +114,17 @@ void cursor_task(void)
 int last_cursor_x = -1;
 int last_cursor_y = -1;
 
+////////////////////////////////////////////////////////////////////////////////
+//
+// Called repeatedly to handle the cursor
+//
+////////////////////////////////////////////////////////////////////////////////
+
 void cursor_task(void)
 {
   int ch;
   
-  if( cursor_on)
+  if( cursor_is_on)
     {
       if( last_cursor_x != -1 )
         {
@@ -126,6 +132,10 @@ void cursor_task(void)
             {
               // Cursor has moved, put character back
               print_cursor(last_cursor_x, last_cursor_y, under_cursor_char[last_cursor_x][last_cursor_y]);
+
+              // Force cursor on so it can be seen
+              cursor_phase = 1;
+              force_cursor_update = 1;
             }
         }
 
@@ -134,7 +144,7 @@ void cursor_task(void)
 	{
 	  force_cursor_update = 0;
 	  cursor_last_time = now;
-	  cursor_phase = !cursor_phase;
+
 
 	  if( cursor_phase )
 	    {
@@ -187,12 +197,27 @@ void cursor_task(void)
 	      
 	      print_cursor(cursor_x, cursor_y, ch);
 	    }
+          
+          cursor_phase = !cursor_phase;
 	}
       last_cursor_x = cursor_x;
       last_cursor_y = cursor_y;
+
     }
 }
 #endif
+
+void cursor_on(void)
+{
+  cursor_is_on = 1;
+  cursor_phase = 1;
+  force_cursor_update = 1;
+}
+
+void cursor_off(void)
+{
+  cursor_is_on = 0;
+}
 
 
 // We have to put the original character back then move the cursor then force

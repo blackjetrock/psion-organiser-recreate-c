@@ -911,7 +911,14 @@ void qca_cursor(NOBJ_MACHINE *m, NOBJ_QCS *s)
 {
   m->cursor_flag = qcode_next_8(m);  // Get type
 
-  cursor_on = m->cursor_flag;
+  if( m->cursor_flag )
+    {
+      cursor_on();
+    }
+  else
+    {
+      cursor_off();
+    }
   
   dbq("\nCursor flag now set to %d", m->cursor_flag);
 }
@@ -3790,8 +3797,8 @@ const NOBJ_QCODE_INFO qcode_info[] =
     { QCO_BRA_FALSE,     "QCO_BRA_FALSE",     {qca_bra_false,    qca_null,        qca_null}},
     { QCO_ASS_INT,       "QCO_ASS_INT",       {qca_ass_int,      qca_null,        qca_null}},
 
-    { QCO_ASS_STR,       "QCO_ASS_STR",       {qca_ass_str,      qca_null,        qca_null}},
     { QCO_ASS_NUM,       "QCO_ASS_NUM",       {qca_ass_num,      qca_null,        qca_null}},
+    { QCO_ASS_STR,       "QCO_ASS_STR",       {qca_ass_str,      qca_null,        qca_null}},
     { QCO_DROP_BYTE,     "QCO_DROP_BYTE",     {qca_drop_byte,    qca_null,        qca_null}},    // QCO_DROP_BYTE           0x82    
     { QCO_DROP_WORD,     "QCO_DROP_WORD",     {qca_pop_int,      qca_null,        qca_null}},
     { QCO_DROP_NUM,      "QCO_DROP_NUM",      {qca_pop_num,      qca_null,        qca_null}},

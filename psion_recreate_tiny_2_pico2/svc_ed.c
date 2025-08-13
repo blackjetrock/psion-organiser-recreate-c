@@ -196,8 +196,8 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
   printf("\n%s:Epos prompt:'%s'", __FUNCTION__, epos_prompt);
 #endif
 
-  
-  cursor_on = 1;
+
+  cursor_on();
   cursor_blink = 1;
 
 #if 1
@@ -276,7 +276,7 @@ KEYCODE ed_epos(char *str, int len, int single_nmulti_line, int exit_on_mode, in
               switch(k)
                 {
                 case KEY_ON:
-                  cursor_on = 0;
+                  cursor_off();
                   done = 1;
                   break;
               
