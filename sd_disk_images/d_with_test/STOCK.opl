@@ -1,0 +1,22 @@
+stock:
+LOCAL barstr$(32),menu%
+loop1::
+IF NOT EXIST ("A:product")             : rem  Open product file.
+  CREATE "A:product",A,barcode$,qty$
+ELSE
+  OPEN   "A:product",A,barcode$,qty$
+ENDIF
+
+REM Select file function.
+loop2::
+  menu% = MENU("SCAN,RECV,SEND,DELETE,EDIT,SEARCH,QUIT")
+
+  IF     menu% = 0 : STOP
+  ELSEIF menu% = 1 : scan:    : GOTO loop2::
+  ELSEIF menu% = 2 : rxfile:  : GOTO loop2::
+  ELSEIF menu% = 3 : txfile:  : GOTO loop2::
+  ELSEIF menu% = 4 : delfile: : GOTO loop1::
+  ELSEIF menu% = 5 : edfile:  : GOTO loop2::
+  ELSEIF menu% = 6 : findrec: : GOTO loop2::
+  ELSE   menu% = 7 : OFF      : GOTO loop2::
+  ENDIF

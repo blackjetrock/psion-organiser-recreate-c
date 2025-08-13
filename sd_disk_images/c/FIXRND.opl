@@ -1,0 +1,12 @@
+FIXRND:
+LOCAL N$(10),R$(1),S$(10),T$(10)
+LOCAL B%,N%
+N$="1234567890"
+B%=L%
+DO
+N%=INT(RND*LEN(N$))+1
+R$=MID$(N$,N%,1) :S$=LEFT$(N$,N%-1) :T$=RIGHT$(N$,LEN(N$)-N%)
+N$=S$+T$ :O$=O$+R$
+B%=B%-1
+UNTIL B%<1
+RETURN

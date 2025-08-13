@@ -1,0 +1,16 @@
+numarr:
+
+LOCAL X(10)
+
+X(1) = 1.4
+X(2) = 2.3
+
+X(3) = x(1) + x(2)
+
+print x(1),x(2),x(3)
+
+if X(1)=1.4 and x(2) = 2.3 and x(3)=3.7
+print "PASS"
+else
+print "FAIL"
+endif

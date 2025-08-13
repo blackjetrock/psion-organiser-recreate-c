@@ -1,0 +1,50 @@
+count2:
+
+rem Create a file, write some record
+
+local PASS%
+
+pass% = 1
+
+create "A:STRF2", A, A$, B$, C$
+use a
+
+A.A$ = "a str 1a"
+A.B$ = "a str 1b"
+A.C$ = "a str 1c"
+
+append
+
+print "A count:",count
+if count <> 1
+pass% = 0
+endif
+rem return
+
+create "A:COUNT", B, r$
+use b
+
+B.R$ = "First record"
+append
+if count <> 1
+pass% = 0
+endif
+print "B count:",count	
+append
+print "B count:",count
+if count <> 2
+pass% = 0
+endif
+
+use a
+print "A count:",count
+if count <> 1
+pass% = 0
+endif
+
+
+if pass%
+print "PASS"
+else
+print "FAIL"
+endif

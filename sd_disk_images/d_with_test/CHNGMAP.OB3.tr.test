@@ -1,0 +1,91 @@
+
+Filename:'CHNGMAP'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:004E
+QCode Space Size:004A
+Number of parameters:03
+Parameter types:
+ 0 STR    (2)
+ 1 INT    (0)
+ 2 INT    (0)
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0006
+External variables (1)
+ 0: MAP$             STRARY (05)
+
+String length fixups (3)
+ 0: FFE0 14
+ 1: FFCA 14
+ 2: FFB4 14
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0F       Push local/global string variable reference     (bytes code:v)
+0003: FFE1       (65505)
+0005: 07       Push parameter/external integer variable value     (bytes code:V)
+0006: FFFA       (65530)
+0008: 0C       Pop integer index and push parameter/external string array variable value     (bytes code:V)
+0009: FFF6       (65526)
+000B: 81       Assign string     (bytes code:-)
+000C: 07       Push parameter/external integer variable value     (bytes code:V)
+000D: FFFC       (65532)
+000F: 02       Push local/global string variable value     (bytes code:v)
+0010: FFE1       (65505)
+0012: 96       LEN     (bytes code:-)
+0013: 29       Greater than integer     (bytes code:-)
+0014: 7E       Branch if false     (bytes code:D)
+0015: Dest:0018 (Dist:0003)
+0017: 7B       RETURN (float 0)     (bytes code:-)
+0018: 0F       Push local/global string variable reference     (bytes code:v)
+0019: FFCB       (65483)
+001B: 02       Push local/global string variable value     (bytes code:v)
+001C: FFE1       (65505)
+001E: 07       Push parameter/external integer variable value     (bytes code:V)
+001F: FFFC       (65532)
+0021: 22       Push integer literal     (bytes code:I)
+0022: 0001       (1)
+0024: 2E       Minus integer     (bytes code:-)
+0025: C0       LEFT$     (bytes code:-)
+0026: 81       Assign string     (bytes code:-)
+0027: 0F       Push local/global string variable reference     (bytes code:v)
+0028: FFB5       (65461)
+002A: 02       Push local/global string variable value     (bytes code:v)
+002B: FFE1       (65505)
+002D: 02       Push local/global string variable value     (bytes code:v)
+002E: FFE1       (65505)
+0030: 96       LEN     (bytes code:-)
+0031: 07       Push parameter/external integer variable value     (bytes code:V)
+0032: FFFC       (65532)
+0034: 2E       Minus integer     (bytes code:-)
+0035: C4       RIGHT$     (bytes code:-)
+0036: 81       Assign string     (bytes code:-)
+0037: 07       Push parameter/external integer variable value     (bytes code:V)
+0038: FFFA       (65530)
+003A: 19       Pop integer index and push parameter/external string array variable reference     (bytes code:V)
+003B: FFF6       (65526)
+003D: 02       Push local/global string variable value     (bytes code:v)
+003E: FFCB       (65483)
+0040: 09       Push parameter/external string variable value     (bytes code:V)
+0041: FFF8       (65528)
+0043: 4B       Plus string     (bytes code:-)
+0044: 02       Push local/global string variable value     (bytes code:v)
+0045: FFB5       (65461)
+0047: 4B       Plus string     (bytes code:-)
+0048: 81       Assign string     (bytes code:-)
+0049: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0F FF E1 07 FF FA 0C FF F6 81 07 FF FC 02 
+0010:FF E1 96 29 7E 00 03 7B 0F FF CB 02 FF E1 07 FF 
+0020:FC 22 00 01 2E C0 81 0F FF B5 02 FF E1 02 FF E1 
+0030:96 07 FF FC 2E C4 81 07 FF FA 19 FF F6 02 FF CB 
+0040:09 FF F8 4B 02 FF B5 4B 81 7B 

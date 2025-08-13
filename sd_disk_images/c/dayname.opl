@@ -1,0 +1,11 @@
+dayname:
+
+print dayname$(0)
+print dayname$(1)
+print dayname$(2)
+print dayname$(3)
+print dayname$(4)
+print dayname$(5)
+print dayname$(6)
+print dayname$(7)
+print dayname$(8)

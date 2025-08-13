@@ -1,0 +1,97 @@
+SYSLIB$:(VEC%,A%,B%,IX,RTB$,GW41%,GW42%)
+LOCAL MCH%(10), TMP%, M%, PB$(255), PB%, LNB%
+
+
+rem Opbouw blok met output parameters OS (PB$)
+rem byte    1   : Vector uitgevoerde functie  
+rem byte    2   : Inhoud register A \ vormt 16 bit register D    
+rem byte    3   : Inhoud register B / 
+rem byte  4-5   : Inhoud 16 bit register X
+rem byte    6   : Inhoud CCR register
+rem byte  7-255 : Inhoud runtime buffer na uitvoeren
+
+
+rem Initgedeelte algemeen
+M%=ADDR(TMP%) + 1        : rem Beginadres relocateble machinecode program 
+
+
+rem Indien nodig parameter in runtime buffer steken
+IF RTB$ <> ""            : rem Parameter voor in runtime buffer?
+   PB$=RTB$              : rem RTB$ parameter tijdelijk kopieren
+
+   rem machinecode poken voor aanroep OS copy buffer
+   POKEB M%,$CE          : rem LDX - Register X laden met beginadres PB$
+   POKEW M%+1,ADDR(PB$)+1
+   POKEB M%+3,$CC        : rem LDD - Register D laden met adres runtime buffer
+   POKEW M%+4,$2188      
+   POKEB M%+6,$3F        : rem SWI - Software interrupt uitvoeren
+   POKEB M%+7,109        : rem OS109 moet uitgevoerd worden.
+   POKEB M%+8,$39        : rem RTS   - Return To System
+
+   LNB%=LEN(PB$)      
+   POKEW $41,LNB%        : rem GW var 0 opvullen met lengte te kopieren buffer
+   TMP%=USR(M%,0)        : rem Machinecode uitvoeren
+   POKEB $2187,LNB%      : rem Lengte runtime buffer updaten
+ENDIF
+
+
+rem Initgedeelte voor aanroepen gevraagde OS
+PB$="******"       : rem Initialiseren parameterblok output OS
+PB%=ADDR(PB$) + 1  : rem Beginadres blok met output parameters
+
+
+rem Machinecode poken voor aanroepen gevraagde OS
+rem Als B% > 255 dan moet 16 bit register D geladen worden, in het andere
+rem geval de 8 bit registers A en B
+IF B% > 255          
+  POKEB M%,$C3     : rem LDD   - Register D laden met B%
+  POKEW M%+1,B%    
+  POKEB M%+3,$01   : REM NOP   - Program Counter verhogen
+ELSE
+  POKEB M%,$86     : rem LDA A - Register A laden met A%
+  POKEB M%+1,A%   
+  POKEB M%+2,$C6   : rem LDA B - Register B laden met B%
+  POKEB M%+3,B%
+ENDIF
+POKEB M%+4,$CE     : rem LDX   - Register X laden met IX
+POKEW M%+5,IX    
+POKEB M%+7,$3F     : rem SWI   - Software interrupt uitvoeren
+POKEB M%+8,VEC%  
+POKEB M%+9,$B7     : rem STA A - Register A bewaren in parameterblok
+POKEW M%+10,PB%+1
+POKEB M%+12,$07    : rem TPA   - Transfer bits 0-5 CCR into Register A
+POKEB M%+13,$B7    : rem STA A - Inhoud reg A (=inh CCR) bewaren in parmblok
+POKEW M%+14,PB%+5
+POKEB M%+16,$F7    : rem STA B - Register B bewaren in parameterblok
+POKEW M%+17,PB%+2
+POKEB M%+19,$FF    : rem STX   - Register X bewaren in parameterblok
+POKEW M%+20,PB%+3
+POKEB M%+22,$39    : rem RTS   - Return To System
+
+rem General Word Variable 0 opvullen
+POKEB $41,GW41%    : rem MSB van General Word Variable 0 opvullen
+POKEB $42,GW42%    : rem LSB van General Word Variable 0 opvullen
+
+rem Gevraagde OS aanroepen
+TMP%=USR(M%,0)     : rem Machinecode uitvoeren
+POKEB PB%,VEC%     : rem Vector uitgevoerde OS in output-parameterblok steken
+
+rem Eventueel inhoud runtime buffer kopieren naar outputparameter-blok
+LNB%=PEEKB($2187)   : rem Lengte runtime buffer bijhouden
+IF LNB%>0 AND LNB%<250
+   rem Machinecode poken voor kopieren inhoud runtime buffer
+   POKEB M%,$CE       : rem LDX - Register X laden met beginadres runtime buffer
+   POKEW M%+1,$2188
+   POKEB M%+3,$CC     : rem LDD - Register D laden met adres PB$ (6de teken)
+   POKEW M%+4,PB%+6   
+   POKEB M%+6,$3F     : rem SWI - Software interrupt uitvoeren
+   POKEB M%+7,109     : rem OS109 moet uitgevoerd worden.
+   POKEB M%+8,$39     : rem RTS - Return To System
+
+   POKEW $41,LNB%     : rem GW var 0 opvullen met lengte te kopieren buffer
+   TMP%=USR(M%,0)     : rem Machinecode uitvoeren
+   POKEB PB%-1,LNB%+6 : rem Lengte parameter aanpassen
+ENDIF
+
+rem Einde routine. Output-parameterblok teruggeven
+RETURN PB$

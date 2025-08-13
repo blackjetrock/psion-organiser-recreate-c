@@ -1,0 +1,15 @@
+
+Variables
+
+   0:  VAR: '             TOTAL'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFF6
+   1:  VAR: '                 A'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFEE
+   2:  VAR: '                 B'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFE6
+   3:  VAR: '                 C'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFDE
+   4:  VAR: '                 T'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFD6
+   5:  VAR: '                AB'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFCE
+   6:  VAR: '                BC'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFC6
+   7:  VAR: '                AC'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFBE
+   8:  VAR: '            C.TEST'       Open Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:0000
+   9:  VAR: '          C.SECOND'       Open Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:0000
+  10:  VAR: '           C.THIRD'       Open Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:0000
+  11:  VAR: '           C.FIRST'   FieldVar Float             REFRNCE max_str:  0 max_ary:  0 num_ind:  0 offset:0000

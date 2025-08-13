@@ -1,0 +1,39 @@
+
+Filename:'AP'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0008
+QCode Space Size:000E
+Number of parameters:03
+Parameter types:
+ 0 STR    (2)
+ 1 INT    (0)
+ 2 INT    (0)
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 07       Push parameter/external integer variable value     (bytes code:V)
+0003: FFFC       (65532)
+0005: 07       Push parameter/external integer variable value     (bytes code:V)
+0006: FFFA       (65530)
+0008: 4C       AT     (bytes code:-)
+0009: 09       Push parameter/external string variable value     (bytes code:V)
+000A: FFF8       (65528)
+000C: 71       PRINT string     (bytes code:-)
+000D: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 07 FF FC 07 FF FA 4C 09 FF F8 71 7B 

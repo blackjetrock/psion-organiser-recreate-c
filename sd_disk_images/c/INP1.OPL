@@ -1,0 +1,22 @@
+inp1:
+
+local I%, F, F1, S$(10)
+
+F1 = 1234.56
+
+print "Integer"
+input I%
+print "Int=",i%
+
+print "Float"
+input F
+print "Float=",F
+
+print "String"
+input S$
+print "String = ";S$
+
+
+GET
+
+

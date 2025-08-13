@@ -42,6 +42,7 @@ void ff_fprintf(FIL *fp, char *fmt, ...);
 
 #include "newopl_exec.h"
 #include "newopl_trans.h"
+#include "newopl_objdump.h"
 
 #include "newopl_lib.h"
 

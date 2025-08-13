@@ -1,0 +1,350 @@
+
+Filename:'COMM'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0104
+QCode Space Size:01BE
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FEFE FE
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 22       Push integer literal     (bytes code:I)
+0003: 04B0       (1200)
+0005: 20       Push byte literal     (bytes code:B)
+0006: 00           (0)
+0007: 22       Push integer literal     (bytes code:I)
+0008: 0000       (0)
+000A: 20       Push byte literal     (bytes code:B)
+000B: 00           (0)
+000C: 22       Push integer literal     (bytes code:I)
+000D: 0008       (8)
+000F: 20       Push byte literal     (bytes code:B)
+0010: 00           (0)
+0011: 22       Push integer literal     (bytes code:I)
+0012: 0001       (1)
+0014: 20       Push byte literal     (bytes code:B)
+0015: 00           (0)
+0016: 22       Push integer literal     (bytes code:I)
+0017: 0000       (0)
+0019: 20       Push byte literal     (bytes code:B)
+001A: 00           (0)
+001B: 22       Push integer literal     (bytes code:I)
+001C: 0001       (1)
+001E: 32       unary minus integer     (bytes code:-)
+001F: 20       Push byte literal     (bytes code:B)
+0020: 00           (0)
+0021: 22       Push integer literal     (bytes code:I)
+0022: 0001       (1)
+0024: 32       unary minus integer     (bytes code:-)
+0025: 20       Push byte literal     (bytes code:B)
+0026: 00           (0)
+0027: 22       Push integer literal     (bytes code:I)
+0028: 000D       (13)
+002A: B8       CHR$     (bytes code:-)
+002B: 22       Push integer literal     (bytes code:I)
+002C: 000A       (10)
+002E: B8       CHR$     (bytes code:-)
+002F: 4B       Plus string     (bytes code:-)
+0030: 20       Push byte literal     (bytes code:B)
+0031: 02           (2)
+0032: 22       Push integer literal     (bytes code:I)
+0033: 001A       (26)
+0035: B8       CHR$     (bytes code:-)
+0036: 20       Push byte literal     (bytes code:B)
+0037: 02           (2)
+0038: 24       Push string literal     (bytes code:S)
+0039: Len:0
+003A: ''
+003A: 20       Push byte literal     (bytes code:B)
+003B: 02           (2)
+003C: 22       Push integer literal     (bytes code:I)
+003D: 000D       (13)
+003F: B8       CHR$     (bytes code:-)
+0040: 20       Push byte literal     (bytes code:B)
+0041: 02           (2)
+0042: 22       Push integer literal     (bytes code:I)
+0043: 001A       (26)
+0045: B8       CHR$     (bytes code:-)
+0046: 20       Push byte literal     (bytes code:B)
+0047: 02           (2)
+0048: 24       Push string literal     (bytes code:S)
+0049: Len:0
+004A: ''
+004A: 20       Push byte literal     (bytes code:B)
+004B: 02           (2)
+004C: 22       Push integer literal     (bytes code:I)
+004D: 000A       (10)
+004F: 20       Push byte literal     (bytes code:B)
+0050: 00           (0)
+0051: 22       Push integer literal     (bytes code:I)
+0052: 0000       (0)
+0054: 20       Push byte literal     (bytes code:B)
+0055: 00           (0)
+0056: 20       Push byte literal     (bytes code:B)
+0057: 0F           (15)
+0058: 7D       Procedure call.     (bytes code:S)
+0059: Len:4
+005A: 'LSET'
+005E: 84       drop float from stack     (bytes code:-)
+005F: 53       ONERR     (bytes code:D)
+0060: Dest:0068 (Dist:0008)
+0062: 22       Push integer literal     (bytes code:I)
+0063: 0001       (1)
+0065: 7E       Branch if false     (bytes code:D)
+0066: Dest:0090 (Dist:002A)
+0068: 0F       Push local/global string variable reference     (bytes code:v)
+0069: FEFF       (65279)
+006B: 22       Push integer literal     (bytes code:I)
+006C: 00FE       (254)
+006E: 20       Push byte literal     (bytes code:B)
+006F: 00           (0)
+0070: 22       Push integer literal     (bytes code:I)
+0071: 0001       (1)
+0073: 20       Push byte literal     (bytes code:B)
+0074: 00           (0)
+0075: 20       Push byte literal     (bytes code:B)
+0076: 02           (2)
+0077: 7D       Procedure call.     (bytes code:S)
+0078: Len:7
+0079: 'LINPUT$'
+0080: 81       Assign string     (bytes code:-)
+0081: 02       Push local/global string variable value     (bytes code:v)
+0082: FEFF       (65279)
+0084: 24       Push string literal     (bytes code:S)
+0085: Len:0
+0086: ''
+0086: 4A       Equal string     (bytes code:-)
+0087: 7E       Branch if false     (bytes code:D)
+0088: Dest:008D (Dist:0005)
+008A: 51       GOTO     (bytes code:D)
+008B: Dest:0090 (Dist:0005)
+008D: 51       GOTO     (bytes code:D)
+008E: Dest:0062 (Dist:FFFFFFD4)
+0090: 53       ONERR     (bytes code:D)
+0091: Dest:0091 (Dist:0000)
+0093: 0F       Push local/global string variable reference     (bytes code:v)
+0094: FEFF       (65279)
+0096: 22       Push integer literal     (bytes code:I)
+0097: 00FE       (254)
+0099: 20       Push byte literal     (bytes code:B)
+009A: 00           (0)
+009B: 22       Push integer literal     (bytes code:I)
+009C: 000A       (10)
+009E: 20       Push byte literal     (bytes code:B)
+009F: 00           (0)
+00A0: 24       Push string literal     (bytes code:S)
+00A1: Len:3
+00A2: 'ATZ'
+00A5: 22       Push integer literal     (bytes code:I)
+00A6: 000D       (13)
+00A8: B8       CHR$     (bytes code:-)
+00A9: 4B       Plus string     (bytes code:-)
+00AA: 20       Push byte literal     (bytes code:B)
+00AB: 02           (2)
+00AC: 20       Push byte literal     (bytes code:B)
+00AD: 03           (3)
+00AE: 7D       Procedure call.     (bytes code:S)
+00AF: Len:5
+00B0: 'TRIG$'
+00B5: 81       Assign string     (bytes code:-)
+00B6: 0F       Push local/global string variable reference     (bytes code:v)
+00B7: FEFF       (65279)
+00B9: 22       Push integer literal     (bytes code:I)
+00BA: 00FE       (254)
+00BC: 20       Push byte literal     (bytes code:B)
+00BD: 00           (0)
+00BE: 22       Push integer literal     (bytes code:I)
+00BF: 000A       (10)
+00C1: 20       Push byte literal     (bytes code:B)
+00C2: 00           (0)
+00C3: 20       Push byte literal     (bytes code:B)
+00C4: 02           (2)
+00C5: 7D       Procedure call.     (bytes code:S)
+00C6: Len:7
+00C7: 'LINPUT$'
+00CE: 81       Assign string     (bytes code:-)
+00CF: 02       Push local/global string variable value     (bytes code:v)
+00D0: FEFF       (65279)
+00D2: 24       Push string literal     (bytes code:S)
+00D3: Len:2
+00D4: 'OK'
+00D6: 22       Push integer literal     (bytes code:I)
+00D7: 000D       (13)
+00D9: B8       CHR$     (bytes code:-)
+00DA: 4B       Plus string     (bytes code:-)
+00DB: 22       Push integer literal     (bytes code:I)
+00DC: 000A       (10)
+00DE: B8       CHR$     (bytes code:-)
+00DF: 4B       Plus string     (bytes code:-)
+00E0: 4A       Equal string     (bytes code:-)
+00E1: 7E       Branch if false     (bytes code:D)
+00E2: Dest:01BD (Dist:00DB)
+00E4: 0F       Push local/global string variable reference     (bytes code:v)
+00E5: FEFF       (65279)
+00E7: 22       Push integer literal     (bytes code:I)
+00E8: 00FE       (254)
+00EA: 20       Push byte literal     (bytes code:B)
+00EB: 00           (0)
+00EC: 22       Push integer literal     (bytes code:I)
+00ED: 000A       (10)
+00EF: 20       Push byte literal     (bytes code:B)
+00F0: 00           (0)
+00F1: 24       Push string literal     (bytes code:S)
+00F2: Len:6
+00F3: 'ATD999'
+00F9: 22       Push integer literal     (bytes code:I)
+00FA: 000D       (13)
+00FC: B8       CHR$     (bytes code:-)
+00FD: 4B       Plus string     (bytes code:-)
+00FE: 20       Push byte literal     (bytes code:B)
+00FF: 02           (2)
+0100: 20       Push byte literal     (bytes code:B)
+0101: 03           (3)
+0102: 7D       Procedure call.     (bytes code:S)
+0103: Len:5
+0104: 'TRIG$'
+0109: 81       Assign string     (bytes code:-)
+010A: 0F       Push local/global string variable reference     (bytes code:v)
+010B: FEFF       (65279)
+010D: 22       Push integer literal     (bytes code:I)
+010E: 00FE       (254)
+0110: 20       Push byte literal     (bytes code:B)
+0111: 00           (0)
+0112: 22       Push integer literal     (bytes code:I)
+0113: 0078       (120)
+0115: 20       Push byte literal     (bytes code:B)
+0116: 00           (0)
+0117: 20       Push byte literal     (bytes code:B)
+0118: 02           (2)
+0119: 7D       Procedure call.     (bytes code:S)
+011A: Len:7
+011B: 'LINPUT$'
+0122: 81       Assign string     (bytes code:-)
+0123: 0F       Push local/global string variable reference     (bytes code:v)
+0124: FEFF       (65279)
+0126: 22       Push integer literal     (bytes code:I)
+0127: 00FE       (254)
+0129: 20       Push byte literal     (bytes code:B)
+012A: 00           (0)
+012B: 22       Push integer literal     (bytes code:I)
+012C: 000A       (10)
+012E: 20       Push byte literal     (bytes code:B)
+012F: 00           (0)
+0130: 20       Push byte literal     (bytes code:B)
+0131: 02           (2)
+0132: 7D       Procedure call.     (bytes code:S)
+0133: Len:7
+0134: 'LINPUT$'
+013B: 81       Assign string     (bytes code:-)
+013C: 02       Push local/global string variable value     (bytes code:v)
+013D: FEFF       (65279)
+013F: 24       Push string literal     (bytes code:S)
+0140: Len:7
+0141: 'CONNECT'
+0148: 22       Push integer literal     (bytes code:I)
+0149: 000D       (13)
+014B: B8       CHR$     (bytes code:-)
+014C: 4B       Plus string     (bytes code:-)
+014D: 22       Push integer literal     (bytes code:I)
+014E: 000A       (10)
+0150: B8       CHR$     (bytes code:-)
+0151: 4B       Plus string     (bytes code:-)
+0152: 4A       Equal string     (bytes code:-)
+0153: 02       Push local/global string variable value     (bytes code:v)
+0154: FEFF       (65279)
+0156: 24       Push string literal     (bytes code:S)
+0157: Len:12
+0158: 'CONNECT 1200'
+0164: 22       Push integer literal     (bytes code:I)
+0165: 000D       (13)
+0167: B8       CHR$     (bytes code:-)
+0168: 4B       Plus string     (bytes code:-)
+0169: 22       Push integer literal     (bytes code:I)
+016A: 000A       (10)
+016C: B8       CHR$     (bytes code:-)
+016D: 4B       Plus string     (bytes code:-)
+016E: 4A       Equal string     (bytes code:-)
+016F: 35       OR integer     (bytes code:-)
+0170: 7E       Branch if false     (bytes code:D)
+0171: Dest:0181 (Dist:0010)
+0173: 24       Push string literal     (bytes code:S)
+0174: Len:7
+0175: 'Sent ok'
+017C: 71       PRINT string     (bytes code:-)
+017D: 73       PRINT newline     (bytes code:-)
+017E: 51       GOTO     (bytes code:D)
+017F: Dest:01BB (Dist:003C)
+0181: 02       Push local/global string variable value     (bytes code:v)
+0182: FEFF       (65279)
+0184: 24       Push string literal     (bytes code:S)
+0185: Len:10
+0186: 'NO CARRIER'
+0190: 22       Push integer literal     (bytes code:I)
+0191: 000D       (13)
+0193: B8       CHR$     (bytes code:-)
+0194: 4B       Plus string     (bytes code:-)
+0195: 22       Push integer literal     (bytes code:I)
+0196: 000A       (10)
+0198: B8       CHR$     (bytes code:-)
+0199: 4B       Plus string     (bytes code:-)
+019A: 4A       Equal string     (bytes code:-)
+019B: 7E       Branch if false     (bytes code:D)
+019C: Dest:01BB (Dist:001F)
+019E: 24       Push string literal     (bytes code:S)
+019F: Len:9
+01A0: 'Cant find'
+01A9: 71       PRINT string     (bytes code:-)
+01AA: 73       PRINT newline     (bytes code:-)
+01AB: 24       Push string literal     (bytes code:S)
+01AC: Len:12
+01AD: 'remote modem'
+01B9: 71       PRINT string     (bytes code:-)
+01BA: 73       PRINT newline     (bytes code:-)
+01BB: 91       GET     (bytes code:-)
+01BC: 83       drop integer from stack     (bytes code:-)
+01BD: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 22 04 B0 20 00 22 00 00 20 00 22 00 08 20 
+0010:00 22 00 01 20 00 22 00 00 20 00 22 00 01 32 20 
+0020:00 22 00 01 32 20 00 22 00 0D B8 22 00 0A B8 4B 
+0030:20 02 22 00 1A B8 20 02 24 00 20 02 22 00 0D B8 
+0040:20 02 22 00 1A B8 20 02 24 00 20 02 22 00 0A 20 
+0050:00 22 00 00 20 00 20 0F 7D 04 4C 53 45 54 84 53 
+0060:00 08 22 00 01 7E 00 2A 0F FE FF 22 00 FE 20 00 
+0070:22 00 01 20 00 20 02 7D 07 4C 49 4E 50 55 54 24 
+0080:81 02 FE FF 24 00 4A 7E 00 05 51 00 05 51 FF D4 
+0090:53 00 00 0F FE FF 22 00 FE 20 00 22 00 0A 20 00 
+00A0:24 03 41 54 5A 22 00 0D B8 4B 20 02 20 03 7D 05 
+00B0:54 52 49 47 24 81 0F FE FF 22 00 FE 20 00 22 00 
+00C0:0A 20 00 20 02 7D 07 4C 49 4E 50 55 54 24 81 02 
+00D0:FE FF 24 02 4F 4B 22 00 0D B8 4B 22 00 0A B8 4B 
+00E0:4A 7E 00 DB 0F FE FF 22 00 FE 20 00 22 00 0A 20 
+00F0:00 24 06 41 54 44 39 39 39 22 00 0D B8 4B 20 02 
+0100:20 03 7D 05 54 52 49 47 24 81 0F FE FF 22 00 FE 
+0110:20 00 22 00 78 20 00 20 02 7D 07 4C 49 4E 50 55 
+0120:54 24 81 0F FE FF 22 00 FE 20 00 22 00 0A 20 00 
+0130:20 02 7D 07 4C 49 4E 50 55 54 24 81 02 FE FF 24 
+0140:07 43 4F 4E 4E 45 43 54 22 00 0D B8 4B 22 00 0A 
+0150:B8 4B 4A 02 FE FF 24 0C 43 4F 4E 4E 45 43 54 20 
+0160:31 32 30 30 22 00 0D B8 4B 22 00 0A B8 4B 4A 35 
+0170:7E 00 10 24 07 53 65 6E 74 20 6F 6B 71 73 51 00 
+0180:3C 02 FE FF 24 0A 4E 4F 20 43 41 52 52 49 45 52 
+0190:22 00 0D B8 4B 22 00 0A B8 4B 4A 7E 00 1F 24 09 
+01A0:43 61 6E 74 20 66 69 6E 64 71 73 24 0C 72 65 6D 
+01B0:6F 74 65 20 6D 6F 64 65 6D 71 73 91 83 7B 

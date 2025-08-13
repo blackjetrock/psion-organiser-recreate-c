@@ -1,0 +1,88 @@
+conv1:
+
+local F$(30)
+local F, PASS%, NUM%, ans$(30)
+
+PASS% = 0
+NUM% = 0
+
+
+rem --------------------------------------------------------------------------------
+
+F$ = fix$(123.456, 1, 5)
+ans$="123.5"
+
+print "ns:'";ans$;"' got:'";f$;"'"
+
+if f$=ans$
+PASS% = PASS% + 1
+else
+print "'";f$;"' is not '";ans$;"'"
+endif
+NUM% = NUM% + 1
+
+rem --------------------------------------------------------------------------------
+
+F$ = fix$(123.9, 0, 5)
+ans$="124  "
+
+print "ns:'";ans$;"' got:'";f$;"'"
+
+if f$=ans$
+PASS% = PASS% + 1
+else
+print "'";f$;"' is not '";ans$;"'"
+endif
+NUM% = NUM% + 1
+
+rem --------------------------------------------------------------------------------
+
+F$ = fix$(123, 2, 8)
+ans$="123.00  "
+
+print "ns:'";ans$;"' got:'";f$;"'"
+
+if f$=ans$
+PASS% = PASS% + 1
+else
+print "'";f$;"' is not '";ans$;"'"
+endif
+NUM% = NUM% + 1
+
+rem --------------------------------------------------------------------------------
+
+F$ = fix$(123, 2, -8)
+ans$="  123.00"
+
+print "ns:'";ans$;"' got:'";f$;"'"
+
+if f$=ans$
+PASS% = PASS% + 1
+else
+print "'";f$;"' is not '";ans$;"'"
+endif
+NUM% = NUM% + 1
+
+rem --------------------------------------------------------------------------------
+
+F$ = fix$(123.9, 3, 4)
+ans$="****"
+
+print "ns:'";ans$;"' got:'";f$;"'"
+
+if f$=ans$
+PASS% = PASS% + 1
+else
+print "'";f$;"' is not '";ans$;"'"
+endif
+NUM% = NUM% + 1
+
+
+rem --------------------------------------------------------------------------------
+
+if PASS% = NUM%
+print "PASS"
+else
+print "NUM:",NUM%,"P:",PASS%
+print "FAIL"
+endif

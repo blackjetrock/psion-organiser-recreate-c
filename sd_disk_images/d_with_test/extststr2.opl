@@ -1,0 +1,26 @@
+str2:
+
+local s1$(20), s2$(20)
+local pass%
+
+pass% = 0
+
+s1$="abc"
+s2$=lower$("ABC")
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+s1$="ABC"
+s2$=upper$("abc")
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+if PASS% = 2
+print "PASS"
+endif

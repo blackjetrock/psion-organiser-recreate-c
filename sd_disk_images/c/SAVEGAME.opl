@@ -1,0 +1,37 @@
+savegame:
+
+    
+    REM Check if file exists, then create or open accordingly
+    IF NOT EXIST("a:saveg")
+    PRINT "Creating new file"
+        CREATE "a:saveg", A, m1$, m2$, m3$, m4$, hp%, att%, def%, moves%, maxhp%, sx%, sy%, px%, py%
+    PRINT "File created!"
+    ELSE
+    PRINT "Opening file"
+        OPEN "a:saveg", A, m1$, m2$, m3$, m4$, hp%, att%, def%, moves%, maxhp%, sx%, sy%, px%, py%
+    FIRST
+    ERASE
+    PRINT "Opened file"
+
+    ENDIF
+
+    REM Assign values to each field
+    A.m1$ = map$(1)    : REM First row of map
+    A.m2$ = map$(2)    : REM Second row of map
+    A.m3$ = map$(3)    : REM Third row of map
+    A.m4$ = map$(4)    : REM Fourth row of map
+    A.hp% = plHealt%   : REM Player health
+    A.att% = plAtt%    : REM Player attack
+    A.def% = plDef%    : REM Player defense
+    A.moves% = plMoves% : REM Player moves
+    A.maxhp% = plMaxHe% : REM Max player health
+    A.sx% = startX%    : REM Starting X coordinate
+    A.sy% = startY%    : REM Starting Y coordinate
+    A.px% = px%        : REM Current X coordinate
+    A.py% = py%        : REM Current Y coordinate
+
+    REM Append to file
+    APPEND
+    CLOSE
+    PRINT "Game saved successfully!"
+    GET

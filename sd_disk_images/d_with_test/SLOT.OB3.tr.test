@@ -1,0 +1,66 @@
+
+Filename:'SLOT'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0004
+QCode Space Size:003C
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0007
+External variables (1)
+ 0: SLOT$            STR    (02)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:9
+0004: 'b:trace66'
+000D: A4       EXIST     (bytes code:-)
+000E: 7E       Branch if false     (bytes code:D)
+000F: Dest:001B (Dist:000C)
+0011: 16       Push parameter/external string variable reference     (bytes code:V)
+0012: FFFC       (65532)
+0014: 24       Push string literal     (bytes code:S)
+0015: Len:1
+0016: 'B'
+0017: 81       Assign string     (bytes code:-)
+0018: 51       GOTO     (bytes code:D)
+0019: Dest:003B (Dist:0022)
+001B: 24       Push string literal     (bytes code:S)
+001C: Len:9
+001D: 'c:trace66'
+0026: A4       EXIST     (bytes code:-)
+0027: 7E       Branch if false     (bytes code:D)
+0028: Dest:0034 (Dist:000C)
+002A: 16       Push parameter/external string variable reference     (bytes code:V)
+002B: FFFC       (65532)
+002D: 24       Push string literal     (bytes code:S)
+002E: Len:1
+002F: 'C'
+0030: 81       Assign string     (bytes code:-)
+0031: 51       GOTO     (bytes code:D)
+0032: Dest:003B (Dist:0009)
+0034: 16       Push parameter/external string variable reference     (bytes code:V)
+0035: FFFC       (65532)
+0037: 24       Push string literal     (bytes code:S)
+0038: Len:1
+0039: 'X'
+003A: 81       Assign string     (bytes code:-)
+003B: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 09 62 3A 74 72 61 63 65 36 36 A4 7E 00 
+0010:0C 16 FF FC 24 01 42 81 51 00 22 24 09 63 3A 74 
+0020:72 61 63 65 36 36 A4 7E 00 0C 16 FF FC 24 01 43 
+0030:81 51 00 09 16 FF FC 24 01 58 81 7B 

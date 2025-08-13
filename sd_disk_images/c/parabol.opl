@@ -1,0 +1,79 @@
+parabol:
+rem Parabol 1.0 (c) B. Felten 1987
+rem
+rem Tells you exactly when the sun is in line with a selected satellite.
+rem Thus you can direct your antenna with help of the sun rather than a
+rem compass.
+rem
+rem Just wait for a sunny day and the calculated time and then turn the
+rem antenna until the shadow of the microwave assembly falls exactly in
+rem the center of the antenna.
+rem
+rem Also tells you what day the sun is positioned exactly behind the
+rem satellite (only one of the two days in the year - you might try to
+rem change the code yourself to make the program show the other day).
+rem
+LOCAL X,Y,Z,R,SV,HV
+LOCAL ANTSV,ANTHV,SATSV,SOLSV,SOLHV,RSAT
+LOCAL SINSV,SINHV,COSSV,COSHV,XX,YY,ZZ,RR,OPT%
+LOCAL M$(80)
+M$="stndrdthththththththththththththththththstndrdthththththththst"
+RSAT=42.2/6.37
+PRINT"YOUR LONGITUDE:" :rem In degrees, negative for WEST
+INPUT X 
+ANTSV=RAD(X)
+SINSV=SIN(ANTSV) :COSSV=COS(ANTSV)
+PRINT"YOUR LATITUDE:"
+INPUT X
+ANTHV=RAD(90.0-X)
+SINHV=SIN(ANTHV) :COSHV=COS(ANTHV)
+DO
+  OPT%=MENU("INTELSAT,DFS,ASTRA,EUTELSAT,PANAMSAT,HORIZONT,")
+  IF OPT%=0 :BREAK
+  ELSEIF OPT%=1
+    OPT%=MENU("V-F15,V-F12,V-F6,VA-F11")
+    IF OPT%=0 :BREAK
+    ELSEIF OPT%=1 :X=60
+    ELSEIF OPT%=2 :X=-1
+    ELSEIF OPT%=3 :X=-18.5
+    ELSEIF OPT%=4 :X=-27.5
+    ENDIF
+  ELSEIF OPT%=2 :X=23.5
+  ELSEIF OPT%=3 :X=19
+  ELSEIF OPT%=4
+    OPT%=MENU("I-F1,I-F4,I-F5,I-F2")
+    IF OPT%=0 :BREAK
+    ELSEIF OPT%=1 :X=16
+    ELSEIF OPT%=2 :X=13
+    ELSEIF OPT%=3 :X=10
+    ELSEIF OPT%=4 :X=7
+    ENDIF
+  ELSEIF OPT%=5 :X=-45
+  ELSEIF OPT%=6 :X=-11
+  ENDIF
+  SATSV=RAD(X)
+  X=RSAT*COS(SATSV)-COS(ANTSV)*SIN(ANTHV)
+  Y=RSAT*SIN(SATSV)-SIN(ANTSV)*SIN(ANTHV)
+  Z=-COS(ANTHV)
+  R=SQR(X*X+Y*Y+Z*Z)
+  SV=ATAN(Y/X)
+  HV=PI/2-ACOS(Z/R)
+  SOLSV=SV :SOLHV=HV
+  XX=COSHV*COSSV*X+COSHV*SINSV*Y-SINHV*Z
+  YY=-SINSV*X+COSSV*Y
+  ZZ=SINHV*COSSV*X+SINHV*SINSV*Y+COSHV*Z
+  X=XX :Y=YY :Z=ZZ
+  R=SQR(X*X+Y*Y+Z*Z)
+  SV=ATAN(Y/X)
+  HV=PI/2-ACOS(Z/R)
+  SV=DEG(PI-SV) :HV=DEG(HV)
+  PRINT"Direction=";INT(10.0*SV)/10.0
+  PRINT chr$(9);
+  X=12.0-DEG(SOLSV)/15.0
+  PRINT INT(X);":";RIGHT$("00"+GEN$(INT((X-INT(X))*60.0+.5),2),2),"GMT"
+  X=(DEG(ASIN(DEG(SOLHV)/23.5))+111.0)/30.0
+  Y=INT(X) :Z=INT((X-Y)*30.0+.5)
+  PRINT"Elevation=";INT(10.0*HV)/10.0
+  PRINT chr$(9);month$(y),Z;mid$(m$,z*2-1,2);
+  GET
+UNTIL OPT%=0

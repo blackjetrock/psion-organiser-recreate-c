@@ -14,6 +14,7 @@ CMakeFiles/psion_recreate_ctusb.dir/calc.c.o: /home/menadue/tree/github/psion-or
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -218,6 +219,7 @@ CMakeFiles/psion_recreate_ctusb.dir/cdc.c.o: /home/menadue/tree/github/psion-org
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -440,6 +442,7 @@ CMakeFiles/psion_recreate_ctusb.dir/clock_pico.c.o: /home/menadue/tree/github/ps
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -661,6 +664,7 @@ CMakeFiles/psion_recreate_ctusb.dir/core1.c.o: /home/menadue/tree/github/psion-o
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -882,6 +886,7 @@ CMakeFiles/psion_recreate_ctusb.dir/cursor.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -1108,6 +1113,7 @@ CMakeFiles/psion_recreate_ctusb.dir/display.c.o: /home/menadue/tree/github/psion
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -1329,6 +1335,7 @@ CMakeFiles/psion_recreate_ctusb.dir/display_driver.c.o: /home/menadue/tree/githu
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -1542,6 +1549,7 @@ CMakeFiles/psion_recreate_ctusb.dir/errors.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -1737,6 +1745,7 @@ CMakeFiles/psion_recreate_ctusb.dir/file_handling.c.o: /home/menadue/tree/github
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -1959,6 +1968,7 @@ CMakeFiles/psion_recreate_ctusb.dir/font.c.o: /home/menadue/tree/github/psion-or
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -7461,6 +7471,7 @@ CMakeFiles/psion_recreate_ctusb.dir/hw_config.c.o: /home/menadue/tree/github/psi
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -7682,6 +7693,7 @@ CMakeFiles/psion_recreate_ctusb.dir/hwmain.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -8095,6 +8107,7 @@ CMakeFiles/psion_recreate_ctusb.dir/lcdspi.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -8197,6 +8210,7 @@ CMakeFiles/psion_recreate_ctusb.dir/logical_files.c.o: /home/menadue/tree/github
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -8273,6 +8287,7 @@ CMakeFiles/psion_recreate_ctusb.dir/machine.c.o: /home/menadue/tree/github/psion
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -8469,6 +8484,7 @@ CMakeFiles/psion_recreate_ctusb.dir/main.c.o: /home/menadue/tree/github/psion-or
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -8698,6 +8714,7 @@ CMakeFiles/psion_recreate_ctusb.dir/menu.c.o: /home/menadue/tree/github/psion-or
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -8879,6 +8896,7 @@ CMakeFiles/psion_recreate_ctusb.dir/newopl_lib.c.o: /home/menadue/tree/github/ps
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -8954,6 +8972,7 @@ CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o: /home/menadue/tree/github/
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -9149,6 +9168,7 @@ CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o: /home/menadue/tree/github/psi
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -9204,6 +9224,228 @@ CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o: /home/menadue/tree/github/psi
   /usr/arm-none-eabi/include/machine/types.h \
   /usr/arm-none-eabi/include/malloc.h \
   /usr/arm-none-eabi/include/math.h \
+  /usr/arm-none-eabi/include/newlib.h \
+  /usr/arm-none-eabi/include/stdint.h \
+  /usr/arm-none-eabi/include/stdio.h \
+  /usr/arm-none-eabi/include/stdlib.h \
+  /usr/arm-none-eabi/include/string.h \
+  /usr/arm-none-eabi/include/strings.h \
+  /usr/arm-none-eabi/include/sys/_intsup.h \
+  /usr/arm-none-eabi/include/sys/_locale.h \
+  /usr/arm-none-eabi/include/sys/_pthreadtypes.h \
+  /usr/arm-none-eabi/include/sys/_sigset.h \
+  /usr/arm-none-eabi/include/sys/_stdint.h \
+  /usr/arm-none-eabi/include/sys/_timespec.h \
+  /usr/arm-none-eabi/include/sys/_timeval.h \
+  /usr/arm-none-eabi/include/sys/_types.h \
+  /usr/arm-none-eabi/include/sys/cdefs.h \
+  /usr/arm-none-eabi/include/sys/config.h \
+  /usr/arm-none-eabi/include/sys/errno.h \
+  /usr/arm-none-eabi/include/sys/features.h \
+  /usr/arm-none-eabi/include/sys/lock.h \
+  /usr/arm-none-eabi/include/sys/reent.h \
+  /usr/arm-none-eabi/include/sys/sched.h \
+  /usr/arm-none-eabi/include/sys/select.h \
+  /usr/arm-none-eabi/include/sys/stdio.h \
+  /usr/arm-none-eabi/include/sys/string.h \
+  /usr/arm-none-eabi/include/sys/time.h \
+  /usr/arm-none-eabi/include/sys/timespec.h \
+  /usr/arm-none-eabi/include/sys/types.h \
+  /usr/arm-none-eabi/include/sys/unistd.h \
+  /usr/arm-none-eabi/include/time.h \
+  /usr/arm-none-eabi/include/unistd.h \
+  /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdarg.h \
+  /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/15.1.0/include/stddef.h \
+  /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdint.h
+
+CMakeFiles/psion_recreate_ctusb.dir/nopl_objdump.c.o: /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_objdump.c \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/hw/bsp/board_api.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb.h \
+  /home/menadue/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+  /home/menadue/pico/pico-sdk/src/boards/include/boards/pimoroni_pico_plus2_rp2350.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_time/include/pico/time.h \
+  /home/menadue/pico/pico-sdk/src/common/pico_util/include/pico/util/datetime.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/platform_defs.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/accessctrl.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/clocks.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/dma.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/dreq.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/i2c.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/io_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/m33.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/pads_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/pio.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/sio.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/spi.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/xip.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/accessctrl.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/clocks.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/dma.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/dma_debug.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/i2c.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/interp.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/io_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/m33.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/nvic.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pads_bank0.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/pio.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/scb.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/sio.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/spi.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/xip.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/xip_ctrl.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/pico_platform/include/pico/platform.h \
+  /home/menadue/pico/pico-sdk/src/rp2350/pico_platform/include/pico/platform/cpu_regs.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio_coproc.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_aon_timer/include/pico/aon_timer.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_multicore/include/pico/multicore.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+  /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/diskio.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/ff15/source/ff.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/f_util.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/ff_stdio.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/ffconf.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/hw_config.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_debug.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/sd_timeouts.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/util.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SDIO/rp2040_sdio.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/my_spi.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_card_constants.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/sd_regs.h \
+  generated/pico_base/pico/config_autogen.h \
+  generated/pico_base/pico/version.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/calc.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/cdc.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/core1.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/cursor.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/display.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/display_driver.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/eeprom.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/emulator.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/errors.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/file_handling.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/files.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/font.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/i2ckbd.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/lcdspi.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/logical_files.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/machine.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/match.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/menu.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_obj.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_time.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/num_a.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/panel.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/parser.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/psion_recreate.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/psion_recreate_all.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/qcode.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/qcode_clock.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/record.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/rtc.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sd_card_utils.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/serial.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/ssd1309.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/ssd1351b.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_db.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_dp.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_ed.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_er.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_fl.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_kb.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_mn.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_linux.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_pico_flash.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_serial_eeprom.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pk.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pk_base.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/switches.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sysvar.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/tusb_config.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/usb_descriptors.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/wireless.h \
+  /usr/arm-none-eabi/include/_ansi.h \
+  /usr/arm-none-eabi/include/_newlib_version.h \
+  /usr/arm-none-eabi/include/alloca.h \
+  /usr/arm-none-eabi/include/assert.h \
+  /usr/arm-none-eabi/include/ctype.h \
+  /usr/arm-none-eabi/include/errno.h \
+  /usr/arm-none-eabi/include/inttypes.h \
+  /usr/arm-none-eabi/include/machine/_default_types.h \
+  /usr/arm-none-eabi/include/machine/_endian.h \
+  /usr/arm-none-eabi/include/machine/_time.h \
+  /usr/arm-none-eabi/include/machine/_types.h \
+  /usr/arm-none-eabi/include/machine/endian.h \
+  /usr/arm-none-eabi/include/machine/ieeefp.h \
+  /usr/arm-none-eabi/include/machine/malloc.h \
+  /usr/arm-none-eabi/include/machine/stdlib.h \
+  /usr/arm-none-eabi/include/machine/time.h \
+  /usr/arm-none-eabi/include/machine/types.h \
+  /usr/arm-none-eabi/include/malloc.h \
   /usr/arm-none-eabi/include/newlib.h \
   /usr/arm-none-eabi/include/stdint.h \
   /usr/arm-none-eabi/include/stdio.h \
@@ -9371,6 +9613,7 @@ CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o: /home/menadue/tree/github/ps
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -9473,6 +9716,7 @@ CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o: /home/menadue/tree/github/psion-o
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -9670,6 +9914,7 @@ CMakeFiles/psion_recreate_ctusb.dir/oled_er_oledm015_2.c.o: /home/menadue/tree/g
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -9900,6 +10145,7 @@ CMakeFiles/psion_recreate_ctusb.dir/panel.c.o: /home/menadue/tree/github/psion-o
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -10122,6 +10368,7 @@ CMakeFiles/psion_recreate_ctusb.dir/parser.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -10343,6 +10590,7 @@ CMakeFiles/psion_recreate_ctusb.dir/qcode.c.o: /home/menadue/tree/github/psion-o
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -10676,6 +10924,7 @@ CMakeFiles/psion_recreate_ctusb.dir/sd_card_utils.c.o: /home/menadue/tree/github
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -10907,6 +11156,7 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -11129,6 +11379,7 @@ CMakeFiles/psion_recreate_ctusb.dir/ssd1309.c.o: /home/menadue/tree/github/psion
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -11350,6 +11601,7 @@ CMakeFiles/psion_recreate_ctusb.dir/ssd1351.c.o: /home/menadue/tree/github/psion
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -11573,6 +11825,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_db.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -11794,6 +12047,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_dp.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -12015,6 +12269,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_ed.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -12238,6 +12493,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_er.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -12340,6 +12596,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_fl.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -12534,6 +12791,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_kb.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -12755,6 +13013,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_mn.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -12857,6 +13116,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_linux.c.o: /home/menadue/tree/github
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -13052,6 +13312,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_pico_flash.c.o: /home/menadue/tree/g
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -13273,6 +13534,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pak_serial_eeprom.c.o: /home/menadue/tre
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -13494,6 +13756,7 @@ CMakeFiles/psion_recreate_ctusb.dir/svc_pk.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -13715,6 +13978,7 @@ CMakeFiles/psion_recreate_ctusb.dir/sysvar.c.o: /home/menadue/tree/github/psion-
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -13817,6 +14081,7 @@ CMakeFiles/psion_recreate_ctusb.dir/time_nopl.c.o: /home/menadue/tree/github/psi
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
+  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_types.h \
   /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl.h \
@@ -14018,6 +14283,8 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_spi.h:
 
 /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/crc.h:
+
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/nopl_objdump.c:
 
 /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/sd_driver/SPI/sd_card_spi.c:
 
@@ -14263,6 +14530,8 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c:
 
+/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c:
+
 /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/uart.h:
 
 /home/menadue/pico/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/pio.h:
@@ -14383,6 +14652,10 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom/lock.h:
 
+/usr/arm-none-eabi/include/sys/config.h:
+
+/home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/sio.h:
+
 /usr/arm-none-eabi/include/sys/unistd.h:
 
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_linux.h:
@@ -14404,12 +14677,6 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 /home/menadue/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c:
 
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/machine.h:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
-
-/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c:
-
-/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pk_base.h:
 
 /home/menadue/pico/pico-sdk/lib/tinyusb/src/device/usbd.h:
 
@@ -14436,6 +14703,8 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 /home/menadue/pico/pico-sdk/src/common/pico_sync/include/pico/sem.h:
 
 /home/menadue/pico/pico-sdk/src/common/pico_util/include/pico/util/datetime.h:
+
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h:
 
 /usr/arm-none-eabi/include/inttypes.h:
 
@@ -14553,6 +14822,12 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/font.h:
 
+/home/menadue/pico/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
+
+/home/menadue/pico/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RP2350/Source/system_RP2350.c:
+
+/home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pk_base.h:
+
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/sysvar.h:
 
 /usr/arm-none-eabi/include/strings.h:
@@ -14609,10 +14884,6 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 
 /usr/arm-none-eabi/include/sys/_timespec.h:
 
-/usr/arm-none-eabi/include/sys/config.h:
-
-/home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/sio.h:
-
 /home/menadue/pico/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/clocks.h:
 
 /usr/arm-none-eabi/include/machine/_default_types.h:
@@ -14626,8 +14897,6 @@ CMakeFiles/psion_recreate_ctusb.dir/usb_descriptors.c.o: /home/menadue/tree/gith
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/svc_pak_pico_flash.h:
 
 /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/display_driver.c:
-
-/home/menadue/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c:
 
 /usr/arm-none-eabi/include/c++/15.1.0/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h:
 

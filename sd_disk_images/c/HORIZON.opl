@@ -1,0 +1,18 @@
+horizon:
+LOCAL H,D
+Print "At what height are"
+Print "you? (In metres)"
+INPUT H
+D=SQR(H*12.5)
+D=D*10
+D=INT(D)
+D=D/10
+cls
+Print "At a height of ";H
+Print "you can see ";D
+Print "Kilometres"
+GET
+
+
+
+

@@ -1,0 +1,35 @@
+g2:
+
+local x%,y%
+CURSOR OFF
+gcls
+
+x% = 0
+
+while x% <80
+gpoint x%, 5, 1
+gpoint x%, 10, 1
+gpoint x%, 15, 1
+gpoint x%, 20, 1
+
+gpoint x%, 25, 1
+x%=x%+1
+endwh
+
+GUPDATE
+y% = 0
+
+while y% <80
+gpoint 5, y%, 1
+gpoint 10, y%, 1
+gpoint 15, y%, 1
+gpoint 20, y%, 1
+
+gpoint 25, y%, 1
+y% = y% +1
+endwh
+GUPDATE
+
+get
+
+

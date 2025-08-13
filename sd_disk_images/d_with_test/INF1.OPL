@@ -1,0 +1,7 @@
+
+INF:
+LOCAL A
+INPUT "FLT",A
+PRINT A
+GET
+

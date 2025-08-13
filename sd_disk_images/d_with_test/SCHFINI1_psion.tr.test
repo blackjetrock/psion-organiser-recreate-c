@@ -1,0 +1,149 @@
+
+Filename:'SCHFINI1'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000C
+QCode Space Size:00E0
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:000D
+External variables (3)
+ 0: Z$               STR    (02)
+ 1: GM%              INT    (00)
+ 2: U%               INTARY (03)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 4E       CLS     (bytes code:-)
+0003: 24       Push string literal     (bytes code:S)
+0004: Len:8
+0005: 'SCHFMETH'
+000D: A4       EXIST     (bytes code:-)
+000E: 7E       Branch if false     (bytes code:D)
+000F: Dest:0030 (Dist:0021)
+0011: 24       Push string literal     (bytes code:S)
+0012: Len:8
+0013: 'SCHFMETH'
+001B: 65       OPEN     (bytes code:f+list)
+      Logical file:00 (A)
+        Type:02 (String)
+        A$
+0021: 88       End of field list for CREATE/OPEN     (bytes code:-)
+0022: 16       Push parameter/external string variable reference     (bytes code:V)
+0023: FFFC       (65532)
+0025: 24       Push string literal     (bytes code:S)
+0026: Len:2
+0027: 'A$'
+0029: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+002A: 00           (A)
+002B: 81       Assign string     (bytes code:-)
+002C: 5C       CLOSE     (bytes code:-)
+002D: 51       GOTO     (bytes code:D)
+002E: Dest:0053 (Dist:0025)
+0030: 24       Push string literal     (bytes code:S)
+0031: Len:18
+0032: 'SCHFMETH not found'
+0044: 71       PRINT string     (bytes code:-)
+0045: 22       Push integer literal     (bytes code:I)
+0046: 0010       (16)
+0048: B8       CHR$     (bytes code:-)
+0049: 71       PRINT string     (bytes code:-)
+004A: 73       PRINT newline     (bytes code:-)
+004B: 16       Push parameter/external string variable reference     (bytes code:V)
+004C: FFFC       (65532)
+004E: 24       Push string literal     (bytes code:S)
+004F: Len:0
+0050: ''
+0050: 81       Assign string     (bytes code:-)
+0051: 91       GET     (bytes code:-)
+0052: 83       drop integer from stack     (bytes code:-)
+0053: 14       Push parameter/external integer variable reference     (bytes code:V)
+0054: FFFA       (65530)
+0056: 22       Push integer literal     (bytes code:I)
+0057: 0000       (0)
+0059: 7F       Assign integer     (bytes code:-)
+005A: 0D       Push local/global integer variable reference     (bytes code:v)
+005B: FFF6       (65526)
+005D: 22       Push integer literal     (bytes code:I)
+005E: 0001       (1)
+0060: 7F       Assign integer     (bytes code:-)
+0061: 00       Push local/global integer variable value     (bytes code:v)
+0062: FFF6       (65526)
+0064: 17       Pop integer index and push parameter/external integer array variable reference     (bytes code:V)
+0065: FFF8       (65528)
+0067: 24       Push string literal     (bytes code:S)
+0068: Len:56
+0069: '4C4444E0EH1248V0V2421HE026AIV220VGU11HE068GUHHE0V1248880'
+00A1: 00       Push local/global integer variable value     (bytes code:v)
+00A2: FFF6       (65526)
+00A4: 22       Push integer literal     (bytes code:I)
+00A5: 0001       (1)
+00A7: C2       MID$     (bytes code:-)
+00A8: 8B       ASC     (bytes code:-)
+00A9: 22       Push integer literal     (bytes code:I)
+00AA: 0030       (48)
+00AC: 2E       Minus integer     (bytes code:-)
+00AD: 7F       Assign integer     (bytes code:-)
+00AE: 00       Push local/global integer variable value     (bytes code:v)
+00AF: FFF6       (65526)
+00B1: 17       Pop integer index and push parameter/external integer array variable reference     (bytes code:V)
+00B2: FFF8       (65528)
+00B4: 00       Push local/global integer variable value     (bytes code:v)
+00B5: FFF6       (65526)
+00B7: 0A       Pop integer index and push parameter/external integer array variable value     (bytes code:V)
+00B8: FFF8       (65528)
+00BA: 22       Push integer literal     (bytes code:I)
+00BB: 0007       (7)
+00BD: 00       Push local/global integer variable value     (bytes code:v)
+00BE: FFF6       (65526)
+00C0: 0A       Pop integer index and push parameter/external integer array variable value     (bytes code:V)
+00C1: FFF8       (65528)
+00C3: 22       Push integer literal     (bytes code:I)
+00C4: 0009       (9)
+00C6: 29       Greater than integer     (bytes code:-)
+00C7: 34       AND integer     (bytes code:-)
+00C8: 2E       Minus integer     (bytes code:-)
+00C9: 7F       Assign integer     (bytes code:-)
+00CA: 0D       Push local/global integer variable reference     (bytes code:v)
+00CB: FFF6       (65526)
+00CD: 00       Push local/global integer variable value     (bytes code:v)
+00CE: FFF6       (65526)
+00D0: 22       Push integer literal     (bytes code:I)
+00D1: 0001       (1)
+00D3: 2D       Plus integer     (bytes code:-)
+00D4: 7F       Assign integer     (bytes code:-)
+00D5: 00       Push local/global integer variable value     (bytes code:v)
+00D6: FFF6       (65526)
+00D8: 22       Push integer literal     (bytes code:I)
+00D9: 0038       (56)
+00DB: 29       Greater than integer     (bytes code:-)
+00DC: 7E       Branch if false     (bytes code:D)
+00DD: Dest:0061 (Dist:FFFFFF84)
+00DF: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 4E 24 08 53 43 48 46 4D 45 54 48 A4 7E 00 
+0010:21 24 08 53 43 48 46 4D 45 54 48 65 00 02 02 41 
+0020:24 88 16 FF FC 24 02 41 24 1C 00 81 5C 51 00 25 
+0030:24 12 53 43 48 46 4D 45 54 48 20 6E 6F 74 20 66 
+0040:6F 75 6E 64 71 22 00 10 B8 71 73 16 FF FC 24 00 
+0050:81 91 83 14 FF FA 22 00 00 7F 0D FF F6 22 00 01 
+0060:7F 00 FF F6 17 FF F8 24 38 34 43 34 34 34 34 45 
+0070:30 45 48 31 32 34 38 56 30 56 32 34 32 31 48 45 
+0080:30 32 36 41 49 56 32 32 30 56 47 55 31 31 48 45 
+0090:30 36 38 47 55 48 48 45 30 56 31 32 34 38 38 38 
+00A0:30 00 FF F6 22 00 01 C2 8B 22 00 30 2E 7F 00 FF 
+00B0:F6 17 FF F8 00 FF F6 0A FF F8 22 00 07 00 FF F6 
+00C0:0A FF F8 22 00 09 29 34 2E 7F 0D FF F6 00 FF F6 
+00D0:22 00 01 2D 7F 00 FF F6 22 00 38 29 7E FF 84 7B 

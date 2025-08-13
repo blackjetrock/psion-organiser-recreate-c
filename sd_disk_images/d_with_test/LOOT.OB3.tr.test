@@ -1,0 +1,752 @@
+
+Filename:'LOOT'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0008
+QCode Space Size:09B6
+Number of parameters:01
+Parameter types:
+ 0 STR    (2)
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0007
+External variables (1)
+ 0: DIFF%            INT    (00)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0D       Push local/global integer variable reference     (bytes code:v)
+0003: FFF8       (65528)
+0005: B1       RND     (bytes code:-)
+0006: 22       Push integer literal     (bytes code:I)
+0007: 0064       (100)
+0009: 86       autoconversion int to float     (bytes code:-)
+000A: 3E       Multiply float     (bytes code:-)
+000B: 87       autoconversion float to int     (bytes code:-)
+000C: 7F       Assign integer     (bytes code:-)
+000D: 09       Push parameter/external string variable value     (bytes code:V)
+000E: FFFC       (65532)
+0010: 24       Push string literal     (bytes code:S)
+0011: Len:4
+0012: 'Wolf'
+0016: 4A       Equal string     (bytes code:-)
+0017: 7E       Branch if false     (bytes code:D)
+0018: Dest:0136 (Dist:011E)
+001A: 00       Push local/global integer variable value     (bytes code:v)
+001B: FFF8       (65528)
+001D: 07       Push parameter/external integer variable value     (bytes code:V)
+001E: FFFA       (65530)
+0020: 2D       Plus integer     (bytes code:-)
+0021: 22       Push integer literal     (bytes code:I)
+0022: 0001       (1)
+0024: 29       Greater than integer     (bytes code:-)
+0025: 7E       Branch if false     (bytes code:D)
+0026: Dest:00BC (Dist:0096)
+0028: 22       Push integer literal     (bytes code:I)
+0029: 0001       (1)
+002B: 20       Push byte literal     (bytes code:B)
+002C: 00           (0)
+002D: 24       Push string literal     (bytes code:S)
+002E: Len:4
+002F: 'Wolf'
+0033: 20       Push byte literal     (bytes code:B)
+0034: 02           (2)
+0035: 22       Push integer literal     (bytes code:I)
+0036: 0001       (1)
+0038: 20       Push byte literal     (bytes code:B)
+0039: 00           (0)
+003A: 20       Push byte literal     (bytes code:B)
+003B: 03           (3)
+003C: 7D       Procedure call.     (bytes code:S)
+003D: Len:7
+003E: 'INVTOOL'
+0045: 84       drop float from stack     (bytes code:-)
+0046: 4E       CLS     (bytes code:-)
+0047: 24       Push string literal     (bytes code:S)
+0048: Len:92
+0049: 'One of the wolf's claws came loose and you're able to pull it from the paw. It's very sharp.'
+00A5: 20       Push byte literal     (bytes code:B)
+00A6: 02           (2)
+00A7: 22       Push integer literal     (bytes code:I)
+00A8: 0004       (4)
+00AA: 20       Push byte literal     (bytes code:B)
+00AB: 00           (0)
+00AC: 20       Push byte literal     (bytes code:B)
+00AD: 02           (2)
+00AE: 7D       Procedure call.     (bytes code:S)
+00AF: Len:8
+00B0: 'DISPTEXT'
+00B8: 84       drop float from stack     (bytes code:-)
+00B9: 51       GOTO     (bytes code:D)
+00BA: Dest:0133 (Dist:0079)
+00BC: 24       Push string literal     (bytes code:S)
+00BD: Len:97
+00BE: 'You take one look over the corpse of the wolf, it doesn't look like there's anything useful left.'
+011F: 20       Push byte literal     (bytes code:B)
+0120: 02           (2)
+0121: 22       Push integer literal     (bytes code:I)
+0122: 0004       (4)
+0124: 20       Push byte literal     (bytes code:B)
+0125: 00           (0)
+0126: 20       Push byte literal     (bytes code:B)
+0127: 02           (2)
+0128: 7D       Procedure call.     (bytes code:S)
+0129: Len:8
+012A: 'DISPTEXT'
+0132: 84       drop float from stack     (bytes code:-)
+0133: 51       GOTO     (bytes code:D)
+0134: Dest:09B5 (Dist:0881)
+0136: 09       Push parameter/external string variable value     (bytes code:V)
+0137: FFFC       (65532)
+0139: 24       Push string literal     (bytes code:S)
+013A: Len:3
+013B: 'Orc'
+013E: 4A       Equal string     (bytes code:-)
+013F: 7E       Branch if false     (bytes code:D)
+0140: Dest:025B (Dist:011B)
+0142: 00       Push local/global integer variable value     (bytes code:v)
+0143: FFF8       (65528)
+0145: 07       Push parameter/external integer variable value     (bytes code:V)
+0146: FFFA       (65530)
+0148: 2D       Plus integer     (bytes code:-)
+0149: 22       Push integer literal     (bytes code:I)
+014A: 0001       (1)
+014C: 29       Greater than integer     (bytes code:-)
+014D: 7E       Branch if false     (bytes code:D)
+014E: Dest:01E2 (Dist:0094)
+0150: 22       Push integer literal     (bytes code:I)
+0151: 0001       (1)
+0153: 20       Push byte literal     (bytes code:B)
+0154: 00           (0)
+0155: 24       Push string literal     (bytes code:S)
+0156: Len:8
+0157: 'mushroom'
+015F: 20       Push byte literal     (bytes code:B)
+0160: 02           (2)
+0161: 22       Push integer literal     (bytes code:I)
+0162: 0001       (1)
+0164: 20       Push byte literal     (bytes code:B)
+0165: 00           (0)
+0166: 20       Push byte literal     (bytes code:B)
+0167: 03           (3)
+0168: 7D       Procedure call.     (bytes code:S)
+0169: Len:7
+016A: 'INVTOOL'
+0171: 84       drop float from stack     (bytes code:-)
+0172: 4E       CLS     (bytes code:-)
+0173: 24       Push string literal     (bytes code:S)
+0174: Len:86
+0175: 'Picking through the orc's pockets you find a mushroom, you don't know how it survived!'
+01CB: 20       Push byte literal     (bytes code:B)
+01CC: 02           (2)
+01CD: 22       Push integer literal     (bytes code:I)
+01CE: 0004       (4)
+01D0: 20       Push byte literal     (bytes code:B)
+01D1: 00           (0)
+01D2: 20       Push byte literal     (bytes code:B)
+01D3: 02           (2)
+01D4: 7D       Procedure call.     (bytes code:S)
+01D5: Len:8
+01D6: 'DISPTEXT'
+01DE: 84       drop float from stack     (bytes code:-)
+01DF: 51       GOTO     (bytes code:D)
+01E0: Dest:0258 (Dist:0078)
+01E2: 24       Push string literal     (bytes code:S)
+01E3: Len:96
+01E4: 'You take one look over the corpse of the orc, it doesn't look like there's anything useful left.'
+0244: 20       Push byte literal     (bytes code:B)
+0245: 02           (2)
+0246: 22       Push integer literal     (bytes code:I)
+0247: 0004       (4)
+0249: 20       Push byte literal     (bytes code:B)
+024A: 00           (0)
+024B: 20       Push byte literal     (bytes code:B)
+024C: 02           (2)
+024D: 7D       Procedure call.     (bytes code:S)
+024E: Len:8
+024F: 'DISPTEXT'
+0257: 84       drop float from stack     (bytes code:-)
+0258: 51       GOTO     (bytes code:D)
+0259: Dest:09B5 (Dist:075C)
+025B: 09       Push parameter/external string variable value     (bytes code:V)
+025C: FFFC       (65532)
+025E: 24       Push string literal     (bytes code:S)
+025F: Len:8
+0260: 'Werewolf'
+0268: 4A       Equal string     (bytes code:-)
+0269: 7E       Branch if false     (bytes code:D)
+026A: Dest:0395 (Dist:012B)
+026C: 00       Push local/global integer variable value     (bytes code:v)
+026D: FFF8       (65528)
+026F: 07       Push parameter/external integer variable value     (bytes code:V)
+0270: FFFA       (65530)
+0272: 2D       Plus integer     (bytes code:-)
+0273: 22       Push integer literal     (bytes code:I)
+0274: 0001       (1)
+0276: 29       Greater than integer     (bytes code:-)
+0277: 7E       Branch if false     (bytes code:D)
+0278: Dest:0317 (Dist:009F)
+027A: 22       Push integer literal     (bytes code:I)
+027B: 0001       (1)
+027D: 20       Push byte literal     (bytes code:B)
+027E: 00           (0)
+027F: 24       Push string literal     (bytes code:S)
+0280: Len:3
+0281: 'Oil'
+0284: 20       Push byte literal     (bytes code:B)
+0285: 02           (2)
+0286: 22       Push integer literal     (bytes code:I)
+0287: 0001       (1)
+0289: 20       Push byte literal     (bytes code:B)
+028A: 00           (0)
+028B: 20       Push byte literal     (bytes code:B)
+028C: 03           (3)
+028D: 7D       Procedure call.     (bytes code:S)
+028E: Len:7
+028F: 'INVTOOL'
+0296: 84       drop float from stack     (bytes code:-)
+0297: 4E       CLS     (bytes code:-)
+0298: 24       Push string literal     (bytes code:S)
+0299: Len:102
+029A: 'You know that werewolf joints can yield a useful oil, you manage to extract some from the intact legs.'
+0300: 20       Push byte literal     (bytes code:B)
+0301: 02           (2)
+0302: 22       Push integer literal     (bytes code:I)
+0303: 0004       (4)
+0305: 20       Push byte literal     (bytes code:B)
+0306: 00           (0)
+0307: 20       Push byte literal     (bytes code:B)
+0308: 02           (2)
+0309: 7D       Procedure call.     (bytes code:S)
+030A: Len:8
+030B: 'DISPTEXT'
+0313: 84       drop float from stack     (bytes code:-)
+0314: 51       GOTO     (bytes code:D)
+0315: Dest:0392 (Dist:007D)
+0317: 24       Push string literal     (bytes code:S)
+0318: Len:101
+0319: 'You take one look over the corpse of the werewolf, it doesn't look like there's anything useful left.'
+037E: 20       Push byte literal     (bytes code:B)
+037F: 02           (2)
+0380: 22       Push integer literal     (bytes code:I)
+0381: 0004       (4)
+0383: 20       Push byte literal     (bytes code:B)
+0384: 00           (0)
+0385: 20       Push byte literal     (bytes code:B)
+0386: 02           (2)
+0387: 7D       Procedure call.     (bytes code:S)
+0388: Len:8
+0389: 'DISPTEXT'
+0391: 84       drop float from stack     (bytes code:-)
+0392: 51       GOTO     (bytes code:D)
+0393: Dest:09B5 (Dist:0622)
+0395: 09       Push parameter/external string variable value     (bytes code:V)
+0396: FFFC       (65532)
+0398: 24       Push string literal     (bytes code:S)
+0399: Len:7
+039A: 'Vampire'
+03A1: 4A       Equal string     (bytes code:-)
+03A2: 7E       Branch if false     (bytes code:D)
+03A3: Dest:05C7 (Dist:0224)
+03A5: 00       Push local/global integer variable value     (bytes code:v)
+03A6: FFF8       (65528)
+03A8: 07       Push parameter/external integer variable value     (bytes code:V)
+03A9: FFFA       (65530)
+03AB: 2D       Plus integer     (bytes code:-)
+03AC: 22       Push integer literal     (bytes code:I)
+03AD: 0001       (1)
+03AF: 29       Greater than integer     (bytes code:-)
+03B0: 7E       Branch if false     (bytes code:D)
+03B1: Dest:0541 (Dist:0190)
+03B3: 00       Push local/global integer variable value     (bytes code:v)
+03B4: FFF8       (65528)
+03B6: 22       Push integer literal     (bytes code:I)
+03B7: 0061       (97)
+03B9: 29       Greater than integer     (bytes code:-)
+03BA: 7E       Branch if false     (bytes code:D)
+03BB: Dest:04BA (Dist:00FF)
+03BD: 22       Push integer literal     (bytes code:I)
+03BE: 0001       (1)
+03C0: 20       Push byte literal     (bytes code:B)
+03C1: 00           (0)
+03C2: 24       Push string literal     (bytes code:S)
+03C3: Len:7
+03C4: 'strange'
+03CB: 20       Push byte literal     (bytes code:B)
+03CC: 02           (2)
+03CD: 22       Push integer literal     (bytes code:I)
+03CE: 0001       (1)
+03D0: 20       Push byte literal     (bytes code:B)
+03D1: 00           (0)
+03D2: 20       Push byte literal     (bytes code:B)
+03D3: 03           (3)
+03D4: 7D       Procedure call.     (bytes code:S)
+03D5: Len:7
+03D6: 'INVTOOL'
+03DD: 84       drop float from stack     (bytes code:-)
+03DE: 4E       CLS     (bytes code:-)
+03DF: 24       Push string literal     (bytes code:S)
+03E0: Len:194
+03E1: 'As the dust settles you notice a faint humming coming from a leather wrapped pack the vampire was holding. You open it to reveal a heavy, strange book. You put it in your pack and quickly leave.'
+04A3: 20       Push byte literal     (bytes code:B)
+04A4: 02           (2)
+04A5: 22       Push integer literal     (bytes code:I)
+04A6: 0004       (4)
+04A8: 20       Push byte literal     (bytes code:B)
+04A9: 00           (0)
+04AA: 20       Push byte literal     (bytes code:B)
+04AB: 02           (2)
+04AC: 7D       Procedure call.     (bytes code:S)
+04AD: Len:8
+04AE: 'DISPTEXT'
+04B6: 84       drop float from stack     (bytes code:-)
+04B7: 51       GOTO     (bytes code:D)
+04B8: Dest:053E (Dist:0086)
+04BA: 22       Push integer literal     (bytes code:I)
+04BB: 0001       (1)
+04BD: 20       Push byte literal     (bytes code:B)
+04BE: 00           (0)
+04BF: 24       Push string literal     (bytes code:S)
+04C0: Len:7
+04C1: 'vampire'
+04C8: 20       Push byte literal     (bytes code:B)
+04C9: 02           (2)
+04CA: 22       Push integer literal     (bytes code:I)
+04CB: 0001       (1)
+04CD: 20       Push byte literal     (bytes code:B)
+04CE: 00           (0)
+04CF: 20       Push byte literal     (bytes code:B)
+04D0: 03           (3)
+04D1: 7D       Procedure call.     (bytes code:S)
+04D2: Len:7
+04D3: 'INVTOOL'
+04DA: 84       drop float from stack     (bytes code:-)
+04DB: 4E       CLS     (bytes code:-)
+04DC: 24       Push string literal     (bytes code:S)
+04DD: Len:76
+04DE: 'With a rock you manage to break a sharp tooth from the mouth of the vampire.'
+052A: 20       Push byte literal     (bytes code:B)
+052B: 02           (2)
+052C: 22       Push integer literal     (bytes code:I)
+052D: 0004       (4)
+052F: 20       Push byte literal     (bytes code:B)
+0530: 00           (0)
+0531: 20       Push byte literal     (bytes code:B)
+0532: 02           (2)
+0533: 7D       Procedure call.     (bytes code:S)
+0534: Len:8
+0535: 'DISPTEXT'
+053D: 84       drop float from stack     (bytes code:-)
+053E: 51       GOTO     (bytes code:D)
+053F: Dest:05C4 (Dist:0085)
+0541: 24       Push string literal     (bytes code:S)
+0542: Len:109
+0543: 'You take one look over the corpse of the wretched vampire, it doesn't look like there's anything useful left.'
+05B0: 20       Push byte literal     (bytes code:B)
+05B1: 02           (2)
+05B2: 22       Push integer literal     (bytes code:I)
+05B3: 0004       (4)
+05B5: 20       Push byte literal     (bytes code:B)
+05B6: 00           (0)
+05B7: 20       Push byte literal     (bytes code:B)
+05B8: 02           (2)
+05B9: 7D       Procedure call.     (bytes code:S)
+05BA: Len:8
+05BB: 'DISPTEXT'
+05C3: 84       drop float from stack     (bytes code:-)
+05C4: 51       GOTO     (bytes code:D)
+05C5: Dest:09B5 (Dist:03F0)
+05C7: 09       Push parameter/external string variable value     (bytes code:V)
+05C8: FFFC       (65532)
+05CA: 24       Push string literal     (bytes code:S)
+05CB: Len:6
+05CC: 'Goblin'
+05D2: 4A       Equal string     (bytes code:-)
+05D3: 7E       Branch if false     (bytes code:D)
+05D4: Dest:0756 (Dist:0182)
+05D6: 00       Push local/global integer variable value     (bytes code:v)
+05D7: FFF8       (65528)
+05D9: 07       Push parameter/external integer variable value     (bytes code:V)
+05DA: FFFA       (65530)
+05DC: 2D       Plus integer     (bytes code:-)
+05DD: 22       Push integer literal     (bytes code:I)
+05DE: 0001       (1)
+05E0: 29       Greater than integer     (bytes code:-)
+05E1: 7E       Branch if false     (bytes code:D)
+05E2: Dest:06D1 (Dist:00EF)
+05E4: 22       Push integer literal     (bytes code:I)
+05E5: 0001       (1)
+05E7: 20       Push byte literal     (bytes code:B)
+05E8: 00           (0)
+05E9: 24       Push string literal     (bytes code:S)
+05EA: Len:4
+05EB: 'acid'
+05EF: 20       Push byte literal     (bytes code:B)
+05F0: 02           (2)
+05F1: 22       Push integer literal     (bytes code:I)
+05F2: 0001       (1)
+05F4: 20       Push byte literal     (bytes code:B)
+05F5: 00           (0)
+05F6: 20       Push byte literal     (bytes code:B)
+05F7: 03           (3)
+05F8: 7D       Procedure call.     (bytes code:S)
+05F9: Len:7
+05FA: 'INVTOOL'
+0601: 84       drop float from stack     (bytes code:-)
+0602: 4E       CLS     (bytes code:-)
+0603: 24       Push string literal     (bytes code:S)
+0604: Len:181
+0605: 'In the ragged pile of meat and green sinew you see an organic sac about the size of your fist. It's a sac which holds a very powerful acid. You put it on your belt to dry and harden'
+06BA: 20       Push byte literal     (bytes code:B)
+06BB: 02           (2)
+06BC: 22       Push integer literal     (bytes code:I)
+06BD: 0004       (4)
+06BF: 20       Push byte literal     (bytes code:B)
+06C0: 00           (0)
+06C1: 20       Push byte literal     (bytes code:B)
+06C2: 02           (2)
+06C3: 7D       Procedure call.     (bytes code:S)
+06C4: Len:8
+06C5: 'DISPTEXT'
+06CD: 84       drop float from stack     (bytes code:-)
+06CE: 51       GOTO     (bytes code:D)
+06CF: Dest:0753 (Dist:0084)
+06D1: 24       Push string literal     (bytes code:S)
+06D2: Len:108
+06D3: 'You take one look over the corpse of the wretched goblin, it doesn't look like there's anything useful left.'
+073F: 20       Push byte literal     (bytes code:B)
+0740: 02           (2)
+0741: 22       Push integer literal     (bytes code:I)
+0742: 0004       (4)
+0744: 20       Push byte literal     (bytes code:B)
+0745: 00           (0)
+0746: 20       Push byte literal     (bytes code:B)
+0747: 02           (2)
+0748: 7D       Procedure call.     (bytes code:S)
+0749: Len:8
+074A: 'DISPTEXT'
+0752: 84       drop float from stack     (bytes code:-)
+0753: 51       GOTO     (bytes code:D)
+0754: Dest:09B5 (Dist:0261)
+0756: 09       Push parameter/external string variable value     (bytes code:V)
+0757: FFFC       (65532)
+0759: 24       Push string literal     (bytes code:S)
+075A: Len:5
+075B: 'Troll'
+0760: 4A       Equal string     (bytes code:-)
+0761: 7E       Branch if false     (bytes code:D)
+0762: Dest:0882 (Dist:0120)
+0764: 00       Push local/global integer variable value     (bytes code:v)
+0765: FFF8       (65528)
+0767: 07       Push parameter/external integer variable value     (bytes code:V)
+0768: FFFA       (65530)
+076A: 2D       Plus integer     (bytes code:-)
+076B: 22       Push integer literal     (bytes code:I)
+076C: 0001       (1)
+076E: 29       Greater than integer     (bytes code:-)
+076F: 7E       Branch if false     (bytes code:D)
+0770: Dest:07FE (Dist:008E)
+0772: 22       Push integer literal     (bytes code:I)
+0773: 0001       (1)
+0775: 20       Push byte literal     (bytes code:B)
+0776: 00           (0)
+0777: 24       Push string literal     (bytes code:S)
+0778: Len:6
+0779: 'grapes'
+077F: 20       Push byte literal     (bytes code:B)
+0780: 02           (2)
+0781: 22       Push integer literal     (bytes code:I)
+0782: 0001       (1)
+0784: 20       Push byte literal     (bytes code:B)
+0785: 00           (0)
+0786: 20       Push byte literal     (bytes code:B)
+0787: 03           (3)
+0788: 7D       Procedure call.     (bytes code:S)
+0789: Len:7
+078A: 'INVTOOL'
+0791: 84       drop float from stack     (bytes code:-)
+0792: 4E       CLS     (bytes code:-)
+0793: 24       Push string literal     (bytes code:S)
+0794: Len:82
+0795: 'In the ragged pile of meat and green sinew you see a small wrapped bunch of grapes'
+07E7: 20       Push byte literal     (bytes code:B)
+07E8: 02           (2)
+07E9: 22       Push integer literal     (bytes code:I)
+07EA: 0004       (4)
+07EC: 20       Push byte literal     (bytes code:B)
+07ED: 00           (0)
+07EE: 20       Push byte literal     (bytes code:B)
+07EF: 02           (2)
+07F0: 7D       Procedure call.     (bytes code:S)
+07F1: Len:8
+07F2: 'DISPTEXT'
+07FA: 84       drop float from stack     (bytes code:-)
+07FB: 51       GOTO     (bytes code:D)
+07FC: Dest:087F (Dist:0083)
+07FE: 24       Push string literal     (bytes code:S)
+07FF: Len:107
+0800: 'You take one look over the corpse of the stinking troll, it doesn't look like there's anything useful left.'
+086B: 20       Push byte literal     (bytes code:B)
+086C: 02           (2)
+086D: 22       Push integer literal     (bytes code:I)
+086E: 0004       (4)
+0870: 20       Push byte literal     (bytes code:B)
+0871: 00           (0)
+0872: 20       Push byte literal     (bytes code:B)
+0873: 02           (2)
+0874: 7D       Procedure call.     (bytes code:S)
+0875: Len:8
+0876: 'DISPTEXT'
+087E: 84       drop float from stack     (bytes code:-)
+087F: 51       GOTO     (bytes code:D)
+0880: Dest:09B5 (Dist:0135)
+0882: 09       Push parameter/external string variable value     (bytes code:V)
+0883: FFFC       (65532)
+0885: 24       Push string literal     (bytes code:S)
+0886: Len:6
+0887: 'Dragon'
+088D: 4A       Equal string     (bytes code:-)
+088E: 7E       Branch if false     (bytes code:D)
+088F: Dest:09A3 (Dist:0114)
+0891: 00       Push local/global integer variable value     (bytes code:v)
+0892: FFF8       (65528)
+0894: 07       Push parameter/external integer variable value     (bytes code:V)
+0895: FFFA       (65530)
+0897: 2D       Plus integer     (bytes code:-)
+0898: 22       Push integer literal     (bytes code:I)
+0899: 0001       (1)
+089B: 29       Greater than integer     (bytes code:-)
+089C: 7E       Branch if false     (bytes code:D)
+089D: Dest:092C (Dist:008F)
+089F: 22       Push integer literal     (bytes code:I)
+08A0: 0001       (1)
+08A2: 20       Push byte literal     (bytes code:B)
+08A3: 00           (0)
+08A4: 24       Push string literal     (bytes code:S)
+08A5: Len:6
+08A6: 'dragon'
+08AC: 20       Push byte literal     (bytes code:B)
+08AD: 02           (2)
+08AE: 22       Push integer literal     (bytes code:I)
+08AF: 0001       (1)
+08B1: 20       Push byte literal     (bytes code:B)
+08B2: 00           (0)
+08B3: 20       Push byte literal     (bytes code:B)
+08B4: 03           (3)
+08B5: 7D       Procedure call.     (bytes code:S)
+08B6: Len:7
+08B7: 'INVTOOL'
+08BE: 84       drop float from stack     (bytes code:-)
+08BF: 4E       CLS     (bytes code:-)
+08C0: 24       Push string literal     (bytes code:S)
+08C1: Len:83
+08C2: 'You are able to pry a perfect dragon scale from the beautiful corpse of the dragon.'
+0915: 20       Push byte literal     (bytes code:B)
+0916: 02           (2)
+0917: 22       Push integer literal     (bytes code:I)
+0918: 0004       (4)
+091A: 20       Push byte literal     (bytes code:B)
+091B: 00           (0)
+091C: 20       Push byte literal     (bytes code:B)
+091D: 02           (2)
+091E: 7D       Procedure call.     (bytes code:S)
+091F: Len:8
+0920: 'DISPTEXT'
+0928: 84       drop float from stack     (bytes code:-)
+0929: 51       GOTO     (bytes code:D)
+092A: Dest:09A0 (Dist:0076)
+092C: 24       Push string literal     (bytes code:S)
+092D: Len:94
+092E: 'You take one look over the corpse of the dragon, it doesn't look like there's anything useful.'
+098C: 20       Push byte literal     (bytes code:B)
+098D: 02           (2)
+098E: 22       Push integer literal     (bytes code:I)
+098F: 0004       (4)
+0991: 20       Push byte literal     (bytes code:B)
+0992: 00           (0)
+0993: 20       Push byte literal     (bytes code:B)
+0994: 02           (2)
+0995: 7D       Procedure call.     (bytes code:S)
+0996: Len:8
+0997: 'DISPTEXT'
+099F: 84       drop float from stack     (bytes code:-)
+09A0: 51       GOTO     (bytes code:D)
+09A1: Dest:09B5 (Dist:0014)
+09A3: 09       Push parameter/external string variable value     (bytes code:V)
+09A4: FFFC       (65532)
+09A6: 24       Push string literal     (bytes code:S)
+09A7: Len:6
+09A8: 'Story1'
+09AE: 4A       Equal string     (bytes code:-)
+09AF: 7E       Branch if false     (bytes code:D)
+09B0: Dest:09B5 (Dist:0005)
+09B2: 51       GOTO     (bytes code:D)
+09B3: Dest:09B5 (Dist:0002)
+09B5: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0D FF F8 B1 22 00 64 86 3E 87 7F 09 FF FC 
+0010:24 04 57 6F 6C 66 4A 7E 01 1E 00 FF F8 07 FF FA 
+0020:2D 22 00 01 29 7E 00 96 22 00 01 20 00 24 04 57 
+0030:6F 6C 66 20 02 22 00 01 20 00 20 03 7D 07 49 4E 
+0040:56 54 4F 4F 4C 84 4E 24 5C 4F 6E 65 20 6F 66 20 
+0050:74 68 65 20 77 6F 6C 66 27 73 20 63 6C 61 77 73 
+0060:20 63 61 6D 65 20 6C 6F 6F 73 65 20 61 6E 64 20 
+0070:79 6F 75 27 72 65 20 61 62 6C 65 20 74 6F 20 70 
+0080:75 6C 6C 20 69 74 20 66 72 6F 6D 20 74 68 65 20 
+0090:70 61 77 2E 20 49 74 27 73 20 76 65 72 79 20 73 
+00A0:68 61 72 70 2E 20 02 22 00 04 20 00 20 02 7D 08 
+00B0:44 49 53 50 54 45 58 54 84 51 00 79 24 61 59 6F 
+00C0:75 20 74 61 6B 65 20 6F 6E 65 20 6C 6F 6F 6B 20 
+00D0:6F 76 65 72 20 74 68 65 20 63 6F 72 70 73 65 20 
+00E0:6F 66 20 74 68 65 20 77 6F 6C 66 2C 20 69 74 20 
+00F0:64 6F 65 73 6E 27 74 20 6C 6F 6F 6B 20 6C 69 6B 
+0100:65 20 74 68 65 72 65 27 73 20 61 6E 79 74 68 69 
+0110:6E 67 20 75 73 65 66 75 6C 20 6C 65 66 74 2E 20 
+0120:02 22 00 04 20 00 20 02 7D 08 44 49 53 50 54 45 
+0130:58 54 84 51 08 81 09 FF FC 24 03 4F 72 63 4A 7E 
+0140:01 1B 00 FF F8 07 FF FA 2D 22 00 01 29 7E 00 94 
+0150:22 00 01 20 00 24 08 6D 75 73 68 72 6F 6F 6D 20 
+0160:02 22 00 01 20 00 20 03 7D 07 49 4E 56 54 4F 4F 
+0170:4C 84 4E 24 56 50 69 63 6B 69 6E 67 20 74 68 72 
+0180:6F 75 67 68 20 74 68 65 20 6F 72 63 27 73 20 70 
+0190:6F 63 6B 65 74 73 20 79 6F 75 20 66 69 6E 64 20 
+01A0:61 20 6D 75 73 68 72 6F 6F 6D 2C 20 79 6F 75 20 
+01B0:64 6F 6E 27 74 20 6B 6E 6F 77 20 68 6F 77 20 69 
+01C0:74 20 73 75 72 76 69 76 65 64 21 20 02 22 00 04 
+01D0:20 00 20 02 7D 08 44 49 53 50 54 45 58 54 84 51 
+01E0:00 78 24 60 59 6F 75 20 74 61 6B 65 20 6F 6E 65 
+01F0:20 6C 6F 6F 6B 20 6F 76 65 72 20 74 68 65 20 63 
+0200:6F 72 70 73 65 20 6F 66 20 74 68 65 20 6F 72 63 
+0210:2C 20 69 74 20 64 6F 65 73 6E 27 74 20 6C 6F 6F 
+0220:6B 20 6C 69 6B 65 20 74 68 65 72 65 27 73 20 61 
+0230:6E 79 74 68 69 6E 67 20 75 73 65 66 75 6C 20 6C 
+0240:65 66 74 2E 20 02 22 00 04 20 00 20 02 7D 08 44 
+0250:49 53 50 54 45 58 54 84 51 07 5C 09 FF FC 24 08 
+0260:57 65 72 65 77 6F 6C 66 4A 7E 01 2B 00 FF F8 07 
+0270:FF FA 2D 22 00 01 29 7E 00 9F 22 00 01 20 00 24 
+0280:03 4F 69 6C 20 02 22 00 01 20 00 20 03 7D 07 49 
+0290:4E 56 54 4F 4F 4C 84 4E 24 66 59 6F 75 20 6B 6E 
+02A0:6F 77 20 74 68 61 74 20 77 65 72 65 77 6F 6C 66 
+02B0:20 6A 6F 69 6E 74 73 20 63 61 6E 20 79 69 65 6C 
+02C0:64 20 61 20 75 73 65 66 75 6C 20 6F 69 6C 2C 20 
+02D0:79 6F 75 20 6D 61 6E 61 67 65 20 74 6F 20 65 78 
+02E0:74 72 61 63 74 20 73 6F 6D 65 20 66 72 6F 6D 20 
+02F0:74 68 65 20 69 6E 74 61 63 74 20 6C 65 67 73 2E 
+0300:20 02 22 00 04 20 00 20 02 7D 08 44 49 53 50 54 
+0310:45 58 54 84 51 00 7D 24 65 59 6F 75 20 74 61 6B 
+0320:65 20 6F 6E 65 20 6C 6F 6F 6B 20 6F 76 65 72 20 
+0330:74 68 65 20 63 6F 72 70 73 65 20 6F 66 20 74 68 
+0340:65 20 77 65 72 65 77 6F 6C 66 2C 20 69 74 20 64 
+0350:6F 65 73 6E 27 74 20 6C 6F 6F 6B 20 6C 69 6B 65 
+0360:20 74 68 65 72 65 27 73 20 61 6E 79 74 68 69 6E 
+0370:67 20 75 73 65 66 75 6C 20 6C 65 66 74 2E 20 02 
+0380:22 00 04 20 00 20 02 7D 08 44 49 53 50 54 45 58 
+0390:54 84 51 06 22 09 FF FC 24 07 56 61 6D 70 69 72 
+03A0:65 4A 7E 02 24 00 FF F8 07 FF FA 2D 22 00 01 29 
+03B0:7E 01 90 00 FF F8 22 00 61 29 7E 00 FF 22 00 01 
+03C0:20 00 24 07 73 74 72 61 6E 67 65 20 02 22 00 01 
+03D0:20 00 20 03 7D 07 49 4E 56 54 4F 4F 4C 84 4E 24 
+03E0:C2 41 73 20 74 68 65 20 64 75 73 74 20 73 65 74 
+03F0:74 6C 65 73 20 79 6F 75 20 6E 6F 74 69 63 65 20 
+0400:61 20 66 61 69 6E 74 20 68 75 6D 6D 69 6E 67 20 
+0410:63 6F 6D 69 6E 67 20 66 72 6F 6D 20 61 20 6C 65 
+0420:61 74 68 65 72 20 77 72 61 70 70 65 64 20 70 61 
+0430:63 6B 20 74 68 65 20 76 61 6D 70 69 72 65 20 77 
+0440:61 73 20 68 6F 6C 64 69 6E 67 2E 20 59 6F 75 20 
+0450:6F 70 65 6E 20 69 74 20 74 6F 20 72 65 76 65 61 
+0460:6C 20 61 20 68 65 61 76 79 2C 20 73 74 72 61 6E 
+0470:67 65 20 62 6F 6F 6B 2E 20 59 6F 75 20 70 75 74 
+0480:20 69 74 20 69 6E 20 79 6F 75 72 20 70 61 63 6B 
+0490:20 61 6E 64 20 71 75 69 63 6B 6C 79 20 6C 65 61 
+04A0:76 65 2E 20 02 22 00 04 20 00 20 02 7D 08 44 49 
+04B0:53 50 54 45 58 54 84 51 00 86 22 00 01 20 00 24 
+04C0:07 76 61 6D 70 69 72 65 20 02 22 00 01 20 00 20 
+04D0:03 7D 07 49 4E 56 54 4F 4F 4C 84 4E 24 4C 57 69 
+04E0:74 68 20 61 20 72 6F 63 6B 20 79 6F 75 20 6D 61 
+04F0:6E 61 67 65 20 74 6F 20 62 72 65 61 6B 20 61 20 
+0500:73 68 61 72 70 20 74 6F 6F 74 68 20 66 72 6F 6D 
+0510:20 74 68 65 20 6D 6F 75 74 68 20 6F 66 20 74 68 
+0520:65 20 76 61 6D 70 69 72 65 2E 20 02 22 00 04 20 
+0530:00 20 02 7D 08 44 49 53 50 54 45 58 54 84 51 00 
+0540:85 24 6D 59 6F 75 20 74 61 6B 65 20 6F 6E 65 20 
+0550:6C 6F 6F 6B 20 6F 76 65 72 20 74 68 65 20 63 6F 
+0560:72 70 73 65 20 6F 66 20 74 68 65 20 77 72 65 74 
+0570:63 68 65 64 20 76 61 6D 70 69 72 65 2C 20 69 74 
+0580:20 64 6F 65 73 6E 27 74 20 6C 6F 6F 6B 20 6C 69 
+0590:6B 65 20 74 68 65 72 65 27 73 20 61 6E 79 74 68 
+05A0:69 6E 67 20 75 73 65 66 75 6C 20 6C 65 66 74 2E 
+05B0:20 02 22 00 04 20 00 20 02 7D 08 44 49 53 50 54 
+05C0:45 58 54 84 51 03 F0 09 FF FC 24 06 47 6F 62 6C 
+05D0:69 6E 4A 7E 01 82 00 FF F8 07 FF FA 2D 22 00 01 
+05E0:29 7E 00 EF 22 00 01 20 00 24 04 61 63 69 64 20 
+05F0:02 22 00 01 20 00 20 03 7D 07 49 4E 56 54 4F 4F 
+0600:4C 84 4E 24 B5 49 6E 20 74 68 65 20 72 61 67 67 
+0610:65 64 20 70 69 6C 65 20 6F 66 20 6D 65 61 74 20 
+0620:61 6E 64 20 67 72 65 65 6E 20 73 69 6E 65 77 20 
+0630:79 6F 75 20 73 65 65 20 61 6E 20 6F 72 67 61 6E 
+0640:69 63 20 73 61 63 20 61 62 6F 75 74 20 74 68 65 
+0650:20 73 69 7A 65 20 6F 66 20 79 6F 75 72 20 66 69 
+0660:73 74 2E 20 49 74 27 73 20 61 20 73 61 63 20 77 
+0670:68 69 63 68 20 68 6F 6C 64 73 20 61 20 76 65 72 
+0680:79 20 70 6F 77 65 72 66 75 6C 20 61 63 69 64 2E 
+0690:20 59 6F 75 20 70 75 74 20 69 74 20 6F 6E 20 79 
+06A0:6F 75 72 20 62 65 6C 74 20 74 6F 20 64 72 79 20 
+06B0:61 6E 64 20 68 61 72 64 65 6E 20 02 22 00 04 20 
+06C0:00 20 02 7D 08 44 49 53 50 54 45 58 54 84 51 00 
+06D0:84 24 6C 59 6F 75 20 74 61 6B 65 20 6F 6E 65 20 
+06E0:6C 6F 6F 6B 20 6F 76 65 72 20 74 68 65 20 63 6F 
+06F0:72 70 73 65 20 6F 66 20 74 68 65 20 77 72 65 74 
+0700:63 68 65 64 20 67 6F 62 6C 69 6E 2C 20 69 74 20 
+0710:64 6F 65 73 6E 27 74 20 6C 6F 6F 6B 20 6C 69 6B 
+0720:65 20 74 68 65 72 65 27 73 20 61 6E 79 74 68 69 
+0730:6E 67 20 75 73 65 66 75 6C 20 6C 65 66 74 2E 20 
+0740:02 22 00 04 20 00 20 02 7D 08 44 49 53 50 54 45 
+0750:58 54 84 51 02 61 09 FF FC 24 05 54 72 6F 6C 6C 
+0760:4A 7E 01 20 00 FF F8 07 FF FA 2D 22 00 01 29 7E 
+0770:00 8E 22 00 01 20 00 24 06 67 72 61 70 65 73 20 
+0780:02 22 00 01 20 00 20 03 7D 07 49 4E 56 54 4F 4F 
+0790:4C 84 4E 24 52 49 6E 20 74 68 65 20 72 61 67 67 
+07A0:65 64 20 70 69 6C 65 20 6F 66 20 6D 65 61 74 20 
+07B0:61 6E 64 20 67 72 65 65 6E 20 73 69 6E 65 77 20 
+07C0:79 6F 75 20 73 65 65 20 61 20 73 6D 61 6C 6C 20 
+07D0:77 72 61 70 70 65 64 20 62 75 6E 63 68 20 6F 66 
+07E0:20 67 72 61 70 65 73 20 02 22 00 04 20 00 20 02 
+07F0:7D 08 44 49 53 50 54 45 58 54 84 51 00 83 24 6B 
+0800:59 6F 75 20 74 61 6B 65 20 6F 6E 65 20 6C 6F 6F 
+0810:6B 20 6F 76 65 72 20 74 68 65 20 63 6F 72 70 73 
+0820:65 20 6F 66 20 74 68 65 20 73 74 69 6E 6B 69 6E 
+0830:67 20 74 72 6F 6C 6C 2C 20 69 74 20 64 6F 65 73 
+0840:6E 27 74 20 6C 6F 6F 6B 20 6C 69 6B 65 20 74 68 
+0850:65 72 65 27 73 20 61 6E 79 74 68 69 6E 67 20 75 
+0860:73 65 66 75 6C 20 6C 65 66 74 2E 20 02 22 00 04 
+0870:20 00 20 02 7D 08 44 49 53 50 54 45 58 54 84 51 
+0880:01 35 09 FF FC 24 06 44 72 61 67 6F 6E 4A 7E 01 
+0890:14 00 FF F8 07 FF FA 2D 22 00 01 29 7E 00 8F 22 
+08A0:00 01 20 00 24 06 64 72 61 67 6F 6E 20 02 22 00 
+08B0:01 20 00 20 03 7D 07 49 4E 56 54 4F 4F 4C 84 4E 
+08C0:24 53 59 6F 75 20 61 72 65 20 61 62 6C 65 20 74 
+08D0:6F 20 70 72 79 20 61 20 70 65 72 66 65 63 74 20 
+08E0:64 72 61 67 6F 6E 20 73 63 61 6C 65 20 66 72 6F 
+08F0:6D 20 74 68 65 20 62 65 61 75 74 69 66 75 6C 20 
+0900:63 6F 72 70 73 65 20 6F 66 20 74 68 65 20 64 72 
+0910:61 67 6F 6E 2E 20 02 22 00 04 20 00 20 02 7D 08 
+0920:44 49 53 50 54 45 58 54 84 51 00 76 24 5E 59 6F 
+0930:75 20 74 61 6B 65 20 6F 6E 65 20 6C 6F 6F 6B 20 
+0940:6F 76 65 72 20 74 68 65 20 63 6F 72 70 73 65 20 
+0950:6F 66 20 74 68 65 20 64 72 61 67 6F 6E 2C 20 69 
+0960:74 20 64 6F 65 73 6E 27 74 20 6C 6F 6F 6B 20 6C 
+0970:69 6B 65 20 74 68 65 72 65 27 73 20 61 6E 79 74 
+0980:68 69 6E 67 20 75 73 65 66 75 6C 2E 20 02 22 00 
+0990:04 20 00 20 02 7D 08 44 49 53 50 54 45 58 54 84 
+09A0:51 00 14 09 FF FC 24 06 53 74 6F 72 79 31 4A 7E 
+09B0:00 05 51 00 02 7B 

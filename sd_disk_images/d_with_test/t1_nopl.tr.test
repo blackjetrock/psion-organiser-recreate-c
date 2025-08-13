@@ -1,0 +1,48 @@
+
+Filename:'ob3_nopl'
+File ext:'bin
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0010
+QCode Space Size:001C
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFF0 0A
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0F       Push local/global string variable reference     (bytes code:v)
+0003: FFF1       (65521)
+0005: 24       Push string literal     (bytes code:S)
+0006: Len:3
+0007: 'ABC'
+000A: 81       Assign string     (bytes code:-)
+000B: 0D       Push local/global integer variable reference     (bytes code:v)
+000C: FFFC       (65532)
+000E: 22       Push integer literal     (bytes code:I)
+000F: 007B       (123)
+0011: 7F       Assign integer     (bytes code:-)
+0012: 00       Push local/global integer variable value     (bytes code:v)
+0013: FFFC       (65532)
+0015: 6F       PRINT integer     (bytes code:-)
+0016: 02       Push local/global string variable value     (bytes code:v)
+0017: FFF1       (65521)
+0019: 71       PRINT string     (bytes code:-)
+001A: 73       PRINT newline     (bytes code:-)
+001B: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0F FF F1 24 03 41 42 43 81 0D FF FC 22 00 
+0010:7B 7F 00 FF FC 6F 02 FF F1 71 73 7B 

@@ -1,0 +1,34 @@
+findrec:
+LOCAL recnum%,find$(32),key%
+loop::
+KEY
+FIRST
+IF EOF
+  RETURN
+ENDIF
+CLS
+PRINT "Type in search"
+PRINT "string:";
+INPUT find$
+recnum% = FIND(find$)
+IF recnum% = 0
+  CLS
+  PRINT "Not found"
+  PAUSE 20
+  GOTO loop::
+ENDIF
+DO
+  key% = DISP(-1,"")
+  IF key% = 1
+    RETURN
+  ENDIF
+  NEXT
+  recnum% = FIND(find$)
+  IF recnum% = 0
+    CLS
+    PRINT REPT$("*",18);"End of pack***"
+    PAUSE 20
+    RETURN
+  ENDIF
+UNTIL EOF
+RETURN

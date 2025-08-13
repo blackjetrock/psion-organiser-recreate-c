@@ -1,0 +1,220 @@
+
+Filename:'DEMO'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0036
+QCode Space Size:00FE
+Number of parameters:00
+Parameter types:
+Global varname Size:0014
+Global variables (2)
+ 0: FLAG1%           INT    (00) FFE8
+ 1: FLAG2%           INT    (00) FFE6
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (2)
+ 0: FFD2 0008
+ 1: FFCA 0002
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 22       Push integer literal     (bytes code:I)
+0003: 2099       (8345)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0020       (32)
+0008: 55       POKEB     (bytes code:-)
+0009: 22       Push integer literal     (bytes code:I)
+000A: 2186       (8582)
+000C: 22       Push integer literal     (bytes code:I)
+000D: 0000       (0)
+000F: 55       POKEB     (bytes code:-)
+0010: 22       Push integer literal     (bytes code:I)
+0011: 232E       (9006)
+0013: 22       Push integer literal     (bytes code:I)
+0014: 0081       (129)
+0016: 55       POKEB     (bytes code:-)
+0017: 22       Push integer literal     (bytes code:I)
+0018: BCFF       (48383)
+001A: 9B       PEEKB     (bytes code:-)
+001B: 22       Push integer literal     (bytes code:I)
+001C: 0080       (128)
+001E: 2A       Greater than equal integer     (bytes code:-)
+001F: 7E       Branch if false     (bytes code:D)
+0020: Dest:0031 (Dist:0011)
+0022: 0D       Push local/global integer variable reference     (bytes code:v)
+0023: FFE8       (65512)
+0025: 22       Push integer literal     (bytes code:I)
+0026: 0001       (1)
+0028: 7F       Assign integer     (bytes code:-)
+0029: 13       Push calculator memory reference. Is followed by a byte indicating which of the 10 memories.     (bytes code:m)
+002A: 0028       (M5)
+002C: 22       Push integer literal     (bytes code:I)
+002D: 0001       (1)
+002F: 86       autoconversion int to float     (bytes code:-)
+0030: 80       Assign float     (bytes code:-)
+0031: 0D       Push local/global integer variable reference     (bytes code:v)
+0032: FFE4       (65508)
+0034: 22       Push integer literal     (bytes code:I)
+0035: 8EFF       (36607)
+0037: 9B       PEEKB     (bytes code:-)
+0038: 7F       Assign integer     (bytes code:-)
+0039: 0D       Push local/global integer variable reference     (bytes code:v)
+003A: FFD0       (65488)
+003C: 22       Push integer literal     (bytes code:I)
+003D: 0001       (1)
+003F: 7F       Assign integer     (bytes code:-)
+0040: 00       Push local/global integer variable value     (bytes code:v)
+0041: FFD0       (65488)
+0043: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+0044: FFD2       (65490)
+0046: 00       Push local/global integer variable value     (bytes code:v)
+0047: FFE4       (65508)
+0049: 22       Push integer literal     (bytes code:I)
+004A: 0002       (2)
+004C: 00       Push local/global integer variable value     (bytes code:v)
+004D: FFE4       (65508)
+004F: 22       Push integer literal     (bytes code:I)
+0050: 0002       (2)
+0052: 30       Divide integer     (bytes code:-)
+0053: 86       autoconversion int to float     (bytes code:-)
+0054: 94       INT     (bytes code:-)
+0055: 2F       Multiply integer     (bytes code:-)
+0056: 2E       Minus integer     (bytes code:-)
+0057: 7F       Assign integer     (bytes code:-)
+0058: 0D       Push local/global integer variable reference     (bytes code:v)
+0059: FFE4       (65508)
+005B: 00       Push local/global integer variable value     (bytes code:v)
+005C: FFE4       (65508)
+005E: 22       Push integer literal     (bytes code:I)
+005F: 0002       (2)
+0061: 30       Divide integer     (bytes code:-)
+0062: 86       autoconversion int to float     (bytes code:-)
+0063: 94       INT     (bytes code:-)
+0064: 7F       Assign integer     (bytes code:-)
+0065: 0D       Push local/global integer variable reference     (bytes code:v)
+0066: FFD0       (65488)
+0068: 00       Push local/global integer variable value     (bytes code:v)
+0069: FFD0       (65488)
+006B: 22       Push integer literal     (bytes code:I)
+006C: 0001       (1)
+006E: 2D       Plus integer     (bytes code:-)
+006F: 7F       Assign integer     (bytes code:-)
+0070: 00       Push local/global integer variable value     (bytes code:v)
+0071: FFD0       (65488)
+0073: 22       Push integer literal     (bytes code:I)
+0074: 0008       (8)
+0076: 29       Greater than integer     (bytes code:-)
+0077: 7E       Branch if false     (bytes code:D)
+0078: Dest:0040 (Dist:FFFFFFC8)
+007A: 22       Push integer literal     (bytes code:I)
+007B: 0004       (4)
+007D: 03       Pop integer index and push local/global integer array variable value     (bytes code:v)
+007E: FFD2       (65490)
+0080: 22       Push integer literal     (bytes code:I)
+0081: 0001       (1)
+0083: 2C       Equal integer     (bytes code:-)
+0084: 7E       Branch if false     (bytes code:D)
+0085: Dest:009A (Dist:0015)
+0087: 0D       Push local/global integer variable reference     (bytes code:v)
+0088: FFE6       (65510)
+008A: 22       Push integer literal     (bytes code:I)
+008B: 0001       (1)
+008D: 7F       Assign integer     (bytes code:-)
+008E: 13       Push calculator memory reference. Is followed by a byte indicating which of the 10 memories.     (bytes code:m)
+008F: 0028       (M5)
+0091: 06       Push calculator memory. Is followed by a byte indicating which of the 10 memories.     (bytes code:m)
+0092: 0028       (M5)
+0094: 22       Push integer literal     (bytes code:I)
+0095: 0001       (1)
+0097: 86       autoconversion int to float     (bytes code:-)
+0098: 3C       Plus float     (bytes code:-)
+0099: 80       Assign float     (bytes code:-)
+009A: 00       Push local/global integer variable value     (bytes code:v)
+009B: FFE8       (65512)
+009D: 22       Push integer literal     (bytes code:I)
+009E: 0001       (1)
+00A0: 2C       Equal integer     (bytes code:-)
+00A1: 00       Push local/global integer variable value     (bytes code:v)
+00A2: FFE6       (65510)
+00A4: 22       Push integer literal     (bytes code:I)
+00A5: 0001       (1)
+00A7: 2C       Equal integer     (bytes code:-)
+00A8: 34       AND integer     (bytes code:-)
+00A9: 7E       Branch if false     (bytes code:D)
+00AA: Dest:00E6 (Dist:003C)
+00AC: 22       Push integer literal     (bytes code:I)
+00AD: 0001       (1)
+00AF: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+00B0: FFCA       (65482)
+00B2: 22       Push integer literal     (bytes code:I)
+00B3: 3F82       (16258)
+00B5: 7F       Assign integer     (bytes code:-)
+00B6: 22       Push integer literal     (bytes code:I)
+00B7: 0002       (2)
+00B9: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+00BA: FFCA       (65482)
+00BC: 22       Push integer literal     (bytes code:I)
+00BD: 3900       (14592)
+00BF: 7F       Assign integer     (bytes code:-)
+00C0: 22       Push integer literal     (bytes code:I)
+00C1: 0001       (1)
+00C3: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+00C4: FFCA       (65482)
+00C6: 8A       ADDR     (bytes code:-)
+00C7: 22       Push integer literal     (bytes code:I)
+00C8: 0100       (256)
+00CA: 9F       USR     (bytes code:-)
+00CB: 83       drop integer from stack     (bytes code:-)
+00CC: 20       Push byte literal     (bytes code:B)
+00CD: 00           (0)
+00CE: 7D       Procedure call.     (bytes code:S)
+00CF: Len:8
+00D0: 'FILLMAIN'
+00D8: 84       drop float from stack     (bytes code:-)
+00D9: 20       Push byte literal     (bytes code:B)
+00DA: 00           (0)
+00DB: 7D       Procedure call.     (bytes code:S)
+00DC: Len:5
+00DD: 'MENU4'
+00E2: 84       drop float from stack     (bytes code:-)
+00E3: 51       GOTO     (bytes code:D)
+00E4: Dest:00FD (Dist:0019)
+00E6: 20       Push byte literal     (bytes code:B)
+00E7: 00           (0)
+00E8: 7D       Procedure call.     (bytes code:S)
+00E9: Len:8
+00EA: 'FILLMAIN'
+00F2: 84       drop float from stack     (bytes code:-)
+00F3: 20       Push byte literal     (bytes code:B)
+00F4: 00           (0)
+00F5: 7D       Procedure call.     (bytes code:S)
+00F6: Len:5
+00F7: 'MENU2'
+00FC: 84       drop float from stack     (bytes code:-)
+00FD: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 22 20 99 22 00 20 55 22 21 86 22 00 00 55 
+0010:22 23 2E 22 00 81 55 22 BC FF 9B 22 00 80 2A 7E 
+0020:00 11 0D FF E8 22 00 01 7F 13 00 28 22 00 01 86 
+0030:80 0D FF E4 22 8E FF 9B 7F 0D FF D0 22 00 01 7F 
+0040:00 FF D0 10 FF D2 00 FF E4 22 00 02 00 FF E4 22 
+0050:00 02 30 86 94 2F 2E 7F 0D FF E4 00 FF E4 22 00 
+0060:02 30 86 94 7F 0D FF D0 00 FF D0 22 00 01 2D 7F 
+0070:00 FF D0 22 00 08 29 7E FF C8 22 00 04 03 FF D2 
+0080:22 00 01 2C 7E 00 15 0D FF E6 22 00 01 7F 13 00 
+0090:28 06 00 28 22 00 01 86 3C 80 00 FF E8 22 00 01 
+00A0:2C 00 FF E6 22 00 01 2C 34 7E 00 3C 22 00 01 10 
+00B0:FF CA 22 3F 82 7F 22 00 02 10 FF CA 22 39 00 7F 
+00C0:22 00 01 10 FF CA 8A 22 01 00 9F 83 20 00 7D 08 
+00D0:46 49 4C 4C 4D 41 49 4E 84 20 00 7D 05 4D 45 4E 
+00E0:55 34 84 51 00 19 20 00 7D 08 46 49 4C 4C 4D 41 
+00F0:49 4E 84 20 00 7D 05 4D 45 4E 55 32 84 7B 

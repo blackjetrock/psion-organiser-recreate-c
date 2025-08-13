@@ -1,0 +1,1020 @@
+
+PROCDEF
+
+ LOCAL
+
+TOTAL
+
+ LOCAL
+
+A
+
+,
+
+B
+
+,
+
+C
+
+,
+
+T
+
+ LOCAL
+
+AB
+
+,
+
+BC
+
+,
+
+AC
+
+"B:TEST"
+
+,
+
+ OPEN
+
+C
+
+,
+
+C.TEST
+
+,
+
+C.SECOND
+
+,
+
+C.THIRD
+
+ENDFIELDS
+
+C.TEST
+
+:=
+          000:type:f ':='
+
+34.2
+          000:type:f ':='
+
+C.SECOND
+
+:=
+          000:type:f ':='
+
+1234.5
+          000:type:f ':='
+
+C.THIRD
+
+:=
+          000:type:f ':='
+
+1.333
+          000:type:f ':='
+
+A
+
+:=
+          000:type:f ':='
+
+34.2
+          000:type:f ':='
+
+B
+
+:=
+          000:type:f ':='
+
+1234.5
+          000:type:f ':='
+
+C
+
+:=
+          000:type:f ':='
+
+1.333
+          000:type:f ':='
+
+T
+
+:=
+          000:type:f ':='
+
+A
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+B
+          000:type:f ':='
+          001:type:f '+'
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C
+          000:type:f ':='
+          001:type:f '+'
+
+A
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+B
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C
+
+PRINT
+          000:type:U 'PRINT'
+
+"T="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+T
+
+PRINT
+          000:type:U 'PRINT'
+
+"a+b"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+A
+
++
+          000:type:f '+'
+
+B
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"b+c"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+B
+
++
+          000:type:f '+'
+
+C
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"a+c"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+A
+
++
+          000:type:f '+'
+
+C
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"(a+b)+c"
+
+PRINT
+          000:type:U 'PRINT'
+
+(
+          000:type:U '('
+
+A
+          000:type:U '('
+
++
+          000:type:U '('
+          001:type:f '+'
+
+B
+          000:type:U '('
+          001:type:f '+'
+
+)
+
++
+          000:type:U '+'
+
+C
+          000:type:U '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+AB
+
+:=
+          000:type:f ':='
+
+A
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+B
+          000:type:f ':='
+          001:type:f '+'
+
+BC
+
+:=
+          000:type:f ':='
+
+B
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C
+          000:type:f ':='
+          001:type:f '+'
+
+AC
+
+:=
+          000:type:f ':='
+
+A
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C
+          000:type:f ':='
+          001:type:f '+'
+
+"ab+c"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+AB
+
++
+          000:type:f '+'
+
+C
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"a+bc"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+A
+
++
+          000:type:f '+'
+
+BC
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"ac+b"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+AC
+
++
+          000:type:f '+'
+
+B
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"b+ac"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+B
+
++
+          000:type:f '+'
+
+AC
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"1268.7+1.333"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+1268.7
+
++
+          000:type:f '+'
+
+1.333
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+C.TEST
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.SECOND
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.THIRD
+
+PRINT
+          000:type:U 'PRINT'
+
+TOTAL
+
+:=
+          000:type:f ':='
+
+C.TEST
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C.SECOND
+          000:type:f ':='
+          001:type:f '+'
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C.THIRD
+          000:type:f ':='
+          001:type:f '+'
+
+"test+second="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.TEST
+
++
+          000:type:f '+'
+
+C.SECOND
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"second+third="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.SECOND
+
++
+          000:type:f '+'
+
+C.THIRD
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"first+third="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.FIRST
+
++
+          000:type:f '+'
+
+C.THIRD
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"Total:"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+TOTAL
+
+PRINT
+          000:type:U 'PRINT'
+
+TOTAL
+
+=
+          000:type:f '='
+
+1270.033
+          000:type:f '='
+
+"PASS"
+
+PRINT
+          000:type:U 'PRINT'
+
+"FAIL"
+
+PRINT
+          000:type:U 'PRINT'
+
+ENDIF
+
+PROCDEF
+
+ LOCAL
+
+TOTAL
+
+ LOCAL
+
+A
+
+,
+
+B
+
+,
+
+C
+
+,
+
+T
+
+ LOCAL
+
+AB
+
+,
+
+BC
+
+,
+
+AC
+
+"B:TEST"
+
+,
+
+ OPEN
+
+C
+
+,
+
+C.TEST
+
+,
+
+C.SECOND
+
+,
+
+C.THIRD
+
+ENDFIELDS
+
+C.TEST
+
+:=
+          000:type:f ':='
+
+34.2
+          000:type:f ':='
+
+C.SECOND
+
+:=
+          000:type:f ':='
+
+1234.5
+          000:type:f ':='
+
+C.THIRD
+
+:=
+          000:type:f ':='
+
+1.333
+          000:type:f ':='
+
+A
+
+:=
+          000:type:f ':='
+
+34.2
+          000:type:f ':='
+
+B
+
+:=
+          000:type:f ':='
+
+1234.5
+          000:type:f ':='
+
+C
+
+:=
+          000:type:f ':='
+
+1.333
+          000:type:f ':='
+
+T
+
+:=
+          000:type:f ':='
+
+A
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+B
+          000:type:f ':='
+          001:type:f '+'
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C
+          000:type:f ':='
+          001:type:f '+'
+
+A
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+B
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C
+
+PRINT
+          000:type:U 'PRINT'
+
+"T="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+T
+
+PRINT
+          000:type:U 'PRINT'
+
+"a+b"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+A
+
++
+          000:type:f '+'
+
+B
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"b+c"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+B
+
++
+          000:type:f '+'
+
+C
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"a+c"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+A
+
++
+          000:type:f '+'
+
+C
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"(a+b)+c"
+
+PRINT
+          000:type:U 'PRINT'
+
+(
+          000:type:U '('
+
+A
+          000:type:U '('
+
++
+          000:type:U '('
+          001:type:f '+'
+
+B
+          000:type:U '('
+          001:type:f '+'
+
+)
+
++
+          000:type:U '+'
+
+C
+          000:type:U '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+AB
+
+:=
+          000:type:f ':='
+
+A
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+B
+          000:type:f ':='
+          001:type:f '+'
+
+BC
+
+:=
+          000:type:f ':='
+
+B
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C
+          000:type:f ':='
+          001:type:f '+'
+
+AC
+
+:=
+          000:type:f ':='
+
+A
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C
+          000:type:f ':='
+          001:type:f '+'
+
+"ab+c"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+AB
+
++
+          000:type:f '+'
+
+C
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"a+bc"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+A
+
++
+          000:type:f '+'
+
+BC
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"ac+b"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+AC
+
++
+          000:type:f '+'
+
+B
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"b+ac"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+B
+
++
+          000:type:f '+'
+
+AC
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"1268.7+1.333"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+1268.7
+
++
+          000:type:f '+'
+
+1.333
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+C.TEST
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.SECOND
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.THIRD
+
+PRINT
+          000:type:U 'PRINT'
+
+TOTAL
+
+:=
+          000:type:f ':='
+
+C.TEST
+          000:type:f ':='
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C.SECOND
+          000:type:f ':='
+          001:type:f '+'
+
++
+          000:type:f ':='
+          001:type:f '+'
+
+C.THIRD
+          000:type:f ':='
+          001:type:f '+'
+
+"test+second="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.TEST
+
++
+          000:type:f '+'
+
+C.SECOND
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"second+third="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.SECOND
+
++
+          000:type:f '+'
+
+C.THIRD
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"first+third="
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+C.FIRST
+
++
+          000:type:f '+'
+
+C.THIRD
+          000:type:f '+'
+
+PRINT
+          000:type:U 'PRINT'
+
+"Total:"
+
+,
+
+PRINT
+          000:type:U 'PRINT'
+
+TOTAL
+
+PRINT
+          000:type:U 'PRINT'
+
+TOTAL
+
+=
+          000:type:f '='
+
+1270.033
+          000:type:f '='
+
+"PASS"
+
+PRINT
+          000:type:U 'PRINT'
+
+"FAIL"
+
+PRINT
+          000:type:U 'PRINT'
+
+ENDIF

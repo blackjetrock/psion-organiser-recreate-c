@@ -1,0 +1,29 @@
+loops%:
+
+local A%, R%
+
+A% = 1
+R% = 0
+
+DO
+A% = A% + 1
+UNTIL A% = 10
+
+if A% = 10
+R% = R% + 1
+ENDIF
+
+WHILE A% > 5
+print A%
+A% = A% - 1
+ENDWH
+
+if A% = 5
+R% = R% + 1
+ENDIF
+
+PRINT R%
+
+IF R% = 2
+print "PASS"
+ENDIF

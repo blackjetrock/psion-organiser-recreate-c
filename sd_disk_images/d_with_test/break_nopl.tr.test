@@ -1,0 +1,75 @@
+
+Filename:'break'
+File ext:'ob3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0004
+QCode Space Size:0041
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 00       Push local/global integer variable value     (bytes code:v)
+0003: FFFC       (65532)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0005       (5)
+0008: 2C       Equal integer     (bytes code:-)
+0009: 7E       Branch if false     (bytes code:D)
+000A: Dest:000F (Dist:0005)
+000C: 51       GOTO     (bytes code:D)
+000D: Dest:0019 (Dist:000C)
+000F: 00       Push local/global integer variable value     (bytes code:v)
+0010: FFFC       (65532)
+0012: 22       Push integer literal     (bytes code:I)
+0013: 000A       (10)
+0015: 27       Less than integer     (bytes code:-)
+0016: 7E       Branch if false     (bytes code:D)
+0017: Dest:0002 (Dist:FFFFFFEB)
+0019: 00       Push local/global integer variable value     (bytes code:v)
+001A: FFFC       (65532)
+001C: 22       Push integer literal     (bytes code:I)
+001D: 0064       (100)
+001F: 27       Less than integer     (bytes code:-)
+0020: 7E       Branch if false     (bytes code:D)
+0021: Dest:0040 (Dist:001F)
+0023: 00       Push local/global integer variable value     (bytes code:v)
+0024: FFFC       (65532)
+0026: 22       Push integer literal     (bytes code:I)
+0027: 0005       (5)
+0029: 2C       Equal integer     (bytes code:-)
+002A: 7E       Branch if false     (bytes code:D)
+002B: Dest:0030 (Dist:0005)
+002D: 51       GOTO     (bytes code:D)
+002E: Dest:0040 (Dist:0012)
+0030: 00       Push local/global integer variable value     (bytes code:v)
+0031: FFFC       (65532)
+0033: 22       Push integer literal     (bytes code:I)
+0034: 0006       (6)
+0036: 2C       Equal integer     (bytes code:-)
+0037: 7E       Branch if false     (bytes code:D)
+0038: Dest:003D (Dist:0005)
+003A: 51       GOTO     (bytes code:D)
+003B: Dest:0019 (Dist:FFFFFFDE)
+003D: 51       GOTO     (bytes code:D)
+003E: Dest:0019 (Dist:FFFFFFDB)
+0040: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 00 FF FC 22 00 05 2C 7E 00 05 51 00 0C 00 
+0010:FF FC 22 00 0A 27 7E FF EB 00 FF FC 22 00 64 27 
+0020:7E 00 1F 00 FF FC 22 00 05 2C 7E 00 05 51 00 12 
+0030:00 FF FC 22 00 06 2C 7E 00 05 51 FF DE 51 FF DB 
+0040:7B 

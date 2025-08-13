@@ -1,0 +1,96 @@
+
+Filename:'RECODE'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0014
+QCode Space Size:004D
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0042
+External variables (9)
+ 0: TASCII%          INT    (00)
+ 1: BIT0%            INT    (00)
+ 2: BIT1%            INT    (00)
+ 3: BIT2%            INT    (00)
+ 4: BIT3%            INT    (00)
+ 5: BIT4%            INT    (00)
+ 6: BIT5%            INT    (00)
+ 7: BIT6%            INT    (00)
+ 8: TCHAR$           STR    (02)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 14       Push parameter/external integer variable reference     (bytes code:V)
+0003: FFFC       (65532)
+0005: 07       Push parameter/external integer variable value     (bytes code:V)
+0006: FFFA       (65530)
+0008: 07       Push parameter/external integer variable value     (bytes code:V)
+0009: FFF8       (65528)
+000B: 22       Push integer literal     (bytes code:I)
+000C: 0002       (2)
+000E: 2F       Multiply integer     (bytes code:-)
+000F: 2D       Plus integer     (bytes code:-)
+0010: 07       Push parameter/external integer variable value     (bytes code:V)
+0011: FFF6       (65526)
+0013: 22       Push integer literal     (bytes code:I)
+0014: 0004       (4)
+0016: 2F       Multiply integer     (bytes code:-)
+0017: 2D       Plus integer     (bytes code:-)
+0018: 07       Push parameter/external integer variable value     (bytes code:V)
+0019: FFF4       (65524)
+001B: 22       Push integer literal     (bytes code:I)
+001C: 0008       (8)
+001E: 2F       Multiply integer     (bytes code:-)
+001F: 2D       Plus integer     (bytes code:-)
+0020: 07       Push parameter/external integer variable value     (bytes code:V)
+0021: FFF2       (65522)
+0023: 22       Push integer literal     (bytes code:I)
+0024: 0010       (16)
+0026: 2F       Multiply integer     (bytes code:-)
+0027: 2D       Plus integer     (bytes code:-)
+0028: 07       Push parameter/external integer variable value     (bytes code:V)
+0029: FFF0       (65520)
+002B: 22       Push integer literal     (bytes code:I)
+002C: 0020       (32)
+002E: 2F       Multiply integer     (bytes code:-)
+002F: 2D       Plus integer     (bytes code:-)
+0030: 07       Push parameter/external integer variable value     (bytes code:V)
+0031: FFEE       (65518)
+0033: 22       Push integer literal     (bytes code:I)
+0034: 0040       (64)
+0036: 2F       Multiply integer     (bytes code:-)
+0037: 2D       Plus integer     (bytes code:-)
+0038: 7F       Assign integer     (bytes code:-)
+0039: 14       Push parameter/external integer variable reference     (bytes code:V)
+003A: FFFC       (65532)
+003C: 07       Push parameter/external integer variable value     (bytes code:V)
+003D: FFFC       (65532)
+003F: 22       Push integer literal     (bytes code:I)
+0040: 0020       (32)
+0042: 2D       Plus integer     (bytes code:-)
+0043: 7F       Assign integer     (bytes code:-)
+0044: 16       Push parameter/external string variable reference     (bytes code:V)
+0045: FFEC       (65516)
+0047: 07       Push parameter/external integer variable value     (bytes code:V)
+0048: FFFC       (65532)
+004A: B8       CHR$     (bytes code:-)
+004B: 81       Assign string     (bytes code:-)
+004C: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 14 FF FC 07 FF FA 07 FF F8 22 00 02 2F 2D 
+0010:07 FF F6 22 00 04 2F 2D 07 FF F4 22 00 08 2F 2D 
+0020:07 FF F2 22 00 10 2F 2D 07 FF F0 22 00 20 2F 2D 
+0030:07 FF EE 22 00 40 2F 2D 7F 14 FF FC 07 FF FC 22 
+0040:00 20 2D 7F 16 FF EC 07 FF FC B8 81 7B 

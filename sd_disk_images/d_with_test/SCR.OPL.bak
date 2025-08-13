@@ -1,0 +1,13 @@
+
+SCR:
+LOCAL I%
+I%=10
+WHILE I%>0
+PRINT "ABCDEF",I%
+GET
+I%=I%-1
+ENDWH
+GET
+
+
+

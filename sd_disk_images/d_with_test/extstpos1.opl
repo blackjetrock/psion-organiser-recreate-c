@@ -1,0 +1,62 @@
+pos1:
+
+local PASS%
+PASS% = 0
+
+create "A:Postest", A, I%
+
+A.I% = 1
+append
+
+A.I% = 2
+append
+
+A.I% = 3
+append
+
+A.I% = 4
+append
+
+A.I% = 5
+append
+
+A.I% = 6
+append
+
+A.I% = 7
+append
+
+A.I% = 8
+append
+
+A.I% = 9
+append
+
+
+first
+if A.i% = 1
+PASS% =pass% + 1
+endif
+
+print A.i%
+next
+if A.i% = 2
+PASS% =pass% + 1
+endif
+print A.i%
+
+position 5
+if A.i% = 5
+PASS% =pass% + 1
+endif
+print A.I%
+
+position 3
+if A.i% = 3
+PASS% =pass% + 1
+endif
+print A.I%
+
+if pass% = 4
+print "PASS"
+endif

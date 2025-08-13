@@ -1,0 +1,415 @@
+
+QCode idx:FFFFFFF3  --++  files0:  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U 'PROCDEF' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+Header built qcode_idx:000F
+QCode idx:0002  --++  local total  --++
+QCode idx:0002  --++  local total  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U ' LOCAL' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FUNCTION                   ty:f qcty:U 'DROP' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0002  --++  local a,b,c,t  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U ' LOCAL' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N005       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'T' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N005       Read EXP_BUFF_ID_FUNCTION                   ty:f qcty:U 'DROP' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0002  --++  local ab,bc,ac  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U ' LOCAL' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AB' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'BC' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_FUNCTION                   ty:f qcty:U 'DROP' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0002  --++  open "B:TEST", C, test, second, third  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"B:TEST"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_META                       ty:s qcty:U ' OPEN' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_LOGICALFILE                ty:s qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004   Fieldvar EXP_BUFF_ID_FIELDVAR                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N005   Fieldvar EXP_BUFF_ID_FIELDVAR                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N006   Fieldvar EXP_BUFF_ID_FIELDVAR                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N007       Read EXP_BUFF_ID_META                       ty:s qcty:U 'ENDFIELDS' npar:0 nidx:0 trapped:0 %:0  2: 6 1  nb 0:()
+
+QCode idx:0022  --++  c.test = 34.2  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '34.2' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+
+QCode idx:0030  --++  c.second = 1234.5  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1234.5' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+
+QCode idx:0041  --++  c.third  = 1.333  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1.333' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+
+QCode idx:0050  --++  a = 34.2  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '34.2' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+
+QCode idx:0059  --++  b = 1234.5  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1234.5' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+
+QCode idx:0063  --++  c  = 1.333  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1.333' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+
+QCode idx:006C  --++  t = a+b+c  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'T' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+N005       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N006       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 5 4  nb 0:()
+N007       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 6 1  nb 0:()
+
+QCode idx:007B  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:007F  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0080  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0084  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0085  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0089  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:008A  --++  print a,b,c  --++
+QCode idx:008A  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"T="' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:008F  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0090  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'T' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0094  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0095  --++  print "T=", t  --++
+QCode idx:0095  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"a+b"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:009B  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:009C  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:00A4  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00A5  --++  print "a+b", a+b  --++
+QCode idx:00A5  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"b+c"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00AB  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00AC  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:00B4  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00B5  --++  print "b+c", b+c  --++
+QCode idx:00B5  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"a+c"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00BB  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00BC  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:00C4  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00C5  --++  print "a+c", a+c  --++
+QCode idx:00C5  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"(a+b)+c"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00CF  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00D0  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_SUB_START                  ty:U qcty:U '' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+N005       Read EXP_BUFF_ID_SUB_END                    ty:U qcty:U '' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N006       Read EXP_BUFF_ID_SUB_END                    ty:U qcty:U '' npar:0 nidx:0 trapped:0 %:0  2: 5 4  nb 0:()
+N007       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N008       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 7 4  nb 0:()
+N009       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00DC  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:00DD  --++  print "(a+b)+c" (a+b)+c  --++
+QCode idx:00DD  --++  ab = a+b  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AB' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+N005       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 4 1  nb 0:()
+
+QCode idx:00E8  --++  bc = b+c  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'BC' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+N005       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 4 1  nb 0:()
+
+QCode idx:00F3  --++  ac = a+c  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+N005       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 4 1  nb 0:()
+
+QCode idx:00FE  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"ab+c"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0105  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0106  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AB' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:010E  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:010F  --++  print "ab+c", ab+c  --++
+QCode idx:010F  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"a+bc"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0116  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0117  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'BC' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:011F  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0120  --++  print "a+bc", a+bc  --++
+QCode idx:0120  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"ac+b"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0127  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0128  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:0130  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0131  --++  print "ac+b", ac+b  --++
+QCode idx:0131  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"b+ac"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0138  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0139  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:0141  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0142  --++  print "b+ac", b+ac	  --++
+QCode idx:0142  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"1268.7+1.333"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0151  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0152  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1268.7' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1.333' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:015F  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0160  --++  print "1268.7+1.333", 1268.7+1.333  --++
+QCode idx:0160  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0169  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:016A  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0175  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0176  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0180  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0181  --++  print c.test, c.second, c.third  --++
+QCode idx:0181  --++  total = c.test+c.second+c.third  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+N005       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N006       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 5 4  nb 0:()
+N007       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 6 1  nb 0:()
+
+QCode idx:01A2  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"test+second="' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01B1  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01B2  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:01C6  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01C7  --++  print "test+second=", c.test+c.second  --++
+QCode idx:01C7  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"second+third="' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01D7  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01D8  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:01ED  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01EE  --++  print "second+third=", c.second+c.third  --++
+QCode idx:01EE  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"first+third="' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01FD  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:01FE  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.FIRST' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:0212  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0213  --++  print "first+third=", c.first+c.third	  --++
+QCode idx:0213  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"Total:"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:021C  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:021D  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0221  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0222  --++  print "Total:",total  --++
+QCode idx:0222  --++  if total = 1270.033  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1270.033' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:i qcty:f '=' npar:0 nidx:0 trapped:0 %:0  2: 2 1  nb 0:()
+N004       Read EXP_BUFF_ID_IF                 L:2     ty:i qcty:U 'IF' npar:0 nidx:0 trapped:0 %:0  2: 3 2  nb 0:()
+
+QCode idx:0230  --++  print "PASS"  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"PASS"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0237  --++  print "PASS"  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0238  --++  print "PASS"  --++
+QCode idx:0238  --++  else  --++
+N001       Read EXP_BUFF_ID_ELSE               L:2     ty:U qcty:U 'ELSE' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:023B  --++  print "FAIL"  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"FAIL"' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0242  --++  print "FAIL"  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0243  --++  print "FAIL"  --++
+QCode idx:0243  --++  endif  --++
+N001       Read EXP_BUFF_ID_ENDIF              L:2     ty:U qcty:U 'ENDIF' npar:0 nidx:0 trapped:0 %:0  0:  nb 0:()
+
+QCode idx:0243  --++  endif  --++

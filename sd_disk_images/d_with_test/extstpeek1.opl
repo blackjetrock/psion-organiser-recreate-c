@@ -1,0 +1,31 @@
+peek1:
+
+local r%
+local pass%
+
+pass% = 0
+
+pokew $2000, $1234
+r% = peekw($2000)
+
+print hex$(r%)
+
+if r% = $1234
+pass% = pass% + 1
+else
+print "FAIL"
+endif
+
+pokeb $2010, $75
+
+if peekb($2010) = $75
+pass% = pass% + 1
+else
+print "FAIL"
+endif
+
+if pass% = 2
+print "PASS"
+else
+print "FAIL"
+endif

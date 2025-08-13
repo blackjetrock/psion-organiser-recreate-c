@@ -1,0 +1,6 @@
+cursor:
+
+cursor on
+cursor off
+
+print "PASS"

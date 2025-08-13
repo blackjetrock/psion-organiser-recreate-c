@@ -1,0 +1,10 @@
+t:
+local E
+
+E = 0
+
+if E
+print "FAIL"
+else
+print "PASS"
+endif

@@ -1,0 +1,109 @@
+
+Filename:'BAGSAM'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000F
+QCode Space Size:0064
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0008
+External variables (2)
+ 0: G$               STR    (02)
+ 1: C%               INT    (00)
+
+String length fixups (1)
+ 0: FFF1 05
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0D       Push local/global integer variable reference     (bytes code:v)
+0003: FFF8       (65528)
+0005: 09       Push parameter/external string variable value     (bytes code:V)
+0006: FFFC       (65532)
+0008: 96       LEN     (bytes code:-)
+0009: 7F       Assign integer     (bytes code:-)
+000A: 09       Push parameter/external string variable value     (bytes code:V)
+000B: FFFC       (65532)
+000D: 22       Push integer literal     (bytes code:I)
+000E: 0001       (1)
+0010: C4       RIGHT$     (bytes code:-)
+0011: 09       Push parameter/external string variable value     (bytes code:V)
+0012: FFFC       (65532)
+0014: 00       Push local/global integer variable value     (bytes code:v)
+0015: FFF8       (65528)
+0017: 22       Push integer literal     (bytes code:I)
+0018: 0001       (1)
+001A: 2E       Minus integer     (bytes code:-)
+001B: 22       Push integer literal     (bytes code:I)
+001C: 0001       (1)
+001E: C2       MID$     (bytes code:-)
+001F: 4A       Equal string     (bytes code:-)
+0020: 7E       Branch if false     (bytes code:D)
+0021: Dest:0026 (Dist:0005)
+0023: 51       GOTO     (bytes code:D)
+0024: Dest:003C (Dist:0018)
+0026: 0D       Push local/global integer variable reference     (bytes code:v)
+0027: FFF8       (65528)
+0029: 00       Push local/global integer variable value     (bytes code:v)
+002A: FFF8       (65528)
+002C: 22       Push integer literal     (bytes code:I)
+002D: 0001       (1)
+002F: 2E       Minus integer     (bytes code:-)
+0030: 7F       Assign integer     (bytes code:-)
+0031: 00       Push local/global integer variable value     (bytes code:v)
+0032: FFF8       (65528)
+0034: 22       Push integer literal     (bytes code:I)
+0035: 0001       (1)
+0037: 28       Less than equal integer     (bytes code:-)
+0038: 7E       Branch if false     (bytes code:D)
+0039: Dest:000A (Dist:FFFFFFD1)
+003B: 7B       RETURN (float 0)     (bytes code:-)
+003C: 16       Push parameter/external string variable reference     (bytes code:V)
+003D: FFFC       (65532)
+003F: 09       Push parameter/external string variable value     (bytes code:V)
+0040: FFFC       (65532)
+0042: 09       Push parameter/external string variable value     (bytes code:V)
+0043: FFFC       (65532)
+0045: 96       LEN     (bytes code:-)
+0046: 22       Push integer literal     (bytes code:I)
+0047: 0001       (1)
+0049: 2E       Minus integer     (bytes code:-)
+004A: C0       LEFT$     (bytes code:-)
+004B: 81       Assign string     (bytes code:-)
+004C: 22       Push integer literal     (bytes code:I)
+004D: 0032       (50)
+004F: 22       Push integer literal     (bytes code:I)
+0050: 0032       (50)
+0052: 4D       BEEP     (bytes code:-)
+0053: 07       Push parameter/external integer variable value     (bytes code:V)
+0054: FFFA       (65530)
+0056: 22       Push integer literal     (bytes code:I)
+0057: 0003       (3)
+0059: 4C       AT     (bytes code:-)
+005A: 09       Push parameter/external string variable value     (bytes code:V)
+005B: FFFC       (65532)
+005D: 71       PRINT string     (bytes code:-)
+005E: 24       Push string literal     (bytes code:S)
+005F: Len:1
+0060: '-'
+0061: 71       PRINT string     (bytes code:-)
+0062: 73       PRINT newline     (bytes code:-)
+0063: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0D FF F8 09 FF FC 96 7F 09 FF FC 22 00 01 
+0010:C4 09 FF FC 00 FF F8 22 00 01 2E 22 00 01 C2 4A 
+0020:7E 00 05 51 00 18 0D FF F8 00 FF F8 22 00 01 2E 
+0030:7F 00 FF F8 22 00 01 28 7E FF D1 7B 16 FF FC 09 
+0040:FF FC 09 FF FC 96 22 00 01 2E C0 81 22 00 32 22 
+0050:00 32 4D 07 FF FA 22 00 03 4C 09 FF FC 71 24 01 
+0060:2D 71 73 7B 

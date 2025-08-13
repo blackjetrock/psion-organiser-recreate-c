@@ -1,0 +1,25 @@
+umin:
+
+local A,X%
+
+Y% = A% - - B%
+
+X% = -X%
+A = -2.3
+A = -($FFF)
+
+
+X% = (-X% - - X%)
+X% =  X% - - X%
+
+IF X% = -Y%
+ENDIF
+
+IF -X% = Y%
+ENDIF
+
+IF -X% = -(-Y%* -Q%)
+ENDIF
+
+IF -X% = -((-Y%)* -Q%)
+ENDIF

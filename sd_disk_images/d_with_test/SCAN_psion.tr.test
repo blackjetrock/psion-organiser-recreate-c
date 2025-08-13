@@ -1,0 +1,170 @@
+
+Filename:'SCAN'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0006
+QCode Space Size:00F9
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 4E       CLS     (bytes code:-)
+0003: 24       Push string literal     (bytes code:S)
+0004: Len:13
+0005: 'Scan barcode:'
+0012: 71       PRINT string     (bytes code:-)
+0013: 73       PRINT newline     (bytes code:-)
+0014: 50       ESCAPE     (bytes code:O)
+0015: 00           (0)
+0016: 24       Push string literal     (bytes code:S)
+0017: Len:8
+0018: 'BARCODE$'
+0020: 1F       Push reference of file string field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0021: 00           (A)
+0022: 22       Push integer literal     (bytes code:I)
+0023: 001F       (31)
+0025: 20       Push byte literal     (bytes code:B)
+0026: 00           (0)
+0027: 22       Push integer literal     (bytes code:I)
+0028: 0001       (1)
+002A: 32       unary minus integer     (bytes code:-)
+002B: 20       Push byte literal     (bytes code:B)
+002C: 00           (0)
+002D: 20       Push byte literal     (bytes code:B)
+002E: 02           (2)
+002F: 7D       Procedure call.     (bytes code:S)
+0030: Len:4
+0031: 'BAR$'
+0035: 81       Assign string     (bytes code:-)
+0036: 24       Push string literal     (bytes code:S)
+0037: Len:8
+0038: 'BARCODE$'
+0040: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0041: 00           (A)
+0042: 24       Push string literal     (bytes code:S)
+0043: Len:0
+0044: ''
+0044: 4A       Equal string     (bytes code:-)
+0045: 7E       Branch if false     (bytes code:D)
+0046: Dest:007F (Dist:0039)
+0048: 0D       Push local/global integer variable reference     (bytes code:v)
+0049: FFFC       (65532)
+004B: 95       KEY     (bytes code:-)
+004C: 7F       Assign integer     (bytes code:-)
+004D: 00       Push local/global integer variable value     (bytes code:v)
+004E: FFFC       (65532)
+0050: 22       Push integer literal     (bytes code:I)
+0051: 0020       (32)
+0053: 27       Less than integer     (bytes code:-)
+0054: 7E       Branch if false     (bytes code:D)
+0055: Dest:005A (Dist:0005)
+0057: 50       ESCAPE     (bytes code:O)
+0058: 01           (1)
+0059: 7B       RETURN (float 0)     (bytes code:-)
+005A: 4E       CLS     (bytes code:-)
+005B: 24       Push string literal     (bytes code:S)
+005C: Len:16
+005D: 'Enter Product No'
+006D: 71       PRINT string     (bytes code:-)
+006E: 73       PRINT newline     (bytes code:-)
+006F: 24       Push string literal     (bytes code:S)
+0070: Len:8
+0071: 'BARCODE$'
+0079: 1F       Push reference of file string field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+007A: 00           (A)
+007B: 6E       INPUT string     (bytes code:-)
+007C: 51       GOTO     (bytes code:D)
+007D: Dest:00D0 (Dist:0053)
+007F: 0D       Push local/global integer variable reference     (bytes code:v)
+0080: FFFA       (65530)
+0082: 24       Push string literal     (bytes code:S)
+0083: Len:8
+0084: 'BARCODE$'
+008C: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+008D: 00           (A)
+008E: 96       LEN     (bytes code:-)
+008F: 7F       Assign integer     (bytes code:-)
+0090: 24       Push string literal     (bytes code:S)
+0091: Len:8
+0092: 'BARCODE$'
+009A: 1F       Push reference of file string field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+009B: 00           (A)
+009C: 24       Push string literal     (bytes code:S)
+009D: Len:8
+009E: 'BARCODE$'
+00A6: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00A7: 00           (A)
+00A8: 00       Push local/global integer variable value     (bytes code:v)
+00A9: FFFA       (65530)
+00AB: 22       Push integer literal     (bytes code:I)
+00AC: 0001       (1)
+00AE: 2E       Minus integer     (bytes code:-)
+00AF: C4       RIGHT$     (bytes code:-)
+00B0: 81       Assign string     (bytes code:-)
+00B1: 24       Push string literal     (bytes code:S)
+00B2: Len:11
+00B3: 'Product No:'
+00BE: 71       PRINT string     (bytes code:-)
+00BF: 73       PRINT newline     (bytes code:-)
+00C0: 24       Push string literal     (bytes code:S)
+00C1: Len:8
+00C2: 'BARCODE$'
+00CA: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00CB: 00           (A)
+00CC: 71       PRINT string     (bytes code:-)
+00CD: 73       PRINT newline     (bytes code:-)
+00CE: 91       GET     (bytes code:-)
+00CF: 83       drop integer from stack     (bytes code:-)
+00D0: 22       Push integer literal     (bytes code:I)
+00D1: 0003       (3)
+00D3: 6A       KSTAT     (bytes code:-)
+00D4: 24       Push string literal     (bytes code:S)
+00D5: Len:15
+00D6: 'Enter Quantity:'
+00E5: 71       PRINT string     (bytes code:-)
+00E6: 73       PRINT newline     (bytes code:-)
+00E7: 24       Push string literal     (bytes code:S)
+00E8: Len:4
+00E9: 'QTY$'
+00ED: 1F       Push reference of file string field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00EE: 00           (A)
+00EF: 6E       INPUT string     (bytes code:-)
+00F0: 5B       APPEND     (bytes code:-)
+00F1: 22       Push integer literal     (bytes code:I)
+00F2: 0001       (1)
+00F4: 6A       KSTAT     (bytes code:-)
+00F5: 51       GOTO     (bytes code:D)
+00F6: Dest:0002 (Dist:FFFFFF0C)
+00F8: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 4E 24 0D 53 63 61 6E 20 62 61 72 63 6F 64 
+0010:65 3A 71 73 50 00 24 08 42 41 52 43 4F 44 45 24 
+0020:1F 00 22 00 1F 20 00 22 00 01 32 20 00 20 02 7D 
+0030:04 42 41 52 24 81 24 08 42 41 52 43 4F 44 45 24 
+0040:1C 00 24 00 4A 7E 00 39 0D FF FC 95 7F 00 FF FC 
+0050:22 00 20 27 7E 00 05 50 01 7B 4E 24 10 45 6E 74 
+0060:65 72 20 50 72 6F 64 75 63 74 20 4E 6F 71 73 24 
+0070:08 42 41 52 43 4F 44 45 24 1F 00 6E 51 00 53 0D 
+0080:FF FA 24 08 42 41 52 43 4F 44 45 24 1C 00 96 7F 
+0090:24 08 42 41 52 43 4F 44 45 24 1F 00 24 08 42 41 
+00A0:52 43 4F 44 45 24 1C 00 00 FF FA 22 00 01 2E C4 
+00B0:81 24 0B 50 72 6F 64 75 63 74 20 4E 6F 3A 71 73 
+00C0:24 08 42 41 52 43 4F 44 45 24 1C 00 71 73 91 83 
+00D0:22 00 03 6A 24 0F 45 6E 74 65 72 20 51 75 61 6E 
+00E0:74 69 74 79 3A 71 73 24 04 51 54 59 24 1F 00 6E 
+00F0:5B 22 00 01 6A 51 FF 0C 7B 

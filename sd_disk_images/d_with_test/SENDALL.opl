@@ -1,0 +1,29 @@
+SENDALL:
+LOCAL remote$(8),local$(14),b$(4),type%,len%
+REM model LZ only
+local$=DIRW$("A:*.*")
+WHILE local$<>""
+  b$=RIGHT$(local$,4)
+  len%=LEN(local$)-4
+  local$=LEFT$(local$,len%)
+  remote$=RIGHT$(local$,(len%-2))
+  IF b$=".ODB"
+    type%=0
+  ELSEIF b$=".OPL"
+    type%=1
+  ELSEIF b$=".DIA"
+    type%=2
+  ELSEIF b$=".COM"
+    type%=4
+  ELSEIF b$=".PLN"
+    type%=5
+  ELSEIF b$=".PAG"
+    type%=6
+  ELSEIF b$=".NTS"
+    type%=7
+  ENDIF
+  PRINT "Send",local$;b$
+  XTSEND:(remote$,local$,type%)
+  local$=DIRW$("")
+ENDWH
+CLS :PRINT "Job done" :GET

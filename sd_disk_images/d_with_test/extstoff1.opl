@@ -1,0 +1,7 @@
+off1:
+
+rem This isn't supported on the PC version
+
+OFF
+
+print "PASS"

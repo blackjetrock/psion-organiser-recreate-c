@@ -1,0 +1,34 @@
+
+Filename:'flt1'
+File ext:'ob3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000A
+QCode Space Size:000E
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0E       Push local/global float variable reference     (bytes code:v)
+0003: FFF6       (65526)
+0005: 23       Push float literal     (bytes code:F)
+0006: Len:5
+0007: '78563412E0
+000C: 80       Assign float     (bytes code:-)
+000D: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0E FF F6 23 05 78 56 34 12 00 80 7B 

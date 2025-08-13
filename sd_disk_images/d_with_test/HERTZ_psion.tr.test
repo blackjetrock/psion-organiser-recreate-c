@@ -1,0 +1,171 @@
+
+Filename:'HERTZ'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:001A
+QCode Space Size:00E4
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:12
+0004: 'Camera Speed'
+0010: 71       PRINT string     (bytes code:-)
+0011: 72       PRINT ,     (bytes code:-)
+0012: 22       Push integer literal     (bytes code:I)
+0013: 003F       (63)
+0015: B8       CHR$     (bytes code:-)
+0016: 71       PRINT string     (bytes code:-)
+0017: 73       PRINT newline     (bytes code:-)
+0018: 0E       Push local/global float variable reference     (bytes code:v)
+0019: FFF6       (65526)
+001B: 6D       INPUT float     (bytes code:-)
+001C: 4E       CLS     (bytes code:-)
+001D: 24       Push string literal     (bytes code:S)
+001E: Len:13
+001F: 'Shutter Angle'
+002C: 71       PRINT string     (bytes code:-)
+002D: 72       PRINT ,     (bytes code:-)
+002E: 22       Push integer literal     (bytes code:I)
+002F: 003F       (63)
+0031: B8       CHR$     (bytes code:-)
+0032: 71       PRINT string     (bytes code:-)
+0033: 73       PRINT newline     (bytes code:-)
+0034: 0E       Push local/global float variable reference     (bytes code:v)
+0035: FFEE       (65518)
+0037: 6D       INPUT float     (bytes code:-)
+0038: 0E       Push local/global float variable reference     (bytes code:v)
+0039: FFE6       (65510)
+003B: 01       Push local/global float variable value     (bytes code:v)
+003C: FFF6       (65526)
+003E: 22       Push integer literal     (bytes code:I)
+003F: 0168       (360)
+0041: 86       autoconversion int to float     (bytes code:-)
+0042: 3E       Multiply float     (bytes code:-)
+0043: 01       Push local/global float variable value     (bytes code:v)
+0044: FFEE       (65518)
+0046: 3F       Divide float     (bytes code:-)
+0047: 80       Assign float     (bytes code:-)
+0048: 0E       Push local/global float variable reference     (bytes code:v)
+0049: FFE6       (65510)
+004B: 01       Push local/global float variable value     (bytes code:v)
+004C: FFE6       (65510)
+004E: 22       Push integer literal     (bytes code:I)
+004F: 000A       (10)
+0051: 86       autoconversion int to float     (bytes code:-)
+0052: 3E       Multiply float     (bytes code:-)
+0053: AC       INTF     (bytes code:-)
+0054: 80       Assign float     (bytes code:-)
+0055: 0E       Push local/global float variable reference     (bytes code:v)
+0056: FFE6       (65510)
+0058: 01       Push local/global float variable value     (bytes code:v)
+0059: FFE6       (65510)
+005B: 22       Push integer literal     (bytes code:I)
+005C: 000A       (10)
+005E: 86       autoconversion int to float     (bytes code:-)
+005F: 3F       Divide float     (bytes code:-)
+0060: 80       Assign float     (bytes code:-)
+0061: 4E       CLS     (bytes code:-)
+0062: 01       Push local/global float variable value     (bytes code:v)
+0063: FFE6       (65510)
+0065: 70       PRINT float     (bytes code:-)
+0066: 72       PRINT ,     (bytes code:-)
+0067: 24       Push string literal     (bytes code:S)
+0068: Len:5
+0069: 'HERTZ'
+006E: 71       PRINT string     (bytes code:-)
+006F: 73       PRINT newline     (bytes code:-)
+0070: 24       Push string literal     (bytes code:S)
+0071: Len:16
+0072: 'Electrical Freq.'
+0082: 71       PRINT string     (bytes code:-)
+0083: 73       PRINT newline     (bytes code:-)
+0084: 91       GET     (bytes code:-)
+0085: 83       drop integer from stack     (bytes code:-)
+0086: 0E       Push local/global float variable reference     (bytes code:v)
+0087: FFF6       (65526)
+0089: 24       Push string literal     (bytes code:S)
+008A: Len:19
+008B: 'HERTZ,HMI,FILM,MENU'
+009E: 98       MENU     (bytes code:-)
+009F: 86       autoconversion int to float     (bytes code:-)
+00A0: 80       Assign float     (bytes code:-)
+00A1: 01       Push local/global float variable value     (bytes code:v)
+00A2: FFF6       (65526)
+00A4: 22       Push integer literal     (bytes code:I)
+00A5: 0001       (1)
+00A7: 86       autoconversion int to float     (bytes code:-)
+00A8: 3B       Equal float     (bytes code:-)
+00A9: 7E       Branch if false     (bytes code:D)
+00AA: Dest:00B9 (Dist:000F)
+00AC: 20       Push byte literal     (bytes code:B)
+00AD: 00           (0)
+00AE: 7D       Procedure call.     (bytes code:S)
+00AF: Len:5
+00B0: 'HERTZ'
+00B5: 84       drop float from stack     (bytes code:-)
+00B6: 51       GOTO     (bytes code:D)
+00B7: Dest:00E3 (Dist:002C)
+00B9: 01       Push local/global float variable value     (bytes code:v)
+00BA: FFF6       (65526)
+00BC: 22       Push integer literal     (bytes code:I)
+00BD: 0002       (2)
+00BF: 86       autoconversion int to float     (bytes code:-)
+00C0: 3B       Equal float     (bytes code:-)
+00C1: 7E       Branch if false     (bytes code:D)
+00C2: Dest:00CF (Dist:000D)
+00C4: 20       Push byte literal     (bytes code:B)
+00C5: 00           (0)
+00C6: 7D       Procedure call.     (bytes code:S)
+00C7: Len:3
+00C8: 'HMI'
+00CB: 84       drop float from stack     (bytes code:-)
+00CC: 51       GOTO     (bytes code:D)
+00CD: Dest:00E3 (Dist:0016)
+00CF: 01       Push local/global float variable value     (bytes code:v)
+00D0: FFF6       (65526)
+00D2: 22       Push integer literal     (bytes code:I)
+00D3: 0003       (3)
+00D5: 86       autoconversion int to float     (bytes code:-)
+00D6: 3B       Equal float     (bytes code:-)
+00D7: 7E       Branch if false     (bytes code:D)
+00D8: Dest:00E3 (Dist:000B)
+00DA: 20       Push byte literal     (bytes code:B)
+00DB: 00           (0)
+00DC: 7D       Procedure call.     (bytes code:S)
+00DD: Len:4
+00DE: 'FILM'
+00E2: 84       drop float from stack     (bytes code:-)
+00E3: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 0C 43 61 6D 65 72 61 20 53 70 65 65 64 
+0010:71 72 22 00 3F B8 71 73 0E FF F6 6D 4E 24 0D 53 
+0020:68 75 74 74 65 72 20 41 6E 67 6C 65 71 72 22 00 
+0030:3F B8 71 73 0E FF EE 6D 0E FF E6 01 FF F6 22 01 
+0040:68 86 3E 01 FF EE 3F 80 0E FF E6 01 FF E6 22 00 
+0050:0A 86 3E AC 80 0E FF E6 01 FF E6 22 00 0A 86 3F 
+0060:80 4E 01 FF E6 70 72 24 05 48 45 52 54 5A 71 73 
+0070:24 10 45 6C 65 63 74 72 69 63 61 6C 20 46 72 65 
+0080:71 2E 71 73 91 83 0E FF F6 24 13 48 45 52 54 5A 
+0090:2C 48 4D 49 2C 46 49 4C 4D 2C 4D 45 4E 55 98 86 
+00A0:80 01 FF F6 22 00 01 86 3B 7E 00 0F 20 00 7D 05 
+00B0:48 45 52 54 5A 84 51 00 2C 01 FF F6 22 00 02 86 
+00C0:3B 7E 00 0D 20 00 7D 03 48 4D 49 84 51 00 16 01 
+00D0:FF F6 22 00 03 86 3B 7E 00 0B 20 00 7D 04 46 49 
+00E0:4C 4D 84 7B 

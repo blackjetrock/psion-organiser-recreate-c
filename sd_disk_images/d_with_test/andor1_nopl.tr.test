@@ -1,0 +1,108 @@
+
+Filename:'andor1'
+File ext:'ob3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0020
+QCode Space Size:0065
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0D       Push local/global integer variable reference     (bytes code:v)
+0003: FFFA       (65530)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0001       (1)
+0008: 7F       Assign integer     (bytes code:-)
+0009: 0D       Push local/global integer variable reference     (bytes code:v)
+000A: FFF8       (65528)
+000C: 22       Push integer literal     (bytes code:I)
+000D: 0001       (1)
+000F: 7F       Assign integer     (bytes code:-)
+0010: 0D       Push local/global integer variable reference     (bytes code:v)
+0011: FFFC       (65532)
+0013: 00       Push local/global integer variable value     (bytes code:v)
+0014: FFFA       (65530)
+0016: 00       Push local/global integer variable value     (bytes code:v)
+0017: FFF8       (65528)
+0019: 34       AND integer     (bytes code:-)
+001A: 7F       Assign integer     (bytes code:-)
+001B: 00       Push local/global integer variable value     (bytes code:v)
+001C: FFFC       (65532)
+001E: 6F       PRINT integer     (bytes code:-)
+001F: 73       PRINT newline     (bytes code:-)
+0020: 0D       Push local/global integer variable reference     (bytes code:v)
+0021: FFFC       (65532)
+0023: 00       Push local/global integer variable value     (bytes code:v)
+0024: FFFA       (65530)
+0026: 00       Push local/global integer variable value     (bytes code:v)
+0027: FFF8       (65528)
+0029: 35       OR integer     (bytes code:-)
+002A: 7F       Assign integer     (bytes code:-)
+002B: 00       Push local/global integer variable value     (bytes code:v)
+002C: FFFC       (65532)
+002E: 6F       PRINT integer     (bytes code:-)
+002F: 73       PRINT newline     (bytes code:-)
+0030: 0E       Push local/global float variable reference     (bytes code:v)
+0031: FFE8       (65512)
+0033: 23       Push float literal     (bytes code:F)
+0034: Len:2
+0035: '12E0
+0037: 80       Assign float     (bytes code:-)
+0038: 0E       Push local/global float variable reference     (bytes code:v)
+0039: FFE0       (65504)
+003B: 23       Push float literal     (bytes code:F)
+003C: Len:2
+003D: '39E0
+003F: 80       Assign float     (bytes code:-)
+0040: 0E       Push local/global float variable reference     (bytes code:v)
+0041: FFF0       (65520)
+0043: 01       Push local/global float variable value     (bytes code:v)
+0044: FFE8       (65512)
+0046: 01       Push local/global float variable value     (bytes code:v)
+0047: FFE0       (65504)
+0049: 43       AND float     (bytes code:-)
+004A: 86       autoconversion int to float     (bytes code:-)
+004B: 80       Assign float     (bytes code:-)
+004C: 01       Push local/global float variable value     (bytes code:v)
+004D: FFF0       (65520)
+004F: 70       PRINT float     (bytes code:-)
+0050: 73       PRINT newline     (bytes code:-)
+0051: 0E       Push local/global float variable reference     (bytes code:v)
+0052: FFF0       (65520)
+0054: 01       Push local/global float variable value     (bytes code:v)
+0055: FFE8       (65512)
+0057: 01       Push local/global float variable value     (bytes code:v)
+0058: FFE0       (65504)
+005A: 44       OR float     (bytes code:-)
+005B: 86       autoconversion int to float     (bytes code:-)
+005C: 80       Assign float     (bytes code:-)
+005D: 01       Push local/global float variable value     (bytes code:v)
+005E: FFF0       (65520)
+0060: 70       PRINT float     (bytes code:-)
+0061: 73       PRINT newline     (bytes code:-)
+0062: 91       GET     (bytes code:-)
+0063: 83       drop integer from stack     (bytes code:-)
+0064: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0D FF FA 22 00 01 7F 0D FF F8 22 00 01 7F 
+0010:0D FF FC 00 FF FA 00 FF F8 34 7F 00 FF FC 6F 73 
+0020:0D FF FC 00 FF FA 00 FF F8 35 7F 00 FF FC 6F 73 
+0030:0E FF E8 23 02 12 00 80 0E FF E0 23 02 39 00 80 
+0040:0E FF F0 01 FF E8 01 FF E0 43 86 80 01 FF F0 70 
+0050:73 0E FF F0 01 FF E8 01 FF E0 44 86 80 01 FF F0 
+0060:70 73 91 83 7B 

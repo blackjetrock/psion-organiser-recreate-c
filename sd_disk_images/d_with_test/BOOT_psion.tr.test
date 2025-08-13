@@ -1,0 +1,44 @@
+
+Filename:'BOOT'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0002
+QCode Space Size:001B
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:4
+0004: 'Film'
+0008: 20       Push byte literal     (bytes code:B)
+0009: 02           (2)
+000A: 22       Push integer literal     (bytes code:I)
+000B: 0000       (0)
+000D: 20       Push byte literal     (bytes code:B)
+000E: 00           (0)
+000F: 20       Push byte literal     (bytes code:B)
+0010: 02           (2)
+0011: 7D       Procedure call.     (bytes code:S)
+0012: Len:6
+0013: 'ADDTOP'
+0019: 84       drop float from stack     (bytes code:-)
+001A: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 04 46 69 6C 6D 20 02 22 00 00 20 00 20 
+0010:02 7D 06 41 44 44 54 4F 50 84 7B 

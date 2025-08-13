@@ -1,0 +1,71 @@
+
+Filename:'chconst'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0004
+QCode Space Size:0038
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0D       Push local/global integer variable reference     (bytes code:v)
+0003: FFFC       (65532)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0041       (65)
+0008: 22       Push integer literal     (bytes code:I)
+0009: 0025       (37)
+000B: 2D       Plus integer     (bytes code:-)
+000C: 22       Push integer literal     (bytes code:I)
+000D: 002E       (46)
+000F: 2D       Plus integer     (bytes code:-)
+0010: 22       Push integer literal     (bytes code:I)
+0011: 0020       (32)
+0013: 2D       Plus integer     (bytes code:-)
+0014: 22       Push integer literal     (bytes code:I)
+0015: 0031       (49)
+0017: 2D       Plus integer     (bytes code:-)
+0018: 7F       Assign integer     (bytes code:-)
+0019: 0D       Push local/global integer variable reference     (bytes code:v)
+001A: FFFC       (65532)
+001C: 00       Push local/global integer variable value     (bytes code:v)
+001D: FFFC       (65532)
+001F: 22       Push integer literal     (bytes code:I)
+0020: 0025       (37)
+0022: 2D       Plus integer     (bytes code:-)
+0023: 22       Push integer literal     (bytes code:I)
+0024: 0020       (32)
+0026: 2D       Plus integer     (bytes code:-)
+0027: 22       Push integer literal     (bytes code:I)
+0028: 0041       (65)
+002A: 2D       Plus integer     (bytes code:-)
+002B: 22       Push integer literal     (bytes code:I)
+002C: 0028       (40)
+002E: 2D       Plus integer     (bytes code:-)
+002F: 7F       Assign integer     (bytes code:-)
+0030: 00       Push local/global integer variable value     (bytes code:v)
+0031: FFFC       (65532)
+0033: 6F       PRINT integer     (bytes code:-)
+0034: 73       PRINT newline     (bytes code:-)
+0035: 91       GET     (bytes code:-)
+0036: 83       drop integer from stack     (bytes code:-)
+0037: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0D FF FC 22 00 41 22 00 25 2D 22 00 2E 2D 
+0010:22 00 20 2D 22 00 31 2D 7F 0D FF FC 00 FF FC 22 
+0020:00 25 2D 22 00 20 2D 22 00 41 2D 22 00 28 2D 7F 
+0030:00 FF FC 6F 73 91 83 7B 

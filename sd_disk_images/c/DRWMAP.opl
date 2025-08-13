@@ -1,0 +1,31 @@
+drwmap:
+
+LOCAL x%,y%,bi%
+
+y% = 1
+        WHILE y% <= 4
+        AT 1, y%
+        x% = 1
+          WHILE x% <= 20
+          tChar$ = MID$(map$(y%), x%, 1)
+          tAscii% = ASC(tChar$) - 32
+          bi% = tAscii% AND 3  REM Isolating the last two LSBs
+
+
+            IF bi% = 0 REM add random chance for drawing the tile with different char
+            REM PRINT CHR$(252); REM Forest - also use 251 or 190
+            PRINT CHR$(70);
+            ELSEIF bi% = 1
+            REM PRINT CHR$(245); REM Desert
+            PRINT CHR$(68);
+            ELSEIF bi% = 2
+            REM PRINT CHR$(187); REM Mountains - 188,234
+            PRINT CHR$(77);
+            ELSEIF bi% = 3
+            REM PRINT CHR$(209); REM Plains - also use 193, 
+            PRINT CHR$(80);
+            ENDIF
+          x% = x% + 1
+          ENDWH  REM End of inner WHILE loop for x%
+          y% = y% + 1
+        ENDWH  REM End of outer WHILE loop for y%

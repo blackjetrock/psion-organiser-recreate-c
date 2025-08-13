@@ -1,0 +1,219 @@
+lzmaze:
+rem ****************
+rem *  mick_a@cix  *
+rem *     1989     *
+rem ****************
+LOCAL A$(20,22),H%,V%,K%,S%,OC%,CT%,AU%,M%,N%,O%,P%,Q%,R%,NN%,T$(20)
+LOCAL mz%,nm%,po%,S7%,SET%,OP%,h$(255)
+UDG 1,1,1,1,1,1,1,1,1
+UDG 0,0,0,0,0,0,0,0,31
+UDG 2,1,1,1,1,1,1,1,31
+UDG 4,31,31,31,31,31,31,31,31
+UDG 5,21,0,21,0,21,0,21,0
+UDG 6,0,4,8,31,8,4,0,31
+mz%=4
+start::
+At 4,2 :print"Loading maze ";mz%+1
+open "a:mzdat",a,dat$ :use a
+last :nm%=(pos-1)/20
+position mz%*20+2
+if mz%<nm%-1 :mz%=mz%+1 :else mz%=0 :endif
+CT%=0
+DO :rem-----------
+CT%=CT%+1
+A$(CT%)=a.dat$
+NN%=2
+T$=""
+DO
+NN%=NN%+1
+T$=T$+CHR$(VAL(MID$(A$(CT%),NN%,1)))
+UNTIL NN%>21
+A$(CT%)=T$
+NEXT
+UNTIL CT%>19
+CLOSE
+TOP::
+kstat 1 :POKEB $77,1 :POKEB $20C0,0
+AT 1,1
+S%=1 :H%=1 :V%=1
+AU%=0 :K%=6 :SET%=0 :OP%=0 :S7%=0
+PRINT A$(S%);A$(S%+1);A$(S%+2);A$(S%+3);
+ UDG 3,0,0,0,0,0,0,0,0
+ UDG 4,0,0,12,12,12,0,0,31
+AT 1,1 :PRINT CHR$(4)
+O%=MINUTE*60+SECOND
+M%=0
+PPP::
+
+IF K%=0 OR AU%
+M%=SECOND+MINUTE*60-O%
+P%=17+(M% AND 7)*2
+IF P%<>OP% :SET%=0 : OP%=P% :ELSE :SET%=1 :ENDIF
+Q%=17+(M% AND 56)/4
+UDG 7,31,Q%,Q%,P%,P%,Q%,Q%,31
+IF H%<11
+ AT 20,4 :PRINT CHR$(7)
+ IF H%>1 OR V%<4
+ AT 1,4 :PRINT MID$(A$(S%+3),1,1)
+ ENDIF
+ELSE
+ AT 1,4 :PRINT CHR$(7)
+ IF H%<20 OR V%<4
+ AT 20,4 :PRINT MID$(A$(S%+3),20,1)
+ ENDIF
+ENDIF
+ENDIF
+
+IF P%=31 AND SET%=0
+ IF S7%=3 :S7%=0 :ELSE :S7%=S7%+1 :ENDIF
+ IF S7%<2 :UDG 3,0,0,0,0,0,0,0,0 :ENDIF
+ IF S7%=2 :UDG 3,1,0,1,0,1,0,21,0 :ENDIF
+ IF S7%>2 :UDG 3,1,1,1,1,1,1,1,31 :ENDIF
+PO%=6 :GOTO PROC1:: :B6::
+SET%=1
+ENDIF
+
+IF K%=78
+ GOTO START::
+ENDIF
+IF K%=84
+ GOTO TOP::
+ENDIF
+IF K%=72
+ open "a:mzdat",a,h$ :ct%=disp(-1,h$) :close :goto top::
+ENDIF
+CT%=K%-49
+IF CT%>-1 AND CT%<NM% AND CT%<>MZ%-1
+MZ%=CT% :GOTO START::
+ENDIF
+IF M%>190
+AT 6,2:PRINT"TIME IS UP"
+GOTO LAST::
+ENDIF
+IF H%=1 AND S%+V%=3
+at 4,4 :print "CONGRATULATIONS" :PAUSE 15
+print :PAUSE 5: print :PAUSE 5 :print :PAUSE 5:print
+AT 1,1 :PRINT" Completed in ";M%;" s."
+ GOTO start::
+ENDIF
+IF AU%
+  K%=3+RND*4
+ELSE
+ K%=KEY
+ENDIF
+
+
+IF KEY$="A"
+ IF AU%
+ AU%=0
+ ENDIF
+ENDIF
+IF K%=2
+AU%=1
+ENDIF
+IF K%=3 :rem UP key
+  IF V%>1 :rem (and there is nothing in way)
+  OC%=ASC(MID$(A$(S%+V%-2),H%,1))
+  IF OC%<>0 AND OC%<>2 AND OC%<>6 AND NOT (OC%=3 AND S7%>2)
+   AT H%,V% :PRINT MID$(A$(S%+V%-1),H%,1)
+   V%=V%-1
+  ENDIF
+ ELSEIF S%>1 AND V%=1
+  S%=S%-1 :V%=2
+  AT 1,1 :PRINT A$(S%);A$(S%+1);A$(S%+2);A$(S%+3);
+ ENDIF
+po%=1 :goto proc1:: :b1::
+ENDIF
+
+IF K%=4 :rem DOWN key
+  IF V%<4 :rem (NOT at bottom of screen)
+  OC%=ASC(MID$(A$(S%+V%-1),H%,1))
+IF OC%=6 :GOTO LEF:: :ENDIF
+  IF OC%<>0 AND OC%<>2 AND OC%<>6 AND NOT (OC%=3 AND S7%>2)
+   AT H%,V% :PRINT CHR$(OC%)
+   V%=V%+1
+  ENDIF
+ ELSEIF S%<17 AND V%=4
+  S%=S%+1 :V%=3
+  AT 1,1 :PRINT A$(S%);A$(S%+1);A$(S%+2);A$(S%+3);
+ IF OC%=6 :GOTO LEF:: :ENDIF
+ ENDIF
+po%=2 :goto proc1:: :b2::
+ENDIF
+
+IF K%=5 :rem LEFT key
+ LEF::
+  IF H%>1
+  OC%=ASC(MID$(A$(S%+V%-1),H%-1,1))
+  IF OC%<>1 AND OC%<>2 AND NOT (OC%=3 AND S7%>2)
+   AT H%,V% :PRINT MID$(A$(S%+V%-1),H%,1)
+   H%=H%-1
+  ENDIF
+ ENDIF
+po%=3 :goto proc1:: :b3::
+IF OC%=6 AND H%<>1
+  GOTO LEF::
+ENDIF
+ENDIF
+
+IF K%=6 :rem RIGHT key
+  IF H%<20
+  OC%=ASC(MID$(A$(S%+V%-1),H%,1))
+  IF OC%<>1 AND OC%<>2 AND OC%<>6 AND NOT (OC%=3 AND S7%>2)
+   AT H%,V% :PRINT CHR$(OC%)
+   H%=H%+1
+  ENDIF
+ ENDIF
+po%=4 :goto proc1:: :b4::
+ENDIF
+
+
+IF K%<>81 :GOTO PPP:: :ENDIF
+LAST::
+POKEB $77,$E :POKEB $20C0,1
+AT 5,3 :PRINT"Again ";chr$(63);" (Y/N)"
+IF GET$="Y" :GOTO TOP:: :ENDIF
+rem ---------------
+po%=0 :proc1::
+if po%
+ OC%=ASC(MID$(A$(S%+V%-1),H%,1))
+ IF OC%=0
+  UDG 4,0,0,12,12,12,0,0,31
+ ENDIF
+ IF OC%=1
+  UDG 4,1,1,13,13,13,1,1,1
+ ENDIF
+ IF OC%=2
+  UDG 4,1,1,13,13,13,1,1,31
+ ENDIF
+ IF OC%=3
+  IF S7%<2
+   UDG 4,0,0,12,12,12,0,0,0
+  ENDIF
+  IF S7%=2
+   UDG 4,1,0,13,12,13,0,21,0
+  ENDIF
+  IF S7%>2
+   UDG 4,1,1,13,13,13,1,1,31
+  ENDIF
+ ENDIF
+ IF OC%=5
+  UDG 4,21,0,31,12,31,0,21,0
+ ENDIF
+ IF OC%=6
+  UDG 4,31,27,23,0,23,27,31,31
+ ENDIF
+ AT H%,V% :PRINT chr$(4)
+if po%=1 :goto b1:: :endif
+if po%=2 :goto b2:: :endif
+if po%=3 :goto b3:: :endif
+if po%=4 :goto b4:: :endif
+IF PO%=6 :GOTO B6:: :ENDIF
+endif
+
+Rem This correction is necessary
+Rem otherwise the program exits
+Rem with the keyboard repeat 
+Rem set to 1! djw@enterprise.net
+
+PokeB $77,$0E

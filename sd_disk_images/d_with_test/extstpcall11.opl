@@ -1,0 +1,9 @@
+pcall1:(P1%)
+
+LOCAL L1%, M1%
+
+rem call a procedure and see if it is actually called
+rem procedure needs to have been previously compiled
+print "PCALL11",P1%
+
+pcall0:(123)

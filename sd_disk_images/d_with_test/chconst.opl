@@ -1,0 +1,11 @@
+CHCONST:
+
+LOCAL C%
+
+C% = %A + %% + %. + %  + %1
+C% = C%+%%+% +%A+%(
+
+PRINT C%
+
+GET
+

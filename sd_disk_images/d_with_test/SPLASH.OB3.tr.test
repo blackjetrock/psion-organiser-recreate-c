@@ -1,0 +1,294 @@
+
+Filename:'SPLASH'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0002
+QCode Space Size:022C
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 4E       CLS     (bytes code:-)
+0003: 22       Push integer literal     (bytes code:I)
+0004: 0007       (7)
+0006: 22       Push integer literal     (bytes code:I)
+0007: 0001       (1)
+0009: 4C       AT     (bytes code:-)
+000A: 24       Push string literal     (bytes code:S)
+000B: Len:7
+000C: 'Welcome'
+0013: 71       PRINT string     (bytes code:-)
+0014: 73       PRINT newline     (bytes code:-)
+0015: 22       Push integer literal     (bytes code:I)
+0016: 0009       (9)
+0018: 22       Push integer literal     (bytes code:I)
+0019: 0002       (2)
+001B: 4C       AT     (bytes code:-)
+001C: 24       Push string literal     (bytes code:S)
+001D: Len:2
+001E: 'to'
+0020: 71       PRINT string     (bytes code:-)
+0021: 73       PRINT newline     (bytes code:-)
+0022: 22       Push integer literal     (bytes code:I)
+0023: 0003       (3)
+0025: 22       Push integer literal     (bytes code:I)
+0026: 0003       (3)
+0028: 4C       AT     (bytes code:-)
+0029: 24       Push string literal     (bytes code:S)
+002A: Len:16
+002B: 'Psion2Adventure!'
+003B: 71       PRINT string     (bytes code:-)
+003C: 73       PRINT newline     (bytes code:-)
+003D: 91       GET     (bytes code:-)
+003E: 83       drop integer from stack     (bytes code:-)
+003F: 4E       CLS     (bytes code:-)
+0040: 22       Push integer literal     (bytes code:I)
+0041: 0002       (2)
+0043: 22       Push integer literal     (bytes code:I)
+0044: 0001       (1)
+0046: 4C       AT     (bytes code:-)
+0047: 24       Push string literal     (bytes code:S)
+0048: Len:16
+0049: 'You hold in your'
+0059: 71       PRINT string     (bytes code:-)
+005A: 73       PRINT newline     (bytes code:-)
+005B: 22       Push integer literal     (bytes code:I)
+005C: 0001       (1)
+005E: 22       Push integer literal     (bytes code:I)
+005F: 0002       (2)
+0061: 4C       AT     (bytes code:-)
+0062: 24       Push string literal     (bytes code:S)
+0063: Len:19
+0064: 'hand, a portal to a'
+0077: 71       PRINT string     (bytes code:-)
+0078: 73       PRINT newline     (bytes code:-)
+0079: 22       Push integer literal     (bytes code:I)
+007A: 0002       (2)
+007C: 22       Push integer literal     (bytes code:I)
+007D: 0003       (3)
+007F: 4C       AT     (bytes code:-)
+0080: 24       Push string literal     (bytes code:S)
+0081: Len:18
+0082: 'world of magic and'
+0094: 71       PRINT string     (bytes code:-)
+0095: 73       PRINT newline     (bytes code:-)
+0096: 22       Push integer literal     (bytes code:I)
+0097: 0005       (5)
+0099: 22       Push integer literal     (bytes code:I)
+009A: 0004       (4)
+009C: 4C       AT     (bytes code:-)
+009D: 24       Push string literal     (bytes code:S)
+009E: Len:10
+009F: 'adventure.'
+00A9: 71       PRINT string     (bytes code:-)
+00AA: 73       PRINT newline     (bytes code:-)
+00AB: 91       GET     (bytes code:-)
+00AC: 83       drop integer from stack     (bytes code:-)
+00AD: 4E       CLS     (bytes code:-)
+00AE: 22       Push integer literal     (bytes code:I)
+00AF: 0001       (1)
+00B1: 22       Push integer literal     (bytes code:I)
+00B2: 0001       (1)
+00B4: 4C       AT     (bytes code:-)
+00B5: 24       Push string literal     (bytes code:S)
+00B6: Len:20
+00B7: 'You will travel over'
+00CB: 71       PRINT string     (bytes code:-)
+00CC: 73       PRINT newline     (bytes code:-)
+00CD: 22       Push integer literal     (bytes code:I)
+00CE: 0002       (2)
+00D0: 22       Push integer literal     (bytes code:I)
+00D1: 0002       (2)
+00D3: 4C       AT     (bytes code:-)
+00D4: 24       Push string literal     (bytes code:S)
+00D5: Len:17
+00D6: 'these lands using'
+00E7: 71       PRINT string     (bytes code:-)
+00E8: 73       PRINT newline     (bytes code:-)
+00E9: 22       Push integer literal     (bytes code:I)
+00EA: 0001       (1)
+00EC: 22       Push integer literal     (bytes code:I)
+00ED: 0003       (3)
+00EF: 4C       AT     (bytes code:-)
+00F0: 24       Push string literal     (bytes code:S)
+00F1: Len:19
+00F2: 'this strange device'
+0105: 71       PRINT string     (bytes code:-)
+0106: 73       PRINT newline     (bytes code:-)
+0107: 22       Push integer literal     (bytes code:I)
+0108: 0005       (5)
+010A: 22       Push integer literal     (bytes code:I)
+010B: 0004       (4)
+010D: 4C       AT     (bytes code:-)
+010E: 24       Push string literal     (bytes code:S)
+010F: Len:11
+0110: 'before you.'
+011B: 71       PRINT string     (bytes code:-)
+011C: 73       PRINT newline     (bytes code:-)
+011D: 91       GET     (bytes code:-)
+011E: 83       drop integer from stack     (bytes code:-)
+011F: 4E       CLS     (bytes code:-)
+0120: 22       Push integer literal     (bytes code:I)
+0121: 0002       (2)
+0123: 22       Push integer literal     (bytes code:I)
+0124: 0001       (1)
+0126: 4C       AT     (bytes code:-)
+0127: 24       Push string literal     (bytes code:S)
+0128: Len:18
+0129: 'The '*' on the map'
+013B: 71       PRINT string     (bytes code:-)
+013C: 73       PRINT newline     (bytes code:-)
+013D: 22       Push integer literal     (bytes code:I)
+013E: 0002       (2)
+0140: 22       Push integer literal     (bytes code:I)
+0141: 0002       (2)
+0143: 4C       AT     (bytes code:-)
+0144: 24       Push string literal     (bytes code:S)
+0145: Len:18
+0146: 'is you. Move using'
+0158: 71       PRINT string     (bytes code:-)
+0159: 73       PRINT newline     (bytes code:-)
+015A: 22       Push integer literal     (bytes code:I)
+015B: 0003       (3)
+015D: 22       Push integer literal     (bytes code:I)
+015E: 0003       (3)
+0160: 4C       AT     (bytes code:-)
+0161: 24       Push string literal     (bytes code:S)
+0162: Len:14
+0163: 'the arrow keys'
+0171: 71       PRINT string     (bytes code:-)
+0172: 73       PRINT newline     (bytes code:-)
+0173: 91       GET     (bytes code:-)
+0174: 83       drop integer from stack     (bytes code:-)
+0175: 4E       CLS     (bytes code:-)
+0176: 22       Push integer literal     (bytes code:I)
+0177: 0002       (2)
+0179: 22       Push integer literal     (bytes code:I)
+017A: 0001       (1)
+017C: 4C       AT     (bytes code:-)
+017D: 24       Push string literal     (bytes code:S)
+017E: Len:17
+017F: 'Open your menu by'
+0190: 71       PRINT string     (bytes code:-)
+0191: 73       PRINT newline     (bytes code:-)
+0192: 22       Push integer literal     (bytes code:I)
+0193: 0004       (4)
+0195: 22       Push integer literal     (bytes code:I)
+0196: 0002       (2)
+0198: 4C       AT     (bytes code:-)
+0199: 24       Push string literal     (bytes code:S)
+019A: Len:13
+019B: 'pressing MODE'
+01A8: 71       PRINT string     (bytes code:-)
+01A9: 73       PRINT newline     (bytes code:-)
+01AA: 91       GET     (bytes code:-)
+01AB: 83       drop integer from stack     (bytes code:-)
+01AC: 4E       CLS     (bytes code:-)
+01AD: 22       Push integer literal     (bytes code:I)
+01AE: 0003       (3)
+01B0: 22       Push integer literal     (bytes code:I)
+01B1: 0001       (1)
+01B3: 4C       AT     (bytes code:-)
+01B4: 24       Push string literal     (bytes code:S)
+01B5: Len:15
+01B6: 'You are able to'
+01C5: 71       PRINT string     (bytes code:-)
+01C6: 73       PRINT newline     (bytes code:-)
+01C7: 22       Push integer literal     (bytes code:I)
+01C8: 0002       (2)
+01CA: 22       Push integer literal     (bytes code:I)
+01CB: 0002       (2)
+01CD: 4C       AT     (bytes code:-)
+01CE: 24       Push string literal     (bytes code:S)
+01CF: Len:18
+01D0: 'save your progress'
+01E2: 71       PRINT string     (bytes code:-)
+01E3: 73       PRINT newline     (bytes code:-)
+01E4: 22       Push integer literal     (bytes code:I)
+01E5: 0005       (5)
+01E7: 22       Push integer literal     (bytes code:I)
+01E8: 0003       (3)
+01EA: 4C       AT     (bytes code:-)
+01EB: 24       Push string literal     (bytes code:S)
+01EC: Len:12
+01ED: 'in the menu!'
+01F9: 71       PRINT string     (bytes code:-)
+01FA: 73       PRINT newline     (bytes code:-)
+01FB: 91       GET     (bytes code:-)
+01FC: 83       drop integer from stack     (bytes code:-)
+01FD: 4E       CLS     (bytes code:-)
+01FE: 22       Push integer literal     (bytes code:I)
+01FF: 0006       (6)
+0201: 22       Push integer literal     (bytes code:I)
+0202: 0002       (2)
+0204: 4C       AT     (bytes code:-)
+0205: 24       Push string literal     (bytes code:S)
+0206: Len:9
+0207: 'Good luck'
+0210: 71       PRINT string     (bytes code:-)
+0211: 73       PRINT newline     (bytes code:-)
+0212: 22       Push integer literal     (bytes code:I)
+0213: 0005       (5)
+0215: 22       Push integer literal     (bytes code:I)
+0216: 0003       (3)
+0218: 4C       AT     (bytes code:-)
+0219: 24       Push string literal     (bytes code:S)
+021A: Len:11
+021B: 'adventurer!'
+0226: 71       PRINT string     (bytes code:-)
+0227: 73       PRINT newline     (bytes code:-)
+0228: 91       GET     (bytes code:-)
+0229: 83       drop integer from stack     (bytes code:-)
+022A: 4E       CLS     (bytes code:-)
+022B: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 4E 22 00 07 22 00 01 4C 24 07 57 65 6C 63 
+0010:6F 6D 65 71 73 22 00 09 22 00 02 4C 24 02 74 6F 
+0020:71 73 22 00 03 22 00 03 4C 24 10 50 73 69 6F 6E 
+0030:32 41 64 76 65 6E 74 75 72 65 21 71 73 91 83 4E 
+0040:22 00 02 22 00 01 4C 24 10 59 6F 75 20 68 6F 6C 
+0050:64 20 69 6E 20 79 6F 75 72 71 73 22 00 01 22 00 
+0060:02 4C 24 13 68 61 6E 64 2C 20 61 20 70 6F 72 74 
+0070:61 6C 20 74 6F 20 61 71 73 22 00 02 22 00 03 4C 
+0080:24 12 77 6F 72 6C 64 20 6F 66 20 6D 61 67 69 63 
+0090:20 61 6E 64 71 73 22 00 05 22 00 04 4C 24 0A 61 
+00A0:64 76 65 6E 74 75 72 65 2E 71 73 91 83 4E 22 00 
+00B0:01 22 00 01 4C 24 14 59 6F 75 20 77 69 6C 6C 20 
+00C0:74 72 61 76 65 6C 20 6F 76 65 72 71 73 22 00 02 
+00D0:22 00 02 4C 24 11 74 68 65 73 65 20 6C 61 6E 64 
+00E0:73 20 75 73 69 6E 67 71 73 22 00 01 22 00 03 4C 
+00F0:24 13 74 68 69 73 20 73 74 72 61 6E 67 65 20 64 
+0100:65 76 69 63 65 71 73 22 00 05 22 00 04 4C 24 0B 
+0110:62 65 66 6F 72 65 20 79 6F 75 2E 71 73 91 83 4E 
+0120:22 00 02 22 00 01 4C 24 12 54 68 65 20 27 2A 27 
+0130:20 6F 6E 20 74 68 65 20 6D 61 70 71 73 22 00 02 
+0140:22 00 02 4C 24 12 69 73 20 79 6F 75 2E 20 4D 6F 
+0150:76 65 20 75 73 69 6E 67 71 73 22 00 03 22 00 03 
+0160:4C 24 0E 74 68 65 20 61 72 72 6F 77 20 6B 65 79 
+0170:73 71 73 91 83 4E 22 00 02 22 00 01 4C 24 11 4F 
+0180:70 65 6E 20 79 6F 75 72 20 6D 65 6E 75 20 62 79 
+0190:71 73 22 00 04 22 00 02 4C 24 0D 70 72 65 73 73 
+01A0:69 6E 67 20 4D 4F 44 45 71 73 91 83 4E 22 00 03 
+01B0:22 00 01 4C 24 0F 59 6F 75 20 61 72 65 20 61 62 
+01C0:6C 65 20 74 6F 71 73 22 00 02 22 00 02 4C 24 12 
+01D0:73 61 76 65 20 79 6F 75 72 20 70 72 6F 67 72 65 
+01E0:73 73 71 73 22 00 05 22 00 03 4C 24 0C 69 6E 20 
+01F0:74 68 65 20 6D 65 6E 75 21 71 73 91 83 4E 22 00 
+0200:06 22 00 02 4C 24 09 47 6F 6F 64 20 6C 75 63 6B 
+0210:71 73 22 00 05 22 00 03 4C 24 0B 61 64 76 65 6E 
+0220:74 75 72 65 72 21 71 73 91 83 4E 7B 

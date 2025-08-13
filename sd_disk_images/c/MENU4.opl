@@ -1,0 +1,45 @@
+MENU4:
+REM LZ procedure
+LOCAL L1$(1),X1%(2),L2%,L3%
+
+UDG 0,15,9,15,15,15,15,0,31
+UDG 2,0,0,0,0,0,0,0,31
+CLS
+PRINT CHR$(0);REPT$(CHR$(2),14)
+CLOCK(1)
+PRINT
+PRINT "   Demonstration?"
+PRINT "    press Y or N"
+L1$=GET$
+IF UPPER$(L1$)="Y"
+ CLOCK(0)
+ CLS
+ ONERR Lab1::
+ LINPUT$:(0,1)  :REM Test for Comms Link
+ GOTO Lab2::
+Lab1::
+ L2%=0
+ GOTO Lab3::
+Lab2::
+ L2%=-1
+Lab3::
+ ONERR Lab4::
+ XPRINT%:(1)   :REM test for Psion Printer
+ GOTO Lab5::
+Lab4::
+ L3%=0
+ GOTO Lab6::
+Lab5::
+ L3%=-1
+Lab6::
+ ONERR OFF
+ IF L3%
+  PDEMO:       :REM Printer demo
+ ELSEIF L2%
+  CDEMO:       :REM Comm Link demo
+ ELSE
+  DEMO4:       :REM Demo 4 LZ
+ ENDIF
+ELSE
+ RETURN
+ENDIF

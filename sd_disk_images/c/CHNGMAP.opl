@@ -1,0 +1,14 @@
+chngmap:(x%, y%, newChar$)
+REM A function to replace a single character in the map at xy with newchar 
+LOCAL oldLine$(20), lPart$(20), rPart$(20), rLen%
+REM Get the current line from the map
+oldLine$ = map$(y%)
+REM Ensure x% is within the bounds of the string
+ IF x% > LEN(oldLine$)
+  RETURN
+ ENDIF
+REM Split the line into two parts, before and after the position
+lPart$ = LEFT$(oldLine$, x% - 1)  REM All characters before the position
+rPart$ = RIGHT$(oldLine$, LEN(oldLine$) - x%)  REM All characters after the position
+REM Combine the parts with the new character in the middle
+map$(y%) = (lPart$ + newChar$ + rPart$)

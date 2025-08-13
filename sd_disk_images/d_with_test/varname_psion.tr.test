@@ -1,0 +1,38 @@
+
+Filename:'varname'
+File ext:'ob3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000C
+QCode Space Size:0010
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0D       Push local/global integer variable reference     (bytes code:v)
+0003: FFFC       (65532)
+0005: 91       GET     (bytes code:-)
+0006: 7F       Assign integer     (bytes code:-)
+0007: 0D       Push local/global integer variable reference     (bytes code:v)
+0008: FFFC       (65532)
+000A: 01       Push local/global float variable value     (bytes code:v)
+000B: FFF4       (65524)
+000D: 87       autoconversion float to int     (bytes code:-)
+000E: 7F       Assign integer     (bytes code:-)
+000F: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0D FF FC 91 7F 0D FF FC 01 FF F4 87 7F 7B 

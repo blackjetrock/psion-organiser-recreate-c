@@ -1,0 +1,23 @@
+time:
+
+LOCAL S%,MIN%,HOUR%,DAY%,MONTH%,YEAR%
+LOCAL I%
+
+I% = 0
+
+do
+
+S%     = SECOND
+MIN%   = MINUTE
+HOUR%  = HOUR
+DAY%   = DAY
+MONTH% = MONTH
+YEAR%  = YEAR
+
+print "Time:";Hour%;":";MIN%;":";S%
+
+I% = I% + 1
+
+until I% = 10
+
+print "PASS"

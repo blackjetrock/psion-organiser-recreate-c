@@ -1,0 +1,85 @@
+
+Filename:'ZIPL'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:003E
+QCode Space Size:0045
+Number of parameters:03
+Parameter types:
+ 0 STR    (2)
+ 1 INT    (0)
+ 2 INT    (0)
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFC2 32
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0F       Push local/global string variable reference     (bytes code:v)
+0003: FFC3       (65475)
+0005: 24       Push string literal     (bytes code:S)
+0006: Len:1
+0007: ' '
+0008: 22       Push integer literal     (bytes code:I)
+0009: 0014       (20)
+000B: C5       REPT$     (bytes code:-)
+000C: 09       Push parameter/external string variable value     (bytes code:V)
+000D: FFF8       (65528)
+000F: 4B       Plus string     (bytes code:-)
+0010: 81       Assign string     (bytes code:-)
+0011: 0D       Push local/global integer variable reference     (bytes code:v)
+0012: FFF6       (65526)
+0014: 22       Push integer literal     (bytes code:I)
+0015: 0001       (1)
+0017: 7F       Assign integer     (bytes code:-)
+0018: 22       Push integer literal     (bytes code:I)
+0019: 0001       (1)
+001B: 07       Push parameter/external integer variable value     (bytes code:V)
+001C: FFFC       (65532)
+001E: 4C       AT     (bytes code:-)
+001F: 02       Push local/global string variable value     (bytes code:v)
+0020: FFC3       (65475)
+0022: 00       Push local/global integer variable value     (bytes code:v)
+0023: FFF6       (65526)
+0025: C4       RIGHT$     (bytes code:-)
+0026: 71       PRINT string     (bytes code:-)
+0027: 73       PRINT newline     (bytes code:-)
+0028: 0D       Push local/global integer variable reference     (bytes code:v)
+0029: FFF6       (65526)
+002B: 00       Push local/global integer variable value     (bytes code:v)
+002C: FFF6       (65526)
+002E: 22       Push integer literal     (bytes code:I)
+002F: 0001       (1)
+0031: 2D       Plus integer     (bytes code:-)
+0032: 7F       Assign integer     (bytes code:-)
+0033: 00       Push local/global integer variable value     (bytes code:v)
+0034: FFF6       (65526)
+0036: 07       Push parameter/external integer variable value     (bytes code:V)
+0037: FFFA       (65530)
+0039: 29       Greater than integer     (bytes code:-)
+003A: 7E       Branch if false     (bytes code:D)
+003B: Dest:0018 (Dist:FFFFFFDD)
+003D: 22       Push integer literal     (bytes code:I)
+003E: 0005       (5)
+0040: 22       Push integer literal     (bytes code:I)
+0041: 00C8       (200)
+0043: 4D       BEEP     (bytes code:-)
+0044: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0F FF C3 24 01 20 22 00 14 C5 09 FF F8 4B 
+0010:81 0D FF F6 22 00 01 7F 22 00 01 07 FF FC 4C 02 
+0020:FF C3 00 FF F6 C4 71 73 0D FF F6 00 FF F6 22 00 
+0030:01 2D 7F 00 FF F6 07 FF FA 29 7E FF DD 22 00 05 
+0040:22 00 C8 4D 7B 

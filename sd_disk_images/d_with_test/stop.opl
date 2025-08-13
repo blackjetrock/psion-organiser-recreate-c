@@ -1,0 +1,5 @@
+stop:
+
+print "First"
+stop
+print "Second"

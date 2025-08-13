@@ -1,0 +1,15 @@
+time2:
+
+LOCAL I%
+
+I% = 0
+
+do
+
+ptime%:
+
+I% = I% + 1
+
+until I% = 10
+
+print "PASS"

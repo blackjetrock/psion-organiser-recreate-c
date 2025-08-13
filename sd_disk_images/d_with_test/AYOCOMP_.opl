@@ -1,0 +1,53 @@
+AYOCOMP%:
+LOCAL A$(6),A%,B%,C%,S%
+LOCAL B%(12)
+
+A%=1
+DO
+B%(A%)=A%(A%)
+A%=A%+1
+UNTIL A%=13
+S%=-100
+A$=""
+A%=1+(6 AND M%=1)
+DO
+AT 20,3
+PRINT 6-A%+(6 AND A%>6);
+ IF A%(A%)>0
+  B%=AYOMOV%:(A%,0)
+  B%=B%-AYOSC%:
+  C%=1
+  DO
+   A%(C%)=B%(C%)
+   C%=C%+1
+  UNTIL C%=13
+  IF B%>S%
+   A$=""
+  ENDIF
+  IF B%>=S%
+   A$=A$+CHR$(%0+A%)
+   S%=B%
+  ENDIF
+ ENDIF
+A%=A%+1
+UNTIL A%=7 OR A%=13
+AT 20,3
+PRINT " ";
+IF A$=""
+ RETURN -1
+ENDIF
+A%=1+RND*LEN(A$)
+A%=ASC(MID$(A$,A%,1))-%0
+AYOMOV%:(A%,1)
+M%=3-M%
+A%=KEY
+WHILE A%<>0
+ IF A%=%H
+  P%=3
+ ELSEIF A%=%M
+  P%=M%
+ ELSEIF A%=%O
+  AYOOR:
+ ENDIF
+ A%=KEY
+ENDWH

@@ -1,0 +1,2558 @@
+
+====================
+
+EXP_BUFF_ID_META PROCDEF
+--------------------
+
+====================
+
+--------------------
+
+Push:'TOTAL'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+--------------------
+
+Push:'A'
+Push:'B'
+Push:'C'
+Push:'T'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE T
+Push:'T'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+                    003: 'T' type:f (1), %:0
+--------------------
+
+Push:'AB'
+Push:'BC'
+Push:'AC'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE AB
+Push:'AB'
+                    000: 'AB' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE BC
+Push:'BC'
+                    000: 'AB' type:f (1), %:0
+                    001: 'BC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'AB' type:f (1), %:0
+                    001: 'BC' type:f (1), %:0
+                    002: 'AC' type:f (1), %:0
+--------------------
+
+Push:'"B:TEST"'
+Pop: '"B:TEST"'
+Push:' OPEN'
+Push:'C'
+Push:'C.TEST'
+Push:'C.SECOND'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Pop: 'C'
+Pop: ' OPEN'
+====================
+
+EXP_BUFF_ID_STR "B:TEST"
+Push:'"B:TEST"'
+                    000: '"B:TEST"' type:s (2), %:0
+EXP_BUFF_ID_META  OPEN
+Pop: '"B:TEST"'
+Push:' OPEN'
+                    000: ' OPEN' type:s (2), %:0
+EXP_BUFF_ID_LOGICALFILE C
+Push:'C'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+EXP_BUFF_ID_FIELDVAR C.TEST
+Push:'C.TEST'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+                    002: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_FIELDVAR C.SECOND
+Push:'C.SECOND'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+                    002: 'C.TEST' type:f (1), %:0
+                    003: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_FIELDVAR C.THIRD
+Push:'C.THIRD'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+                    002: 'C.TEST' type:f (1), %:0
+                    003: 'C.SECOND' type:f (1), %:0
+                    004: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_META ENDFIELDS
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Pop: 'C'
+Pop: ' OPEN'
+--------------------
+
+Push:'C.TEST'
+Push:'34.2'
+Pop: '34.2'
+Pop: 'C.TEST'
+====================
+
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_FLT 34.2
+Push:'34.2'
+                    000: 'C.TEST' type:f (1), %:0
+                    001: '34.2' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '34.2'
+Pop: 'C.TEST'
+--------------------
+
+Push:'C.SECOND'
+Push:'1234.5'
+Pop: '1234.5'
+Pop: 'C.SECOND'
+====================
+
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_FLT 1234.5
+Push:'1234.5'
+                    000: 'C.SECOND' type:f (1), %:0
+                    001: '1234.5' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1234.5'
+Pop: 'C.SECOND'
+--------------------
+
+Push:'C.THIRD'
+Push:'1.333'
+Pop: '1.333'
+Pop: 'C.THIRD'
+====================
+
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_FLT 1.333
+Push:'1.333'
+                    000: 'C.THIRD' type:f (1), %:0
+                    001: '1.333' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1.333'
+Pop: 'C.THIRD'
+--------------------
+
+Push:'A'
+Push:'34.2'
+Pop: '34.2'
+Pop: 'A'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_FLT 34.2
+Push:'34.2'
+                    000: 'A' type:f (1), %:0
+                    001: '34.2' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '34.2'
+Pop: 'A'
+--------------------
+
+Push:'B'
+Push:'1234.5'
+Pop: '1234.5'
+Pop: 'B'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_FLT 1234.5
+Push:'1234.5'
+                    000: 'B' type:f (1), %:0
+                    001: '1234.5' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1234.5'
+Pop: 'B'
+--------------------
+
+Push:'C'
+Push:'1.333'
+Pop: '1.333'
+Pop: 'C'
+====================
+
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'C' type:f (1), %:0
+EXP_BUFF_ID_FLT 1.333
+Push:'1.333'
+                    000: 'C' type:f (1), %:0
+                    001: '1.333' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1.333'
+Pop: 'C'
+--------------------
+
+Push:'T'
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Push:'C'
+Pop: 'C'
+Pop: '000'
+Push:'000'
+Pop: '000'
+Pop: 'T'
+====================
+
+EXP_BUFF_ID_VARIABLE T
+Push:'T'
+                    000: 'T' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'T' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'T' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+                    002: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: 'T' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'T' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: '000'
+Push:'000'
+                    000: 'T' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'T'
+--------------------
+
+Push:'A'
+Pop: 'A'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'A'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'B'
+Pop: 'B'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'B'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C'
+Pop: 'C'
+====================
+
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'C' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"T="'
+Pop: '"T="'
+====================
+
+EXP_BUFF_ID_STR "T="
+Push:'"T="'
+                    000: '"T="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"T="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'T'
+Pop: 'T'
+====================
+
+EXP_BUFF_ID_VARIABLE T
+Push:'T'
+                    000: 'T' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'T'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"a+b"'
+Pop: '"a+b"'
+====================
+
+EXP_BUFF_ID_STR "a+b"
+Push:'"a+b"'
+                    000: '"a+b"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"a+b"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"b+c"'
+Pop: '"b+c"'
+====================
+
+EXP_BUFF_ID_STR "b+c"
+Push:'"b+c"'
+                    000: '"b+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"b+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'B'
+Push:'C'
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'B' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"a+c"'
+Pop: '"a+c"'
+====================
+
+EXP_BUFF_ID_STR "a+c"
+Push:'"a+c"'
+                    000: '"a+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"a+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'A'
+Push:'C'
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'A' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"(a+b)+c"'
+Pop: '"(a+b)+c"'
+====================
+
+EXP_BUFF_ID_STR "(a+b)+c"
+Push:'"(a+b)+c"'
+                    000: '"(a+b)+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"(a+b)+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Push:'C'
+Pop: 'C'
+Pop: '000'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_SUB_START 
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: '000' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: '000'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'AB'
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+Pop: 'AB'
+====================
+
+EXP_BUFF_ID_VARIABLE AB
+Push:'AB'
+                    000: 'AB' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'AB' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'AB' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+                    002: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: 'AB' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'AB'
+--------------------
+
+Push:'BC'
+Push:'B'
+Push:'C'
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+Pop: '000'
+Pop: 'BC'
+====================
+
+EXP_BUFF_ID_VARIABLE BC
+Push:'BC'
+                    000: 'BC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'BC' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'BC' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+                    000: 'BC' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'BC'
+--------------------
+
+Push:'AC'
+Push:'A'
+Push:'C'
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+Pop: 'AC'
+====================
+
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'AC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'AC' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'AC' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+                    000: 'AC' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'AC'
+--------------------
+
+Push:'"ab+c"'
+Pop: '"ab+c"'
+====================
+
+EXP_BUFF_ID_STR "ab+c"
+Push:'"ab+c"'
+                    000: '"ab+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"ab+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'AB'
+Push:'C'
+Pop: 'C'
+Pop: 'AB'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE AB
+Push:'AB'
+                    000: 'AB' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'AB' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'AB'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"a+bc"'
+Pop: '"a+bc"'
+====================
+
+EXP_BUFF_ID_STR "a+bc"
+Push:'"a+bc"'
+                    000: '"a+bc"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"a+bc"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'A'
+Push:'BC'
+Pop: 'BC'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE BC
+Push:'BC'
+                    000: 'A' type:f (1), %:0
+                    001: 'BC' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'BC'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"ac+b"'
+Pop: '"ac+b"'
+====================
+
+EXP_BUFF_ID_STR "ac+b"
+Push:'"ac+b"'
+                    000: '"ac+b"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"ac+b"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'AC'
+Push:'B'
+Pop: 'B'
+Pop: 'AC'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'AC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'AC' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'AC'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"b+ac"'
+Pop: '"b+ac"'
+====================
+
+EXP_BUFF_ID_STR "b+ac"
+Push:'"b+ac"'
+                    000: '"b+ac"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"b+ac"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'B'
+Push:'AC'
+Pop: 'AC'
+Pop: 'B'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'B' type:f (1), %:0
+                    001: 'AC' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'AC'
+Pop: 'B'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"1268.7+1.333"'
+Pop: '"1268.7+1.333"'
+====================
+
+EXP_BUFF_ID_STR "1268.7+1.333"
+Push:'"1268.7+1.333"'
+                    000: '"1268.7+1.333"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"1268.7+1.333"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'1268.7'
+Push:'1.333'
+Pop: '1.333'
+Pop: '1268.7'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_FLT 1268.7
+Push:'1268.7'
+                    000: '1268.7' type:f (1), %:0
+EXP_BUFF_ID_FLT 1.333
+Push:'1.333'
+                    000: '1268.7' type:f (1), %:0
+                    001: '1.333' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: '1.333'
+Pop: '1268.7'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'C.TEST'
+Pop: 'C.TEST'
+====================
+
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C.TEST'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.SECOND'
+Pop: 'C.SECOND'
+====================
+
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C.SECOND'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+====================
+
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C.THIRD'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'TOTAL'
+Push:'C.TEST'
+Push:'C.SECOND'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: '000'
+Push:'000'
+Pop: '000'
+Pop: 'TOTAL'
+====================
+
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: 'C.TEST' type:f (1), %:0
+                    002: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+                    002: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.THIRD'
+Pop: '000'
+Push:'000'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'TOTAL'
+--------------------
+
+Push:'"test+second="'
+Pop: '"test+second="'
+====================
+
+EXP_BUFF_ID_STR "test+second="
+Push:'"test+second="'
+                    000: '"test+second="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"test+second="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.TEST'
+Push:'C.SECOND'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.TEST' type:f (1), %:0
+                    001: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"second+third="'
+Pop: '"second+third="'
+====================
+
+EXP_BUFF_ID_STR "second+third="
+Push:'"second+third="'
+                    000: '"second+third="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"second+third="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.SECOND'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.SECOND' type:f (1), %:0
+                    001: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"first+third="'
+Pop: '"first+third="'
+====================
+
+EXP_BUFF_ID_STR "first+third="
+Push:'"first+third="'
+                    000: '"first+third="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"first+third="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.FIRST'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: 'C.FIRST'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE C.FIRST
+Push:'C.FIRST'
+                    000: 'C.FIRST' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.FIRST' type:f (1), %:0
+                    001: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.THIRD'
+Pop: 'C.FIRST'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Total:"'
+Pop: '"Total:"'
+====================
+
+EXP_BUFF_ID_STR "Total:"
+Push:'"Total:"'
+                    000: '"Total:"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Total:"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'TOTAL'
+Pop: 'TOTAL'
+====================
+
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'TOTAL'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'TOTAL'
+Push:'1270.033'
+Pop: '1270.033'
+Pop: 'TOTAL'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+EXP_BUFF_ID_FLT 1270.033
+Push:'1270.033'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '1270.033' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR =
+Pop: '1270.033'
+Pop: 'TOTAL'
+Push:'000'
+                    000: '000' type:i (0), %:0
+EXP_BUFF_ID_IF IF
+Pop: '000'
+--------------------
+
+Push:'"PASS"'
+Pop: '"PASS"'
+====================
+
+EXP_BUFF_ID_STR "PASS"
+Push:'"PASS"'
+                    000: '"PASS"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"PASS"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+====================
+
+EXP_BUFF_ID_ELSE ELSE
+--------------------
+
+Push:'"FAIL"'
+Pop: '"FAIL"'
+====================
+
+EXP_BUFF_ID_STR "FAIL"
+Push:'"FAIL"'
+                    000: '"FAIL"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"FAIL"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+====================
+
+EXP_BUFF_ID_ENDIF ENDIF
+--------------------
+
+====================
+
+--------------------
+
+====================
+
+EXP_BUFF_ID_META PROCDEF
+--------------------
+
+====================
+
+--------------------
+
+Push:'TOTAL'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+--------------------
+
+Push:'A'
+Push:'B'
+Push:'C'
+Push:'T'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE T
+Push:'T'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+                    003: 'T' type:f (1), %:0
+--------------------
+
+Push:'AB'
+Push:'BC'
+Push:'AC'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE AB
+Push:'AB'
+                    000: 'AB' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE BC
+Push:'BC'
+                    000: 'AB' type:f (1), %:0
+                    001: 'BC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'AB' type:f (1), %:0
+                    001: 'BC' type:f (1), %:0
+                    002: 'AC' type:f (1), %:0
+--------------------
+
+Push:'"B:TEST"'
+Pop: '"B:TEST"'
+Push:' OPEN'
+Push:'C'
+Push:'C.TEST'
+Push:'C.SECOND'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Pop: 'C'
+Pop: ' OPEN'
+====================
+
+EXP_BUFF_ID_STR "B:TEST"
+Push:'"B:TEST"'
+                    000: '"B:TEST"' type:s (2), %:0
+EXP_BUFF_ID_META  OPEN
+Pop: '"B:TEST"'
+Push:' OPEN'
+                    000: ' OPEN' type:s (2), %:0
+EXP_BUFF_ID_LOGICALFILE C
+Push:'C'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+EXP_BUFF_ID_FIELDVAR C.TEST
+Push:'C.TEST'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+                    002: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_FIELDVAR C.SECOND
+Push:'C.SECOND'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+                    002: 'C.TEST' type:f (1), %:0
+                    003: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_FIELDVAR C.THIRD
+Push:'C.THIRD'
+                    000: ' OPEN' type:s (2), %:0
+                    001: 'C' type:s (2), %:0
+                    002: 'C.TEST' type:f (1), %:0
+                    003: 'C.SECOND' type:f (1), %:0
+                    004: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_META ENDFIELDS
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Pop: 'C'
+Pop: ' OPEN'
+--------------------
+
+Push:'C.TEST'
+Push:'34.2'
+Pop: '34.2'
+Pop: 'C.TEST'
+====================
+
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_FLT 34.2
+Push:'34.2'
+                    000: 'C.TEST' type:f (1), %:0
+                    001: '34.2' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '34.2'
+Pop: 'C.TEST'
+--------------------
+
+Push:'C.SECOND'
+Push:'1234.5'
+Pop: '1234.5'
+Pop: 'C.SECOND'
+====================
+
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_FLT 1234.5
+Push:'1234.5'
+                    000: 'C.SECOND' type:f (1), %:0
+                    001: '1234.5' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1234.5'
+Pop: 'C.SECOND'
+--------------------
+
+Push:'C.THIRD'
+Push:'1.333'
+Pop: '1.333'
+Pop: 'C.THIRD'
+====================
+
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_FLT 1.333
+Push:'1.333'
+                    000: 'C.THIRD' type:f (1), %:0
+                    001: '1.333' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1.333'
+Pop: 'C.THIRD'
+--------------------
+
+Push:'A'
+Push:'34.2'
+Pop: '34.2'
+Pop: 'A'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_FLT 34.2
+Push:'34.2'
+                    000: 'A' type:f (1), %:0
+                    001: '34.2' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '34.2'
+Pop: 'A'
+--------------------
+
+Push:'B'
+Push:'1234.5'
+Pop: '1234.5'
+Pop: 'B'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_FLT 1234.5
+Push:'1234.5'
+                    000: 'B' type:f (1), %:0
+                    001: '1234.5' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1234.5'
+Pop: 'B'
+--------------------
+
+Push:'C'
+Push:'1.333'
+Pop: '1.333'
+Pop: 'C'
+====================
+
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'C' type:f (1), %:0
+EXP_BUFF_ID_FLT 1.333
+Push:'1.333'
+                    000: 'C' type:f (1), %:0
+                    001: '1.333' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '1.333'
+Pop: 'C'
+--------------------
+
+Push:'T'
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Push:'C'
+Pop: 'C'
+Pop: '000'
+Push:'000'
+Pop: '000'
+Pop: 'T'
+====================
+
+EXP_BUFF_ID_VARIABLE T
+Push:'T'
+                    000: 'T' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'T' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'T' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+                    002: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: 'T' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'T' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: '000'
+Push:'000'
+                    000: 'T' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'T'
+--------------------
+
+Push:'A'
+Pop: 'A'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'A'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'B'
+Pop: 'B'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'B'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C'
+Pop: 'C'
+====================
+
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'C' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"T="'
+Pop: '"T="'
+====================
+
+EXP_BUFF_ID_STR "T="
+Push:'"T="'
+                    000: '"T="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"T="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'T'
+Pop: 'T'
+====================
+
+EXP_BUFF_ID_VARIABLE T
+Push:'T'
+                    000: 'T' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'T'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"a+b"'
+Pop: '"a+b"'
+====================
+
+EXP_BUFF_ID_STR "a+b"
+Push:'"a+b"'
+                    000: '"a+b"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"a+b"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"b+c"'
+Pop: '"b+c"'
+====================
+
+EXP_BUFF_ID_STR "b+c"
+Push:'"b+c"'
+                    000: '"b+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"b+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'B'
+Push:'C'
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'B' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"a+c"'
+Pop: '"a+c"'
+====================
+
+EXP_BUFF_ID_STR "a+c"
+Push:'"a+c"'
+                    000: '"a+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"a+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'A'
+Push:'C'
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'A' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"(a+b)+c"'
+Pop: '"(a+b)+c"'
+====================
+
+EXP_BUFF_ID_STR "(a+b)+c"
+Push:'"(a+b)+c"'
+                    000: '"(a+b)+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"(a+b)+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Push:'C'
+Pop: 'C'
+Pop: '000'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_SUB_START 
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'A' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_SUB_END 
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: '000' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: '000'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'AB'
+Push:'A'
+Push:'B'
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+Pop: 'AB'
+====================
+
+EXP_BUFF_ID_VARIABLE AB
+Push:'AB'
+                    000: 'AB' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'AB' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'AB' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+                    002: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'A'
+Push:'000'
+                    000: 'AB' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'AB'
+--------------------
+
+Push:'BC'
+Push:'B'
+Push:'C'
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+Pop: '000'
+Pop: 'BC'
+====================
+
+EXP_BUFF_ID_VARIABLE BC
+Push:'BC'
+                    000: 'BC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'BC' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'BC' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'B'
+Push:'000'
+                    000: 'BC' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'BC'
+--------------------
+
+Push:'AC'
+Push:'A'
+Push:'C'
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+Pop: 'AC'
+====================
+
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'AC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'AC' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'AC' type:f (1), %:0
+                    001: 'A' type:f (1), %:0
+                    002: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'A'
+Push:'000'
+                    000: 'AC' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'AC'
+--------------------
+
+Push:'"ab+c"'
+Pop: '"ab+c"'
+====================
+
+EXP_BUFF_ID_STR "ab+c"
+Push:'"ab+c"'
+                    000: '"ab+c"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"ab+c"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'AB'
+Push:'C'
+Pop: 'C'
+Pop: 'AB'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE AB
+Push:'AB'
+                    000: 'AB' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C
+Push:'C'
+                    000: 'AB' type:f (1), %:0
+                    001: 'C' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C'
+Pop: 'AB'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"a+bc"'
+Pop: '"a+bc"'
+====================
+
+EXP_BUFF_ID_STR "a+bc"
+Push:'"a+bc"'
+                    000: '"a+bc"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"a+bc"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'A'
+Push:'BC'
+Pop: 'BC'
+Pop: 'A'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE A
+Push:'A'
+                    000: 'A' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE BC
+Push:'BC'
+                    000: 'A' type:f (1), %:0
+                    001: 'BC' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'BC'
+Pop: 'A'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"ac+b"'
+Pop: '"ac+b"'
+====================
+
+EXP_BUFF_ID_STR "ac+b"
+Push:'"ac+b"'
+                    000: '"ac+b"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"ac+b"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'AC'
+Push:'B'
+Pop: 'B'
+Pop: 'AC'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'AC' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'AC' type:f (1), %:0
+                    001: 'B' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'B'
+Pop: 'AC'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"b+ac"'
+Pop: '"b+ac"'
+====================
+
+EXP_BUFF_ID_STR "b+ac"
+Push:'"b+ac"'
+                    000: '"b+ac"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"b+ac"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'B'
+Push:'AC'
+Pop: 'AC'
+Pop: 'B'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE B
+Push:'B'
+                    000: 'B' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE AC
+Push:'AC'
+                    000: 'B' type:f (1), %:0
+                    001: 'AC' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'AC'
+Pop: 'B'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"1268.7+1.333"'
+Pop: '"1268.7+1.333"'
+====================
+
+EXP_BUFF_ID_STR "1268.7+1.333"
+Push:'"1268.7+1.333"'
+                    000: '"1268.7+1.333"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"1268.7+1.333"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'1268.7'
+Push:'1.333'
+Pop: '1.333'
+Pop: '1268.7'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_FLT 1268.7
+Push:'1268.7'
+                    000: '1268.7' type:f (1), %:0
+EXP_BUFF_ID_FLT 1.333
+Push:'1.333'
+                    000: '1268.7' type:f (1), %:0
+                    001: '1.333' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: '1.333'
+Pop: '1268.7'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'C.TEST'
+Pop: 'C.TEST'
+====================
+
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C.TEST'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.SECOND'
+Pop: 'C.SECOND'
+====================
+
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C.SECOND'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+====================
+
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'C.THIRD'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'TOTAL'
+Push:'C.TEST'
+Push:'C.SECOND'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: '000'
+Push:'000'
+Pop: '000'
+Pop: 'TOTAL'
+====================
+
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: 'C.TEST' type:f (1), %:0
+                    002: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+                    002: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.THIRD'
+Pop: '000'
+Push:'000'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'TOTAL'
+--------------------
+
+Push:'"test+second="'
+Pop: '"test+second="'
+====================
+
+EXP_BUFF_ID_STR "test+second="
+Push:'"test+second="'
+                    000: '"test+second="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"test+second="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.TEST'
+Push:'C.SECOND'
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE C.TEST
+Push:'C.TEST'
+                    000: 'C.TEST' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.TEST' type:f (1), %:0
+                    001: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.SECOND'
+Pop: 'C.TEST'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"second+third="'
+Pop: '"second+third="'
+====================
+
+EXP_BUFF_ID_STR "second+third="
+Push:'"second+third="'
+                    000: '"second+third="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"second+third="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.SECOND'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE C.SECOND
+Push:'C.SECOND'
+                    000: 'C.SECOND' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.SECOND' type:f (1), %:0
+                    001: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.THIRD'
+Pop: 'C.SECOND'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"first+third="'
+Pop: '"first+third="'
+====================
+
+EXP_BUFF_ID_STR "first+third="
+Push:'"first+third="'
+                    000: '"first+third="' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"first+third="'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'C.FIRST'
+Push:'C.THIRD'
+Pop: 'C.THIRD'
+Pop: 'C.FIRST'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE C.FIRST
+Push:'C.FIRST'
+                    000: 'C.FIRST' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE C.THIRD
+Push:'C.THIRD'
+                    000: 'C.FIRST' type:f (1), %:0
+                    001: 'C.THIRD' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR +
+Pop: 'C.THIRD'
+Pop: 'C.FIRST'
+Push:'000'
+                    000: '000' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '000'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Total:"'
+Pop: '"Total:"'
+====================
+
+EXP_BUFF_ID_STR "Total:"
+Push:'"Total:"'
+                    000: '"Total:"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Total:"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_SPACE PRINT
+--------------------
+
+Push:'TOTAL'
+Pop: 'TOTAL'
+====================
+
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'TOTAL'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'TOTAL'
+Push:'1270.033'
+Pop: '1270.033'
+Pop: 'TOTAL'
+Push:'000'
+Pop: '000'
+====================
+
+EXP_BUFF_ID_VARIABLE TOTAL
+Push:'TOTAL'
+                    000: 'TOTAL' type:f (1), %:0
+EXP_BUFF_ID_FLT 1270.033
+Push:'1270.033'
+                    000: 'TOTAL' type:f (1), %:0
+                    001: '1270.033' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR =
+Pop: '1270.033'
+Pop: 'TOTAL'
+Push:'000'
+                    000: '000' type:i (0), %:0
+EXP_BUFF_ID_IF IF
+Pop: '000'
+--------------------
+
+Push:'"PASS"'
+Pop: '"PASS"'
+====================
+
+EXP_BUFF_ID_STR "PASS"
+Push:'"PASS"'
+                    000: '"PASS"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"PASS"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+====================
+
+EXP_BUFF_ID_ELSE ELSE
+--------------------
+
+Push:'"FAIL"'
+Pop: '"FAIL"'
+====================
+
+EXP_BUFF_ID_STR "FAIL"
+Push:'"FAIL"'
+                    000: '"FAIL"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"FAIL"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+====================
+
+EXP_BUFF_ID_ENDIF ENDIF
+--------------------
+
+====================
+
+--------------------

@@ -1,0 +1,22 @@
+
+KSTAT 1
+
+CLS :PRINT "****DICE ROLLING****"
+PRINT "PRESS S TO STOP"
+DO
+ dice%=(RND*6+1)
+UNTIL KEY$="S"
+CLS
+PRINT "********* ";dice%;" ********"
+BEEP 50,100
+AT 1,4 :PRINT "ROLL AGAIN Y/N"
+
+key%=GET
+IF key%=%Y
+ GOTO top::
+ELSEIF key%=%N
+ RETURN
+ELSE
+ GOTO label::
+ENDIF
+

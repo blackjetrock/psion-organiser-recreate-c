@@ -1,0 +1,87 @@
+
+Filename:'HMI'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000A
+QCode Space Size:0060
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0E       Push local/global float variable reference     (bytes code:v)
+0003: FFF6       (65526)
+0005: 24       Push string literal     (bytes code:S)
+0006: Len:17
+0007: 'SHUTTER,FPS,HERTZ'
+0018: 98       MENU     (bytes code:-)
+0019: 86       autoconversion int to float     (bytes code:-)
+001A: 80       Assign float     (bytes code:-)
+001B: 01       Push local/global float variable value     (bytes code:v)
+001C: FFF6       (65526)
+001E: 22       Push integer literal     (bytes code:I)
+001F: 0001       (1)
+0021: 86       autoconversion int to float     (bytes code:-)
+0022: 3B       Equal float     (bytes code:-)
+0023: 7E       Branch if false     (bytes code:D)
+0024: Dest:0032 (Dist:000E)
+0026: 20       Push byte literal     (bytes code:B)
+0027: 00           (0)
+0028: 7D       Procedure call.     (bytes code:S)
+0029: Len:4
+002A: 'SHUT'
+002E: 84       drop float from stack     (bytes code:-)
+002F: 51       GOTO     (bytes code:D)
+0030: Dest:005F (Dist:002F)
+0032: 01       Push local/global float variable value     (bytes code:v)
+0033: FFF6       (65526)
+0035: 22       Push integer literal     (bytes code:I)
+0036: 0002       (2)
+0038: 86       autoconversion int to float     (bytes code:-)
+0039: 3B       Equal float     (bytes code:-)
+003A: 7E       Branch if false     (bytes code:D)
+003B: Dest:004A (Dist:000F)
+003D: 20       Push byte literal     (bytes code:B)
+003E: 00           (0)
+003F: 7D       Procedure call.     (bytes code:S)
+0040: Len:5
+0041: 'FRAME'
+0046: 84       drop float from stack     (bytes code:-)
+0047: 51       GOTO     (bytes code:D)
+0048: Dest:005F (Dist:0017)
+004A: 01       Push local/global float variable value     (bytes code:v)
+004B: FFF6       (65526)
+004D: 22       Push integer literal     (bytes code:I)
+004E: 0003       (3)
+0050: 86       autoconversion int to float     (bytes code:-)
+0051: 3B       Equal float     (bytes code:-)
+0052: 7E       Branch if false     (bytes code:D)
+0053: Dest:005F (Dist:000C)
+0055: 20       Push byte literal     (bytes code:B)
+0056: 00           (0)
+0057: 7D       Procedure call.     (bytes code:S)
+0058: Len:5
+0059: 'HERTZ'
+005E: 84       drop float from stack     (bytes code:-)
+005F: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0E FF F6 24 11 53 48 55 54 54 45 52 2C 46 
+0010:50 53 2C 48 45 52 54 5A 98 86 80 01 FF F6 22 00 
+0020:01 86 3B 7E 00 0E 20 00 7D 04 53 48 55 54 84 51 
+0030:00 2F 01 FF F6 22 00 02 86 3B 7E 00 0F 20 00 7D 
+0040:05 46 52 41 4D 45 84 51 00 17 01 FF F6 22 00 03 
+0050:86 3B 7E 00 0C 20 00 7D 05 48 45 52 54 5A 84 7B 

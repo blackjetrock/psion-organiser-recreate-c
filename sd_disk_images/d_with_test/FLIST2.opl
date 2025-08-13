@@ -1,0 +1,13 @@
+FLIST1:
+
+LOCAL LF(5), R
+LOCAL X%,Y%,Z%
+LOCAL P%(10)
+
+R=MEAN(LF(), Z%)
+R=MEAN(LF(), 10)
+R=MEAN(LF(), 2.5)
+R=MEAN(LF, 4)
+R=MEAN(X%,Y,Z%)
+R=MEAN(X%,R, Y%, Z%)
+R=MEAN(P%(1), P%(2) ,P%(3))

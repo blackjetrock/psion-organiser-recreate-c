@@ -1,0 +1,224 @@
+
+Filename:'MENU4'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000F
+QCode Space Size:011E
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFFB 01
+
+Array size fixups (1)
+ 0: FFF5 0002
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 22       Push integer literal     (bytes code:I)
+0003: 0000       (0)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 000F       (15)
+0008: 22       Push integer literal     (bytes code:I)
+0009: 0009       (9)
+000B: 22       Push integer literal     (bytes code:I)
+000C: 000F       (15)
+000E: 22       Push integer literal     (bytes code:I)
+000F: 000F       (15)
+0011: 22       Push integer literal     (bytes code:I)
+0012: 000F       (15)
+0014: 22       Push integer literal     (bytes code:I)
+0015: 000F       (15)
+0017: 22       Push integer literal     (bytes code:I)
+0018: 0000       (0)
+001A: 22       Push integer literal     (bytes code:I)
+001B: 001F       (31)
+001D: D5       UDG     (bytes code:-)
+001E: 22       Push integer literal     (bytes code:I)
+001F: 0002       (2)
+0021: 22       Push integer literal     (bytes code:I)
+0022: 0000       (0)
+0024: 22       Push integer literal     (bytes code:I)
+0025: 0000       (0)
+0027: 22       Push integer literal     (bytes code:I)
+0028: 0000       (0)
+002A: 22       Push integer literal     (bytes code:I)
+002B: 0000       (0)
+002D: 22       Push integer literal     (bytes code:I)
+002E: 0000       (0)
+0030: 22       Push integer literal     (bytes code:I)
+0031: 0000       (0)
+0033: 22       Push integer literal     (bytes code:I)
+0034: 0000       (0)
+0036: 22       Push integer literal     (bytes code:I)
+0037: 001F       (31)
+0039: D5       UDG     (bytes code:-)
+003A: 4E       CLS     (bytes code:-)
+003B: 22       Push integer literal     (bytes code:I)
+003C: 0000       (0)
+003E: B8       CHR$     (bytes code:-)
+003F: 71       PRINT string     (bytes code:-)
+0040: 22       Push integer literal     (bytes code:I)
+0041: 0002       (2)
+0043: B8       CHR$     (bytes code:-)
+0044: 22       Push integer literal     (bytes code:I)
+0045: 000E       (14)
+0047: C5       REPT$     (bytes code:-)
+0048: 71       PRINT string     (bytes code:-)
+0049: 73       PRINT newline     (bytes code:-)
+004A: 22       Push integer literal     (bytes code:I)
+004B: 0001       (1)
+004D: D6       CLOCK     (bytes code:-)
+004E: 83       drop integer from stack     (bytes code:-)
+004F: 73       PRINT newline     (bytes code:-)
+0050: 24       Push string literal     (bytes code:S)
+0051: Len:17
+0052: '   Demonstration?'
+0063: 71       PRINT string     (bytes code:-)
+0064: 73       PRINT newline     (bytes code:-)
+0065: 24       Push string literal     (bytes code:S)
+0066: Len:16
+0067: '    press Y or N'
+0077: 71       PRINT string     (bytes code:-)
+0078: 73       PRINT newline     (bytes code:-)
+0079: 0F       Push local/global string variable reference     (bytes code:v)
+007A: FFFC       (65532)
+007C: BD       GET$     (bytes code:-)
+007D: 81       Assign string     (bytes code:-)
+007E: 02       Push local/global string variable value     (bytes code:v)
+007F: FFFC       (65532)
+0081: C7       UPPER$     (bytes code:-)
+0082: 24       Push string literal     (bytes code:S)
+0083: Len:1
+0084: 'Y'
+0085: 4A       Equal string     (bytes code:-)
+0086: 7E       Branch if false     (bytes code:D)
+0087: Dest:011C (Dist:0095)
+0089: 22       Push integer literal     (bytes code:I)
+008A: 0000       (0)
+008C: D6       CLOCK     (bytes code:-)
+008D: 83       drop integer from stack     (bytes code:-)
+008E: 4E       CLS     (bytes code:-)
+008F: 53       ONERR     (bytes code:D)
+0090: Dest:00AB (Dist:001B)
+0092: 22       Push integer literal     (bytes code:I)
+0093: 0000       (0)
+0095: 20       Push byte literal     (bytes code:B)
+0096: 00           (0)
+0097: 22       Push integer literal     (bytes code:I)
+0098: 0001       (1)
+009A: 20       Push byte literal     (bytes code:B)
+009B: 00           (0)
+009C: 20       Push byte literal     (bytes code:B)
+009D: 02           (2)
+009E: 7D       Procedure call.     (bytes code:S)
+009F: Len:7
+00A0: 'LINPUT$'
+00A7: 85       drop string from stack     (bytes code:-)
+00A8: 51       GOTO     (bytes code:D)
+00A9: Dest:00B5 (Dist:000C)
+00AB: 0D       Push local/global integer variable reference     (bytes code:v)
+00AC: FFF3       (65523)
+00AE: 22       Push integer literal     (bytes code:I)
+00AF: 0000       (0)
+00B1: 7F       Assign integer     (bytes code:-)
+00B2: 51       GOTO     (bytes code:D)
+00B3: Dest:00BD (Dist:000A)
+00B5: 0D       Push local/global integer variable reference     (bytes code:v)
+00B6: FFF3       (65523)
+00B8: 22       Push integer literal     (bytes code:I)
+00B9: 0001       (1)
+00BB: 32       unary minus integer     (bytes code:-)
+00BC: 7F       Assign integer     (bytes code:-)
+00BD: 53       ONERR     (bytes code:D)
+00BE: Dest:00D4 (Dist:0016)
+00C0: 22       Push integer literal     (bytes code:I)
+00C1: 0001       (1)
+00C3: 20       Push byte literal     (bytes code:B)
+00C4: 00           (0)
+00C5: 20       Push byte literal     (bytes code:B)
+00C6: 01           (1)
+00C7: 7D       Procedure call.     (bytes code:S)
+00C8: Len:7
+00C9: 'XPRINT%'
+00D0: 83       drop integer from stack     (bytes code:-)
+00D1: 51       GOTO     (bytes code:D)
+00D2: Dest:00DE (Dist:000C)
+00D4: 0D       Push local/global integer variable reference     (bytes code:v)
+00D5: FFF1       (65521)
+00D7: 22       Push integer literal     (bytes code:I)
+00D8: 0000       (0)
+00DA: 7F       Assign integer     (bytes code:-)
+00DB: 51       GOTO     (bytes code:D)
+00DC: Dest:00E6 (Dist:000A)
+00DE: 0D       Push local/global integer variable reference     (bytes code:v)
+00DF: FFF1       (65521)
+00E1: 22       Push integer literal     (bytes code:I)
+00E2: 0001       (1)
+00E4: 32       unary minus integer     (bytes code:-)
+00E5: 7F       Assign integer     (bytes code:-)
+00E6: 53       ONERR     (bytes code:D)
+00E7: Dest:00E7 (Dist:0000)
+00E9: 00       Push local/global integer variable value     (bytes code:v)
+00EA: FFF1       (65521)
+00EC: 7E       Branch if false     (bytes code:D)
+00ED: Dest:00FC (Dist:000F)
+00EF: 20       Push byte literal     (bytes code:B)
+00F0: 00           (0)
+00F1: 7D       Procedure call.     (bytes code:S)
+00F2: Len:5
+00F3: 'PDEMO'
+00F8: 84       drop float from stack     (bytes code:-)
+00F9: 51       GOTO     (bytes code:D)
+00FA: Dest:0119 (Dist:001F)
+00FC: 00       Push local/global integer variable value     (bytes code:v)
+00FD: FFF3       (65523)
+00FF: 7E       Branch if false     (bytes code:D)
+0100: Dest:010F (Dist:000F)
+0102: 20       Push byte literal     (bytes code:B)
+0103: 00           (0)
+0104: 7D       Procedure call.     (bytes code:S)
+0105: Len:5
+0106: 'CDEMO'
+010B: 84       drop float from stack     (bytes code:-)
+010C: 51       GOTO     (bytes code:D)
+010D: Dest:0119 (Dist:000C)
+010F: 20       Push byte literal     (bytes code:B)
+0110: 00           (0)
+0111: 7D       Procedure call.     (bytes code:S)
+0112: Len:5
+0113: 'DEMO4'
+0118: 84       drop float from stack     (bytes code:-)
+0119: 51       GOTO     (bytes code:D)
+011A: Dest:011D (Dist:0003)
+011C: 7B       RETURN (float 0)     (bytes code:-)
+011D: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 22 00 00 22 00 0F 22 00 09 22 00 0F 22 00 
+0010:0F 22 00 0F 22 00 0F 22 00 00 22 00 1F D5 22 00 
+0020:02 22 00 00 22 00 00 22 00 00 22 00 00 22 00 00 
+0030:22 00 00 22 00 00 22 00 1F D5 4E 22 00 00 B8 71 
+0040:22 00 02 B8 22 00 0E C5 71 73 22 00 01 D6 83 73 
+0050:24 11 20 20 20 44 65 6D 6F 6E 73 74 72 61 74 69 
+0060:6F 6E 3F 71 73 24 10 20 20 20 20 70 72 65 73 73 
+0070:20 59 20 6F 72 20 4E 71 73 0F FF FC BD 81 02 FF 
+0080:FC C7 24 01 59 4A 7E 00 95 22 00 00 D6 83 4E 53 
+0090:00 1B 22 00 00 20 00 22 00 01 20 00 20 02 7D 07 
+00A0:4C 49 4E 50 55 54 24 85 51 00 0C 0D FF F3 22 00 
+00B0:00 7F 51 00 0A 0D FF F3 22 00 01 32 7F 53 00 16 
+00C0:22 00 01 20 00 20 01 7D 07 58 50 52 49 4E 54 25 
+00D0:83 51 00 0C 0D FF F1 22 00 00 7F 51 00 0A 0D FF 
+00E0:F1 22 00 01 32 7F 53 00 00 00 FF F1 7E 00 0F 20 
+00F0:00 7D 05 50 44 45 4D 4F 84 51 00 1F 00 FF F3 7E 
+0100:00 0F 20 00 7D 05 43 44 45 4D 4F 84 51 00 0C 20 
+0110:00 7D 05 44 45 4D 4F 34 84 51 00 03 7B 7B 

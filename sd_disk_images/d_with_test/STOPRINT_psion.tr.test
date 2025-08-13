@@ -1,0 +1,312 @@
+
+Filename:'STOPRINT'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0014
+QCode Space Size:01E1
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:001E
+External variables (9)
+ 0: A                FLT    (01)
+ 1: D                FLT    (01)
+ 2: A$               STR    (02)
+ 3: SH               FLT    (01)
+ 4: F                FLT    (01)
+ 5: E                FLT    (01)
+ 6: N                FLT    (01)
+ 7: RS               FLT    (01)
+ 8: S                FLT    (01)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 4E       CLS     (bytes code:-)
+0003: 24       Push string literal     (bytes code:S)
+0004: Len:12
+0005: 'Printing....'
+0011: 71       PRINT string     (bytes code:-)
+0012: 73       PRINT newline     (bytes code:-)
+0013: 24       Push string literal     (bytes code:S)
+0014: Len:35
+0015: ' PSION CAMERA PROGRAM by Maxim Ford'
+0038: 76       LPRINT string     (bytes code:-)
+0039: 78       LPRINT newline     (bytes code:-)
+003A: 78       LPRINT newline     (bytes code:-)
+003B: 08       Push parameter/external float variable value     (bytes code:V)
+003C: FFFC       (65532)
+003E: 75       LPRINT float     (bytes code:-)
+003F: 77       LPRINT ,     (bytes code:-)
+0040: 24       Push string literal     (bytes code:S)
+0041: Len:13
+0042: 'ASA Filmstock'
+004F: 76       LPRINT string     (bytes code:-)
+0050: 77       LPRINT ,     (bytes code:-)
+0051: 08       Push parameter/external float variable value     (bytes code:V)
+0052: FFFA       (65530)
+0054: 75       LPRINT float     (bytes code:-)
+0055: 77       LPRINT ,     (bytes code:-)
+0056: 09       Push parameter/external string variable value     (bytes code:V)
+0057: FFF8       (65528)
+0059: 76       LPRINT string     (bytes code:-)
+005A: 77       LPRINT ,     (bytes code:-)
+005B: 08       Push parameter/external float variable value     (bytes code:V)
+005C: FFF6       (65526)
+005E: 75       LPRINT float     (bytes code:-)
+005F: 24       Push string literal     (bytes code:S)
+0060: Len:8
+0061: ' degrees'
+0069: 76       LPRINT string     (bytes code:-)
+006A: 78       LPRINT newline     (bytes code:-)
+006B: 08       Push parameter/external float variable value     (bytes code:V)
+006C: FFF4       (65524)
+006E: 22       Push integer literal     (bytes code:I)
+006F: 0064       (100)
+0071: 86       autoconversion int to float     (bytes code:-)
+0072: 3F       Divide float     (bytes code:-)
+0073: 75       LPRINT float     (bytes code:-)
+0074: 77       LPRINT ,     (bytes code:-)
+0075: 24       Push string literal     (bytes code:S)
+0076: Len:4
+0077: 'Ftcd'
+007B: 76       LPRINT string     (bytes code:-)
+007C: 77       LPRINT ,     (bytes code:-)
+007D: 08       Push parameter/external float variable value     (bytes code:V)
+007E: FFF2       (65522)
+0080: 75       LPRINT float     (bytes code:-)
+0081: 77       LPRINT ,     (bytes code:-)
+0082: 24       Push string literal     (bytes code:S)
+0083: Len:8
+0084: 'EV units'
+008C: 76       LPRINT string     (bytes code:-)
+008D: 78       LPRINT newline     (bytes code:-)
+008E: 78       LPRINT newline     (bytes code:-)
+008F: 24       Push string literal     (bytes code:S)
+0090: Len:38
+0091: 'BLACK               18%          WHITE'
+00B7: 76       LPRINT string     (bytes code:-)
+00B8: 78       LPRINT newline     (bytes code:-)
+00B9: 08       Push parameter/external float variable value     (bytes code:V)
+00BA: FFF2       (65522)
+00BC: 22       Push integer literal     (bytes code:I)
+00BD: 0005       (5)
+00BF: 86       autoconversion int to float     (bytes code:-)
+00C0: 3D       Minus float     (bytes code:-)
+00C1: 75       LPRINT float     (bytes code:-)
+00C2: 77       LPRINT ,     (bytes code:-)
+00C3: 08       Push parameter/external float variable value     (bytes code:V)
+00C4: FFF2       (65522)
+00C6: 22       Push integer literal     (bytes code:I)
+00C7: 0004       (4)
+00C9: 86       autoconversion int to float     (bytes code:-)
+00CA: 3D       Minus float     (bytes code:-)
+00CB: 75       LPRINT float     (bytes code:-)
+00CC: 77       LPRINT ,     (bytes code:-)
+00CD: 08       Push parameter/external float variable value     (bytes code:V)
+00CE: FFF2       (65522)
+00D0: 22       Push integer literal     (bytes code:I)
+00D1: 0003       (3)
+00D3: 86       autoconversion int to float     (bytes code:-)
+00D4: 3D       Minus float     (bytes code:-)
+00D5: 75       LPRINT float     (bytes code:-)
+00D6: 77       LPRINT ,     (bytes code:-)
+00D7: 08       Push parameter/external float variable value     (bytes code:V)
+00D8: FFF2       (65522)
+00DA: 22       Push integer literal     (bytes code:I)
+00DB: 0002       (2)
+00DD: 86       autoconversion int to float     (bytes code:-)
+00DE: 3D       Minus float     (bytes code:-)
+00DF: 75       LPRINT float     (bytes code:-)
+00E0: 77       LPRINT ,     (bytes code:-)
+00E1: 08       Push parameter/external float variable value     (bytes code:V)
+00E2: FFF2       (65522)
+00E4: 22       Push integer literal     (bytes code:I)
+00E5: 0001       (1)
+00E7: 86       autoconversion int to float     (bytes code:-)
+00E8: 3D       Minus float     (bytes code:-)
+00E9: 75       LPRINT float     (bytes code:-)
+00EA: 77       LPRINT ,     (bytes code:-)
+00EB: 08       Push parameter/external float variable value     (bytes code:V)
+00EC: FFF2       (65522)
+00EE: 75       LPRINT float     (bytes code:-)
+00EF: 77       LPRINT ,     (bytes code:-)
+00F0: 08       Push parameter/external float variable value     (bytes code:V)
+00F1: FFF2       (65522)
+00F3: 22       Push integer literal     (bytes code:I)
+00F4: 0001       (1)
+00F6: 86       autoconversion int to float     (bytes code:-)
+00F7: 3C       Plus float     (bytes code:-)
+00F8: 75       LPRINT float     (bytes code:-)
+00F9: 77       LPRINT ,     (bytes code:-)
+00FA: 08       Push parameter/external float variable value     (bytes code:V)
+00FB: FFF2       (65522)
+00FD: 22       Push integer literal     (bytes code:I)
+00FE: 0002       (2)
+0100: 86       autoconversion int to float     (bytes code:-)
+0101: 3C       Plus float     (bytes code:-)
+0102: 75       LPRINT float     (bytes code:-)
+0103: 77       LPRINT ,     (bytes code:-)
+0104: 08       Push parameter/external float variable value     (bytes code:V)
+0105: FFF2       (65522)
+0107: 22       Push integer literal     (bytes code:I)
+0108: 0003       (3)
+010A: 86       autoconversion int to float     (bytes code:-)
+010B: 3C       Plus float     (bytes code:-)
+010C: 75       LPRINT float     (bytes code:-)
+010D: 78       LPRINT newline     (bytes code:-)
+010E: 78       LPRINT newline     (bytes code:-)
+010F: 08       Push parameter/external float variable value     (bytes code:V)
+0110: FFF0       (65520)
+0112: 22       Push integer literal     (bytes code:I)
+0113: 0000       (0)
+0115: 86       autoconversion int to float     (bytes code:-)
+0116: 38       Greater than float     (bytes code:-)
+0117: 7E       Branch if false     (bytes code:D)
+0118: Dest:018C (Dist:0074)
+011A: 08       Push parameter/external float variable value     (bytes code:V)
+011B: FFF0       (65520)
+011D: 75       LPRINT float     (bytes code:-)
+011E: 77       LPRINT ,     (bytes code:-)
+011F: 24       Push string literal     (bytes code:S)
+0120: Len:24
+0121: 'Neutral density filter ='
+0139: 76       LPRINT string     (bytes code:-)
+013A: 77       LPRINT ,     (bytes code:-)
+013B: 08       Push parameter/external float variable value     (bytes code:V)
+013C: FFF0       (65520)
+013E: 23       Push float literal     (bytes code:F)
+013F: Len:2
+0140: '30E-1
+0142: 3F       Divide float     (bytes code:-)
+0143: 75       LPRINT float     (bytes code:-)
+0144: 77       LPRINT ,     (bytes code:-)
+0145: 24       Push string literal     (bytes code:S)
+0146: Len:5
+0147: 'Stops'
+014C: 76       LPRINT string     (bytes code:-)
+014D: 78       LPRINT newline     (bytes code:-)
+014E: 24       Push string literal     (bytes code:S)
+014F: Len:10
+0150: 'Real Stop '
+015A: 76       LPRINT string     (bytes code:-)
+015B: 08       Push parameter/external float variable value     (bytes code:V)
+015C: FFEE       (65518)
+015E: 75       LPRINT float     (bytes code:-)
+015F: 78       LPRINT newline     (bytes code:-)
+0160: 78       LPRINT newline     (bytes code:-)
+0161: 22       Push integer literal     (bytes code:I)
+0162: 001B       (27)
+0164: B8       CHR$     (bytes code:-)
+0165: 76       LPRINT string     (bytes code:-)
+0166: 24       Push string literal     (bytes code:S)
+0167: Len:1
+0168: 'E'
+0169: 76       LPRINT string     (bytes code:-)
+016A: 24       Push string literal     (bytes code:S)
+016B: Len:23
+016C: 'T Stop with ND filters '
+0183: 76       LPRINT string     (bytes code:-)
+0184: 08       Push parameter/external float variable value     (bytes code:V)
+0185: FFEC       (65516)
+0187: 75       LPRINT float     (bytes code:-)
+0188: 78       LPRINT newline     (bytes code:-)
+0189: 51       GOTO     (bytes code:D)
+018A: Dest:01C4 (Dist:003A)
+018C: 08       Push parameter/external float variable value     (bytes code:V)
+018D: FFF0       (65520)
+018F: 22       Push integer literal     (bytes code:I)
+0190: 0000       (0)
+0192: 86       autoconversion int to float     (bytes code:-)
+0193: 3B       Equal float     (bytes code:-)
+0194: 7E       Branch if false     (bytes code:D)
+0195: Dest:01C4 (Dist:002F)
+0197: 78       LPRINT newline     (bytes code:-)
+0198: 22       Push integer literal     (bytes code:I)
+0199: 001B       (27)
+019B: B8       CHR$     (bytes code:-)
+019C: 76       LPRINT string     (bytes code:-)
+019D: 24       Push string literal     (bytes code:S)
+019E: Len:1
+019F: 'E'
+01A0: 76       LPRINT string     (bytes code:-)
+01A1: 24       Push string literal     (bytes code:S)
+01A2: Len:17
+01A3: '    ***   T Stop '
+01B4: 76       LPRINT string     (bytes code:-)
+01B5: 77       LPRINT ,     (bytes code:-)
+01B6: 08       Push parameter/external float variable value     (bytes code:V)
+01B7: FFEC       (65516)
+01B9: 75       LPRINT float     (bytes code:-)
+01BA: 24       Push string literal     (bytes code:S)
+01BB: Len:6
+01BC: '   ***'
+01C2: 76       LPRINT string     (bytes code:-)
+01C3: 78       LPRINT newline     (bytes code:-)
+01C4: 22       Push integer literal     (bytes code:I)
+01C5: 001B       (27)
+01C7: B8       CHR$     (bytes code:-)
+01C8: 76       LPRINT string     (bytes code:-)
+01C9: 24       Push string literal     (bytes code:S)
+01CA: Len:1
+01CB: 'F'
+01CC: 76       LPRINT string     (bytes code:-)
+01CD: 78       LPRINT newline     (bytes code:-)
+01CE: B9       DATIM$     (bytes code:-)
+01CF: 76       LPRINT string     (bytes code:-)
+01D0: 77       LPRINT ,     (bytes code:-)
+01D1: 78       LPRINT newline     (bytes code:-)
+01D2: 78       LPRINT newline     (bytes code:-)
+01D3: 78       LPRINT newline     (bytes code:-)
+01D4: 78       LPRINT newline     (bytes code:-)
+01D5: 78       LPRINT newline     (bytes code:-)
+01D6: 4E       CLS     (bytes code:-)
+01D7: 20       Push byte literal     (bytes code:B)
+01D8: 00           (0)
+01D9: 7D       Procedure call.     (bytes code:S)
+01DA: Len:4
+01DB: 'FILM'
+01DF: 84       drop float from stack     (bytes code:-)
+01E0: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 4E 24 0C 50 72 69 6E 74 69 6E 67 2E 2E 2E 
+0010:2E 71 73 24 23 20 50 53 49 4F 4E 20 43 41 4D 45 
+0020:52 41 20 50 52 4F 47 52 41 4D 20 62 79 20 4D 61 
+0030:78 69 6D 20 46 6F 72 64 76 78 78 08 FF FC 75 77 
+0040:24 0D 41 53 41 20 46 69 6C 6D 73 74 6F 63 6B 76 
+0050:77 08 FF FA 75 77 09 FF F8 76 77 08 FF F6 75 24 
+0060:08 20 64 65 67 72 65 65 73 76 78 08 FF F4 22 00 
+0070:64 86 3F 75 77 24 04 46 74 63 64 76 77 08 FF F2 
+0080:75 77 24 08 45 56 20 75 6E 69 74 73 76 78 78 24 
+0090:26 42 4C 41 43 4B 20 20 20 20 20 20 20 20 20 20 
+00A0:20 20 20 20 20 31 38 25 20 20 20 20 20 20 20 20 
+00B0:20 20 57 48 49 54 45 76 78 08 FF F2 22 00 05 86 
+00C0:3D 75 77 08 FF F2 22 00 04 86 3D 75 77 08 FF F2 
+00D0:22 00 03 86 3D 75 77 08 FF F2 22 00 02 86 3D 75 
+00E0:77 08 FF F2 22 00 01 86 3D 75 77 08 FF F2 75 77 
+00F0:08 FF F2 22 00 01 86 3C 75 77 08 FF F2 22 00 02 
+0100:86 3C 75 77 08 FF F2 22 00 03 86 3C 75 78 78 08 
+0110:FF F0 22 00 00 86 38 7E 00 74 08 FF F0 75 77 24 
+0120:18 4E 65 75 74 72 61 6C 20 64 65 6E 73 69 74 79 
+0130:20 66 69 6C 74 65 72 20 3D 76 77 08 FF F0 23 02 
+0140:30 FF 3F 75 77 24 05 53 74 6F 70 73 76 78 24 0A 
+0150:52 65 61 6C 20 53 74 6F 70 20 76 08 FF EE 75 78 
+0160:78 22 00 1B B8 76 24 01 45 76 24 17 54 20 53 74 
+0170:6F 70 20 77 69 74 68 20 4E 44 20 66 69 6C 74 65 
+0180:72 73 20 76 08 FF EC 75 78 51 00 3A 08 FF F0 22 
+0190:00 00 86 3B 7E 00 2F 78 22 00 1B B8 76 24 01 45 
+01A0:76 24 11 20 20 20 20 2A 2A 2A 20 20 20 54 20 53 
+01B0:74 6F 70 20 76 77 08 FF EC 75 24 06 20 20 20 2A 
+01C0:2A 2A 76 78 22 00 1B B8 76 24 01 46 76 78 B9 76 
+01D0:77 78 78 78 78 78 4E 20 00 7D 04 46 49 4C 4D 84 
+01E0:7B 

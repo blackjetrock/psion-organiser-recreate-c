@@ -1052,6 +1052,27 @@ void ic_run(char *str, char *fmt)
   run_unmount(0, argv_null);
 }
 
+void ic_objdump(char *str, char *fmt)
+{
+  char arg[100];
+  char ob3_fn[100];
+
+  printf("\n%s\n", str);
+  sscanf(str,  fmt, &arg);
+  sprintf(ob3_fn, "%s", arg);
+
+  printf("\nObjdumping %s", ob3_fn);
+  
+  // Mount the SD card and run the OB3
+  run_mount(0, argv_null);
+  argv[0] = "/";
+  run_cd(1, argv);
+
+  nopl_objdump(ob3_fn);
+  
+  run_unmount(0, argv_null);
+}
+
 void ic_runx(char *str, char *fmt)
 {
   char arg[100];
@@ -1263,6 +1284,7 @@ struct _IC_CMD
    {"run",        "run %s",          ic_run},
 #if OPL_TRANSLATOR
    {"trans",      "trans %s",        ic_trans},
+   {"objdump",    "objdump %s",      ic_objdump},
    {"trt",        "trt",             ic_transtest},
 #endif
    

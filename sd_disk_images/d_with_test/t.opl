@@ -1,0 +1,13 @@
+t:
+
+local A,B,X
+
+print 51.0-99.0
+A = 99.3
+B = 51.7333
+print A - B
+print B - A
+print A - B
+print B - A
+
+print a+b

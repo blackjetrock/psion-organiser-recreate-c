@@ -1,0 +1,64 @@
+stradd:
+
+local A$(5), B$(5) , E$(20)
+local A, B, E, e%, ANS, ANS%, ANS$(20)
+local pass%, pass2%, num%
+
+pass% = 1
+pass2% = 0
+num% = 0
+
+rem ------------------------------------O--------------------------------------------
+
+A$ = "abc"
+B$ = "xyz"
+E$ = a$ + B$
+
+ANS$= "abcxyz"
+print CHR$(num%+asc("A"));"(";ANS$;"):";e$,(e$=ANS$) : PASS2%=PASS2%+(e$=ANS$)
+num%=num%+1
+
+rem ------------------------------------O--------------------------------------------
+
+A$ = "abc"
+B$ = "xyz"
+E$ = b$ + a$
+
+ANS$= "xyzabc"
+print CHR$(num%+asc("A"));"(";ANS$;"):";e$,(e$=ANS$) : PASS2%=PASS2%+(e$=ANS$)
+num%=num%+1
+
+rem ------------------------------------O--------------------------------------------
+
+A$ = "abc"
+B$ = "xyz"
+E$ = a$ + B$ +a$
+
+ANS$= "abcxyzabc"
+print CHR$(num%+asc("A"));"(";ANS$;"):";e$,(e$=ANS$) : PASS2%=PASS2%+(e$=ANS$)
+num%=num%+1
+
+rem ------------------------------------O--------------------------------------------
+
+A$ = "abc"
+B$ = "xyz"
+E$ = a$ + B$ +a$ + a$
+
+ANS$= "abcxyzabcabc"
+print CHR$(num%+asc("A"));"(";ANS$;"):";e$,(e$=ANS$) : PASS2%=PASS2%+(e$=ANS$)
+num%=num%+1
+
+rem --------------------------------------------------------------------------------
+
+if pass2% <> -num%
+pass%=0
+endif
+
+rem --------------------------------------------------------------------------------
+
+IF PASS%
+print "PASS"
+else
+print "FAIL"
+ENDIF
+

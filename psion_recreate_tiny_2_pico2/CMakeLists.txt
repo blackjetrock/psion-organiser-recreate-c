@@ -72,6 +72,7 @@ add_executable(${PROJECT}
     sysvar.c
     clock_pico.c
     nopl_exec.c
+    nopl_objdump.c
     parser.c
     nopl_trans.c
     sd_card_utils.c

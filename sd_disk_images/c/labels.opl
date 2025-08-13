@@ -1,0 +1,11 @@
+lab:
+
+local A%
+
+
+LABEL1::
+A% = 2
+LABEL2:: : A%=9
+
+LABEL3:: : LABEL4::
+

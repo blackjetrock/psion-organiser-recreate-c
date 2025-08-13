@@ -55,6 +55,7 @@ CMakeFiles/psion_recreate_ctusb.dir/errors.c.o: \
  /usr/lib/gcc/arm-none-eabi/15.1.0/include/stdbool.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/qcode.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/errors.h \

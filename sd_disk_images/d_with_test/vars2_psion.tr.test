@@ -1,0 +1,65 @@
+
+Filename:'/home/menadue/Downloads/VARS2'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:07DE
+QCode Space Size:001F
+Number of parameters:00
+Parameter types:
+Global varname Size:002C
+Global variables (5)
+ 0: PEAR%            INT    (00) FFCC
+ 1: DOOR$            STR    (02) FFC1
+ 2: OPEN%            INTARY (03) FF5A
+ 3: POS$             STRARY (05) FCEC
+ 4: FLOAT            FLTARY (04) F911
+
+External varname Size:000E
+External variables (2)
+ 0: EXTTOP%          INT    (00)
+ 1: SA$              STRARY (05)
+
+String length fixups (4)
+ 0: F903 0A
+ 1: F8C4 07
+ 2: FFC0 0A
+ 3: FCEB 1E
+
+Array size fixups (6)
+ 0: F8EF 0005
+ 1: F8C5 0005
+ 2: F822 0014
+ 3: FF5A 0032
+ 4: FCEC 0014
+ 5: F911 007B
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 14       Push parameter/external integer variable reference     (bytes code:V)
+0003: FFD0       (65488)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0008       (8)
+0008: 7F       Assign integer     (bytes code:-)
+0009: 0F       Push local/global string variable reference     (bytes code:v)
+000A: F904       (63748)
+000C: 24       Push string literal     (bytes code:S)
+000D: Len:3
+000E: 'abc'
+0011: 81       Assign string     (bytes code:-)
+0012: 22       Push integer literal     (bytes code:I)
+0013: 000A       (10)
+0015: 19       Pop integer index and push parameter/external string array variable reference     (bytes code:V)
+0016: FFCE       (65486)
+0018: 24       Push string literal     (bytes code:S)
+0019: Len:3
+001A: 'def'
+001D: 81       Assign string     (bytes code:-)
+001E: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 14 FF D0 22 00 08 7F 0F F9 04 24 03 61 62 
+0010:63 81 22 00 0A 19 FF CE 24 03 64 65 66 81 7B 

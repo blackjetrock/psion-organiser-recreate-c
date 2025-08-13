@@ -1,0 +1,52 @@
+disptext:(str$,lines%)
+  LOCAL lastsp%, firstsp%, i%, lenStr%, j%, pcount%
+  LOCAL str1$(20)
+  
+  REM inits  
+  lenStr% = LEN(str$)
+  i% = 0
+  j% = 0
+  lastsp% = 0
+  firstsp% = 0
+
+
+ WHILE j% < lenStr%
+  IF lenStr% <= 20
+   PRINT str$; 
+   GET
+   BREAK
+  ELSE
+   i% = 0
+   firstsp% = j%+1
+    WHILE i% < 19
+     j% = j% + 1
+      IF j% >= lenStr% + 1
+       lastsp% = j% 
+       BREAK
+      ELSEIF MID$(str$, j%, 1) = " "
+       lastsp% = j% 
+      ELSE    
+      ENDIF
+        i% = i% + 1
+    ENDWH
+   str1$ = MID$(str$, firstsp%, lastsp%-firstsp%)
+   firstsp% = firstsp%-1 REM runs after the first line
+   j% = lastsp%
+     IF pcount% < lines%
+      PRINT str1$
+       IF j% >= lenStr% + 1   
+        GET
+        BREAK
+        REM CLS    
+       ENDIF 
+      pcount% = pcount% + 1 
+       IF pcount% = lines%
+        pcount% = 0
+        GET     
+        CLS
+       ENDIF    
+      ELSE
+      CLS
+     ENDIF
+    ENDIF
+ ENDWH

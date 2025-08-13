@@ -1,0 +1,150 @@
+
+Filename:'BEP'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0006
+QCode Space Size:00AB
+Number of parameters:01
+Parameter types:
+ 0 INT    (0)
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 22       Push integer literal     (bytes code:I)
+0003: 0079       (121)
+0005: 9B       PEEKB     (bytes code:-)
+0006: 22       Push integer literal     (bytes code:I)
+0007: 0000       (0)
+0009: 2C       Equal integer     (bytes code:-)
+000A: 7E       Branch if false     (bytes code:D)
+000B: Dest:000E (Dist:0003)
+000D: 7B       RETURN (float 0)     (bytes code:-)
+000E: 07       Push parameter/external integer variable value     (bytes code:V)
+000F: FFFC       (65532)
+0011: 22       Push integer literal     (bytes code:I)
+0012: 0004       (4)
+0014: 29       Greater than integer     (bytes code:-)
+0015: 7E       Branch if false     (bytes code:D)
+0016: Dest:0052 (Dist:003C)
+0018: 4E       CLS     (bytes code:-)
+0019: 24       Push string literal     (bytes code:S)
+001A: Len:15
+001B: 'Error - Bep 1-4'
+002A: 71       PRINT string     (bytes code:-)
+002B: 73       PRINT newline     (bytes code:-)
+002C: 0D       Push local/global integer variable reference     (bytes code:v)
+002D: FFFA       (65530)
+002F: 07       Push parameter/external integer variable value     (bytes code:V)
+0030: FFFC       (65532)
+0032: 7F       Assign integer     (bytes code:-)
+0033: 22       Push integer literal     (bytes code:I)
+0034: 0032       (50)
+0036: 22       Push integer literal     (bytes code:I)
+0037: 0064       (100)
+0039: 4D       BEEP     (bytes code:-)
+003A: 0D       Push local/global integer variable reference     (bytes code:v)
+003B: FFFA       (65530)
+003D: 00       Push local/global integer variable value     (bytes code:v)
+003E: FFFA       (65530)
+0040: 22       Push integer literal     (bytes code:I)
+0041: 0001       (1)
+0043: 2E       Minus integer     (bytes code:-)
+0044: 7F       Assign integer     (bytes code:-)
+0045: 00       Push local/global integer variable value     (bytes code:v)
+0046: FFFA       (65530)
+0048: 22       Push integer literal     (bytes code:I)
+0049: 0000       (0)
+004B: 2C       Equal integer     (bytes code:-)
+004C: 7E       Branch if false     (bytes code:D)
+004D: Dest:0033 (Dist:FFFFFFE6)
+004F: 51       GOTO     (bytes code:D)
+0050: Dest:00AA (Dist:005A)
+0052: 07       Push parameter/external integer variable value     (bytes code:V)
+0053: FFFC       (65532)
+0055: 22       Push integer literal     (bytes code:I)
+0056: 0001       (1)
+0058: 2C       Equal integer     (bytes code:-)
+0059: 7E       Branch if false     (bytes code:D)
+005A: Dest:0066 (Dist:000C)
+005C: 22       Push integer literal     (bytes code:I)
+005D: 0032       (50)
+005F: 22       Push integer literal     (bytes code:I)
+0060: 00C8       (200)
+0062: 4D       BEEP     (bytes code:-)
+0063: 51       GOTO     (bytes code:D)
+0064: Dest:00AA (Dist:0046)
+0066: 07       Push parameter/external integer variable value     (bytes code:V)
+0067: FFFC       (65532)
+0069: 22       Push integer literal     (bytes code:I)
+006A: 0002       (2)
+006C: 2C       Equal integer     (bytes code:-)
+006D: 7E       Branch if false     (bytes code:D)
+006E: Dest:007A (Dist:000C)
+0070: 22       Push integer literal     (bytes code:I)
+0071: 0032       (50)
+0073: 22       Push integer literal     (bytes code:I)
+0074: 01F4       (500)
+0076: 4D       BEEP     (bytes code:-)
+0077: 51       GOTO     (bytes code:D)
+0078: Dest:00AA (Dist:0032)
+007A: 07       Push parameter/external integer variable value     (bytes code:V)
+007B: FFFC       (65532)
+007D: 22       Push integer literal     (bytes code:I)
+007E: 0003       (3)
+0080: 2C       Equal integer     (bytes code:-)
+0081: 7E       Branch if false     (bytes code:D)
+0082: Dest:008E (Dist:000C)
+0084: 22       Push integer literal     (bytes code:I)
+0085: 0032       (50)
+0087: 22       Push integer literal     (bytes code:I)
+0088: 05DC       (1500)
+008A: 4D       BEEP     (bytes code:-)
+008B: 51       GOTO     (bytes code:D)
+008C: Dest:00AA (Dist:001E)
+008E: 07       Push parameter/external integer variable value     (bytes code:V)
+008F: FFFC       (65532)
+0091: 22       Push integer literal     (bytes code:I)
+0092: 0004       (4)
+0094: 2C       Equal integer     (bytes code:-)
+0095: 7E       Branch if false     (bytes code:D)
+0096: Dest:00AA (Dist:0014)
+0098: 22       Push integer literal     (bytes code:I)
+0099: 0032       (50)
+009B: 22       Push integer literal     (bytes code:I)
+009C: 0064       (100)
+009E: 4D       BEEP     (bytes code:-)
+009F: 22       Push integer literal     (bytes code:I)
+00A0: 000A       (10)
+00A2: 54       PAUSE     (bytes code:-)
+00A3: 22       Push integer literal     (bytes code:I)
+00A4: 0032       (50)
+00A6: 22       Push integer literal     (bytes code:I)
+00A7: 0064       (100)
+00A9: 4D       BEEP     (bytes code:-)
+00AA: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 22 00 79 9B 22 00 00 2C 7E 00 03 7B 07 FF 
+0010:FC 22 00 04 29 7E 00 3C 4E 24 0F 45 72 72 6F 72 
+0020:20 2D 20 42 65 70 20 31 2D 34 71 73 0D FF FA 07 
+0030:FF FC 7F 22 00 32 22 00 64 4D 0D FF FA 00 FF FA 
+0040:22 00 01 2E 7F 00 FF FA 22 00 00 2C 7E FF E6 51 
+0050:00 5A 07 FF FC 22 00 01 2C 7E 00 0C 22 00 32 22 
+0060:00 C8 4D 51 00 46 07 FF FC 22 00 02 2C 7E 00 0C 
+0070:22 00 32 22 01 F4 4D 51 00 32 07 FF FC 22 00 03 
+0080:2C 7E 00 0C 22 00 32 22 05 DC 4D 51 00 1E 07 FF 
+0090:FC 22 00 04 2C 7E 00 14 22 00 32 22 00 64 4D 22 
+00A0:00 0A 54 22 00 32 22 00 64 4D 7B 

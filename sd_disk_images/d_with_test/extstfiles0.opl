@@ -1,0 +1,49 @@
+files0:
+
+local total
+local a,b,c,t
+local ab,bc,ac
+
+open "B:TEST", C, test, second, third
+
+c.test = 34.2
+c.second = 1234.5
+c.third  = 1.333
+
+a = 34.2
+b = 1234.5
+c  = 1.333
+t = a+b+c
+
+print a,b,c
+print "T=", t
+
+print "a+b", a+b
+print "b+c", b+c
+print "a+c", a+c
+print "(a+b)+c" (a+b)+c
+ab = a+b
+bc = b+c
+ac = a+c
+
+print "ab+c", ab+c
+print "a+bc", a+bc
+print "ac+b", ac+b
+print "b+ac", b+ac	
+
+print "1268.7+1.333", 1268.7+1.333
+
+print c.test, c.second, c.third
+total = c.test+c.second+c.third
+
+print "test+second=", c.test+c.second
+print "second+third=", c.second+c.third
+print "first+third=", c.first+c.third	
+
+print "Total:",total
+
+if total = 1270.033
+print "PASS"
+else
+print "FAIL"
+endif

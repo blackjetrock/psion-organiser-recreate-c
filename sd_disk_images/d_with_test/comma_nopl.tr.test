@@ -1,0 +1,61 @@
+
+Filename:'ob3_nopl'
+File ext:'bin
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0014
+QCode Space Size:002C
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFEC 04
+
+Array size fixups (1)
+ 0: FFED 0003
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 22       Push integer literal     (bytes code:I)
+0003: 0003       (3)
+0005: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0006: FFED       (65517)
+0008: A1       YEAR     (bytes code:-)
+0009: 86       autoconversion int to float     (bytes code:-)
+000A: 22       Push integer literal     (bytes code:I)
+000B: 0004       (4)
+000D: 81       Assign string     (bytes code:-)
+000E: 22       Push integer literal     (bytes code:I)
+000F: 0001       (1)
+0011: 22       Push integer literal     (bytes code:I)
+0012: 0002       (2)
+0014: 22       Push integer literal     (bytes code:I)
+0015: 0003       (3)
+0017: 22       Push integer literal     (bytes code:I)
+0018: 0004       (4)
+001A: 22       Push integer literal     (bytes code:I)
+001B: 0005       (5)
+001D: 86       autoconversion int to float     (bytes code:-)
+001E: 87       autoconversion float to int     (bytes code:-)
+001F: 22       Push integer literal     (bytes code:I)
+0020: 0006       (6)
+0022: 22       Push integer literal     (bytes code:I)
+0023: 0007       (7)
+0025: 22       Push integer literal     (bytes code:I)
+0026: 0008       (8)
+0028: 22       Push integer literal     (bytes code:I)
+0029: 0009       (9)
+002B: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 22 00 03 12 FF ED A1 86 22 00 04 81 22 00 
+0010:01 22 00 02 22 00 03 22 00 04 22 00 05 86 87 22 
+0020:00 06 22 00 07 22 00 08 22 00 09 7B 

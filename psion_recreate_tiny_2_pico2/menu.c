@@ -495,8 +495,31 @@ void menu_prog_translate(void)
   nopl_trans(fn_buff);
   
   run_unmount(0, argv_null);
+}
 
+////////////////////////////////////////////////////////////////////////////////
+
+void menu_prog_objdump(void)
+{
+  dp_stat(0, 0, DP_STAT_CURSOR_OFF, 0);
+
+  dp_cls();
+  dp_prnt("Objdump:");
+
+  ed_epos(e_buffer, 30, 0, 0, 0);
+
+  // Refresh menu on exit
+  menu_init = 1;
+
+  // Mount the SD card and translate the OPL file
+  run_mount(0, argv_null);
+
+  // Add suffix, as it has to be an ob3 file
+  strcpy(fn_buff, e_buffer);
+  strcat(fn_buff, ".OB3");
+  nopl_objdump(fn_buff);
   
+  run_unmount(0, argv_null);
 }
 
 //------------------------------------------------------------------------------
@@ -3273,6 +3296,7 @@ MENU menu_prog =
    {
      //    {KEY_ON, "",        menu_back},
     {'T', "Translate",  menu_prog_translate},
+    {'O', "Objdump",    menu_prog_objdump},
     {'R', "Run",        menu_prog_run},
     {'&', "",           menu_null},
    }

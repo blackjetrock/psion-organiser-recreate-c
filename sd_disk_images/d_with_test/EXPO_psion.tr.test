@@ -1,0 +1,623 @@
+
+Filename:'EXPO'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0247
+QCode Space Size:03A2
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (11)
+ 0: FFF0 04
+ 1: FF26 C8
+ 2: FE5C C8
+ 3: FE53 07
+ 4: FE4B 06
+ 5: FE42 07
+ 6: FE35 0B
+ 7: FE28 0B
+ 8: FE1B 0B
+ 9: FE0E 0B
+10: FE01 0B
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:16
+0004: 'What ASA is the '
+0014: 71       PRINT string     (bytes code:-)
+0015: 73       PRINT newline     (bytes code:-)
+0016: 24       Push string literal     (bytes code:S)
+0017: Len:10
+0018: 'filmstock?'
+0022: 71       PRINT string     (bytes code:-)
+0023: 73       PRINT newline     (bytes code:-)
+0024: 0E       Push local/global float variable reference     (bytes code:v)
+0025: FDD1       (64977)
+0027: 6D       INPUT float     (bytes code:-)
+0028: 4E       CLS     (bytes code:-)
+0029: 24       Push string literal     (bytes code:S)
+002A: Len:13
+002B: 'CAMERA SPEED;'
+0038: 71       PRINT string     (bytes code:-)
+0039: 73       PRINT newline     (bytes code:-)
+003A: 0E       Push local/global float variable reference     (bytes code:v)
+003B: FDF1       (65009)
+003D: 22       Push integer literal     (bytes code:I)
+003E: 0002       (2)
+0040: 24       Push string literal     (bytes code:S)
+0041: Len:45
+0042: 'Frames-per-second,Exposure,Seconds-per-frame,'
+006F: D9       MENUN     (bytes code:-)
+0070: 86       autoconversion int to float     (bytes code:-)
+0071: 80       Assign float     (bytes code:-)
+0072: 01       Push local/global float variable value     (bytes code:v)
+0073: FDF1       (65009)
+0075: 22       Push integer literal     (bytes code:I)
+0076: 0002       (2)
+0078: 86       autoconversion int to float     (bytes code:-)
+0079: 3B       Equal float     (bytes code:-)
+007A: 7E       Branch if false     (bytes code:D)
+007B: Dest:00AC (Dist:0031)
+007D: 24       Push string literal     (bytes code:S)
+007E: Len:20
+007F: 'Exposure in seconds?'
+0093: 71       PRINT string     (bytes code:-)
+0094: 73       PRINT newline     (bytes code:-)
+0095: 0E       Push local/global float variable reference     (bytes code:v)
+0096: FDC9       (64969)
+0098: 6D       INPUT float     (bytes code:-)
+0099: 0F       Push local/global string variable reference     (bytes code:v)
+009A: FFF1       (65521)
+009C: 24       Push string literal     (bytes code:S)
+009D: Len:3
+009E: 'sec'
+00A1: 81       Assign string     (bytes code:-)
+00A2: 0E       Push local/global float variable reference     (bytes code:v)
+00A3: FFF6       (65526)
+00A5: 01       Push local/global float variable value     (bytes code:v)
+00A6: FDC9       (64969)
+00A8: 80       Assign float     (bytes code:-)
+00A9: 51       GOTO     (bytes code:D)
+00AA: Dest:0184 (Dist:00DA)
+00AC: 01       Push local/global float variable value     (bytes code:v)
+00AD: FDF1       (65009)
+00AF: 22       Push integer literal     (bytes code:I)
+00B0: 0001       (1)
+00B2: 86       autoconversion int to float     (bytes code:-)
+00B3: 3B       Equal float     (bytes code:-)
+00B4: 7E       Branch if false     (bytes code:D)
+00B5: Dest:011A (Dist:0065)
+00B7: 24       Push string literal     (bytes code:S)
+00B8: Len:18
+00B9: 'Frames per second?'
+00CB: 71       PRINT string     (bytes code:-)
+00CC: 73       PRINT newline     (bytes code:-)
+00CD: 0E       Push local/global float variable reference     (bytes code:v)
+00CE: FDE9       (65001)
+00D0: 6D       INPUT float     (bytes code:-)
+00D1: 0F       Push local/global string variable reference     (bytes code:v)
+00D2: FFF1       (65521)
+00D4: 24       Push string literal     (bytes code:S)
+00D5: Len:3
+00D6: 'fps'
+00D9: 81       Assign string     (bytes code:-)
+00DA: 0E       Push local/global float variable reference     (bytes code:v)
+00DB: FFF6       (65526)
+00DD: 01       Push local/global float variable value     (bytes code:v)
+00DE: FDE9       (65001)
+00E0: 80       Assign float     (bytes code:-)
+00E1: 4E       CLS     (bytes code:-)
+00E2: 24       Push string literal     (bytes code:S)
+00E3: Len:16
+00E4: 'Shutter angle in'
+00F4: 71       PRINT string     (bytes code:-)
+00F5: 73       PRINT newline     (bytes code:-)
+00F6: 24       Push string literal     (bytes code:S)
+00F7: Len:8
+00F8: 'degrees?'
+0100: 71       PRINT string     (bytes code:-)
+0101: 73       PRINT newline     (bytes code:-)
+0102: 0E       Push local/global float variable reference     (bytes code:v)
+0103: FDE1       (64993)
+0105: 6D       INPUT float     (bytes code:-)
+0106: 0E       Push local/global float variable reference     (bytes code:v)
+0107: FDC9       (64969)
+0109: 01       Push local/global float variable value     (bytes code:v)
+010A: FDE1       (64993)
+010C: 22       Push integer literal     (bytes code:I)
+010D: 0168       (360)
+010F: 86       autoconversion int to float     (bytes code:-)
+0110: 01       Push local/global float variable value     (bytes code:v)
+0111: FDE9       (65001)
+0113: 3E       Multiply float     (bytes code:-)
+0114: 3F       Divide float     (bytes code:-)
+0115: 80       Assign float     (bytes code:-)
+0116: 4E       CLS     (bytes code:-)
+0117: 51       GOTO     (bytes code:D)
+0118: Dest:0184 (Dist:006C)
+011A: 01       Push local/global float variable value     (bytes code:v)
+011B: FDF1       (65009)
+011D: 22       Push integer literal     (bytes code:I)
+011E: 0003       (3)
+0120: 86       autoconversion int to float     (bytes code:-)
+0121: 3B       Equal float     (bytes code:-)
+0122: 7E       Branch if false     (bytes code:D)
+0123: Dest:0184 (Dist:0061)
+0125: 24       Push string literal     (bytes code:S)
+0126: Len:18
+0127: 'Seconds per frame?'
+0139: 71       PRINT string     (bytes code:-)
+013A: 73       PRINT newline     (bytes code:-)
+013B: 0E       Push local/global float variable reference     (bytes code:v)
+013C: FDE9       (65001)
+013E: 6D       INPUT float     (bytes code:-)
+013F: 0E       Push local/global float variable reference     (bytes code:v)
+0140: FFF6       (65526)
+0142: 01       Push local/global float variable value     (bytes code:v)
+0143: FDE9       (65001)
+0145: 80       Assign float     (bytes code:-)
+0146: 0F       Push local/global string variable reference     (bytes code:v)
+0147: FFF1       (65521)
+0149: 24       Push string literal     (bytes code:S)
+014A: Len:3
+014B: 'spf'
+014E: 81       Assign string     (bytes code:-)
+014F: 4E       CLS     (bytes code:-)
+0150: 24       Push string literal     (bytes code:S)
+0151: Len:16
+0152: 'Shutter angle in'
+0162: 71       PRINT string     (bytes code:-)
+0163: 73       PRINT newline     (bytes code:-)
+0164: 24       Push string literal     (bytes code:S)
+0165: Len:7
+0166: 'degrees'
+016D: 71       PRINT string     (bytes code:-)
+016E: 73       PRINT newline     (bytes code:-)
+016F: 0E       Push local/global float variable reference     (bytes code:v)
+0170: FDE1       (64993)
+0172: 6D       INPUT float     (bytes code:-)
+0173: 0E       Push local/global float variable reference     (bytes code:v)
+0174: FDC9       (64969)
+0176: 01       Push local/global float variable value     (bytes code:v)
+0177: FDE9       (65001)
+0179: 01       Push local/global float variable value     (bytes code:v)
+017A: FDE1       (64993)
+017C: 3E       Multiply float     (bytes code:-)
+017D: 22       Push integer literal     (bytes code:I)
+017E: 0168       (360)
+0180: 86       autoconversion int to float     (bytes code:-)
+0181: 3F       Divide float     (bytes code:-)
+0182: 80       Assign float     (bytes code:-)
+0183: 4E       CLS     (bytes code:-)
+0184: 4E       CLS     (bytes code:-)
+0185: 01       Push local/global float variable value     (bytes code:v)
+0186: FDC9       (64969)
+0188: 22       Push integer literal     (bytes code:I)
+0189: 0001       (1)
+018B: 86       autoconversion int to float     (bytes code:-)
+018C: 39       greater than equal float     (bytes code:-)
+018D: 01       Push local/global float variable value     (bytes code:v)
+018E: FDC9       (64969)
+0190: 22       Push integer literal     (bytes code:I)
+0191: 000A       (10)
+0193: 86       autoconversion int to float     (bytes code:-)
+0194: 36       Less than float     (bytes code:-)
+0195: 34       AND integer     (bytes code:-)
+0196: 7E       Branch if false     (bytes code:D)
+0197: Dest:01A8 (Dist:0011)
+0199: 0E       Push local/global float variable reference     (bytes code:v)
+019A: FDC9       (64969)
+019C: 01       Push local/global float variable value     (bytes code:v)
+019D: FDC9       (64969)
+019F: 23       Push float literal     (bytes code:F)
+01A0: Len:2
+01A1: '14E0
+01A3: 3F       Divide float     (bytes code:-)
+01A4: 80       Assign float     (bytes code:-)
+01A5: 51       GOTO     (bytes code:D)
+01A6: Dest:01E2 (Dist:003C)
+01A8: 01       Push local/global float variable value     (bytes code:v)
+01A9: FDC9       (64969)
+01AB: 22       Push integer literal     (bytes code:I)
+01AC: 000A       (10)
+01AE: 86       autoconversion int to float     (bytes code:-)
+01AF: 39       greater than equal float     (bytes code:-)
+01B0: 01       Push local/global float variable value     (bytes code:v)
+01B1: FDC9       (64969)
+01B3: 22       Push integer literal     (bytes code:I)
+01B4: 001E       (30)
+01B6: 86       autoconversion int to float     (bytes code:-)
+01B7: 36       Less than float     (bytes code:-)
+01B8: 34       AND integer     (bytes code:-)
+01B9: 7E       Branch if false     (bytes code:D)
+01BA: Dest:01CB (Dist:0011)
+01BC: 0E       Push local/global float variable reference     (bytes code:v)
+01BD: FDC9       (64969)
+01BF: 01       Push local/global float variable value     (bytes code:v)
+01C0: FDC9       (64969)
+01C2: 23       Push float literal     (bytes code:F)
+01C3: Len:2
+01C4: '28E0
+01C6: 3F       Divide float     (bytes code:-)
+01C7: 80       Assign float     (bytes code:-)
+01C8: 51       GOTO     (bytes code:D)
+01C9: Dest:01E2 (Dist:0019)
+01CB: 01       Push local/global float variable value     (bytes code:v)
+01CC: FDC9       (64969)
+01CE: 22       Push integer literal     (bytes code:I)
+01CF: 001E       (30)
+01D1: 86       autoconversion int to float     (bytes code:-)
+01D2: 39       greater than equal float     (bytes code:-)
+01D3: 7E       Branch if false     (bytes code:D)
+01D4: Dest:01E2 (Dist:000E)
+01D6: 0E       Push local/global float variable reference     (bytes code:v)
+01D7: FDC9       (64969)
+01D9: 01       Push local/global float variable value     (bytes code:v)
+01DA: FDC9       (64969)
+01DC: 22       Push integer literal     (bytes code:I)
+01DD: 0004       (4)
+01DF: 86       autoconversion int to float     (bytes code:-)
+01E0: 3F       Divide float     (bytes code:-)
+01E1: 80       Assign float     (bytes code:-)
+01E2: 0E       Push local/global float variable reference     (bytes code:v)
+01E3: FDC1       (64961)
+01E5: 22       Push integer literal     (bytes code:I)
+01E6: 0002       (2)
+01E8: 86       autoconversion int to float     (bytes code:-)
+01E9: B3       SQR     (bytes code:-)
+01EA: 80       Assign float     (bytes code:-)
+01EB: 0E       Push local/global float variable reference     (bytes code:v)
+01EC: FDD9       (64985)
+01EE: 22       Push integer literal     (bytes code:I)
+01EF: 0019       (25)
+01F1: 86       autoconversion int to float     (bytes code:-)
+01F2: 01       Push local/global float variable value     (bytes code:v)
+01F3: FDC1       (64961)
+01F5: 22       Push integer literal     (bytes code:I)
+01F6: 0002       (2)
+01F8: 86       autoconversion int to float     (bytes code:-)
+01F9: 40       Power float     (bytes code:-)
+01FA: 3E       Multiply float     (bytes code:-)
+01FB: 01       Push local/global float variable value     (bytes code:v)
+01FC: FDD1       (64977)
+01FE: 01       Push local/global float variable value     (bytes code:v)
+01FF: FDC9       (64969)
+0201: 3E       Multiply float     (bytes code:-)
+0202: 3F       Divide float     (bytes code:-)
+0203: 80       Assign float     (bytes code:-)
+0204: 01       Push local/global float variable value     (bytes code:v)
+0205: FDD9       (64985)
+0207: 22       Push integer literal     (bytes code:I)
+0208: 0005       (5)
+020A: 86       autoconversion int to float     (bytes code:-)
+020B: 38       Greater than float     (bytes code:-)
+020C: 7E       Branch if false     (bytes code:D)
+020D: Dest:021A (Dist:000D)
+020F: 0E       Push local/global float variable reference     (bytes code:v)
+0210: FDF1       (65009)
+0212: 22       Push integer literal     (bytes code:I)
+0213: 0000       (0)
+0215: 86       autoconversion int to float     (bytes code:-)
+0216: 80       Assign float     (bytes code:-)
+0217: 51       GOTO     (bytes code:D)
+0218: Dest:022D (Dist:0015)
+021A: 01       Push local/global float variable value     (bytes code:v)
+021B: FDD9       (64985)
+021D: 22       Push integer literal     (bytes code:I)
+021E: 0005       (5)
+0220: 86       autoconversion int to float     (bytes code:-)
+0221: 37       Less than equal float     (bytes code:-)
+0222: 7E       Branch if false     (bytes code:D)
+0223: Dest:022D (Dist:000A)
+0225: 0E       Push local/global float variable reference     (bytes code:v)
+0226: FDF1       (65009)
+0228: 22       Push integer literal     (bytes code:I)
+0229: 0002       (2)
+022B: 86       autoconversion int to float     (bytes code:-)
+022C: 80       Assign float     (bytes code:-)
+022D: 0F       Push local/global string variable reference     (bytes code:v)
+022E: FF27       (65319)
+0230: 24       Push string literal     (bytes code:S)
+0231: Len:7
+0232: '  T1.4 '
+0239: 81       Assign string     (bytes code:-)
+023A: 0F       Push local/global string variable reference     (bytes code:v)
+023B: FE5D       (65117)
+023D: 24       Push string literal     (bytes code:S)
+023E: Len:5
+023F: '  T2 '
+0244: 81       Assign string     (bytes code:-)
+0245: 0F       Push local/global string variable reference     (bytes code:v)
+0246: FE54       (65108)
+0248: 24       Push string literal     (bytes code:S)
+0249: Len:7
+024A: '  T2.8 '
+0251: 81       Assign string     (bytes code:-)
+0252: 0F       Push local/global string variable reference     (bytes code:v)
+0253: FE4C       (65100)
+0255: 24       Push string literal     (bytes code:S)
+0256: Len:5
+0257: '  T4 '
+025C: 81       Assign string     (bytes code:-)
+025D: 0F       Push local/global string variable reference     (bytes code:v)
+025E: FE43       (65091)
+0260: 24       Push string literal     (bytes code:S)
+0261: Len:7
+0262: '  T5.6 '
+0269: 81       Assign string     (bytes code:-)
+026A: 0F       Push local/global string variable reference     (bytes code:v)
+026B: FE36       (65078)
+026D: 01       Push local/global float variable value     (bytes code:v)
+026E: FDD9       (64985)
+0270: 01       Push local/global float variable value     (bytes code:v)
+0271: FDF1       (65009)
+0273: 87       autoconversion float to int     (bytes code:-)
+0274: 22       Push integer literal     (bytes code:I)
+0275: 0008       (8)
+0277: BB       FIX$     (bytes code:-)
+0278: 81       Assign string     (bytes code:-)
+0279: 0F       Push local/global string variable reference     (bytes code:v)
+027A: FE29       (65065)
+027C: 01       Push local/global float variable value     (bytes code:v)
+027D: FDD9       (64985)
+027F: 22       Push integer literal     (bytes code:I)
+0280: 0002       (2)
+0282: 86       autoconversion int to float     (bytes code:-)
+0283: 3E       Multiply float     (bytes code:-)
+0284: 01       Push local/global float variable value     (bytes code:v)
+0285: FDF1       (65009)
+0287: 87       autoconversion float to int     (bytes code:-)
+0288: 22       Push integer literal     (bytes code:I)
+0289: 0008       (8)
+028B: BB       FIX$     (bytes code:-)
+028C: 81       Assign string     (bytes code:-)
+028D: 0F       Push local/global string variable reference     (bytes code:v)
+028E: FE1C       (65052)
+0290: 01       Push local/global float variable value     (bytes code:v)
+0291: FDD9       (64985)
+0293: 22       Push integer literal     (bytes code:I)
+0294: 0004       (4)
+0296: 86       autoconversion int to float     (bytes code:-)
+0297: 3E       Multiply float     (bytes code:-)
+0298: 01       Push local/global float variable value     (bytes code:v)
+0299: FDF1       (65009)
+029B: 87       autoconversion float to int     (bytes code:-)
+029C: 22       Push integer literal     (bytes code:I)
+029D: 0008       (8)
+029F: BB       FIX$     (bytes code:-)
+02A0: 81       Assign string     (bytes code:-)
+02A1: 0F       Push local/global string variable reference     (bytes code:v)
+02A2: FE0F       (65039)
+02A4: 01       Push local/global float variable value     (bytes code:v)
+02A5: FDD9       (64985)
+02A7: 22       Push integer literal     (bytes code:I)
+02A8: 0008       (8)
+02AA: 86       autoconversion int to float     (bytes code:-)
+02AB: 3E       Multiply float     (bytes code:-)
+02AC: 01       Push local/global float variable value     (bytes code:v)
+02AD: FDF1       (65009)
+02AF: 87       autoconversion float to int     (bytes code:-)
+02B0: 22       Push integer literal     (bytes code:I)
+02B1: 0008       (8)
+02B3: BB       FIX$     (bytes code:-)
+02B4: 81       Assign string     (bytes code:-)
+02B5: 0F       Push local/global string variable reference     (bytes code:v)
+02B6: FE02       (65026)
+02B8: 01       Push local/global float variable value     (bytes code:v)
+02B9: FDD9       (64985)
+02BB: 22       Push integer literal     (bytes code:I)
+02BC: 0010       (16)
+02BE: 86       autoconversion int to float     (bytes code:-)
+02BF: 3E       Multiply float     (bytes code:-)
+02C0: 01       Push local/global float variable value     (bytes code:v)
+02C1: FDF1       (65009)
+02C3: 87       autoconversion float to int     (bytes code:-)
+02C4: 22       Push integer literal     (bytes code:I)
+02C5: 0008       (8)
+02C7: BB       FIX$     (bytes code:-)
+02C8: 81       Assign string     (bytes code:-)
+02C9: 0F       Push local/global string variable reference     (bytes code:v)
+02CA: FF27       (65319)
+02CC: 02       Push local/global string variable value     (bytes code:v)
+02CD: FF27       (65319)
+02CF: 02       Push local/global string variable value     (bytes code:v)
+02D0: FE36       (65078)
+02D2: 4B       Plus string     (bytes code:-)
+02D3: 02       Push local/global string variable value     (bytes code:v)
+02D4: FE5D       (65117)
+02D6: 4B       Plus string     (bytes code:-)
+02D7: 02       Push local/global string variable value     (bytes code:v)
+02D8: FE29       (65065)
+02DA: 4B       Plus string     (bytes code:-)
+02DB: 02       Push local/global string variable value     (bytes code:v)
+02DC: FE54       (65108)
+02DE: 4B       Plus string     (bytes code:-)
+02DF: 02       Push local/global string variable value     (bytes code:v)
+02E0: FE1C       (65052)
+02E2: 4B       Plus string     (bytes code:-)
+02E3: 02       Push local/global string variable value     (bytes code:v)
+02E4: FE4C       (65100)
+02E6: 4B       Plus string     (bytes code:-)
+02E7: 02       Push local/global string variable value     (bytes code:v)
+02E8: FE0F       (65039)
+02EA: 4B       Plus string     (bytes code:-)
+02EB: 02       Push local/global string variable value     (bytes code:v)
+02EC: FE43       (65091)
+02EE: 4B       Plus string     (bytes code:-)
+02EF: 02       Push local/global string variable value     (bytes code:v)
+02F0: FE02       (65026)
+02F2: 4B       Plus string     (bytes code:-)
+02F3: 81       Assign string     (bytes code:-)
+02F4: 24       Push string literal     (bytes code:S)
+02F5: Len:15
+02F6: 'For exposure...'
+0305: 71       PRINT string     (bytes code:-)
+0306: 73       PRINT newline     (bytes code:-)
+0307: 01       Push local/global float variable value     (bytes code:v)
+0308: FDD1       (64977)
+030A: 70       PRINT float     (bytes code:-)
+030B: 72       PRINT ,     (bytes code:-)
+030C: 24       Push string literal     (bytes code:S)
+030D: Len:3
+030E: 'ASA'
+0311: 71       PRINT string     (bytes code:-)
+0312: 72       PRINT ,     (bytes code:-)
+0313: 01       Push local/global float variable value     (bytes code:v)
+0314: FFF6       (65526)
+0316: 70       PRINT float     (bytes code:-)
+0317: 72       PRINT ,     (bytes code:-)
+0318: 02       Push local/global string variable value     (bytes code:v)
+0319: FFF1       (65521)
+031B: 71       PRINT string     (bytes code:-)
+031C: 72       PRINT ,     (bytes code:-)
+031D: 01       Push local/global float variable value     (bytes code:v)
+031E: FDE1       (64993)
+0320: 70       PRINT float     (bytes code:-)
+0321: 72       PRINT ,     (bytes code:-)
+0322: 22       Push integer literal     (bytes code:I)
+0323: 00DF       (223)
+0325: B8       CHR$     (bytes code:-)
+0326: 71       PRINT string     (bytes code:-)
+0327: 73       PRINT newline     (bytes code:-)
+0328: 22       Push integer literal     (bytes code:I)
+0329: 0001       (1)
+032B: 22       Push integer literal     (bytes code:I)
+032C: 0003       (3)
+032E: 4C       AT     (bytes code:-)
+032F: 24       Push string literal     (bytes code:S)
+0330: Len:12
+0331: 'Footcandles;'
+033D: 71       PRINT string     (bytes code:-)
+033E: 73       PRINT newline     (bytes code:-)
+033F: 22       Push integer literal     (bytes code:I)
+0340: 0004       (4)
+0342: 02       Push local/global string variable value     (bytes code:v)
+0343: FF27       (65319)
+0345: A0       VIEW     (bytes code:-)
+0346: 83       drop integer from stack     (bytes code:-)
+0347: 91       GET     (bytes code:-)
+0348: 83       drop integer from stack     (bytes code:-)
+0349: 0E       Push local/global float variable reference     (bytes code:v)
+034A: FDF9       (65017)
+034C: 24       Push string literal     (bytes code:S)
+034D: Len:20
+034E: 'SHUT,EXPO,FILM,MENU,'
+0362: 98       MENU     (bytes code:-)
+0363: 86       autoconversion int to float     (bytes code:-)
+0364: 80       Assign float     (bytes code:-)
+0365: 01       Push local/global float variable value     (bytes code:v)
+0366: FDF9       (65017)
+0368: 22       Push integer literal     (bytes code:I)
+0369: 0001       (1)
+036B: 86       autoconversion int to float     (bytes code:-)
+036C: 3B       Equal float     (bytes code:-)
+036D: 7E       Branch if false     (bytes code:D)
+036E: Dest:0376 (Dist:0008)
+0370: 51       GOTO     (bytes code:D)
+0371: Dest:0029 (Dist:FFFFFCB8)
+0373: 51       GOTO     (bytes code:D)
+0374: Dest:03A1 (Dist:002D)
+0376: 01       Push local/global float variable value     (bytes code:v)
+0377: FDF9       (65017)
+0379: 22       Push integer literal     (bytes code:I)
+037A: 0002       (2)
+037C: 86       autoconversion int to float     (bytes code:-)
+037D: 3B       Equal float     (bytes code:-)
+037E: 7E       Branch if false     (bytes code:D)
+037F: Dest:038D (Dist:000E)
+0381: 20       Push byte literal     (bytes code:B)
+0382: 00           (0)
+0383: 7D       Procedure call.     (bytes code:S)
+0384: Len:4
+0385: 'EXPO'
+0389: 84       drop float from stack     (bytes code:-)
+038A: 51       GOTO     (bytes code:D)
+038B: Dest:03A1 (Dist:0016)
+038D: 01       Push local/global float variable value     (bytes code:v)
+038E: FDF9       (65017)
+0390: 22       Push integer literal     (bytes code:I)
+0391: 0003       (3)
+0393: 86       autoconversion int to float     (bytes code:-)
+0394: 3B       Equal float     (bytes code:-)
+0395: 7E       Branch if false     (bytes code:D)
+0396: Dest:03A1 (Dist:000B)
+0398: 20       Push byte literal     (bytes code:B)
+0399: 00           (0)
+039A: 7D       Procedure call.     (bytes code:S)
+039B: Len:4
+039C: 'FILM'
+03A0: 84       drop float from stack     (bytes code:-)
+03A1: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 10 57 68 61 74 20 41 53 41 20 69 73 20 
+0010:74 68 65 20 71 73 24 0A 66 69 6C 6D 73 74 6F 63 
+0020:6B 3F 71 73 0E FD D1 6D 4E 24 0D 43 41 4D 45 52 
+0030:41 20 53 50 45 45 44 3B 71 73 0E FD F1 22 00 02 
+0040:24 2D 46 72 61 6D 65 73 2D 70 65 72 2D 73 65 63 
+0050:6F 6E 64 2C 45 78 70 6F 73 75 72 65 2C 53 65 63 
+0060:6F 6E 64 73 2D 70 65 72 2D 66 72 61 6D 65 2C D9 
+0070:86 80 01 FD F1 22 00 02 86 3B 7E 00 31 24 14 45 
+0080:78 70 6F 73 75 72 65 20 69 6E 20 73 65 63 6F 6E 
+0090:64 73 3F 71 73 0E FD C9 6D 0F FF F1 24 03 73 65 
+00A0:63 81 0E FF F6 01 FD C9 80 51 00 DA 01 FD F1 22 
+00B0:00 01 86 3B 7E 00 65 24 12 46 72 61 6D 65 73 20 
+00C0:70 65 72 20 73 65 63 6F 6E 64 3F 71 73 0E FD E9 
+00D0:6D 0F FF F1 24 03 66 70 73 81 0E FF F6 01 FD E9 
+00E0:80 4E 24 10 53 68 75 74 74 65 72 20 61 6E 67 6C 
+00F0:65 20 69 6E 71 73 24 08 64 65 67 72 65 65 73 3F 
+0100:71 73 0E FD E1 6D 0E FD C9 01 FD E1 22 01 68 86 
+0110:01 FD E9 3E 3F 80 4E 51 00 6C 01 FD F1 22 00 03 
+0120:86 3B 7E 00 61 24 12 53 65 63 6F 6E 64 73 20 70 
+0130:65 72 20 66 72 61 6D 65 3F 71 73 0E FD E9 6D 0E 
+0140:FF F6 01 FD E9 80 0F FF F1 24 03 73 70 66 81 4E 
+0150:24 10 53 68 75 74 74 65 72 20 61 6E 67 6C 65 20 
+0160:69 6E 71 73 24 07 64 65 67 72 65 65 73 71 73 0E 
+0170:FD E1 6D 0E FD C9 01 FD E9 01 FD E1 3E 22 01 68 
+0180:86 3F 80 4E 4E 01 FD C9 22 00 01 86 39 01 FD C9 
+0190:22 00 0A 86 36 34 7E 00 11 0E FD C9 01 FD C9 23 
+01A0:02 14 00 3F 80 51 00 3C 01 FD C9 22 00 0A 86 39 
+01B0:01 FD C9 22 00 1E 86 36 34 7E 00 11 0E FD C9 01 
+01C0:FD C9 23 02 28 00 3F 80 51 00 19 01 FD C9 22 00 
+01D0:1E 86 39 7E 00 0E 0E FD C9 01 FD C9 22 00 04 86 
+01E0:3F 80 0E FD C1 22 00 02 86 B3 80 0E FD D9 22 00 
+01F0:19 86 01 FD C1 22 00 02 86 40 3E 01 FD D1 01 FD 
+0200:C9 3E 3F 80 01 FD D9 22 00 05 86 38 7E 00 0D 0E 
+0210:FD F1 22 00 00 86 80 51 00 15 01 FD D9 22 00 05 
+0220:86 37 7E 00 0A 0E FD F1 22 00 02 86 80 0F FF 27 
+0230:24 07 20 20 54 31 2E 34 20 81 0F FE 5D 24 05 20 
+0240:20 54 32 20 81 0F FE 54 24 07 20 20 54 32 2E 38 
+0250:20 81 0F FE 4C 24 05 20 20 54 34 20 81 0F FE 43 
+0260:24 07 20 20 54 35 2E 36 20 81 0F FE 36 01 FD D9 
+0270:01 FD F1 87 22 00 08 BB 81 0F FE 29 01 FD D9 22 
+0280:00 02 86 3E 01 FD F1 87 22 00 08 BB 81 0F FE 1C 
+0290:01 FD D9 22 00 04 86 3E 01 FD F1 87 22 00 08 BB 
+02A0:81 0F FE 0F 01 FD D9 22 00 08 86 3E 01 FD F1 87 
+02B0:22 00 08 BB 81 0F FE 02 01 FD D9 22 00 10 86 3E 
+02C0:01 FD F1 87 22 00 08 BB 81 0F FF 27 02 FF 27 02 
+02D0:FE 36 4B 02 FE 5D 4B 02 FE 29 4B 02 FE 54 4B 02 
+02E0:FE 1C 4B 02 FE 4C 4B 02 FE 0F 4B 02 FE 43 4B 02 
+02F0:FE 02 4B 81 24 0F 46 6F 72 20 65 78 70 6F 73 75 
+0300:72 65 2E 2E 2E 71 73 01 FD D1 70 72 24 03 41 53 
+0310:41 71 72 01 FF F6 70 72 02 FF F1 71 72 01 FD E1 
+0320:70 72 22 00 DF B8 71 73 22 00 01 22 00 03 4C 24 
+0330:0C 46 6F 6F 74 63 61 6E 64 6C 65 73 3B 71 73 22 
+0340:00 04 02 FF 27 A0 83 91 83 0E FD F9 24 14 53 48 
+0350:55 54 2C 45 58 50 4F 2C 46 49 4C 4D 2C 4D 45 4E 
+0360:55 2C 98 86 80 01 FD F9 22 00 01 86 3B 7E 00 08 
+0370:51 FC B8 51 00 2D 01 FD F9 22 00 02 86 3B 7E 00 
+0380:0E 20 00 7D 04 45 58 50 4F 84 51 00 16 01 FD F9 
+0390:22 00 03 86 3B 7E 00 0B 20 00 7D 04 46 49 4C 4D 
+03A0:84 7B 

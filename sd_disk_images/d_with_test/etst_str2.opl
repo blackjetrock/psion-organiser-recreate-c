@@ -1,0 +1,12 @@
+str2%:
+
+local A$(10), c%
+
+A$="The quick brown fox"
+
+C% = ASC(A$)
+
+print c%
+print len(A$)
+print loc(A$, "brown")
+

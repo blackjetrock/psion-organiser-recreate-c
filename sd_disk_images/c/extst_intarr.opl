@@ -1,0 +1,16 @@
+intarr:
+
+LOCAL X%(10)
+
+X%(1) = 1
+X%(2) = 2
+
+X%(3) = x%(1) + x%(2)
+
+print x%(1),x%(2)
+
+if X%(1)=1 and x%(2) = 2 and x%(3)=3
+print "PASS"
+else
+print "FAIL"
+endif

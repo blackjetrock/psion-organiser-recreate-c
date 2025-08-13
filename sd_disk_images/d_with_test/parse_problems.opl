@@ -1,0 +1,13 @@
+prob:
+
+local B%, A%
+local A(4)
+
+print "PC file name:" : trap input buff$
+
+  trap edit FS$
+  
+B%=VIEW(1,"BUT YOU HAVE ONLY "+GEN$(A%,4)+" ACRES.")
+
+A%=-123
+A%(1)=$3F65

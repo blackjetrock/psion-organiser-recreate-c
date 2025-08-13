@@ -1,0 +1,76 @@
+splash:
+
+REM Intro to the game,plays when a new game is started
+
+CLS
+
+AT 7,1
+PRINT "Welcome"
+AT 9,2
+PRINT "to"
+AT 3,3
+PRINT "Psion2Adventure!"
+GET
+CLS
+
+AT 2,1
+PRINT "You hold in your"
+AT 1,2
+PRINT "hand, a portal to a"
+AT 2,3
+PRINT "world of magic and"
+AT 5,4
+PRINT "adventure."
+
+GET
+CLS
+
+AT 1,1
+PRINT "You will travel over"
+AT 2,2
+PRINT "these lands using"
+AT 1,3
+PRINT "this strange device"
+AT 5,4
+PRINT "before you."
+
+GET
+CLS
+
+AT 2,1
+PRINT "The '*' on the map"
+AT 2,2
+PRINT "is you. Move using"
+AT 3,3
+PRINT "the arrow keys"
+
+GET
+CLS
+
+AT 2,1
+PRINT "Open your menu by"
+AT 4,2
+PRINT "pressing MODE"
+
+GET
+CLS
+
+AT 3,1
+PRINT "You are able to"
+AT 2,2
+PRINT "save your progress"
+AT 5,3
+PRINT "in the menu!"
+
+GET
+CLS
+
+AT 6,2
+PRINT "Good luck"
+AT 5,3
+PRINT "adventurer!"
+
+GET
+CLS
+
+

@@ -163,6 +163,7 @@ CMakeFiles/psion_recreate_ctusb.dir/serial.c.o: \
  /home/menadue/tree/github/psion-organiser-recreate-c/no-OS-FatFS-SD-SDIO-SPI-RPi-Pico/src/include/my_debug.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_exec.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_trans.h \
+ /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_objdump.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/newopl_lib.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/qcode.h \
  /home/menadue/tree/github/psion-organiser-recreate-c/psion_recreate_tiny_2_pico2/errors.h \

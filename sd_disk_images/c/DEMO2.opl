@@ -1,0 +1,228 @@
+DEMO2:
+REM CM/XP procedure
+GLOBAL SCRLP%
+LOCAL L1$(1),X1$(45),L2%,L3%,L4%,L5%,L6%,L7%,L8%,L9%
+
+UDG:(0,31,10,10,10,10,10,31,0)
+UDG:(1,0,0,17,17,14,0,31,0)
+UDG:(2,0,0,0,10,17,17,10,0)
+UDG:(3,0,0,0,0,14,0,14,0)
+UDG:(4,0,0,0,27,4,4,27,0)
+UDG:(5,0,0,24,0,31,0,31,0)
+UDG:(6,6,9,8,28,8,30,25,0)
+SCRLP%=3
+L2%=20
+L6%=14
+L7%=L2%*5
+L3%=40
+L4%=30
+L5%=200
+L8%=500
+L9%=2000
+CLS
+L1$=CHR$(11)
+AT 16,1
+PRINT "O"
+PAUSE SCRLP%
+AT 15,1
+PRINT "OR"
+PAUSE SCRLP%
+AT 14,1
+PRINT "ORG"
+PAUSE SCRLP%
+PRINT L1$;"N           ORGA"
+PAUSE SCRLP%
+PRINT L1$;"ON         ORGAN"
+PAUSE SCRLP%
+PRINT L1$;"ION       ORGANI"
+PAUSE SCRLP%
+PRINT L1$;"SION     ORGANIS"
+PAUSE SCRLP%
+PRINT L1$;"PSION   ORGANISE"
+PAUSE SCRLP%
+PRINT L1$;"PSION  ORGANISER"
+PAUSE SCRLP%
+PRINT L1$;"PSION ORGANISER"+CHR$(0)
+PAUSE SCRLP%
+AT 1,1
+L1$=CHR$(15)
+SCROLL:(2,0,"Everything you need in the palm of your hand")
+PAUSE L4%
+AT 1,2
+PRINT L1$;"appointments";
+BEEP L7%,L8%
+PAUSE L2%
+PRINT L1$;"phone numbers";
+BEEP L7%,L8%
+PAUSE L2%
+PRINT L1$;"price lists";
+BEEP L7%,L8%
+PAUSE 16
+PRINT L1$;"travel info";
+BEEP L7%,L8%
+PAUSE 16
+PRINT L1$;"expenses";
+BEEP L7%,L8%
+PAUSE 16
+PRINT L1$;"notes";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"calculations";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"budgets";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"clock";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"alarms";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"programs";
+BEEP L7%,L8%
+PAUSE L6%
+CLS
+PRINT "Short messages:"
+PAUSE L4%
+CLS
+PRINT "BA 1023: 10 am"
+PRINT "Terminal 4"
+PAUSE L4%
+CLS
+PRINT "Anniversary"
+PRINT "Friday 19th May"
+PAUSE L4%
+CLS
+SCROLL:(1,0,"or entries up to 16 lines long!")
+PAUSE L4%
+CLS
+PRINT "MASSIVE MEMORY"
+SCROLL:(2,0,"Store and recall 100s of entries, or plug in Datapaks for 1000s")
+PAUSE L4%
+CLS
+PRINT "DIARY"
+BEEP L5%,L9%
+SCROLL:(2,0,"Appointments every half hour and bleeps to remind you!")
+PAUSE L3%
+CLS
+PRINT "APR:05:MON:10.30";"Budget Meeting"
+BEEP 50,200
+PAUSE 8
+BEEP 50,200
+PAUSE 8
+BEEP 50,200
+PAUSE 8
+BEEP 50,200
+PAUSE 8
+PAUSE 10
+CLS
+PRINT "CALCULATOR"
+BEEP L5%,L9%
+SCROLL:(2,0,"Powerful and scientific")
+PAUSE L4%
+AT 2,1
+PRINT L1$;"50 functions";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"10 memories";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"12 dig accuracy";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Shows input"
+BEEP L7%,L8%
+PAUSE L6%
+CLS
+PRINT "3";
+PAUSE 4
+PRINT ".";
+PAUSE 4
+PRINT "6";
+PAUSE 4
+PRINT " ";
+PAUSE 4
+PRINT "*";
+PAUSE 4
+PRINT " ";
+PAUSE 4
+PRINT "p";
+PAUSE 4
+PRINT "i";
+PAUSE 4
+PRINT "/";
+PAUSE 4
+PRINT "2"
+PAUSE 4
+PAUSE L2%
+PRINT "=";3.6*PI/2
+PAUSE L4%+L4%
+CLS
+PRINT "PROGRAMMABLE"
+BEEP L2%,L9%
+SCROLL:(2,0,"Unique powerful OPL language, eg:")
+PAUSE L4%
+CLS
+PRINT "name:"
+PRINT "local a%(16)"
+PAUSE L2%
+PRINT "print "+CHR$(34)+"name:"+CHR$(34)
+PAUSE L2%
+PRINT "input a$"
+PAUSE L2%
+PRINT "view(1,a$)"
+PAUSE L2%
+PAUSE L4%
+CLS
+PRINT "PROGRAM PACKS"
+BEEP L5%,L9%
+SCROLL:(2,0,"Plug in specialised software")
+AT 1,2
+PRINT L1$;"Finance Pack";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Maths Pack";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Spell Checker";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Spreadsheet";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Formulator";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Travel Pack";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Pure Finance";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"Portfolio";
+BEEP L7%,L8%
+PAUSE L6%
+PRINT L1$;"and many more";
+BEEP L7%,L8%
+PAUSE L6%
+PAUSE L4%
+CLS
+PRINT "COMMUNICATIONS"
+BEEP L5%,L9%
+SCROLL:(2,0,"Links to PCs, printers and modems")
+PAUSE L4%
+CLS
+PRINT "Ask for further"
+PRINT "    details"
+PAUSE 50
+CLS
+PRINT "PSION ORGANISER"+CHR$(0);"Life Simplified"
+PAUSE 50
+CLS
+AT 6,1
+PRINT CHR$(1);CHR$(2);CHR$(3);CHR$(4);CHR$(5)
+AT 6,2
+PRINT "PSION"
+BEEP 1000,L8%
+PAUSE 50

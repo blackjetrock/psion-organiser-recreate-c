@@ -1,0 +1,47 @@
+comp%:
+
+local A%, R%
+
+R% = 0
+
+if 90 > 135
+  print "90 > 135"
+  r% = r% + 1
+endif
+
+if -90 > -135
+  print "-90 > -135"
+  r% = r% + 1
+endif
+
+if 1 > -2
+  print "1 > -2"
+  r% = r% + 1
+endif
+
+if 2 > 1
+  r% = r% + 1
+endif
+
+if 1 >= 2
+  r% = r% + 1
+endif
+
+if 1 <= 2
+  r% = r% + 1
+endif
+
+if r% = r%
+  r% = r% + 1
+endif
+
+if r% <> R%
+  r% = r% + 1
+endif
+
+print r%
+print r%
+if r% = 5
+  print "PASS"
+endif
+

@@ -1,0 +1,69 @@
+delfile:
+LOCAL recnum%,find$(32),key%
+KSTAT 1
+loop1::
+PRINT "Delete whole"
+PRINT "File? Y/N"
+key% = GET
+IF key% <> %Y AND key% <> %N
+  GOTO loop1::
+ELSEIF key% = %Y
+  CLOSE
+  DELETE "A:product"
+  RETURN
+ENDIF
+
+loop2::
+PRINT "Delete 1 line?"
+PRINT "Y/N:"
+key% = GET
+IF key% <> %Y AND key% <> %N
+  GOTO loop2::
+ELSEIF key% = %Y
+  FIRST
+  CLS
+  PRINT "Type in search"
+  PRINT "string:";
+  INPUT find$
+  recnum% = FIND(find$)
+  IF recnum% = 0
+    CLS
+    PRINT "Not found"
+    PAUSE 20
+    CLOSE
+    RETURN
+  ENDIF
+
+  DO
+    yesno::
+    KSTAT 1
+    CLS
+    AT 1,2
+    PRINT "Delete line? Y/N"
+    key% = VIEW(1,A.barcode$)
+    IF key% = 1
+      CLOSE
+      RETURN
+    ENDIF
+    IF key% <> %Y AND key% <> %N
+      GOTO yesno::
+    ELSEIF key% = %Y
+      ERASE
+    ELSEIF key% = %N
+      NEXT
+      recnum% = FIND(find$)
+      IF recnum% = 0
+        CLS
+        PRINT "Not found"
+        PAUSE 20
+        CLOSE
+        RETURN
+      ENDIF
+    ELSEIF key% < 32
+      CLOSE
+      RETURN
+    ENDIF
+  UNTIL EOF
+ENDIF
+CLOSE
+RETURN

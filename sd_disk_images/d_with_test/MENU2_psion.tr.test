@@ -1,0 +1,169 @@
+
+Filename:'MENU2'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000F
+QCode Space Size:00E9
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFFB 01
+
+Array size fixups (1)
+ 0: FFF5 0002
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 4E       CLS     (bytes code:-)
+0003: 24       Push string literal     (bytes code:S)
+0004: Len:15
+0005: ' Demonstration?'
+0014: 71       PRINT string     (bytes code:-)
+0015: 73       PRINT newline     (bytes code:-)
+0016: 24       Push string literal     (bytes code:S)
+0017: Len:14
+0018: '  press Y or N'
+0026: 71       PRINT string     (bytes code:-)
+0027: 73       PRINT newline     (bytes code:-)
+0028: 0F       Push local/global string variable reference     (bytes code:v)
+0029: FFFC       (65532)
+002B: BD       GET$     (bytes code:-)
+002C: 81       Assign string     (bytes code:-)
+002D: 02       Push local/global string variable value     (bytes code:v)
+002E: FFFC       (65532)
+0030: C7       UPPER$     (bytes code:-)
+0031: 24       Push string literal     (bytes code:S)
+0032: Len:1
+0033: 'Y'
+0034: 4A       Equal string     (bytes code:-)
+0035: 7E       Branch if false     (bytes code:D)
+0036: Dest:00E7 (Dist:00B1)
+0038: 53       ONERR     (bytes code:D)
+0039: Dest:0054 (Dist:001B)
+003B: 22       Push integer literal     (bytes code:I)
+003C: 0000       (0)
+003E: 20       Push byte literal     (bytes code:B)
+003F: 00           (0)
+0040: 22       Push integer literal     (bytes code:I)
+0041: 0001       (1)
+0043: 20       Push byte literal     (bytes code:B)
+0044: 00           (0)
+0045: 20       Push byte literal     (bytes code:B)
+0046: 02           (2)
+0047: 7D       Procedure call.     (bytes code:S)
+0048: Len:7
+0049: 'LINPUT$'
+0050: 85       drop string from stack     (bytes code:-)
+0051: 51       GOTO     (bytes code:D)
+0052: Dest:005E (Dist:000C)
+0054: 0D       Push local/global integer variable reference     (bytes code:v)
+0055: FFF3       (65523)
+0057: 22       Push integer literal     (bytes code:I)
+0058: 0000       (0)
+005A: 7F       Assign integer     (bytes code:-)
+005B: 51       GOTO     (bytes code:D)
+005C: Dest:0066 (Dist:000A)
+005E: 0D       Push local/global integer variable reference     (bytes code:v)
+005F: FFF3       (65523)
+0061: 22       Push integer literal     (bytes code:I)
+0062: 0001       (1)
+0064: 32       unary minus integer     (bytes code:-)
+0065: 7F       Assign integer     (bytes code:-)
+0066: 53       ONERR     (bytes code:D)
+0067: Dest:007D (Dist:0016)
+0069: 22       Push integer literal     (bytes code:I)
+006A: 0001       (1)
+006C: 20       Push byte literal     (bytes code:B)
+006D: 00           (0)
+006E: 20       Push byte literal     (bytes code:B)
+006F: 01           (1)
+0070: 7D       Procedure call.     (bytes code:S)
+0071: Len:7
+0072: 'XPRINT%'
+0079: 83       drop integer from stack     (bytes code:-)
+007A: 51       GOTO     (bytes code:D)
+007B: Dest:0087 (Dist:000C)
+007D: 0D       Push local/global integer variable reference     (bytes code:v)
+007E: FFF1       (65521)
+0080: 22       Push integer literal     (bytes code:I)
+0081: 0000       (0)
+0083: 7F       Assign integer     (bytes code:-)
+0084: 51       GOTO     (bytes code:D)
+0085: Dest:008F (Dist:000A)
+0087: 0D       Push local/global integer variable reference     (bytes code:v)
+0088: FFF1       (65521)
+008A: 22       Push integer literal     (bytes code:I)
+008B: 0001       (1)
+008D: 32       unary minus integer     (bytes code:-)
+008E: 7F       Assign integer     (bytes code:-)
+008F: 53       ONERR     (bytes code:D)
+0090: Dest:0090 (Dist:0000)
+0092: 00       Push local/global integer variable value     (bytes code:v)
+0093: FFF1       (65521)
+0095: 7E       Branch if false     (bytes code:D)
+0096: Dest:00A5 (Dist:000F)
+0098: 20       Push byte literal     (bytes code:B)
+0099: 00           (0)
+009A: 7D       Procedure call.     (bytes code:S)
+009B: Len:5
+009C: 'PDEMO'
+00A1: 84       drop float from stack     (bytes code:-)
+00A2: 51       GOTO     (bytes code:D)
+00A3: Dest:00E4 (Dist:0041)
+00A5: 00       Push local/global integer variable value     (bytes code:v)
+00A6: FFF3       (65523)
+00A8: 7E       Branch if false     (bytes code:D)
+00A9: Dest:00DA (Dist:0031)
+00AB: 4E       CLS     (bytes code:-)
+00AC: 24       Push string literal     (bytes code:S)
+00AD: Len:15
+00AE: 'Comms Link demo'
+00BD: 71       PRINT string     (bytes code:-)
+00BE: 73       PRINT newline     (bytes code:-)
+00BF: 24       Push string literal     (bytes code:S)
+00C0: Len:16
+00C1: 'for LZ+LZ64 only'
+00D1: 71       PRINT string     (bytes code:-)
+00D2: 22       Push integer literal     (bytes code:I)
+00D3: 0064       (100)
+00D5: 32       unary minus integer     (bytes code:-)
+00D6: 54       PAUSE     (bytes code:-)
+00D7: 51       GOTO     (bytes code:D)
+00D8: Dest:00E4 (Dist:000C)
+00DA: 20       Push byte literal     (bytes code:B)
+00DB: 00           (0)
+00DC: 7D       Procedure call.     (bytes code:S)
+00DD: Len:5
+00DE: 'DEMO2'
+00E3: 84       drop float from stack     (bytes code:-)
+00E4: 51       GOTO     (bytes code:D)
+00E5: Dest:00E8 (Dist:0003)
+00E7: 7B       RETURN (float 0)     (bytes code:-)
+00E8: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 4E 24 0F 20 44 65 6D 6F 6E 73 74 72 61 74 
+0010:69 6F 6E 3F 71 73 24 0E 20 20 70 72 65 73 73 20 
+0020:59 20 6F 72 20 4E 71 73 0F FF FC BD 81 02 FF FC 
+0030:C7 24 01 59 4A 7E 00 B1 53 00 1B 22 00 00 20 00 
+0040:22 00 01 20 00 20 02 7D 07 4C 49 4E 50 55 54 24 
+0050:85 51 00 0C 0D FF F3 22 00 00 7F 51 00 0A 0D FF 
+0060:F3 22 00 01 32 7F 53 00 16 22 00 01 20 00 20 01 
+0070:7D 07 58 50 52 49 4E 54 25 83 51 00 0C 0D FF F1 
+0080:22 00 00 7F 51 00 0A 0D FF F1 22 00 01 32 7F 53 
+0090:00 00 00 FF F1 7E 00 0F 20 00 7D 05 50 44 45 4D 
+00A0:4F 84 51 00 41 00 FF F3 7E 00 31 4E 24 0F 43 6F 
+00B0:6D 6D 73 20 4C 69 6E 6B 20 64 65 6D 6F 71 73 24 
+00C0:10 66 6F 72 20 4C 5A 2B 4C 5A 36 34 20 6F 6E 6C 
+00D0:79 71 22 00 64 32 54 51 00 0C 20 00 7D 05 44 45 
+00E0:4D 4F 32 84 51 00 03 7B 7B 

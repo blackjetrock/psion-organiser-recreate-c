@@ -1,0 +1,17 @@
+k1:
+
+local k%
+
+k% = 0
+
+while k% <> 1
+k% = key
+PRINT K%
+if k% <> 0
+print "Key";k%
+endif
+
+endwh
+
+print "Done"
+ge

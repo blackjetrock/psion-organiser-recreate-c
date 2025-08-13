@@ -1,0 +1,700 @@
+cat exec_db.txt  uSD card is already mounted
+
+
+Opening 'exec_db.txt'
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 24 at 3C70
+(execute_qcode)rta_sp:3C70 rta_fp:3EF6 rta_pc:3C71 qcode:24 QI_STR_CON
+(execute_qcode)Executing QI_STR_CON
+
+(qcode_next_8)qcode_next_8: 06 at 3C71
+(qca_str_qc_con)  Len:6
+(qcode_next_8)qcode_next_8: 42 at 3C72
+(qcode_next_8)qcode_next_8: 3A at 3C73
+(qcode_next_8)qcode_next_8: 54 at 3C74
+(qcode_next_8)qcode_next_8: 45 at 3C75
+(qcode_next_8)qcode_next_8: 53 at 3C76
+(qcode_next_8)qcode_next_8: 54 at 3C77
+(execute_qcode)rta_sp:3C69 rta_fp:3EF6 rta_pc:3C78 qcode:24 QI_STR_CON
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 65 at 3C78
+(execute_qcode)rta_sp:3C69 rta_fp:3EF6 rta_pc:3C79 qcode:65 QCO_OPEN
+(execute_qcode)Executing QCO_OPEN
+
+(qcode_next_8)qcode_next_8: 02 at 3C79
+(qcode_next_8)qcode_next_8: 01 at 3C7A
+(qcode_next_8)qcode_next_8: 04 at 3C7B
+(qcode_next_8)qcode_next_8: 54 at 3C7C
+(qcode_next_8)qcode_next_8: 45 at 3C7D
+(qcode_next_8)qcode_next_8: 53 at 3C7E
+(qcode_next_8)qcode_next_8: 54 at 3C7F
+(qcode_next_8)qcode_next_8: 01 at 3C80
+(qcode_next_8)qcode_next_8: 06 at 3C81
+(qcode_next_8)qcode_next_8: 53 at 3C82
+(qcode_next_8)qcode_next_8: 45 at 3C83
+(qcode_next_8)qcode_next_8: 43 at 3C84
+(qcode_next_8)qcode_next_8: 4F at 3C85
+(qcode_next_8)qcode_next_8: 4E at 3C86
+(qcode_next_8)qcode_next_8: 44 at 3C87
+(qcode_next_8)qcode_next_8: 01 at 3C88
+(qcode_next_8)qcode_next_8: 05 at 3C89
+(qcode_next_8)qcode_next_8: 54 at 3C8A
+(qcode_next_8)qcode_next_8: 48 at 3C8B
+(qcode_next_8)qcode_next_8: 49 at 3C8C
+(qcode_next_8)qcode_next_8: 52 at 3C8D
+(qcode_next_8)qcode_next_8: 44 at 3C8E
+(qcode_next_8)qcode_next_8: 88 at 3C8F
+(qca_create_open)OPEN
+(qca_create_open)Logfile:2
+(pk_open)Opening 'B:TEST'
+(execute_qcode)rta_sp:3C70 rta_fp:3EF6 rta_pc:3C90 qcode:65 QCO_OPEN
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 24 at 3C90
+(execute_qcode)rta_sp:3C70 rta_fp:3EF6 rta_pc:3C91 qcode:24 QI_STR_CON
+(execute_qcode)Executing QI_STR_CON
+
+(qcode_next_8)qcode_next_8: 04 at 3C91
+(qca_str_qc_con)  Len:4
+(qcode_next_8)qcode_next_8: 54 at 3C92
+(qcode_next_8)qcode_next_8: 45 at 3C93
+(qcode_next_8)qcode_next_8: 53 at 3C94
+(qcode_next_8)qcode_next_8: 54 at 3C95
+(execute_qcode)rta_sp:3C6B rta_fp:3EF6 rta_pc:3C96 qcode:24 QI_STR_CON
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 1E at 3C96
+(execute_qcode)rta_sp:3C6B rta_fp:3EF6 rta_pc:3C97 qcode:1E QI_LS_NUM_FLD
+(execute_qcode)Executing QI_LS_NUM_FLD
+
+(qcode_next_8)qcode_next_8: 02 at 3C97
+(execute_qcode)rta_sp:3C69 rta_fp:3EF6 rta_pc:3C98 qcode:1E QI_LS_NUM_FLD
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 23 at 3C98
+(execute_qcode)rta_sp:3C69 rta_fp:3EF6 rta_pc:3C99 qcode:23 QI_NUM_CON
+(execute_qcode)Executing QI_NUM_CON
+
+(qcode_next_8)qcode_next_8: 03 at 3C99
+(qca_num_qc_con)n:3
+(qcode_next_8)qcode_next_8: 20 at 3C9A
+(qcode_next_8)qcode_next_8: 34 at 3C9B
+(qca_num_qc_con)Byte 0: j:1 digit:(200424B0)
+(qca_num_qc_con)Byte 1: j:0 digit:(200424B0)
+(qcode_next_8)qcode_next_8: 01 at 3C9C
+(qca_num_qc_con)Sign:0 (00) Exponent:1 (01)
+(execute_qcode)rta_sp:3C61 rta_fp:3EF6 rta_pc:3C9D qcode:23 QI_NUM_CON
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 80 at 3C9D
+(execute_qcode)rta_sp:3C61 rta_fp:3EF6 rta_pc:3C9E qcode:80 QCO_ASS_STR
+(execute_qcode)Executing QCO_ASS_STR
+
+(qca_ass_str)field flg:1
+(execute_qcode)rta_sp:3C65 rta_fp:3EF6 rta_pc:3C9E qcode:80 QCO_ASS_STR
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 24 at 3C9E
+(execute_qcode)rta_sp:3C65 rta_fp:3EF6 rta_pc:3C9F qcode:24 QI_STR_CON
+(execute_qcode)Executing QI_STR_CON
+
+(qcode_next_8)qcode_next_8: 06 at 3C9F
+(qca_str_qc_con)  Len:6
+(qcode_next_8)qcode_next_8: 53 at 3CA0
+(qcode_next_8)qcode_next_8: 45 at 3CA1
+(qcode_next_8)qcode_next_8: 43 at 3CA2
+(qcode_next_8)qcode_next_8: 4F at 3CA3
+(qcode_next_8)qcode_next_8: 4E at 3CA4
+(qcode_next_8)qcode_next_8: 44 at 3CA5
+(execute_qcode)rta_sp:3C5E rta_fp:3EF6 rta_pc:3CA6 qcode:24 QI_STR_CON
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 1E at 3CA6
+(execute_qcode)rta_sp:3C5E rta_fp:3EF6 rta_pc:3CA7 qcode:1E QI_LS_NUM_FLD
+(execute_qcode)Executing QI_LS_NUM_FLD
+
+(qcode_next_8)qcode_next_8: 02 at 3CA7
+(execute_qcode)rta_sp:3C5C rta_fp:3EF6 rta_pc:3CA8 qcode:1E QI_LS_NUM_FLD
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 23 at 3CA8
+(execute_qcode)rta_sp:3C5C rta_fp:3EF6 rta_pc:3CA9 qcode:23 QI_NUM_CON
+(execute_qcode)Executing QI_NUM_CON
+
+(qcode_next_8)qcode_next_8: 04 at 3CA9
+(qca_num_qc_con)n:4
+(qcode_next_8)qcode_next_8: 50 at 3CAA
+(qcode_next_8)qcode_next_8: 34 at 3CAB
+(qcode_next_8)qcode_next_8: 12 at 3CAC
+(qca_num_qc_con)Byte 0: j:2 digit:(200424B0)
+(qca_num_qc_con)Byte 1: j:1 digit:(200424B0)
+(qca_num_qc_con)Byte 2: j:0 digit:(200424B0)
+(qcode_next_8)qcode_next_8: 03 at 3CAD
+(qca_num_qc_con)Sign:0 (00) Exponent:3 (03)
+(execute_qcode)rta_sp:3C54 rta_fp:3EF6 rta_pc:3CAE qcode:23 QI_NUM_CON
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 80 at 3CAE
+(execute_qcode)rta_sp:3C54 rta_fp:3EF6 rta_pc:3CAF qcode:80 QCO_ASS_STR
+(execute_qcode)Executing QCO_ASS_STR
+
+(qca_ass_str)field flg:3
+(execute_qcode)rta_sp:3C58 rta_fp:3EF6 rta_pc:3CAF qcode:80 QCO_ASS_STR
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 24 at 3CAF
+(execute_qcode)rta_sp:3C58 rta_fp:3EF6 rta_pc:3CB0 qcode:24 QI_STR_CON
+(execute_qcode)Executing QI_STR_CON
+
+(qcode_next_8)qcode_next_8: 05 at 3CB0
+(qca_str_qc_con)  Len:5
+(qcode_next_8)qcode_next_8: 54 at 3CB1
+(qcode_next_8)qcode_next_8: 48 at 3CB2
+(qcode_next_8)qcode_next_8: 49 at 3CB3
+(qcode_next_8)qcode_next_8: 52 at 3CB4
+(qcode_next_8)qcode_next_8: 44 at 3CB5
+(execute_qcode)rta_sp:3C52 rta_fp:3EF6 rta_pc:3CB6 qcode:24 QI_STR_CON
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 1E at 3CB6
+(execute_qcode)rta_sp:3C52 rta_fp:3EF6 rta_pc:3CB7 qcode:1E QI_LS_NUM_FLD
+(execute_qcode)Executing QI_LS_NUM_FLD
+
+(qcode_next_8)qcode_next_8: 02 at 3CB7
+(execute_qcode)rta_sp:3C50 rta_fp:3EF6 rta_pc:3CB8 qcode:1E QI_LS_NUM_FLD
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 23 at 3CB8
+(execute_qcode)rta_sp:3C50 rta_fp:3EF6 rta_pc:3CB9 qcode:23 QI_NUM_CON
+(execute_qcode)Executing QI_NUM_CON
+
+(qcode_next_8)qcode_next_8: 03 at 3CB9
+(qca_num_qc_con)n:3
+(qcode_next_8)qcode_next_8: 33 at 3CBA
+(qcode_next_8)qcode_next_8: 13 at 3CBB
+(qca_num_qc_con)Byte 0: j:1 digit:(200424B0)
+(qca_num_qc_con)Byte 1: j:0 digit:(200424B0)
+(qcode_next_8)qcode_next_8: 00 at 3CBC
+(qca_num_qc_con)Sign:0 (00) Exponent:0 (00)
+(execute_qcode)rta_sp:3C48 rta_fp:3EF6 rta_pc:3CBD qcode:23 QI_NUM_CON
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 80 at 3CBD
+(execute_qcode)rta_sp:3C48 rta_fp:3EF6 rta_pc:3CBE qcode:80 QCO_ASS_STR
+(execute_qcode)Executing QCO_ASS_STR
+
+(qca_ass_str)field flg:0
+(qca_ass_str)Str addr:0000
+(qca_ass_str)Max len:0
+(execute_qcode)rta_sp:3C4C rta_fp:3EF6 rta_pc:3CBE qcode:80 QCO_ASS_STR
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 0E at 3CBE
+(execute_qcode)rta_sp:3C4C rta_fp:3EF6 rta_pc:3CBF qcode:0E QI_LS_NUM_SIM_FP
+(execute_qcode)Executing QI_LS_NUM_SIM_FP
+
+(qcode_next_16)PC:3CBF
+(qcode_next_16)val:FFEE
+(qca_fp)ind ptr:FFEE
+(qca_fp)ind_ptr: 3EE4
+(execute_qcode)rta_sp:3C49 rta_fp:3EF6 rta_pc:3CC1 qcode:0E QI_LS_NUM_SIM_FP
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 00 at 3CC1
+(execute_qcode)rta_sp:3C49 rta_fp:3EF6 rta_pc:3CC2 qcode:00 QI_INT_SIM_FP
+(execute_qcode)Executing QI_INT_SIM_FP
+
+(qcode_next_16)PC:3CC2
+(qcode_next_16)val:0A20
+(qca_fp)ind ptr:0A20
+(qca_fp)ind_ptr: 4916
+(qca_push_int_at_ind)val=0 (0000)
+(execute_qcode)rta_sp:3C47 rta_fp:3EF6 rta_pc:3CC4 qcode:00 QI_INT_SIM_FP
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 34 at 3CC4
+(execute_qcode)rta_sp:3C47 rta_fp:3EF6 rta_pc:3CC5 qcode:34 QCO_AND_INT
+(execute_qcode)Executing QCO_AND_INT
+
+(qca_pop_2int)Int:0 (0000) Int2:7475 (1D33)
+(qca_pop_2int)Int:0 (0000) Int2:62 (003E)
+(qca_and_int)Int:0 (0000) + Int2:62 (003E) = 0 (0000)
+(qca_push_result)res:0 (0000)
+(execute_qcode)rta_sp:3C49 rta_fp:3EF6 rta_pc:3CC5 qcode:34 QCO_AND_INT
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode 01 at 3CC5
+(execute_qcode)rta_sp:3C49 rta_fp:3EF6 rta_pc:3CC6 qcode:01 QI_NUM_SIM_FP
+(execute_qcode)Executing QI_NUM_SIM_FP
+
+(qcode_next_16)PC:3CC6
+(qcode_next_16)val:800E
+(qca_fp)ind ptr:800E
+(qca_fp)ind_ptr: BF04
+(execute_qcode)rta_sp:3C41 rta_fp:3EF6 rta_pc:3CC8 qcode:01 QI_NUM_SIM_FP
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode FF at 3CC8
+(execute_qcode)rta_sp:3C41 rta_fp:3EF6 rta_pc:3CC9 qcode:FF RTF_FF
+(execute_qcode)Executing RTF_FF
+
+(execute_qcode)rta_sp:3C41 rta_fp:3EF6 rta_pc:3CC9 qcode:FF RTF_FF
+(execute_qcode)
+--------------------------------------------------------------------------------
+
+(execute_qcode)Executing QCode E6 at 3CC9
+(execute_qcode)rta_sp:3C41 rta_fp:3EF6 rta_pc:3CCA qcode:E6 RTF_MONTHSTR
+(execute_qcode)Executing RTF_MONTHSTR
+
+(execute_qcode)Error occurred
+(execute_qcode)No ONERR handler defined
+(runtime_error_print)Runtime error: error code: 310 ***
+(runtime_error_print)
+*** Internal compiler error ***
+
+(runtime_error_print)
+Month number out of range
+
+(runtime_error_print)
+Month 0 out of range
+
+A: RECT:0 RECNO:0 ADD:00000000 LVADP:20042A5C>cat intcode.txt  uSD card is already mounted
+
+
+Opening 'intcode.txt'
+QCode idx:0066  --++  files0:  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U 'PROCDEF' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+Header built qcode_idx:000F
+QCode idx:0002  --++  local total  --++
+QCode idx:0002  --++  local total  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U ' LOCAL' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N002       Read EXP_BUFF_ID_FUNCTION                   ty:f qcty:U 'DROP' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0002  --++  local a,b,c,t  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U ' LOCAL' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'T' npar:0 nidx:0 trapped:0 %:0  0: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+N005       Read EXP_BUFF_ID_FUNCTION                   ty:f qcty:U 'DROP' npar:0 nidx:0 trapped:0 %:0  0: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+
+QCode idx:0002  --++  local ab,bc,ac  --++
+N001       Read EXP_BUFF_ID_META                       ty:U qcty:U ' LOCAL' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AB' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'BC' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N004       Read EXP_BUFF_ID_FUNCTION                   ty:f qcty:U 'DROP' npar:0 nidx:0 trapped:0 %:0  0: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:0002  --++  open "B:TEST", C, test, second, third  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"B:TEST"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_META                       ty:s qcty:U ' OPEN' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_LOGICALFILE                ty:s qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004   Fieldvar EXP_BUFF_ID_FIELDVAR                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005   Fieldvar EXP_BUFF_ID_FIELDVAR                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+N006   Fieldvar EXP_BUFF_ID_FIELDVAR                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0: 5 4 134916778 -1549227512 -1433501014 -1565869317 -1192351190 -1363940696 -1565906006 -357897542 -1433761109 -1430607154 -609243478 -903300886 582722315 715301032 -1383423046 -1599157334 -1895912824 -2035373398  nb 0:()
+N007       Read EXP_BUFF_ID_META                       ty:s qcty:U 'ENDFIELDS' npar:0 nidx:0 trapped:0 %:0  2: 6 1 -1433489527 -1432176466 -1951667528 -1427461937 -1970665334 -90004753 -1431393784 -1141462342 -1360146753 -1163201874 -905278962 -1464718662 134916778 -1543722486 -1433501014 -1565869319 -1326568918 -1359483992  nb 0:()
+
+QCode idx:0022  --++  c.test = 34.2  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '34.2' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+
+QCode idx:0030  --++  c.second = 1234.5  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1234.5' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+
+QCode idx:0041  --++  c.third  = 1.333  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1.333' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+
+QCode idx:0050  --++  a = 34.2  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '34.2' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+
+QCode idx:0059  --++  b = 1234.5  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1234.5' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+
+QCode idx:0063  --++  c  = 1.333  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1.333' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+
+QCode idx:006C  --++  t = a+b+c  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'T' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+N006       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 5 4 134916778 -1549227512 -1433501014 -1565869317 -1192351190 -1363940696 -1565906006 -357897542 -1433761109 -1430607154 -609243478 -903300886 582722315 715301032 -1383423046 -1599157334 -1895912824 -2035373398  nb 0:()
+N007       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 6 1 -1433489527 -1432176466 -1951667528 -1427461937 -1970665334 -90004753 -1431393784 -1141462342 -1360146753 -1163201874 -905278962 -1464718662 134916778 -1543722486 -1433501014 -1565869319 -1326568918 -1359483992  nb 0:()
+
+QCode idx:007B  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:007F  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0080  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0084  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0085  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0089  --++  print a,b,c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:008A  --++  print a,b,c  --++
+QCode idx:008A  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"T="' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:008F  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0090  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'T' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0094  --++  print "T=", t  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0095  --++  print "T=", t  --++
+QCode idx:0095  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"a+b"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:009B  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:009C  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:00A4  --++  print "a+b", a+b  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:00A5  --++  print "a+b", a+b  --++
+QCode idx:00A5  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"b+c"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:00AB  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:00AC  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:00B4  --++  print "b+c", b+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:00B5  --++  print "b+c", b+c  --++
+QCode idx:00B5  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"a+c"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:00BB  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:00BC  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:00C4  --++  print "a+c", a+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:00C5  --++  print "a+c", a+c  --++
+QCode idx:00C5  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"(a+b)+c"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:00CF  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:00D0  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_SUB_START                  ty:U qcty:U '' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005       Read EXP_BUFF_ID_SUB_END                    ty:U qcty:U '' npar:0 nidx:0 trapped:0 %:0  0: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+N006       Read EXP_BUFF_ID_SUB_END                    ty:U qcty:U '' npar:0 nidx:0 trapped:0 %:0  2: 5 4 134916778 -1549227512 -1433501014 -1565869317 -1192351190 -1363940696 -1565906006 -357897542 -1433761109 -1430607154 -609243478 -903300886 582722315 715301032 -1383423046 -1599157334 -1895912824 -2035373398  nb 0:()
+N007       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 6 1 -1433489527 -1432176466 -1951667528 -1427461937 -1970665334 -90004753 -1431393784 -1141462342 -1360146753 -1163201874 -905278962 -1464718662 134916778 -1543722486 -1433501014 -1565869319 -1326568918 -1359483992  nb 0:()
+N008       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 7 4 -399840758 -609555830 -1565873624 -488469894 -336950581 -1158666072 -1431656246 -1163347360 229589032 -1433754974 -1431655768 -1431514381 -1433490552 -1431652178 -1951667528 -1427461937 -1970665334 -90004821  nb 0:()
+N009       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  1: 4 -1599428422 -1465374038 -1159546630 -1968533846 -1431655750 -1091818822 296264362 -1700255062 -1561808662 -1431590226 -1695831054 749644346 -1431781702 -936449526 -610080118 -1565873632 -488469894 -336950583 -1158010710  nb 0:()
+
+QCode idx:00DC  --++  print "(a+b)+c" (a+b)+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:00DD  --++  print "(a+b)+c" (a+b)+c  --++
+QCode idx:00DD  --++  ab = a+b  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AB' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+
+QCode idx:00E8  --++  bc = b+c  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'BC' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+
+QCode idx:00F3  --++  ac = a+c  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+
+QCode idx:00FE  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"ab+c"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0105  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0106  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AB' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:010E  --++  print "ab+c", ab+c  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:010F  --++  print "ab+c", ab+c  --++
+QCode idx:010F  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"a+bc"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0116  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0117  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'A' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'BC' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:011F  --++  print "a+bc", a+bc  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0120  --++  print "a+bc", a+bc  --++
+QCode idx:0120  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"ac+b"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0127  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0128  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:0130  --++  print "ac+b", ac+b  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0131  --++  print "ac+b", ac+b  --++
+QCode idx:0131  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"b+ac"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0138  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0139  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'B' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'AC' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:0141  --++  print "b+ac", b+ac	  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0142  --++  print "b+ac", b+ac	  --++
+QCode idx:0142  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"1268.7+1.333"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0151  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0152  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1268.7' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1.333' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:015F  --++  print "1268.7+1.333", 1268.7+1.333  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0160  --++  print "1268.7+1.333", 1268.7+1.333  --++
+QCode idx:0160  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0169  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:016A  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0175  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0176  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0180  --++  print c.test, c.second, c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0181  --++  print c.test, c.second, c.third  --++
+QCode idx:0181  --++  total = c.test+c.second+c.third  --++
+N001      Write EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+N005       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0: 4 1 716940075 715301032 -1400181830 -1599157334 -1895912832 -2035373398 -1498772850 -67851606 548317868 -1364663638 51035710 -1364547414 646604970 -1163216133 -1431393750 715831978 -2004242774 -1165319518  nb 0:()
+N006       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 5 4 134916778 -1549227512 -1433501014 -1565869317 -1192351190 -1363940696 -1565906006 -357897542 -1433761109 -1430607154 -609243478 -903300886 582722315 715301032 -1383423046 -1599157334 -1895912824 -2035373398  nb 0:()
+N007       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U ':=' npar:0 nidx:0 trapped:0 %:0  2: 6 1 -1433489527 -1432176466 -1951667528 -1427461937 -1970665334 -90004753 -1431393784 -1141462342 -1360146753 -1163201874 -905278962 -1464718662 134916778 -1543722486 -1433501014 -1565869319 -1326568918 -1359483992  nb 0:()
+
+QCode idx:01A2  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"test+second="' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:01B1  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:01B2  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.TEST' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:01C6  --++  print "test+second=", c.test+c.second  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:01C7  --++  print "test+second=", c.test+c.second  --++
+QCode idx:01C7  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"second+third="' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:01D7  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:01D8  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.SECOND' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:01ED  --++  print "second+third=", c.second+c.third  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:01EE  --++  print "second+third=", c.second+c.third  --++
+QCode idx:01EE  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"first+third="' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:01FD  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:01FE  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.FIRST' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'C.THIRD' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:f qcty:U '+' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:0212  --++  print "first+third=", c.first+c.third	  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0213  --++  print "first+third=", c.first+c.third	  --++
+QCode idx:0213  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"Total:"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:021C  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_PRINT_SPACE                ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:021D  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:f qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0221  --++  print "Total:",total  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0222  --++  print "Total:",total  --++
+QCode idx:0222  --++  if total = 1270.033  --++
+N001       Read EXP_BUFF_ID_VARIABLE                   ty:f qcty:U 'TOTAL' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_FLT                        ty:f qcty:U '1270.033' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+N003       Read EXP_BUFF_ID_OPERATOR                   ty:i qcty:f '=' npar:0 nidx:0 trapped:0 %:0  2: 2 1 -1406629366 -1997887320 -1196442066 -1329952030 -938866130 -1432179031 1328197130 -22500376 -358040918 -1366639893 195795874 -609572192 -1364283730 -1500861702 -1463251442 -492660061 -1894331894 -1165451078  nb 0:()
+N004       Read EXP_BUFF_ID_IF                 L:8     ty:i qcty:U 'IF' npar:0 nidx:0 trapped:0 %:0  2: 3 2 646638250 -1163216133 -1431393750 715827882 -2004112726 -1165319518 -1458656598 -1472663414 -1968526661 782893226 -1372935538 -1430607710 -1473607030 -1998411608 -1464877522 -1329952030 -401995218 -1432179031  nb 0:()
+
+QCode idx:0230  --++  print "PASS"  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"PASS"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0237  --++  print "PASS"  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0238  --++  print "PASS"  --++
+QCode idx:0238  --++  else  --++
+N001       Read EXP_BUFF_ID_ELSE               L:8     ty:U qcty:U 'ELSE' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:023B  --++  print "FAIL"  --++
+N001       Read EXP_BUFF_ID_STR                        ty:s qcty:U '"FAIL"' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+N002       Read EXP_BUFF_ID_PRINT                      ty:s qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: 195795882 -609572192 -1364545874 -1498764550 -1463243186 -492660061 -1911125494 -91709254 783269422 -1464687960 -1431795030 -1431658326 -1414878550 -1159156054 715827872 -1373066582 782281390 -71391041 -1364360278 715827438  nb 0:()
+
+QCode idx:0242  --++  print "FAIL"  --++
+N001       Read EXP_BUFF_ID_PRINT_NEWLINE              ty:U qcty:U 'PRINT' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0243  --++  print "FAIL"  --++
+QCode idx:0243  --++  endif  --++
+N001       Read EXP_BUFF_ID_ENDIF              L:8     ty:U qcty:U 'ENDIF' npar:0 nidx:0 trapped:0 %:0  0: -1414877526 -1159156054 732605088 -1104631126 782281390 -71391057 -1364360278 715827438 1034596010 -308217176 -1096111446 -1028985090 -1962368853 -1162166736 714795178 -223304534 -500651093 -1597982022 -1440044465 -131028312  nb 0:()
+
+QCode idx:0243  --++  endif  --++
+A: RECT:0 RECNO:0 ADD:00000000 LVADP:20042A5C>

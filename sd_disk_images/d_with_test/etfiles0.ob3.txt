@@ -1,0 +1,414 @@
+
+Filename:'etfiles0'
+File ext:'ob3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0042
+QCode Space Size:0244
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:6
+0004: 'B:TEST'
+000A: 65       OPEN     (bytes code:f+list)
+      Logical file:02 (C)
+        Type:01 (Float)
+        TEST
+        Type:01 (Float)
+        SECOND
+        Type:01 (Float)
+        THIRD
+0021: 88       End of field list for CREATE/OPEN     (bytes code:-)
+0022: 24       Push string literal     (bytes code:S)
+0023: Len:4
+0024: 'TEST'
+0028: 1E       Push reference of file float field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0029: 02           (C)
+002A: 23       Push float literal     (bytes code:F)
+002B: Len:3
+002C: '2034E1
+002F: 80       Assign float     (bytes code:-)
+0030: 24       Push string literal     (bytes code:S)
+0031: Len:6
+0032: 'SECOND'
+0038: 1E       Push reference of file float field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0039: 02           (C)
+003A: 23       Push float literal     (bytes code:F)
+003B: Len:4
+003C: '503412E3
+0040: 80       Assign float     (bytes code:-)
+0041: 24       Push string literal     (bytes code:S)
+0042: Len:5
+0043: 'THIRD'
+0048: 1E       Push reference of file float field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0049: 02           (C)
+004A: 23       Push float literal     (bytes code:F)
+004B: Len:3
+004C: '3313E0
+004F: 80       Assign float     (bytes code:-)
+0050: 0E       Push local/global float variable reference     (bytes code:v)
+0051: FFEE       (65518)
+0053: 23       Push float literal     (bytes code:F)
+0054: Len:3
+0055: '2034E1
+0058: 80       Assign float     (bytes code:-)
+0059: 0E       Push local/global float variable reference     (bytes code:v)
+005A: FFE6       (65510)
+005C: 23       Push float literal     (bytes code:F)
+005D: Len:4
+005E: '503412E3
+0062: 80       Assign float     (bytes code:-)
+0063: 0E       Push local/global float variable reference     (bytes code:v)
+0064: FFDE       (65502)
+0066: 23       Push float literal     (bytes code:F)
+0067: Len:3
+0068: '3313E0
+006B: 80       Assign float     (bytes code:-)
+006C: 0E       Push local/global float variable reference     (bytes code:v)
+006D: FFD6       (65494)
+006F: 01       Push local/global float variable value     (bytes code:v)
+0070: FFEE       (65518)
+0072: 01       Push local/global float variable value     (bytes code:v)
+0073: FFE6       (65510)
+0075: 3C       Plus float     (bytes code:-)
+0076: 01       Push local/global float variable value     (bytes code:v)
+0077: FFDE       (65502)
+0079: 3C       Plus float     (bytes code:-)
+007A: 80       Assign float     (bytes code:-)
+007B: 01       Push local/global float variable value     (bytes code:v)
+007C: FFEE       (65518)
+007E: 70       PRINT float     (bytes code:-)
+007F: 72       PRINT ,     (bytes code:-)
+0080: 01       Push local/global float variable value     (bytes code:v)
+0081: FFE6       (65510)
+0083: 70       PRINT float     (bytes code:-)
+0084: 72       PRINT ,     (bytes code:-)
+0085: 01       Push local/global float variable value     (bytes code:v)
+0086: FFDE       (65502)
+0088: 70       PRINT float     (bytes code:-)
+0089: 73       PRINT newline     (bytes code:-)
+008A: 24       Push string literal     (bytes code:S)
+008B: Len:2
+008C: 'T='
+008E: 71       PRINT string     (bytes code:-)
+008F: 72       PRINT ,     (bytes code:-)
+0090: 01       Push local/global float variable value     (bytes code:v)
+0091: FFD6       (65494)
+0093: 70       PRINT float     (bytes code:-)
+0094: 73       PRINT newline     (bytes code:-)
+0095: 24       Push string literal     (bytes code:S)
+0096: Len:3
+0097: 'a+b'
+009A: 71       PRINT string     (bytes code:-)
+009B: 72       PRINT ,     (bytes code:-)
+009C: 01       Push local/global float variable value     (bytes code:v)
+009D: FFEE       (65518)
+009F: 01       Push local/global float variable value     (bytes code:v)
+00A0: FFE6       (65510)
+00A2: 3C       Plus float     (bytes code:-)
+00A3: 70       PRINT float     (bytes code:-)
+00A4: 73       PRINT newline     (bytes code:-)
+00A5: 24       Push string literal     (bytes code:S)
+00A6: Len:3
+00A7: 'b+c'
+00AA: 71       PRINT string     (bytes code:-)
+00AB: 72       PRINT ,     (bytes code:-)
+00AC: 01       Push local/global float variable value     (bytes code:v)
+00AD: FFE6       (65510)
+00AF: 01       Push local/global float variable value     (bytes code:v)
+00B0: FFDE       (65502)
+00B2: 3C       Plus float     (bytes code:-)
+00B3: 70       PRINT float     (bytes code:-)
+00B4: 73       PRINT newline     (bytes code:-)
+00B5: 24       Push string literal     (bytes code:S)
+00B6: Len:3
+00B7: 'a+c'
+00BA: 71       PRINT string     (bytes code:-)
+00BB: 72       PRINT ,     (bytes code:-)
+00BC: 01       Push local/global float variable value     (bytes code:v)
+00BD: FFEE       (65518)
+00BF: 01       Push local/global float variable value     (bytes code:v)
+00C0: FFDE       (65502)
+00C2: 3C       Plus float     (bytes code:-)
+00C3: 70       PRINT float     (bytes code:-)
+00C4: 73       PRINT newline     (bytes code:-)
+00C5: 24       Push string literal     (bytes code:S)
+00C6: Len:7
+00C7: '(a+b)+c'
+00CE: 71       PRINT string     (bytes code:-)
+00CF: 73       PRINT newline     (bytes code:-)
+00D0: 01       Push local/global float variable value     (bytes code:v)
+00D1: FFEE       (65518)
+00D3: 01       Push local/global float variable value     (bytes code:v)
+00D4: FFE6       (65510)
+00D6: 3C       Plus float     (bytes code:-)
+00D7: 01       Push local/global float variable value     (bytes code:v)
+00D8: FFDE       (65502)
+00DA: 3C       Plus float     (bytes code:-)
+00DB: 70       PRINT float     (bytes code:-)
+00DC: 73       PRINT newline     (bytes code:-)
+00DD: 0E       Push local/global float variable reference     (bytes code:v)
+00DE: FFCE       (65486)
+00E0: 01       Push local/global float variable value     (bytes code:v)
+00E1: FFEE       (65518)
+00E3: 01       Push local/global float variable value     (bytes code:v)
+00E4: FFE6       (65510)
+00E6: 3C       Plus float     (bytes code:-)
+00E7: 80       Assign float     (bytes code:-)
+00E8: 0E       Push local/global float variable reference     (bytes code:v)
+00E9: FFC6       (65478)
+00EB: 01       Push local/global float variable value     (bytes code:v)
+00EC: FFE6       (65510)
+00EE: 01       Push local/global float variable value     (bytes code:v)
+00EF: FFDE       (65502)
+00F1: 3C       Plus float     (bytes code:-)
+00F2: 80       Assign float     (bytes code:-)
+00F3: 0E       Push local/global float variable reference     (bytes code:v)
+00F4: FFBE       (65470)
+00F6: 01       Push local/global float variable value     (bytes code:v)
+00F7: FFEE       (65518)
+00F9: 01       Push local/global float variable value     (bytes code:v)
+00FA: FFDE       (65502)
+00FC: 3C       Plus float     (bytes code:-)
+00FD: 80       Assign float     (bytes code:-)
+00FE: 24       Push string literal     (bytes code:S)
+00FF: Len:4
+0100: 'ab+c'
+0104: 71       PRINT string     (bytes code:-)
+0105: 72       PRINT ,     (bytes code:-)
+0106: 01       Push local/global float variable value     (bytes code:v)
+0107: FFCE       (65486)
+0109: 01       Push local/global float variable value     (bytes code:v)
+010A: FFDE       (65502)
+010C: 3C       Plus float     (bytes code:-)
+010D: 70       PRINT float     (bytes code:-)
+010E: 73       PRINT newline     (bytes code:-)
+010F: 24       Push string literal     (bytes code:S)
+0110: Len:4
+0111: 'a+bc'
+0115: 71       PRINT string     (bytes code:-)
+0116: 72       PRINT ,     (bytes code:-)
+0117: 01       Push local/global float variable value     (bytes code:v)
+0118: FFEE       (65518)
+011A: 01       Push local/global float variable value     (bytes code:v)
+011B: FFC6       (65478)
+011D: 3C       Plus float     (bytes code:-)
+011E: 70       PRINT float     (bytes code:-)
+011F: 73       PRINT newline     (bytes code:-)
+0120: 24       Push string literal     (bytes code:S)
+0121: Len:4
+0122: 'ac+b'
+0126: 71       PRINT string     (bytes code:-)
+0127: 72       PRINT ,     (bytes code:-)
+0128: 01       Push local/global float variable value     (bytes code:v)
+0129: FFBE       (65470)
+012B: 01       Push local/global float variable value     (bytes code:v)
+012C: FFE6       (65510)
+012E: 3C       Plus float     (bytes code:-)
+012F: 70       PRINT float     (bytes code:-)
+0130: 73       PRINT newline     (bytes code:-)
+0131: 24       Push string literal     (bytes code:S)
+0132: Len:4
+0133: 'b+ac'
+0137: 71       PRINT string     (bytes code:-)
+0138: 72       PRINT ,     (bytes code:-)
+0139: 01       Push local/global float variable value     (bytes code:v)
+013A: FFE6       (65510)
+013C: 01       Push local/global float variable value     (bytes code:v)
+013D: FFBE       (65470)
+013F: 3C       Plus float     (bytes code:-)
+0140: 70       PRINT float     (bytes code:-)
+0141: 73       PRINT newline     (bytes code:-)
+0142: 24       Push string literal     (bytes code:S)
+0143: Len:12
+0144: '1268.7+1.333'
+0150: 71       PRINT string     (bytes code:-)
+0151: 72       PRINT ,     (bytes code:-)
+0152: 23       Push float literal     (bytes code:F)
+0153: Len:4
+0154: '706812E3
+0158: 23       Push float literal     (bytes code:F)
+0159: Len:3
+015A: '3313E0
+015D: 3C       Plus float     (bytes code:-)
+015E: 70       PRINT float     (bytes code:-)
+015F: 73       PRINT newline     (bytes code:-)
+0160: 24       Push string literal     (bytes code:S)
+0161: Len:4
+0162: 'TEST'
+0166: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0167: 02           (C)
+0168: 70       PRINT float     (bytes code:-)
+0169: 72       PRINT ,     (bytes code:-)
+016A: 24       Push string literal     (bytes code:S)
+016B: Len:6
+016C: 'SECOND'
+0172: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0173: 02           (C)
+0174: 70       PRINT float     (bytes code:-)
+0175: 72       PRINT ,     (bytes code:-)
+0176: 24       Push string literal     (bytes code:S)
+0177: Len:5
+0178: 'THIRD'
+017D: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+017E: 02           (C)
+017F: 70       PRINT float     (bytes code:-)
+0180: 73       PRINT newline     (bytes code:-)
+0181: 0E       Push local/global float variable reference     (bytes code:v)
+0182: FFF6       (65526)
+0184: 24       Push string literal     (bytes code:S)
+0185: Len:4
+0186: 'TEST'
+018A: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+018B: 02           (C)
+018C: 24       Push string literal     (bytes code:S)
+018D: Len:6
+018E: 'SECOND'
+0194: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0195: 02           (C)
+0196: 3C       Plus float     (bytes code:-)
+0197: 24       Push string literal     (bytes code:S)
+0198: Len:5
+0199: 'THIRD'
+019E: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+019F: 02           (C)
+01A0: 3C       Plus float     (bytes code:-)
+01A1: 80       Assign float     (bytes code:-)
+01A2: 24       Push string literal     (bytes code:S)
+01A3: Len:12
+01A4: 'test+second='
+01B0: 71       PRINT string     (bytes code:-)
+01B1: 72       PRINT ,     (bytes code:-)
+01B2: 24       Push string literal     (bytes code:S)
+01B3: Len:4
+01B4: 'TEST'
+01B8: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+01B9: 02           (C)
+01BA: 24       Push string literal     (bytes code:S)
+01BB: Len:6
+01BC: 'SECOND'
+01C2: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+01C3: 02           (C)
+01C4: 3C       Plus float     (bytes code:-)
+01C5: 70       PRINT float     (bytes code:-)
+01C6: 73       PRINT newline     (bytes code:-)
+01C7: 24       Push string literal     (bytes code:S)
+01C8: Len:13
+01C9: 'second+third='
+01D6: 71       PRINT string     (bytes code:-)
+01D7: 72       PRINT ,     (bytes code:-)
+01D8: 24       Push string literal     (bytes code:S)
+01D9: Len:6
+01DA: 'SECOND'
+01E0: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+01E1: 02           (C)
+01E2: 24       Push string literal     (bytes code:S)
+01E3: Len:5
+01E4: 'THIRD'
+01E9: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+01EA: 02           (C)
+01EB: 3C       Plus float     (bytes code:-)
+01EC: 70       PRINT float     (bytes code:-)
+01ED: 73       PRINT newline     (bytes code:-)
+01EE: 24       Push string literal     (bytes code:S)
+01EF: Len:12
+01F0: 'first+third='
+01FC: 71       PRINT string     (bytes code:-)
+01FD: 72       PRINT ,     (bytes code:-)
+01FE: 24       Push string literal     (bytes code:S)
+01FF: Len:5
+0200: 'FIRST'
+0205: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0206: 02           (C)
+0207: 24       Push string literal     (bytes code:S)
+0208: Len:5
+0209: 'THIRD'
+020E: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+020F: 02           (C)
+0210: 3C       Plus float     (bytes code:-)
+0211: 70       PRINT float     (bytes code:-)
+0212: 73       PRINT newline     (bytes code:-)
+0213: 24       Push string literal     (bytes code:S)
+0214: Len:6
+0215: 'Total:'
+021B: 71       PRINT string     (bytes code:-)
+021C: 72       PRINT ,     (bytes code:-)
+021D: 01       Push local/global float variable value     (bytes code:v)
+021E: FFF6       (65526)
+0220: 70       PRINT float     (bytes code:-)
+0221: 73       PRINT newline     (bytes code:-)
+0222: 01       Push local/global float variable value     (bytes code:v)
+0223: FFF6       (65526)
+0225: 23       Push float literal     (bytes code:F)
+0226: Len:5
+0227: '30037012E3
+022C: 3B       Equal float     (bytes code:-)
+022D: 7E       Branch if false     (bytes code:D)
+022E: Dest:023B (Dist:000D)
+0230: 24       Push string literal     (bytes code:S)
+0231: Len:4
+0232: 'PASS'
+0236: 71       PRINT string     (bytes code:-)
+0237: 73       PRINT newline     (bytes code:-)
+0238: 51       GOTO     (bytes code:D)
+0239: Dest:0243 (Dist:000A)
+023B: 24       Push string literal     (bytes code:S)
+023C: Len:4
+023D: 'FAIL'
+0241: 71       PRINT string     (bytes code:-)
+0242: 73       PRINT newline     (bytes code:-)
+0243: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 06 42 3A 54 45 53 54 65 02 01 04 54 45 
+0010:53 54 01 06 53 45 43 4F 4E 44 01 05 54 48 49 52 
+0020:44 88 24 04 54 45 53 54 1E 02 23 03 20 34 01 80 
+0030:24 06 53 45 43 4F 4E 44 1E 02 23 04 50 34 12 03 
+0040:80 24 05 54 48 49 52 44 1E 02 23 03 33 13 00 80 
+0050:0E FF EE 23 03 20 34 01 80 0E FF E6 23 04 50 34 
+0060:12 03 80 0E FF DE 23 03 33 13 00 80 0E FF D6 01 
+0070:FF EE 01 FF E6 3C 01 FF DE 3C 80 01 FF EE 70 72 
+0080:01 FF E6 70 72 01 FF DE 70 73 24 02 54 3D 71 72 
+0090:01 FF D6 70 73 24 03 61 2B 62 71 72 01 FF EE 01 
+00A0:FF E6 3C 70 73 24 03 62 2B 63 71 72 01 FF E6 01 
+00B0:FF DE 3C 70 73 24 03 61 2B 63 71 72 01 FF EE 01 
+00C0:FF DE 3C 70 73 24 07 28 61 2B 62 29 2B 63 71 73 
+00D0:01 FF EE 01 FF E6 3C 01 FF DE 3C 70 73 0E FF CE 
+00E0:01 FF EE 01 FF E6 3C 80 0E FF C6 01 FF E6 01 FF 
+00F0:DE 3C 80 0E FF BE 01 FF EE 01 FF DE 3C 80 24 04 
+0100:61 62 2B 63 71 72 01 FF CE 01 FF DE 3C 70 73 24 
+0110:04 61 2B 62 63 71 72 01 FF EE 01 FF C6 3C 70 73 
+0120:24 04 61 63 2B 62 71 72 01 FF BE 01 FF E6 3C 70 
+0130:73 24 04 62 2B 61 63 71 72 01 FF E6 01 FF BE 3C 
+0140:70 73 24 0C 31 32 36 38 2E 37 2B 31 2E 33 33 33 
+0150:71 72 23 04 70 68 12 03 23 03 33 13 00 3C 70 73 
+0160:24 04 54 45 53 54 1B 02 70 72 24 06 53 45 43 4F 
+0170:4E 44 1B 02 70 72 24 05 54 48 49 52 44 1B 02 70 
+0180:73 0E FF F6 24 04 54 45 53 54 1B 02 24 06 53 45 
+0190:43 4F 4E 44 1B 02 3C 24 05 54 48 49 52 44 1B 02 
+01A0:3C 80 24 0C 74 65 73 74 2B 73 65 63 6F 6E 64 3D 
+01B0:71 72 24 04 54 45 53 54 1B 02 24 06 53 45 43 4F 
+01C0:4E 44 1B 02 3C 70 73 24 0D 73 65 63 6F 6E 64 2B 
+01D0:74 68 69 72 64 3D 71 72 24 06 53 45 43 4F 4E 44 
+01E0:1B 02 24 05 54 48 49 52 44 1B 02 3C 70 73 24 0C 
+01F0:66 69 72 73 74 2B 74 68 69 72 64 3D 71 72 24 05 
+0200:46 49 52 53 54 1B 02 24 05 54 48 49 52 44 1B 02 
+0210:3C 70 73 24 06 54 6F 74 61 6C 3A 71 72 01 FF F6 
+0220:70 73 01 FF F6 23 05 30 03 70 12 03 3B 7E 00 0D 
+0230:24 04 50 41 53 53 71 73 51 00 0A 24 04 46 41 49 
+0240:4C 71 73 7B 

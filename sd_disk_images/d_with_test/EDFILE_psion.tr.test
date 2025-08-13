@@ -1,0 +1,213 @@
+
+Filename:'EDFILE'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0028
+QCode Space Size:0117
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFDA 20
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 61       FIRST     (bytes code:-)
+0003: A3       EOF     (bytes code:-)
+0004: 7E       Branch if false     (bytes code:D)
+0005: Dest:0008 (Dist:0003)
+0007: 7B       RETURN (float 0)     (bytes code:-)
+0008: 24       Push string literal     (bytes code:S)
+0009: Len:14
+000A: 'Type in search'
+0018: 71       PRINT string     (bytes code:-)
+0019: 73       PRINT newline     (bytes code:-)
+001A: 24       Push string literal     (bytes code:S)
+001B: Len:7
+001C: 'string:'
+0023: 71       PRINT string     (bytes code:-)
+0024: 0F       Push local/global string variable reference     (bytes code:v)
+0025: FFDB       (65499)
+0027: 6E       INPUT string     (bytes code:-)
+0028: 0D       Push local/global integer variable reference     (bytes code:v)
+0029: FFFC       (65532)
+002B: 02       Push local/global string variable value     (bytes code:v)
+002C: FFDB       (65499)
+002E: 8F       FIND     (bytes code:-)
+002F: 7F       Assign integer     (bytes code:-)
+0030: 00       Push local/global integer variable value     (bytes code:v)
+0031: FFFC       (65532)
+0033: 22       Push integer literal     (bytes code:I)
+0034: 0000       (0)
+0036: 2C       Equal integer     (bytes code:-)
+0037: 7E       Branch if false     (bytes code:D)
+0038: Dest:004F (Dist:0017)
+003A: 4E       CLS     (bytes code:-)
+003B: 24       Push string literal     (bytes code:S)
+003C: Len:9
+003D: 'Not found'
+0046: 71       PRINT string     (bytes code:-)
+0047: 73       PRINT newline     (bytes code:-)
+0048: 22       Push integer literal     (bytes code:I)
+0049: 0014       (20)
+004B: 54       PAUSE     (bytes code:-)
+004C: 51       GOTO     (bytes code:D)
+004D: Dest:0002 (Dist:FFFFFFB5)
+004F: 22       Push integer literal     (bytes code:I)
+0050: 0001       (1)
+0052: 6A       KSTAT     (bytes code:-)
+0053: 4E       CLS     (bytes code:-)
+0054: 22       Push integer literal     (bytes code:I)
+0055: 0001       (1)
+0057: 22       Push integer literal     (bytes code:I)
+0058: 0002       (2)
+005A: 4C       AT     (bytes code:-)
+005B: 24       Push string literal     (bytes code:S)
+005C: Len:9
+005D: 'Edit? Y/N'
+0066: 71       PRINT string     (bytes code:-)
+0067: 73       PRINT newline     (bytes code:-)
+0068: 0D       Push local/global integer variable reference     (bytes code:v)
+0069: FFD8       (65496)
+006B: 22       Push integer literal     (bytes code:I)
+006C: 0001       (1)
+006E: 24       Push string literal     (bytes code:S)
+006F: Len:8
+0070: 'BARCODE$'
+0078: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0079: 00           (A)
+007A: A0       VIEW     (bytes code:-)
+007B: 7F       Assign integer     (bytes code:-)
+007C: 00       Push local/global integer variable value     (bytes code:v)
+007D: FFD8       (65496)
+007F: 22       Push integer literal     (bytes code:I)
+0080: 0001       (1)
+0082: 2C       Equal integer     (bytes code:-)
+0083: 7E       Branch if false     (bytes code:D)
+0084: Dest:0087 (Dist:0003)
+0086: 7B       RETURN (float 0)     (bytes code:-)
+0087: 00       Push local/global integer variable value     (bytes code:v)
+0088: FFD8       (65496)
+008A: 22       Push integer literal     (bytes code:I)
+008B: 0059       (89)
+008D: 2B       Not equal integer     (bytes code:-)
+008E: 00       Push local/global integer variable value     (bytes code:v)
+008F: FFD8       (65496)
+0091: 22       Push integer literal     (bytes code:I)
+0092: 004E       (78)
+0094: 2B       Not equal integer     (bytes code:-)
+0095: 34       AND integer     (bytes code:-)
+0096: 7E       Branch if false     (bytes code:D)
+0097: Dest:009F (Dist:0008)
+0099: 51       GOTO     (bytes code:D)
+009A: Dest:004F (Dist:FFFFFFB5)
+009C: 51       GOTO     (bytes code:D)
+009D: Dest:0112 (Dist:0075)
+009F: 00       Push local/global integer variable value     (bytes code:v)
+00A0: FFD8       (65496)
+00A2: 22       Push integer literal     (bytes code:I)
+00A3: 0059       (89)
+00A5: 2C       Equal integer     (bytes code:-)
+00A6: 7E       Branch if false     (bytes code:D)
+00A7: Dest:00EC (Dist:0045)
+00A9: 4E       CLS     (bytes code:-)
+00AA: 24       Push string literal     (bytes code:S)
+00AB: Len:8
+00AC: 'BARCODE$'
+00B4: 1F       Push reference of file string field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00B5: 00           (A)
+00B6: 6B       EDIT     (bytes code:-)
+00B7: 24       Push string literal     (bytes code:S)
+00B8: Len:8
+00B9: 'BARCODE$'
+00C1: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00C2: 00           (A)
+00C3: 96       LEN     (bytes code:-)
+00C4: 22       Push integer literal     (bytes code:I)
+00C5: 0000       (0)
+00C7: 2C       Equal integer     (bytes code:-)
+00C8: 7E       Branch if false     (bytes code:D)
+00C9: Dest:00CF (Dist:0006)
+00CB: 60       ERASE     (bytes code:-)
+00CC: 51       GOTO     (bytes code:D)
+00CD: Dest:00ED (Dist:0020)
+00CF: 22       Push integer literal     (bytes code:I)
+00D0: 0003       (3)
+00D2: 6A       KSTAT     (bytes code:-)
+00D3: 22       Push integer literal     (bytes code:I)
+00D4: 0001       (1)
+00D6: 22       Push integer literal     (bytes code:I)
+00D7: 0002       (2)
+00D9: 4C       AT     (bytes code:-)
+00DA: 24       Push string literal     (bytes code:S)
+00DB: Len:4
+00DC: 'QTY$'
+00E0: 1F       Push reference of file string field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00E1: 00           (A)
+00E2: 6B       EDIT     (bytes code:-)
+00E3: 22       Push integer literal     (bytes code:I)
+00E4: 0001       (1)
+00E6: 6A       KSTAT     (bytes code:-)
+00E7: 68       UPDATE     (bytes code:-)
+00E8: 63       NEXT     (bytes code:-)
+00E9: 51       GOTO     (bytes code:D)
+00EA: Dest:0112 (Dist:0028)
+00EC: 63       NEXT     (bytes code:-)
+00ED: 0D       Push local/global integer variable reference     (bytes code:v)
+00EE: FFFC       (65532)
+00F0: 02       Push local/global string variable value     (bytes code:v)
+00F1: FFDB       (65499)
+00F3: 8F       FIND     (bytes code:-)
+00F4: 7F       Assign integer     (bytes code:-)
+00F5: 00       Push local/global integer variable value     (bytes code:v)
+00F6: FFFC       (65532)
+00F8: 22       Push integer literal     (bytes code:I)
+00F9: 0000       (0)
+00FB: 2C       Equal integer     (bytes code:-)
+00FC: 7E       Branch if false     (bytes code:D)
+00FD: Dest:0112 (Dist:0015)
+00FF: 4E       CLS     (bytes code:-)
+0100: 24       Push string literal     (bytes code:S)
+0101: Len:9
+0102: 'Not found'
+010B: 71       PRINT string     (bytes code:-)
+010C: 73       PRINT newline     (bytes code:-)
+010D: 22       Push integer literal     (bytes code:I)
+010E: 0014       (20)
+0110: 54       PAUSE     (bytes code:-)
+0111: 7B       RETURN (float 0)     (bytes code:-)
+0112: A3       EOF     (bytes code:-)
+0113: 7E       Branch if false     (bytes code:D)
+0114: Dest:004F (Dist:FFFFFF3B)
+0116: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 61 A3 7E 00 03 7B 24 0E 54 79 70 65 20 69 
+0010:6E 20 73 65 61 72 63 68 71 73 24 07 73 74 72 69 
+0020:6E 67 3A 71 0F FF DB 6E 0D FF FC 02 FF DB 8F 7F 
+0030:00 FF FC 22 00 00 2C 7E 00 17 4E 24 09 4E 6F 74 
+0040:20 66 6F 75 6E 64 71 73 22 00 14 54 51 FF B5 22 
+0050:00 01 6A 4E 22 00 01 22 00 02 4C 24 09 45 64 69 
+0060:74 3F 20 59 2F 4E 71 73 0D FF D8 22 00 01 24 08 
+0070:42 41 52 43 4F 44 45 24 1C 00 A0 7F 00 FF D8 22 
+0080:00 01 2C 7E 00 03 7B 00 FF D8 22 00 59 2B 00 FF 
+0090:D8 22 00 4E 2B 34 7E 00 08 51 FF B5 51 00 75 00 
+00A0:FF D8 22 00 59 2C 7E 00 45 4E 24 08 42 41 52 43 
+00B0:4F 44 45 24 1F 00 6B 24 08 42 41 52 43 4F 44 45 
+00C0:24 1C 00 96 22 00 00 2C 7E 00 06 60 51 00 20 22 
+00D0:00 03 6A 22 00 01 22 00 02 4C 24 04 51 54 59 24 
+00E0:1F 00 6B 22 00 01 6A 68 63 51 00 28 63 0D FF FC 
+00F0:02 FF DB 8F 7F 00 FF FC 22 00 00 2C 7E 00 15 4E 
+0100:24 09 4E 6F 74 20 66 6F 75 6E 64 71 73 22 00 14 
+0110:54 7B A3 7E FF 3B 7B 

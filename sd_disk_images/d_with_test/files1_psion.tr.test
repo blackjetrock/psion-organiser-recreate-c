@@ -1,0 +1,122 @@
+
+Filename:'FILES1'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0002
+QCode Space Size:0078
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:5
+0004: 'B:ABC'
+0009: 5E       CREATE     (bytes code:f+list)
+      Logical file:01 (B)
+        Type:02 (String)
+        AAA$
+        Type:00 (Integer)
+        B%
+        Type:01 (Float)
+        CC
+0019: 88       End of field list for CREATE/OPEN     (bytes code:-)
+001A: 24       Push string literal     (bytes code:S)
+001B: Len:5
+001C: 'A:ABC'
+0021: 65       OPEN     (bytes code:f+list)
+      Logical file:00 (A)
+        Type:00 (Integer)
+        A%
+        Type:01 (Float)
+        B
+        Type:02 (String)
+        C$
+002E: 88       End of field list for CREATE/OPEN     (bytes code:-)
+002F: 24       Push string literal     (bytes code:S)
+0030: Len:1
+0031: 'A'
+0032: 1E       Push reference of file float field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0033: 00           (A)
+0034: 22       Push integer literal     (bytes code:I)
+0035: 000C       (12)
+0037: 86       autoconversion int to float     (bytes code:-)
+0038: 80       Assign float     (bytes code:-)
+0039: 24       Push string literal     (bytes code:S)
+003A: Len:1
+003B: 'B'
+003C: 1E       Push reference of file float field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+003D: 00           (A)
+003E: 23       Push float literal     (bytes code:F)
+003F: Len:2
+0040: '34E0
+0042: 80       Assign float     (bytes code:-)
+0043: 24       Push string literal     (bytes code:S)
+0044: Len:2
+0045: 'C$'
+0047: 1F       Push reference of file string field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0048: 00           (A)
+0049: 24       Push string literal     (bytes code:S)
+004A: Len:3
+004B: 'XYZ'
+004E: 81       Assign string     (bytes code:-)
+004F: 24       Push string literal     (bytes code:S)
+0050: Len:2
+0051: 'A%'
+0053: 1D       Push reference of file integer field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0054: 00           (A)
+0055: 22       Push integer literal     (bytes code:I)
+0056: 00D2       (210)
+0058: 7F       Assign integer     (bytes code:-)
+0059: 24       Push string literal     (bytes code:S)
+005A: Len:1
+005B: 'A'
+005C: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+005D: 00           (A)
+005E: 70       PRINT float     (bytes code:-)
+005F: 72       PRINT ,     (bytes code:-)
+0060: 24       Push string literal     (bytes code:S)
+0061: Len:2
+0062: 'A%'
+0064: 1A       Push file field as integer. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0065: 00           (A)
+0066: 6F       PRINT integer     (bytes code:-)
+0067: 72       PRINT ,     (bytes code:-)
+0068: 24       Push string literal     (bytes code:S)
+0069: Len:1
+006A: 'B'
+006B: 1B       Push file field as float. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+006C: 00           (A)
+006D: 70       PRINT float     (bytes code:-)
+006E: 72       PRINT ,     (bytes code:-)
+006F: 24       Push string literal     (bytes code:S)
+0070: Len:2
+0071: 'C$'
+0073: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0074: 00           (A)
+0075: 71       PRINT string     (bytes code:-)
+0076: 73       PRINT newline     (bytes code:-)
+0077: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 05 42 3A 41 42 43 5E 01 02 04 41 41 41 
+0010:24 00 02 42 25 01 02 43 43 88 24 05 41 3A 41 42 
+0020:43 65 00 00 02 41 25 01 01 42 02 02 43 24 88 24 
+0030:01 41 1E 00 22 00 0C 86 80 24 01 42 1E 00 23 02 
+0040:34 00 80 24 02 43 24 1F 00 24 03 58 59 5A 81 24 
+0050:02 41 25 1D 00 22 00 D2 7F 24 01 41 1B 00 70 72 
+0060:24 02 41 25 1A 00 6F 72 24 01 42 1B 00 70 72 24 
+0070:02 43 24 1C 00 71 73 7B 

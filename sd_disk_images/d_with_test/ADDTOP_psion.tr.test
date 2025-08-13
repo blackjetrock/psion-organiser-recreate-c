@@ -1,0 +1,124 @@
+
+Filename:'ADDTOP'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000E
+QCode Space Size:0079
+Number of parameters:02
+Parameter types:
+ 0 INT    (0)
+ 1 STR    (2)
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (1)
+ 0: FFF2 0002
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 09       Push parameter/external string variable value     (bytes code:V)
+0003: FFFC       (65532)
+0005: 96       LEN     (bytes code:-)
+0006: 22       Push integer literal     (bytes code:I)
+0007: 0008       (8)
+0009: 29       Greater than integer     (bytes code:-)
+000A: 7E       Branch if false     (bytes code:D)
+000B: Dest:0011 (Dist:0006)
+000D: 22       Push integer literal     (bytes code:I)
+000E: 00CA       (202)
+0010: 57       RAISE     (bytes code:-)
+0011: 22       Push integer literal     (bytes code:I)
+0012: 2187       (8583)
+0014: 09       Push parameter/external string variable value     (bytes code:V)
+0015: FFFC       (65532)
+0017: 96       LEN     (bytes code:-)
+0018: 55       POKEB     (bytes code:-)
+0019: 0D       Push local/global integer variable reference     (bytes code:v)
+001A: FFF8       (65528)
+001C: 22       Push integer literal     (bytes code:I)
+001D: 0001       (1)
+001F: 7F       Assign integer     (bytes code:-)
+0020: 00       Push local/global integer variable value     (bytes code:v)
+0021: FFF8       (65528)
+0023: 09       Push parameter/external string variable value     (bytes code:V)
+0024: FFFC       (65532)
+0026: 96       LEN     (bytes code:-)
+0027: 28       Less than equal integer     (bytes code:-)
+0028: 7E       Branch if false     (bytes code:D)
+0029: Dest:004C (Dist:0023)
+002B: 22       Push integer literal     (bytes code:I)
+002C: 2187       (8583)
+002E: 00       Push local/global integer variable value     (bytes code:v)
+002F: FFF8       (65528)
+0031: 2D       Plus integer     (bytes code:-)
+0032: 09       Push parameter/external string variable value     (bytes code:V)
+0033: FFFC       (65532)
+0035: 00       Push local/global integer variable value     (bytes code:v)
+0036: FFF8       (65528)
+0038: 22       Push integer literal     (bytes code:I)
+0039: 0001       (1)
+003B: C2       MID$     (bytes code:-)
+003C: 8B       ASC     (bytes code:-)
+003D: 55       POKEB     (bytes code:-)
+003E: 0D       Push local/global integer variable reference     (bytes code:v)
+003F: FFF8       (65528)
+0041: 00       Push local/global integer variable value     (bytes code:v)
+0042: FFF8       (65528)
+0044: 22       Push integer literal     (bytes code:I)
+0045: 0001       (1)
+0047: 2D       Plus integer     (bytes code:-)
+0048: 7F       Assign integer     (bytes code:-)
+0049: 51       GOTO     (bytes code:D)
+004A: Dest:0020 (Dist:FFFFFFD6)
+004C: 22       Push integer literal     (bytes code:I)
+004D: 2188       (8584)
+004F: 09       Push parameter/external string variable value     (bytes code:V)
+0050: FFFC       (65532)
+0052: 96       LEN     (bytes code:-)
+0053: 2D       Plus integer     (bytes code:-)
+0054: 22       Push integer literal     (bytes code:I)
+0055: 0000       (0)
+0057: 56       POKEW     (bytes code:-)
+0058: 22       Push integer literal     (bytes code:I)
+0059: 0001       (1)
+005B: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+005C: FFF2       (65522)
+005E: 22       Push integer literal     (bytes code:I)
+005F: 3F65       (16229)
+0061: 7F       Assign integer     (bytes code:-)
+0062: 22       Push integer literal     (bytes code:I)
+0063: 0002       (2)
+0065: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+0066: FFF2       (65522)
+0068: 22       Push integer literal     (bytes code:I)
+0069: 3900       (14592)
+006B: 7F       Assign integer     (bytes code:-)
+006C: 22       Push integer literal     (bytes code:I)
+006D: 0001       (1)
+006F: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+0070: FFF2       (65522)
+0072: 8A       ADDR     (bytes code:-)
+0073: 07       Push parameter/external integer variable value     (bytes code:V)
+0074: FFFA       (65530)
+0076: 9F       USR     (bytes code:-)
+0077: 83       drop integer from stack     (bytes code:-)
+0078: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 09 FF FC 96 22 00 08 29 7E 00 06 22 00 CA 
+0010:57 22 21 87 09 FF FC 96 55 0D FF F8 22 00 01 7F 
+0020:00 FF F8 09 FF FC 96 28 7E 00 23 22 21 87 00 FF 
+0030:F8 2D 09 FF FC 00 FF F8 22 00 01 C2 8B 55 0D FF 
+0040:F8 00 FF F8 22 00 01 2D 7F 51 FF D6 22 21 88 09 
+0050:FF FC 96 2D 22 00 00 56 22 00 01 10 FF F2 22 3F 
+0060:65 7F 22 00 02 10 FF F2 22 39 00 7F 22 00 01 10 
+0070:FF F2 8A 07 FF FA 9F 83 7B 

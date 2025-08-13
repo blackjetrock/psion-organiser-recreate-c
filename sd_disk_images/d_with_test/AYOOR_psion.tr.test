@@ -1,0 +1,142 @@
+
+Filename:'AYOOR'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000E
+QCode Space Size:0091
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0010
+External variables (4)
+ 0: A%               INTARY (03)
+ 1: M%               INT    (00)
+ 2: P%               INT    (00)
+ 3: S%               INTARY (03)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0D       Push local/global integer variable reference     (bytes code:v)
+0003: FFF4       (65524)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0006       (6)
+0008: 7F       Assign integer     (bytes code:-)
+0009: 0D       Push local/global integer variable reference     (bytes code:v)
+000A: FFF2       (65522)
+000C: 00       Push local/global integer variable value     (bytes code:v)
+000D: FFF4       (65524)
+000F: 0A       Pop integer index and push parameter/external integer array variable value     (bytes code:V)
+0010: FFFC       (65532)
+0012: 7F       Assign integer     (bytes code:-)
+0013: 00       Push local/global integer variable value     (bytes code:v)
+0014: FFF4       (65524)
+0016: 17       Pop integer index and push parameter/external integer array variable reference     (bytes code:V)
+0017: FFFC       (65532)
+0019: 00       Push local/global integer variable value     (bytes code:v)
+001A: FFF4       (65524)
+001C: 22       Push integer literal     (bytes code:I)
+001D: 0006       (6)
+001F: 2D       Plus integer     (bytes code:-)
+0020: 0A       Pop integer index and push parameter/external integer array variable value     (bytes code:V)
+0021: FFFC       (65532)
+0023: 7F       Assign integer     (bytes code:-)
+0024: 00       Push local/global integer variable value     (bytes code:v)
+0025: FFF4       (65524)
+0027: 22       Push integer literal     (bytes code:I)
+0028: 0006       (6)
+002A: 2D       Plus integer     (bytes code:-)
+002B: 17       Pop integer index and push parameter/external integer array variable reference     (bytes code:V)
+002C: FFFC       (65532)
+002E: 00       Push local/global integer variable value     (bytes code:v)
+002F: FFF2       (65522)
+0031: 7F       Assign integer     (bytes code:-)
+0032: 0D       Push local/global integer variable reference     (bytes code:v)
+0033: FFF4       (65524)
+0035: 00       Push local/global integer variable value     (bytes code:v)
+0036: FFF4       (65524)
+0038: 22       Push integer literal     (bytes code:I)
+0039: 0001       (1)
+003B: 2E       Minus integer     (bytes code:-)
+003C: 7F       Assign integer     (bytes code:-)
+003D: 00       Push local/global integer variable value     (bytes code:v)
+003E: FFF4       (65524)
+0040: 22       Push integer literal     (bytes code:I)
+0041: 0000       (0)
+0043: 2C       Equal integer     (bytes code:-)
+0044: 7E       Branch if false     (bytes code:D)
+0045: Dest:0009 (Dist:FFFFFFC4)
+0047: 14       Push parameter/external integer variable reference     (bytes code:V)
+0048: FFFA       (65530)
+004A: 22       Push integer literal     (bytes code:I)
+004B: 0003       (3)
+004D: 07       Push parameter/external integer variable value     (bytes code:V)
+004E: FFFA       (65530)
+0050: 2E       Minus integer     (bytes code:-)
+0051: 7F       Assign integer     (bytes code:-)
+0052: 07       Push parameter/external integer variable value     (bytes code:V)
+0053: FFF8       (65528)
+0055: 22       Push integer literal     (bytes code:I)
+0056: 0001       (1)
+0058: 2C       Equal integer     (bytes code:-)
+0059: 07       Push parameter/external integer variable value     (bytes code:V)
+005A: FFF8       (65528)
+005C: 22       Push integer literal     (bytes code:I)
+005D: 0002       (2)
+005F: 2C       Equal integer     (bytes code:-)
+0060: 35       OR integer     (bytes code:-)
+0061: 7E       Branch if false     (bytes code:D)
+0062: Dest:006F (Dist:000D)
+0064: 14       Push parameter/external integer variable reference     (bytes code:V)
+0065: FFF8       (65528)
+0067: 22       Push integer literal     (bytes code:I)
+0068: 0003       (3)
+006A: 07       Push parameter/external integer variable value     (bytes code:V)
+006B: FFF8       (65528)
+006D: 2E       Minus integer     (bytes code:-)
+006E: 7F       Assign integer     (bytes code:-)
+006F: 0D       Push local/global integer variable reference     (bytes code:v)
+0070: FFF2       (65522)
+0072: 22       Push integer literal     (bytes code:I)
+0073: 0001       (1)
+0075: 0A       Pop integer index and push parameter/external integer array variable value     (bytes code:V)
+0076: FFF6       (65526)
+0078: 7F       Assign integer     (bytes code:-)
+0079: 22       Push integer literal     (bytes code:I)
+007A: 0001       (1)
+007C: 17       Pop integer index and push parameter/external integer array variable reference     (bytes code:V)
+007D: FFF6       (65526)
+007F: 22       Push integer literal     (bytes code:I)
+0080: 0002       (2)
+0082: 0A       Pop integer index and push parameter/external integer array variable value     (bytes code:V)
+0083: FFF6       (65526)
+0085: 7F       Assign integer     (bytes code:-)
+0086: 22       Push integer literal     (bytes code:I)
+0087: 0002       (2)
+0089: 17       Pop integer index and push parameter/external integer array variable reference     (bytes code:V)
+008A: FFF6       (65526)
+008C: 00       Push local/global integer variable value     (bytes code:v)
+008D: FFF2       (65522)
+008F: 7F       Assign integer     (bytes code:-)
+0090: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0D FF F4 22 00 06 7F 0D FF F2 00 FF F4 0A 
+0010:FF FC 7F 00 FF F4 17 FF FC 00 FF F4 22 00 06 2D 
+0020:0A FF FC 7F 00 FF F4 22 00 06 2D 17 FF FC 00 FF 
+0030:F2 7F 0D FF F4 00 FF F4 22 00 01 2E 7F 00 FF F4 
+0040:22 00 00 2C 7E FF C4 14 FF FA 22 00 03 07 FF FA 
+0050:2E 7F 07 FF F8 22 00 01 2C 07 FF F8 22 00 02 2C 
+0060:35 7E 00 0D 14 FF F8 22 00 03 07 FF F8 2E 7F 0D 
+0070:FF F2 22 00 01 0A FF F6 7F 22 00 01 17 FF F6 22 
+0080:00 02 0A FF F6 7F 22 00 02 17 FF F6 00 FF F2 7F 
+0090:7B 

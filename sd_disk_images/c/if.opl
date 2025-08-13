@@ -1,0 +1,28 @@
+if:
+
+local A%,X%
+
+IF X%=2
+ IF A%=2
+  A%=200
+  IF A%=10
+  a%=100
+  ENDIF
+ endif
+ IF A%=2
+  A%=200
+  IF A%=10
+   a%=100
+  ENDIF
+  IF A% = 20
+   X% = 1
+  ELSEIF A%=21
+   X%=2
+  ELSEIF A% = 23
+   X%=3
+  ELSE
+   X%=3
+  endif
+ENDIF
+ENDIF
+

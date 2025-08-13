@@ -1,0 +1,44 @@
+
+Filename:'FOOT'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0006
+QCode Space Size:0015
+Number of parameters:02
+Parameter types:
+ 0 FLT    (1)
+ 1 FLT    (1)
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 08       Push parameter/external float variable value     (bytes code:V)
+0003: FFFC       (65532)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 000C       (12)
+0008: 86       autoconversion int to float     (bytes code:-)
+0009: 3E       Multiply float     (bytes code:-)
+000A: 08       Push parameter/external float variable value     (bytes code:V)
+000B: FFFA       (65530)
+000D: 3C       Plus float     (bytes code:-)
+000E: 23       Push float literal     (bytes code:F)
+000F: Len:3
+0010: '4025E-2
+0013: 3E       Multiply float     (bytes code:-)
+0014: 79       RETURN     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 08 FF FC 22 00 0C 86 3E 08 FF FA 3C 23 03 
+0010:40 25 FE 3E 79 

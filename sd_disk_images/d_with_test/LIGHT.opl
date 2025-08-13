@@ -1,0 +1,50 @@
+light:
+LOCAL FT,INS,FOOT%,N%,kw,D,FTCD,LW
+PRINT "CHOOSE TYPE OF LAMP"
+N%=MENUN(2,"Tungsten,HMI,Arc")
+IF N%=1
+LW=40
+ELSEIF N%=2
+LW=102
+ELSEIF N%=3
+LW=40
+kw=16
+GOTO ARC::
+ENDIF
+CLS
+PRINT "Lamp power kw?":input kw
+CLS
+ARC::
+PRINT "Choose..."
+FOOT%=MENUN(2,"Imperial,Metric")
+IF FOOT%=1
+CLS
+PRINT "Distance?"
+PRINT "Feet..."
+INPUT FT
+AT 1,2
+PRINT "Inches.."
+INPUT INS
+D=FOOT:(FT,INS)
+ELSEIF FOOT%=2
+PRINT "Distance mtrs?":input D
+ENDIF
+CLS
+FTCD=(kw*LW*40)/(D*D)
+FTCD=INTF(FTCD)
+D=(INTF((D*100)))/100
+PRINT "At ";D,"m or"
+PRINT FT,"ft",INS,"ins"
+PRINT kw,"kw lamp flood"
+PRINT "gives",FTCD,"Ftcd"
+GET
+CLS
+PRINT "Choose..."
+N%=MENUN(2,"Again,Film,Menu")
+IF N%=1
+LIGHT:
+ELSEIF N%=2
+FILM:
+ELSEIF N%=3
+STOP
+ENDIF

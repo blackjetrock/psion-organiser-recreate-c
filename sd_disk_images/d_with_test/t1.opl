@@ -1,0 +1,12 @@
+t:
+
+local M1
+
+M1 = var(10.0, 100.0, 200.0, 10.5)
+print "M1:";M1
+
+if m1 <> 8176.72916667
+print "c fail"
+else
+print "PASS"
+endif

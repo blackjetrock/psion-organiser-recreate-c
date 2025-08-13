@@ -1,0 +1,70 @@
+
+Filename:'PRINTER'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0004
+QCode Space Size:005A
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 4E       CLS     (bytes code:-)
+0003: 24       Push string literal     (bytes code:S)
+0004: Len:14
+0005: 'Printer setup?'
+0013: 71       PRINT string     (bytes code:-)
+0014: 73       PRINT newline     (bytes code:-)
+0015: 0D       Push local/global integer variable reference     (bytes code:v)
+0016: FFFC       (65532)
+0018: 22       Push integer literal     (bytes code:I)
+0019: 0002       (2)
+001B: 24       Push string literal     (bytes code:S)
+001C: Len:16
+001D: 'Psion,Epson,None'
+002D: D9       MENUN     (bytes code:-)
+002E: 7F       Assign integer     (bytes code:-)
+002F: 24       Push string literal     (bytes code:S)
+0030: Len:9
+0031: 'A:printer'
+003A: 5F       DELETE     (bytes code:-)
+003B: 24       Push string literal     (bytes code:S)
+003C: Len:9
+003D: 'A:printer'
+0046: 5E       CREATE     (bytes code:f+list)
+      Logical file:00 (A)
+        Type:00 (Integer)
+        P%
+004C: 88       End of field list for CREATE/OPEN     (bytes code:-)
+004D: 24       Push string literal     (bytes code:S)
+004E: Len:2
+004F: 'P%'
+0051: 1D       Push reference of file integer field. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0052: 00           (A)
+0053: 00       Push local/global integer variable value     (bytes code:v)
+0054: FFFC       (65532)
+0056: 7F       Assign integer     (bytes code:-)
+0057: 5B       APPEND     (bytes code:-)
+0058: 5C       CLOSE     (bytes code:-)
+0059: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 4E 24 0E 50 72 69 6E 74 65 72 20 73 65 74 
+0010:75 70 3F 71 73 0D FF FC 22 00 02 24 10 50 73 69 
+0020:6F 6E 2C 45 70 73 6F 6E 2C 4E 6F 6E 65 D9 7F 24 
+0030:09 41 3A 70 72 69 6E 74 65 72 5F 24 09 41 3A 70 
+0040:72 69 6E 74 65 72 5E 00 00 02 50 25 88 24 02 50 
+0050:25 1D 00 00 FF FC 7F 5B 5C 7B 

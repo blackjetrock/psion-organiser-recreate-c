@@ -1,0 +1,149 @@
+
+Filename:'FLIST2'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0054
+QCode Space Size:008F
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0007
+External variables (2)
+ 0: LF               FLT    (01)
+ 1: Y                FLT    (01)
+
+String length fixups (0)
+
+Array size fixups (2)
+ 0: FFD0 0005
+ 1: FFAC 000A
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0E       Push local/global float variable reference     (bytes code:v)
+0003: FFC8       (65480)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0001       (1)
+0008: 11       Pop integer index and push local/global float array variable reference     (bytes code:v)
+0009: FFD0       (65488)
+000B: 00       Push local/global integer variable value     (bytes code:v)
+000C: FFC2       (65474)
+000E: 20       Push byte literal     (bytes code:B)
+000F: 00           (0)
+0010: DF       MEAN     (bytes code:-)
+0011: 80       Assign float     (bytes code:-)
+0012: 0E       Push local/global float variable reference     (bytes code:v)
+0013: FFC8       (65480)
+0015: 22       Push integer literal     (bytes code:I)
+0016: 0001       (1)
+0018: 11       Pop integer index and push local/global float array variable reference     (bytes code:v)
+0019: FFD0       (65488)
+001B: 22       Push integer literal     (bytes code:I)
+001C: 000A       (10)
+001E: 20       Push byte literal     (bytes code:B)
+001F: 00           (0)
+0020: DF       MEAN     (bytes code:-)
+0021: 80       Assign float     (bytes code:-)
+0022: 0E       Push local/global float variable reference     (bytes code:v)
+0023: FFC8       (65480)
+0025: 22       Push integer literal     (bytes code:I)
+0026: 0001       (1)
+0028: 11       Pop integer index and push local/global float array variable reference     (bytes code:v)
+0029: FFD0       (65488)
+002B: 23       Push float literal     (bytes code:F)
+002C: Len:2
+002D: '25E0
+002F: 87       autoconversion float to int     (bytes code:-)
+0030: 20       Push byte literal     (bytes code:B)
+0031: 00           (0)
+0032: DF       MEAN     (bytes code:-)
+0033: 80       Assign float     (bytes code:-)
+0034: 0E       Push local/global float variable reference     (bytes code:v)
+0035: FFC8       (65480)
+0037: 08       Push parameter/external float variable value     (bytes code:V)
+0038: FFFC       (65532)
+003A: 22       Push integer literal     (bytes code:I)
+003B: 0004       (4)
+003D: 86       autoconversion int to float     (bytes code:-)
+003E: 20       Push byte literal     (bytes code:B)
+003F: 02           (2)
+0040: 20       Push byte literal     (bytes code:B)
+0041: 01           (1)
+0042: DF       MEAN     (bytes code:-)
+0043: 80       Assign float     (bytes code:-)
+0044: 0E       Push local/global float variable reference     (bytes code:v)
+0045: FFC8       (65480)
+0047: 00       Push local/global integer variable value     (bytes code:v)
+0048: FFC6       (65478)
+004A: 86       autoconversion int to float     (bytes code:-)
+004B: 08       Push parameter/external float variable value     (bytes code:V)
+004C: FFFA       (65530)
+004E: 00       Push local/global integer variable value     (bytes code:v)
+004F: FFC2       (65474)
+0051: 86       autoconversion int to float     (bytes code:-)
+0052: 20       Push byte literal     (bytes code:B)
+0053: 03           (3)
+0054: 20       Push byte literal     (bytes code:B)
+0055: 01           (1)
+0056: DF       MEAN     (bytes code:-)
+0057: 80       Assign float     (bytes code:-)
+0058: 0E       Push local/global float variable reference     (bytes code:v)
+0059: FFC8       (65480)
+005B: 00       Push local/global integer variable value     (bytes code:v)
+005C: FFC6       (65478)
+005E: 86       autoconversion int to float     (bytes code:-)
+005F: 01       Push local/global float variable value     (bytes code:v)
+0060: FFC8       (65480)
+0062: 00       Push local/global integer variable value     (bytes code:v)
+0063: FFC4       (65476)
+0065: 86       autoconversion int to float     (bytes code:-)
+0066: 00       Push local/global integer variable value     (bytes code:v)
+0067: FFC2       (65474)
+0069: 86       autoconversion int to float     (bytes code:-)
+006A: 20       Push byte literal     (bytes code:B)
+006B: 04           (4)
+006C: 20       Push byte literal     (bytes code:B)
+006D: 01           (1)
+006E: DF       MEAN     (bytes code:-)
+006F: 80       Assign float     (bytes code:-)
+0070: 0E       Push local/global float variable reference     (bytes code:v)
+0071: FFC8       (65480)
+0073: 22       Push integer literal     (bytes code:I)
+0074: 0001       (1)
+0076: 03       Pop integer index and push local/global integer array variable value     (bytes code:v)
+0077: FFAC       (65452)
+0079: 86       autoconversion int to float     (bytes code:-)
+007A: 22       Push integer literal     (bytes code:I)
+007B: 0002       (2)
+007D: 03       Pop integer index and push local/global integer array variable value     (bytes code:v)
+007E: FFAC       (65452)
+0080: 86       autoconversion int to float     (bytes code:-)
+0081: 22       Push integer literal     (bytes code:I)
+0082: 0003       (3)
+0084: 03       Pop integer index and push local/global integer array variable value     (bytes code:v)
+0085: FFAC       (65452)
+0087: 86       autoconversion int to float     (bytes code:-)
+0088: 20       Push byte literal     (bytes code:B)
+0089: 03           (3)
+008A: 20       Push byte literal     (bytes code:B)
+008B: 01           (1)
+008C: DF       MEAN     (bytes code:-)
+008D: 80       Assign float     (bytes code:-)
+008E: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0E FF C8 22 00 01 11 FF D0 00 FF C2 20 00 
+0010:DF 80 0E FF C8 22 00 01 11 FF D0 22 00 0A 20 00 
+0020:DF 80 0E FF C8 22 00 01 11 FF D0 23 02 25 00 87 
+0030:20 00 DF 80 0E FF C8 08 FF FC 22 00 04 86 20 02 
+0040:20 01 DF 80 0E FF C8 00 FF C6 86 08 FF FA 00 FF 
+0050:C2 86 20 03 20 01 DF 80 0E FF C8 00 FF C6 86 01 
+0060:FF C8 00 FF C4 86 00 FF C2 86 20 04 20 01 DF 80 
+0070:0E FF C8 22 00 01 03 FF AC 86 22 00 02 03 FF AC 
+0080:86 22 00 03 03 FF AC 86 20 03 20 01 DF 80 7B 

@@ -1,0 +1,337 @@
+
+Filename:'PDEMO'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0008
+QCode Space Size:02CC
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (1)
+ 0: FFF8 0002
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 53       ONERR     (bytes code:D)
+0003: Dest:0244 (Dist:0241)
+0005: 4E       CLS     (bytes code:-)
+0006: 24       Push string literal     (bytes code:S)
+0007: Len:11
+0008: 'PRINTING...'
+0013: 71       PRINT string     (bytes code:-)
+0014: 73       PRINT newline     (bytes code:-)
+0015: 78       LPRINT newline     (bytes code:-)
+0016: 22       Push integer literal     (bytes code:I)
+0017: 000E       (14)
+0019: B8       CHR$     (bytes code:-)
+001A: 76       LPRINT string     (bytes code:-)
+001B: 78       LPRINT newline     (bytes code:-)
+001C: 22       Push integer literal     (bytes code:I)
+001D: 0011       (17)
+001F: B8       CHR$     (bytes code:-)
+0020: 24       Push string literal     (bytes code:S)
+0021: Len:16
+0022: 'PSION PRINTER II'
+0032: 4B       Plus string     (bytes code:-)
+0033: 76       LPRINT string     (bytes code:-)
+0034: 78       LPRINT newline     (bytes code:-)
+0035: 22       Push integer literal     (bytes code:I)
+0036: 000F       (15)
+0038: B8       CHR$     (bytes code:-)
+0039: 76       LPRINT string     (bytes code:-)
+003A: 78       LPRINT newline     (bytes code:-)
+003B: 24       Push string literal     (bytes code:S)
+003C: Len:1
+003D: '='
+003E: 22       Push integer literal     (bytes code:I)
+003F: 0028       (40)
+0041: C5       REPT$     (bytes code:-)
+0042: 76       LPRINT string     (bytes code:-)
+0043: 78       LPRINT newline     (bytes code:-)
+0044: 78       LPRINT newline     (bytes code:-)
+0045: 24       Push string literal     (bytes code:S)
+0046: Len:33
+0047: '* Designed for PSION Organiser II'
+0068: 76       LPRINT string     (bytes code:-)
+0069: 78       LPRINT newline     (bytes code:-)
+006A: 24       Push string literal     (bytes code:S)
+006B: Len:35
+006C: '  Advanced Electronic Organiser and'
+008F: 76       LPRINT string     (bytes code:-)
+0090: 78       LPRINT newline     (bytes code:-)
+0091: 24       Push string literal     (bytes code:S)
+0092: Len:21
+0093: '  Hand-held Computers'
+00A8: 76       LPRINT string     (bytes code:-)
+00A9: 78       LPRINT newline     (bytes code:-)
+00AA: 78       LPRINT newline     (bytes code:-)
+00AB: 24       Push string literal     (bytes code:S)
+00AC: Len:14
+00AD: '* Rechargeable'
+00BB: 76       LPRINT string     (bytes code:-)
+00BC: 78       LPRINT newline     (bytes code:-)
+00BD: 78       LPRINT newline     (bytes code:-)
+00BE: 24       Push string literal     (bytes code:S)
+00BF: Len:29
+00C0: '* Complete with Mains Adaptor'
+00DD: 76       LPRINT string     (bytes code:-)
+00DE: 78       LPRINT newline     (bytes code:-)
+00DF: 78       LPRINT newline     (bytes code:-)
+00E0: 24       Push string literal     (bytes code:S)
+00E1: Len:36
+00E2: '* Compatible with Organiser Software'
+0106: 76       LPRINT string     (bytes code:-)
+0107: 78       LPRINT newline     (bytes code:-)
+0108: 78       LPRINT newline     (bytes code:-)
+0109: 24       Push string literal     (bytes code:S)
+010A: Len:37
+010B: '* Wide range of print styles possible'
+0130: 76       LPRINT string     (bytes code:-)
+0131: 78       LPRINT newline     (bytes code:-)
+0132: 22       Push integer literal     (bytes code:I)
+0133: 000F       (15)
+0135: B8       CHR$     (bytes code:-)
+0136: 76       LPRINT string     (bytes code:-)
+0137: 78       LPRINT newline     (bytes code:-)
+0138: 22       Push integer literal     (bytes code:I)
+0139: 000E       (14)
+013B: B8       CHR$     (bytes code:-)
+013C: 24       Push string literal     (bytes code:S)
+013D: Len:14
+013E: '20 COLUMN MODE'
+014C: 4B       Plus string     (bytes code:-)
+014D: 76       LPRINT string     (bytes code:-)
+014E: 78       LPRINT newline     (bytes code:-)
+014F: 78       LPRINT newline     (bytes code:-)
+0150: 22       Push integer literal     (bytes code:I)
+0151: 000F       (15)
+0153: B8       CHR$     (bytes code:-)
+0154: 24       Push string literal     (bytes code:S)
+0155: Len:14
+0156: '40 COLUMN MODE'
+0164: 4B       Plus string     (bytes code:-)
+0165: 22       Push integer literal     (bytes code:I)
+0166: 0017       (23)
+0168: B8       CHR$     (bytes code:-)
+0169: 4B       Plus string     (bytes code:-)
+016A: 24       Push string literal     (bytes code:S)
+016B: Len:17
+016C: '   60 COLUMN MODE'
+017D: 4B       Plus string     (bytes code:-)
+017E: 22       Push integer literal     (bytes code:I)
+017F: 0016       (22)
+0181: B8       CHR$     (bytes code:-)
+0182: 4B       Plus string     (bytes code:-)
+0183: 24       Push string literal     (bytes code:S)
+0184: Len:17
+0185: '   80 COLUMN MODE'
+0196: 4B       Plus string     (bytes code:-)
+0197: 76       LPRINT string     (bytes code:-)
+0198: 78       LPRINT newline     (bytes code:-)
+0199: 78       LPRINT newline     (bytes code:-)
+019A: 22       Push integer literal     (bytes code:I)
+019B: 0015       (21)
+019D: B8       CHR$     (bytes code:-)
+019E: 24       Push string literal     (bytes code:S)
+019F: Len:9
+01A0: 'Underline'
+01A9: 4B       Plus string     (bytes code:-)
+01AA: 22       Push integer literal     (bytes code:I)
+01AB: 0017       (23)
+01AD: B8       CHR$     (bytes code:-)
+01AE: 4B       Plus string     (bytes code:-)
+01AF: 24       Push string literal     (bytes code:S)
+01B0: Len:9
+01B1: 'Underline'
+01BA: 4B       Plus string     (bytes code:-)
+01BB: 22       Push integer literal     (bytes code:I)
+01BC: 000F       (15)
+01BE: B8       CHR$     (bytes code:-)
+01BF: 4B       Plus string     (bytes code:-)
+01C0: 24       Push string literal     (bytes code:S)
+01C1: Len:9
+01C2: 'Underline'
+01CB: 4B       Plus string     (bytes code:-)
+01CC: 22       Push integer literal     (bytes code:I)
+01CD: 000E       (14)
+01CF: B8       CHR$     (bytes code:-)
+01D0: 4B       Plus string     (bytes code:-)
+01D1: 24       Push string literal     (bytes code:S)
+01D2: Len:9
+01D3: 'Underline'
+01DC: 4B       Plus string     (bytes code:-)
+01DD: 76       LPRINT string     (bytes code:-)
+01DE: 78       LPRINT newline     (bytes code:-)
+01DF: 78       LPRINT newline     (bytes code:-)
+01E0: 22       Push integer literal     (bytes code:I)
+01E1: 0011       (17)
+01E3: B8       CHR$     (bytes code:-)
+01E4: 24       Push string literal     (bytes code:S)
+01E5: Len:20
+01E6: '20 Col Double HEIGHT'
+01FA: 4B       Plus string     (bytes code:-)
+01FB: 22       Push integer literal     (bytes code:I)
+01FC: 0018       (24)
+01FE: B8       CHR$     (bytes code:-)
+01FF: 4B       Plus string     (bytes code:-)
+0200: 22       Push integer literal     (bytes code:I)
+0201: 000F       (15)
+0203: B8       CHR$     (bytes code:-)
+0204: 4B       Plus string     (bytes code:-)
+0205: 76       LPRINT string     (bytes code:-)
+0206: 78       LPRINT newline     (bytes code:-)
+0207: 78       LPRINT newline     (bytes code:-)
+0208: 24       Push string literal     (bytes code:S)
+0209: Len:21
+020A: '* Graphics Capability'
+021F: 76       LPRINT string     (bytes code:-)
+0220: 78       LPRINT newline     (bytes code:-)
+0221: 78       LPRINT newline     (bytes code:-)
+0222: 20       Push byte literal     (bytes code:B)
+0223: 00           (0)
+0224: 7D       Procedure call.     (bytes code:S)
+0225: Len:4
+0226: 'LOGO'
+022A: 84       drop float from stack     (bytes code:-)
+022B: 78       LPRINT newline     (bytes code:-)
+022C: 24       Push string literal     (bytes code:S)
+022D: Len:1
+022E: '='
+022F: 22       Push integer literal     (bytes code:I)
+0230: 0028       (40)
+0232: C5       REPT$     (bytes code:-)
+0233: 76       LPRINT string     (bytes code:-)
+0234: 78       LPRINT newline     (bytes code:-)
+0235: 78       LPRINT newline     (bytes code:-)
+0236: 78       LPRINT newline     (bytes code:-)
+0237: 78       LPRINT newline     (bytes code:-)
+0238: 78       LPRINT newline     (bytes code:-)
+0239: 78       LPRINT newline     (bytes code:-)
+023A: 78       LPRINT newline     (bytes code:-)
+023B: 78       LPRINT newline     (bytes code:-)
+023C: 78       LPRINT newline     (bytes code:-)
+023D: 78       LPRINT newline     (bytes code:-)
+023E: 78       LPRINT newline     (bytes code:-)
+023F: 78       LPRINT newline     (bytes code:-)
+0240: 53       ONERR     (bytes code:D)
+0241: Dest:0241 (Dist:0000)
+0243: 7B       RETURN (float 0)     (bytes code:-)
+0244: 06       Push calculator memory. Is followed by a byte indicating which of the 10 memories.     (bytes code:m)
+0245: 0028       (M5)
+0247: 22       Push integer literal     (bytes code:I)
+0248: 0002       (2)
+024A: 86       autoconversion int to float     (bytes code:-)
+024B: 39       greater than equal float     (bytes code:-)
+024C: 7E       Branch if false     (bytes code:D)
+024D: Dest:02A1 (Dist:0054)
+024F: 4E       CLS     (bytes code:-)
+0250: 22       Push integer literal     (bytes code:I)
+0251: 0001       (1)
+0253: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+0254: FFF8       (65528)
+0256: 22       Push integer literal     (bytes code:I)
+0257: 3F82       (16258)
+0259: 7F       Assign integer     (bytes code:-)
+025A: 22       Push integer literal     (bytes code:I)
+025B: 0002       (2)
+025D: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+025E: FFF8       (65528)
+0260: 22       Push integer literal     (bytes code:I)
+0261: 3900       (14592)
+0263: 7F       Assign integer     (bytes code:-)
+0264: 22       Push integer literal     (bytes code:I)
+0265: 0001       (1)
+0267: 10       Pop integer index and push local/global integer array variable reference     (bytes code:v)
+0268: FFF8       (65528)
+026A: 8A       ADDR     (bytes code:-)
+026B: 22       Push integer literal     (bytes code:I)
+026C: 0100       (256)
+026E: 9F       USR     (bytes code:-)
+026F: 83       drop integer from stack     (bytes code:-)
+0270: 73       PRINT newline     (bytes code:-)
+0271: 24       Push string literal     (bytes code:S)
+0272: Len:20
+0273: ' Demonstration not  '
+0287: 71       PRINT string     (bytes code:-)
+0288: 24       Push string literal     (bytes code:S)
+0289: Len:14
+028A: '     Available'
+0298: 71       PRINT string     (bytes code:-)
+0299: 73       PRINT newline     (bytes code:-)
+029A: 22       Push integer literal     (bytes code:I)
+029B: 001E       (30)
+029D: 54       PAUSE     (bytes code:-)
+029E: 51       GOTO     (bytes code:D)
+029F: Dest:02CB (Dist:002C)
+02A1: 4E       CLS     (bytes code:-)
+02A2: 24       Push string literal     (bytes code:S)
+02A3: Len:16
+02A4: ' Demonstration  '
+02B4: 71       PRINT string     (bytes code:-)
+02B5: 24       Push string literal     (bytes code:S)
+02B6: Len:14
+02B7: ' not Available'
+02C5: 71       PRINT string     (bytes code:-)
+02C6: 73       PRINT newline     (bytes code:-)
+02C7: 22       Push integer literal     (bytes code:I)
+02C8: 001E       (30)
+02CA: 54       PAUSE     (bytes code:-)
+02CB: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 53 02 41 4E 24 0B 50 52 49 4E 54 49 4E 47 
+0010:2E 2E 2E 71 73 78 22 00 0E B8 76 78 22 00 11 B8 
+0020:24 10 50 53 49 4F 4E 20 50 52 49 4E 54 45 52 20 
+0030:49 49 4B 76 78 22 00 0F B8 76 78 24 01 3D 22 00 
+0040:28 C5 76 78 78 24 21 2A 20 44 65 73 69 67 6E 65 
+0050:64 20 66 6F 72 20 50 53 49 4F 4E 20 4F 72 67 61 
+0060:6E 69 73 65 72 20 49 49 76 78 24 23 20 20 41 64 
+0070:76 61 6E 63 65 64 20 45 6C 65 63 74 72 6F 6E 69 
+0080:63 20 4F 72 67 61 6E 69 73 65 72 20 61 6E 64 76 
+0090:78 24 15 20 20 48 61 6E 64 2D 68 65 6C 64 20 43 
+00A0:6F 6D 70 75 74 65 72 73 76 78 78 24 0E 2A 20 52 
+00B0:65 63 68 61 72 67 65 61 62 6C 65 76 78 78 24 1D 
+00C0:2A 20 43 6F 6D 70 6C 65 74 65 20 77 69 74 68 20 
+00D0:4D 61 69 6E 73 20 41 64 61 70 74 6F 72 76 78 78 
+00E0:24 24 2A 20 43 6F 6D 70 61 74 69 62 6C 65 20 77 
+00F0:69 74 68 20 4F 72 67 61 6E 69 73 65 72 20 53 6F 
+0100:66 74 77 61 72 65 76 78 78 24 25 2A 20 57 69 64 
+0110:65 20 72 61 6E 67 65 20 6F 66 20 70 72 69 6E 74 
+0120:20 73 74 79 6C 65 73 20 70 6F 73 73 69 62 6C 65 
+0130:76 78 22 00 0F B8 76 78 22 00 0E B8 24 0E 32 30 
+0140:20 43 4F 4C 55 4D 4E 20 4D 4F 44 45 4B 76 78 78 
+0150:22 00 0F B8 24 0E 34 30 20 43 4F 4C 55 4D 4E 20 
+0160:4D 4F 44 45 4B 22 00 17 B8 4B 24 11 20 20 20 36 
+0170:30 20 43 4F 4C 55 4D 4E 20 4D 4F 44 45 4B 22 00 
+0180:16 B8 4B 24 11 20 20 20 38 30 20 43 4F 4C 55 4D 
+0190:4E 20 4D 4F 44 45 4B 76 78 78 22 00 15 B8 24 09 
+01A0:55 6E 64 65 72 6C 69 6E 65 4B 22 00 17 B8 4B 24 
+01B0:09 55 6E 64 65 72 6C 69 6E 65 4B 22 00 0F B8 4B 
+01C0:24 09 55 6E 64 65 72 6C 69 6E 65 4B 22 00 0E B8 
+01D0:4B 24 09 55 6E 64 65 72 6C 69 6E 65 4B 76 78 78 
+01E0:22 00 11 B8 24 14 32 30 20 43 6F 6C 20 44 6F 75 
+01F0:62 6C 65 20 48 45 49 47 48 54 4B 22 00 18 B8 4B 
+0200:22 00 0F B8 4B 76 78 78 24 15 2A 20 47 72 61 70 
+0210:68 69 63 73 20 43 61 70 61 62 69 6C 69 74 79 76 
+0220:78 78 20 00 7D 04 4C 4F 47 4F 84 78 24 01 3D 22 
+0230:00 28 C5 76 78 78 78 78 78 78 78 78 78 78 78 78 
+0240:53 00 00 7B 06 00 28 22 00 02 86 39 7E 00 54 4E 
+0250:22 00 01 10 FF F8 22 3F 82 7F 22 00 02 10 FF F8 
+0260:22 39 00 7F 22 00 01 10 FF F8 8A 22 01 00 9F 83 
+0270:73 24 14 20 44 65 6D 6F 6E 73 74 72 61 74 69 6F 
+0280:6E 20 6E 6F 74 20 20 71 24 0E 20 20 20 20 20 41 
+0290:76 61 69 6C 61 62 6C 65 71 73 22 00 1E 54 51 00 
+02A0:2C 4E 24 10 20 44 65 6D 6F 6E 73 74 72 61 74 69 
+02B0:6F 6E 20 20 71 24 0E 20 6E 6F 74 20 41 76 61 69 
+02C0:6C 61 62 6C 65 71 73 22 00 1E 54 7B 

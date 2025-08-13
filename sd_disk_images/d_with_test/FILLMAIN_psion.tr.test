@@ -1,0 +1,53 @@
+
+Filename:'FILLMAIN'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0002
+QCode Space Size:003D
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:9
+0004: 'b:address'
+000D: A4       EXIST     (bytes code:-)
+000E: 7E       Branch if false     (bytes code:D)
+000F: Dest:0028 (Dist:0019)
+0011: 24       Push string literal     (bytes code:S)
+0012: Len:9
+0013: 'b:address'
+001C: 24       Push string literal     (bytes code:S)
+001D: Len:6
+001E: 'a:main'
+0024: 5D       COPY     (bytes code:-)
+0025: 51       GOTO     (bytes code:D)
+0026: Dest:003C (Dist:0016)
+0028: 24       Push string literal     (bytes code:S)
+0029: Len:9
+002A: 'c:address'
+0033: 24       Push string literal     (bytes code:S)
+0034: Len:6
+0035: 'a:main'
+003B: 5D       COPY     (bytes code:-)
+003C: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 09 62 3A 61 64 64 72 65 73 73 A4 7E 00 
+0010:19 24 09 62 3A 61 64 64 72 65 73 73 24 06 61 3A 
+0020:6D 61 69 6E 5D 51 00 16 24 09 63 3A 61 64 64 72 
+0030:65 73 73 24 06 61 3A 6D 61 69 6E 5D 7B 

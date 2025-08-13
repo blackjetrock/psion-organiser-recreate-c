@@ -253,6 +253,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/psion_recreate_ctusb.dir/newopl_types.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o"
   "CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.o.d"
+  "CMakeFiles/psion_recreate_ctusb.dir/nopl_objdump.c.o"
+  "CMakeFiles/psion_recreate_ctusb.dir/nopl_objdump.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o"
   "CMakeFiles/psion_recreate_ctusb.dir/nopl_trans.c.o.d"
   "CMakeFiles/psion_recreate_ctusb.dir/num_a.c.o"

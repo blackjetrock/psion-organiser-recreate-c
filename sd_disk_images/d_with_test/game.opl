@@ -1,0 +1,67 @@
+game:
+LOCAL e$(2)
+LOCAL a%,b%,b1%,c%,c1%,x%,y%,i%,sc%
+graphic: :CURSOR OFF
+e$=CHR$(4)+CHR$(6)
+b%=20 :c%=12 :x%=3 :y%=1
+DO
+ CLS :PRINT REPT$(CHR$(158),80)
+ AT x%,y% :PRINT CHR$(7)
+ a%=1 :c%=1+RND*4
+ DO :c1%=1+RND*4 :UNTIL c%<>c1%
+ DO
+  AT a%,c% :PRINT CHR$(0)
+  AT a%,c1% :PRINT CHR$(0) :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(1)
+  AT a%,c1% :PRINT CHR$(1) :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(2)
+  AT a%,c1% :PRINT CHR$(2) :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(3)
+  AT a%,c1% :PRINT CHR$(3) :BEEP b%,10*b%
+  AT a%,c% :PRINT e$
+  AT a%,c1% :PRINT e$ :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(5)
+  AT a%,c1% :PRINT CHR$(5) :BEEP b%,10*b%
+  AT a%,c% :PRINT " " :AT a%,c1% :PRINT " "
+  i%=KEY
+  IF i%
+   IF i%=%S AND y%>1
+    AT x%,y% :PRINT CHR$(158)
+    y%=y%-1 :AT x%,y% :PRINT CHR$(7)
+   ENDIF
+   IF i%=%X AND y%<4
+    AT x%,y% :PRINT CHR$(158)
+    y%=y%+1 :AT x%,y% :PRINT CHR$(7)
+   ENDIF
+  ENDIF
+  a%=a%+1
+  IF a%=x% AND (c%=y% OR c1%=y%) :REM Hit
+   i%=0
+   DO
+    AT x%,y% :PRINT CHR$(170+i%)
+    BEEP 10,100+i%
+    i%=i%+1
+    BEEP 10,100-i%
+   UNTIL i%=30
+   b%=b%+5 :a%=20 :x%=x%+2
+   IF x%>20
+    CLS : PRINT "GAME OVER"
+    PRINT "SCORE:",sc% :PAUSE 40
+    WHILE KEY :ENDWH :REM Drain buffer
+    GET :RETURN
+   ENDIF
+  ENDIF
+ UNTIL a%=20
+ sc%=sc%+1
+ IF b%>12
+  b%=b%-2
+ ELSEIF b%<6
+  IF b1%
+   b%=b%-1 :b1%=0
+  ELSE
+   b1%=1
+  ENDIF
+ ELSE
+  b%=b%-1
+ ENDIF
+UNTIL 0

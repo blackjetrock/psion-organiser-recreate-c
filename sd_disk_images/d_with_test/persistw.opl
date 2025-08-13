@@ -1,0 +1,17 @@
+persistw:
+
+create "A:PERSIST", A, s$
+
+use a
+
+a.s$="Persistant data 1"
+append
+a.s$="Persistant data 2"
+append
+a.s$="Persistant data 3"
+append
+a.s$="Persistant data 4"
+append
+
+first
+print a.s$

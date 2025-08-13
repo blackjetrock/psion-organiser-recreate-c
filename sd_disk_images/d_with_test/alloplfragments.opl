@@ -1,0 +1,469 @@
+INPUT:
+LOCAL x
+CLS
+PRINT "ENTER NUMBER"
+INPUT x
+CLS
+PRINT "YOU ENTERED",x
+GET
+
+PROC1:
+LOCAL x
+CLS
+PRINT "ENTER PRICE"
+INPUT x
+VAT1:(x)
+
+VAT1:(p)
+CLS
+PRINT "PRICE INCLUDING VAT = ",p*1.15
+GET
+
+PROC2:
+LOCAL x, r
+CLS
+PRINT "ENTER PRICE"
+INPUT x
+CLS
+PRINT "ENTER VAT RATE"
+INPUT r
+VAT2:(x,r)
+
+VAT2: (p1,p2)
+CLS
+PRINT p1+p2/100*p1
+GET
+
+PROC3:
+LOCAL x,r
+CLS
+PRINT "ENTER PRICE"
+INPUT x
+CLS
+PRINT "ENTER VAT RATE"
+INPUT r
+CLS
+PRINT "PRICE INCLUDING VAT =",VAT3:(x,r)
+GET
+
+VAT3:(p1,p2)
+RETURN p1+p2/100*p1
+
+a%=10
+DO
+ PRINT "A=";a%
+ a%=a%-1
+UNTIL a%=0
+a=4.1
+b=2.7
+WHILE a>b
+ PRINT "a is greater than b"
+ b=b+1.04
+ENDWH
+
+GOTO exit::
+PRINT "MISS THIS LINE"
+PRINT "AND THIS ONE"
+exit::
+
+whatkey:
+LOCAL g%
+g%=GET
+PRINT "THAT KEY IS"
+IF g%>64 AND g%<91
+ PRINT "UPPER CASE"
+ELSEIF g%>96 AND g%<123
+ PRINT "lower case"
+ELSE
+ PRINT "NOT A LETTER."
+ENDIF
+GET
+
+IF salary<expenses
+ PRINT "bad"
+ELSEIF salary>expenses
+ PRINT "good"
+ENDIF
+
+r%=FINDW("*ORDER*89*")
+
+ONERR noprint::
+LPRINT "Dear Sir"
+RETURN
+noprint::
+ONERR OFF :IF ERR=194 :RAISE ERR :ENDIF
+PRINT "CONNECT PRINTER"
+GET
+
+proc:
+LOCAL a%
+start::
+PRINT "ENTER AGE",
+TRAP INPUT a%
+IF ERR=252
+ PRINT "NUMBER NOT WORD"
+ GOTO start::
+ENDIF
+
+TRAP OPEN "B:MAIN",A,a$
+IF ERR=246
+ PRINT "NO PACK IN B:"
+ELSEIF ERR
+ PRINT ERR$(ERR)
+ENDIF
+
+
+RAISE 246
+
+days1:
+LOCAL birth%,now%,answer%
+birth%=DAYS(14,6,1957)
+now%=DAYS(DAY,MONTH,YEAR)
+answer%=now%-birth%
+PRINT answer% :GET
+
+days2:
+LOCAL d1%,m1%,y1%,d2%,m2%,y2%
+PRINT "ENTER FIRST DAY"
+INPUT d1%
+PRINT "ENTER FIRST MONTH"
+INPUT m1%
+PRINT "ENTER FIRST YEAR"
+INPUT y1%
+PRINT "ENTER SECOND DAY"
+INPUT d2%
+PRINT "ENTER SECOND MONTH"
+INPUT m2%
+PRINT "ENTER SECOND YEAR"
+INPUT y2%
+PRINT DAYS(d2%,m2%,y2%)-DAYS(d1%,m1%,y1%)
+GET
+
+dice:
+LOCAL dice%,key%
+KSTAT 1
+top::
+CLS :PRINT "****DICE ROLLING****"
+PRINT "PRESS S TO STOP"
+DO
+ dice%=(RND*6+1)
+UNTIL KEY$="S"
+CLS
+PRINT "********* ";dice%;" ********"
+BEEP 50,100
+AT 1,4 :PRINT "ROLL AGAIN Y/N"
+label::
+key%=GET
+IF key%=%Y
+ GOTO top::
+ELSEIF key%=%N
+ RETURN
+ELSE
+ GOTO label::
+ENDIF
+
+mortgage:
+LOCAL num%,loan,x,term,rate,pay,ques$(2)
+CLS
+PRINT "EVALUATE MONTHLY"
+PRINT "MORTGAGE PAYMENT"
+PAUSE 30
+ques$=CHR$(63)+" "
+REM CHR$(63) is a "?" - See Appendix A
+loan=q:("ENTER LOAN"+ques$)
+DO
+ rate=q:("INTEREST RATE % "+ques$)
+UNTIL rate>0 AND rate<99
+DO
+ term=q:("ENTER TERM (YRS)"+ques$)
+UNTIL term>.5 AND term<100
+num%=MENU("BUILDING-SOCIETY,BANK,OTHER")
+IF num%=0 :RETURN :ENDIF
+rate=rate/100 :x=1+11*(num%/2)
+pay=loan*rate/12/(1-((1+rate/x)**(-x*term)))
+CLS :PRINT "MONTHLY PAYMENT"
+PRINT FIX$(pay, 2, -8)
+GET
+RETURN
+
+q:(a$)
+LOCAL z
+CLS :PRINT a$,CHR$(16);
+INPUT z
+CLS
+RETURN(z)
+
+game:
+LOCAL e$(2)
+LOCAL a%,b%,b1%,c%,c1%,x%,y%,i%,sc%
+graphic: :CURSOR OFF
+e$=CHR$(4)+CHR$(6)
+b%=20 :c%=12 :x%=3 :y%=1
+DO
+ CLS :PRINT REPT$(CHR$(158),80)
+ AT x%,y% :PRINT CHR$(7)
+ a%=1 :c%=1+RND*4
+ DO :c1%=1+RND*4 :UNTIL c%<>c1%
+ DO
+  AT a%,c% :PRINT CHR$(0)
+  AT a%,c1% :PRINT CHR$(0) :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(1)
+  AT a%,c1% :PRINT CHR$(1) :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(2)
+  AT a%,c1% :PRINT CHR$(2) :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(3)
+  AT a%,c1% :PRINT CHR$(3) :BEEP b%,10*b%
+  AT a%,c% :PRINT e$
+  AT a%,c1% :PRINT e$ :BEEP b%,10*b%
+  AT a%,c% :PRINT CHR$(5)
+  AT a%,c1% :PRINT CHR$(5) :BEEP b%,10*b%
+  AT a%,c% :PRINT " " :AT a%,c1% :PRINT " "
+  i%=KEY
+  IF i%
+   IF i%=%S AND y%>1
+    AT x%,y% :PRINT CHR$(158)
+    y%=y%-1 :AT x%,y% :PRINT CHR$(7)
+   ENDIF
+   IF i%=%X AND y%<4
+    AT x%,y% :PRINT CHR$(158)
+    y%=y%+1 :AT x%,y% :PRINT CHR$(7)
+   ENDIF
+  ENDIF
+  a%=a%+1
+  IF a%=x% AND (c%=y% OR c1%=y%) :REM Hit
+   i%=0
+   DO
+    AT x%,y% :PRINT CHR$(170+i%)
+    BEEP 10,100+i%
+    i%=i%+1
+    BEEP 10,100-i%
+   UNTIL i%=30
+   b%=b%+5 :a%=20 :x%=x%+2
+   IF x%>20
+    CLS :PRINT "GAME OVER"
+    PRINT "SCORE:",sc% :PAUSE 40
+    WHILE KEY :ENDWH :REM Drain buffer
+    GET :RETURN
+   ENDIF
+  ENDIF
+ UNTIL a%=20
+ sc%=sc%+1
+ IF b%>12
+  b%=b%-2
+ ELSEIF b%<6
+  IF b1%
+   b%=b%-1 :b1%=0
+  ELSE
+   b1%=1
+  ENDIF
+ ELSE
+  b%=b%-1
+ ENDIF
+UNTIL 0
+
+graphic:
+UDG 0,0,0,28,30,30,30,28,0
+UDG 1,0,0,14,31,30,31,14,0
+UDG 2,0,0,7,14,12,14,7,0
+UDG 3,0,0,3,7,6,7,3,0
+UDG 4,0,0,1,3,3,1,0,0
+UDG 5,0,0,0,1,1,1,0,0
+UDG 6,0,0,24,16,4,16,24,0
+UDG 7,30,14,4,14,30,14,11,25
+
+files:
+LOCAL m%
+IF NOT EXIST("A:addr")
+ CREATE "A:ADDR",A,n$,ad1$,ad2$,ad3$,pc$,tel$
+ELSE
+ OPEN " A:ADDR",A,n$,ad1$,ad2$,ad3$,pc$,tel$
+ENDIF
+DO
+ m%=MENU("INSERT,SEARCH,ALTER,ERASE,QUIT")
+ IF m%=0 or m%=5 :STOP
+ ELSEIF m%=1 :insert:
+ ELSEIF m%=2 :search:
+ ELSEIF m%=3 :alter:
+ ELSEIF m%=4 :erase:
+ ENDIF
+UNTIL 0 :REM do loop forever
+
+insert:
+PRINT "ENTER NAME" :INPUT A.n$
+CLS :PRINT "ENTER STREET" :INPUT A.ad1$
+CLS :PRINT "ENTER TOWN" :INPUT A.ad2$
+CLS :PRINT "ENTER COUNTY" :INPUT A.ad3$
+CLS :PRINT "ENTER PCODE" :INPUT A.pc$
+CLS :PRINT "ENTER TELNUM" :INPUT A.tel$
+APPEND
+
+search:
+LOCAL recnum%,search$(30)
+top::
+FIRST :CLS :PRINT "FIND:";
+TRAP INPUT search$
+IF ERR=206
+ RETURN
+ENDIF
+recnum%=FIND(search$)
+IF recnum%=0
+ CLS :PRINT "NOT FOUND" :PAUSE 20
+ GOTO top::
+ENDIF
+DO
+ DISP(-1,"") :NEXT :recnum%=FIND(search$)
+ IF recnum%=0 :CLS
+  PRINT " NO MORE ENTRIES"
+  PAUSE 20 :RETURN
+ ENDIF
+UNTIL 0
+
+alter:
+LOCAL recnum%,search$(30),k%
+DO
+ FIRST :CLS
+ PRINT "ALTER:"; :TRAP INPUT search$
+ IF ERR=206 :RETURN :ENDIF
+ recnum%=FIND(search$)
+ IF recnum%=0
+  CLS :PRINT "NOT FOUND"
+  PAUSE 20 :CONTINUE
+ ENDIF
+ DO
+  KSTAT 1 :CLS :AT 1,2 :PRINT "EDIT Y/N"
+  k%=VIEW(1,A.n$)
+  IF k%=%Y :CLS
+   EDIT A.n$ :EDIT A.ad1$
+   EDIT A.ad2$ :EDIT A.ad3$
+   EDIT A.pc$ :EDIT A.tel$ :UPDATE :RETURN
+  ELSEIF k%=%N :NEXT :recnum%=FIND(search$)
+   IF recnum%=0
+    CLS :PRINT "NOT FOUND" :PAUSE 20 :BREAK
+   ENDIF
+  ENDIF
+ UNTIL 0
+UNTIL 0
+
+erase:
+LOCAL recnum%,search$(30),k%
+FIRST :CLS :PRINT "ERASE:";
+TRAP INPUT search$
+IF ERR=206 :RETURN :ENDIF
+recnum%=FIND(search$)
+DO
+ IF recnum%=0
+  CLS :PRINT "NOT FOUND" :PAUSE 20 :RETURN
+ ENDIF
+ ask::
+ KSTAT 1 :AT 1,2 :PRINT "ERASE Y/N"
+ k%=VIEW(1,A.n$)
+ IF k%<>%Y AND k%<>%N
+  GOTO ask::
+ ELSEIF k%=%Y
+  ERASE
+ ELSEIF k%=%N
+  NEXT :recnum%=FIND(search$)
+ ENDIF
+UNTIL EOF
+
+logger:
+LOCAL m%
+UDG 0,31,21,14,10,31,31,0,31
+UDG 2,0,0,0,0,0,0,0,31
+PRINT CHR$(0);REPT$(CHR$(2),14)
+CLOCK(1)
+m%=MENUN(2,"Logcall,Viewcalls")
+IF m%=0
+  RETURN
+ELSEIF m%=1
+  logcall:
+ELSE m%=2
+  viewcall:
+ENDIF
+
+logcall:
+LOCAL k%,h%,m%,s%,sec%,start$(8),swof%
+ESCAPE OFF
+IF NOT EXIST("A:LOG")
+ CREATE "A:LOG",B,date$,t$,comment$
+ELSE
+ OPEN "A:LOG",B,date$,t$,comment$
+ENDIF
+swof%=PEEKB($7C)
+POKEB $007C,0 :REM no auto turn off
+B.t$="00:00:00"
+B.date$=DATIM$
+start$=RIGHT$(DATIM$,8)
+h%=0 :m%=0 :s%=0 :sec%=SECOND
+DO
+ IF sec%<>SECOND
+  BEEP 1,100
+  sec%=SECOND :s%=s%+1
+  IF s%=60 :s%=0 :m%=m%+1
+   IF m%=60 :m%=0 :h%=h%+1
+   ENDIF
+  ENDIF
+  B.t$=REPT$("0",-(h%<10))+NUM$(h%,2)+":"
+  B.t$=B.t$+REPT$("0",-(M%<10))+NUM$(m%,2)+
+  B.t$=B.t$+REPT$("0",-(s%<10))+NUM$(s%,2)
+ ENDIF
+ AT 1,1 :PRINT "Started:";start$
+ PRINT "Time:";B.t$
+ PAUSE -1 :REM save battery
+ k%=KEY
+ IF k%=1
+  GOTO exit::
+ ENDIF
+UNTIL k%=13
+PRINT "Comments "+CHR$(63)
+TRAP INPUT B.comment$
+IF ERR=206
+ GOTO exit::
+ENDIF
+CLS :PRINT "Saving" :APPEND
+exit::
+CLOSE
+POKEB $007C,swof% :REM restore auto turn off
+ESCAPE ON
+
+viewcall:
+LOCAL k%
+TRAP OPEN "A:LOG",B,date$,t$,comment$
+IF ERR :RETURN :ENDIF
+DO
+ k%=DISP (-1,"")
+ NEXT
+ IF k%=1
+  RETURN
+ ENDIF
+UNTIL EOF
+AT 1,4 :PRINT "  NO MORE ENTRIES"
+PAUSE 25
+RETURN
+
+birthday:
+CREATE "a:newdia",B,date$,text$
+OPEN "a:olddia",A,date$,text$
+WHILE FINDW("1989*birthday")
+ PRINT a.text$
+ b.date$="1990"+mid$(a.date$,5,255)
+ b.text$=a.text$
+ USE B :APPEND
+ USE A :NEXT
+ENDWH
+GET
+
+LOCAL a(3)
+a(1)=10
+a(2)=15
+a(3)=20
+PRINT MEAN(a(),2)
+
+PRINT "ERASE Y/N"
+label::
+g%=GET
+IF g%=%N OR g%=%n :STOP
+ELSEIF g%=%Y OR g%=%y :erase:
+ELSE GOTO label::
+ENDIF
+

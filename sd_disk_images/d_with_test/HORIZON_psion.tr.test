@@ -1,0 +1,109 @@
+
+Filename:'HORIZON'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0012
+QCode Space Size:009C
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:18
+0004: 'At what height are'
+0016: 71       PRINT string     (bytes code:-)
+0017: 73       PRINT newline     (bytes code:-)
+0018: 24       Push string literal     (bytes code:S)
+0019: Len:16
+001A: 'you? (In metres)'
+002A: 71       PRINT string     (bytes code:-)
+002B: 73       PRINT newline     (bytes code:-)
+002C: 0E       Push local/global float variable reference     (bytes code:v)
+002D: FFF6       (65526)
+002F: 6D       INPUT float     (bytes code:-)
+0030: 0E       Push local/global float variable reference     (bytes code:v)
+0031: FFEE       (65518)
+0033: 01       Push local/global float variable value     (bytes code:v)
+0034: FFF6       (65526)
+0036: 23       Push float literal     (bytes code:F)
+0037: Len:3
+0038: '5012E1
+003B: 3E       Multiply float     (bytes code:-)
+003C: B3       SQR     (bytes code:-)
+003D: 80       Assign float     (bytes code:-)
+003E: 0E       Push local/global float variable reference     (bytes code:v)
+003F: FFEE       (65518)
+0041: 01       Push local/global float variable value     (bytes code:v)
+0042: FFEE       (65518)
+0044: 22       Push integer literal     (bytes code:I)
+0045: 000A       (10)
+0047: 86       autoconversion int to float     (bytes code:-)
+0048: 3E       Multiply float     (bytes code:-)
+0049: 80       Assign float     (bytes code:-)
+004A: 0E       Push local/global float variable reference     (bytes code:v)
+004B: FFEE       (65518)
+004D: 01       Push local/global float variable value     (bytes code:v)
+004E: FFEE       (65518)
+0050: 94       INT     (bytes code:-)
+0051: 86       autoconversion int to float     (bytes code:-)
+0052: 80       Assign float     (bytes code:-)
+0053: 0E       Push local/global float variable reference     (bytes code:v)
+0054: FFEE       (65518)
+0056: 01       Push local/global float variable value     (bytes code:v)
+0057: FFEE       (65518)
+0059: 22       Push integer literal     (bytes code:I)
+005A: 000A       (10)
+005C: 86       autoconversion int to float     (bytes code:-)
+005D: 3F       Divide float     (bytes code:-)
+005E: 80       Assign float     (bytes code:-)
+005F: 4E       CLS     (bytes code:-)
+0060: 24       Push string literal     (bytes code:S)
+0061: Len:15
+0062: 'At a height of '
+0071: 71       PRINT string     (bytes code:-)
+0072: 01       Push local/global float variable value     (bytes code:v)
+0073: FFF6       (65526)
+0075: 70       PRINT float     (bytes code:-)
+0076: 73       PRINT newline     (bytes code:-)
+0077: 24       Push string literal     (bytes code:S)
+0078: Len:12
+0079: 'you can see '
+0085: 71       PRINT string     (bytes code:-)
+0086: 01       Push local/global float variable value     (bytes code:v)
+0087: FFEE       (65518)
+0089: 70       PRINT float     (bytes code:-)
+008A: 73       PRINT newline     (bytes code:-)
+008B: 24       Push string literal     (bytes code:S)
+008C: Len:10
+008D: 'Kilometres'
+0097: 71       PRINT string     (bytes code:-)
+0098: 73       PRINT newline     (bytes code:-)
+0099: 91       GET     (bytes code:-)
+009A: 83       drop integer from stack     (bytes code:-)
+009B: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 12 41 74 20 77 68 61 74 20 68 65 69 67 
+0010:68 74 20 61 72 65 71 73 24 10 79 6F 75 3F 20 28 
+0020:49 6E 20 6D 65 74 72 65 73 29 71 73 0E FF F6 6D 
+0030:0E FF EE 01 FF F6 23 03 50 12 01 3E B3 80 0E FF 
+0040:EE 01 FF EE 22 00 0A 86 3E 80 0E FF EE 01 FF EE 
+0050:94 86 80 0E FF EE 01 FF EE 22 00 0A 86 3F 80 4E 
+0060:24 0F 41 74 20 61 20 68 65 69 67 68 74 20 6F 66 
+0070:20 71 01 FF F6 70 73 24 0C 79 6F 75 20 63 61 6E 
+0080:20 73 65 65 20 71 01 FF EE 70 73 24 0A 4B 69 6C 
+0090:6F 6D 65 74 72 65 73 71 73 91 83 7B 

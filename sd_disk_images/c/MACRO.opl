@@ -1,0 +1,79 @@
+macro:
+LOCAL A$(1),N%,f,cc,T,I,S,M,D,C
+REM Copyright Maxim Ford & Debbie Kaplan 5/3/1992
+
+PRINT "FILM FORMAT?"
+N%=MENUN(2,"35mm,16mm,Sup16,8mm,70mm")
+IF N%=1
+f=20.96
+cc=0.0339
+ELSEIF N%=2
+f=9.65
+cc=0.0254
+ELSEIF N%=3
+f=11.79
+cc=0.0254
+ELSEIF N%=4
+f=5.69
+cc=0.0254
+ELSEIF N%=5
+f=52.63
+cc=0.0339
+ENDIF
+CLS
+
+PRINT "What is the T stop "
+PRINT "now?" 
+INPUT T
+CLS
+PRINT "What is the width of"
+AT 1,2
+PRINT "the subject in mm?"
+INPUT I
+CLS
+REM Calculate image Magnification
+M=f/I
+REM cal new stop
+S=T/(M+1)
+REM Cal Depth
+D=(2*cc*S*(1+M))/M**2
+D=INTF(D*1000)
+D=D/1000
+S=INT((S*10))
+S=S/10
+
+REM Cal stop difference
+C=(log(T)-log(S))/0.15
+C=INTF(((C+.5)*10))
+C=C/10
+PRINT "Stop now ";T
+PRINT "New Stop ";S
+PRINT "Depth ";D;" mm"
+PRINT "Open up ";C;" stops"
+A$=GET$
+CLS
+IF A$="P" OR A$="p"
+PRINT "Printing....."
+LPRINT "Maxim Ford's Psion Camera Program"
+LPRINT 
+LPRINT "Width of the subject "; I;"mms and exposure"
+LPRINT "T Stop of ";T;" The magnification is ";M
+LPRINT "Open up ";C;" stops, to give a new stop"
+LPRINT "of ";S
+LPRINT "Depth of field is ";D;" mm"
+LPRINT
+LPRINT DATIM$
+LPRINT
+LPRINT
+LPRINT
+LPRINT
+ENDIF
+CLS
+N%=MENUN(2,"Again,Film,Menu")
+IF N%=1
+MACRO:
+ELSEIF N%=2
+FILM:
+ENDIF
+STOP
+

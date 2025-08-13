@@ -1,0 +1,134 @@
+
+Filename:'FINDREC'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0028
+QCode Space Size:00A0
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFDA 20
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 95       KEY     (bytes code:-)
+0003: 83       drop integer from stack     (bytes code:-)
+0004: 61       FIRST     (bytes code:-)
+0005: A3       EOF     (bytes code:-)
+0006: 7E       Branch if false     (bytes code:D)
+0007: Dest:000A (Dist:0003)
+0009: 7B       RETURN (float 0)     (bytes code:-)
+000A: 4E       CLS     (bytes code:-)
+000B: 24       Push string literal     (bytes code:S)
+000C: Len:14
+000D: 'Type in search'
+001B: 71       PRINT string     (bytes code:-)
+001C: 73       PRINT newline     (bytes code:-)
+001D: 24       Push string literal     (bytes code:S)
+001E: Len:7
+001F: 'string:'
+0026: 71       PRINT string     (bytes code:-)
+0027: 0F       Push local/global string variable reference     (bytes code:v)
+0028: FFDB       (65499)
+002A: 6E       INPUT string     (bytes code:-)
+002B: 0D       Push local/global integer variable reference     (bytes code:v)
+002C: FFFC       (65532)
+002E: 02       Push local/global string variable value     (bytes code:v)
+002F: FFDB       (65499)
+0031: 8F       FIND     (bytes code:-)
+0032: 7F       Assign integer     (bytes code:-)
+0033: 00       Push local/global integer variable value     (bytes code:v)
+0034: FFFC       (65532)
+0036: 22       Push integer literal     (bytes code:I)
+0037: 0000       (0)
+0039: 2C       Equal integer     (bytes code:-)
+003A: 7E       Branch if false     (bytes code:D)
+003B: Dest:0052 (Dist:0017)
+003D: 4E       CLS     (bytes code:-)
+003E: 24       Push string literal     (bytes code:S)
+003F: Len:9
+0040: 'Not found'
+0049: 71       PRINT string     (bytes code:-)
+004A: 73       PRINT newline     (bytes code:-)
+004B: 22       Push integer literal     (bytes code:I)
+004C: 0014       (20)
+004E: 54       PAUSE     (bytes code:-)
+004F: 51       GOTO     (bytes code:D)
+0050: Dest:0002 (Dist:FFFFFFB2)
+0052: 0D       Push local/global integer variable reference     (bytes code:v)
+0053: FFD8       (65496)
+0055: 22       Push integer literal     (bytes code:I)
+0056: 0001       (1)
+0058: 32       unary minus integer     (bytes code:-)
+0059: 24       Push string literal     (bytes code:S)
+005A: Len:0
+005B: ''
+005B: 8D       DISP     (bytes code:-)
+005C: 7F       Assign integer     (bytes code:-)
+005D: 00       Push local/global integer variable value     (bytes code:v)
+005E: FFD8       (65496)
+0060: 22       Push integer literal     (bytes code:I)
+0061: 0001       (1)
+0063: 2C       Equal integer     (bytes code:-)
+0064: 7E       Branch if false     (bytes code:D)
+0065: Dest:0068 (Dist:0003)
+0067: 7B       RETURN (float 0)     (bytes code:-)
+0068: 63       NEXT     (bytes code:-)
+0069: 0D       Push local/global integer variable reference     (bytes code:v)
+006A: FFFC       (65532)
+006C: 02       Push local/global string variable value     (bytes code:v)
+006D: FFDB       (65499)
+006F: 8F       FIND     (bytes code:-)
+0070: 7F       Assign integer     (bytes code:-)
+0071: 00       Push local/global integer variable value     (bytes code:v)
+0072: FFFC       (65532)
+0074: 22       Push integer literal     (bytes code:I)
+0075: 0000       (0)
+0077: 2C       Equal integer     (bytes code:-)
+0078: 7E       Branch if false     (bytes code:D)
+0079: Dest:009B (Dist:0022)
+007B: 4E       CLS     (bytes code:-)
+007C: 24       Push string literal     (bytes code:S)
+007D: Len:1
+007E: '*'
+007F: 22       Push integer literal     (bytes code:I)
+0080: 0012       (18)
+0082: C5       REPT$     (bytes code:-)
+0083: 71       PRINT string     (bytes code:-)
+0084: 24       Push string literal     (bytes code:S)
+0085: Len:14
+0086: 'End of pack***'
+0094: 71       PRINT string     (bytes code:-)
+0095: 73       PRINT newline     (bytes code:-)
+0096: 22       Push integer literal     (bytes code:I)
+0097: 0014       (20)
+0099: 54       PAUSE     (bytes code:-)
+009A: 7B       RETURN (float 0)     (bytes code:-)
+009B: A3       EOF     (bytes code:-)
+009C: 7E       Branch if false     (bytes code:D)
+009D: Dest:0052 (Dist:FFFFFFB5)
+009F: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 95 83 61 A3 7E 00 03 7B 4E 24 0E 54 79 70 
+0010:65 20 69 6E 20 73 65 61 72 63 68 71 73 24 07 73 
+0020:74 72 69 6E 67 3A 71 0F FF DB 6E 0D FF FC 02 FF 
+0030:DB 8F 7F 00 FF FC 22 00 00 2C 7E 00 17 4E 24 09 
+0040:4E 6F 74 20 66 6F 75 6E 64 71 73 22 00 14 54 51 
+0050:FF B2 0D FF D8 22 00 01 32 24 00 8D 7F 00 FF D8 
+0060:22 00 01 2C 7E 00 03 7B 63 0D FF FC 02 FF DB 8F 
+0070:7F 00 FF FC 22 00 00 2C 7E 00 22 4E 24 01 2A 22 
+0080:00 12 C5 71 24 0E 45 6E 64 20 6F 66 20 70 61 63 
+0090:6B 2A 2A 2A 71 73 22 00 14 54 7B A3 7E FF B5 7B 

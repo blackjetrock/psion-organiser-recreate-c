@@ -1,0 +1,22 @@
+deg1:
+
+local a,b,c
+local x,y,z
+
+a = 23.5
+
+b = deg(a)
+
+c = rad(b)
+
+x = 23.5
+y = x * 57.2957795131
+z = y / 57.2957795131
+
+print ""
+print a,b,c
+print x,y,z
+
+if (a-c) < 0.0000001
+print "PASS"
+endif

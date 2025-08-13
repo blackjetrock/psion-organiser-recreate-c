@@ -1,0 +1,156 @@
+
+Filename:'Owl2'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:001E
+QCode Space Size:00B2
+Number of parameters:00
+Parameter types:
+Global varname Size:0016
+Global variables (3)
+ 0: BLINK%           INT    (00) FFE6
+ 1: A%               INT    (00) FFE4
+ 2: B%               INT    (00) FFE2
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 22       Push integer literal     (bytes code:I)
+0003: 0000       (0)
+0005: 22       Push integer literal     (bytes code:I)
+0006: 0000       (0)
+0008: 22       Push integer literal     (bytes code:I)
+0009: 0000       (0)
+000B: 22       Push integer literal     (bytes code:I)
+000C: 000E       (14)
+000E: 22       Push integer literal     (bytes code:I)
+000F: 001F       (31)
+0011: 22       Push integer literal     (bytes code:I)
+0012: 0011       (17)
+0014: 22       Push integer literal     (bytes code:I)
+0015: 0011       (17)
+0017: 22       Push integer literal     (bytes code:I)
+0018: 000E       (14)
+001A: 22       Push integer literal     (bytes code:I)
+001B: 0000       (0)
+001D: D5       UDG     (bytes code:-)
+001E: 22       Push integer literal     (bytes code:I)
+001F: 0001       (1)
+0021: 22       Push integer literal     (bytes code:I)
+0022: 0001       (1)
+0024: 4C       AT     (bytes code:-)
+0025: 24       Push string literal     (bytes code:S)
+0026: Len:6
+0027: ' /\_/\'
+002D: 71       PRINT string     (bytes code:-)
+002E: 73       PRINT newline     (bytes code:-)
+002F: 22       Push integer literal     (bytes code:I)
+0030: 0001       (1)
+0032: 22       Push integer literal     (bytes code:I)
+0033: 0002       (2)
+0035: 4C       AT     (bytes code:-)
+0036: 24       Push string literal     (bytes code:S)
+0037: Len:7
+0038: '(( v ))'
+003F: 71       PRINT string     (bytes code:-)
+0040: 73       PRINT newline     (bytes code:-)
+0041: 22       Push integer literal     (bytes code:I)
+0042: 0003       (3)
+0044: 22       Push integer literal     (bytes code:I)
+0045: 0002       (2)
+0047: 4C       AT     (bytes code:-)
+0048: 22       Push integer literal     (bytes code:I)
+0049: 0000       (0)
+004B: B8       CHR$     (bytes code:-)
+004C: 71       PRINT string     (bytes code:-)
+004D: 73       PRINT newline     (bytes code:-)
+004E: 22       Push integer literal     (bytes code:I)
+004F: 0005       (5)
+0051: 22       Push integer literal     (bytes code:I)
+0052: 0002       (2)
+0054: 4C       AT     (bytes code:-)
+0055: 22       Push integer literal     (bytes code:I)
+0056: 0000       (0)
+0058: B8       CHR$     (bytes code:-)
+0059: 71       PRINT string     (bytes code:-)
+005A: 73       PRINT newline     (bytes code:-)
+005B: 22       Push integer literal     (bytes code:I)
+005C: 0001       (1)
+005E: 22       Push integer literal     (bytes code:I)
+005F: 0003       (3)
+0061: 4C       AT     (bytes code:-)
+0062: 24       Push string literal     (bytes code:S)
+0063: Len:7
+0064: '():::()'
+006B: 71       PRINT string     (bytes code:-)
+006C: 73       PRINT newline     (bytes code:-)
+006D: 22       Push integer literal     (bytes code:I)
+006E: 0001       (1)
+0070: 22       Push integer literal     (bytes code:I)
+0071: 0004       (4)
+0073: 4C       AT     (bytes code:-)
+0074: 24       Push string literal     (bytes code:S)
+0075: Len:6
+0076: ' VV-VV'
+007C: 71       PRINT string     (bytes code:-)
+007D: 73       PRINT newline     (bytes code:-)
+007E: 0D       Push local/global integer variable reference     (bytes code:v)
+007F: FFE6       (65510)
+0081: B1       RND     (bytes code:-)
+0082: 22       Push integer literal     (bytes code:I)
+0083: 001E       (30)
+0085: 86       autoconversion int to float     (bytes code:-)
+0086: 3E       Multiply float     (bytes code:-)
+0087: 22       Push integer literal     (bytes code:I)
+0088: 0001       (1)
+008A: 86       autoconversion int to float     (bytes code:-)
+008B: 3C       Plus float     (bytes code:-)
+008C: 94       INT     (bytes code:-)
+008D: 7F       Assign integer     (bytes code:-)
+008E: 00       Push local/global integer variable value     (bytes code:v)
+008F: FFE6       (65510)
+0091: 22       Push integer literal     (bytes code:I)
+0092: 000A       (10)
+0094: 2C       Equal integer     (bytes code:-)
+0095: 7E       Branch if false     (bytes code:D)
+0096: Dest:00AE (Dist:0018)
+0098: 22       Push integer literal     (bytes code:I)
+0099: 0001       (1)
+009B: 22       Push integer literal     (bytes code:I)
+009C: 0002       (2)
+009E: 4C       AT     (bytes code:-)
+009F: 24       Push string literal     (bytes code:S)
+00A0: Len:7
+00A1: '((ovo))'
+00A8: 71       PRINT string     (bytes code:-)
+00A9: 73       PRINT newline     (bytes code:-)
+00AA: 22       Push integer literal     (bytes code:I)
+00AB: 0014       (20)
+00AD: 54       PAUSE     (bytes code:-)
+00AE: 51       GOTO     (bytes code:D)
+00AF: Dest:001E (Dist:FFFFFF6F)
+00B1: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 22 00 00 22 00 00 22 00 00 22 00 0E 22 00 
+0010:1F 22 00 11 22 00 11 22 00 0E 22 00 00 D5 22 00 
+0020:01 22 00 01 4C 24 06 20 2F 5C 5F 2F 5C 71 73 22 
+0030:00 01 22 00 02 4C 24 07 28 28 20 76 20 29 29 71 
+0040:73 22 00 03 22 00 02 4C 22 00 00 B8 71 73 22 00 
+0050:05 22 00 02 4C 22 00 00 B8 71 73 22 00 01 22 00 
+0060:03 4C 24 07 28 29 3A 3A 3A 28 29 71 73 22 00 01 
+0070:22 00 04 4C 24 06 20 56 56 2D 56 56 71 73 0D FF 
+0080:E6 B1 22 00 1E 86 3E 22 00 01 86 3C 94 7F 00 FF 
+0090:E6 22 00 0A 2C 7E 00 18 22 00 01 22 00 02 4C 24 
+00A0:07 28 28 6F 76 6F 29 29 71 73 22 00 14 54 51 FF 
+00B0:6F 7B 

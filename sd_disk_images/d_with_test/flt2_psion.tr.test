@@ -1,0 +1,64 @@
+
+Filename:'FLT2'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:001C
+QCode Space Size:003A
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0003
+External variables (1)
+ 0: D                FLT    (01)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0E       Push local/global float variable reference     (bytes code:v)
+0003: FFF4       (65524)
+0005: 23       Push float literal     (bytes code:F)
+0006: Len:5
+0007: '78563412E7
+000C: 80       Assign float     (bytes code:-)
+000D: 0E       Push local/global float variable reference     (bytes code:v)
+000E: FFEC       (65516)
+0010: 23       Push float literal     (bytes code:F)
+0011: Len:5
+0012: '78563412E7
+0017: 41       Unary minus float     (bytes code:-)
+0018: 80       Assign float     (bytes code:-)
+0019: 0E       Push local/global float variable reference     (bytes code:v)
+001A: FFE4       (65508)
+001C: 23       Push float literal     (bytes code:F)
+001D: Len:5
+001E: '78563412E1
+0023: 80       Assign float     (bytes code:-)
+0024: 15       Push parameter/external float variable reference     (bytes code:V)
+0025: FFFC       (65532)
+0027: 23       Push float literal     (bytes code:F)
+0028: Len:5
+0029: '78563412E1
+002E: 41       Unary minus float     (bytes code:-)
+002F: 80       Assign float     (bytes code:-)
+0030: 0E       Push local/global float variable reference     (bytes code:v)
+0031: FFF4       (65524)
+0033: 23       Push float literal     (bytes code:F)
+0034: Len:3
+0035: '3412E-5
+0038: 80       Assign float     (bytes code:-)
+0039: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0E FF F4 23 05 78 56 34 12 07 80 0E FF EC 
+0010:23 05 78 56 34 12 07 41 80 0E FF E4 23 05 78 56 
+0020:34 12 01 80 15 FF FC 23 05 78 56 34 12 01 41 80 
+0030:0E FF F4 23 03 34 12 FB 80 7B 

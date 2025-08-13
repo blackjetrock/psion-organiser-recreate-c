@@ -1,0 +1,34 @@
+
+Filename:'ONERR2'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0002
+QCode Space Size:000C
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 53       ONERR     (bytes code:D)
+0003: Dest:0003 (Dist:0000)
+0005: 53       ONERR     (bytes code:D)
+0006: Dest:0002 (Dist:FFFFFFFC)
+0008: 53       ONERR     (bytes code:D)
+0009: Dest:0009 (Dist:0000)
+000B: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 53 00 00 53 FF FC 53 00 00 7B 

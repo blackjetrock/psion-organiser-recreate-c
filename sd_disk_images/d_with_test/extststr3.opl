@@ -1,0 +1,167 @@
+str2:
+
+local s1$(20), s2$(20)
+local pass%, num%
+
+pass% = 0
+num% = 0
+
+rem --------------------------------------------------------------------------------
+
+s1$="AB"
+s2$=left$("ABC", 2)
+
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+s1$="A"
+s2$=left$("ABC", 1)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+s1$="ABC"
+s2$=left$("ABC", 5)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+s1$="BC"
+s2$=right$("ABC", 2)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+s1$="ABC"
+s2$=right$("ABC", 5)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+s1$="C"
+s2$=right$("ABC", 1)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+s1$="IJKLM"
+s2$=right$("ABCDEFGHIJKLM", 5)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+s1$="M"
+s2$=right$("ABCDEFGHIJKLM", 1)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+i% = 32
+s1$="20"
+s2$=hex$(I%)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+print "Hex of ",I%," is ",s2$
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+i% = -45
+s1$="FFD3"
+s2$=hex$(I%)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+print "Hex of ",I%," is ",s2$
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+i% = -1
+s1$="FFFF"
+s2$=hex$(I%)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+print "Hex of ",I%," is ",s2$
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+i% = 0
+s1$="0"
+s2$=hex$(I%)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+print "Hex of ",I%," is ",s2$
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+i% = 23.2
+s1$="17"
+s2$=hex$(I%)
+num%=num%+1
+if s1$ = s2$
+pass% = pass%+1
+print "Hex of ",I%," is ",s2$
+else
+print s1$," is not ", s2$
+endif
+
+rem --------------------------------------------------------------------------------
+
+if PASS% = NUM%
+print "PASS"
+endif

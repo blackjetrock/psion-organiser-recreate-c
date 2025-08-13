@@ -1,0 +1,181 @@
+
+Filename:'SCHUIF'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0189
+QCode Space Size:00D0
+Number of parameters:00
+Parameter types:
+Global varname Size:0019
+Global variables (4)
+ 0: GM%              INT    (00) FFE3
+ 1: U%               INTARY (03) FF61
+ 2: Z$               STR    (02) FE98
+ 3: A$               STRARY (05) FE89
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (3)
+ 0: FE97 C8
+ 1: FE88 03
+ 2: FE77 03
+
+Array size fixups (3)
+ 0: FF61 0040
+ 1: FE89 0003
+ 2: FE78 0003
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 20       Push byte literal     (bytes code:B)
+0003: 00           (0)
+0004: 7D       Procedure call.     (bytes code:S)
+0005: Len:8
+0006: 'SCHFINI1'
+000E: 84       drop float from stack     (bytes code:-)
+000F: 0D       Push local/global integer variable reference     (bytes code:v)
+0010: FE86       (65158)
+0012: 22       Push integer literal     (bytes code:I)
+0013: 0000       (0)
+0015: 7F       Assign integer     (bytes code:-)
+0016: 00       Push local/global integer variable value     (bytes code:v)
+0017: FE86       (65158)
+0019: 22       Push integer literal     (bytes code:I)
+001A: 0002       (2)
+001C: 2B       Not equal integer     (bytes code:-)
+001D: 7E       Branch if false     (bytes code:D)
+001E: Dest:0054 (Dist:0036)
+0020: 20       Push byte literal     (bytes code:B)
+0021: 00           (0)
+0022: 7D       Procedure call.     (bytes code:S)
+0023: Len:8
+0024: 'SCHFINI2'
+002C: 84       drop float from stack     (bytes code:-)
+002D: 22       Push integer literal     (bytes code:I)
+002E: 0001       (1)
+0030: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0031: FE78       (65144)
+0033: 22       Push integer literal     (bytes code:I)
+0034: 0001       (1)
+0036: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+0037: FE89       (65161)
+0039: 81       Assign string     (bytes code:-)
+003A: 22       Push integer literal     (bytes code:I)
+003B: 0002       (2)
+003D: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+003E: FE78       (65144)
+0040: 22       Push integer literal     (bytes code:I)
+0041: 0002       (2)
+0043: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+0044: FE89       (65161)
+0046: 81       Assign string     (bytes code:-)
+0047: 22       Push integer literal     (bytes code:I)
+0048: 0003       (3)
+004A: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+004B: FE78       (65144)
+004D: 22       Push integer literal     (bytes code:I)
+004E: 0003       (3)
+0050: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+0051: FE89       (65161)
+0053: 81       Assign string     (bytes code:-)
+0054: 22       Push integer literal     (bytes code:I)
+0055: 0001       (1)
+0057: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0058: FE89       (65161)
+005A: 22       Push integer literal     (bytes code:I)
+005B: 0001       (1)
+005D: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+005E: FE78       (65144)
+0060: 81       Assign string     (bytes code:-)
+0061: 22       Push integer literal     (bytes code:I)
+0062: 0002       (2)
+0064: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0065: FE89       (65161)
+0067: 22       Push integer literal     (bytes code:I)
+0068: 0002       (2)
+006A: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+006B: FE78       (65144)
+006D: 81       Assign string     (bytes code:-)
+006E: 22       Push integer literal     (bytes code:I)
+006F: 0003       (3)
+0071: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0072: FE89       (65161)
+0074: 22       Push integer literal     (bytes code:I)
+0075: 0003       (3)
+0077: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+0078: FE78       (65144)
+007A: 81       Assign string     (bytes code:-)
+007B: 20       Push byte literal     (bytes code:B)
+007C: 00           (0)
+007D: 7D       Procedure call.     (bytes code:S)
+007E: Len:8
+007F: 'SCHFCOMP'
+0087: 84       drop float from stack     (bytes code:-)
+0088: 22       Push integer literal     (bytes code:I)
+0089: 0001       (1)
+008B: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+008C: FE89       (65161)
+008E: 22       Push integer literal     (bytes code:I)
+008F: 0001       (1)
+0091: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+0092: FE78       (65144)
+0094: 81       Assign string     (bytes code:-)
+0095: 22       Push integer literal     (bytes code:I)
+0096: 0002       (2)
+0098: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0099: FE89       (65161)
+009B: 22       Push integer literal     (bytes code:I)
+009C: 0002       (2)
+009E: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+009F: FE78       (65144)
+00A1: 81       Assign string     (bytes code:-)
+00A2: 22       Push integer literal     (bytes code:I)
+00A3: 0003       (3)
+00A5: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+00A6: FE89       (65161)
+00A8: 22       Push integer literal     (bytes code:I)
+00A9: 0003       (3)
+00AB: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+00AC: FE78       (65144)
+00AE: 81       Assign string     (bytes code:-)
+00AF: 0D       Push local/global integer variable reference     (bytes code:v)
+00B0: FE86       (65158)
+00B2: 20       Push byte literal     (bytes code:B)
+00B3: 00           (0)
+00B4: 7D       Procedure call.     (bytes code:S)
+00B5: Len:7
+00B6: 'SCHFHUM'
+00BD: 87       autoconversion float to int     (bytes code:-)
+00BE: 7F       Assign integer     (bytes code:-)
+00BF: 00       Push local/global integer variable value     (bytes code:v)
+00C0: FE86       (65158)
+00C2: 7E       Branch if false     (bytes code:D)
+00C3: Dest:00AF (Dist:FFFFFFEC)
+00C5: 00       Push local/global integer variable value     (bytes code:v)
+00C6: FE86       (65158)
+00C8: 22       Push integer literal     (bytes code:I)
+00C9: 0001       (1)
+00CB: 2C       Equal integer     (bytes code:-)
+00CC: 7E       Branch if false     (bytes code:D)
+00CD: Dest:0016 (Dist:FFFFFF49)
+00CF: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 20 00 7D 08 53 43 48 46 49 4E 49 31 84 0D 
+0010:FE 86 22 00 00 7F 00 FE 86 22 00 02 2B 7E 00 36 
+0020:20 00 7D 08 53 43 48 46 49 4E 49 32 84 22 00 01 
+0030:12 FE 78 22 00 01 05 FE 89 81 22 00 02 12 FE 78 
+0040:22 00 02 05 FE 89 81 22 00 03 12 FE 78 22 00 03 
+0050:05 FE 89 81 22 00 01 12 FE 89 22 00 01 05 FE 78 
+0060:81 22 00 02 12 FE 89 22 00 02 05 FE 78 81 22 00 
+0070:03 12 FE 89 22 00 03 05 FE 78 81 20 00 7D 08 53 
+0080:43 48 46 43 4F 4D 50 84 22 00 01 12 FE 89 22 00 
+0090:01 05 FE 78 81 22 00 02 12 FE 89 22 00 02 05 FE 
+00A0:78 81 22 00 03 12 FE 89 22 00 03 05 FE 78 81 0D 
+00B0:FE 86 20 00 7D 07 53 43 48 46 48 55 4D 87 7F 00 
+00C0:FE 86 7E FF EC 00 FE 86 22 00 01 2C 7E FF 49 7B 

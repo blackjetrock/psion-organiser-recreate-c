@@ -1,0 +1,123 @@
+invtool:(dbm%,a$,mag%)
+
+REM dbm% = database mode 1-change,2-count,3-use
+REM a$ = string search term
+REM mag%= magnitude of change to be made - can be positive or negative. Use cmbstat% for mag% to decide how to use an item
+
+REM Used to change the inventory
+REM Pass to: mode (change, count), how many to change by
+REM Return an integer count of an item
+REM Return the updated count if mode 1
+REM Return a current count if mode 2
+REM always looks in A
+
+REM open the db (if it exists)
+REM go to the entry to be acted on
+REM make the change
+REM save and close
+
+REM Index,name,held,desc,equipped?,equipable?,statvalue,armour,weapon,food
+
+LOCAL f% REM find record dump
+LOCAL ret% REM to store the returned value
+LOCAL low$(20)
+LOCAL disp$(200)
+LOCAL mx% REM count of number of records in DB
+LOCAL i% REM used in while loops
+LOCAL ef% REM To check EOF
+
+ONERR PROBLEM::
+OPEN "A:items",D,No$,Lst$,Amnt%,locdesc$,eq%,caneq%,statv%,armour%,weap%,food%
+mx%=count REM count returns the number of records in the current file.
+
+ IF dbm%=1 REM ADD to inv
+  f% = FIND(a$)
+  D.Amnt%=D.Amnt%+mag%
+   IF D.Amnt%<0 REM to ensure no negative values of held items
+    D.Amnt%=0
+   ENDIF
+  ret%=D.Amnt%
+  UPDATE
+  CLOSE
+  RETURN ret%
+
+ ELSEIF dbm%=2 REM only return how many of the item is in inv
+  ret%=D.Amnt%
+  CLOSE
+  RETURN ret%
+
+ ELSEIF dbm%=3 REM Use the item
+  f% = FIND(a$)
+  CLS
+  PRINT "Finding ";a$
+  PRINT D.Lst$
+  PRINT D.caneq%
+  PRINT D.armour%
+  PRINT f%
+  GET
+
+  IF D.food%=1
+   IF plHealt%<maxplh%
+    CLS
+    low$=LOWER$(a$)
+    CLS
+    disp$ = "You eat the " + low$ + "."
+    disptext:(disp$,4)
+    CLS
+    plHealt%=plHealt%+D.statv%
+     IF plHealt%>=maxplh%
+      plHealt%=maxplh%
+     ENDIF
+    ELSE
+     CLS
+     PRINT "You are at maximum health"
+     GET
+     CLS
+   ENDIF
+  ENDIF
+
+  IF D.caneq% = 1
+   IF D.weap% = 1
+    low$=LOWER$(a$)
+    CLS
+    disp$ = "You take firm hold of your " + low$ + "."
+    disptext:(disp$,4)
+    plAtt%=D.statv%
+    plweap$=D.Lst$
+    CLOSE
+    RETURN 
+ 
+   ELSEIF D.armour% = 1
+    low$=LOWER$(a$)
+    CLS
+    disp$ = "You give the " + low$ + " a look over and put it on."
+    disptext:(disp$,4)
+    plDef%=D.statv%
+    plarm$=D.Lst$
+    CLOSE
+    RETURN 
+
+   ENDIF
+  ENDIF
+  
+  CLOSE
+  RETURN ret%
+ ELSE
+  REM error catch 
+  RETURN
+ ENDIF
+
+GOTO CLS::
+
+PROBLEM::
+ONERR OFF
+CLS
+IF ERR=194 :PRINT " The Battery is Low    Switching off     change the Battery" :PAUSE -50 :OFF :STOP
+ REM File in use 199
+ ELSEIF ERR=199 :CLOSE :PRINT "Found and corrected an error.."
+ ELSEIF ERR=201 OR ERR=207 or ERR=220 :PRINT "There is an error in item Database"
+ ELSEIF ERR=209 :PRINT "There is a database conflict; Logical D."
+ ELSE PRINT ERR :PRINT ERR$(ERR)
+ENDIF
+PRINT "[SPACE] continues" :GET 
+CLS::

@@ -1,0 +1,77 @@
+expo:
+LOCAL z,word$(4),A$(200),B$(200),C$(7),D$(6),E$(7),F$(11),G$(11),H$(11),I$(11),J$(11),C,W,P,B,F,A,T,S,N
+PRINT "What ASA is the "
+PRINT "filmstock?"
+INPUT A
+CLS
+TIME::
+PRINT "CAMERA SPEED;"
+W=MENUN(2,"Frames-per-second,Exposure,Seconds-per-frame,")
+IF W=2
+PRINT"Exposure in seconds?"
+INPUT T
+word$="sec"
+z=T
+ELSEIF W=1
+PRINT "Frames per second?"
+INPUT P
+word$="fps"
+z=P
+CLS
+PRINT "Shutter angle in"
+PRINT "degrees?"
+INPUT B
+T=B/(360*P)
+CLS
+ELSEIF W=3
+PRINT "Seconds per frame?"
+INPUT P
+z=P
+word$="spf"
+CLS
+PRINT "Shutter angle in"
+PRINT "degrees"
+INPUT B
+T=P*B/360
+CLS
+ENDIF
+CLS
+IF (T>=1) AND (T<10)
+T=T/1.4
+ELSEIF (T>=10) AND (T <30)
+T=T/2.8
+ELSEIF T>=30
+T=T/4
+ENDIF
+S=SQR(2)
+F=(25*S**2)/(A*T)
+IF F>5
+W=0
+ELSEIF F<=5
+W=2
+ENDIF
+A$="  T1.4 "
+B$="  T2 "
+C$="  T2.8 "
+D$="  T4 "
+E$="  T5.6 "
+F$=FIX$(F,W,8)
+G$=FIX$(F*2,W,8)
+H$=FIX$(F*4,W,8)
+I$=FIX$(F*8,W,8)
+J$=FIX$(F*16,W,8)
+A$=A$+F$+B$+G$+C$+H$+D$+I$+E$+J$
+PRINT "For exposure..."
+PRINT A,"ASA",z,word$,B,CHR$(223)
+AT 1,3
+PRINT "Footcandles;"
+VIEW(4,A$)
+GET
+C=MENU("SHUT,EXPO,FILM,MENU,")
+IF C=1
+GOTO TIME::
+ELSEIF C=2
+EXPO:
+ELSEIF C=3
+FILM:
+ENDIF  

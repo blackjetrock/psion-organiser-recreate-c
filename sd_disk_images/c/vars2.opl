@@ -1,0 +1,14 @@
+vars2:
+
+LOCAL A%, s1$(10), F2
+LOCAL x%(5), s$(5,7), f(20)
+
+GLOBAL PEAR%, DOOR$(10)
+GLOBAL OPEN%(50), POS$(20,30), FLOAT(123)
+
+
+EXTTOP% = 8
+S1$="abc"
+SA$(10) = "def"
+
+

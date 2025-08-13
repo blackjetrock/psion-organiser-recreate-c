@@ -1,0 +1,22 @@
+
+Reading OB3 header
+Hdr                  : ORG
+OB3 File length word : 01CE
+Block file type      : 83
+OB3 Block length word: 01CA
+Enter:read_proc_file
+Loading 0
+Loading 1
+Loading 2
+Parameters num:0
+Global varname size
+Loading 3
+Var space size     :66
+
+Global varname size:0
+
+Num global vars: 0
+Loading 4
+Loading 5
+Loading 6
+Exit:read_proc_file

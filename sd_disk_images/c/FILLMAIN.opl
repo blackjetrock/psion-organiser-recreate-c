@@ -1,0 +1,8 @@
+FILLMAIN:
+REM CM/XP procedure
+
+IF EXIST("b:address")
+ COPY "b:address","a:main"
+ELSE
+ COPY "c:address","a:main"
+ENDIF

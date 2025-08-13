@@ -1,0 +1,13 @@
+extn10:(f%)
+
+print "F%=",f%
+
+
+if f% <> 123
+
+
+print "PASS"
+else
+GB1$ = "ex10"
+print "SKIPPED"
+endif

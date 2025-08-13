@@ -1,0 +1,111 @@
+
+Filename:'ob3_nopl'
+File ext:'bin
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:000A
+QCode Space Size:0066
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 0E       Push local/global float variable reference     (bytes code:v)
+0003: FFF6       (65526)
+0005: 23       Push float literal     (bytes code:F)
+0006: Len:2
+0007: '10E0
+0009: 23       Push float literal     (bytes code:F)
+000A: Len:2
+000B: '70E0
+000D: 3F       Divide float     (bytes code:-)
+000E: 80       Assign float     (bytes code:-)
+000F: 01       Push local/global float variable value     (bytes code:v)
+0010: FFF6       (65526)
+0012: 70       PRINT float     (bytes code:-)
+0013: 73       PRINT newline     (bytes code:-)
+0014: 23       Push float literal     (bytes code:F)
+0015: Len:3
+0016: '3412E3
+0019: 23       Push float literal     (bytes code:F)
+001A: Len:3
+001B: '9078E2
+001E: 3F       Divide float     (bytes code:-)
+001F: 70       PRINT float     (bytes code:-)
+0020: 73       PRINT newline     (bytes code:-)
+0021: 23       Push float literal     (bytes code:F)
+0022: Len:3
+0023: '3412E3
+0026: 23       Push float literal     (bytes code:F)
+0027: Len:3
+0028: '3012E2
+002B: 3F       Divide float     (bytes code:-)
+002C: 70       PRINT float     (bytes code:-)
+002D: 73       PRINT newline     (bytes code:-)
+002E: 23       Push float literal     (bytes code:F)
+002F: Len:2
+0030: '10E2
+0032: 23       Push float literal     (bytes code:F)
+0033: Len:2
+0034: '50E0
+0036: 3F       Divide float     (bytes code:-)
+0037: 70       PRINT float     (bytes code:-)
+0038: 73       PRINT newline     (bytes code:-)
+0039: 23       Push float literal     (bytes code:F)
+003A: Len:2
+003B: '12E1
+003D: 23       Push float literal     (bytes code:F)
+003E: Len:2
+003F: '40E0
+0041: 3F       Divide float     (bytes code:-)
+0042: 70       PRINT float     (bytes code:-)
+0043: 73       PRINT newline     (bytes code:-)
+0044: 23       Push float literal     (bytes code:F)
+0045: Len:2
+0046: '10E6
+0048: 23       Push float literal     (bytes code:F)
+0049: Len:2
+004A: '50E0
+004C: 3F       Divide float     (bytes code:-)
+004D: 70       PRINT float     (bytes code:-)
+004E: 73       PRINT newline     (bytes code:-)
+004F: 23       Push float literal     (bytes code:F)
+0050: Len:2
+0051: '20E2
+0053: 23       Push float literal     (bytes code:F)
+0054: Len:2
+0055: '10E-1
+0057: 3F       Divide float     (bytes code:-)
+0058: 70       PRINT float     (bytes code:-)
+0059: 73       PRINT newline     (bytes code:-)
+005A: 23       Push float literal     (bytes code:F)
+005B: Len:2
+005C: '10E38
+005E: 23       Push float literal     (bytes code:F)
+005F: Len:2
+0060: '10E2
+0062: 3F       Divide float     (bytes code:-)
+0063: 70       PRINT float     (bytes code:-)
+0064: 73       PRINT newline     (bytes code:-)
+0065: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 0E FF F6 23 02 10 00 23 02 70 00 3F 80 01 
+0010:FF F6 70 73 23 03 34 12 03 23 03 90 78 02 3F 70 
+0020:73 23 03 34 12 03 23 03 30 12 02 3F 70 73 23 02 
+0030:10 02 23 02 50 00 3F 70 73 23 02 12 01 23 02 40 
+0040:00 3F 70 73 23 02 10 06 23 02 50 00 3F 70 73 23 
+0050:02 20 02 23 02 10 FF 3F 70 73 23 02 10 26 23 02 
+0060:10 02 3F 70 73 7B 

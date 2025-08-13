@@ -1,0 +1,12 @@
+PRINTER:
+LOCAL Num%
+CLS
+PRINT "Printer setup?"
+Num%=MENUN(2,"Psion,Epson,None")
+
+DELETE "A:printer"
+
+CREATE "A:printer",A,P%
+A.P%=Num%
+APPEND
+CLOSE

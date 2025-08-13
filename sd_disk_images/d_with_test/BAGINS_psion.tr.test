@@ -1,0 +1,301 @@
+
+Filename:'BAGINS'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:030B
+QCode Space Size:0348
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0005
+External variables (1)
+ 0: DS$              STR    (02)
+
+String length fixups (1)
+ 0: FCF5 FF
+
+Array size fixups (1)
+ 0: FCF6 0003
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 4E       CLS     (bytes code:-)
+0003: 09       Push parameter/external string variable value     (bytes code:V)
+0004: FFFC       (65532)
+0006: 71       PRINT string     (bytes code:-)
+0007: 73       PRINT newline     (bytes code:-)
+0008: 22       Push integer literal     (bytes code:I)
+0009: 0003       (3)
+000B: 22       Push integer literal     (bytes code:I)
+000C: 0004       (4)
+000E: 4C       AT     (bytes code:-)
+000F: 24       Push string literal     (bytes code:S)
+0010: Len:16
+0011: '(E)exit  (P)page'
+0021: 71       PRINT string     (bytes code:-)
+0022: 73       PRINT newline     (bytes code:-)
+0023: 22       Push integer literal     (bytes code:I)
+0024: 0001       (1)
+0026: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0027: FCF6       (64758)
+0029: 24       Push string literal     (bytes code:S)
+002A: Len:147
+002B: 'PAGE 1 of 3 - Try to find Psions 3,4,5 or 6 digit code. It consists of the numbers 0 to 9. Correct digits in the correct position are indicated by '
+00BE: 22       Push integer literal     (bytes code:I)
+00BF: 0003       (3)
+00C1: B8       CHR$     (bytes code:-)
+00C2: 4B       Plus string     (bytes code:-)
+00C3: 24       Push string literal     (bytes code:S)
+00C4: Len:49
+00C5: '. Correct digits wrong position are indicated by '
+00F6: 4B       Plus string     (bytes code:-)
+00F7: 22       Push integer literal     (bytes code:I)
+00F8: 0004       (4)
+00FA: B8       CHR$     (bytes code:-)
+00FB: 4B       Plus string     (bytes code:-)
+00FC: 24       Push string literal     (bytes code:S)
+00FD: Len:1
+00FE: '.'
+00FF: 4B       Plus string     (bytes code:-)
+0100: 81       Assign string     (bytes code:-)
+0101: 22       Push integer literal     (bytes code:I)
+0102: 0001       (1)
+0104: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+0105: FCF6       (64758)
+0107: 22       Push integer literal     (bytes code:I)
+0108: 0001       (1)
+010A: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+010B: FCF6       (64758)
+010D: 24       Push string literal     (bytes code:S)
+010E: Len:31
+010F: ' Wrong digits are indicated by '
+012E: 4B       Plus string     (bytes code:-)
+012F: 22       Push integer literal     (bytes code:I)
+0130: 0005       (5)
+0132: B8       CHR$     (bytes code:-)
+0133: 4B       Plus string     (bytes code:-)
+0134: 24       Push string literal     (bytes code:S)
+0135: Len:3
+0136: '.  '
+0139: 4B       Plus string     (bytes code:-)
+013A: 22       Push integer literal     (bytes code:I)
+013B: 0001       (1)
+013D: B8       CHR$     (bytes code:-)
+013E: 4B       Plus string     (bytes code:-)
+013F: 22       Push integer literal     (bytes code:I)
+0140: 0002       (2)
+0142: B8       CHR$     (bytes code:-)
+0143: 4B       Plus string     (bytes code:-)
+0144: 22       Push integer literal     (bytes code:I)
+0145: 0001       (1)
+0147: B8       CHR$     (bytes code:-)
+0148: 4B       Plus string     (bytes code:-)
+0149: 81       Assign string     (bytes code:-)
+014A: 22       Push integer literal     (bytes code:I)
+014B: 0002       (2)
+014D: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+014E: FCF6       (64758)
+0150: 24       Push string literal     (bytes code:S)
+0151: Len:58
+0152: 'PAGE 2 of 3 - DEL key will remove incorrect entries - The '
+018C: 22       Push integer literal     (bytes code:I)
+018D: 007F       (127)
+018F: B8       CHR$     (bytes code:-)
+0190: 4B       Plus string     (bytes code:-)
+0191: 24       Push string literal     (bytes code:S)
+0192: Len:5
+0193: ' and '
+0198: 4B       Plus string     (bytes code:-)
+0199: 22       Push integer literal     (bytes code:I)
+019A: 007E       (126)
+019C: B8       CHR$     (bytes code:-)
+019D: 4B       Plus string     (bytes code:-)
+019E: 24       Push string literal     (bytes code:S)
+019F: Len:89
+01A0: ' keys allow stepping back and forward through entries - ON key terminates current game.  '
+01F9: 4B       Plus string     (bytes code:-)
+01FA: 22       Push integer literal     (bytes code:I)
+01FB: 0001       (1)
+01FD: B8       CHR$     (bytes code:-)
+01FE: 4B       Plus string     (bytes code:-)
+01FF: 22       Push integer literal     (bytes code:I)
+0200: 0002       (2)
+0202: B8       CHR$     (bytes code:-)
+0203: 4B       Plus string     (bytes code:-)
+0204: 22       Push integer literal     (bytes code:I)
+0205: 0001       (1)
+0207: B8       CHR$     (bytes code:-)
+0208: 4B       Plus string     (bytes code:-)
+0209: 81       Assign string     (bytes code:-)
+020A: 22       Push integer literal     (bytes code:I)
+020B: 0003       (3)
+020D: 12       Pop integer index and push local/global string array variable reference     (bytes code:v)
+020E: FCF6       (64758)
+0210: 24       Push string literal     (bytes code:S)
+0211: Len:78
+0212: 'PAGE 3 of 3 - You will have to apply detective techniques to discover the code'
+0260: 22       Push integer literal     (bytes code:I)
+0261: 0021       (33)
+0263: B8       CHR$     (bytes code:-)
+0264: 4B       Plus string     (bytes code:-)
+0265: 24       Push string literal     (bytes code:S)
+0266: Len:15
+0267: ' It is not easy'
+0276: 4B       Plus string     (bytes code:-)
+0277: 22       Push integer literal     (bytes code:I)
+0278: 0021       (33)
+027A: B8       CHR$     (bytes code:-)
+027B: 4B       Plus string     (bytes code:-)
+027C: 24       Push string literal     (bytes code:S)
+027D: Len:83
+027E: ' Once you discover the knack it will become very hard to put this Organiser down.  '
+02D1: 4B       Plus string     (bytes code:-)
+02D2: 22       Push integer literal     (bytes code:I)
+02D3: 0001       (1)
+02D5: B8       CHR$     (bytes code:-)
+02D6: 4B       Plus string     (bytes code:-)
+02D7: 22       Push integer literal     (bytes code:I)
+02D8: 0002       (2)
+02DA: B8       CHR$     (bytes code:-)
+02DB: 4B       Plus string     (bytes code:-)
+02DC: 22       Push integer literal     (bytes code:I)
+02DD: 0001       (1)
+02DF: B8       CHR$     (bytes code:-)
+02E0: 4B       Plus string     (bytes code:-)
+02E1: 81       Assign string     (bytes code:-)
+02E2: 0D       Push local/global integer variable reference     (bytes code:v)
+02E3: FFFA       (65530)
+02E5: 22       Push integer literal     (bytes code:I)
+02E6: 0001       (1)
+02E8: 7F       Assign integer     (bytes code:-)
+02E9: 0D       Push local/global integer variable reference     (bytes code:v)
+02EA: FFF8       (65528)
+02EC: 22       Push integer literal     (bytes code:I)
+02ED: 0003       (3)
+02EF: 00       Push local/global integer variable value     (bytes code:v)
+02F0: FFFA       (65530)
+02F2: 05       Pop integer index and push local/global string array variable value     (bytes code:v)
+02F3: FCF6       (64758)
+02F5: A0       VIEW     (bytes code:-)
+02F6: 7F       Assign integer     (bytes code:-)
+02F7: 00       Push local/global integer variable value     (bytes code:v)
+02F8: FFF8       (65528)
+02FA: 22       Push integer literal     (bytes code:I)
+02FB: 0045       (69)
+02FD: 2C       Equal integer     (bytes code:-)
+02FE: 00       Push local/global integer variable value     (bytes code:v)
+02FF: FFF8       (65528)
+0301: 22       Push integer literal     (bytes code:I)
+0302: 0051       (81)
+0304: 2C       Equal integer     (bytes code:-)
+0305: 35       OR integer     (bytes code:-)
+0306: 7E       Branch if false     (bytes code:D)
+0307: Dest:030E (Dist:0007)
+0309: 4E       CLS     (bytes code:-)
+030A: 7B       RETURN (float 0)     (bytes code:-)
+030B: 51       GOTO     (bytes code:D)
+030C: Dest:0347 (Dist:003B)
+030E: 00       Push local/global integer variable value     (bytes code:v)
+030F: FFF8       (65528)
+0311: 22       Push integer literal     (bytes code:I)
+0312: 0050       (80)
+0314: 2C       Equal integer     (bytes code:-)
+0315: 7E       Branch if false     (bytes code:D)
+0316: Dest:033A (Dist:0024)
+0318: 0D       Push local/global integer variable reference     (bytes code:v)
+0319: FFFA       (65530)
+031B: 00       Push local/global integer variable value     (bytes code:v)
+031C: FFFA       (65530)
+031E: 22       Push integer literal     (bytes code:I)
+031F: 0001       (1)
+0321: 2D       Plus integer     (bytes code:-)
+0322: 7F       Assign integer     (bytes code:-)
+0323: 00       Push local/global integer variable value     (bytes code:v)
+0324: FFFA       (65530)
+0326: 22       Push integer literal     (bytes code:I)
+0327: 0003       (3)
+0329: 29       Greater than integer     (bytes code:-)
+032A: 7E       Branch if false     (bytes code:D)
+032B: Dest:0334 (Dist:0009)
+032D: 0D       Push local/global integer variable reference     (bytes code:v)
+032E: FFFA       (65530)
+0330: 22       Push integer literal     (bytes code:I)
+0331: 0001       (1)
+0333: 7F       Assign integer     (bytes code:-)
+0334: 51       GOTO     (bytes code:D)
+0335: Dest:02E9 (Dist:FFFFFFB4)
+0337: 51       GOTO     (bytes code:D)
+0338: Dest:0347 (Dist:000F)
+033A: 0D       Push local/global integer variable reference     (bytes code:v)
+033B: FFF8       (65528)
+033D: 22       Push integer literal     (bytes code:I)
+033E: 0003       (3)
+0340: 24       Push string literal     (bytes code:S)
+0341: Len:0
+0342: ''
+0342: A0       VIEW     (bytes code:-)
+0343: 7F       Assign integer     (bytes code:-)
+0344: 51       GOTO     (bytes code:D)
+0345: Dest:02F7 (Dist:FFFFFFB2)
+0347: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 4E 09 FF FC 71 73 22 00 03 22 00 04 4C 24 
+0010:10 28 45 29 65 78 69 74 20 20 28 50 29 70 61 67 
+0020:65 71 73 22 00 01 12 FC F6 24 93 50 41 47 45 20 
+0030:31 20 6F 66 20 33 20 2D 20 54 72 79 20 74 6F 20 
+0040:66 69 6E 64 20 50 73 69 6F 6E 73 20 33 2C 34 2C 
+0050:35 20 6F 72 20 36 20 64 69 67 69 74 20 63 6F 64 
+0060:65 2E 20 49 74 20 63 6F 6E 73 69 73 74 73 20 6F 
+0070:66 20 74 68 65 20 6E 75 6D 62 65 72 73 20 30 20 
+0080:74 6F 20 39 2E 20 43 6F 72 72 65 63 74 20 64 69 
+0090:67 69 74 73 20 69 6E 20 74 68 65 20 63 6F 72 72 
+00A0:65 63 74 20 70 6F 73 69 74 69 6F 6E 20 61 72 65 
+00B0:20 69 6E 64 69 63 61 74 65 64 20 62 79 20 22 00 
+00C0:03 B8 4B 24 31 2E 20 43 6F 72 72 65 63 74 20 64 
+00D0:69 67 69 74 73 20 77 72 6F 6E 67 20 70 6F 73 69 
+00E0:74 69 6F 6E 20 61 72 65 20 69 6E 64 69 63 61 74 
+00F0:65 64 20 62 79 20 4B 22 00 04 B8 4B 24 01 2E 4B 
+0100:81 22 00 01 12 FC F6 22 00 01 05 FC F6 24 1F 20 
+0110:57 72 6F 6E 67 20 64 69 67 69 74 73 20 61 72 65 
+0120:20 69 6E 64 69 63 61 74 65 64 20 62 79 20 4B 22 
+0130:00 05 B8 4B 24 03 2E 20 20 4B 22 00 01 B8 4B 22 
+0140:00 02 B8 4B 22 00 01 B8 4B 81 22 00 02 12 FC F6 
+0150:24 3A 50 41 47 45 20 32 20 6F 66 20 33 20 2D 20 
+0160:44 45 4C 20 6B 65 79 20 77 69 6C 6C 20 72 65 6D 
+0170:6F 76 65 20 69 6E 63 6F 72 72 65 63 74 20 65 6E 
+0180:74 72 69 65 73 20 2D 20 54 68 65 20 22 00 7F B8 
+0190:4B 24 05 20 61 6E 64 20 4B 22 00 7E B8 4B 24 59 
+01A0:20 6B 65 79 73 20 61 6C 6C 6F 77 20 73 74 65 70 
+01B0:70 69 6E 67 20 62 61 63 6B 20 61 6E 64 20 66 6F 
+01C0:72 77 61 72 64 20 74 68 72 6F 75 67 68 20 65 6E 
+01D0:74 72 69 65 73 20 2D 20 4F 4E 20 6B 65 79 20 74 
+01E0:65 72 6D 69 6E 61 74 65 73 20 63 75 72 72 65 6E 
+01F0:74 20 67 61 6D 65 2E 20 20 4B 22 00 01 B8 4B 22 
+0200:00 02 B8 4B 22 00 01 B8 4B 81 22 00 03 12 FC F6 
+0210:24 4E 50 41 47 45 20 33 20 6F 66 20 33 20 2D 20 
+0220:59 6F 75 20 77 69 6C 6C 20 68 61 76 65 20 74 6F 
+0230:20 61 70 70 6C 79 20 64 65 74 65 63 74 69 76 65 
+0240:20 74 65 63 68 6E 69 71 75 65 73 20 74 6F 20 64 
+0250:69 73 63 6F 76 65 72 20 74 68 65 20 63 6F 64 65 
+0260:22 00 21 B8 4B 24 0F 20 49 74 20 69 73 20 6E 6F 
+0270:74 20 65 61 73 79 4B 22 00 21 B8 4B 24 53 20 4F 
+0280:6E 63 65 20 79 6F 75 20 64 69 73 63 6F 76 65 72 
+0290:20 74 68 65 20 6B 6E 61 63 6B 20 69 74 20 77 69 
+02A0:6C 6C 20 62 65 63 6F 6D 65 20 76 65 72 79 20 68 
+02B0:61 72 64 20 74 6F 20 70 75 74 20 74 68 69 73 20 
+02C0:4F 72 67 61 6E 69 73 65 72 20 64 6F 77 6E 2E 20 
+02D0:20 4B 22 00 01 B8 4B 22 00 02 B8 4B 22 00 01 B8 
+02E0:4B 81 0D FF FA 22 00 01 7F 0D FF F8 22 00 03 00 
+02F0:FF FA 05 FC F6 A0 7F 00 FF F8 22 00 45 2C 00 FF 
+0300:F8 22 00 51 2C 35 7E 00 07 4E 7B 51 00 3B 00 FF 
+0310:F8 22 00 50 2C 7E 00 24 0D FF FA 00 FF FA 22 00 
+0320:01 2D 7F 00 FF FA 22 00 03 29 7E 00 09 0D FF FA 
+0330:22 00 01 7F 51 FF B4 51 00 0F 0D FF F8 22 00 03 
+0340:24 00 A0 7F 51 FF B2 7B 

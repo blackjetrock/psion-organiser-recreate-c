@@ -3202,6 +3202,30 @@ nopl_exec.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/nopl_exec.c.s
 .PHONY : nopl_exec.c.s
 
+nopl_objdump.o: nopl_objdump.c.o
+.PHONY : nopl_objdump.o
+
+# target to build an object file
+nopl_objdump.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/nopl_objdump.c.o
+.PHONY : nopl_objdump.c.o
+
+nopl_objdump.i: nopl_objdump.c.i
+.PHONY : nopl_objdump.i
+
+# target to preprocess a source file
+nopl_objdump.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/nopl_objdump.c.i
+.PHONY : nopl_objdump.c.i
+
+nopl_objdump.s: nopl_objdump.c.s
+.PHONY : nopl_objdump.s
+
+# target to generate assembly for a file
+nopl_objdump.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/psion_recreate_ctusb.dir/build.make CMakeFiles/psion_recreate_ctusb.dir/nopl_objdump.c.s
+.PHONY : nopl_objdump.c.s
+
 nopl_trans.o: nopl_trans.c.o
 .PHONY : nopl_trans.o
 
@@ -4192,6 +4216,9 @@ help:
 	@echo "... nopl_exec.o"
 	@echo "... nopl_exec.i"
 	@echo "... nopl_exec.s"
+	@echo "... nopl_objdump.o"
+	@echo "... nopl_objdump.i"
+	@echo "... nopl_objdump.s"
 	@echo "... nopl_trans.o"
 	@echo "... nopl_trans.i"
 	@echo "... nopl_trans.s"

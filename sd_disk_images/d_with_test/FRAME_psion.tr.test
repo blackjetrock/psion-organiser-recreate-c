@@ -1,0 +1,139 @@
+
+Filename:'FRAME'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0022
+QCode Space Size:00B4
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:7
+0004: 'Hertz ?'
+000B: 71       PRINT string     (bytes code:-)
+000C: 73       PRINT newline     (bytes code:-)
+000D: 0E       Push local/global float variable reference     (bytes code:v)
+000E: FFDE       (65502)
+0010: 6D       INPUT float     (bytes code:-)
+0011: 4E       CLS     (bytes code:-)
+0012: 24       Push string literal     (bytes code:S)
+0013: Len:15
+0014: 'Shutter Angle ?'
+0023: 71       PRINT string     (bytes code:-)
+0024: 73       PRINT newline     (bytes code:-)
+0025: 0E       Push local/global float variable reference     (bytes code:v)
+0026: FFEE       (65518)
+0028: 6D       INPUT float     (bytes code:-)
+0029: 4E       CLS     (bytes code:-)
+002A: 0E       Push local/global float variable reference     (bytes code:v)
+002B: FFE6       (65510)
+002D: 01       Push local/global float variable value     (bytes code:v)
+002E: FFDE       (65502)
+0030: 22       Push integer literal     (bytes code:I)
+0031: 0168       (360)
+0033: 86       autoconversion int to float     (bytes code:-)
+0034: 01       Push local/global float variable value     (bytes code:v)
+0035: FFEE       (65518)
+0037: 3F       Divide float     (bytes code:-)
+0038: 3F       Divide float     (bytes code:-)
+0039: 80       Assign float     (bytes code:-)
+003A: 24       Push string literal     (bytes code:S)
+003B: Len:12
+003C: 'Camera Speed'
+0048: 71       PRINT string     (bytes code:-)
+0049: 73       PRINT newline     (bytes code:-)
+004A: 01       Push local/global float variable value     (bytes code:v)
+004B: FFE6       (65510)
+004D: 70       PRINT float     (bytes code:-)
+004E: 72       PRINT ,     (bytes code:-)
+004F: 24       Push string literal     (bytes code:S)
+0050: Len:3
+0051: 'fps'
+0054: 71       PRINT string     (bytes code:-)
+0055: 73       PRINT newline     (bytes code:-)
+0056: 91       GET     (bytes code:-)
+0057: 83       drop integer from stack     (bytes code:-)
+0058: 0E       Push local/global float variable reference     (bytes code:v)
+0059: FFF6       (65526)
+005B: 24       Push string literal     (bytes code:S)
+005C: Len:17
+005D: 'FPS,HMI,FILM,MENU'
+006E: 98       MENU     (bytes code:-)
+006F: 86       autoconversion int to float     (bytes code:-)
+0070: 80       Assign float     (bytes code:-)
+0071: 01       Push local/global float variable value     (bytes code:v)
+0072: FFF6       (65526)
+0074: 22       Push integer literal     (bytes code:I)
+0075: 0001       (1)
+0077: 86       autoconversion int to float     (bytes code:-)
+0078: 3B       Equal float     (bytes code:-)
+0079: 7E       Branch if false     (bytes code:D)
+007A: Dest:0089 (Dist:000F)
+007C: 20       Push byte literal     (bytes code:B)
+007D: 00           (0)
+007E: 7D       Procedure call.     (bytes code:S)
+007F: Len:5
+0080: 'FRAME'
+0085: 84       drop float from stack     (bytes code:-)
+0086: 51       GOTO     (bytes code:D)
+0087: Dest:00B3 (Dist:002C)
+0089: 01       Push local/global float variable value     (bytes code:v)
+008A: FFF6       (65526)
+008C: 22       Push integer literal     (bytes code:I)
+008D: 0002       (2)
+008F: 86       autoconversion int to float     (bytes code:-)
+0090: 3B       Equal float     (bytes code:-)
+0091: 7E       Branch if false     (bytes code:D)
+0092: Dest:009F (Dist:000D)
+0094: 20       Push byte literal     (bytes code:B)
+0095: 00           (0)
+0096: 7D       Procedure call.     (bytes code:S)
+0097: Len:3
+0098: 'HMI'
+009B: 84       drop float from stack     (bytes code:-)
+009C: 51       GOTO     (bytes code:D)
+009D: Dest:00B3 (Dist:0016)
+009F: 01       Push local/global float variable value     (bytes code:v)
+00A0: FFF6       (65526)
+00A2: 22       Push integer literal     (bytes code:I)
+00A3: 0003       (3)
+00A5: 86       autoconversion int to float     (bytes code:-)
+00A6: 3B       Equal float     (bytes code:-)
+00A7: 7E       Branch if false     (bytes code:D)
+00A8: Dest:00B3 (Dist:000B)
+00AA: 20       Push byte literal     (bytes code:B)
+00AB: 00           (0)
+00AC: 7D       Procedure call.     (bytes code:S)
+00AD: Len:4
+00AE: 'FILM'
+00B2: 84       drop float from stack     (bytes code:-)
+00B3: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 07 48 65 72 74 7A 20 3F 71 73 0E FF DE 
+0010:6D 4E 24 0F 53 68 75 74 74 65 72 20 41 6E 67 6C 
+0020:65 20 3F 71 73 0E FF EE 6D 4E 0E FF E6 01 FF DE 
+0030:22 01 68 86 01 FF EE 3F 3F 80 24 0C 43 61 6D 65 
+0040:72 61 20 53 70 65 65 64 71 73 01 FF E6 70 72 24 
+0050:03 66 70 73 71 73 91 83 0E FF F6 24 11 46 50 53 
+0060:2C 48 4D 49 2C 46 49 4C 4D 2C 4D 45 4E 55 98 86 
+0070:80 01 FF F6 22 00 01 86 3B 7E 00 0F 20 00 7D 05 
+0080:46 52 41 4D 45 84 51 00 2C 01 FF F6 22 00 02 86 
+0090:3B 7E 00 0D 20 00 7D 03 48 4D 49 84 51 00 16 01 
+00A0:FF F6 22 00 03 86 3B 7E 00 0B 20 00 7D 04 46 49 
+00B0:4C 4D 84 7B 

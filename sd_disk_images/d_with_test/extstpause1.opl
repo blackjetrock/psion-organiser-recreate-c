@@ -1,0 +1,34 @@
+pause1:
+
+local S1%, S2%
+local i%,d%
+local pass%
+
+pass% = 1
+
+rem ----------------------------------------------------------------------
+S1% = second
+pause 2
+s2% = second
+d% = s2%-s1%
+
+if (d% <> 2) and (d% <> -58)
+pass% = 0
+printf "S1:",s1%," s2:",s2%
+endif
+
+rem ----------------------------------------------------------------------
+S1% = second
+pause 5
+s2% = second
+d% = s2%-s1%
+
+if (d% <> 5) and (d% <> -55)
+pass% = 0
+printf "S1:",s1%," s2:",s2%
+endif
+
+
+if pass%
+print "PASS"
+endif

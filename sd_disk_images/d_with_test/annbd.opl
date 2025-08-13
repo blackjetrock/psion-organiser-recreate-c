@@ -1,0 +1,73 @@
+annbd:
+REM Source: ANNBD.OPL
+REM Version 1.1
+REM Revised version of BIRTHD.OPL to work in
+REM conjunction with complete Psion anniversary package
+REM (C) OCT 1998 LRS
+REM L.R.Sluijk@student.utwente.nl
+
+REM Vars for DOB and name$
+LOCAL j%,jmn%,jmx%,p%,t%
+LOCAL dat%(3),mn%(3),mx%(3),p%(3)
+LOCAL d$(3,4),n$(50)
+
+REM& EXTERNAL dbase$
+LOCAL k%
+
+j%=0 :jmn%=1 :jmx%=3
+p%(1)=11 :p%(2)=p%(1)+4 :p%(3)=p%(1)+9 :p%=p%(1) :t%=p%(3) :REM Screen positions
+dat%(1)=DAY :dat%(2)=MONTH :dat%(3)=YEAR :REM Current date variables
+mx%(1)=31 :mx%(2)=12 :mx%(3)=2155 :REM Maximum values for date variables
+mn%(1)=1 :mn%(2)=1 :mn%(3)=1900 :REM Minimum values for date variables
+IF COUNT>0 :LAST :d$(3)=LEFT$(A.date$,4) :ELSE :d$(3)=NUM$(YEAR,4) :ENDIF :REM Set year
+
+PRINT "Input to",dbase$
+PRINT "DOB:"
+DO
+ xyz::
+ j%=0
+ ONERR errh::
+ AT 6,3 :PRINT DAYNAME$(DOW(dat%(1),dat%(2),dat%(3))),NUM$(dat%(1),-2),MONTH$(dat%(2)),dat%(3)
+ AT t%,4 :PRINT " "
+ AT p%,4 :PRINT "^"
+ k%=GET
+ DO :j%=j%+1 :UNTIL p%=p%(j%)
+ t%=p%
+ IF k%=1 :RETURN
+ ELSEIF k%=3 :dat%(j%)=dat%(j%)+1
+  IF dat%(j%)>mx%(j%) :dat%(j%)=mn%(j%) :ENDIF
+ ELSEIF k%=4 :dat%(j%)=dat%(j%)-1
+  IF dat%(j%)<mn%(j%) :dat%(j%)=mx%(j%) :ENDIF
+ ELSEIF k%=5
+  IF j%=jmn% :j%=jmx%+1 :ENDIF
+  p%=p%(j%-1)
+ ELSEIF k%=6
+  IF j%=jmx% :j%=jmn%-1 :ENDIF
+  p%=p%(j%+1)
+ ENDIF
+UNTIL k%=13
+d$(1)=REPT$("0",-(dat%(1)<10))+NUM$(dat%(1),2)
+d$(2)=REPT$("0",-(dat%(2)<10))+NUM$(dat%(2),2)
+A.date$=d$(3)+d$(2)+d$(1)+"07000100" :REM Change time, interval and alarm if necessary
+
+AT 1,4 :PRINT "Name:",
+TRAP INPUT n$
+IF ERR=206 :RETURN :ENDIF
+
+REM if first character of string is "*" then new entry is not a birthday
+IF LEFT$(n$,1)="*"
+ A.event$=UPPER$(MID$(n$,2,1))+LOWER$(RIGHT$(n$,LEN(n$)-2))
+ELSE
+ A.event$=UPPER$(LEFT$(n$,1))+LOWER$(RIGHT$(n$,LEN(n$)-1))+" ("+NUM$(dat%(3),4)+") jarig" :REM Change birthday string if necessary
+ENDIF
+
+CLS :PRINT "Saving..."
+APPEND :RETURN
+
+errh::
+ONERR OFF
+IF ERR=194 :RAISE ERR :ENDIF
+IF k%=3 AND p%=p%(1) :dat%(1)=1
+ELSE :dat%(1)=dat%(1)-1
+ENDIF
+GOTO xyz::

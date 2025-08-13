@@ -1,0 +1,222 @@
+
+
+
+TOTAL
+T
+AC
+"B:TEST"
+C.TEST := 34.2
+C.SECOND := 1234.5
+C.THIRD := 1.333
+A := 34.2
+B := 1234.5
+C := 1.333
+T := ((A + B) + C)
+PRINT(A)
+< > 
+PRINT(B)
+< > 
+PRINT(C)
+<nl>
+
+PRINT("T=")
+< > 
+PRINT(T)
+<nl>
+
+PRINT("a+b")
+< > 
+PRINT((A + B))
+<nl>
+
+PRINT("b+c")
+< > 
+PRINT((B + C))
+<nl>
+
+PRINT("a+c")
+< > 
+PRINT((A + C))
+<nl>
+
+PRINT("(a+b)+c")
+<nl>
+PRINT(((A + B) + C))
+<nl>
+
+AB := (A + B)
+BC := (B + C)
+AC := (A + C)
+PRINT("ab+c")
+< > 
+PRINT((AB + C))
+<nl>
+
+PRINT("a+bc")
+< > 
+PRINT((A + BC))
+<nl>
+
+PRINT("ac+b")
+< > 
+PRINT((AC + B))
+<nl>
+
+PRINT("b+ac")
+< > 
+PRINT((B + AC))
+<nl>
+
+PRINT("1268.7+1.333")
+< > 
+PRINT((1268.7 + 1.333))
+<nl>
+
+PRINT(C.TEST)
+< > 
+PRINT(C.SECOND)
+< > 
+PRINT(C.THIRD)
+<nl>
+
+TOTAL := ((C.TEST + C.SECOND) + C.THIRD)
+PRINT("test+second=")
+< > 
+PRINT((C.TEST + C.SECOND))
+<nl>
+
+PRINT("second+third=")
+< > 
+PRINT((C.SECOND + C.THIRD))
+<nl>
+
+PRINT("first+third=")
+< > 
+PRINT((C.FIRST + C.THIRD))
+<nl>
+
+PRINT("Total:")
+< > 
+PRINT(TOTAL)
+<nl>
+
+IF (TOTAL = 1270.033)
+PRINT("PASS")
+<nl>
+
+ELSE
+PRINT("FAIL")
+<nl>
+
+ENDIF
+
+
+
+DROP()
+DROP()
+DROP()
+"B:TEST"
+C.TEST := 34.2
+C.SECOND := 1234.5
+C.THIRD := 1.333
+A := 34.2
+B := 1234.5
+C := 1.333
+T := ((A + B) + C)
+PRINT(A)
+< > 
+PRINT(B)
+< > 
+PRINT(C)
+<nl>
+
+PRINT("T=")
+< > 
+PRINT(T)
+<nl>
+
+PRINT("a+b")
+< > 
+PRINT((A + B))
+<nl>
+
+PRINT("b+c")
+< > 
+PRINT((B + C))
+<nl>
+
+PRINT("a+c")
+< > 
+PRINT((A + C))
+<nl>
+
+PRINT("(a+b)+c")
+<nl>
+PRINT(((A + B) + C))
+<nl>
+
+AB := (A + B)
+BC := (B + C)
+AC := (A + C)
+PRINT("ab+c")
+< > 
+PRINT((AB + C))
+<nl>
+
+PRINT("a+bc")
+< > 
+PRINT((A + BC))
+<nl>
+
+PRINT("ac+b")
+< > 
+PRINT((AC + B))
+<nl>
+
+PRINT("b+ac")
+< > 
+PRINT((B + AC))
+<nl>
+
+PRINT("1268.7+1.333")
+< > 
+PRINT((1268.7 + 1.333))
+<nl>
+
+PRINT(C.TEST)
+< > 
+PRINT(C.SECOND)
+< > 
+PRINT(C.THIRD)
+<nl>
+
+TOTAL := ((C.TEST + C.SECOND) + C.THIRD)
+PRINT("test+second=")
+< > 
+PRINT((C.TEST + C.SECOND))
+<nl>
+
+PRINT("second+third=")
+< > 
+PRINT((C.SECOND + C.THIRD))
+<nl>
+
+PRINT("first+third=")
+< > 
+PRINT((C.FIRST + C.THIRD))
+<nl>
+
+PRINT("Total:")
+< > 
+PRINT(TOTAL)
+<nl>
+
+IF (TOTAL = 1270.033)
+PRINT("PASS")
+<nl>
+
+ELSE
+PRINT("FAIL")
+<nl>
+
+ENDIF

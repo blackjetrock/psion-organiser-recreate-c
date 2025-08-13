@@ -1,0 +1,201 @@
+
+Filename:'MPRINT'
+File ext:'OB3
+Dropping OB3 header...
+Enter:dump_proc
+Var Space Size:0005
+QCode Space Size:00EF
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (1)
+ 0: FFFB 01
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:8
+0004: 'Device: '
+000C: 71       PRINT string     (bytes code:-)
+000D: 0F       Push local/global string variable reference     (bytes code:v)
+000E: FFFC       (65532)
+0010: 6E       INPUT string     (bytes code:-)
+0011: 02       Push local/global string variable value     (bytes code:v)
+0012: FFFC       (65532)
+0014: 24       Push string literal     (bytes code:S)
+0015: Len:5
+0016: ':MAIN'
+001B: 4B       Plus string     (bytes code:-)
+001C: 65       OPEN     (bytes code:f+list)
+      Logical file:00 (A)
+        Type:02 (String)
+        F1$
+        Type:02 (String)
+        F2$
+        Type:02 (String)
+        F3$
+        Type:02 (String)
+        F4$
+        Type:02 (String)
+        F5$
+        Type:02 (String)
+        F6$
+        Type:02 (String)
+        F7$
+        Type:02 (String)
+        F8$
+0046: 88       End of field list for CREATE/OPEN     (bytes code:-)
+0047: 24       Push string literal     (bytes code:S)
+0048: Len:3
+0049: 'F1$'
+004C: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+004D: 00           (A)
+004E: 96       LEN     (bytes code:-)
+004F: 7E       Branch if false     (bytes code:D)
+0050: Dest:005B (Dist:000B)
+0052: 24       Push string literal     (bytes code:S)
+0053: Len:3
+0054: 'F1$'
+0057: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0058: 00           (A)
+0059: 76       LPRINT string     (bytes code:-)
+005A: 78       LPRINT newline     (bytes code:-)
+005B: 24       Push string literal     (bytes code:S)
+005C: Len:3
+005D: 'F2$'
+0060: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0061: 00           (A)
+0062: 96       LEN     (bytes code:-)
+0063: 7E       Branch if false     (bytes code:D)
+0064: Dest:006F (Dist:000B)
+0066: 24       Push string literal     (bytes code:S)
+0067: Len:3
+0068: 'F2$'
+006B: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+006C: 00           (A)
+006D: 76       LPRINT string     (bytes code:-)
+006E: 78       LPRINT newline     (bytes code:-)
+006F: 24       Push string literal     (bytes code:S)
+0070: Len:3
+0071: 'F3$'
+0074: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0075: 00           (A)
+0076: 96       LEN     (bytes code:-)
+0077: 7E       Branch if false     (bytes code:D)
+0078: Dest:0083 (Dist:000B)
+007A: 24       Push string literal     (bytes code:S)
+007B: Len:3
+007C: 'F3$'
+007F: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0080: 00           (A)
+0081: 76       LPRINT string     (bytes code:-)
+0082: 78       LPRINT newline     (bytes code:-)
+0083: 24       Push string literal     (bytes code:S)
+0084: Len:3
+0085: 'F4$'
+0088: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0089: 00           (A)
+008A: 96       LEN     (bytes code:-)
+008B: 7E       Branch if false     (bytes code:D)
+008C: Dest:0097 (Dist:000B)
+008E: 24       Push string literal     (bytes code:S)
+008F: Len:3
+0090: 'F4$'
+0093: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+0094: 00           (A)
+0095: 76       LPRINT string     (bytes code:-)
+0096: 78       LPRINT newline     (bytes code:-)
+0097: 24       Push string literal     (bytes code:S)
+0098: Len:3
+0099: 'F5$'
+009C: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+009D: 00           (A)
+009E: 96       LEN     (bytes code:-)
+009F: 7E       Branch if false     (bytes code:D)
+00A0: Dest:00AB (Dist:000B)
+00A2: 24       Push string literal     (bytes code:S)
+00A3: Len:3
+00A4: 'F5$'
+00A7: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00A8: 00           (A)
+00A9: 76       LPRINT string     (bytes code:-)
+00AA: 78       LPRINT newline     (bytes code:-)
+00AB: 24       Push string literal     (bytes code:S)
+00AC: Len:3
+00AD: 'F6$'
+00B0: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00B1: 00           (A)
+00B2: 96       LEN     (bytes code:-)
+00B3: 7E       Branch if false     (bytes code:D)
+00B4: Dest:00BF (Dist:000B)
+00B6: 24       Push string literal     (bytes code:S)
+00B7: Len:3
+00B8: 'F6$'
+00BB: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00BC: 00           (A)
+00BD: 76       LPRINT string     (bytes code:-)
+00BE: 78       LPRINT newline     (bytes code:-)
+00BF: 24       Push string literal     (bytes code:S)
+00C0: Len:3
+00C1: 'F7$'
+00C4: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00C5: 00           (A)
+00C6: 96       LEN     (bytes code:-)
+00C7: 7E       Branch if false     (bytes code:D)
+00C8: Dest:00D3 (Dist:000B)
+00CA: 24       Push string literal     (bytes code:S)
+00CB: Len:3
+00CC: 'F7$'
+00CF: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00D0: 00           (A)
+00D1: 76       LPRINT string     (bytes code:-)
+00D2: 78       LPRINT newline     (bytes code:-)
+00D3: 24       Push string literal     (bytes code:S)
+00D4: Len:3
+00D5: 'F8$'
+00D8: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00D9: 00           (A)
+00DA: 96       LEN     (bytes code:-)
+00DB: 7E       Branch if false     (bytes code:D)
+00DC: Dest:00E7 (Dist:000B)
+00DE: 24       Push string literal     (bytes code:S)
+00DF: Len:3
+00E0: 'F8$'
+00E3: 1C       Push file field as string. Is followed by 1 byte logical file name (0-3 for A-D)     (bytes code:f)
+00E4: 00           (A)
+00E5: 76       LPRINT string     (bytes code:-)
+00E6: 78       LPRINT newline     (bytes code:-)
+00E7: 78       LPRINT newline     (bytes code:-)
+00E8: 63       NEXT     (bytes code:-)
+00E9: A3       EOF     (bytes code:-)
+00EA: 7E       Branch if false     (bytes code:D)
+00EB: Dest:0047 (Dist:FFFFFF5C)
+00ED: 5C       CLOSE     (bytes code:-)
+00EE: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 08 44 65 76 69 63 65 3A 20 71 0F FF FC 
+0010:6E 02 FF FC 24 05 3A 4D 41 49 4E 4B 65 00 02 03 
+0020:46 31 24 02 03 46 32 24 02 03 46 33 24 02 03 46 
+0030:34 24 02 03 46 35 24 02 03 46 36 24 02 03 46 37 
+0040:24 02 03 46 38 24 88 24 03 46 31 24 1C 00 96 7E 
+0050:00 0B 24 03 46 31 24 1C 00 76 78 24 03 46 32 24 
+0060:1C 00 96 7E 00 0B 24 03 46 32 24 1C 00 76 78 24 
+0070:03 46 33 24 1C 00 96 7E 00 0B 24 03 46 33 24 1C 
+0080:00 76 78 24 03 46 34 24 1C 00 96 7E 00 0B 24 03 
+0090:46 34 24 1C 00 76 78 24 03 46 35 24 1C 00 96 7E 
+00A0:00 0B 24 03 46 35 24 1C 00 76 78 24 03 46 36 24 
+00B0:1C 00 96 7E 00 0B 24 03 46 36 24 1C 00 76 78 24 
+00C0:03 46 37 24 1C 00 96 7E 00 0B 24 03 46 37 24 1C 
+00D0:00 76 78 24 03 46 38 24 1C 00 96 7E 00 0B 24 03 
+00E0:46 38 24 1C 00 76 78 78 63 A3 7E FF 5C 5C 7B 
