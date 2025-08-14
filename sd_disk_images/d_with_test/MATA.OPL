@@ -1,0 +1,51 @@
+MATA:
+LOCAL A%,B%,C%,O$(2,1),R%,N%,G%,S%
+DEBUT::
+A%=0
+G%=0
+N%=0
+O$(1)="+"
+O$(2)="-"
+DO
+ S%=MRND%:(1,2)
+ B%=MRND%:(0,10)
+ C%=MRND%:(0,10)  
+ R%=B%+C%
+ IF S%=2
+  A%=B%
+  B%=R%
+  R%=A%
+ ENDIF
+ CLS
+ PRINT B%;" ";O$(S%);" ";C%;" ="
+ AT 12,1 :INPUT A%
+ IF A%=R%
+  G%=G%+1
+  AT 1,2 :PRINT "Bravo"
+  PAUSE 20
+ ELSE
+  AT 1,2 :PRINT "Erreur,c"+CHR$(39)+"est:"+FIX$(R%,0,-3)
+  SFX2:
+  A%=GET
+ ENDIF
+ N%=N%+1
+UNTIL N%=10
+CLS
+PRINT "Note: "+FIX$(G%,0,-2)+"/10"
+IF G%=10
+ PRINT "Excellent"+CHR$(33)
+ELSEIF G%>6
+ PRINT "Bravo"
+ELSEIF G%>5
+ PRINT "Moyen"
+ELSEIF G%>2
+ PRINT "Prends ton temps";
+ELSEIF G%>0
+ PRINT "Pas tres bon"
+ELSE
+ PRINT "Recommence..."
+ENDIF
+A%=GET
+IF G%=0 AND A%<>1
+ GOTO DEBUT::
+ENDIF

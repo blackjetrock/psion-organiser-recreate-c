@@ -1,0 +1,18 @@
+MATA
+~~~~
+by Denis Ladouceur <denisl@aei.ca>
+
+A program to help kids learn simple arithmetic. The program asks 10 simple
+additions or subtractions involving the addition table of numbers from 0
+to 10. At the end the score is shown.
+
+The program consists of three procedures: MATA, SFX2 and MRND%. Simply type
+them in, or upload them with the comms link. Translate each of them and run
+MATA to start the program.
+If you are using the comms link, it will read MRND% from the file MRND_.OPL
+automatically if you type the filename MRND% .
+
+If you use an LZ, you need not translate them using Xtran.
+
+-----------------------------------------------------------------------------
+Jaap's Psion II page:                           http://www.jaapsch.net/psion/
