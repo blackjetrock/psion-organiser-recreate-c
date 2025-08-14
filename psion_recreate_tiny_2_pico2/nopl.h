@@ -7,6 +7,8 @@
 #define NOPL_MAX_SUFFIX_BYTES   8
 #define MAX_COND_FIXUP        100
 #define MAX_NOPL_MENU_SELS     64
+#define MAX_NOPL_MENU_ITEM_LEN 32
+
 
 #include <stdio.h>
 #include <stdarg.h>

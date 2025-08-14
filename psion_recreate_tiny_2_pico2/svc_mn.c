@@ -8,20 +8,49 @@
 // Uses menustr to put a menu on the display, returns the index of
 // the selected item, or -1 if menu was exited
 
+// The menu string is a list of words, the first letter of the word is
+// the selector for that word.
+
 // Avoid stack use by not making these local
 
-char sels[MAX_NOPL_MENU_SELS];
+char sels[MAX_NOPL_MENU_SELS] PSRAM;
 char *sp;
 int num_sels = 0;
+int max_page = 0;
+
 int strx, stry;
 
-int ipos[32];
-int iposx[32];
-int iposy[32];
-char selchar[32];
-int how_many_have_sel[32];  
+int ipos[MAX_NOPL_MENU_SELS];
+int iposx[MAX_NOPL_MENU_SELS];
+int iposy[MAX_NOPL_MENU_SELS];
+int item_page[MAX_NOPL_MENU_SELS];
+
+char selchar[MAX_NOPL_MENU_SELS];
+int how_many_have_sel[MAX_NOPL_MENU_SELS];  
 char frag[2] = " ";
-char selstr[32][32];
+char selstr[MAX_NOPL_MENU_SELS][MAX_NOPL_MENU_ITEM_LEN] PSRAM;
+int curpage = 0;
+
+//------------------------------------------------------------------------------
+
+void menu_display_page(int page)
+{
+  // Clear screen
+  dp_cls();
+
+  // Now put up all items on this page
+  for(int s=0; s<num_sels; s++)
+    {
+      // Is this item on this page?
+      if( item_page[s] == page )
+        {
+          // Display the item string
+          i_printxy_str(iposx[s], iposy[s], &(selstr[s][0]));
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
 
 int mn_menu(char *str)
 {
@@ -32,9 +61,16 @@ int mn_menu(char *str)
   // Find the selection letters
   sp = str;
 
-  for(int i=0; i<32; i++)
+  // If there's a trailing space then remove it
+  while( str[strlen(str)-1] == ' ' )
+    {
+      str[strlen(str)-1] = '\0';
+    }
+  
+  for(int i=0; i<MAX_NOPL_MENU_SELS; i++)
     {
       how_many_have_sel[i] = 0;
+      item_page[i] = 0;
     }
   
   // Find each of the menu items, print them and store their first characters
@@ -104,28 +140,6 @@ int mn_menu(char *str)
 	}
     }
   
-#if DB_MN_MENU
-  printf("\nnumsels:%d", num_sels);
-  
-  for(int i=0; i<num_sels; i++)
-    {
-      //printf("\n%2d,", i);
-      printf("\n%2d:'%c' %s", i, selchar[i], selstr[i]);
-    }
-#endif
-  
-#if DB_MN_MENU
-  // Dump all the data gathered
-  printf("\nStr:'%s'", str);
-  
-  for(int s=0; s<num_sels; s++)
-    {
-      printf("\n%02i:selchar:'%c' X,y:%d,%d", s,  selchar[s], iposx[s], iposy[s]);
-    }
-  printf("\n...\n");
-
-#endif
-
   //------------------------------------------------------------------------------
   //
   // Process the menu, in the compiled manner
@@ -140,20 +154,77 @@ int mn_menu(char *str)
 
   dp_cls();
   
-  //  curs_set(3);
+  // Work out the positions of all of the menu items. Avoid breaking an entry across lines
+  // and also have multiple pages for large menus. Don't display anything yet as we don't
+  // want the extra undisplayed pages to appear and then disappear.
+
+  // The current menu position.
+  int mx = 0, my = 0;
+  int item_len = 0;
   
-  // Display the menu, storing the positions of the entries
   for(int i=0; i<num_sels; i++)
     {
-      dp_prnt(" ");
-      iposy[i] = printpos_y;
-      iposx[i] = printpos_x;
-      
-      dp_prnt(selstr[i]);
-      //dp_prnt(" ");
+
+      // Dummy 'print', but first check it will fit on the line
+      item_len = strlen(selstr[i]);
+
+      if( mx+item_len >= display_num_chars() )
+        {
+          // New line needed if we don't have a very long item
+          if( item_len >= display_num_chars() )
+            {
+              // We have to split this item, don't create a new line, just flow on
+              
+            }
+          else
+            {
+              // Move this item to start on the next line
+              mx = 0;
+              my++;
+
+              // We may now be on a new page
+              if( my >= display_num_lines() )
+                {
+                  max_page++;
+                  mx = 0;
+                  my = 0;
+                }
+            }
+        }
+
+      // Item is placed here
+      iposy[i] = my;
+      iposx[i] = mx;
+
+      // On this page
+      item_page[i] = max_page;
+
+      // Move to next item start (with a space after it)
+      mx += strlen(selstr[i])+1;
     }
+
+  // Now display the initial page
+  curpage = 0;
+  menu_display_page(curpage);
   
-  //  keypad(stdscr, TRUE);
+#if DB_MN_MENU
+  // Dump all the data gathered
+  printf("\n\nMenu String:'%s'\n", str);
+  
+  for(int s=0; s<num_sels; s++)
+    {
+      printf("\n%02i: Selector:'%c' (x,y): %2d,%2d Page:%d How many have sel: %d Item:'%s'",
+             s,
+             selchar[s],
+             iposx[s],
+             iposy[s],
+             item_page[s],
+             how_many_have_sel[s],
+             &(selstr[s][0]));
+    }
+  printf("\n");
+
+#endif
 
   // Cursor on
   cursor_on();
@@ -297,14 +368,14 @@ int mn_menu2(char *str)
   //  sels[num_sels++] = *sp;
   
   int i=0;
-  int ipos[32];
-  int iposx[32];
-  int iposy[32];
-  char selchar[32];
-  int how_many_have_sel[32];  
+  int ipos[MAX_NOPL_MENU_SELS];
+  int iposx[MAX_NOPL_MENU_SELS];
+  int iposy[MAX_NOPL_MENU_SELS];
+  char selchar[MAX_NOPL_MENU_SELS];
+  int how_many_have_sel[MAX_NOPL_MENU_SELS];  
   char frag[2] = " ";
 
-  for(int i=0; i<32; i++)
+  for(int i=0; i<MAX_NOPL_MENU_SELS; i++)
     {
       how_many_have_sel[i] = 0;
     }
