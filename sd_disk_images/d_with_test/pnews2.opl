@@ -1,0 +1,6 @@
+UDG: (xi,ai,b$,c$,d$,e$,f$,g$,h$)
+rem Used by PRINTDIG to write UDGs
+rem (Translate using Xtran
+rem on models LZ or LZ64)
+pokeb $180, 64+x*8
+pokeb $181,...

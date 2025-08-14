@@ -1,12 +1,12 @@
 #undef TUI
 
 
-#define MAX_NOPL_LINE         80
-#define PRT_MAX_LINE          80
+#define MAX_NOPL_LINE         256
+#define PRT_MAX_LINE          256
 #define NOPL_MAX_LABEL         12
 #define NOPL_MAX_SUFFIX_BYTES   8
 #define MAX_COND_FIXUP        100
-#define MAX_NOPL_MENU_SELS     16
+#define MAX_NOPL_MENU_SELS     64
 
 #include <stdio.h>
 #include <stdarg.h>
