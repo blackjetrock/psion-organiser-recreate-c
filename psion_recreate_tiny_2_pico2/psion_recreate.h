@@ -220,12 +220,12 @@ void write_595(const uint latchpin, int value, int n);
 #if PICOCALC
 // Have a smaller display until slow display fixed
 
-//#define DISPLAY_NUM_LINES   (320/12)
-//#define DISPLAY_NUM_CHARS  (320/8)
-//#define DISPLAY_NUM_EXTRA   4
-#define DISPLAY_NUM_LINES   8
-#define DISPLAY_NUM_CHARS  30
+#define DISPLAY_NUM_LINES  24
+#define DISPLAY_NUM_CHARS  40
 #define DISPLAY_NUM_EXTRA   4
+//#define DISPLAY_NUM_LINES   8
+//#define DISPLAY_NUM_CHARS  30
+//#define DISPLAY_NUM_EXTRA   4
 #endif
 
 extern unsigned char font_5x7_letters[];

@@ -451,24 +451,35 @@ void scroll_lcd_spi(int lines)
 void picocalc_display_put_c(char c)
 {
   // if it is printable and it is going to take us off the right hand end of the screen do a CRLF
-  if (c >= MainFont[2] && c < MainFont[2] + MainFont[3]) {
-    if (picocalc_current_x + gui_font_width > hres) {
-      picocalc_display_put_c('\r');
-      picocalc_display_put_c('\n');
-    }
+#if 0
+  if (c >= MainFont[2] && c < MainFont[2] + MainFont[3])
+    {
+      if (picocalc_current_x + gui_font_width > hres)
+      {
+        printf("\n*** crlf :: picocalc_current_x:%d font_width:%d hres:%d",
+               picocalc_current_x,
+               gui_font_width,
+               hres);
+        picocalc_display_put_c('\r');
+        picocalc_display_put_c('\n');
+      }
   }
-
+#endif
+  
   // handle the standard control chars
   switch (c) {
   case '\b':
     picocalc_current_x -= gui_font_width;
+
     //if (picocalc_current_x < 0) picocalc_current_x = 0;
     if (picocalc_current_x < 0) {  //Go to end of previous line
       picocalc_current_y -= gui_font_height;                  //Go up one line
       if (picocalc_current_y < 0) picocalc_current_y = 0;
       picocalc_current_x = (s_width - 1) * gui_font_width;  //go to last character
     }
+    
     return;
+
   case '\r':
     picocalc_current_x = 0;
     return;
@@ -486,6 +497,7 @@ void picocalc_display_put_c(char c)
     } while ((picocalc_current_x / gui_font_width) % 2);// 2 3 4 8
     return;
   }
+  
   picocalc_lcd_print_char(gui_fcolour, gui_bcolour, c, ORIENT_NORMAL);// print it
 }
 

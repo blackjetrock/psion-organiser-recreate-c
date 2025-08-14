@@ -90,8 +90,8 @@ void dd_char_at_xy(int x, int y, int ch)
       break;
 
     case DD_PICOCALC:
-      picocalc_current_x = x*9;
-      picocalc_current_y = y*13;
+      picocalc_current_x = x*8;
+      picocalc_current_y = y*12;
       //      picocalc_lcd_print_char(PICOCALC_GREEN, PICOCALC_BLACK, ch, ORIENT_NORMAL);
       picocalc_lcd_putc(ch);
       break;
