@@ -18,7 +18,12 @@
 
 #include "psion_recreate_all.h"
 
-void cli_interactive(void)
+// This is called repeatedly in loops
+//
+// Either serial USB for I/O
+// or Mini OLED/display
+
+void shell(void)
 {
   char *cmd;
   int rect;
