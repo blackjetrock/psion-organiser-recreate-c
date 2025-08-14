@@ -140,13 +140,6 @@ int mn_menu(char *str)
 	}
     }
   
-  //------------------------------------------------------------------------------
-  //
-  // Process the menu, in the compiled manner
-  //
-  //------------------------------------------------------------------------------
-
-  // Wait for one of the selection letters to be pressed
   int done = 0;
   int done_srch = 0;
   unsigned int selnum = 0;
@@ -226,6 +219,14 @@ int mn_menu(char *str)
 
 #endif
 
+  //------------------------------------------------------------------------------
+  //
+  // Process the menu
+  //
+  //------------------------------------------------------------------------------
+
+  // Wait for one of the selection letters to be pressed
+
   // Cursor on
   cursor_on();
   cursor_blink = 1;
@@ -233,6 +234,13 @@ int mn_menu(char *str)
   while(!done)
     {
       tight_loop_tasks();
+
+      // If the current page needs to change then display it
+      if( curpage != item_page[selnum] )
+        {
+          curpage = item_page[selnum];
+          menu_display_page(curpage);
+        }
       
       cursor_y = iposy[selnum];
       cursor_x = iposx[selnum];
@@ -252,7 +260,8 @@ int mn_menu(char *str)
               break;
               
             case KEY_ON:
-              // We add one to selnum for return value
+              // We add one to selnum for return value, so need to set -1 here so we return
+              // 0 back as an indication that ON was pressed.
               selnum = -1;
               done = 1;
 #if DB_MN_MENU

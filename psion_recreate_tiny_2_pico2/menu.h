@@ -57,6 +57,7 @@ extern MENU menu_buzzer;
 extern MENU menu_format;
 extern MENU menu_calc;
 extern MENU menu_file;
+extern MENU menu_test_menu_svc;
 
 void check_menu_launch(void);
 void scan_keys(void);

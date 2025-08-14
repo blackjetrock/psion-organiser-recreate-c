@@ -355,6 +355,10 @@ void init_menu_format(void)
 {
 }
 
+void init_menu_test_menu_svc(void)
+{
+}
+
 void init_menu_eeprom(void)
 {
 }
@@ -411,6 +415,11 @@ void menu_back(void)
 void menu_goto_eeprom(void)
 {
   goto_menu(&menu_eeprom);
+}
+
+void menu_goto_test_menu_svc(void)
+{
+  goto_menu(&menu_test_menu_svc);
 }
 
 void menu_goto_format(void)
@@ -550,6 +559,17 @@ void menu_prog_run(void)
 
 }
 
+void menu_long_items(void)
+{
+  // Run the menu
+  mn_menu("Item1 Item2 Longitempastlinenend");
+}
+
+void menu_multi_page(void)
+{
+  // Run the menu
+  mn_menu("One Jump0 Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen Twenty TwentyOne TwentyTwo TwentyThree TwentyFour TwentyFive TwentySix TwentySeven Jump1 TwentyEight");
+}
 
 void menu_epos_test(void)
 {
@@ -3268,6 +3288,18 @@ MENU menu_format =
    }
   };
 
+MENU menu_test_menu_svc =
+  {
+   &menu_test_os,
+   "Test Menu Svc",
+   init_menu_test_menu_svc,   
+   {
+    {'B', "LongItems",  menu_long_items},
+    {'N', "MultiPage",  menu_multi_page},
+    {'&', "",           menu_null},
+   }
+  };
+
 MENU menu_test_os =
   {
    &menu_top,
@@ -3275,15 +3307,16 @@ MENU menu_test_os =
    init_menu_test_os,   
    {
      //    {KEY_ON, "",        menu_back},
-    {'D', "DispTest",   menu_oled_test},
-    {'V', "Dpview",     menu_dp_view},
-    {'B', "Buzz",       menu_goto_buzzer},
-    {'C', "Cursor",     menu_cursor_test},
-    {'E', "Epos",       menu_epos_test},
-    {'F', "Flowtext",   menu_flowtext_test},
-    {'K', "Keytest",    menu_scan_test},
-    {'M', "Mass_storage",    menu_test_mass_storage},
-    {'&', "",           menu_null},
+    {'D', "Display",     menu_oled_test},
+    {'V', "Dpview",      menu_dp_view},
+    {'B', "Buzz",        menu_goto_buzzer},
+    {'C', "Cursor",      menu_cursor_test},
+    {'E', "Epos",        menu_epos_test},
+    {'F', "Flowtext",    menu_flowtext_test},
+    {'K', "Keytest",     menu_scan_test},
+    {'M', "MassStorage", menu_test_mass_storage},
+    {'M', "MenuSvc",     menu_goto_test_menu_svc},
+    {'&', "",            menu_null},
    }
   };
 
