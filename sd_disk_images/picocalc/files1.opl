@@ -1,0 +1,11 @@
+FILES1:
+
+CREATE "B:ABC",B,AAA$,B%,CC
+OPEN "A:ABC",A,A%,B,C$
+
+A.A=12   REM stuff
+A.B=3.4
+A.C$="XYZ"
+A.A%=210
+
+PRINT A.A, A.A%, A.B, A.C$

@@ -1824,6 +1824,13 @@ NOBJ_VARTYPE char_to_type(char ch)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+//
+// Syntax error has occurred, report it.
+//
+// We print to the debug file, and on the serial USB
+//
+// Also print on to the screen
+//
 
 void syntax_error(char *fmt, ...)
 {
@@ -1833,6 +1840,7 @@ void syntax_error(char *fmt, ...)
   vsprintf(line, fmt, valist);
   va_end(valist);
 
+  // Print to debug file
   dbprintf("Syntax error\n");
   dbprintf("'%s'", cline);
   
@@ -1842,7 +1850,9 @@ void syntax_error(char *fmt, ...)
     }
   dbprintf("^");
   dbprintf("\n   %s", line);
-    
+
+  // Print on Serial USB
+  
   printf("*** Syntax error ***");
   printf("\n\n\nSyntax error\n");
   printf("\n%s", cline);
@@ -1853,11 +1863,28 @@ void syntax_error(char *fmt, ...)
       printf(" ");
     }
   printf("^");
+
+  // Print on screen
+  dp_cls();
   
-  printf("\n\n   %s", line);
-  printf("\n");
+  i_printxy_str(0, 0, "Syntax Error");
+  i_printxy_str(0, 1, line);
+
+  i_printxy_str(0, 2, cline);
+  i_printxy_str(cline_i-1, 3, "^");
+
+  // We pause so this error can be read
+  kb_getk();
   
-  //  return;
+#if 0
+  for(int i=0; i<cline_i-1; i++)
+    {
+      printf(" ");
+    }
+  printf("^");
+
+#endif
+
 }
 
 void typecheck_error(char *fmt, ...)
@@ -3740,6 +3767,7 @@ int check_atom(int *index)
 	{
 	  *index = idx;
 	  dbprintf("%s:ret0 No quote at end of string", __FUNCTION__);
+          syntax_error("Missing quote");
 	  return(0);
 	}
 

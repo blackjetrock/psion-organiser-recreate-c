@@ -1,0 +1,18 @@
+
+MPG:
+
+local m,l,mpg,g
+
+PRINT "Miles"
+INPUT M
+PRINT "Litres"
+INPUT L
+g=l/4.54
+mpg=m/g
+print "MPG:";mpg
+print "Gallons";g
+print "Litres";l
+print "Miles";m
+get
+
+

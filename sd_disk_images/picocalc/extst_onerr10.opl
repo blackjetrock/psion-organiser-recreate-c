@@ -1,0 +1,17 @@
+onerr10:(F%)
+
+local on10%, onb10%
+
+
+print "ONERR 10"
+
+if F% = 123
+print "Raising error"
+raise 302
+else
+print "Not raising error"
+endif
+
+print "ONERR 10 after raise"
+
+print "PASS"

@@ -1,0 +1,606 @@
+
+====================
+
+EXP_BUFF_ID_META PROCDEF
+--------------------
+
+====================
+
+--------------------
+
+Push:'M'
+Push:'L'
+Push:'MPG'
+Push:'G'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'M' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'M' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE MPG
+Push:'MPG'
+                    000: 'M' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+                    002: 'MPG' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'M' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+                    002: 'MPG' type:f (1), %:0
+                    003: 'G' type:f (1), %:0
+--------------------
+
+Push:'"Miles"'
+Pop: '"Miles"'
+====================
+
+EXP_BUFF_ID_STR "Miles"
+Push:'"Miles"'
+                    000: '"Miles"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Miles"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'M'
+Pop: 'M'
+====================
+
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'M' type:f (1), %:0
+EXP_BUFF_ID_INPUT INPUT
+Pop: 'M'
+--------------------
+
+Push:'"Litres"'
+Pop: '"Litres"'
+====================
+
+EXP_BUFF_ID_STR "Litres"
+Push:'"Litres"'
+                    000: '"Litres"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Litres"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'L'
+Pop: 'L'
+====================
+
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'L' type:f (1), %:0
+EXP_BUFF_ID_INPUT INPUT
+Pop: 'L'
+--------------------
+
+Push:'G'
+Push:'L'
+Push:'4.54'
+Pop: '4.54'
+Pop: 'L'
+Push:'000'
+Pop: '000'
+Pop: 'G'
+====================
+
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'G' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'G' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+EXP_BUFF_ID_FLT 4.54
+Push:'4.54'
+                    000: 'G' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+                    002: '4.54' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR /
+Pop: '4.54'
+Pop: 'L'
+Push:'000'
+                    000: 'G' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'G'
+--------------------
+
+Push:'MPG'
+Push:'M'
+Push:'G'
+Pop: 'G'
+Pop: 'M'
+Push:'000'
+Pop: '000'
+Pop: 'MPG'
+====================
+
+EXP_BUFF_ID_VARIABLE MPG
+Push:'MPG'
+                    000: 'MPG' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'MPG' type:f (1), %:0
+                    001: 'M' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'MPG' type:f (1), %:0
+                    001: 'M' type:f (1), %:0
+                    002: 'G' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR /
+Pop: 'G'
+Pop: 'M'
+Push:'000'
+                    000: 'MPG' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'MPG'
+--------------------
+
+Push:'"MPG:"'
+Pop: '"MPG:"'
+====================
+
+EXP_BUFF_ID_STR "MPG:"
+Push:'"MPG:"'
+                    000: '"MPG:"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"MPG:"'
+--------------------
+
+Push:'MPG'
+Pop: 'MPG'
+====================
+
+EXP_BUFF_ID_VARIABLE MPG
+Push:'MPG'
+                    000: 'MPG' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'MPG'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Gallons"'
+Pop: '"Gallons"'
+====================
+
+EXP_BUFF_ID_STR "Gallons"
+Push:'"Gallons"'
+                    000: '"Gallons"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Gallons"'
+--------------------
+
+Push:'G'
+Pop: 'G'
+====================
+
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'G' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'G'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Litres"'
+Pop: '"Litres"'
+====================
+
+EXP_BUFF_ID_STR "Litres"
+Push:'"Litres"'
+                    000: '"Litres"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Litres"'
+--------------------
+
+Push:'L'
+Pop: 'L'
+====================
+
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'L' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'L'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Miles"'
+Pop: '"Miles"'
+====================
+
+EXP_BUFF_ID_STR "Miles"
+Push:'"Miles"'
+                    000: '"Miles"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Miles"'
+--------------------
+
+Push:'M'
+Pop: 'M'
+====================
+
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'M' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'M'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'000'
+====================
+
+EXP_BUFF_ID_SUB_START 
+EXP_BUFF_ID_SUB_END 
+EXP_BUFF_ID_SUB_END 
+EXP_BUFF_ID_FUNCTION GET
+Push:'000'
+                    000: '000' type:i (0), %:0
+--------------------
+
+====================
+
+--------------------
+
+====================
+
+EXP_BUFF_ID_META PROCDEF
+--------------------
+
+====================
+
+--------------------
+
+Push:'M'
+Push:'L'
+Push:'MPG'
+Push:'G'
+====================
+
+EXP_BUFF_ID_META  LOCAL
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'M' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'M' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE MPG
+Push:'MPG'
+                    000: 'M' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+                    002: 'MPG' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'M' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+                    002: 'MPG' type:f (1), %:0
+                    003: 'G' type:f (1), %:0
+--------------------
+
+Push:'"Miles"'
+Pop: '"Miles"'
+====================
+
+EXP_BUFF_ID_STR "Miles"
+Push:'"Miles"'
+                    000: '"Miles"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Miles"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'M'
+Pop: 'M'
+====================
+
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'M' type:f (1), %:0
+EXP_BUFF_ID_INPUT INPUT
+Pop: 'M'
+--------------------
+
+Push:'"Litres"'
+Pop: '"Litres"'
+====================
+
+EXP_BUFF_ID_STR "Litres"
+Push:'"Litres"'
+                    000: '"Litres"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Litres"'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'L'
+Pop: 'L'
+====================
+
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'L' type:f (1), %:0
+EXP_BUFF_ID_INPUT INPUT
+Pop: 'L'
+--------------------
+
+Push:'G'
+Push:'L'
+Push:'4.54'
+Pop: '4.54'
+Pop: 'L'
+Push:'000'
+Pop: '000'
+Pop: 'G'
+====================
+
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'G' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'G' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+EXP_BUFF_ID_FLT 4.54
+Push:'4.54'
+                    000: 'G' type:f (1), %:0
+                    001: 'L' type:f (1), %:0
+                    002: '4.54' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR /
+Pop: '4.54'
+Pop: 'L'
+Push:'000'
+                    000: 'G' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'G'
+--------------------
+
+Push:'MPG'
+Push:'M'
+Push:'G'
+Pop: 'G'
+Pop: 'M'
+Push:'000'
+Pop: '000'
+Pop: 'MPG'
+====================
+
+EXP_BUFF_ID_VARIABLE MPG
+Push:'MPG'
+                    000: 'MPG' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'MPG' type:f (1), %:0
+                    001: 'M' type:f (1), %:0
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'MPG' type:f (1), %:0
+                    001: 'M' type:f (1), %:0
+                    002: 'G' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR /
+Pop: 'G'
+Pop: 'M'
+Push:'000'
+                    000: 'MPG' type:f (1), %:0
+                    001: '000' type:f (1), %:0
+EXP_BUFF_ID_OPERATOR :=
+Pop: '000'
+Pop: 'MPG'
+--------------------
+
+Push:'"MPG:"'
+Pop: '"MPG:"'
+====================
+
+EXP_BUFF_ID_STR "MPG:"
+Push:'"MPG:"'
+                    000: '"MPG:"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"MPG:"'
+--------------------
+
+Push:'MPG'
+Pop: 'MPG'
+====================
+
+EXP_BUFF_ID_VARIABLE MPG
+Push:'MPG'
+                    000: 'MPG' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'MPG'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Gallons"'
+Pop: '"Gallons"'
+====================
+
+EXP_BUFF_ID_STR "Gallons"
+Push:'"Gallons"'
+                    000: '"Gallons"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Gallons"'
+--------------------
+
+Push:'G'
+Pop: 'G'
+====================
+
+EXP_BUFF_ID_VARIABLE G
+Push:'G'
+                    000: 'G' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'G'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Litres"'
+Pop: '"Litres"'
+====================
+
+EXP_BUFF_ID_STR "Litres"
+Push:'"Litres"'
+                    000: '"Litres"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Litres"'
+--------------------
+
+Push:'L'
+Pop: 'L'
+====================
+
+EXP_BUFF_ID_VARIABLE L
+Push:'L'
+                    000: 'L' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'L'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'"Miles"'
+Pop: '"Miles"'
+====================
+
+EXP_BUFF_ID_STR "Miles"
+Push:'"Miles"'
+                    000: '"Miles"' type:s (2), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: '"Miles"'
+--------------------
+
+Push:'M'
+Pop: 'M'
+====================
+
+EXP_BUFF_ID_VARIABLE M
+Push:'M'
+                    000: 'M' type:f (1), %:0
+EXP_BUFF_ID_PRINT PRINT
+Pop: 'M'
+--------------------
+
+====================
+
+EXP_BUFF_ID_PRINT_NEWLINE PRINT
+--------------------
+
+====================
+
+--------------------
+
+Push:'000'
+====================
+
+EXP_BUFF_ID_SUB_START 
+EXP_BUFF_ID_SUB_END 
+EXP_BUFF_ID_SUB_END 
+EXP_BUFF_ID_FUNCTION GET
+Push:'000'
+                    000: '000' type:i (0), %:0
+--------------------
+
+====================
+
+--------------------

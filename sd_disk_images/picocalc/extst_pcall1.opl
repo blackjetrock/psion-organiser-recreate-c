@@ -1,0 +1,6 @@
+pcall1:
+
+rem call a procedure and see if it is actually called
+rem procedure needs to have been previously compiled
+
+pcall0:

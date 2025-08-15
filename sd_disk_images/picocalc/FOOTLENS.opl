@@ -1,0 +1,81 @@
+footLENS:
+LOCAL A$(12),FT,INS
+PRINT "Select sought data"
+N=MENUN(2,"LENS,DISTANCE,HEIGHT-WIDTH,")
+IF N=1
+PRINT "Select known factor"
+A=MENUN(2,"HEIGHT,WIDTH")
+CLS
+IF A=2
+PRINT "What is the width?"
+AT 1,2
+PRINT "Feet..."
+INPUT FT
+AT 1,2
+PRINT "inches..."
+INPUT INS
+W=FOOT:(FT,INS)
+S$="width"
+WI=W
+W=W*1000
+CLS
+PRINT "DISTANCE?"
+AT 1,2
+PRINT "feet..."
+INPUT FT
+AT 1,2
+PRINT "inches..."
+INPUT INS
+D=FOOT:(FT,INS)
+DI=D
+D=D*1000
+L=(D*I)/W
+ELSEIF A=1
+PRINT "Height of subject?"
+AT 1,2
+PRINT "Feet..."
+INPUT FT
+AT 1,2
+PRINT "Inches..."
+INPUT INS
+H=FOOT:(FT,INS)
+WI=H
+S$="height"
+H=H*1000
+CLS
+PRINT "Distance to subject?"
+AT 1,2
+PRINT "Feet..."
+INPUT FT
+AT 1,2
+PRINT "Inches..."
+INPUT INS
+D=FOOT:(FT,INS)
+DI=D
+D=D*1000
+L=(D*T)/H
+ENDIF
+CLS
+L=INTF(L+0.5)
+A$=metre$:(DI)
+PRINT "@",A$,"dist"
+A$=metre$:(WI)
+PRINT "&",A$, S$,
+PRINT "needs a....."
+PRINT L,"mm lens"
+GET
+ELSEIF N=2
+FOOTDIST:
+ELSEIF N=3
+FOOTWIDT:
+ENDIF
+CLS
+PRINT "Choose..."
+N=MENUN(2,"LENS,FILM,MENU")
+IF N=1
+LENS:
+ELSEIF N=2
+FILM:
+ELSE
+STOP
+ENDIF

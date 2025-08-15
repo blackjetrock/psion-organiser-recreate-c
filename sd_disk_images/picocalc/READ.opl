@@ -1,0 +1,27 @@
+READ:
+LOCAL b$(10,80),i%
+i%=1
+ONERR panic::
+XFOPEN:("remote.doc",0,0)
+WHILE 1
+  b$(i%)=XFGET$:(80)
+  IF XFEOF:
+    BREAK
+  ENDIF
+  i%=i%+1
+  IF i%=11
+    PRINT "Too many records"
+    GET
+    CLS :BREAK
+  ENDIF
+ENDWH
+XFCLOSE:
+panic::
+IF ERR<=190
+  PRINT "Remote error"
+  PRINT "number",ERR
+ELSE PRINT ERR$(ERR)
+ENDIF
+GET
+
+

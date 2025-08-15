@@ -1,0 +1,6 @@
+add:
+
+local E
+
+print 1234.0 / 789.0
+rem print 1.0 / 7.0

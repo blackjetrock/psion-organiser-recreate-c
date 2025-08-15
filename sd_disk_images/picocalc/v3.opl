@@ -1,0 +1,15 @@
+TEST:
+LOCAL I%
+PRINT "test"
+I%=1
+while i%<1000
+i%=i%+1
+
+endwh
+
+print "done"
+get
+
+
+
+

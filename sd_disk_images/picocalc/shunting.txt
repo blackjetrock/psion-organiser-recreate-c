@@ -1,0 +1,216 @@
+
+PROCDEF
+
+ LOCAL
+
+M
+
+,
+
+L
+
+,
+
+MPG
+
+,
+
+G
+
+"Miles"
+
+PRINT
+          000:type:U 'PRINT'
+
+M
+
+"Litres"
+
+PRINT
+          000:type:U 'PRINT'
+
+L
+
+G
+
+:=
+          000:type:f ':='
+
+L
+          000:type:f ':='
+
+/
+          000:type:f ':='
+          001:type:f '/'
+
+4.54
+          000:type:f ':='
+          001:type:f '/'
+
+MPG
+
+:=
+          000:type:f ':='
+
+M
+          000:type:f ':='
+
+/
+          000:type:f ':='
+          001:type:f '/'
+
+G
+          000:type:f ':='
+          001:type:f '/'
+
+"MPG:"
+
+;
+
+MPG
+
+PRINT
+          000:type:U 'PRINT'
+
+"Gallons"
+
+;
+
+G
+
+PRINT
+          000:type:U 'PRINT'
+
+"Litres"
+
+;
+
+L
+
+PRINT
+          000:type:U 'PRINT'
+
+"Miles"
+
+;
+
+M
+
+PRINT
+          000:type:U 'PRINT'
+
+(
+          000:type:U '('
+
+)
+
+GET
+          000:type:i 'GET'
+
+PROCDEF
+
+ LOCAL
+
+M
+
+,
+
+L
+
+,
+
+MPG
+
+,
+
+G
+
+"Miles"
+
+PRINT
+          000:type:U 'PRINT'
+
+M
+
+"Litres"
+
+PRINT
+          000:type:U 'PRINT'
+
+L
+
+G
+
+:=
+          000:type:f ':='
+
+L
+          000:type:f ':='
+
+/
+          000:type:f ':='
+          001:type:f '/'
+
+4.54
+          000:type:f ':='
+          001:type:f '/'
+
+MPG
+
+:=
+          000:type:f ':='
+
+M
+          000:type:f ':='
+
+/
+          000:type:f ':='
+          001:type:f '/'
+
+G
+          000:type:f ':='
+          001:type:f '/'
+
+"MPG:"
+
+;
+
+MPG
+
+PRINT
+          000:type:U 'PRINT'
+
+"Gallons"
+
+;
+
+G
+
+PRINT
+          000:type:U 'PRINT'
+
+"Litres"
+
+;
+
+L
+
+PRINT
+          000:type:U 'PRINT'
+
+"Miles"
+
+;
+
+M
+
+PRINT
+          000:type:U 'PRINT'
+
+(
+          000:type:U '('
+
+)
+
+GET
+          000:type:i 'GET'

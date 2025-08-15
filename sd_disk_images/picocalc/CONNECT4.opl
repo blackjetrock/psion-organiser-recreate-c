@@ -1,0 +1,524 @@
+CONNECT4:
+local a%(99),b%,d%,j%,k%,z%,ret%,c%,h%,x%
+local l1$(9),l2$(9),l3$(9),l4$(9),y$(7),k$(1)
+local e%,n%,mv,m%(30),rv%
+local p,coun%,conret%
+local cou%,x$(1)
+CURSOR OFF
+escape off
+print "     Connect 4" :print " 1990 Tony Spencer"
+print " Modified 18/05/90" :print "   Barrie Gibson"
+pause -60
+start::
+KSTAT 3
+REM initialise
+b%=1
+WHILE b%<=99
+  a%(b%)=46
+  d%=b%-10*INT(b%/10)
+  IF d%=0 OR d%>7 OR b%<11 OR b%>67
+    a%(b%)=-9
+  ENDIF
+  b%=b%+1
+ENDWH
+
+REM set fixed variables
+j%=10
+h%=72
+c%=67
+e%=46
+
+REM set UDGs
+UDG 0,4,4,4,4,4,4,4,4
+UDG 1,16,16,16,16,16,16,16,16
+UDG 2,0,0,0,0,28,20,28,0
+UDG 3,0,0,0,0,28,28,28,0
+UDG 4,28,20,28,0,28,20,28,0
+UDG 5,28,28,28,0,28,28,28,0
+UDG 6,28,20,28,0,28,28,28,0
+UDG 7,28,28,28,0,28,20,28,0
+
+l4$=CHR$(0)+"1234567"+CHR$(1)
+CLS
+DO
+  ret%=1 :goto conpr:: :prret1::
+  ret%=1 :goto conwin:: :winret1::
+  IF p=-1
+    RETURN
+  ELSEIF p=-2
+    GOTO start::
+  ENDIF
+  
+  conhuman::
+  REM human move
+
+  AT 10,2
+  PRINT REPT$(" ",11)
+
+  AT 10,3
+  PRINT REPT$(" ",11)
+
+  humd::
+
+  AT 10,4
+  PRINT " Your move "
+  huma::
+  k$=KEY$
+  if k$=chr$(1) :return :endif
+  IF k$="" :GOTO huma:: : ENDIF
+  IF ASC(k$)=1
+    p=-1 :goto endhuman::
+  ENDIF
+
+  IF k$>=CHR$(49) AND k$<=CHR$(55)
+    GOTO humb::
+  ELSE
+    GOTO huma::
+  ENDIF
+  humb::
+  k%=ASC(k$)-%0
+  z%=k%
+  humc::
+  z%=z%+10
+  IF a%(z%+10)=46
+    GOTO humc::
+  ENDIF
+  IF a%(z%)=46
+    a%(z%)=72
+    p=0 :goto endhuman::
+  ELSE
+    AT 10,4
+    PRINT "False move "
+    PAUSE 10
+    GOTO humd::
+  ENDIF
+  endhuman::
+
+  k%=0
+  IF p=-1
+    RETURN
+  ENDIF
+  ret%=2 :goto conpr:: :prret2::
+  ret%=2 :goto conwin:: :winret2::
+  IF p=-1
+    RETURN
+  ELSEIF p=-2
+    GOTO start::
+  ENDIF
+
+  CONps::
+  REM ps move
+  AT 10,4
+  PRINT "Thinking..."
+  x%=c%
+  psstart::
+  mv=0
+  b%=10
+  WHILE mv=0 AND b%<67
+    IF a%(b%)<>x%
+      GOTO psa::
+    ENDIF
+    REM four in a row danger?chance?
+    REM across
+    IF a%(b%+1)=x% AND a%(b%+2)=x% AND a%(b%+3)=e% AND a%(b%+13)<>e%
+      mv=b%+3
+      BREAK
+    ENDIF
+
+
+    IF a%(b%+1)=x% AND a%(b%+2)=x% AND a%(b%-1)=e% AND a%(b%+9)<>e%
+      mv=b%-1
+      BREAK
+    ENDIF
+
+    IF a%(b%+2)=x% AND a%(b%+3)=x% AND a%(b%+1)=e% AND a%(b%+11)<>e%
+      mv=b%+1
+      BREAK
+    ENDIF
+
+    IF a%(b%+1)=x% AND a%(b%+3)=x% AND a%(b%+2)=e% AND a%(b%+12)<>e%
+      mv=b%+2
+      BREAK
+    ENDIF
+
+
+    REM down
+    IF a%(b%+10)=x% AND a%(b%+20)=x% AND a%(b%-10)=e%
+      mv=b%-10
+      BREAK
+    ENDIF
+
+    REM diagonals
+    IF b%>11
+      IF a%(b%+11)=x% AND a%(b%+22)=x% AND a%(b%-11)=e% AND a%(b%-1)<>e%
+        mv=b%-11
+        BREAK
+      ENDIF
+    ENDIF
+
+    IF b%>32
+      IF a%(b%+11)=x% AND a%(b%-22)=x% AND a%(b%-11)=e% AND a%(b%-1)<>e%
+        mv=b%-11
+        BREAK
+      ENDIF
+    ENDIF
+
+
+    IF b%>43
+      IF a%(b%-33)=x% AND a%(b%-22)=x% AND a%(b%-11)=e% AND a%(b%-1)<>e%
+        mv=b%-11
+        BREAK
+      ENDIF
+    ENDIF
+
+
+    IF b%>32 AND b%<=56
+      IF a%(b%-11)=x% AND a%(b%-22)=x% AND a%(b%+11)=e% AND a%(b%+21)<>e%
+        mv=b%+11
+        BREAK
+      ENDIF
+    ENDIF
+
+
+
+    IF a%(b%+9)=x% AND a%(b%+18)=x% AND a%(b%-9)=e% AND a%(b%+1)<>e%
+      mv=b%-9
+      BREAK
+    ENDIF
+
+    IF b%>20
+      IF a%(b%-18)=x% AND a%(b%+9)=x% AND a%(b%-9)=e% AND a%(b%+1)<>e%
+        mv=b%-9
+        BREAK
+      ENDIF
+    ENDIF
+
+    IF b%>30
+      IF a%(b%-27)=x% AND a%(b%-18)=x% AND a%(b%-9)=e% AND a%(b%+1)<>e%
+        mv=b%-9
+        BREAK
+      ENDIF
+    ENDIF
+
+
+    IF b%>20 AND b%<56
+      IF a%(b%-18)=x% AND a%(b%-9)=x% AND a%(b%+9)=e% AND a%(b%+19)<>e%
+        mv=b%+9
+        BREAK
+      ENDIF
+    ENDIF
+    psa::
+    b%=b%+1
+  ENDWH
+  IF mv<>0
+    GOTO psaaa::
+  ELSEIF mv=0 AND x%=c%
+    x%=h%
+    GOTO psstart::
+  ENDIF
+
+  REM here if no 4 in a row chance or danger
+  x%=c%
+  psc::
+  b%=10
+  WHILE mv=0 AND b%<67
+    IF a%(b%)<>x%
+      GOTO psb::
+    ENDIF
+    REM make /block three?
+    REM across
+    IF a%(b%+1)=x% AND a%(b%+2)=e% AND a%(b%+12)<>e%
+      mv=b%+2
+      BREAK
+    ENDIF
+ 
+    IF a%(b%+1)=x% AND a%(b%-1)=e% AND a%(b%+9)<>e%
+      mv=b%-1
+      BREAK
+    ENDIF
+
+    IF a%(b%+2)=x% AND a%(b%+1)=e% AND a%(b%+11)<>e%
+      mv=b%+1
+      BREAK
+    ENDIF
+
+    REM vertical
+
+    IF a%(b%+10)=x% AND a%(b%-10)=e% AND a%(b%)<>e%
+      mv=b%-10
+      BREAK
+    ENDIF
+
+    REM diagonal
+
+    IF a%(b%+9)=x% AND a%(b%-9)=e% AND a%(b%+1)<>e%
+      mv=b%-9
+      BREAK
+    ENDIF
+
+    IF b%<48
+      IF a%(b%+18)=x% AND a%(b%+9)=e% AND a%(b%+19)<>e%
+        mv=b%+9
+        BREAK
+      ENDIF
+    ENDIF
+
+
+    IF b%<48
+      IF a%(b%+9)=x% AND a%(b%+18)=e% AND a%(b%+28)<>e%
+        mv=b%+18
+        BREAK
+      ENDIF
+    ENDIF
+
+    IF b%>11
+      IF a%(b%+11)=x% AND a%(b%-11)=e% AND a%(b%-1)<>e%
+        mv=b%-11
+        BREAK
+      ENDIF
+    ENDIF
+
+    IF b%<46
+      IF a%(b%+22)=x% AND a%(b%+11)=e% AND a%(b%+21)<>e%
+        mv=b%+11
+        BREAK
+      ENDIF
+    ENDIF
+
+    IF b%<46
+      IF a%(b%+11)=x% AND a%(b%+22)=e% AND a%(b%+32)<>e%
+        mv=b%+22
+        BREAK
+      ENDIF
+    ENDIF
+    psb::
+    b%=b%+1
+
+  ENDWH
+  IF mv<>0
+    GOTO psaaa::
+  ELSEIF mv=0 AND x%=c%
+    x%=h%
+    GOTO psc::
+  ENDIF
+
+  REM here for single random move
+
+  REM single move
+
+  coun%=0
+  b%=11
+  WHILE b%<=67
+    IF a%(b%)<>c% AND a%(b%)<>h%
+      GOTO psccc::
+    ENDIF
+
+    IF a%(b%+1)=e% AND a%(b%+11)<>e%
+      coun%=coun%+1
+      m%(coun%)=b%+1
+    ENDIF
+
+    IF a%(b%-1)=e% AND a%(b%+9)<>e%
+      coun%=coun%+1
+      m%(coun%)=b%-1
+    ENDIF
+
+    IF a%(b%-10)=e% AND a%(b%)<>e%
+      coun%=coun%+1
+      m%(coun%)=b%-10
+    ENDIF
+    IF b%>11
+      IF a%(b%-11)=e% AND a%(b%-1)<>e%
+        coun%=coun%+1
+        m%(coun%)=b%-11
+      ENDIF
+    ENDIF
+    IF a%(b%-9)=e% AND a%(b%+1)<>e%
+      coun%=coun%+1
+      m%(coun%)=b%-9
+    ENDIF
+
+    psccc::
+    b%=b%+1
+  ENDWH
+
+  IF coun%<>0
+    GOTO psbbb::
+  ENDIF
+
+  AT 10,4
+  PRINT "A draw     "
+  GET
+  p=0 :goto psend::
+
+  psbbb::
+  rv%=INT(RND*coun%)+1
+  mv=m%(rv%)
+  psaaa::
+  a%(mv)=c%
+  p=-1
+
+  psend::
+  
+  
+  IF p=0
+    AT 10,4
+    PRINT "Another Y/N"
+    aa::
+    KSTAT 1
+    k$=KEY$
+    IF k$=""
+      GOTO aa::
+    ENDIF
+    IF UPPER$(k$)="Y"
+      GOTO start::
+    ELSE
+      RETURN
+    ENDIF
+  ENDIF
+UNTIL k%=1
+
+
+conpr::
+REM print screen 
+
+REM get first line
+
+b%=11
+conret%=1 :goto congtstr:: :strret1::
+l1$=CHR$(0)+y$+CHR$(1)
+
+REM get second line
+
+b%=31
+conret%=2 :goto congtstr:: :strret2::
+l2$=CHR$(0)+y$+CHR$(1)
+
+REM get third line
+
+b%=51
+conret%=3 :goto congtstr:: :strret3::
+l3$=CHR$(0)+y$+CHR$(1)
+
+AT 1,1
+PRINT l1$
+AT 10,1
+PRINT " CONNECT 4"
+AT 1,2
+PRINT l2$
+AT 1,3
+PRINT l3$
+AT 1,4
+PRINT l4$
+if ret%=1 :goto prret1:: :else goto prret2:: :endif
+
+conwin::
+
+REM win check
+
+x%=h%
+wina::
+b%=10
+winb::
+b%=b%+1
+
+IF a%(b%)<>x%
+  GOTO wind::
+ENDIF
+
+REM horiz line check
+
+IF a%(b%+1)=x% AND a%(b%+2)=x% AND a%(b%+3)=x%
+  GOTO winc::
+ENDIF
+
+REM vert line check
+
+IF b%>40
+  IF a%(b%-10)=x% AND a%(b%-20)=x% AND a%(b%-30)=x%
+    GOTO winc::
+  ENDIF
+ENDIF
+
+REM nw/se diagonal line check
+
+IF b%>43
+  IF a%(b%-11)=x% AND a%(b%-22)=x% AND a%(b%-33)=x%
+    GOTO winc::
+  ENDIF
+ENDIF
+
+REM sw/ne diagonal line check
+
+IF b%>43
+  IF a%(b%-9)=x% AND a%(b%-18)=x% AND a%(b%-27)=x%
+    GOTO winc::
+  ENDIF
+ENDIF
+
+wind::
+IF b%<67
+  GOTO winb::
+ENDIF
+IF x%=h%
+  x%=c%
+  GOTO wina::
+ELSE
+  p=0 :goto endwin::
+ENDIF
+
+
+winc::
+REM win found
+
+IF x%=h%
+  AT 10,2
+  PRINT "  You win  "
+ELSEIF x%=c%
+  AT 10,2 
+  PRINT "   I win   "
+ENDIF
+AT 10,4
+PRINT "Another Y/N"
+winaa::
+KSTAT 1
+k$=KEY$
+IF k$=""
+  GOTO winaa::
+ENDIF
+IF UPPER$(k$)="Y"
+  p=-2
+ELSE
+  p=-1
+ENDIF 
+endwin::
+if ret%=1 :goto winret1:: :else goto winret2:: :endif
+
+
+congtstr::
+
+REM called by print screen routine
+
+y$=""
+cou%=0
+WHILE cou%<7
+  IF a%(b%+cou%)=46 AND a%(b%+j%+cou%)=72
+    x$=CHR$(2)
+  ELSEIF a%(b%+cou%)=46 AND a%(b%+j%+cou%)=67
+    x$=CHR$(3)
+  ELSEIF a%(b%+cou%)=72 AND a%(b%+j%+cou%)=72
+    x$=CHR$(4)
+  ELSEIF a%(b%+cou%)=67 AND a%(b%+j%+cou%)=67
+    x$=CHR$(5)
+  ELSEIF a%(b%+cou%)=72 AND a%(b%+j%+cou%)=67
+    x$=CHR$(6)
+  ELSEIF a%(b%+cou%)=67 AND a%(b%+j%+cou%)=72
+    x$=CHR$(7)
+  ELSE 
+    x$=CHR$(32)
+  ENDIF
+  y$=y$+x$
+
+  cou%=cou%+1
+ENDWH
+if conret%=1 :goto strret1:: :elseif conret%=2 :goto strret2:: :else goto strret3:: :endif

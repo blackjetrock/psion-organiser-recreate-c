@@ -5,8 +5,8 @@
 #include <string.h>
 #include <stdarg.h>
 
-#include "nopl.h"
-
+//#include "nopl.h"
+#include "psion_recreate_all.h"
 
 typedef struct _ERROR_INFO
 {
@@ -150,6 +150,8 @@ void trappable_runtime_error(int error_code, char *fmt, ...)
 
 void runtime_error_print(void)
 {
+  char str[100];
+  
   dbq("Runtime error: error code: %d ***", current_machine->rtb_eror);
   dbq("\n*** Internal compiler error ***\n");
   dbq("\n%s\n", error_text(current_machine->rtb_eror));
@@ -159,6 +161,16 @@ void runtime_error_print(void)
   printf("\n*** Internal compiler error ***");
   printf("\n%s", error_text(current_machine->rtb_eror));
   printf("\n%s\n", current_machine->error_string);
+
+  // Display on screen
+  dp_cls();
+  sprintf(str, "Runtime Error %d", current_machine->rtb_eror);
+  i_printxy_str(0, 0, str);
+  i_printxy_str(0, 1, error_text(current_machine->rtb_eror));
+  i_printxy_str(0, 2, current_machine->error_string);
+                
+  kb_getk();
+  dp_cls();
 }
 
 void runtime_error_msg(int error_code, char *fmt, ...)

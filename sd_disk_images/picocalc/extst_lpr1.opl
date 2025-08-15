@@ -1,0 +1,5 @@
+lpr1:
+
+lprint "Output from LPRINT"
+
+print "PASS"

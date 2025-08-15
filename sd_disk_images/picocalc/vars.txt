@@ -1,0 +1,7 @@
+
+Variables
+
+   0:  VAR: '                 M'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFF6
+   1:  VAR: '                 L'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFEE
+   2:  VAR: '               MPG'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFE6
+   3:  VAR: '                 G'      Local Float             DECLARE max_str:  0 max_ary:  0 num_ind:  0 offset:FFDE

@@ -1,0 +1,8 @@
+extn10:(f%)
+
+
+GB1% = 10
+
+if f% <> 123
+print "PASS"
+endif

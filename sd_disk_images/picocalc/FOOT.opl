@@ -1,0 +1,3 @@
+foot:(feet,inch)
+
+return (feet*12+inch)*0.0254

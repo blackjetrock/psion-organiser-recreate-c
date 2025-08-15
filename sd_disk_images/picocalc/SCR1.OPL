@@ -1,0 +1,15 @@
+SCR1:	
+
+LOCAL N%
+n%=10
+WHILE N%>0
+
+print "Loop";n%
+
+n%=n%-1
+GET
+endwh
+get
+
+
+

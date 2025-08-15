@@ -1,0 +1,59 @@
+SCHFHUM:
+LOCAL K%,Z%,B%,C%
+Z%=0
+DO
+ PRINT CHR$(11);"a";A$(1)
+ PRINT "b";A$(2)
+ PRINT "c";A$(3);
+ KEY::
+ B%=-1
+ C%=-1
+ AT 6,2
+ PRINT CHR$(63);CHR$(63);
+ DO
+  K%=ASC(UPPER$(GET$))
+  IF K%=1
+   K%=SCHFEND:
+   IF K%
+    RETURN K%
+   ENDIF
+  ELSEIF K%>=3 AND K%<=6
+   B%=K%
+  ELSEIF K%>=%A AND K%<=%C
+   C%=K%-64
+  ELSEIF K%=8
+   B%=-1
+   C%=-1
+  ENDIF
+  AT 6,2
+  IF B%=-1
+   PRINT CHR$(63);
+  ELSEIF B%>4
+   PRINT CHR$(132-B%);
+  ELSE
+   PRINT CHR$(166+B%);
+  ENDIF
+  IF C%>0
+   PRINT CHR$(C%+64);
+  ELSE
+   PRINT CHR$(63);
+  ENDIF
+ UNTIL B%>0 AND C%>0
+ IF B%=3
+  SCHFUP:(C%)
+ ELSEIF B%=4
+  SCHFDOWN:(C%)
+ ELSEIF B%=5
+  SCHFLEFT:(C%)
+ ELSE
+  SCHFRGHT:(C%)
+ ENDIF
+ Z%=Z%+1
+ AT 9,3
+ PRINT "YOU:";Z%
+UNTIL A$(1)+A$(2)+A$(3)="1234567  "
+
+DO
+ K%=SCHFEND:
+UNTIL K%
+RETURN K%

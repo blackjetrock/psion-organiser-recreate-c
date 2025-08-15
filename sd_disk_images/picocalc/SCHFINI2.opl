@@ -1,0 +1,23 @@
+SCHFINI2:
+LOCAL C%,A%,B%
+
+CLS
+PRINT "a"
+PRINT "b"
+PRINT "c"
+PRINT " abc"
+
+A$(1)="   "
+A$(2)="   "
+A$(3)="   "
+C%=1
+DO
+DO
+A%=1+RND*3
+B%=1+RND*3
+UNTIL MID$(A$(A%),B%,1)=" "
+A$(A%)=LEFT$(A$(A%),B%-1)+GEN$(FLT(C%),1)+RIGHT$(A$(A%),3-B%)
+AT B%+1,A%
+PRINT C%
+C%=C%+1
+UNTIL C%=8

@@ -1,0 +1,79 @@
+
+Dropping OB3 header...
+reading proc file
+
+Dumping proc
+
+Enter:dump_proc
+Var Space Size:0022
+QCode Space Size:0046
+Number of parameters:00
+Parameter types:
+Global varname Size:0000
+Global variables (0)
+
+External varname Size:0000
+External variables (0)
+
+String length fixups (0)
+
+Array size fixups (0)
+
+QCode
+
+0000: 59       STOP     (bytes code:-)
+0001: B2       SIN     (bytes code:-)
+0002: 24       Push string literal     (bytes code:S)
+0003: Len:5
+0004: 'Miles'
+0009: 71       PRINT string     (bytes code:-)
+000A: 72       PRINT ,     (bytes code:-)
+000B: 01       Push local/global float variable value     (bytes code:v)
+000C: FFF6       (65526)
+000E: 70       PRINT float     (bytes code:-)
+000F: 73       PRINT newline     (bytes code:-)
+0010: 24       Push string literal     (bytes code:S)
+0011: Len:6
+0012: 'Litres'
+0018: 71       PRINT string     (bytes code:-)
+0019: 72       PRINT ,     (bytes code:-)
+001A: 01       Push local/global float variable value     (bytes code:v)
+001B: FFEE       (65518)
+001D: 70       PRINT float     (bytes code:-)
+001E: 73       PRINT newline     (bytes code:-)
+001F: 0E       Push local/global float variable reference     (bytes code:v)
+0020: FFDE       (65502)
+0022: 01       Push local/global float variable value     (bytes code:v)
+0023: FFEE       (65518)
+0025: 23       Push float literal     (bytes code:F)
+0026: Len:3
+0027: '4045E0
+002A: 3F       Divide float     (bytes code:-)
+002B: 80       Assign float     (bytes code:-)
+002C: 0E       Push local/global float variable reference     (bytes code:v)
+002D: FFE6       (65510)
+002F: 01       Push local/global float variable value     (bytes code:v)
+0030: FFF6       (65526)
+0032: 01       Push local/global float variable value     (bytes code:v)
+0033: FFDE       (65502)
+0035: 3F       Divide float     (bytes code:-)
+0036: 80       Assign float     (bytes code:-)
+0037: 24       Push string literal     (bytes code:S)
+0038: Len:4
+0039: 'MPG:'
+003D: 71       PRINT string     (bytes code:-)
+003E: 01       Push local/global float variable value     (bytes code:v)
+003F: FFE6       (65510)
+0041: 70       PRINT float     (bytes code:-)
+0042: 73       PRINT newline     (bytes code:-)
+0043: 91       GET     (bytes code:-)
+0044: 83       drop integer from stack     (bytes code:-)
+0045: 7B       RETURN (float 0)     (bytes code:-)
+
+QCode Data
+
+0000:59 B2 24 05 4D 69 6C 65 73 71 72 01 FF F6 70 73 
+0010:24 06 4C 69 74 72 65 73 71 72 01 FF EE 70 73 0E 
+0020:FF DE 01 FF EE 23 03 40 45 00 3F 80 0E FF E6 01 
+0030:FF F6 01 FF DE 3F 80 24 04 4D 50 47 3A 71 01 FF 
+0040:E6 70 73 91 83 7B 

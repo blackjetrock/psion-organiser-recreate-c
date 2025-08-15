@@ -1,0 +1,6 @@
+FRAMEBUFFER create
+FRAMEBUFFER write f
+
+Pixel 100,100,RGB(255,255,255)
+
+FRAMEBUFFER copy n,f

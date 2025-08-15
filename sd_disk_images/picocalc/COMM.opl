@@ -1,0 +1,57 @@
+COMM:
+LOCAL a$(254),i%
+LSET:(1200,0,8,1,0,-1,-1,chr$(13)+chr$(10),chr$(26),"",chr$(13),chr$(26),"",10,0)
+REM 1200 baud
+REM no parity
+REM 8 bits
+REM 1 stop bit
+REM no handshake
+REM Host echo
+REM No width
+REM reol=<cr><lf>
+REM reof=<sub>
+REM rtrn=none
+REM teol=<cr>
+REM teof=<sub>
+REM ttrn=none
+REM timeout=10 sec
+REM protocol=none
+
+REM clear Organiser Rx buffer
+
+ONERR jnk::
+WHILE 1
+JNK::
+a$=LINPUT$:(254,1)   : REM Receive 254 characters; 1 sec timeout.
+IF a$="" :BREAK :ENDIF
+ENDWH
+ONERR OFF
+
+REM Log on to modem
+REM ***************
+REM Reset modem and receive echo.
+a$=TRIG$:(254,10,"ATZ"+CHR$(13))
+
+REM Receive confirmationthat modem is reset.(OK <cr><lf>)
+a$=LINPUT$:(254,10)
+IF a$="OK"+CHR$(13)+CHR$(10)
+  a$=TRIG$:(254,10,"ATD999"+CHR$(13)) : REM Send telephone No "999". Put your 
+                                        REM own in.
+  a$=LINPUT$:(254,120)                : REM Receive confirmation <cr><lf>
+                                      : REM when modem
+                                        REM has got through to computer.
+                                        REM (120s timeout)
+
+  a$=LINPUT$:(254,10)                 : REM Get modem's response
+  IF a$="CONNECT"+CHR$(13)+CHR$(10) OR a$="CONNECT 1200"+CHR$(13)+CHR$(10)
+
+
+    PRINT "Sent ok"
+  ELSEIF a$="NO CARRIER"+CHR$(13)+CHR$(10)
+    PRINT "Cant find"
+    PRINT "remote modem"
+  ENDIF
+  GET
+ENDIF
+
+

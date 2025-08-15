@@ -1,0 +1,54 @@
+edfile:
+LOCAL recnum%,find$(32),key%
+loop1::
+FIRST
+IF EOF
+  RETURN
+ENDIF
+PRINT "Type in search"
+PRINT "string:";
+INPUT find$
+recnum% = FIND(find$)
+IF recnum% = 0
+  CLS
+  PRINT "Not found"
+  PAUSE 20
+  GOTO loop1::
+ENDIF
+DO
+  yesno::
+  KSTAT 1
+  CLS
+  AT 1,2
+  PRINT "Edit? Y/N"
+  key% = VIEW(1,A.barcode$)
+  IF key% = 1
+    RETURN
+  ENDIF
+  IF key% <> %Y AND key% <> %N
+    GOTO yesno::
+  ELSEIF key% = %Y
+    CLS
+    EDIT A.barcode$
+    IF LEN(A.barcode$) = 0
+      ERASE
+      GOTO loop2::
+    ENDIF
+    KSTAT 3
+    AT 1,2
+    EDIT A.qty$
+    KSTAT 1
+    UPDATE
+    NEXT
+  ELSE
+    NEXT
+    loop2::
+    recnum% = FIND(find$)
+    IF recnum% = 0
+      CLS
+      PRINT "Not found"
+      PAUSE 20
+      RETURN
+    ENDIF
+  ENDIF
+UNTIL EOF

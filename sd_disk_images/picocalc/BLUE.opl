@@ -1,0 +1,28 @@
+blue:
+LOCAL B$(4),A$(4),T
+T=M
+M=ABS(M)
+IF M>131
+A$="80A+"
+M=M-131
+ENDIF
+IF (M>=5) AND (M<15)
+B$="82"
+ELSEIF M>=15 AND M<25
+B$="82A"
+ELSEIF M>=25 AND M<35
+B$="82B"
+ELSEIF M>=35 AND M<50
+B$="82C"
+ELSEIF M>=50 AND M<65
+B$="80D"
+ELSEIF M>=65 AND M<95
+B$="80C"
+ELSEIF M>=95 AND M<120
+B$="80B"
+ELSEIF M>120
+B$="80A"
+ENDIF
+PRINT "Colour correction"
+PRINT "BLUE",T,"Mired"
+PRINT A$;B$,"Filter"

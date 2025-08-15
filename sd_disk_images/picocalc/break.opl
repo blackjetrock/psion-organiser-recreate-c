@@ -1,0 +1,24 @@
+break1:
+
+local A%
+
+DO
+
+if A% = 5
+break
+endif
+
+until A%<10
+
+while A%<100
+
+if A% = 5
+break
+endif
+
+if A%=6
+continue
+endif
+
+endwh
+

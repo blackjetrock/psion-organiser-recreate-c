@@ -1,0 +1,56 @@
+lapse:
+LOCAL NU,S,T,P,M,D
+PRINT"Screen time in "
+PRINT "seconds?"
+INPUT S
+CLS
+PRINT "Projection Speed?"
+AT 1,3
+NU=MENUN(2,"24FPS,25FPS")
+IF NU=1
+S=S*24
+ELSE
+S=S*25
+ENDIF
+CLS
+PRINT "Select filming time"
+PRINT "in..."
+M=MENUN(2,"MINUTES,HOURS,DAYS")
+IF M=1
+PRINT"Length of the event"
+PRINT "in minutes?"
+INPUT T
+T=T*60
+CLS
+ELSEIF M=2
+PRINT"Length of the event"
+PRINT"in hours?"
+INPUT T
+T=T*3600
+CLS
+ELSEIF M=3
+PRINT"Length of the event"
+PRINT"in days?"
+INPUT T
+T=T*86400
+CLS
+ENDIF
+P=T/S
+IF P<120 AND P>1
+P=(INTF(P))
+PRINT "1 Fr /",P," SEC"
+ELSEIF P>120
+P=(INTF(P/60))
+PRINT "1 Fr /", P,"MIN"
+ELSEIF P<1
+P=(INT(10/P))/10
+PRINT P,"FPS"
+ENDIF
+GET 
+P=MENU("LAPSE,FILM,MENU")
+IF P=1
+LAPSE:
+ELSEIF P=2
+FILM:
+ENDIF
+

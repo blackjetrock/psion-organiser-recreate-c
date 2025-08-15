@@ -1,0 +1,86 @@
+INVADER:
+LOCAL I%,J%,K%,BA%,MBX%,MBH%,SND%,MEX%,MEH%,MES%,RFL%,TYP%,MBS%,BC%,SC%
+UDG 0,24,31,31,24,0,0,0,0
+UDG 1,0,0,0,0,24,31,31,24
+UDG 2,4,14,31,14,0,0,0,0
+UDG 3,0,0,0,0,4,14,31,14
+UDG 4,23,0,0,23,0,0,0,0
+UDG 5,0,0,0,0,23,0,0,23
+UDG 6,1,14,14,1,0,0,0,0
+UDG 7,0,0,0,0,1,14,14,1
+KSTAT 1
+PRINT CHR$(0);
+TYP%=2 :MES%=5 :MBS%=5 :BC%=3 :RFL%=1 :SND%=-1
+DO
+  DO
+    K%=KEY
+    IF K%<>0 OR RFL%<>0
+      RFL%=0
+      CLS
+      IF K%=%M
+        BA%=(BA%-1) AND 7
+      ELSEIF K%=%S
+        BA%=(BA%+1) AND 7
+      ELSEIF K%=13
+        IF MBX%=0
+          MBX%=MBS%*2 :MBH%=BA%
+        ENDIF
+      ENDIF
+      AT 1,1+BA%/2 :PRINT CHR$(BA% AND 1);
+    ENDIF
+    IF MBX%<>0
+    AT MBX%/MBS%,1+(MBH%/2) :PRINT " ";
+    MBX%=MBX%+1
+    IF SND% :BEEP 1,MBX%*5 :ENDIF
+      IF MBX%=20*MBS%
+        MBX%=0 :PRINT " ";
+      ELSE
+        PRINT CHR$(4+(MBH% AND 1));
+      ENDIF
+    ENDIF
+    IF MEX%=0
+    IF RND<.2
+      MEH%=ABS(BA%+INT(RND*7)-1)
+      IF MEH%>7 :MEH%=0 :ENDIF
+        IF RND>.6
+          TYP%=6 :MES%=3
+        ELSE
+          TYP%=2 :MES%=6
+        ENDIF
+        MEX%=21*MES%
+      ENDIF
+    ELSE
+      AT (MEX%/MES%)-1,(MEH%/2)+1 :PRINT " ";CHR$(8);CHR$(8);
+      MEX%=MEX%-1
+      IF (INT(MEX%/MES%)=INT(MBX%/5)+1) AND MBH%=MEH% AND TYP%=2
+        CLS
+        MBX%=0 :MEX%=0 :SC%=SC%+5
+        IF SND% :BEEP 20,600 :ENDIF
+      ENDIF
+      IF MEX%<=3*MES%
+        MEX%=0 :PRINT " ";
+        RFL%=1
+        IF BA%=MEH%
+          CLS
+          PRINT "  * *  KABOOM  * *";
+          IF SND%
+            BEEP 20,700 :BEEP 10,300 :BEEP 40,1400
+          ENDIF
+          BC%=BC%-1
+          VIEW(3,"  Lives="+GEN$(BC%,32)+" Score="+GEN$(SC%,32))
+          PAUSE 20 :WHILE KEY :GET :ENDWH
+          IF BC%=0
+            RETURN SC%
+          ENDIF
+          CLS
+        ENDIF
+      ELSE
+        PRINT CHR$(TYP%+(MEH% AND 1));
+      ENDIF
+    ENDIF
+  UNTIL K%=2
+  K%=MENU("SOUND,MUTE,QUIT,"+GEN$(SC%,32))
+  SND%=-(K% AND 1)
+  RFL%=1
+  CLS
+UNTIL K%=3 OR K%=0
